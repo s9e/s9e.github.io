@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>s9e\TextFormatter &bull; Demo Lite</title>
+	<style type="text/css">
+		#preview
+		{
+			margin-top: 10px;
+			font-family: sans;
+			padding: 5px;
+			background-color: #eee;
+			border: dashed 1px #8af;
+			border-radius: 5px;
+			white-space: pre-line;
+		}
+
+		code
+		{
+			padding: 2px;
+			background-color: #fff;
+			border-radius: 3px;
+			border: solid 1px #ddd;
+		}
+	</style>
+</head>
+<body>
+	<div style="width:80%;max-width:800px">
+		<form>
+			<textarea style="width:99%" rows="15">This is a special version of [url=https://github.com/s9e/TextFormatter/tree/legacy/src/ title="s9e\TextFormatter at GitHub.com"]s9e\TextFormatter[/url]'s Live Preview feature, optimized purely for size.
+
+Only some of the plugins have been enabled and aggressive optimizations have been turned on. Logging has been disabled, as well as compatibility with Internet Explorer.
+
+The parser/renderer used on this page page has been generated via [url=https://github.com/s9e/TextFormatter/blob/legacy/scripts/generateJSParserDemoLite.php]this script[/url]. The source has been minified to 7.3KB (3.5KB gzipped) with [url=http://closure-compiler.appspot.com/home]Google Closure Compiler[/url].
+
+The included plugins are:
+
+[list]
+  [*][b]Autolink[/b] — loose URLs such as http://github.com are automatically turned into links
+
+  [*][b]BBCodes[/b]
+  [list=circle]
+    [*][b]bold[/b], [i]italic[/i], [u]underline[/u], [s]strikethrough[/s],
+    [*][color=#f05]co[/color][color=#2f2]lo[/color][color=#02f]r,[/color]
+    [*][code][URL][/code], [code:123][CODE][/code:123] and [code][LIST][/code]
+  [/list][/*]
+  [*][b]Emoticons[/b] — one emoticon :) has been added
+[/list]</textarea>
+		</form>
+	</div>
+
+	<div id="preview"></div>
+
+	<script type="text/javascript">var j=void 0,n=!0,r=!1,t;function u(a){for(var b=v.f,d=[],h=b.length;h--;)d[h]=b[h]&a[h];return d}function w(a){x.push(a);y=a.a+a.b;a.d&1?(++B[a.c],1===a.d&&(++C[a.c],D[a.g]?++D[a.g]:D[a.g]=1)):a.d&2&&(--C[a.c],--D[a.g]);if(1===a.d){var b=E[a.c];F.push({c:a.c,p:a.p,g:a.g,H:v});v={e:u(b.J?v.e:b.e),f:u(b.f)}}}
+function J(a){var b=E[a.c],d;if(a.d&1&&b.i||2===a.d&&b.F){a.i=0;for(d=a.a;0<=--d&&-1<" \n\r\t\x00\x0B".indexOf(K.charAt(d));)++a.i;a.b+=a.i;a.a-=a.i}if(1===a.d&&b.C||a.d&2&&b.n){a.n=0;for(d=a.a+a.b-1;++d<L&&-1<" \n\r\t\x00\x0B".indexOf(K.charAt(d));)++a.n;a.b+=a.n}}
+function M(){if(O.i&&y>O.a){var a=y-O.a;a<=O.i&&(O.a+=a,O.b-=a,O.i-=a)}if(!(y>O.a))if(O.d&1){var a=O.c,b=E[a],d;if(!(d=B[a]>=b.l))if(!(d=!P())){a:{d=E[O.c];if(F.length&&d.t&&d.t.z){var h=F[F.length-1],p=h.c;if(d.t.z.some(function(a){return a===p})){Q.push(O);O=R(h,O.a);Q.push(O);d=n;break a}}d=r}if(!d){if(!(b=C[a]>=b.k))b=j,a=E[a].j,b=!(v.e[a>>5]&1<<(a&31));d=b}}d||w(O)}else if(D[O.g]){do if(a=F.pop(),v=a.H,a.g!==O.g)a=R(a,O.a),w(a);else break;while(1);w(O)}}
+function R(a,b){var d={r:-1,c:a.c,a:b,b:0,d:2,h:{},g:a.g,p:a.p};J(d);return d}function U(a,b){if(a.a!==b.a)return b.a-a.a;if(!a.b||!b.b){if(!a.b&&!b.b){var d={2:2,3:1,1:0};return d[a.d]-d[b.d]}return a.b?-1:1}return a.b!==b.b?a.b-b.b:b.r-a.r}function P(){var a=O.h;O.h={};var b=E[O.c];if(!b.h)return n;for(var d in b.h){var h=b.h[d];V=d;var p=r;d in a&&(p=W(a[d],h));if(p===r){if(h.s)return r}else O.h[d]=p}return n}function W(a,b){b.v&&b.v.forEach(function(d){a!==r&&(a=d(a,b))});return a}t=new XSLTProcessor;
+t.importStylesheet((new DOMParser).parseFromString('<x:stylesheet xmlns:x="http://www.w3.org/1999/XSL/Transform" version="1.0"><x:output method="html" encoding="utf-8" indent="no"/><x:template match="U"><span style="text-decoration:underline"><x:apply-templates/></span></x:template><x:template match="URL"><a href="{@url}"><x:copy-of select="@title"/><x:apply-templates/></a></x:template><x:template match="COLOR"><span style="color:{@color}"><x:apply-templates/></span></x:template><x:template match="E"><x:choose><x:when test=".=\':)\'"><img alt=":)" src="s.png"/></x:when><x:otherwise><x:value-of select="."/></x:otherwise></x:choose></x:template><x:template match="st|et|i"/><x:template match="B|I|S|UL|LI|CODE"><x:element name="{translate(name(),\'BCDEILOSU\',\'bcdeilosu\')}"><x:apply-templates/></x:element></x:template></x:stylesheet>',
+"text/xml"));
+var E={B:{e:[735],f:[1023],j:0,k:10,l:100},CODE:{e:[0],f:[0],j:1,k:10,l:100},COLOR:{e:[735],f:[1023],h:{color:{v:[function(a){return/^(?:#[a-f\d]{3,6}|[a-z]+)$/i.test(a)?a:r}],s:1}},j:2,k:10,l:100},E:{e:[0],f:[0],j:3,k:10,l:100},I:{e:[735],f:[1023],j:4,k:10,l:100},LI:{e:[991],f:[1023],C:1,j:5,k:10,F:1,t:{z:["LI"]},l:100,n:1,i:1},S:{e:[735],f:[1023],j:6,k:10,l:100},U:{e:[735],f:[1023],j:7,k:10,l:100},UL:{e:[32],f:[1023],C:1,j:8,k:10,F:1,l:100,n:1,i:1},URL:{e:[479],f:[511],h:{url:{v:[function(a){var b=/^([a-z\d]+):\/\/\S+(?:\/.*)?$/i.exec(a);
+if(!b||!X.G.test(b[1]))return r;b=a.indexOf(":");a=a.substr(0,b).toLowerCase()+a.substr(b);return a.replace(/['"()]/g,escape)}],s:1},title:{s:0}},J:1,j:9,k:10,l:100}},Y={BBCodes:{o:/\[\/?([BIS*]|CO(?:DE|LOR)|LIST|U(?:RL)?)(?=[\] =:\/])/ig,q:1E3,D:"ignore",w:function(a,b){var d={B:{m:"B"},I:{m:"I"},U:{m:"U"},S:{m:"S"},URL:{m:"URL",u:"url",A:["url"]},COLOR:{m:"COLOR",u:"color"},LIST:{m:"UL"},"*":{m:"LI"},CODE:{m:"CODE"}},h=[];b.forEach(function(b){var g=b[1][0].toUpperCase();if(d[g]){var z=d[g],q=z.m,
+k=b[0][1],e=k+b[0][0].length,f={},m="";":"===a.charAt(e)&&(m=/^:\d*/.exec(a.substr(e))[0],e+=m.length);if("/"===b[0][0].charAt(1)){if("]"!==a.charAt(e))return;b=2}else{b=1;for(var G=r,$=e;e<L;){c=a.charAt(e);if("]"===c||"/"===c){if("/"===c){b=3;++e;if(e===L)return;c=a.charAt(e);if("]"!==c)return}G=n;break}if(" "===c)++e;else{var H=/^[-\w]*/.exec(a.substr(e))[0].toLowerCase();if(H){if(e+H.length>=L)return;e+=H.length}else if("="===c&&e===$)H=z.u?z.u:g.toLowerCase();else return;if("="===a.charAt(e)){if(++e>=
+L)return;var A;c=a.charAt(e);if('"'===c||"'"===c){for(A=e+1;;){++e;e=a.indexOf(c,e);if(-1===e)return;for(var S=0;"\\"===a.charAt(e-++S););if(S%2)break}A=a.substr(A,e-A).replace(/\\([\\'"])/g,"$1");++e}else A=/^[^\] \n\r]*/.exec(a.substr(e))[0],e+=A.length;f[H]=A}}}if(!G)return;1===b&&z.A&&z.A.forEach(function(b){if(!(b in f)){var G=a.toUpperCase().indexOf("[/"+g+m+"]",e);-1<G&&(f[b]=a.substr(1+e,G-(1+e)))}})}h.push({c:q,a:k,b:e+1-k,d:b,g:""<m?m.substr(1):"",h:f})}});return h}},Emoticons:{o:/:\)/g,
+q:1E3,D:"ignore",w:function(a,b){var d=[];b.forEach(function(a){d.push({a:a[0][1],d:3,c:"E",b:a[0][0].length})});return d}},Autolink:{o:/https?:\/\/\S(?:[^\s\[\]]*(?:\[\w*\])?)+/ig,q:1E3,D:"ignore",w:function(a,b){var d=[];b.forEach(function(a){for(var b=a[0][0];;)if(b=b.replace(/[^-\w)=\/]+$/,""),")"===b.substr(b.length-1)&&b.replace(/[^(]+/g,"").length<b.replace(/[^)]+/g,"").length)b=b.substr(0,b.length-1);else break;d.push({a:a[0][1],c:"URL",d:1,b:0,h:{url:b}});d.push({a:a[0][1]+b.length,c:"URL",
+d:2,b:0})});return d}}},Z={e:[1023],f:[1023]},X={G:/^https?$/i},K,L,Q,x,F,D,C,B,O,V,v,y;
+s9e={TextFormatter:{preview:function(a,b){function d(a,b){var d;if(a.o){d=!(a.o instanceof RegExp);var e=r,f={},h=0,T=d?a.o:{K:a.o},g;for(g in T){var s=T[g],l=g;f[l]=[];if(!e){for(var k=j,k=f[l],p=s.lastIndex=0,m=j;m=s.exec(K);){for(var q=m.index,N=[[m.shift(),q]],I;m.length;)I=m.shift(),I===j?N.push(["",-1]):(N.push([I,K.indexOf(I,q)]),q+=I.length);k.push(N);++p}if(k=p)h+=k,h>a.q&&(f[l]=f[l].slice(0,a.q+k-h),e=n)}}d=!h?r:d?f:f.K;if(d===r)return}g=a.w(K,d);g.forEach(function(a){a.r=++z;a.p=b});g.forEach(function(a){Q.push(a)})}
+function h(a,b){for(var d=a.childNodes,e=b.childNodes,f=d.length,h=e.length,g=0,k=0;g<f&&g<h;){var s=d[g],l=e[g];if(!p(s,l))break;++g}for(var q=Math.min(f-g,h-g);k<q;){s=d[f-(k+1)];l=e[h-(k+1)];if(!p(s,l))break;++k}s=m.createDocumentFragment();for(l=g;l<h-k;)s.appendChild(e[l].cloneNode(n)),++l;for(l=f-k;--l>=g;)a.removeChild(d[l]);k?a.insertBefore(s,a.childNodes[g]):a.appendChild(s)}function p(a,b){if(a.nodeName!==b.nodeName||a.nodeType!==b.nodeType)return r;if(3===a.nodeType)return a.nodeValue=
+b.nodeValue,n;if(a.isEqualNode&&a.isEqualNode(b))return n;for(var d=a.attributes,e=b.attributes,f=e.length,g=d.length;0<=--g;){var k=d[g].name;k in b||a.removeAttribute(k)}for(g=f;0<=--g;)d=e[g],k=d.name,d=d.value,d!==a.getAttribute(k)&&a.setAttribute(k,d);h(a,b);return n}var g;K=a;L=a.length;Q=[];x=[];F=[];D={};C={};B={};delete O;delete V;var z=0;for(g in Y)d(Y[g],g);Q.forEach(function(a){E[a.c]&&(a.g===j&&(a.g=""),a.h===j&&(a.h={}),a.g=a.p+"-"+a.c+"#"+a.g,J(a))});Q.sort(U);if(Q.length){v={e:Z.e,
+f:Z.f};B={};C={};for(var q in E)B[q]=C[q]=0;for(y=0;O=Q.pop();)M();for(;F.length;)O=R(F[F.length-1],L),M()}var k=function(a){var b={"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"};return a.replace(/[<>&"]/g,function(a){return b[a]})};if(x.length){var e=0,f="<rt",f=f+">";x.forEach(function(a){a.a>e&&(f+=k(K.substr(e,a.a-e)));var b=k(K.substr(a.a,a.b));e=a.a+a.b;var d="",g="";a.i&&(d=b.substr(0,a.i),b=b.substr(a.i));a.n&&(g=b.substr(b.length-a.n),b=b.substr(0,b.length-a.n));""!==d&&(f+="<i>"+d+"</i>");
+if(a.d&1){f+="<"+a.c;for(var h in a.h)f+=" "+h+'="'+k(a.h[h])+'"';f+=">";a.d&2?f+=b+"</"+a.c+">":""<b&&(f+="<st>"+b+"</st>")}else""<b&&(f+="<et>"+b+"</et>"),f+="</"+a.c+">";""!==g&&(f+="<i>"+g+"</i>")});e<L&&(f+=k(K.substr(e)));g=f+="</rt>"}else g="<pt>"+k(K)+"</pt>";g=(new DOMParser).parseFromString(g,"text/xml");var m=b.ownerDocument;g=t.transformToFragment(g,m);h(b,g)}}};
+		var text,
+			textarea = document.getElementsByTagName('textarea')[0],
+			preview = document.getElementById('preview');
+
+		window.setInterval(function()
+		{
+			if (textarea.value === text)
+			{
+				return;
+			}
+
+			text = textarea.value;
+			s9e.TextFormatter.preview(text, preview);
+		}, 20);
+	</script>
+</body>
+</html>
