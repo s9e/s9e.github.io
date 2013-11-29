@@ -78,7 +78,7 @@
 </td>
       <td class="success small"><div align="right">100.00%</div></td>
       <td class="success small"><div align="right">4&nbsp;/&nbsp;4</div></td>
-      <td class="success small">33</td>
+      <td class="success small">34</td>
       <td class="success big">       <div class="progress progress-success" style="width: 100px;">
         <div class="bar" style="width: 100.00%;"></div>
        </div>
@@ -95,7 +95,7 @@
 </td>
       <td class="success small"><div align="right">100.00%</div></td>
       <td class="success small"><div align="right">1&nbsp;/&nbsp;1</div></td>
-      <td class="success small">9</td>
+      <td class="success small">10</td>
       <td class="success big">       <div class="progress progress-success" style="width: 100px;">
         <div class="bar" style="width: 100.00%;"></div>
        </div>
@@ -199,8 +199,8 @@
      <tr><td><div align="right"><a name="37"></a><a href="#37">37</a></div></td><td class="codeLine">                    // Set the target attributes</td></tr>
      <tr class="success popin" data-title="4 tests cover line 38" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsSetAttributesOnMatch&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoesNotOverwrite&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoNotUnsetSource&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsResetSource&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="38"></a><a href="#38">38</a></div></td><td class="codeLine">                    foreach ($m as $targetName =&gt; $targetValue)</td></tr>
      <tr><td><div align="right"><a name="39"></a><a href="#39">39</a></div></td><td class="codeLine">                    {</td></tr>
-     <tr><td><div align="right"><a name="40"></a><a href="#40">40</a></div></td><td class="codeLine">                        // Skip numeric captures</td></tr>
-     <tr class="success popin" data-title="4 tests cover line 41" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsSetAttributesOnMatch&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoesNotOverwrite&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoNotUnsetSource&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsResetSource&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="41"></a><a href="#41">41</a></div></td><td class="codeLine">                        if (is_numeric($targetName))</td></tr>
+     <tr><td><div align="right"><a name="40"></a><a href="#40">40</a></div></td><td class="codeLine">                        // Skip numeric captures and empty captures</td></tr>
+     <tr class="success popin" data-title="4 tests cover line 41" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsSetAttributesOnMatch&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoesNotOverwrite&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoNotUnsetSource&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsResetSource&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="41"></a><a href="#41">41</a></div></td><td class="codeLine">                        if (is_numeric($targetName) || $targetValue === '')</td></tr>
      <tr class="success popin" data-title="4 tests cover line 42" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsSetAttributesOnMatch&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoesNotOverwrite&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoNotUnsetSource&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsResetSource&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="42"></a><a href="#42">42</a></div></td><td class="codeLine">                        {</td></tr>
      <tr class="success popin" data-title="4 tests cover line 43" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsSetAttributesOnMatch&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoesNotOverwrite&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsDoNotUnsetSource&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\FilterProcessingTest::testExecuteAttributePreprocessorsResetSource&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="43"></a><a href="#43">43</a></div></td><td class="codeLine">                            continue;</td></tr>
      <tr><td><div align="right"><a name="44"></a><a href="#44">44</a></div></td><td class="codeLine">                        }</td></tr>
@@ -427,7 +427,7 @@
      <span class="warning"><strong>Dead Code</strong></span>
     </p>
     <p>
-     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.13</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.6-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.28</a> at <a href="https://github.com/s9e/TextFormatter/tree/e5d0b097a8b7ade96f02386af40895df19cceb73">e5d0b097a8b7ade96f02386af40895df19cceb73</a>.</small>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.13</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.6-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.28</a> at <a href="https://github.com/s9e/TextFormatter/tree/b79e32419d0dce47d4fe169d7cc0bdcf05318a98">b79e32419d0dce47d4fe169d7cc0bdcf05318a98</a>.</small>
     </p>
    </footer>
   </div>
