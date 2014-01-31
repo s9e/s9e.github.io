@@ -89,7 +89,7 @@
      </tr>
 
      <tr>
-      <td class="success" colspan="4">&nbsp;<a href="#33">OffsetExists($k)</a></td>
+      <td class="success" colspan="4">&nbsp;<a href="#33">offsetExists($k)</a></td>
       <td class="success big">       <div class="progress progress-success" style="width: 100px;">
         <div class="bar" style="width: 100.00%;"></div>
        </div>
@@ -106,7 +106,7 @@
      </tr>
 
      <tr>
-      <td class="success" colspan="4">&nbsp;<a href="#44">OffsetGet($k)</a></td>
+      <td class="success" colspan="4">&nbsp;<a href="#44">offsetGet($k)</a></td>
       <td class="success big">       <div class="progress progress-success" style="width: 100px;">
         <div class="bar" style="width: 100.00%;"></div>
        </div>
@@ -123,7 +123,7 @@
      </tr>
 
      <tr>
-      <td class="success" colspan="4">&nbsp;<a href="#52">OffsetSet($k, $v)</a></td>
+      <td class="success" colspan="4">&nbsp;<a href="#52">offsetSet($k, $v)</a></td>
       <td class="success big">       <div class="progress progress-success" style="width: 100px;">
         <div class="bar" style="width: 100.00%;"></div>
        </div>
@@ -140,7 +140,7 @@
      </tr>
 
      <tr>
-      <td class="success" colspan="4">&nbsp;<a href="#64">OffsetUnset($k)</a></td>
+      <td class="success" colspan="4">&nbsp;<a href="#64">offsetUnset($k)</a></td>
       <td class="success big">       <div class="progress progress-success" style="width: 100px;">
         <div class="bar" style="width: 100.00%;"></div>
        </div>
@@ -652,7 +652,7 @@
      <tr><td><div align="right"><a name="30"></a><a href="#30">30</a></div></td><td class="codeLine">    *</td></tr>
      <tr><td><div align="right"><a name="31"></a><a href="#31">31</a></div></td><td class="codeLine">    * @param  string $k Rule name, e.g. &quot;allowChild&quot; or &quot;isTransparent&quot;</td></tr>
      <tr><td><div align="right"><a name="32"></a><a href="#32">32</a></div></td><td class="codeLine">    */</td></tr>
-     <tr><td><div align="right"><a name="33"></a><a href="#33">33</a></div></td><td class="codeLine">    public function OffsetExists($k)</td></tr>
+     <tr><td><div align="right"><a name="33"></a><a href="#33">33</a></div></td><td class="codeLine">    public function offsetExists($k)</td></tr>
      <tr><td><div align="right"><a name="34"></a><a href="#34">34</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="2 tests cover line 35" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Collections\RulesetTest::testOffsetExists&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Collections\RulesetTest::testOffsetUnset&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="35"></a><a href="#35">35</a></div></td><td class="codeLine">        return isset($this-&gt;items[$k]);</td></tr>
      <tr><td><div align="right"><a name="36"></a><a href="#36">36</a></div></td><td class="codeLine">    }</td></tr>
@@ -663,7 +663,7 @@
      <tr><td><div align="right"><a name="41"></a><a href="#41">41</a></div></td><td class="codeLine">    * @param  string $k Rule name, e.g. &quot;allowChild&quot; or &quot;isTransparent&quot;</td></tr>
      <tr><td><div align="right"><a name="42"></a><a href="#42">42</a></div></td><td class="codeLine">    * @return mixed</td></tr>
      <tr><td><div align="right"><a name="43"></a><a href="#43">43</a></div></td><td class="codeLine">    */</td></tr>
-     <tr><td><div align="right"><a name="44"></a><a href="#44">44</a></div></td><td class="codeLine">    public function OffsetGet($k)</td></tr>
+     <tr><td><div align="right"><a name="44"></a><a href="#44">44</a></div></td><td class="codeLine">    public function offsetGet($k)</td></tr>
      <tr><td><div align="right"><a name="45"></a><a href="#45">45</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 46" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Collections\RulesetTest::testOffsetGet&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="46"></a><a href="#46">46</a></div></td><td class="codeLine">        return $this-&gt;items[$k];</td></tr>
      <tr><td><div align="right"><a name="47"></a><a href="#47">47</a></div></td><td class="codeLine">    }</td></tr>
@@ -671,7 +671,7 @@
      <tr><td><div align="right"><a name="49"></a><a href="#49">49</a></div></td><td class="codeLine">    /**</td></tr>
      <tr><td><div align="right"><a name="50"></a><a href="#50">50</a></div></td><td class="codeLine">    * Not supported</td></tr>
      <tr><td><div align="right"><a name="51"></a><a href="#51">51</a></div></td><td class="codeLine">    */</td></tr>
-     <tr><td><div align="right"><a name="52"></a><a href="#52">52</a></div></td><td class="codeLine">    public function OffsetSet($k, $v)</td></tr>
+     <tr><td><div align="right"><a name="52"></a><a href="#52">52</a></div></td><td class="codeLine">    public function offsetSet($k, $v)</td></tr>
      <tr><td><div align="right"><a name="53"></a><a href="#53">53</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 54" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Collections\RulesetTest::testOffsetSet&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="54"></a><a href="#54">54</a></div></td><td class="codeLine">        throw new RuntimeException('Not supported');</td></tr>
      <tr><td><div align="right"><a name="55"></a><a href="#55">55</a></div></td><td class="codeLine">    }</td></tr>
@@ -683,7 +683,7 @@
      <tr><td><div align="right"><a name="61"></a><a href="#61">61</a></div></td><td class="codeLine">    *</td></tr>
      <tr><td><div align="right"><a name="62"></a><a href="#62">62</a></div></td><td class="codeLine">    * @param  string $k Rule name, e.g. &quot;allowChild&quot; or &quot;isTransparent&quot;</td></tr>
      <tr><td><div align="right"><a name="63"></a><a href="#63">63</a></div></td><td class="codeLine">    */</td></tr>
-     <tr><td><div align="right"><a name="64"></a><a href="#64">64</a></div></td><td class="codeLine">    public function OffsetUnset($k)</td></tr>
+     <tr><td><div align="right"><a name="64"></a><a href="#64">64</a></div></td><td class="codeLine">    public function offsetUnset($k)</td></tr>
      <tr><td><div align="right"><a name="65"></a><a href="#65">65</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 66" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Collections\RulesetTest::testOffsetUnset&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="66"></a><a href="#66">66</a></div></td><td class="codeLine">        return $this-&gt;clear($k);</td></tr>
      <tr><td><div align="right"><a name="67"></a><a href="#67">67</a></div></td><td class="codeLine">    }</td></tr>
@@ -1143,7 +1143,7 @@
      <span class="warning"><strong>Dead Code</strong></span>
     </p>
     <p>
-     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.13</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.8-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.29</a> at <a href="https://github.com/s9e/TextFormatter/tree/6b5f7257487efa52256c1fe944ae9c274ae7b05d">6b5f7257487efa52256c1fe944ae9c274ae7b05d</a>.</small>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.13</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.8-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.29</a> at <a href="https://github.com/s9e/TextFormatter/tree/af03c4c44ad6b8480f1cf517a939a5c8b40ade24">af03c4c44ad6b8480f1cf517a939a5c8b40ade24</a>.</small>
     </p>
    </footer>
   </div>

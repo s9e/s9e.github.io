@@ -105,7 +105,7 @@
      </tr>
 
      <tr>
-      <td class="success" colspan="4">&nbsp;<a href="#110">cascadeInvalidationTo(self $tag)</a></td>
+      <td class="success" colspan="4">&nbsp;<a href="#110">cascadeInvalidationTo(Tag $tag)</a></td>
       <td class="success big">       <div class="progress progress-success" style="width: 100px;">
         <div class="bar" style="width: 100.00%;"></div>
        </div>
@@ -139,7 +139,7 @@
      </tr>
 
      <tr>
-      <td class="success" colspan="4">&nbsp;<a href="#148">pairWith(self $tag)</a></td>
+      <td class="success" colspan="4">&nbsp;<a href="#148">pairWith(Tag $tag)</a></td>
       <td class="success big">       <div class="progress progress-success" style="width: 100px;">
         <div class="bar" style="width: 100.00%;"></div>
        </div>
@@ -674,10 +674,10 @@
      <tr><td><div align="right"><a name="104"></a><a href="#104">104</a></div></td><td class="codeLine">    /**</td></tr>
      <tr><td><div align="right"><a name="105"></a><a href="#105">105</a></div></td><td class="codeLine">    * Set given tag to be invalidated if this tag is invalidated</td></tr>
      <tr><td><div align="right"><a name="106"></a><a href="#106">106</a></div></td><td class="codeLine">    *</td></tr>
-     <tr><td><div align="right"><a name="107"></a><a href="#107">107</a></div></td><td class="codeLine">    * @param  self $tag</td></tr>
+     <tr><td><div align="right"><a name="107"></a><a href="#107">107</a></div></td><td class="codeLine">    * @param  Tag  $tag</td></tr>
      <tr><td><div align="right"><a name="108"></a><a href="#108">108</a></div></td><td class="codeLine">    * @return void</td></tr>
      <tr><td><div align="right"><a name="109"></a><a href="#109">109</a></div></td><td class="codeLine">    */</td></tr>
-     <tr><td><div align="right"><a name="110"></a><a href="#110">110</a></div></td><td class="codeLine">    public function cascadeInvalidationTo(self $tag)</td></tr>
+     <tr><td><div align="right"><a name="110"></a><a href="#110">110</a></div></td><td class="codeLine">    public function cascadeInvalidationTo(Tag $tag)</td></tr>
      <tr><td><div align="right"><a name="111"></a><a href="#111">111</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="4 tests cover line 112" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testInvalidateCascade&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testInvalidateCascadeNotReciprocal&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testInvalidateCascadeImmediate&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testInvalidateNoInfiniteLoop&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="112"></a><a href="#112">112</a></div></td><td class="codeLine">        $this-&gt;cascade[] = $tag;</td></tr>
      <tr><td><div align="right"><a name="113"></a><a href="#113">113</a></div></td><td class="codeLine"></td></tr>
@@ -712,10 +712,10 @@
      <tr><td><div align="right"><a name="142"></a><a href="#142">142</a></div></td><td class="codeLine">    /**</td></tr>
      <tr><td><div align="right"><a name="143"></a><a href="#143">143</a></div></td><td class="codeLine">    * Pair this tag with given tag</td></tr>
      <tr><td><div align="right"><a name="144"></a><a href="#144">144</a></div></td><td class="codeLine">    *</td></tr>
-     <tr><td><div align="right"><a name="145"></a><a href="#145">145</a></div></td><td class="codeLine">    * @param  self $tag</td></tr>
+     <tr><td><div align="right"><a name="145"></a><a href="#145">145</a></div></td><td class="codeLine">    * @param  Tag  $tag</td></tr>
      <tr><td><div align="right"><a name="146"></a><a href="#146">146</a></div></td><td class="codeLine">    * @return void</td></tr>
      <tr><td><div align="right"><a name="147"></a><a href="#147">147</a></div></td><td class="codeLine">    */</td></tr>
-     <tr><td><div align="right"><a name="148"></a><a href="#148">148</a></div></td><td class="codeLine">    public function pairWith(self $tag)</td></tr>
+     <tr><td><div align="right"><a name="148"></a><a href="#148">148</a></div></td><td class="codeLine">    public function pairWith(Tag $tag)</td></tr>
      <tr><td><div align="right"><a name="149"></a><a href="#149">149</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="13 tests cover line 150" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithDifferentNames&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithStartAfterEnd&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithGetStartTagSamePos&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithGetStartTag&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithGetEndTagSamePos&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithGetEndTag&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testReversePairWithGetStartTagSamePos&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testReversePairWithGetStartTag&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testReversePairWithGetEndTagSamePos&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testReversePairWithGetEndTag&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testCanCloseStartPairInvalid&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testCanCloseEndPairInvalid&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testCanClosePaired&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="150"></a><a href="#150">150</a></div></td><td class="codeLine">        if ($this-&gt;name === $tag-&gt;name)</td></tr>
      <tr class="success popin" data-title="13 tests cover line 151" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithDifferentNames&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithStartAfterEnd&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithGetStartTagSamePos&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithGetStartTag&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithGetEndTagSamePos&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testPairWithGetEndTag&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testReversePairWithGetStartTagSamePos&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testReversePairWithGetStartTag&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testReversePairWithGetEndTagSamePos&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testReversePairWithGetEndTag&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testCanCloseStartPairInvalid&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testCanCloseEndPairInvalid&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Parser\TagTest::testCanClosePaired&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="151"></a><a href="#151">151</a></div></td><td class="codeLine">        {</td></tr>
@@ -1018,7 +1018,7 @@
      <span class="warning"><strong>Dead Code</strong></span>
     </p>
     <p>
-     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.13</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.8-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.29</a> at <a href="https://github.com/s9e/TextFormatter/tree/6b5f7257487efa52256c1fe944ae9c274ae7b05d">6b5f7257487efa52256c1fe944ae9c274ae7b05d</a>.</small>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.13</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.8-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.29</a> at <a href="https://github.com/s9e/TextFormatter/tree/af03c4c44ad6b8480f1cf517a939a5c8b40ade24">af03c4c44ad6b8480f1cf517a939a5c8b40ade24</a>.</small>
     </p>
    </footer>
   </div>
