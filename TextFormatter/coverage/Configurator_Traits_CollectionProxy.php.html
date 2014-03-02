@@ -327,7 +327,7 @@
      <tr><td><div align="right"><a name="45"></a><a href="#45">45</a></div></td><td class="codeLine">    public function __call($methodName, $args)</td></tr>
      <tr><td><div align="right"><a name="46"></a><a href="#46">46</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="8 tests cover line 47" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testAdd&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testAddReturn&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testExists&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testDelete&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testGet&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testGetReturn&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testSet&lt;/li&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testSetReturn&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="47"></a><a href="#47">47</a></div></td><td class="codeLine">        return call_user_func_array([$this-&gt;collection, $methodName], $args);</td></tr>
-     <tr><td><div align="right"><a name="48"></a><a href="#48">48</a></div></td><td class="codeLine">    }</td></tr>
+     <tr class="warning"><td><div align="right"><a name="48"></a><a href="#48">48</a></div></td><td class="codeLine">    }</td></tr>
      <tr><td><div align="right"><a name="49"></a><a href="#49">49</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="50"></a><a href="#50">50</a></div></td><td class="codeLine">    //==========================================================================</td></tr>
      <tr><td><div align="right"><a name="51"></a><a href="#51">51</a></div></td><td class="codeLine">    // ArrayAccess</td></tr>
@@ -336,12 +336,12 @@
      <tr><td><div align="right"><a name="54"></a><a href="#54">54</a></div></td><td class="codeLine">    public function offsetExists($offset)</td></tr>
      <tr><td><div align="right"><a name="55"></a><a href="#55">55</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 56" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testOffsetExists&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="56"></a><a href="#56">56</a></div></td><td class="codeLine">        return isset($this-&gt;collection[$offset]);</td></tr>
-     <tr><td><div align="right"><a name="57"></a><a href="#57">57</a></div></td><td class="codeLine">    }</td></tr>
+     <tr class="warning"><td><div align="right"><a name="57"></a><a href="#57">57</a></div></td><td class="codeLine">    }</td></tr>
      <tr><td><div align="right"><a name="58"></a><a href="#58">58</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="59"></a><a href="#59">59</a></div></td><td class="codeLine">    public function offsetGet($offset)</td></tr>
      <tr><td><div align="right"><a name="60"></a><a href="#60">60</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 61" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testOffsetGet&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="61"></a><a href="#61">61</a></div></td><td class="codeLine">        return $this-&gt;collection[$offset];</td></tr>
-     <tr><td><div align="right"><a name="62"></a><a href="#62">62</a></div></td><td class="codeLine">    }</td></tr>
+     <tr class="warning"><td><div align="right"><a name="62"></a><a href="#62">62</a></div></td><td class="codeLine">    }</td></tr>
      <tr><td><div align="right"><a name="63"></a><a href="#63">63</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="64"></a><a href="#64">64</a></div></td><td class="codeLine">    public function offsetSet($offset, $value)</td></tr>
      <tr><td><div align="right"><a name="65"></a><a href="#65">65</a></div></td><td class="codeLine">    {</td></tr>
@@ -360,7 +360,7 @@
      <tr><td><div align="right"><a name="78"></a><a href="#78">78</a></div></td><td class="codeLine">    public function count()</td></tr>
      <tr><td><div align="right"><a name="79"></a><a href="#79">79</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 80" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testCount&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="80"></a><a href="#80">80</a></div></td><td class="codeLine">        return count($this-&gt;collection);</td></tr>
-     <tr><td><div align="right"><a name="81"></a><a href="#81">81</a></div></td><td class="codeLine">    }</td></tr>
+     <tr class="warning"><td><div align="right"><a name="81"></a><a href="#81">81</a></div></td><td class="codeLine">    }</td></tr>
      <tr><td><div align="right"><a name="82"></a><a href="#82">82</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="83"></a><a href="#83">83</a></div></td><td class="codeLine">    //==========================================================================</td></tr>
      <tr><td><div align="right"><a name="84"></a><a href="#84">84</a></div></td><td class="codeLine">    // Iterator</td></tr>
@@ -369,17 +369,17 @@
      <tr><td><div align="right"><a name="87"></a><a href="#87">87</a></div></td><td class="codeLine">    public function current()</td></tr>
      <tr><td><div align="right"><a name="88"></a><a href="#88">88</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 89" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testIterable&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="89"></a><a href="#89">89</a></div></td><td class="codeLine">        return $this-&gt;collection-&gt;current();</td></tr>
-     <tr><td><div align="right"><a name="90"></a><a href="#90">90</a></div></td><td class="codeLine">    }</td></tr>
+     <tr class="warning"><td><div align="right"><a name="90"></a><a href="#90">90</a></div></td><td class="codeLine">    }</td></tr>
      <tr><td><div align="right"><a name="91"></a><a href="#91">91</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="92"></a><a href="#92">92</a></div></td><td class="codeLine">    public function key()</td></tr>
      <tr><td><div align="right"><a name="93"></a><a href="#93">93</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 94" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testIterable&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="94"></a><a href="#94">94</a></div></td><td class="codeLine">        return $this-&gt;collection-&gt;key();</td></tr>
-     <tr><td><div align="right"><a name="95"></a><a href="#95">95</a></div></td><td class="codeLine">    }</td></tr>
+     <tr class="warning"><td><div align="right"><a name="95"></a><a href="#95">95</a></div></td><td class="codeLine">    }</td></tr>
      <tr><td><div align="right"><a name="96"></a><a href="#96">96</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="97"></a><a href="#97">97</a></div></td><td class="codeLine">    public function next()</td></tr>
      <tr><td><div align="right"><a name="98"></a><a href="#98">98</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 99" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testIterable&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="99"></a><a href="#99">99</a></div></td><td class="codeLine">        return $this-&gt;collection-&gt;next();</td></tr>
-     <tr><td><div align="right"><a name="100"></a><a href="#100">100</a></div></td><td class="codeLine">    }</td></tr>
+     <tr class="warning"><td><div align="right"><a name="100"></a><a href="#100">100</a></div></td><td class="codeLine">    }</td></tr>
      <tr><td><div align="right"><a name="101"></a><a href="#101">101</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="102"></a><a href="#102">102</a></div></td><td class="codeLine">    public function rewind()</td></tr>
      <tr><td><div align="right"><a name="103"></a><a href="#103">103</a></div></td><td class="codeLine">    {</td></tr>
@@ -389,7 +389,7 @@
      <tr><td><div align="right"><a name="107"></a><a href="#107">107</a></div></td><td class="codeLine">    public function valid()</td></tr>
      <tr><td><div align="right"><a name="108"></a><a href="#108">108</a></div></td><td class="codeLine">    {</td></tr>
      <tr class="success popin" data-title="1 test covers line 109" data-content="&lt;ul&gt;&lt;li class=&quot;success&quot;&gt;s9e\TextFormatter\Tests\Configurator\Traits\CollectionProxyTest::testIterable&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="109"></a><a href="#109">109</a></div></td><td class="codeLine">        return $this-&gt;collection-&gt;valid();</td></tr>
-     <tr><td><div align="right"><a name="110"></a><a href="#110">110</a></div></td><td class="codeLine">    }</td></tr>
+     <tr class="warning"><td><div align="right"><a name="110"></a><a href="#110">110</a></div></td><td class="codeLine">    }</td></tr>
 
     </tbody>
    </table>
@@ -401,7 +401,7 @@
      <span class="warning"><strong>Dead Code</strong></span>
     </p>
     <p>
-     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.15</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.9-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.31</a> at <a href="https://github.com/s9e/TextFormatter/tree/c43e68d5dd929051dece88b9cdb8c816b9031d36">c43e68d5dd929051dece88b9cdb8c816b9031d36</a>.</small>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.16</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.9-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.32</a> at <a href="https://github.com/s9e/TextFormatter/tree/cac7e2c0dd15e56f2f554ee04809564889d304bd">cac7e2c0dd15e56f2f554ee04809564889d304bd</a>.</small>
     </p>
    </footer>
   </div>
