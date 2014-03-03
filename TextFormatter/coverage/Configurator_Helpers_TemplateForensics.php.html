@@ -523,12 +523,12 @@
      <tr><td><div align="right"><a name="37"></a><a href="#37">37</a></div></td><td class="codeLine">    protected $allowChildBitfield = &quot;\0&quot;;</td></tr>
      <tr><td><div align="right"><a name="38"></a><a href="#38">38</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="39"></a><a href="#39">39</a></div></td><td class="codeLine">    /**</td></tr>
-     <tr><td><div align="right"><a name="40"></a><a href="#40">40</a></div></td><td class="codeLine">    * @var string Whether elements are allowed as children</td></tr>
+     <tr><td><div align="right"><a name="40"></a><a href="#40">40</a></div></td><td class="codeLine">    * @var bool Whether elements are allowed as children</td></tr>
      <tr><td><div align="right"><a name="41"></a><a href="#41">41</a></div></td><td class="codeLine">    */</td></tr>
      <tr><td><div align="right"><a name="42"></a><a href="#42">42</a></div></td><td class="codeLine">    protected $allowsElements = true;</td></tr>
      <tr><td><div align="right"><a name="43"></a><a href="#43">43</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="44"></a><a href="#44">44</a></div></td><td class="codeLine">    /**</td></tr>
-     <tr><td><div align="right"><a name="45"></a><a href="#45">45</a></div></td><td class="codeLine">    * @var string Whether text nodes are allowed as children</td></tr>
+     <tr><td><div align="right"><a name="45"></a><a href="#45">45</a></div></td><td class="codeLine">    * @var bool Whether text nodes are allowed as children</td></tr>
      <tr><td><div align="right"><a name="46"></a><a href="#46">46</a></div></td><td class="codeLine">    */</td></tr>
      <tr><td><div align="right"><a name="47"></a><a href="#47">47</a></div></td><td class="codeLine">    protected $allowsText = true;</td></tr>
      <tr><td><div align="right"><a name="48"></a><a href="#48">48</a></div></td><td class="codeLine"></td></tr>
@@ -568,12 +568,12 @@
      <tr><td><div align="right"><a name="82"></a><a href="#82">82</a></div></td><td class="codeLine">    protected $isEmpty = true;</td></tr>
      <tr><td><div align="right"><a name="83"></a><a href="#83">83</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="84"></a><a href="#84">84</a></div></td><td class="codeLine">    /**</td></tr>
-     <tr><td><div align="right"><a name="85"></a><a href="#85">85</a></div></td><td class="codeLine">    * @var string Whether this template adds to the list of active formatting elements</td></tr>
+     <tr><td><div align="right"><a name="85"></a><a href="#85">85</a></div></td><td class="codeLine">    * @var bool Whether this template adds to the list of active formatting elements</td></tr>
      <tr><td><div align="right"><a name="86"></a><a href="#86">86</a></div></td><td class="codeLine">    */</td></tr>
      <tr><td><div align="right"><a name="87"></a><a href="#87">87</a></div></td><td class="codeLine">    protected $isFormattingElement = false;</td></tr>
      <tr><td><div align="right"><a name="88"></a><a href="#88">88</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="89"></a><a href="#89">89</a></div></td><td class="codeLine">    /**</td></tr>
-     <tr><td><div align="right"><a name="90"></a><a href="#90">90</a></div></td><td class="codeLine">    * @var string Whether this template lets content through via an xsl:apply-templates element</td></tr>
+     <tr><td><div align="right"><a name="90"></a><a href="#90">90</a></div></td><td class="codeLine">    * @var bool Whether this template lets content through via an xsl:apply-templates element</td></tr>
      <tr><td><div align="right"><a name="91"></a><a href="#91">91</a></div></td><td class="codeLine">    */</td></tr>
      <tr><td><div align="right"><a name="92"></a><a href="#92">92</a></div></td><td class="codeLine">    protected $isPassthrough = false;</td></tr>
      <tr><td><div align="right"><a name="93"></a><a href="#93">93</a></div></td><td class="codeLine"></td></tr>
@@ -1111,7 +1111,7 @@
      <tr><td><div align="right"><a name="625"></a><a href="#625">625</a></div></td><td class="codeLine">    * Get all XSL elements of given name</td></tr>
      <tr><td><div align="right"><a name="626"></a><a href="#626">626</a></div></td><td class="codeLine">    *</td></tr>
      <tr><td><div align="right"><a name="627"></a><a href="#627">627</a></div></td><td class="codeLine">    * @param  string      $elName XSL element's name, e.g. &quot;apply-templates&quot;</td></tr>
-     <tr><td><div align="right"><a name="628"></a><a href="#628">628</a></div></td><td class="codeLine">    * @return DOMNodeList</td></tr>
+     <tr><td><div align="right"><a name="628"></a><a href="#628">628</a></div></td><td class="codeLine">    * @return \DOMNodeList</td></tr>
      <tr><td><div align="right"><a name="629"></a><a href="#629">629</a></div></td><td class="codeLine">    */</td></tr>
      <tr><td><div align="right"><a name="630"></a><a href="#630">630</a></div></td><td class="codeLine">    protected function getXSLElements($elName)</td></tr>
      <tr><td><div align="right"><a name="631"></a><a href="#631">631</a></div></td><td class="codeLine">    {</td></tr>
@@ -1411,7 +1411,7 @@
      <span class="warning"><strong>Dead Code</strong></span>
     </p>
     <p>
-     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.16</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.9-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.32</a> at <a href="https://github.com/s9e/TextFormatter/tree/98c3974ecd90c6faaf5924d9b5d46c7ae8901ec4">98c3974ecd90c6faaf5924d9b5d46c7ae8901ec4</a>.</small>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.2.16</a> using <a href="http://www.php.net/" target="_top">PHP 5.5.9-pl0-gentoo</a> and <a href="http://phpunit.de/">PHPUnit 3.7.32</a> at <a href="https://github.com/s9e/TextFormatter/tree/73325b2c7cd5753ece30660ae3b6f709b7021650">73325b2c7cd5753ece30660ae3b6f709b7021650</a>.</small>
     </p>
    </footer>
   </div>
