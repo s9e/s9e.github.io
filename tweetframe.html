@@ -11,25 +11,36 @@
 		</blockquote>
 		<script src="//platform.twitter.com/widgets.js"></script>
 		<script>
-			(function(height, document)
-			{
-				parent.setInterval(
-					function()
+			window.addEventListener(
+				'message',
+				function (e)
+				{
+					if (e.data !== 'init')
 					{
-						if (document.body.scrollHeight === height)
-						{
-							return;
-						}
+						return;
+					}
 
-						height = document.body.scrollHeight;
-						parent.postMessage(
-							{ 'height': height, 'url': document.location.toString() },
-							document.location.protocol + '//' + document.location.host
+					(function(height, document)
+					{
+						window.setInterval(
+							function()
+							{
+								if (document.body.scrollHeight === height)
+								{
+									return;
+								}
+
+								height = document.body.scrollHeight;
+								e.source.postMessage(
+									{ 'height': height, 'url': document.location.toString() },
+									document.location.protocol + '//' + document.location.host
+								);
+							},
+							100
 						);
-					},
-					100
-				);
-			})(document.body.scrollHeight, document);
+					})(document.body.scrollHeight, document);
+				}
+			);
 		</script>
 	</body>
 </html>
