@@ -20,7 +20,7 @@
 						return;
 					}
 
-					(function(height, document)
+					(function(height)
 					{
 						window.setInterval(
 							function()
@@ -33,12 +33,12 @@
 								height = document.body.scrollHeight;
 								e.source.postMessage(
 									{ 'height': height, 'url': document.location.toString() },
-									document.location.protocol + '//' + document.location.host
+									e.origin
 								);
 							},
 							100
 						);
-					})(document.body.scrollHeight, document);
+					})(document.body.scrollHeight);
 				}
 			);
 		</script>
