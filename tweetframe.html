@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- This file is PUBLIC DOMAIN. Idea inspired by https://twitframe.com -->
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>&nbsp;</title>
+	</head>
+	<body>
+		<blockquote class="twitter-tweet">
+			<a href=""></a>
+		</blockquote>
+		<script src="//platform.twitter.com/widgets.js"></script>
+		<script>
+			(function(height, document)
+			{
+				parent.setInterval(
+					function()
+					{
+						if (document.body.scrollHeight === height)
+						{
+							return;
+						}
+
+						height = document.body.scrollHeight;
+						parent.postMessage(
+							{ 'height': height, 'url': document.location.toString() },
+							document.location.protocol + '//' + document.location.host
+						);
+					},
+					100
+				);
+			})(document.body.scrollHeight, document);
+		</script>
+	</body>
+</html>
