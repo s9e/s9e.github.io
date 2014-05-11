@@ -9,8 +9,22 @@
 		<blockquote class="twitter-tweet">
 			<a href=""></a>
 		</blockquote>
-		<script src="//platform.twitter.com/widgets.js"></script>
 		<script>
+			var currentUrl  = document.location.toString(),
+				expectedUrl = currentUrl.replace('#!/', '');
+
+			if (currentUrl !== expectedUrl)
+			{
+				if (history.replaceState)
+				{
+					history.replaceState({}, '', expectedUrl);
+				}
+				else
+				{
+					document.location = expectedUrl;
+				}
+			}
+
 			window.addEventListener(
 				'message',
 				function (e)
@@ -42,5 +56,6 @@
 				}
 			);
 		</script>
+		<script src="//platform.twitter.com/widgets.js"></script>
 	</body>
 </html>
