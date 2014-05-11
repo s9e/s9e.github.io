@@ -46,7 +46,7 @@
 
 								height = document.body.scrollHeight;
 								e.source.postMessage(
-									{ 'height': height, 'url': document.location.toString() },
+									{ 'height': height, 'url': currentUrl },
 									e.origin
 								);
 							},
