@@ -15,25 +15,25 @@
 						return;
 					}
 
-					(function(height)
-					{
-						window.setInterval(
-							function()
-							{
-								if (document.body.scrollHeight === height)
-								{
-									return;
-								}
+					var height = 0;
 
-								height = document.body.scrollHeight;
-								e.source.postMessage(
-									{ 'height': height, 'url': document.location.toString() },
-									e.origin
-								);
-							},
-							100
-						);
-					})(document.body.scrollHeight);
+					window.setInterval(
+						function()
+						{
+							console.log(document.body.scrollHeight +' '+ height);
+							if (document.body.scrollHeight === height)
+							{
+								return;
+							}
+
+							height = document.body.scrollHeight;
+							e.source.postMessage(
+								{ 'height': height, 'url': document.location.toString() },
+								e.origin
+							);
+						},
+						100
+					);
 				}
 			);
 
