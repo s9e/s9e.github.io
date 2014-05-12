@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>&nbsp;</title>
+	</head>
+	<body>
+		<script>
+			window.addEventListener(
+				'message',
+				function (e)
+				{
+					if (e.data !== 's9e:init')
+					{
+						return;
+					}
+
+					(function(height)
+					{
+						window.setInterval(
+							function()
+							{
+								if (document.body.scrollHeight === height)
+								{
+									return;
+								}
+
+								height = document.body.scrollHeight;
+								e.source.postMessage(
+									{ 'height': height, 'url': document.location.toString() },
+									e.origin
+								);
+							},
+							100
+						);
+					})(document.body.scrollHeight);
+				}
+			);
+
+			/** @param {{div,stylesheet}} o */
+			function gistCallback(o)
+			{
+				var link  = document.createElement('link');
+				link.rel  = "stylesheet";
+				link.href = o.stylesheet;
+
+				document.head.appendChild(link);
+				document.body.innerHTML = o.div;
+			}
+
+			var script  = document.createElement('script');
+			script.type = "text/javascript";
+			script.src  = "https://gist.github.com/" + document.location.search.substr(1) + ".json?callback=gistCallback";
+
+			document.body.appendChild(script);
+		</script>
+	</body>
+</html>
