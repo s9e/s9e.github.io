@@ -11,6 +11,8 @@
 			<a href=""></a>
 		</blockquote>
 		<script>
+			document.getElementsByTagName('a')[0].href = document.location.search.substr(1);
+
 			var currentUrl  = document.location.toString(),
 				expectedUrl = currentUrl.replace('#!/', '');
 
