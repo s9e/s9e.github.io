@@ -40,12 +40,12 @@
 						window.setInterval(
 							function()
 							{
-								if (document.body.scrollHeight === height)
+								if (document.documentElement.scrollHeight === height)
 								{
 									return;
 								}
 
-								height = document.body.scrollHeight;
+								height = document.documentElement.scrollHeight;
 								e.source.postMessage(
 									{ 'height': height, 'url': currentUrl },
 									e.origin
@@ -53,7 +53,7 @@
 							},
 							100
 						);
-					})(document.body.scrollHeight);
+					})(document.documentElement.scrollHeight);
 				}
 			);
 		</script>
