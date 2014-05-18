@@ -11,22 +11,7 @@
 			<a href=""></a>
 		</blockquote>
 		<script>
-			var currentUrl  = document.location.toString(),
-				expectedUrl = currentUrl.replace('#!/', '');
-
-			if (currentUrl !== expectedUrl)
-			{
-				if (history.replaceState)
-				{
-					history.replaceState({}, '', expectedUrl);
-				}
-				else
-				{
-					document.location = expectedUrl;
-				}
-			}
-
-			document.getElementsByTagName('a')[0].href = document.location.search.substr(1);
+			document.getElementsByTagName('a')[0].href = document.location.hash.substr(1);
 
 			window.addEventListener(
 				'message',
@@ -37,25 +22,26 @@
 						return;
 					}
 
-					(function(height)
-					{
-						window.setInterval(
-							function()
-							{
-								if (document.documentElement.scrollHeight === height)
-								{
-									return;
-								}
+					var documentElement = document.documentElement,
+						height = documentElement.scrollHeight;
 
-								height = document.documentElement.scrollHeight;
-								e.source.postMessage(
-									{ 'height': height, 'url': currentUrl },
-									e.origin
-								);
-							},
-							100
-						);
-					})(document.documentElement.scrollHeight);
+					window.setInterval(
+						function()
+						{
+							if (documentElement.scrollHeight === height)
+							{
+								return;
+							}
+
+							height = documentElement.scrollHeight;
+
+							e.source.postMessage(
+								{ 'height': height, 'url': document.location.toString() },
+								e.origin
+							);
+						},
+						100
+					);
 				}
 			);
 		</script>

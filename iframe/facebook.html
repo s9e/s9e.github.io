@@ -6,7 +6,10 @@
 		<style>body{margin:0}</style>
 	</head>
 	<body>
+		<div class="fb-post" data-width="560"></div>
 		<script>
+			document.getElementsByTagName('div')[0].setAttribute('data-href', 'https://www.facebook.com/user/posts/' + document.location.hash.substr(1));
+
 			window.addEventListener(
 				'message',
 				function (e)
@@ -38,23 +41,7 @@
 					);
 				}
 			);
-
-			/** @param {{div,stylesheet}} o */
-			function cb(o)
-			{
-				var link  = document.createElement('link');
-				link.rel  = "stylesheet";
-				link.href = o.stylesheet;
-
-				document.head.appendChild(link);
-				document.body.innerHTML = o.div;
-			}
-
-			var script  = document.createElement('script');
-			script.type = "text/javascript";
-			script.src  = "https://gist.github.com/" + document.location.hash.substr(1) + ".json?callback=cb";
-
-			document.body.appendChild(script);
 		</script>
+		<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
 	</body>
 </html>
