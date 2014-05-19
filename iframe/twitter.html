@@ -8,14 +8,11 @@
 		<base href="https://twitter.com/user/status/">
 	</head>
 	<body>
+		<blockquote class="twitter-tweet">
+			<a href=""></a>
+		</blockquote>
 		<script>
-			document.location.hash.substr(1).split(',').forEach(function(id)
-			{
-				var blockquote = document.createElement('blockquote');
-				blockquote.className = 'twitter-tweet';
-
-				document.body.appendChild(blockquote).appendChild(document.createElement('a')).href = id;
-			});
+			document.getElementsByTagName('a')[0].href = document.location.hash.substr(1);
 
 			window.addEventListener(
 				'message',
