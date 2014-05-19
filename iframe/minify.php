@@ -24,8 +24,8 @@ function minify($m)
 			'http' => [
 				'method'  => 'POST',
 				'header'  => "Connection: close\r\n"
-						   . "Content-length: " . strlen($content) . "\r\n"
-						   . "Content-type: application/x-www-form-urlencoded",
+				           . "Content-length: " . strlen($content) . "\r\n"
+				           . "Content-type: application/x-www-form-urlencoded",
 				'content' => $content
 			]
 		])
