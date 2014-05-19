@@ -17,18 +17,15 @@
 						return;
 					}
 
-					var documentElement = document.documentElement,
-						height = documentElement.scrollHeight;
+					var height;
 
 					window.setInterval(
 						function()
 						{
-							if (documentElement.scrollHeight === height)
+							if (height === (height = document.documentElement.scrollHeight))
 							{
 								return;
 							}
-
-							height = documentElement.scrollHeight;
 
 							e.source.postMessage(
 								{ 'height': height, 'url': document.location.toString() },
