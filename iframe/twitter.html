@@ -5,14 +5,13 @@
 		<meta charset="utf-8"/>
 		<title>&nbsp;</title>
 		<style>body{margin:0}</style>
-		<base href="https://twitter.com/user/status/">
 	</head>
 	<body>
 		<blockquote class="twitter-tweet">
 			<a></a>
 		</blockquote>
 		<script>
-			document.getElementsByTagName('a')[0].href = document.location.hash.substr(1);
+			document.getElementsByTagName('a')[0].href = 'https://twitter.com/user/status/' + document.location.hash.substr(1);
 
 			window.addEventListener(
 				'message',
