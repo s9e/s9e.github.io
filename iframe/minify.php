@@ -34,18 +34,26 @@ function minify($m)
 	return $m[1] . trim(json_decode($response)->compiledCode, ';') . $m[3];
 }
 
-foreach (glob(__DIR__ . '/*.html') as $filepath)
+foreach (glob(__DIR__ . '/*.html') as $source)
 {
-	if (strpos(basename($filepath), '.min.') !== false)
+	if (strpos(basename($source), '.min.') !== false)
 	{
 		continue;
 	}
 
-	echo $filepath, "\n";
+	$target = substr($source, 0, -4) . 'min.html';
 
-	$html = file_get_contents($filepath);
+	if (filemtime($target) === filemtime($source))
+	{
+		continue;
+	}
+
+	echo $source, "\n";
+
+	$html = file_get_contents($source);
 	$html = preg_replace('/>\\n\\s*</', '><', $html);
 	$html = preg_replace_callback('#(<script>)(.*?)(</script>)#s', 'minify', $html);
 
-	file_put_contents(substr($filepath, 0, -4) . 'min.html', $html);
+	file_put_contents($target, $html);
+	touch($target, filemtime($source));
 }
