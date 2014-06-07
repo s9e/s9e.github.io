@@ -27,7 +27,8 @@
 					window.setInterval(
 						function()
 						{
-							if (height === (height = document.documentElement.scrollHeight))
+							if (height === (height = document.documentElement.scrollHeight)
+							 || height < 100)
 							{
 								return;
 							}
