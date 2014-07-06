@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- This file is PUBLIC DOMAIN -->
+<html>
+	<head>
+		<title>&nbsp;</title>
+	</head>
+	<body>
+		<div class="g-post"></div>
+		<script>
+			document.getElementsByTagName('div')[0].setAttribute('data-href', 'https://plus.google.com/' + location.hash.substr(1));
+
+			addEventListener(
+				'message',
+				function (e)
+				{
+					if (e.data !== 's9e:init')
+					{
+						return;
+					}
+
+					var height;
+
+					setInterval(
+						function ()
+						{
+							if (height === (height = document.documentElement.scrollHeight))
+							{
+								return;
+							}
+
+							e.source.postMessage(
+								{ 'height': height, 'url': location.toString() },
+								e.origin
+							);
+						},
+						100
+					);
+				}
+			);
+		</script>
+		<script src="//apis.google.com/js/plusone.js"></script>
+	</body>
+</html>
