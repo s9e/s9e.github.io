@@ -10,7 +10,7 @@
 		<script>
 			document.getElementsByTagName('div')[0].setAttribute('data-href', 'https://www.facebook.com/user/posts/' + document.location.hash.substr(1));
 
-			window.addEventListener(
+			addEventListener(
 				'message',
 				function (e)
 				{
@@ -21,7 +21,7 @@
 
 					var height;
 
-					window.setInterval(
+					setInterval(
 						function ()
 						{
 							if (height === (height = document.documentElement.scrollHeight))

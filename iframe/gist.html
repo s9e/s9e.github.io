@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<script>
-			window.addEventListener(
+			addEventListener(
 				'message',
 				function (e)
 				{
@@ -18,7 +18,7 @@
 
 					var height;
 
-					window.setInterval(
+					setInterval(
 						function ()
 						{
 							if (height === (height = document.documentElement.scrollHeight))

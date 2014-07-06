@@ -12,7 +12,7 @@
 		<script>
 			document.getElementsByTagName('a')[0].href = 'https://twitter.com/user/status/' + document.location.hash.substr(1);
 
-			window.addEventListener(
+			addEventListener(
 				'message',
 				function (e)
 				{
@@ -23,7 +23,7 @@
 
 					var height;
 
-					window.setInterval(
+					setInterval(
 						function ()
 						{
 							if (height === (height = document.documentElement.scrollHeight)
