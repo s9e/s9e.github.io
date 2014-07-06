@@ -27,7 +27,7 @@
 							}
 
 							e.source.postMessage(
-								{ 'height': height, 'url': document.location.toString() },
+								{ 'height': height, 'url': location.toString() },
 								e.origin
 							);
 						},
@@ -49,7 +49,7 @@
 
 			var script  = document.createElement('script');
 			script.type = "text/javascript";
-			script.src  = "https://gist.github.com/" + document.location.hash.substr(1) + ".json?callback=cb";
+			script.src  = "https://gist.github.com/" + location.hash.substr(1) + ".json?callback=cb";
 
 			document.body.appendChild(script);
 		</script>
