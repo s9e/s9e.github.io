@@ -11,12 +11,12 @@
 				'message',
 				function (e)
 				{
-					if (e.data !== 's9e:init')
+					if (e.data.substr(0, 8) !== 's9e:init')
 					{
 						return;
 					}
 
-					var height;
+					var height, id = e.data.substr(9);
 
 					setInterval(
 						function ()
@@ -27,7 +27,7 @@
 							}
 
 							e.source.postMessage(
-								{ 'height': height, 'url': location.toString() },
+								{ 'height': height, 'id': id, 'url': location.toString() },
 								e.origin
 							);
 						},
