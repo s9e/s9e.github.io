@@ -16,12 +16,12 @@
 				'message',
 				function (e)
 				{
-					if (e.data.substr(0, 8) !== 's9e:init')
+					if (e.data.substr(0, 4) !== 's9e:')
 					{
 						return;
 					}
 
-					var height, id = e.data.substr(9);
+					var height, id = e.data.substr(4);
 
 					setInterval(
 						function ()
