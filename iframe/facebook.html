@@ -8,7 +8,7 @@
 	<body>
 		<div class="fb-post" data-width="560"></div>
 		<script>
-			document.getElementsByTagName('div')[0].setAttribute('data-href', 'https://www.facebook.com/user/posts/' + location.hash.substr(1));
+			document.getElementsByTagName('div')[0].setAttribute('data-href', 'https://www.facebook.com/user/posts/' + unescape(location.hash).replace(/\D/g, ''));
 
 			addEventListener(
 				'message',
