@@ -54,6 +54,16 @@ foreach (glob(__DIR__ . '/*.html') as $source)
 	$html = preg_replace('/>\\n\\s*</', '><', $html);
 	$html = preg_replace_callback('#(<script>)(.*?)(</script>)#s', 'minify', $html);
 
+	// Remove quotes around attribute values
+	$html = preg_replace_callback(
+		'(</?[^>]+)',
+		function ($m)
+		{
+			return preg_replace('("([-\\w]*)")', '$1', $m[0]);
+		},
+		$html
+	);
+
 	file_put_contents($target, $html);
 	touch($target, filemtime($source));
 }
