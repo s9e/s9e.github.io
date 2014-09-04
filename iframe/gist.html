@@ -27,7 +27,7 @@
 							}
 
 							e.source.postMessage(
-								{ 'height': height, 'id': id, 'url': location.toString() },
+								{ 'height': height, 'id': id },
 								e.origin
 							);
 						},
@@ -37,19 +37,19 @@
 			);
 
 			/** @param {{div,stylesheet}} o */
-			function cb(o)
+			cb = function (o)
 			{
 				var link  = document.createElement('link');
-				link.rel  = "stylesheet";
-				link.href = o.stylesheet;
+				link.rel  = 'stylesheet';
+				link.href = o['stylesheet'];
 
 				document.head.appendChild(link);
-				document.body.innerHTML = o.div;
-			}
+				document.body.innerHTML = o['div'];
+			};
 
 			var script  = document.createElement('script');
-			script.type = "text/javascript";
-			script.src  = "https://gist.github.com/" + location.hash.substr(1) + ".json?callback=cb";
+			script.type = 'text/javascript';
+			script.src  = 'https://gist.github.com/' + location.hash.substr(1) + '.json?callback=cb';
 
 			document.body.appendChild(script);
 		</script>
