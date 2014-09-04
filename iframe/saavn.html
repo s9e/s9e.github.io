@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- This file is PUBLIC DOMAIN  -->
+<html>
+	<head>
+		<title>&nbsp;</title>
+		<style>body{margin:0}</style>
+	</head>
+	<body>
+		<div class="_SMB-saavn-remote" data-size="poster"></div>
+		<script>
+			var div = document.getElementsByTagName('div')[0],
+				parts = location.hash.substr(1).split('/');
+
+			div.setAttribute('data-id',   parts[1]);
+			div.setAttribute('data-type', parts[0]);
+		</script>
+		<script src="http://www.saavn.com/_s/bridge/saavnall.js"></script>
+	</body>
+</html>
