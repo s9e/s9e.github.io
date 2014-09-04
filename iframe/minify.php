@@ -59,7 +59,7 @@ foreach (glob(__DIR__ . '/*.html') as $source)
 		'(</?[^>]+)',
 		function ($m)
 		{
-			return preg_replace('("([-\\w]*)")', '$1', $m[0]);
+			return preg_replace('("([^\\s<=>"]*)")', '$1', $m[0]);
 		},
 		$html
 	);
