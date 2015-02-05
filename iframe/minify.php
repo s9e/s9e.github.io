@@ -43,26 +43,26 @@ foreach (glob(__DIR__ . '/*.html') as $source)
 
 	$target = substr($source, 0, -4) . 'min.html';
 
-	if (filemtime($target) === filemtime($source))
+	if (@filemtime($target) === filemtime($source))
 	{
 		continue;
 	}
 
-	echo $source, "\n";
-
 	$html = file_get_contents($source);
-	$html = preg_replace('/>\\n\\s*</', '><', $html);
-	$html = preg_replace_callback('#(<script>)(.*?)(</script>)#s', 'minify', $html);
+	echo $source, "\n";
 
 	// Remove quotes around attribute values
 	$html = preg_replace_callback(
 		'(</?[^>]+)',
 		function ($m)
 		{
-			return preg_replace('("([^\\s<=>"]*)")', '$1', $m[0]);
+			return preg_replace('(=""|(=)"([^\\s<=>"]*)")', '$1$2', $m[0]);
 		},
 		$html
 	);
+
+	$html = preg_replace('/>\\n\\s*</', '><', $html);
+	$html = preg_replace_callback('#(<script>)(.*?)(</script>)#s', 'minify', $html);
 
 	file_put_contents($target, $html);
 	touch($target, filemtime($source));
