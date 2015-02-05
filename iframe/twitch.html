@@ -6,7 +6,7 @@
 	</head>
 	<body style="margin:0">
 		<script>
-			document.body.innerHTML = '<object type="application/x-shockwave-flash" typemustmatch="" width="620" height="378" data="//www.twitch.tv/swflibs/TwitchPlayer.swf"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="flashvars" value="' + location.hash.substr(1).replace(/&/, '&amp;').replace(/"/g, '') + '&amp;auto_play=false"></object>';
+			document.body.innerHTML = '<object type="application/x-shockwave-flash" typemustmatch="" width="620" height="378" data="//www.twitch.tv/swflibs/TwitchPlayer.swf"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="flashvars" value="auto_play=false&amp;' + location.hash.substr(1).replace(/&/, '&amp;').replace(/"/g, '') + '&amp;auto_play=false"></object>';
 		</script>
 	</body>
 </html>
