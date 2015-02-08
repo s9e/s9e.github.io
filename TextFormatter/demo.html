@@ -3968,7 +3968,7 @@ if (typeof DOMParser !== 'undefined' && typeof XSLTProcessor !== 'undefined')
 		return targetDoc.importNode(xslt['transformToFragment'](loadXML(xml), targetDoc), true)
 	}
 }
-else if (typeof ActiveXObject !== 'undefined')
+else
 {
 	var xslt = loadXML(xsl);
 
