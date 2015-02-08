@@ -3988,7 +3988,7 @@ else
 		init: function()
 		{
 			var generator = new ActiveXObject("MSXML2.XSLTemplate.6.0");
-			generator['stylesheet'] = loadXML(xsl);
+			generator['stylesheet'] = this.loadXML(xsl);
 			this.proc = generator['createProcessor']();
 		},
 
