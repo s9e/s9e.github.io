@@ -3975,7 +3975,7 @@ else if (typeof ActiveXObject !== 'undefined')
 	/**
 	* @param {!string} xml
 	*/
-	loadXML=function(xml)
+	var loadXML=function(xml)
 	{
 
 		var obj = new ActiveXObject('MSXML2.DOMDocument.3.0');
@@ -3984,7 +3984,7 @@ else if (typeof ActiveXObject !== 'undefined')
 		obj.loadXML(xml);
 
 		return obj;
-	}
+	};
 
 	/**
 	* @param {!string} xml
