@@ -3975,7 +3975,7 @@ else if (typeof ActiveXObject !== 'undefined')
 	/**
 	* @param {!string} xml
 	*/
-	function loadXML(xml)
+	loadXML=function(xml)
 	{
 		var obj = new ActiveXObject('MSXML2.DOMDocument.3.0');
 		obj.async = false;
