@@ -4028,7 +4028,7 @@ var postProcessFunctions = {};
 */
 function preview(text, target)
 {
-	var resultFragment = transformToFragment(parse(text), targetDoc);
+	var resultFragment = transformToFragment(parse(text), target.ownerDocument);
 
 	// Apply post-processing
 	if (HINT.postProcessing)
