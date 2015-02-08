@@ -3971,41 +3971,6 @@ if (typeof DOMParser !== 'undefined' && typeof XSLTProcessor !== 'undefined')
 		return targetDoc.importNode(xslt['transformToFragment'](loadXML(xml), targetDoc), true)
 	}
 }
-else
-{
-	var xslt = loadXML(xsl);
-
-	/**
-	* @param {!string} xml
-	*/
-	function loadXML(xml)
-	{
-//		var obj = new ActiveXObject('MSXML2.DOMDocument.3.0');
-		obj.async = false;
-		obj.validateOnParse = false;
-		obj.loadXML(xml);
-
-		return obj;
-	}
-
-	/**
-	* @param {!string} xml
-	* @param {!HTMLDocument} targetDoc
-	*/
-	function transformToFragment(xml, targetDoc)
-	{
-		var div = targetDoc.createElement('div'),
-			fragment = targetDoc.createDocumentFragment();
-
-		div.innerHTML = loadXML(xml).transformNode(xslt);
-		while (div.firstChild)
-		{
-			fragment.appendChild(div.removeChild(div.firstChild));
-		}
-
-		return fragment;
-	}
-}
 
 var postProcessFunctions = {};
 
