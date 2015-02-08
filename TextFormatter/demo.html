@@ -3947,6 +3947,7 @@ function compareTags(a, b)
 var xslt;
 if (typeof DOMParser !== 'undefined' && typeof XSLTProcessor !== 'undefined')
 {
+	console.log('XSLT');
 	var xslt = new XSLTProcessor;
 	xslt['importStylesheet'](loadXML(xsl));
 
@@ -3970,6 +3971,7 @@ if (typeof DOMParser !== 'undefined' && typeof XSLTProcessor !== 'undefined')
 }
 else
 {
+	console.log('MSXML');
 	var xslt = loadXML(xsl);
 
 	/**
