@@ -3951,10 +3951,10 @@ var xslt = {
 	*/
 	init: function(xsl)
 	{
-		var stylesheet = xslt.loadXML(xsl, 'MSXML2.FreeThreadedDOMDocument.6.0');
+		var stylesheet = xslt.loadXML(xsl, 'MSXML2.FreeThreadedDOMDocument.3.0');
 		if (MSXML)
 		{
-			var generator = new ActiveXObject("MSXML2.XSLTemplate.6.0");
+			var generator = new ActiveXObject("MSXML2.XSLTemplate.3.0");
 			generator['stylesheet'] = stylesheet;
 			xslt.proc = generator['createProcessor']();
 		}
@@ -4011,7 +4011,7 @@ var xslt = {
 			var div = targetDoc.createElement('div'),
 				fragment = targetDoc.createDocumentFragment();
 
-			xslt.proc['input'] = xslt.loadXML(xml, 'MSXML2.DOMDocument.6.0');
+			xslt.proc['input'] = xslt.loadXML(xml, 'MSXML2.DOMDocument.3.0');
 			xslt.proc['transform']();
 			div.innerHTML = xslt.proc['output'];
 			while (div.firstChild)
