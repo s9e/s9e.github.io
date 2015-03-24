@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- This file is PUBLIC DOMAIN -->
+<html>
+	<head>
+		<title>&nbsp;</title>
+	</head>
+	<body style="margin:0">
+		<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-live="true"><a></a></div>
+		<script>
+			var div = document.getElementsByTagName('div')[0],
+				m = location.hash.split('#');
+			div.setAttribute('data-embed-token', m[2]);
+			div.firstChild.href = 'https://www.reddit.com' + m[1];
+
+			addEventListener(
+				'message',
+				function (e)
+				{
+					if (e.data.substr(0, 4) !== 's9e:')
+					{
+						return;
+					}
+
+					var height, id = e.data.substr(4);
+					setInterval(
+						function ()
+						{
+							if (height === (height = document.documentElement.scrollHeight)
+							 || height < 145)
+							{
+								return;
+							}
+
+							e.source.postMessage(
+								{ 'height': height, 'id': id },
+								e.origin
+							);
+						},
+						100
+					);
+				}
+			);
+		</script>
+		<script src="//www.redditstatic.com/comment-embed.js"></script>
+	</body>
+</html>
