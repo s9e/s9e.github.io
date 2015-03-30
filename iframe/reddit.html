@@ -7,11 +7,7 @@
 	<body style="margin:0">
 		<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-live="true"><a>Loading Reddit comment...</a></div>
 		<script>
-			var div = document.getElementsByTagName('div')[0],
-				m = location.hash.split('#');
-			div.setAttribute('data-embed-token', m[2]);
-			div.firstChild.href = 'https://www.reddit.com' + m[1];
-
+			document.getElementsByTagName('div')[0].firstChild.href = 'https://www.reddit.com' + location.hash.substr(1);
 			addEventListener(
 				'message',
 				function (e)
