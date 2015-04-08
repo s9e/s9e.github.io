@@ -7,7 +7,7 @@
 	<body style="margin:0">
 		<div class="g-post"></div>
 		<script>
-			document.getElementsByTagName('div')[0].setAttribute('data-href', 'https://plus.google.com/' + location.hash.substr(1));
+			document.body.firstElementChild.setAttribute('data-href', 'https://plus.google.com/' + location.hash.substr(1));
 
 			addEventListener(
 				'message',
