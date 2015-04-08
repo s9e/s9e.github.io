@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- This file is PUBLIC DOMAIN -->
+<html>
+	<head>
+		<title>&nbsp;</title>
+	</head>
+	<body style="margin:0"><blockquote class="imgur-embed-pub" lang="en"></blockquote>
+		<script>
+			document.body.firstChild.setAttribute('data-id', location.hash.substr(1));	
+
+			addEventListener(
+				'message',
+				function (e)
+				{
+					if (e.data.substr(0, 4) !== 's9e:')
+					{
+						return;
+					}
+
+					var height, width, id = e.data.substr(4), html = document.documentElement;
+					setInterval(
+						function ()
+						{
+							if (height === (height = html.scrollHeight)
+							 && width  === (width  = html.scrollWidth))
+							{
+								return;
+							}
+
+							e.source.postMessage(
+								{ 'height': height, 'id': id, 'width': width },
+								e.origin
+							);
+						},
+						100
+					);
+				}
+			);
+		</script>
+		<script src="//s.imgur.com/min/embed.js"></script>
+	</body>
+</html>
