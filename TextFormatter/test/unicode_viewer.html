@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unicode test</title>
+</head>
+<body>
+	<textarea rows="2" style="width:100%;font-size:8em"></textarea>
+	<div id="out" style="font-size:4em"></div>
+	<script>
+		var old = '';
+		setInterval(
+			function()
+			{
+				var text = document.getElementsByTagName('textarea')[0].value, out = '', pos = -1;
+				if (text === old)
+				{
+					return;
+				}
+				while (++pos < text.length)
+				{
+					var hex = text.charCodeAt(pos).toString(16).toUpperCase();
+					if (hex.length < 4)
+					{
+						hex = (new Array(5 - hex.length)).join('0') + hex;
+					}
+					out += hex + ' ';
+				}
+				document.getElementById('out').innerHTML = out;
+				old = text;
+			},
+			80
+		);
+	</script>
+</body>
+</html>
