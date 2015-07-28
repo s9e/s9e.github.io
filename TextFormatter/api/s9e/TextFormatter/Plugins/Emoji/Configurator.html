@@ -172,6 +172,15 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_addAlias">addAlias</a>(string $alias, string $emoji)
+                                            <p>Add an emoji alias</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_forceImageSize">forceImageSize</a>()
                                             <p>Force the size of the image to be set in the img element</p>                </div>
                 <div class="col-md-2"></div>
@@ -181,8 +190,26 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_removeAlias">removeAlias</a>(string $alias)
+                                            <p>Remove an emoji alias</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_omitImageSize">omitImageSize</a>()
                                             <p>Omit the size of the image in the img element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAliases">getAliases</a>()
+                                            <p>Get all emoji aliases</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -291,7 +318,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line 146</div>
+        <div class="location">at line 186</div>
         <code>                    array|null
     <strong>asConfig</strong>()</code>
     </h3>
@@ -501,8 +528,52 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_addAlias">
+        <div class="location">at line 79</div>
+        <code>                    void
+    <strong>addAlias</strong>(string $alias, string $emoji)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Add an emoji alias</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$emoji</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_forceImageSize">
-        <div class="location">at line 70</div>
+        <div class="location">at line 89</div>
         <code>                    void
     <strong>forceImageSize</strong>()</code>
     </h3>
@@ -528,8 +599,46 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_removeAlias">
+        <div class="location">at line 101</div>
+        <code>                    void
+    <strong>removeAlias</strong>(string $alias)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Remove an emoji alias</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_omitImageSize">
-        <div class="location">at line 81</div>
+        <div class="location">at line 111</div>
         <code>                    void
     <strong>omitImageSize</strong>()</code>
     </h3>
@@ -555,8 +664,35 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getAliases">
+        <div class="location">at line 122</div>
+        <code>                    array
+    <strong>getAliases</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get all emoji aliases</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_setImageSize">
-        <div class="location">at line 93</div>
+        <div class="location">at line 133</div>
         <code>                    void
     <strong>setImageSize</strong>(integer $size)</code>
     </h3>
@@ -593,7 +729,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_useEmojiOne">
-        <div class="location">at line 104</div>
+        <div class="location">at line 144</div>
         <code>                    void
     <strong>useEmojiOne</strong>()</code>
     </h3>
@@ -620,7 +756,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_usePNG">
-        <div class="location">at line 115</div>
+        <div class="location">at line 155</div>
         <code>                    void
     <strong>usePNG</strong>()</code>
     </h3>
@@ -647,7 +783,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_useSVG">
-        <div class="location">at line 126</div>
+        <div class="location">at line 166</div>
         <code>                    void
     <strong>useSVG</strong>()</code>
     </h3>
@@ -674,7 +810,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_useTwemoji">
-        <div class="location">at line 137</div>
+        <div class="location">at line 177</div>
         <code>                    void
     <strong>useTwemoji</strong>()</code>
     </h3>
