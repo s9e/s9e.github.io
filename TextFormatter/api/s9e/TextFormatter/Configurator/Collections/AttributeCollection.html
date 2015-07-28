@@ -12,6 +12,9 @@
         <script src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
         <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -75,7 +78,8 @@
     </div>
 
     <p>    class
-    <strong>AttributeCollection</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></p>
+    <strong>AttributeCollection</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a>
+</p>
 
     
     
@@ -177,7 +181,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalizeKey">normalizeKey</a>(string $key)
-                                            <p>Normalize a key as an attribute name</p>                </div>
+                                            <p>Normalize an item's key</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -186,7 +190,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalizeValue">normalizeValue</a>(array|null|<a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $value)
-                                            <p>Normalize a value to an instance of Attribute</p>                </div>
+                                            <p>Normalize a value for storage</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -537,7 +541,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Normalize a key as an attribute name</p>                                </div>
+                                    <p>Normalize an item's key</p>                    <p>This method can be overridden to implement keys normalization or implement constraints</p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -573,7 +577,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Normalize a value to an instance of Attribute</p>                                </div>
+                                    <p>Normalize a value for storage</p>                    <p>This method can be overridden to implement value normalization</p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 

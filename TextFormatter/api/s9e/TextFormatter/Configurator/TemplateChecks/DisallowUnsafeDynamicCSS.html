@@ -12,6 +12,9 @@
         <script src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
         <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -75,7 +78,8 @@
     </div>
 
     <p>    class
-    <strong>DisallowUnsafeDynamicCSS</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a></p>
+    <strong>DisallowUnsafeDynamicCSS</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a>
+</p>
 
     
     
@@ -111,9 +115,18 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>()
-                                            <p>Constructor</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a></small></div>
+                    <a href="#method_detectUnknownAttributes">detectUnknownAttributes</a>()
+                                            <p>Configure this template check to detect unknown attributes</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html#method_detectUnknownAttributes"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ignoreUnknownAttributes">ignoreUnknownAttributes</a>()
+                                            <p>Configure this template check to ignore unknown attributes</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html#method_ignoreUnknownAttributes"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a></small></div>
             </div>
             </div>
 
@@ -123,7 +136,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_check">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html#method_check"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a> at line 68</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html#method_check"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a> at line 50</div>
         <code>                    void
     <strong>check</strong>(<a target="_blank" href="http://php.net/DOMElement"><abbr title="DOMElement">DOMElement</abbr></a> $template, <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr> $tag)</code>
     </h3>
@@ -164,14 +177,41 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a> at line 32</div>
+                    <h3 id="method_detectUnknownAttributes">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html#method_detectUnknownAttributes"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a> at line 64</div>
         <code>                    void
-    <strong>__construct</strong>()</code>
+    <strong>detectUnknownAttributes</strong>()</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Constructor</p>                                </div>
+                                    <p>Configure this template check to detect unknown attributes</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ignoreUnknownAttributes">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractDynamicContentCheck.html#method_ignoreUnknownAttributes"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractDynamicContentCheck">AbstractDynamicContentCheck</abbr></a> at line 74</div>
+        <code>                    void
+    <strong>ignoreUnknownAttributes</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Configure this template check to ignore unknown attributes</p>                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>

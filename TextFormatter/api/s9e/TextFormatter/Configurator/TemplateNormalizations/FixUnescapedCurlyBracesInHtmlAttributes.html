@@ -12,6 +12,9 @@
         <script src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
         <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -75,7 +78,8 @@
     </div>
 
     <p>    class
-    <strong>FixUnescapedCurlyBracesInHtmlAttributes</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalization.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalization">TemplateNormalization</abbr></a></p>
+    <strong>FixUnescapedCurlyBracesInHtmlAttributes</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalization.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalization">TemplateNormalization</abbr></a>
+</p>
 
     
     
@@ -117,7 +121,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalize">normalize</a>(<a target="_blank" href="http://php.net/DOMElement"><abbr title="DOMElement">DOMElement</abbr></a> $template)
-                                            <p>Fix unescaped curly braces in HTML attributes</p>                </div>
+                                            <p>Apply this normalization rule to given template</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -143,10 +147,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Fix unescaped curly braces in HTML attributes</p>                    <p>Will replace
-    <hr onclick="if(1){alert(1)}">
-with
-    <hr onclick="if(1){{alert(1)}"></p>            </div>
+                                    <p>Apply this normalization rule to given template</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
