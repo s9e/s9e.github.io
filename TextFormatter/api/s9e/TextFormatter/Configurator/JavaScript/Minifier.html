@@ -112,15 +112,6 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_get">get</a>(string $src)
-                                            <p>Minify given JavaScript source and cache the result if applicable</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    integer|string|<abbr title="s9e\TextFormatter\Configurator\JavaScript\false">false</abbr>
-                </div>
-                <div class="col-md-8 type">
                     <a href="#method_getCacheDifferentiator">getCacheDifferentiator</a>()
                                             <p>Return a value that uniquely identify this minifier's configuration</p>                </div>
                 <div class="col-md-2"></div>
@@ -134,6 +125,15 @@
                                             <p>Minify given JavaScript source</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $src)
+                                            <p>Minify given JavaScript source and cache the result if applicable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -141,14 +141,40 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_get">
-        <div class="location">at line 30</div>
-        <code>                    string
-    <strong>get</strong>(string $src)</code>
+                    <h3 id="method_getCacheDifferentiator">
+        <div class="location">at line 29</div>
+        <code>    abstract                string
+    <strong>getCacheDifferentiator</strong>()</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Minify given JavaScript source and cache the result if applicable</p>                                </div>
+                                    <p>Return a value that uniquely identify this minifier's configuration</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Any unique value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_minify">
+        <div class="location">at line 37</div>
+        <code>    abstract                string
+    <strong>minify</strong>(string $src)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Minify given JavaScript source</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -177,40 +203,14 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getCacheDifferentiator">
-        <div class="location">at line 76</div>
-        <code>                    integer|string|<abbr title="s9e\TextFormatter\Configurator\JavaScript\false">false</abbr>
-    <strong>getCacheDifferentiator</strong>()</code>
+                    <h3 id="method_get">
+        <div class="location">at line 45</div>
+        <code>                    string
+    <strong>get</strong>(string $src)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Return a value that uniquely identify this minifier's configuration</p>                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>integer|string|<abbr title="s9e\TextFormatter\Configurator\JavaScript\false">false</abbr></td>
-            <td>Any value, or FALSE to disable caching</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_minify">
-        <div class="location">at line 87</div>
-        <code>    abstract                string
-    <strong>minify</strong>(string $src)</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Minify given JavaScript source</p>                                </div>
+                                    <p>Minify given JavaScript source and cache the result if applicable</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
