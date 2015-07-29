@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- This file is PUBLIC DOMAIN. Idea inspired by https://twitframe.com -->
+<html>
+	<head>
+		<title>Sqor</title>
+	</head>
+	<body style="margin:0">
+		<blockquote class="twitter-tweet">
+			<a rel="nofollow"></a>
+		</blockquote>
+		<script>
+			document.getElementsByTagName('a')[0].href = 'https://twitter.com/user/status/' + location.hash.substr(1);
+
+			addEventListener(
+				'message',
+				function (e)
+				{
+					if (e.data.substr(0, 4) !== 's9e:')
+					{
+						return;
+					}
+
+					var height, id = e.data.substr(4);
+					setInterval(
+						function ()
+						{
+							if (height === (height = document.documentElement.scrollHeight)
+							 || height < 100)
+							{
+								return;
+							}
+
+							e.source.postMessage(
+								{ 'height': height, 'id': id, 'url': location.toString() },
+								e.origin
+							);
+						},
+						100
+					);
+				}
+			);
+		</script>
+		<script src="//platform.twitter.com/widgets.js"></script>
+	</body>
+</html>
