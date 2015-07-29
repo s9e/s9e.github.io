@@ -17,6 +17,10 @@
 						return;
 					}
 
+					// Don't let the inner iframe receive this message because it expects
+					// a JSON string, not an object
+					e.stopImmediatePropagation();
+
 					var height, width, id = e.data.substr(4), html = document.documentElement;
 					setInterval(
 						function ()
