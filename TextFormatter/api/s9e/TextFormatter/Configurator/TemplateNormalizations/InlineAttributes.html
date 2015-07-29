@@ -121,7 +121,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalize">normalize</a>(<a target="_blank" href="http://php.net/DOMElement"><abbr title="DOMElement">DOMElement</abbr></a> $template)
-                                            <p>Apply this normalization rule to given template</p>                </div>
+                                            <p>Inline the attribute declarations of a template</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -147,7 +147,10 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Apply this normalization rule to given template</p>                                </div>
+                                    <p>Inline the attribute declarations of a template</p>                    <p>Will replace
+    <a><xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>...</a>
+with
+    <a href="{@url}">...</a></p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
