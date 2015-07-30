@@ -121,7 +121,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalize">normalize</a>(<a target="_blank" href="http://php.net/DOMElement"><abbr title="DOMElement">DOMElement</abbr></a> $template)
-                                            <p>Apply this normalization rule to given template</p>                </div>
+                                            <p>Inline the text content of a node or the value of an attribute where it's known</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -141,13 +141,16 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_normalize">
-        <div class="location">at line 29</div>
+        <div class="location">at line 31</div>
         <code>                    void
     <strong>normalize</strong>(<a target="_blank" href="http://php.net/DOMElement"><abbr title="DOMElement">DOMElement</abbr></a> $template)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Apply this normalization rule to given template</p>                                </div>
+                                    <p>Inline the text content of a node or the value of an attribute where it's known</p>                    <p>Will replace
+    <xsl:if test="@foo='Foo'"><xsl:value-of select="@foo"/></xsl:if>
+with
+    <xsl:if test="@foo='Foo'">Foo</xsl:if></p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
