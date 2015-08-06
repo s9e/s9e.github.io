@@ -4,7 +4,7 @@
 	<head>
 		<title>Medium embed</title>
 	</head>
-	<body style="margin:0"><a class="m-story"></a>
+	<body style="height:400px;margin:0"><a class="m-story"></a>
 		<script>
 			document.body.firstChild.href = 'https://medium.com//' + location.hash.substr(1);
 
@@ -21,8 +21,7 @@
 					setInterval(
 						function ()
 						{
-							if (height === (height = document.documentElement.scrollHeight)
-							 || height < 400)
+							if (height === (height = document.documentElement.scrollHeight))
 							{
 								return;
 							}
