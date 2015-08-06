@@ -21,7 +21,8 @@
 					setInterval(
 						function ()
 						{
-							if (height === (height = document.documentElement.scrollHeight))
+							if (height === (height = document.documentElement.scrollHeight)
+							 || height < 400)
 							{
 								return;
 							}
