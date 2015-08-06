@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- This file is PUBLIC DOMAIN -->
+<html>
+	<head>
+		<title>Medium embed</title>
+	</head>
+	<body style="margin:0"><a class="m-story" data-collapsed="true"></a>
+		<script>
+			document.body.firstChild.href = 'https://medium.com//' + location.hash.substr(1);
+
+			addEventListener(
+				'message',
+				function (e)
+				{
+					if (e.data.substr(0, 4) !== 's9e:')
+					{
+						return;
+					}
+
+					var height, id = e.data.substr(4);
+					setInterval(
+						function ()
+						{
+							if (height === (height = document.documentElement.scrollHeight))
+							{
+								return;
+							}
+
+							e.source.postMessage(
+								{ 'height': height, 'id': id },
+								e.origin
+							);
+						},
+						100
+					);
+				}
+			);
+		</script>
+		<script async src="//static.medium.com/embed.js"></script>
+	</body>
+</html>
