@@ -347,7 +347,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isSystemTag">isSystemTag</a>()
-                                            <p>Test whether this tag is a special tag: "br", "i" or "pb"</p>                </div>
+                                            <p>Test whether this tag is a special tag: "br", "i", "pb" or "v"</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -357,6 +357,15 @@
                 <div class="col-md-8 type">
                     <a href="#method_isStartTag">isStartTag</a>()
                                             <p>Test whether this tag is a start tag (self-closing tags inclusive)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isVerbatim">isVerbatim</a>()
+                                            <p>Test whether this tag represents verbatim text</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1191,7 +1200,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Test whether this tag is a special tag: "br", "i" or "pb"</p>                                </div>
+                                    <p>Test whether this tag is a special tag: "br", "i", "pb" or "v"</p>                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -1238,8 +1247,35 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_isVerbatim">
+        <div class="location">at line 434</div>
+        <code>                    bool
+    <strong>isVerbatim</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test whether this tag represents verbatim text</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getAttribute">
-        <div class="location">at line 439</div>
+        <div class="location">at line 449</div>
         <code>                    mixed
     <strong>getAttribute</strong>(string $attrName)</code>
     </h3>
@@ -1277,7 +1313,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasAttribute">
-        <div class="location">at line 450</div>
+        <div class="location">at line 460</div>
         <code>                    bool
     <strong>hasAttribute</strong>(string $attrName)</code>
     </h3>
@@ -1315,7 +1351,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeAttribute">
-        <div class="location">at line 461</div>
+        <div class="location">at line 471</div>
         <code>                    void
     <strong>removeAttribute</strong>(string $attrName)</code>
     </h3>
@@ -1353,7 +1389,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAttribute">
-        <div class="location">at line 473</div>
+        <div class="location">at line 483</div>
         <code>                    void
     <strong>setAttribute</strong>(string $attrName, string $attrValue)</code>
     </h3>
@@ -1395,7 +1431,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAttributes">
-        <div class="location">at line 484</div>
+        <div class="location">at line 494</div>
         <code>                    void
     <strong>setAttributes</strong>(array $attributes)</code>
     </h3>
