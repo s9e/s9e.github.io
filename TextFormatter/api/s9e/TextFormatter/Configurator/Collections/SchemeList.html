@@ -103,7 +103,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_asConfig">asConfig</a>()
-                                            <p>Return an array-based representation of this object to be used for parsing</p>                </div>
+                                            <p>Return this scheme list as a regexp</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -190,7 +190,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalizeValue">normalizeValue</a>(string $scheme)
-                                            <p>Normalize a value for storage</p>                </div>
+                                            <p>Validate and normalize a scheme name to lowercase, or throw an exception if invalid</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -363,8 +363,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Return an array-based representation of this object to be used for parsing</p>                    <p>NOTE: if this method was named getConfig() it could interfere with magic getters from
-      the Configurable trait</p>            </div>
+                                    <p>Return this scheme list as a regexp</p>                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -607,13 +606,13 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeValue">
-        <div class="location">at line 36</div>
+        <div class="location">at line 34</div>
         <code>                    string
     <strong>normalizeValue</strong>(string $scheme)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Normalize a value for storage</p>                    <p>This method can be overridden to implement value normalization</p>            </div>
+                                    <p>Validate and normalize a scheme name to lowercase, or throw an exception if invalid</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
