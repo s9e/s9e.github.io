@@ -87,6 +87,15 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_encoder">
+                                                                                <a href="../../../s9e/TextFormatter/Configurator/JavaScript/Encoder.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr></a>
+                </td>
+                <td>$encoder</td>
+                <td class="last">
+</td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_exportMethods">
                                                                                 array
                 </td>
@@ -139,20 +148,11 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;string
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_encode">encode</a>(mixed $value)
                                             <p>Encode a PHP value into an equivalent JavaScript representation</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;bool
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_isLegalProp">isLegalProp</a>(string $name)
-                                            <p>Test whether a string can be used as a property name, unquoted</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -163,7 +163,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 77</div>
+        <div class="location">at line 81</div>
         <code>                    void
     <strong>__construct</strong>(<abbr title="s9e\TextFormatter\Configurator\s9e\TextFormatter\Configurator">Configurator</abbr> $configurator)</code>
     </h3>
@@ -200,7 +200,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMinifier">
-        <div class="location">at line 87</div>
+        <div class="location">at line 92</div>
         <code>                    <a href="../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a>
     <strong>getMinifier</strong>()</code>
     </h3>
@@ -227,7 +227,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParser">
-        <div class="location">at line 103</div>
+        <div class="location">at line 108</div>
         <code>                    string
     <strong>getParser</strong>(array $config = null)</code>
     </h3>
@@ -263,7 +263,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setMinifier">
-        <div class="location">at line 144</div>
+        <div class="location">at line 149</div>
         <code>                    <a href="../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a>
     <strong>setMinifier</strong>(string|<a href="../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> $minifier)</code>
     </h3>
@@ -299,8 +299,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encode">
-        <div class="location">at line 382</div>
-        <code>        static            string
+        <div class="location">at line 387</div>
+        <code>                    string
     <strong>encode</strong>(mixed $value)</code>
     </h3>
     <div class="details">
@@ -324,43 +324,6 @@
         <tr>
             <td>string</td>
             <td>JavaScript representation</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_isLegalProp">
-        <div class="location">at line 484</div>
-        <code>        static            bool
-    <strong>isLegalProp</strong>(string $name)</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Test whether a string can be used as a property name, unquoted</p>                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$name</td>
-                <td>Property's name</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td>
-</td>
         </tr>
     </table>
 
