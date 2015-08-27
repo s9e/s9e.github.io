@@ -78,26 +78,12 @@
     </div>
 
     <p>    class
-    <strong>ConfigValue</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>
+    <strong>ConfigValue</strong>
 </p>
 
     
     
     
-            <h2>Properties</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td class="type" id="property_code">
-                                                                                string
-                </td>
-                <td>$code</td>
-                <td class="last">
-</td>
-                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html#property_code"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a></small></td>
-            </tr>
-            </table>
-
     
             <h2>Methods</h2>
 
@@ -107,17 +93,8 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $value, <abbr title="s9e\TextFormatter\Configurator\JavaScript\s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr> $encoder)
+                    <a href="#method___construct">__construct</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $value, string $varName)
                                             <p>Constructor</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method___toString">__toString</a>()
-                                            <p>Return this value expressed in JavaScript</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -125,17 +102,8 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_decrementUseCount">decrementUseCount</a>()
-                                            <p>Decrement the use counter of this value as well as the values it contains</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getJavaScript">getJavaScript</a>()
-                                            <p>Return the original JavaScript representation of this value</p>                </div>
+                    <a href="#method_deduplicate">deduplicate</a>()
+                                            <p>Mark this value as deduplicated if it's been used more than once</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -161,8 +129,8 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getVarDeclaration">getVarDeclaration</a>()
-                                            <p>Return the variable declaration of the original value</p>                </div>
+                    <a href="#method_getVarName">getVarName</a>()
+                                            <p>Return the variable name assigned to this value</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -174,6 +142,15 @@
                                             <p>Increment the use counter</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDeduplicated">isDeduplicated</a>()
+                                            <p>Return whether this value is marked as deduplicated</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -182,9 +159,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 39</div>
+        <div class="location">at line 44</div>
         <code>                    void
-    <strong>__construct</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $value, <abbr title="s9e\TextFormatter\Configurator\JavaScript\s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr> $encoder)</code>
+    <strong>__construct</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $value, string $varName)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -199,9 +176,10 @@
                 <td>Original value</td>
             </tr>
                     <tr>
-                <td><abbr title="s9e\TextFormatter\Configurator\JavaScript\s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr></td>
-                <td>$encoder</td>
-                <td>JavaScript encoder</td>
+                <td>string</td>
+                <td>$varName</td>
+                <td>
+</td>
             </tr>
             </table>
 
@@ -223,41 +201,14 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method___toString">
-        <div class="location">at line 50</div>
-        <code>                    string
-    <strong>__toString</strong>()</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Return this value expressed in JavaScript</p>                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>
-</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_decrementUseCount">
-        <div class="location">at line 60</div>
+                    <h3 id="method_deduplicate">
+        <div class="location">at line 55</div>
         <code>                    void
-    <strong>decrementUseCount</strong>()</code>
+    <strong>deduplicate</strong>()</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Decrement the use counter of this value as well as the values it contains</p>                                </div>
+                                    <p>Mark this value as deduplicated if it's been used more than once</p>                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -277,35 +228,8 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getJavaScript">
-        <div class="location">at line 77</div>
-        <code>                    string
-    <strong>getJavaScript</strong>()</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Return the original JavaScript representation of this value</p>                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>
-</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_getUseCount">
-        <div class="location">at line 87</div>
+        <div class="location">at line 69</div>
         <code>                    integer
     <strong>getUseCount</strong>()</code>
     </h3>
@@ -332,7 +256,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getValue">
-        <div class="location">at line 97</div>
+        <div class="location">at line 79</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
     <strong>getValue</strong>()</code>
     </h3>
@@ -358,14 +282,14 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getVarDeclaration">
-        <div class="location">at line 107</div>
+                    <h3 id="method_getVarName">
+        <div class="location">at line 89</div>
         <code>                    string
-    <strong>getVarDeclaration</strong>()</code>
+    <strong>getVarName</strong>()</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Return the variable declaration of the original value</p>                                </div>
+                                    <p>Return the variable name assigned to this value</p>                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -386,7 +310,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_incrementUseCount">
-        <div class="location">at line 117</div>
+        <div class="location">at line 99</div>
         <code>                    void
     <strong>incrementUseCount</strong>()</code>
     </h3>
@@ -400,6 +324,33 @@
                     <table class="table table-condensed">
         <tr>
             <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDeduplicated">
+        <div class="location">at line 109</div>
+        <code>                    bool
+    <strong>isDeduplicated</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return whether this value is marked as deduplicated</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
             <td>
 </td>
         </tr>
