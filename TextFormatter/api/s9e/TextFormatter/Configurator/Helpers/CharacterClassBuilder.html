@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>s9e\TextFormatter\Configurator\Helpers\RegexpBuilder | API</title>
+    <title>s9e\TextFormatter\Configurator\Helpers\CharacterClassBuilder | API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_RegexpBuilder" data-root-path="../../../../">
+    <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_CharacterClassBuilder" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -68,33 +68,47 @@
                                         <li><a href="../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li>
                                         <li><a href="../../../../s9e/TextFormatter/Configurator/Helpers.html">Helpers</a></li>
     
-                <li>RegexpBuilder</li>
+                <li>CharacterClassBuilder</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
-        <h1>RegexpBuilder</h1>
+        <h1>CharacterClassBuilder</h1>
     </div>
 
     <p>    class
-    <strong>RegexpBuilder</strong>
+    <strong>CharacterClassBuilder</strong>
 </p>
 
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_delimiter">
+                                                                                string
+                </td>
+                <td>$delimiter</td>
+                <td class="last">
+</td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;string
+                    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_fromList">fromList</a>(array $words, array $options = array())
-                                            <p>Create a regexp pattern that matches a list of words</p>                </div>
+                    <a href="#method_fromList">fromList</a>(array $chars)
+                                            <p>Create a character class that matches the given list of characters</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -105,25 +119,20 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_fromList">
-        <div class="location">at line 26</div>
-        <code>        static            string
-    <strong>fromList</strong>(array $words, array $options = array())</code>
+        <div class="location">at line 33</div>
+        <code>                    string
+    <strong>fromList</strong>(array $chars)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Create a regexp pattern that matches a list of words</p>                                </div>
+                                    <p>Create a character class that matches the given list of characters</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
-                <td>$words</td>
-                <td>Words to sort (must be UTF-8)</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$options</td>
+                <td>$chars</td>
                 <td>
 </td>
             </tr>
