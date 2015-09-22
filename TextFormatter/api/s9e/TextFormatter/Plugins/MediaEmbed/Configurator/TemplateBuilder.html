@@ -85,20 +85,6 @@
     
     
     
-            <h2>Properties</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td class="type" id="property_responsiveEmbeds">
-                                                                                bool
-                </td>
-                <td>$responsiveEmbeds</td>
-                <td class="last">
-</td>
-                <td></td>
-            </tr>
-            </table>
-
     
             <h2>Methods</h2>
 
@@ -117,8 +103,17 @@
                     string
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_build">build</a>(string $siteId, array $siteConfig)
+                                            <p>Generate and return a template for given site</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getTemplate">getTemplate</a>(array $config)
-                                            <p>Generate and return a template for given site config</p>                </div>
+                                            <p>Generate and return a template based on given config</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -129,7 +124,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 31</div>
+        <div class="location">at line 28</div>
         <code>                    void
     <strong>__construct</strong>()</code>
     </h3>
@@ -155,14 +150,58 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_build">
+        <div class="location">at line 42</div>
+        <code>                    string
+    <strong>build</strong>(string $siteId, array $siteConfig)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Generate and return a template for given site</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$siteId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$siteConfig</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getTemplate">
-        <div class="location">at line 44</div>
+        <div class="location">at line 53</div>
         <code>                    string
     <strong>getTemplate</strong>(array $config)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Generate and return a template for given site config</p>                                </div>
+                                    <p>Generate and return a template based on given config</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
