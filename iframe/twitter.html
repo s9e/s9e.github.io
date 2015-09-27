@@ -4,12 +4,23 @@
 	<head>
 		<title>&nbsp;</title>
 	</head>
-	<body style="margin:0">
-		<blockquote class="twitter-tweet">
-			<a rel="nofollow"></a>
-		</blockquote>
+	<body style="margin:0"><blockquote class="twitter-tweet"><a rel="nofollow"></a></blockquote>
 		<script>
-			document.getElementsByTagName('a')[0].href = 'https://twitter.com/user/status/' + location.hash.substr(1);
+			(function(blockquote)
+			{
+				blockquote.firstChild.href = 'https://twitter.com/user/status/' + location.hash.substr(1);
+				if (typeof navigator !== 'undefined')
+				{
+					if ('languages' in navigator && navigator.languages.length)
+					{
+						blockquote.setAttribute('data-lang', navigator.languages[0]);
+					}
+					else if ('language' in navigator)
+					{
+						blockquote.setAttribute('data-lang', navigator.language);
+					}
+				}
+			})(document.body.firstChild);
 
 			addEventListener(
 				'message',
