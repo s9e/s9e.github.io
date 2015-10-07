@@ -8,46 +8,43 @@
 		<script>
 			document.body.firstChild.setAttribute('data-id', location.hash.substr(1));	
 
-			addEventListener(
-				'message',
-				function (e)
-				{
-					if (e.data.substr(0, 4) !== 's9e:')
+			(function()
+			{
+				var id, origin, source, width, height;
+				addEventListener(
+					'message',
+					function (e)
 					{
-						return;
-					}
+						if (e.data.substr(0, 4) === 's9e:')
+						{
+							// Don't let the inner iframe receive this message because it expects
+							// a JSON string, not an object
+							e.stopImmediatePropagation();
 
-					// Don't let the inner iframe receive this message because it expects
-					// a JSON string, not an object
-					e.stopImmediatePropagation();
-
-					var height,
-						width,
-						id = e.data.substr(4),
-						html = document.documentElement,
-						cnt = 0,
-						intervalId = setInterval(
-							function ()
+							id     = e.data.substr(4);
+							origin = e.origin;
+							source = e.source;
+						}
+						else if (e.data.charAt(0) === '{')
+						{
+							var data = JSON.parse(e.data);
+							if (data.message === 'resize_imgur')
 							{
-								if (++cnt > 100)
-								{
-									clearInterval(intervalId);
-								}
-								if (height === (height = html.scrollHeight)
-								 && width  === (width  = html.scrollWidth))
-								{
-									return;
-								}
+								width  = 28 + data.width;
+								height = 28 + data.height;
+							}
+						}
 
-								e.source.postMessage(
-									{ 'height': height, 'id': id, 'width': width },
-									e.origin
-								);
-							},
-							100
-						);
-				}
-			);
+						if (id && width && height)
+						{
+							source.postMessage(
+								{ 'height': height, 'id': id, 'width': width },
+								origin
+							);
+						}
+					}
+				);
+			})();
 		</script>
 		<script src="//s.imgur.com/min/embed.js"></script>
 	</body>
