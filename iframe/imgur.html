@@ -21,23 +21,31 @@
 					// a JSON string, not an object
 					e.stopImmediatePropagation();
 
-					var height, width, id = e.data.substr(4), html = document.documentElement;
-					setInterval(
-						function ()
-						{
-							if (height === (height = html.scrollHeight)
-							 && width  === (width  = html.scrollWidth))
+					var height,
+						width,
+						id = e.data.substr(4),
+						html = document.documentElement,
+						cnt = 0,
+						intervalId = setInterval(
+							function ()
 							{
-								return;
-							}
+								if (++cnt > 100)
+								{
+									clearInterval(intervalId);
+								}
+								if (height === (height = html.scrollHeight)
+								 && width  === (width  = html.scrollWidth))
+								{
+									return;
+								}
 
-							e.source.postMessage(
-								{ 'height': height, 'id': id, 'width': width },
-								e.origin
-							);
-						},
-						100
-					);
+								e.source.postMessage(
+									{ 'height': height, 'id': id, 'width': width },
+									e.origin
+								);
+							},
+							100
+						);
 				}
 			);
 		</script>
