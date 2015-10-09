@@ -31,6 +31,8 @@
 						return;
 					}
 
+					e.stopImmediatePropagation();
+
 					var height,
 						id = e.data.substr(4),
 						intervalId = setInterval(
