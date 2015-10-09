@@ -17,23 +17,26 @@
 						return;
 					}
 
-					var height, id = e.data.substr(4);
-					setInterval(
-						function ()
-						{
-							if (height === (height = document.documentElement.scrollHeight)
-							 || height < 240)
+					var height,
+						id = e.data.substr(4),
+						intervalId = setInterval(
+							function ()
 							{
-								return;
-							}
+								if (height === (height = document.documentElement.scrollHeight)
+								 || height < 240)
+								{
+									return;
+								}
 
-							e.source.postMessage(
-								{ 'height': height, 'id': id },
-								e.origin
-							);
-						},
-						100
-					);
+								e.source.postMessage(
+									{ 'height': height, 'id': id },
+									e.origin
+								);
+							},
+							100
+						);
+
+					setTimeout(function() { clearInterval(intervalId); }, 10000);
 				}
 			);
 		</script>
