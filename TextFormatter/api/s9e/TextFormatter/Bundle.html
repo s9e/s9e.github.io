@@ -88,11 +88,20 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;void
+                    static&nbsp;<a href="../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_reset">reset</a>()
-                                            <p>Reset the cached parser and renderer</p>                </div>
+                    <a href="#method_getCachedParser">getCachedParser</a>()
+                                            <p>Return a cached instance of the parser</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCachedRenderer">getCachedRenderer</a>()
+                                            <p>Return a cached instance of the renderer</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -111,6 +120,15 @@
                 <div class="col-md-8 type">
                     <a href="#method_render">render</a>(string $xml, array $params = array())
                                             <p>Render an intermediate representation using a singleton instance of the bundled Renderer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>()
+                                            <p>Reset the cached parser and renderer</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -149,21 +167,48 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_reset">
+                    <h3 id="method_getCachedParser">
         <div class="location">at line 21</div>
-        <code>        static            void
-    <strong>reset</strong>()</code>
+        <code>        static            <a href="../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+    <strong>getCachedParser</strong>()</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Reset the cached parser and renderer</p>                                </div>
+                                    <p>Return a cached instance of the parser</p>                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td><a href="../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedRenderer">
+        <div class="location">at line 36</div>
+        <code>        static            <a href="../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
+    <strong>getCachedRenderer</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return a cached instance of the renderer</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -177,7 +222,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line 33</div>
+        <div class="location">at line 52</div>
         <code>        static            string
     <strong>parse</strong>(string $text)</code>
     </h3>
@@ -213,7 +258,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at line 62</div>
+        <div class="location">at line 76</div>
         <code>        static            string
     <strong>render</strong>(string $xml, array $params = array())</code>
     </h3>
@@ -253,8 +298,35 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at line 105</div>
+        <code>        static            void
+    <strong>reset</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Reset the cached parser and renderer</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_unparse">
-        <div class="location">at line 95</div>
+        <div class="location">at line 117</div>
         <code>        static            string
     <strong>unparse</strong>(string $xml)</code>
     </h3>
