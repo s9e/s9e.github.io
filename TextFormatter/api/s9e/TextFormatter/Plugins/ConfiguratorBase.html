@@ -113,7 +113,8 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_asConfig">asConfig</a>()
-                                            <p>Return an array-based representation of this object to be used for parsing</p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -123,6 +124,15 @@
                 <div class="col-md-8 type">
                     <a href="#method_getBaseProperties">getBaseProperties</a>()
                                             <p>Return a list of base properties meant to be added to asConfig()'s return</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getJSHints">getJSHints</a>()
+                                            <p>Return additional hints used in the JavaScript parser</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -236,9 +246,6 @@
     <strong>asConfig</strong>()</code>
     </h3>
     <div class="details">
-                    <div class="method-description">
-                                    <p>Return an array-based representation of this object to be used for parsing</p>                    <p>NOTE: if this method was named getConfig() it could interfere with magic getters from
-      the Configurable trait</p>            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -287,8 +294,34 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getJSHints">
+        <div class="location">at line 122</div>
+        <code>                    array
+    <strong>getJSHints</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return additional hints used in the JavaScript parser</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Hint names and values</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getJSParser">
-        <div class="location">at line 125</div>
+        <div class="location">at line 135</div>
         <code>                    string|null
     <strong>getJSParser</strong>()</code>
     </h3>
@@ -315,7 +348,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_getTag">
-        <div class="location">at line 148</div>
+        <div class="location">at line 158</div>
         <code>                    <a href="../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>getTag</strong>()</code>
     </h3>
@@ -342,7 +375,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_disableQuickMatch">
-        <div class="location">at line 167</div>
+        <div class="location">at line 177</div>
         <code>                    void
     <strong>disableQuickMatch</strong>()</code>
     </h3>
@@ -369,7 +402,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_setQuickMatch">
-        <div class="location">at line 194</div>
+        <div class="location">at line 204</div>
         <code>                    void
     <strong>setQuickMatch</strong>(string $quickMatch)</code>
     </h3>
@@ -407,7 +440,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_setRegexpLimit">
-        <div class="location">at line 210</div>
+        <div class="location">at line 220</div>
         <code>                    void
     <strong>setRegexpLimit</strong>(integer $limit)</code>
     </h3>
