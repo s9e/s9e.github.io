@@ -119,17 +119,8 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getCacheDifferentiator">getCacheDifferentiator</a>()
-                                            <p>Return a value that uniquely identify this minifier's configuration</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
                     <a href="#method_minify">minify</a>(string $src)
-                                            <p>Minify given JavaScript source</p>                </div>
+                                            <p>No-op method, output is the same as input</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -141,6 +132,15 @@
                                             <p>Minify given JavaScript source and cache the result if applicable</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_get"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a></small></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheDifferentiator">getCacheDifferentiator</a>()
+                                            <p>Return a value that uniquely identifies this minifier's configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_getCacheDifferentiator"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a></small></div>
+            </div>
             </div>
 
 
@@ -148,40 +148,14 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_getCacheDifferentiator">
-        <div class="location">at line 20</div>
-        <code>                    string
-    <strong>getCacheDifferentiator</strong>()</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Return a value that uniquely identify this minifier's configuration</p>                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>Any unique value</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_minify">
-        <div class="location">at line 31</div>
+        <div class="location">at line 23</div>
         <code>                    string
     <strong>minify</strong>(string $src)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Minify given JavaScript source</p>                                </div>
+                                    <p>No-op method, output is the same as input</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -211,7 +185,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_get"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> at line 45</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_get"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> at line 38</div>
         <code>                    string
     <strong>get</strong>(string $src)</code>
     </h3>
@@ -236,6 +210,33 @@
         <tr>
             <td>string</td>
             <td>Minified source</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheDifferentiator">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_getCacheDifferentiator"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> at line 60</div>
+        <code>                    array|string
+    <strong>getCacheDifferentiator</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return a value that uniquely identifies this minifier's configuration</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td>
+</td>
         </tr>
     </table>
 
