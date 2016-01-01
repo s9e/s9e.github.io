@@ -108,12 +108,57 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $variant = null)
+                                            <p>Get this value, either from preferred variant or the default value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Items/Variant.html#method_get"><abbr title="s9e\TextFormatter\Configurator\Items\Variant">Variant</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_has">has</a>(string $variant)
+                                            <p>Return whether a value exists for given variant</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Items/Variant.html#method_has"><abbr title="s9e\TextFormatter\Configurator\Items\Variant">Variant</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_set">set</a>(string $variant, mixed $value)
+                                            <p>Set a variant for this value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Items/Variant.html#method_set"><abbr title="s9e\TextFormatter\Configurator\Items\Variant">Variant</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDynamic">setDynamic</a>(string $variant, <abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr> $callback)
+                                            <p>Set a dynamic variant for this value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Items/Variant.html#method_setDynamic"><abbr title="s9e\TextFormatter\Configurator\Items\Variant">Variant</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_asConfig">asConfig</a>()
                                             <p>Return an array-based representation of this object to be used for parsing</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCaptureNames">getCaptureNames</a>()
+                                            <p>Return the name of each capture in this regexp</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_getCaptureNames"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -126,11 +171,11 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="s9e\TextFormatter\Configurator\Items\RegExp">RegExp</abbr>
+                    <a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_toJS">toJS</a>()
-                                            <p>Return this regexp as a JavaScript RegExp</p>                </div>
+                                            <p>Return this regexp as JavaScript code</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_toJS"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -203,7 +248,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method___toString"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 50</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method___toString"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 59</div>
         <code>                    string
     <strong>__toString</strong>()</code>
     </h3>
@@ -229,8 +274,164 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Variant.html#method_get"><abbr title="s9e\TextFormatter\Configurator\Items\Variant">Variant</abbr></a> at line 69</div>
+        <code>                    mixed
+    <strong>get</strong>(string $variant = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get this value, either from preferred variant or the default value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$variant</td>
+                <td>Preferred variant</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Value from preferred variant if available, default value otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Variant.html#method_has"><abbr title="s9e\TextFormatter\Configurator\Items\Variant">Variant</abbr></a> at line 87</div>
+        <code>                    bool
+    <strong>has</strong>(string $variant)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return whether a value exists for given variant</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$variant</td>
+                <td>Variant name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>Whether given variant exists</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Variant.html#method_set"><abbr title="s9e\TextFormatter\Configurator\Items\Variant">Variant</abbr></a> at line 99</div>
+        <code>                    void
+    <strong>set</strong>(string $variant, mixed $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set a variant for this value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$variant</td>
+                <td>Name of variant</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>Variant's value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDynamic">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Variant.html#method_setDynamic"><abbr title="s9e\TextFormatter\Configurator\Items\Variant">Variant</abbr></a> at line 111</div>
+        <code>                    void
+    <strong>setDynamic</strong>(string $variant, <abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr> $callback)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set a dynamic variant for this value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$variant</td>
+                <td>Name of variant</td>
+            </tr>
+                    <tr>
+                <td><abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr></td>
+                <td>$callback</td>
+                <td>Callback that returns this variant's value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 58</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 67</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()</code>
     </h3>
@@ -257,8 +458,35 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getCaptureNames">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_getCaptureNames"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 77</div>
+        <code>                    string[]
+    <strong>getCaptureNames</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return the name of each capture in this regexp</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getNamedCaptures">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_getNamedCaptures"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 77</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_getNamedCaptures"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 87</div>
         <code>                    array
     <strong>getNamedCaptures</strong>()</code>
     </h3>
@@ -284,20 +512,20 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_toJS">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_toJS"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 115</div>
-        <code>                    <abbr title="s9e\TextFormatter\Configurator\Items\RegExp">RegExp</abbr>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Items/Regexp.html#method_toJS"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a> at line 113</div>
+        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>
     <strong>toJS</strong>()</code>
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Return this regexp as a JavaScript RegExp</p>                                </div>
+                                    <p>Return this regexp as JavaScript code</p>                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="s9e\TextFormatter\Configurator\Items\RegExp">RegExp</abbr></td>
+            <td><a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a></td>
             <td>
 </td>
         </tr>

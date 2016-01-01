@@ -121,7 +121,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalize">normalize</a>(<a target="_blank" href="http://php.net/DOMElement"><abbr title="DOMElement">DOMElement</abbr></a> $template)
-                                            <p>Apply this normalization rule to given template</p>                </div>
+                                            <p>Optimize conditional attributes</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -147,7 +147,14 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Apply this normalization rule to given template</p>                                </div>
+                                    <p>Optimize conditional attributes</p>                    <p>Will replace conditional attributes with a <xsl:copy-of/>, e.g.
+<xsl:if test="@foo">
+    <xsl:attribute name="foo">
+        <xsl:value-of select="@foo" />
+    </xsl:attribute>
+</xsl:if>
+into
+<xsl:copy-of select="@foo"/></p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 

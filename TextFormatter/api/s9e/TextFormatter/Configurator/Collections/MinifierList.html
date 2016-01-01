@@ -103,7 +103,8 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_asConfig">asConfig</a>()
-                                            <p>Return an array-based representation of this object to be used for parsing</p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -181,7 +182,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalizeKey">normalizeKey</a>(mixed $key)
-                                            <p>Normalize an item's key</p>                </div>
+                                            <p>Ensure that the key is a valid offset</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_normalizeKey"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -199,7 +200,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_add">add</a>(mixed $value, null $void = null)
-                                            <p>Add an item to this collection</p>                </div>
+                                            <p>Add (append) a value to this list</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_add"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -217,7 +218,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_delete">delete</a>(string $key)
-                                            <p>Delete an item from this collection</p>                </div>
+                                            <p>Delete a value from this list and remove gaps in keys</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_delete"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -282,8 +283,8 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_offsetSet">offsetSet</a>(mixed $offset, mixed $value)
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Custom offsetSet() implementation to allow assignment with a null offset to append to the
+chain</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_offsetSet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -362,9 +363,6 @@
     <strong>asConfig</strong>()</code>
     </h3>
     <div class="details">
-                    <div class="method-description">
-                                    <p>Return an array-based representation of this object to be used for parsing</p>                    <p>NOTE: if this method was named getConfig() it could interfere with magic getters from
-      the Configurable trait</p>            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -577,7 +575,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Normalize an item's key</p>                    <p>This method can be overridden to implement keys normalization or implement constraints</p>            </div>
+                                    <p>Ensure that the key is a valid offset</p>                    <p>Negative values count from the end of the list</p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -650,7 +648,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Add an item to this collection</p>                    <p>NOTE: relies on exists() to check the key for invalid values and on set() to normalize it</p>            </div>
+                                    <p>Add (append) a value to this list</p>                    <p>Alias for append(). Overrides NormalizedCollection::add()</p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -727,7 +725,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Delete an item from this collection</p>                                </div>
+                                    <p>Delete a value from this list and remove gaps in keys</p>                    <p>NOTE: parent::offsetUnset() maps to $this->delete() so this method covers both usages</p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -984,6 +982,9 @@
     <strong>offsetSet</strong>(mixed $offset, mixed $value)</code>
     </h3>
     <div class="details">
+                    <div class="method-description">
+                                    <p>Custom offsetSet() implementation to allow assignment with a null offset to append to the
+chain</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 

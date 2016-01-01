@@ -103,8 +103,9 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_asConfig">asConfig</a>()
-                                            <p>Return an array-based representation of this object to be used for parsing</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a></small></div>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -181,7 +182,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalizeKey">normalizeKey</a>(string $key)
-                                            <p>Normalize an item's key</p>                </div>
+                                            <p>Normalize a tag name used as a key in this colelction</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -190,7 +191,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalizeValue">normalizeValue</a>(array|null|<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $value)
-                                            <p>Normalize a value for storage</p>                </div>
+                                            <p>Normalize a value to an instance of Tag</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -321,14 +322,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line 33</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 24</div>
         <code>                    mixed
     <strong>asConfig</strong>()</code>
     </h3>
     <div class="details">
-                    <div class="method-description">
-                                    <p>Return an array-based representation of this object to be used for parsing</p>                    <p>NOTE: if this method was named getConfig() it could interfere with magic getters from
-      the Configurable trait</p>            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -499,7 +497,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_onDuplicate">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_onDuplicate"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 27</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_onDuplicate"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 38</div>
         <code>                    string
     <strong>onDuplicate</strong>(string|null $action = null)</code>
     </h3>
@@ -541,7 +539,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Normalize an item's key</p>                    <p>This method can be overridden to implement keys normalization or implement constraints</p>            </div>
+                                    <p>Normalize a tag name used as a key in this colelction</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -577,7 +575,7 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Normalize a value for storage</p>                    <p>This method can be overridden to implement value normalization</p>            </div>
+                                    <p>Normalize a value to an instance of Tag</p>                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -607,7 +605,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_add"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 107</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_add"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 118</div>
         <code>                    mixed
     <strong>add</strong>(string $key, mixed $value = null)</code>
     </h3>
@@ -648,7 +646,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_contains">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_contains"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 133</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_contains"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 144</div>
         <code>                    bool
     <strong>contains</strong>(mixed $value)</code>
     </h3>
@@ -684,7 +682,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_delete"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 144</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_delete"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 155</div>
         <code>                    void
     <strong>delete</strong>(string $key)</code>
     </h3>
@@ -721,7 +719,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_exists">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_exists"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 157</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_exists"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 168</div>
         <code>                    bool
     <strong>exists</strong>(string $key)</code>
     </h3>
@@ -757,7 +755,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_get"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 170</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_get"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 181</div>
         <code>                    mixed
     <strong>get</strong>(string $key)</code>
     </h3>
@@ -793,7 +791,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_indexOf">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_indexOf"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 190</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_indexOf"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 201</div>
         <code>                    mixed
     <strong>indexOf</strong>(mixed $value)</code>
     </h3>
@@ -829,7 +827,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_set"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 202</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_set"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 213</div>
         <code>                    mixed
     <strong>set</strong>(string $key, mixed $value)</code>
     </h3>
@@ -870,7 +868,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetExists">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetExists"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 219</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetExists"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 230</div>
         <code>                    bool
     <strong>offsetExists</strong>(string|integer $offset)</code>
     </h3>
@@ -906,7 +904,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetGet">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetGet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 228</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetGet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 239</div>
         <code>                    mixed
     <strong>offsetGet</strong>(string|integer $offset)</code>
     </h3>
@@ -942,7 +940,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetSet">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetSet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 238</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetSet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 249</div>
         <code>                    void
     <strong>offsetSet</strong>(string|integer $offset, mixed $value)</code>
     </h3>
@@ -984,7 +982,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetUnset">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetUnset"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 247</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetUnset"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line 258</div>
         <code>                    void
     <strong>offsetUnset</strong>(string|integer $offset)</code>
     </h3>

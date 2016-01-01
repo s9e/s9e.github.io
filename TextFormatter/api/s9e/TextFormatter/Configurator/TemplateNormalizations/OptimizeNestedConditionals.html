@@ -121,7 +121,8 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalize">normalize</a>(<a target="_blank" href="http://php.net/DOMElement"><abbr title="DOMElement">DOMElement</abbr></a> $template)
-                                            <p>Apply this normalization rule to given template</p>                </div>
+                                            <p>Optimize xsl:choose elements by integrating the content of another xsl:choose element located
+in their xsl:otherwise part</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -147,7 +148,11 @@
     </h3>
     <div class="details">
                     <div class="method-description">
-                                    <p>Apply this normalization rule to given template</p>                                </div>
+                                    <p>Optimize xsl:choose elements by integrating the content of another xsl:choose element located
+in their xsl:otherwise part</p>                    <p>Will move child nodes from //xsl:choose/xsl:otherwise/xsl:choose to their great-grandparent as
+long as the inner xsl:choose has no siblings. Good for XSLT stylesheets because it reduces the
+number of nodes, not-so-good for the PHP renderer when it prevents from optimizing branch
+tables by mixing the branch keys</p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
