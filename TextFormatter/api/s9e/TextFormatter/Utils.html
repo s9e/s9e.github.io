@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:s9e_TextFormatter_Utils" data-root-path="../../">
+    <body id="namespace" data-name="namespace:s9e_TextFormatter_Utils" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -60,296 +60,39 @@
         </div>
     </nav>
 
-                        <div class="namespace-breadcrumbs">
-            <ol class="breadcrumb">
-                <li><span class="label label-default">class</span></li>
-                                                            <li><a href="../../s9e.html">s9e</a></li>
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                                                        <li><a href="../../s9e.html">s9e</a></li>
                                         <li><a href="../../s9e/TextFormatter.html">TextFormatter</a></li>
+                                        <li><a href="../../s9e/TextFormatter/Utils.html">Utils</a></li>
     
-                <li>Utils</li>
-            </ol>
-        </div>
-                <div id="page-content">
+        </ol>
+    </div>
+            <div id="page-content">
                 
     <div class="page-header">
-        <h1>Utils</h1>
+        <h1>s9e\TextFormatter\Utils</h1>
     </div>
 
-    <p>    class
-    <strong>Utils</strong>
-</p>
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="../../s9e/TextFormatter/Utils/Http.html">s9e\TextFormatter\Utils\Http</a>        </div>
+    
+            <h2>Classes</h2>
+        <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../s9e/TextFormatter/Utils/Http.html"><abbr title="s9e\TextFormatter\Utils\Http">s9e\TextFormatter\Utils\Http</abbr></a>
+                                    </div>
+                <div class="col-md-6">
+                    
 
+                </div>
+            </div>
+            </div>
     
     
-    
-    
-            <h2>Methods</h2>
-
-            <div class="container-fluid underlined">
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string[]
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getAttributeValues">getAttributeValues</a>(string $xml, string $tagName, string $attrName)
-                                            <p>Return every value used in given attribute from given tag</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_encodeUnicodeSupplementaryCharacters">encodeUnicodeSupplementaryCharacters</a>(string $str)
-                                            <p>Replace Unicode characters outside the BMP with XML entities</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_removeFormatting">removeFormatting</a>(string $xml)
-                                            <p>Strip the formatting of an intermediate representation and return plain text</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_removeTag">removeTag</a>(string $xml, string $tagName, integer $nestingLevel)
-                                            <p>Remove all tags at given nesting level</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_replaceAttributes">replaceAttributes</a>(string $xml, string $tagName, callable $callback)
-                                            <p>Replace the attributes of all tags of given name in given XML</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-            </div>
-
-
-        <h2>Details</h2>
-
-            <div id="method-details">
-                    <div class="method-item">
-                    <h3 id="method_getAttributeValues">
-        <div class="location">at line 25</div>
-        <code>        static            string[]
-    <strong>getAttributeValues</strong>(string $xml, string $tagName, string $attrName)</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Return every value used in given attribute from given tag</p>                    <p>Will include duplicate values</p>            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$xml</td>
-                <td>Parsed text</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Target tag's name</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$attrName</td>
-                <td>Target attribute's name</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string[]</td>
-            <td>Attribute values</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_encodeUnicodeSupplementaryCharacters">
-        <div class="location">at line 47</div>
-        <code>        static            string
-    <strong>encodeUnicodeSupplementaryCharacters</strong>(string $str)</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Replace Unicode characters outside the BMP with XML entities</p>                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$str</td>
-                <td>Original string</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>String with SMP characters encoded</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_removeFormatting">
-        <div class="location">at line 64</div>
-        <code>        static            string
-    <strong>removeFormatting</strong>(string $xml)</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Strip the formatting of an intermediate representation and return plain text</p>                    <p>This will remove start tags and end tags but will keep the text content of everything else</p>            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$xml</td>
-                <td>Intermediate representation</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>Plain text</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_removeTag">
-        <div class="location">at line 87</div>
-        <code>        static            string
-    <strong>removeTag</strong>(string $xml, string $tagName, integer $nestingLevel)</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Remove all tags at given nesting level</p>                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$xml</td>
-                <td>Intermediate representation</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Tag's name (case-sensitive)</td>
-            </tr>
-                    <tr>
-                <td>integer</td>
-                <td>$nestingLevel</td>
-                <td>Minimum nesting level</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>Updated intermediate representation</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_replaceAttributes">
-        <div class="location">at line 114</div>
-        <code>        static            string
-    <strong>replaceAttributes</strong>(string $xml, string $tagName, callable $callback)</code>
-    </h3>
-    <div class="details">
-                    <div class="method-description">
-                                    <p>Replace the attributes of all tags of given name in given XML</p>                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$xml</td>
-                <td>Original XML</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Target tag's name</td>
-            </tr>
-                    <tr>
-                <td>callable</td>
-                <td>$callback</td>
-                <td>Callback used to process attributes. Receives the old attributes
-                           as an array, should return the new attributes as an array</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>Modified XML</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-            </div>
-
     
             </div>
                 <div id="footer">
