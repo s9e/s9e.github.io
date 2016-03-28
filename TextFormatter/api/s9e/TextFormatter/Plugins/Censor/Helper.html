@@ -89,56 +89,56 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_allowed">
-                                                                                string
+                                                                                
+    string
                 </td>
                 <td>$allowed</td>
-                <td class="last">
-</td>
+                <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_attrName">
-                                                                                string
+                                                                                
+    string
                 </td>
                 <td>$attrName</td>
-                <td class="last">
-</td>
+                <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_defaultReplacement">
-                                                                                string
+                                                                                
+    string
                 </td>
                 <td>$defaultReplacement</td>
-                <td class="last">
-</td>
+                <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_regexp">
-                                                                                string
+                                                                                
+    string
                 </td>
                 <td>$regexp</td>
-                <td class="last">
-</td>
+                <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_replacements">
-                                                                                array
+                                                                                
+    array
                 </td>
                 <td>$replacements</td>
-                <td class="last">
-</td>
+                <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_tagName">
-                                                                                string
+                                                                                
+    string
                 </td>
                 <td>$tagName</td>
-                <td class="last">
-</td>
+                <td class="last"></td>
                 <td></td>
             </tr>
             </table>
@@ -150,45 +150,56 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(array $config)
+                    <a href="#method___construct">__construct</a>(
+    array $config)
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_censorHtml">censorHtml</a>(string $html, bool $censorAttributes = false)
+                    <a href="#method_censorHtml">censorHtml</a>(
+    string $html, 
+    bool $censorAttributes = false)
                                             <p>Censor text nodes inside of HTML code</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_censorText">censorText</a>(string $text)
+                    <a href="#method_censorText">censorText</a>(
+    string $text)
                                             <p>Censor given plain text</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isCensored">isCensored</a>(string $word)
+                    <a href="#method_isCensored">isCensored</a>(
+    string $word)
                                             <p>Test whether given word is censored</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_reparse">reparse</a>(string $xml)
+                    <a href="#method_reparse">reparse</a>(
+    string $xml)
                                             <p>Update an intermediate representation to match a different list of words</p>                </div>
                 <div class="col-md-2"></div>
             </div>
@@ -200,9 +211,11 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 47</div>
+        <div class="location">at line         line 47</div>
         <code>                    
-    <strong>__construct</strong>(array $config)</code>
+    
+    <strong>__construct</strong>(
+    array $config)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -212,7 +225,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array</td>
+                <td>
+    array</td>
                 <td>$config</td>
                 <td>Helper's config</td>
             </tr>
@@ -227,9 +241,12 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_censorHtml">
-        <div class="location">at line 64</div>
-        <code>                    string
-    <strong>censorHtml</strong>(string $html, bool $censorAttributes = false)</code>
+        <div class="location">at line         line 64</div>
+        <code>                    
+    string
+    <strong>censorHtml</strong>(
+    string $html, 
+    bool $censorAttributes = false)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -239,12 +256,14 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$html</td>
                 <td>Original HTML</td>
             </tr>
                     <tr>
-                <td>bool</td>
+                <td>
+    bool</td>
                 <td>$censorAttributes</td>
                 <td>Whether to censor the content of attributes</td>
             </tr>
@@ -255,7 +274,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>Censored HTML</td>
         </tr>
     </table>
@@ -268,9 +288,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_censorText">
-        <div class="location">at line 98</div>
-        <code>                    string
-    <strong>censorText</strong>(string $text)</code>
+        <div class="location">at line         line 98</div>
+        <code>                    
+    string
+    <strong>censorText</strong>(
+    string $text)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -280,7 +302,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$text</td>
                 <td>Original text</td>
             </tr>
@@ -291,7 +314,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>Censored text</td>
         </tr>
     </table>
@@ -304,9 +328,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isCensored">
-        <div class="location">at line 116</div>
-        <code>                    bool
-    <strong>isCensored</strong>(string $word)</code>
+        <div class="location">at line         line 116</div>
+        <code>                    
+    bool
+    <strong>isCensored</strong>(
+    string $word)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -316,10 +342,10 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$word</td>
                 <td>
-</td>
+    string</td>
+                <td>$word</td>
+                <td></td>
             </tr>
             </table>
 
@@ -328,9 +354,9 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
             <td>
-</td>
+    bool</td>
+            <td></td>
         </tr>
     </table>
 
@@ -342,9 +368,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reparse">
-        <div class="location">at line 137</div>
-        <code>                    string
-    <strong>reparse</strong>(string $xml)</code>
+        <div class="location">at line         line 137</div>
+        <code>                    
+    string
+    <strong>reparse</strong>(
+    string $xml)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -362,7 +390,8 @@ the whole text as new.</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$xml</td>
                 <td>Intermediate representation</td>
             </tr>
@@ -373,7 +402,8 @@ the whole text as new.</p>
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>Updated intermediate representation</td>
         </tr>
     </table>
