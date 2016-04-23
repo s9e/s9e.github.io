@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>s9e\TextFormatter &bull; MediaEmbed lazy loading demo</title>
-	<base href="http://s9e.github.io/TextFormatter/lazy.html" />
 	<style>[@data-s9e-mediaembed] { margin: 10px; }</style>
 </head>
 <body>
@@ -162,7 +161,6 @@
 <div data-s9e-mediaembed="youtube" style="display:inline-block;width:100%;max-width:640px"><div style="overflow:hidden;position:relative;padding-bottom:56.25%"><iframe allowfullscreen="" scrolling="no" style="background:url(https://i.ytimg.com/vi/gD6nTjrvGSQ/hqdefault.jpg) 50% 50% / cover;border:0;height:100%;left:0;position:absolute;width:100%" src="data:text/html," data-s9e-src="//www.youtube.com/embed/gD6nTjrvGSQ"></iframe></div></div><br>
 <div data-s9e-mediaembed="youtube" style="display:inline-block;width:100%;max-width:640px"><div style="overflow:hidden;position:relative;padding-bottom:56.25%"><iframe allowfullscreen="" scrolling="no" style="background:url(https://i.ytimg.com/vi/o4oadXySrg0/hqdefault.jpg) 50% 50% / cover;border:0;height:100%;left:0;position:absolute;width:100%" src="data:text/html," data-s9e-src="//www.youtube.com/embed/o4oadXySrg0"></iframe></div></div>
 	</div>
-	<script>(function(){function c(){e=!0}function h(){if(e)e=!1,f=!0;else if(f){f=!1;for(var b=d.length;0<=--b;){var a=d[b],c=a.hasAttribute("data-s9e-loaded"),g=a.getBoundingClientRect();g.top<innerHeight+200&&-50<g.bottom?c||(a.setAttribute("data-s9e-loaded",""),a.contentWindow.location.replace(a.getAttribute("data-s9e-src"))):c&&(a.contentWindow.location.replace(a.src),a.removeAttribute("data-s9e-loaded"))}}}var d=[],f=!0,e=!1;(function(){for(var b=document.getElementsByTagName("iframe"),a=b.length;0<=--a;)b[a].hasAttribute("data-s9e-src")&&
-d.push(b[a])})();d.length&&(addEventListener("scroll",c),addEventListener("resize",c),setInterval(h,100))})();</script>
+	<script type="text/javascript" src="assets/lazy.min.js"></script>
 </body>
 </html>
