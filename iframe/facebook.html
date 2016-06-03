@@ -6,7 +6,7 @@
 	</head>
 	<body style="margin:0"><div class="fb-post" data-width="640"></div>
 		<script>
-			document.body.firstChild.setAttribute('data-href', 'https://www.facebook.com/user/posts/' + unescape(location.hash).replace(/\D/g, ''));
+			document.body.firstChild.setAttribute('data-href', 'https://www.facebook.com/user/posts/' + location.hash.replace(/\D/g, ''));
 
 			addEventListener(
 				'message',
@@ -17,24 +17,23 @@
 						return;
 					}
 
-					var height,
-						id = e.data.substr(4),
-						intervalId = setInterval(
-							function ()
+					var height, id = e.data.substr(4);
+					setInterval(
+						function ()
+						{
+							if (height === (height = document.documentElement.scrollHeight)
+							 || height < 100)
 							{
-								if (height === (height = document.documentElement.scrollHeight)
-								 || height < 100)
-								{
-									return;
-								}
+								return;
+							}
 
-								e.source.postMessage(
-									{ 'height': height, 'id': id },
-									e.origin
-								);
-							},
-							100
-						);
+							e.source.postMessage(
+								{ 'height': height, 'id': id },
+								e.origin
+							);
+						},
+						100
+					);
 
 					// NOTE: Facebook posts can expand after loading via a "Read more" link
 					//setTimeout(function() { clearInterval(intervalId); }, 10000);

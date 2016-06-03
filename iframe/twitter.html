@@ -11,11 +11,11 @@
 				blockquote.firstChild.href = 'https://twitter.com/user/status/' + location.hash.substr(1);
 				if (typeof navigator !== 'undefined')
 				{
-					if ('languages' in navigator && navigator.languages.length)
+					if (navigator.languages && navigator.languages.length)
 					{
 						blockquote.setAttribute('data-lang', navigator.languages[0]);
 					}
-					else if ('language' in navigator)
+					else if (navigator.language)
 					{
 						blockquote.setAttribute('data-lang', navigator.language);
 					}
