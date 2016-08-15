@@ -124,7 +124,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(integer $type, string $name, integer $pos, integer $len, integer $priority)
+                    <a href="#method___construct">__construct</a>(integer $type, string $name, integer $pos, integer $len)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_setSortPriority">setSortPriority</a>(integer $sortPriority)
-        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+        
                                             <p>Set this tag's tiebreaker</p>                </div>
                 <div class="col-md-2"></div>
             </div>
@@ -457,9 +457,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 92</div>
+        <div class="location">at line         line 91</div>
         <code>                    
-    <strong>__construct</strong>(integer $type, string $name, integer $pos, integer $len, integer $priority)
+    <strong>__construct</strong>(integer $type, string $name, integer $pos, integer $len)
         </code>
     </h3>
     <div class="details">
@@ -492,11 +492,6 @@
                 <td>$len</td>
                 <td>Length of text consumed by the tag</td>
             </tr>
-                    <tr>
-                <td>integer</td>
-                <td>$priority</td>
-                <td>This tag's sorting tiebreaker</td>
-            </tr>
             </table>
 
             
@@ -508,7 +503,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addFlags">
-        <div class="location">at line         line 111</div>
+        <div class="location">at line         line 109</div>
         <code>                    void
     <strong>addFlags</strong>(integer $flags)
         </code>
@@ -548,7 +543,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_cascadeInvalidationTo">
-        <div class="location">at line         line 122</div>
+        <div class="location">at line         line 120</div>
         <code>                    void
     <strong>cascadeInvalidationTo</strong>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -588,7 +583,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_gc">
-        <div class="location">at line         line 140</div>
+        <div class="location">at line         line 138</div>
         <code>                    void
     <strong>gc</strong>()
         </code>
@@ -618,7 +613,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_invalidate">
-        <div class="location">at line         line 152</div>
+        <div class="location">at line         line 150</div>
         <code>                    void
     <strong>invalidate</strong>()
         </code>
@@ -648,7 +643,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pairWith">
-        <div class="location">at line         line 174</div>
+        <div class="location">at line         line 172</div>
         <code>                    void
     <strong>pairWith</strong>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -688,7 +683,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeFlags">
-        <div class="location">at line         line 203</div>
+        <div class="location">at line         line 201</div>
         <code>                    void
     <strong>removeFlags</strong>(integer $flags)
         </code>
@@ -728,7 +723,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setFlags">
-        <div class="location">at line         line 214</div>
+        <div class="location">at line         line 212</div>
         <code>                    void
     <strong>setFlags</strong>(integer $flags)
         </code>
@@ -768,20 +763,13 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setSortPriority">
-        <div class="location">at line         line 227</div>
+        <div class="location">at line         line 223</div>
         <code>                    void
     <strong>setSortPriority</strong>(integer $sortPriority)
-        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+        </code>
     </h3>
     <div class="details">
             
-            <p>
-                <small><sup><span class="label label-danger">deprecated</span></sup></small>
-                            <tr>
-                    <td>0.7.0</td>
-                    <td>Set the priority in the constructor instead</td>
-                </tr>
-                    </p>
     
 
                     <div class="method-description">
@@ -815,7 +803,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAttributes">
-        <div class="location">at line         line 243</div>
+        <div class="location">at line         line 237</div>
         <code>                    array
     <strong>getAttributes</strong>()
         </code>
@@ -845,7 +833,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getEndTag">
-        <div class="location">at line         line 253</div>
+        <div class="location">at line         line 247</div>
         <code>                    <a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>|null
     <strong>getEndTag</strong>()
         </code>
@@ -875,7 +863,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFlags">
-        <div class="location">at line         line 263</div>
+        <div class="location">at line         line 257</div>
         <code>                    integer
     <strong>getFlags</strong>()
         </code>
@@ -905,7 +893,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getLen">
-        <div class="location">at line         line 273</div>
+        <div class="location">at line         line 267</div>
         <code>                    integer
     <strong>getLen</strong>()
         </code>
@@ -935,7 +923,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getName">
-        <div class="location">at line         line 283</div>
+        <div class="location">at line         line 277</div>
         <code>                    string
     <strong>getName</strong>()
         </code>
@@ -965,7 +953,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getPos">
-        <div class="location">at line         line 293</div>
+        <div class="location">at line         line 287</div>
         <code>                    integer
     <strong>getPos</strong>()
         </code>
@@ -995,7 +983,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getSortPriority">
-        <div class="location">at line         line 303</div>
+        <div class="location">at line         line 297</div>
         <code>                    integer
     <strong>getSortPriority</strong>()
         </code>
@@ -1025,7 +1013,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getStartTag">
-        <div class="location">at line         line 313</div>
+        <div class="location">at line         line 307</div>
         <code>                    <a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>|null
     <strong>getStartTag</strong>()
         </code>
@@ -1055,7 +1043,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getType">
-        <div class="location">at line         line 323</div>
+        <div class="location">at line         line 317</div>
         <code>                    integer
     <strong>getType</strong>()
         </code>
@@ -1085,7 +1073,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_canClose">
-        <div class="location">at line         line 338</div>
+        <div class="location">at line         line 332</div>
         <code>                    bool
     <strong>canClose</strong>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $startTag)
         </code>
@@ -1125,7 +1113,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isBrTag">
-        <div class="location">at line         line 359</div>
+        <div class="location">at line         line 353</div>
         <code>                    bool
     <strong>isBrTag</strong>()
         </code>
@@ -1155,7 +1143,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isEndTag">
-        <div class="location">at line         line 369</div>
+        <div class="location">at line         line 363</div>
         <code>                    bool
     <strong>isEndTag</strong>()
         </code>
@@ -1185,7 +1173,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isIgnoreTag">
-        <div class="location">at line         line 379</div>
+        <div class="location">at line         line 373</div>
         <code>                    bool
     <strong>isIgnoreTag</strong>()
         </code>
@@ -1215,7 +1203,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isInvalid">
-        <div class="location">at line         line 389</div>
+        <div class="location">at line         line 383</div>
         <code>                    bool
     <strong>isInvalid</strong>()
         </code>
@@ -1245,7 +1233,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isParagraphBreak">
-        <div class="location">at line         line 399</div>
+        <div class="location">at line         line 393</div>
         <code>                    bool
     <strong>isParagraphBreak</strong>()
         </code>
@@ -1275,7 +1263,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isSelfClosingTag">
-        <div class="location">at line         line 409</div>
+        <div class="location">at line         line 403</div>
         <code>                    bool
     <strong>isSelfClosingTag</strong>()
         </code>
@@ -1305,7 +1293,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isSystemTag">
-        <div class="location">at line         line 419</div>
+        <div class="location">at line         line 413</div>
         <code>                    bool
     <strong>isSystemTag</strong>()
         </code>
@@ -1335,7 +1323,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isStartTag">
-        <div class="location">at line         line 429</div>
+        <div class="location">at line         line 423</div>
         <code>                    bool
     <strong>isStartTag</strong>()
         </code>
@@ -1365,7 +1353,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isVerbatim">
-        <div class="location">at line         line 439</div>
+        <div class="location">at line         line 433</div>
         <code>                    bool
     <strong>isVerbatim</strong>()
         </code>
@@ -1395,7 +1383,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAttribute">
-        <div class="location">at line         line 454</div>
+        <div class="location">at line         line 448</div>
         <code>                    mixed
     <strong>getAttribute</strong>(string $attrName)
         </code>
@@ -1435,7 +1423,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasAttribute">
-        <div class="location">at line         line 465</div>
+        <div class="location">at line         line 459</div>
         <code>                    bool
     <strong>hasAttribute</strong>(string $attrName)
         </code>
@@ -1475,7 +1463,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeAttribute">
-        <div class="location">at line         line 476</div>
+        <div class="location">at line         line 470</div>
         <code>                    void
     <strong>removeAttribute</strong>(string $attrName)
         </code>
@@ -1515,7 +1503,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAttribute">
-        <div class="location">at line         line 488</div>
+        <div class="location">at line         line 482</div>
         <code>                    void
     <strong>setAttribute</strong>(string $attrName, string $attrValue)
         </code>
@@ -1560,7 +1548,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAttributes">
-        <div class="location">at line         line 499</div>
+        <div class="location">at line         line 493</div>
         <code>                    void
     <strong>setAttributes</strong>(array $attributes)
         </code>
