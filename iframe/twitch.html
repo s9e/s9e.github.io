@@ -3,27 +3,19 @@
 <html>
 	<head>
 		<title>&nbsp;</title>
-		<style>*{margin:0;width:100%;height:100%}</style>
 	</head>
 	<body>
 		<script>
-			checkPauseInterval = setInterval(
-				function ()
-				{
-					var o = document.getElementsByTagName('object')[0];
-					if (typeof o['pauseVideo'] !== 'undefined')
-					{
-						o['pauseVideo']();
-						clearInterval(checkPauseInterval);
-					}
-				},
-				100
-			);
-			onmousedown = function ()
+			var url = 'https://player.twitch.tv/?autoplay=false&', m;
+			if (m = /videoId=(.*)/.exec(location.hash))
 			{
-				clearInterval(checkPauseInterval);
-			};
-			document.body.innerHTML = '<object type="application/x-shockwave-flash" typemustmatch="" data="//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="flashvars" value="' + location.hash.substr(1).replace(/&/, '&amp;').replace(/"/g, '') + '&amp;auto_play=false"></object>';
+				url += 'video=' + m[1];
+			}
+			else
+			{
+				url += location.hash.substr(1);
+			}
+			location.replace(url);
 		</script>
 	</body>
 </html>
