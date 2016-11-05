@@ -4,9 +4,13 @@
 	<head>
 		<title>&nbsp;</title>
 	</head>
-	<body style="margin:0"><div class="fb-post" data-width="640"></div>
+	<body style="margin:0"><div data-width="640"></div>
 		<script>
-			document.body.firstChild.setAttribute('data-href', 'https://www.facebook.com/user/posts/' + location.hash.replace(/\D/g, ''));
+		(function(div, hash)
+		{
+			var type = (hash.indexOf('video') < 0) ? 'post' : 'video';
+			div.setAttribute('data-href', 'https://www.facebook.com/user/' + type + 's/' + hash.replace(/\D/g, ''));
+			div.className = 'fb-' + type;
 
 			addEventListener(
 				'message',
@@ -36,7 +40,8 @@
 					);
 				}
 			);
+		})(document.body.firstChild, location.hash);
 		</script>
-		<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
+		<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.6"></script>
 	</body>
 </html>
