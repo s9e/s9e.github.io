@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- This file is PUBLIC DOMAIN -->
+<html>
+	<head>
+		<title>&nbsp;</title>
+	</head>
+	<body><div><a data-pin-board-width="900" data-pin-width="medium" data-pin-scale-height="360"></a></div>
+		<script>
+			(function()
+			{
+				var a    = document.body.firstChild.firstChild,
+					url  = 'https://www.pinterest.com/',
+					id   = location.hash.substr(1),
+					type = 'embed';
+				if (/^\d+$/.test(id))
+				{
+					url  += 'pin/';
+					type += 'Pin';
+				}
+				else
+				{
+					type += 'Board';
+				}
+				a.href = url + id;
+				a.setAttribute('data-pin-do', type);
+			})();
+
+			addEventListener(
+				'message',
+				function (e)
+				{
+					if (e.data.substr(0, 4) !== 's9e:')
+					{
+						return;
+					}
+
+					var height, id = e.data.substr(4);
+					setInterval(
+						function ()
+						{
+							if (height === (height = document.documentElement.scrollHeight)
+							 || height < 100)
+							{
+								return;
+							}
+
+							e.source.postMessage(
+								{ 'height': height, 'id': id },
+								e.origin
+							);
+						},
+						100
+					);
+				}
+			);
+		</script>
+		<script src="//assets.pinterest.com/js/pinit.js"></script>
+	</body>
+</html>
