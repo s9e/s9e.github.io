@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,59 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parser">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                </td>
+                <td>$parser</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasEscapedChars">
+                                        protected                                        bool
+                </td>
+                <td>$hasEscapedChars</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasRefs">
+                                        protected                                        bool
+                </td>
+                <td>$hasRefs</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_refs">
+                                        protected                                        array
+                </td>
+                <td>$refs</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_text">
+                                        protected                                        string
+                </td>
+                <td>$text</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -109,10 +165,360 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Plugin's setup</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_parse">parse</a>(string $text, array $matches)
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addImageTag">addImageTag</a>(integer $startTagPos, integer $endTagPos, integer $endTagLen, string $linkInfo, string $alt)
+        
+                                            <p>Add an image tag for given text span</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addInlineCodeTags">addInlineCodeTags</a>(array $left, array $right)
+        
+                                            <p>Add the tag pair for an inline code span</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addLinkTag">addLinkTag</a>(integer $startTagPos, integer $endTagPos, integer $endTagLen, string $linkInfo)
+        
+                                            <p>Add an image tag for given text span</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_closeList">closeList</a>(array $list, integer $textBoundary)
+        
+                                            <p>Close a list at given offset</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeQuoteIgnoreLen">computeQuoteIgnoreLen</a>(string $str, integer $maxQuoteDepth)
+        
+                                            <p>Compute the amount of text to ignore at the start of a quote line</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decode">decode</a>(string $str)
+        
+                                            <p>Decode a chunk of encoded text to be used as an attribute value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encode">encode</a>(string $str)
+        
+                                            <p>Encode escaped literals that have a special meaning</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAtxHeaderEndTagLen">getAtxHeaderEndTagLen</a>(integer $startPos, integer $endPos)
+        
+                                            <p>Return the length of the markup at the end of an ATX header</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSetextLines">getSetextLines</a>()
+        
+                                            <p>Capture lines that contain a Setext-tyle header</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEmphasisByBlock">getEmphasisByBlock</a>(string $regexp, integer $pos)
+        
+                                            <p>Get emphasis markup split by block</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInlineCodeMarkers">getInlineCodeMarkers</a>()
+        
+                                            <p>Capture and return inline code markers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLabels">getLabels</a>()
+        
+                                            <p>Capture and return labels used in current text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ignoreEmphasis">ignoreEmphasis</a>(integer $matchPos, integer $matchLen)
+        
+                                            <p>Test whether emphasis should be ignored at the given position in the text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>(string $text)
+        
+                                            <p>Initialize this parser with given text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAlnum">isAlnum</a>(string $chr)
+        
+                                            <p>Test whether given character is alphanumeric</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSurroundedByAlnum">isSurroundedByAlnum</a>(integer $matchPos, integer $matchLen)
+        
+                                            <p>Test whether a length of text is surrounded by alphanumeric characters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_markBoundary">markBoundary</a>(integer $pos)
+        
+                                            <p>Mark the boundary of a block in the original text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchBlockLevelMarkup">matchBlockLevelMarkup</a>()
+        
+                                            <p>Match block-level markup, as well as forced line breaks and headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchEmphasis">matchEmphasis</a>()
+        
+                                            <p>Match all forms of emphasis (emphasis and strong, using underscores or asterisks)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchEmphasisByCharacter">matchEmphasisByCharacter</a>(string $character, string $regexp)
+        
+                                            <p>Match emphasis and strong applied using given character</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchForcedLineBreaks">matchForcedLineBreaks</a>()
+        
+                                            <p>Match forced line breaks</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchImages">matchImages</a>()
+        
+                                            <p>Match images markup</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchInlineImages">matchInlineImages</a>()
+        
+                                            <p>Match inline images markup</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchReferenceImages">matchReferenceImages</a>()
+        
+                                            <p>Match reference images markup</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchInlineCode">matchInlineCode</a>()
+        
+                                            <p>Match inline code spans</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchInlineLinks">matchInlineLinks</a>()
+        
+                                            <p>Match inline links markup</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchLinkReferences">matchLinkReferences</a>()
+        
+                                            <p>Capture link reference definitions in current text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchLinks">matchLinks</a>()
+        
+                                            <p>Match inline and reference links</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchReferenceLinks">matchReferenceLinks</a>()
+        
+                                            <p>Match reference links markup</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchStrikethrough">matchStrikethrough</a>()
+        
+                                            <p>Match strikethrough</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchSuperscript">matchSuperscript</a>()
+        
+                                            <p>Match superscript</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_overwrite">overwrite</a>(integer $pos, integer $len)
+        
+                                            <p>Overwrite part of the text with substitution characters ^Z (0x1A)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processEmphasisBlock">processEmphasisBlock</a>(array $block)
+        
+                                            <p>Process a list of emphasis markup strings</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLinkAttributes">setLinkAttributes</a>(<a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $linkInfo, string $attrName)
+        
+                                            <p>Set a URL or IMG tag's attributes</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -123,7 +529,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at line         line 30</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 30</div>
         <code>final                    
     <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         </code>
@@ -158,8 +564,38 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 43</div>
+        <code>            protected        void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Plugin's setup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line         line 39</div>
+        <div class="location">at         line 39</div>
         <code>                    void
     <strong>parse</strong>(string $text, array $matches)
         </code>
@@ -182,6 +618,1296 @@
                 <td>$matches</td>
                 <td>If the config array has a "regexp" key, the corresponding matches are
                         passed as second parameter. Otherwise, an empty array is passed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addImageTag">
+        <div class="location">at         line 74</div>
+        <code>            protected        void
+    <strong>addImageTag</strong>(integer $startTagPos, integer $endTagPos, integer $endTagLen, string $linkInfo, string $alt)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an image tag for given text span</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$startTagPos</td>
+                <td>Start tag position</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$endTagPos</td>
+                <td>End tag position</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$endTagLen</td>
+                <td>End tag length</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$linkInfo</td>
+                <td>URL optionally followed by space and a title</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$alt</td>
+                <td>Value for the alt attribute</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addInlineCodeTags">
+        <div class="location">at         line 91</div>
+        <code>            protected        void
+    <strong>addInlineCodeTags</strong>(array $left, array $right)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the tag pair for an inline code span</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$left</td>
+                <td>Left marker</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$right</td>
+                <td>Right marker</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLinkTag">
+        <div class="location">at         line 110</div>
+        <code>            protected        void
+    <strong>addLinkTag</strong>(integer $startTagPos, integer $endTagPos, integer $endTagLen, string $linkInfo)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an image tag for given text span</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$startTagPos</td>
+                <td>Start tag position</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$endTagPos</td>
+                <td>End tag position</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$endTagLen</td>
+                <td>End tag length</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$linkInfo</td>
+                <td>URL optionally followed by space and a title</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_closeList">
+        <div class="location">at         line 132</div>
+        <code>            protected        void
+    <strong>closeList</strong>(array $list, integer $textBoundary)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Close a list at given offset</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$list</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$textBoundary</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeQuoteIgnoreLen">
+        <div class="location">at         line 153</div>
+        <code>            protected        integer
+    <strong>computeQuoteIgnoreLen</strong>(string $str, integer $maxQuoteDepth)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the amount of text to ignore at the start of a quote line</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>Original quote markup</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$maxQuoteDepth</td>
+                <td>Maximum quote depth</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>Number of characters to ignore</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decode">
+        <div class="location">at         line 172</div>
+        <code>            protected        string
+    <strong>decode</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decode a chunk of encoded text to be used as an attribute value</p>                    <p>Decodes escaped literals and removes slashes and 0x1A characters</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>Encoded text</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Decoded text</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encode">
+        <div class="location">at         line 202</div>
+        <code>            protected        string
+    <strong>encode</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode escaped literals that have a special meaning</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>Original text</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Encoded text</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAtxHeaderEndTagLen">
+        <div class="location">at         line 222</div>
+        <code>            protected        integer
+    <strong>getAtxHeaderEndTagLen</strong>(integer $startPos, integer $endPos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the length of the markup at the end of an ATX header</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$startPos</td>
+                <td>Start of the header's text</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$endPos</td>
+                <td>End of the header's text</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSetextLines">
+        <div class="location">at         line 235</div>
+        <code>            protected        array
+    <strong>getSetextLines</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Capture lines that contain a Setext-tyle header</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmphasisByBlock">
+        <div class="location">at         line 279</div>
+        <code>            protected        array[]
+    <strong>getEmphasisByBlock</strong>(string $regexp, integer $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get emphasis markup split by block</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td>Regexp used to match emphasis</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td>Position in the text of the first emphasis character</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array[]</td>
+            <td>Each array contains a list of [matchPos, matchLen] pairs</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInlineCodeMarkers">
+        <div class="location">at         line 315</div>
+        <code>            protected        array
+    <strong>getInlineCodeMarkers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Capture and return inline code markers</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLabels">
+        <div class="location">at         line 352</div>
+        <code>            protected        array
+    <strong>getLabels</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Capture and return labels used in current text</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Labels' text position as keys, lowercased text content as values</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ignoreEmphasis">
+        <div class="location">at         line 376</div>
+        <code>            protected        bool
+    <strong>ignoreEmphasis</strong>(integer $matchPos, integer $matchLen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether emphasis should be ignored at the given position in the text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$matchPos</td>
+                <td>Position of the emphasis in the text</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$matchLen</td>
+                <td>Length of the emphasis</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 388</div>
+        <code>            protected        void
+    <strong>init</strong>(string $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize this parser with given text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>Text to be parsed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAlnum">
+        <div class="location">at         line 416</div>
+        <code>            protected        bool
+    <strong>isAlnum</strong>(string $chr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given character is alphanumeric</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$chr</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSurroundedByAlnum">
+        <div class="location">at         line 428</div>
+        <code>            protected        bool
+    <strong>isSurroundedByAlnum</strong>(integer $matchPos, integer $matchLen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether a length of text is surrounded by alphanumeric characters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$matchPos</td>
+                <td>Start of the text</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$matchLen</td>
+                <td>Length of the text</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markBoundary">
+        <div class="location">at         line 439</div>
+        <code>            protected        void
+    <strong>markBoundary</strong>(integer $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark the boundary of a block in the original text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchBlockLevelMarkup">
+        <div class="location">at         line 449</div>
+        <code>            protected        void
+    <strong>matchBlockLevelMarkup</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match block-level markup, as well as forced line breaks and headers</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchEmphasis">
+        <div class="location">at         line 844</div>
+        <code>            protected        void
+    <strong>matchEmphasis</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match all forms of emphasis (emphasis and strong, using underscores or asterisks)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchEmphasisByCharacter">
+        <div class="location">at         line 857</div>
+        <code>            protected        void
+    <strong>matchEmphasisByCharacter</strong>(string $character, string $regexp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match emphasis and strong applied using given character</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$character</td>
+                <td>Markup character, either * or _</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td>Regexp used to match the series of emphasis character</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchForcedLineBreaks">
+        <div class="location">at         line 876</div>
+        <code>            protected        void
+    <strong>matchForcedLineBreaks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match forced line breaks</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchImages">
+        <div class="location">at         line 891</div>
+        <code>            protected        void
+    <strong>matchImages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match images markup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchInlineImages">
+        <div class="location">at         line 913</div>
+        <code>            protected        void
+    <strong>matchInlineImages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match inline images markup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchReferenceImages">
+        <div class="location">at         line 938</div>
+        <code>            protected        void
+    <strong>matchReferenceImages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match reference images markup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchInlineCode">
+        <div class="location">at         line 973</div>
+        <code>            protected        void
+    <strong>matchInlineCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match inline code spans</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchInlineLinks">
+        <div class="location">at         line 1006</div>
+        <code>            protected        void
+    <strong>matchInlineLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match inline links markup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchLinkReferences">
+        <div class="location">at         line 1030</div>
+        <code>            protected        void
+    <strong>matchLinkReferences</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Capture link reference definitions in current text</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchLinks">
+        <div class="location">at         line 1062</div>
+        <code>            protected        void
+    <strong>matchLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match inline and reference links</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchReferenceLinks">
+        <div class="location">at         line 1079</div>
+        <code>            protected        void
+    <strong>matchReferenceLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match reference links markup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchStrikethrough">
+        <div class="location">at         line 1109</div>
+        <code>            protected        void
+    <strong>matchStrikethrough</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match strikethrough</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchSuperscript">
+        <div class="location">at         line 1137</div>
+        <code>            protected        void
+    <strong>matchSuperscript</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match superscript</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_overwrite">
+        <div class="location">at         line 1176</div>
+        <code>            protected        void
+    <strong>overwrite</strong>(integer $pos, integer $len)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Overwrite part of the text with substitution characters ^Z (0x1A)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td>Start of the range</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$len</td>
+                <td>Length of text to overwrite</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processEmphasisBlock">
+        <div class="location">at         line 1187</div>
+        <code>            protected        void
+    <strong>processEmphasisBlock</strong>(array $block)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process a list of emphasis markup strings</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$block</td>
+                <td>List of [matchPos, matchLen] pairs</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLinkAttributes">
+        <div class="location">at         line 1259</div>
+        <code>            protected        void
+    <strong>setLinkAttributes</strong>(<a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $linkInfo, string $attrName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a URL or IMG tag's attributes</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>URL or IMG tag</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$linkInfo</td>
+                <td>Link's info: an URL optionally followed by spaces and a title</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td>Name of the URL attribute</td>
             </tr>
             </table>
 

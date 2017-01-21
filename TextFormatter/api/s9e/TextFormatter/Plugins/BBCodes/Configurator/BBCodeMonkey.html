@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -115,6 +118,14 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_configurator">
+                                        protected                                        <a href="../../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a>
+                </td>
+                <td>$configurator</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_tokenRegexp">
                                                                                 array
                 </td>
@@ -156,6 +167,76 @@
                                             <p>Create a BBCode and its underlying tag and template(s) based on its reference usage</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parse">parse</a>(string $usage)
+        
+                                            <p>Create a BBCode based on its reference usage</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAttributes">addAttributes</a>(array $definitions, <a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a> $bbcode, <a href="../../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Parse a string of attribute definitions and add the attributes/options to the tag/BBCode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertValue">convertValue</a>(string $value)
+        
+                                            <p>Convert a human-readable value to a typed PHP value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseTokens">parseTokens</a>(string $definition)
+        
+                                            <p>Parse and return all the tokens contained in a definition</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateAttribute">generateAttribute</a>(array $token)
+        
+                                            <p>Generate an attribute based on a token</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendFilters">appendFilters</a>(<a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $attribute, string $filters)
+        
+                                            <p>Append a list of filters to an attribute's filterChain</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isFilter">isFilter</a>(string $tokenId)
+        
+                                            <p>Test whether a token's name is the name of a filter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -164,7 +245,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 92</div>
+        <div class="location">at         line 92</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator)
         </code>
@@ -195,7 +276,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_create">
-        <div class="location">at line         line 105</div>
+        <div class="location">at         line 105</div>
         <code>                    array
     <strong>create</strong>(string $usage, string|<a href="../../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template)
         </code>
@@ -230,6 +311,318 @@
             <td>array</td>
             <td>An array containing three elements: 'bbcode', 'bbcodeName'
                                   and 'tag'</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parse">
+        <div class="location">at         line 173</div>
+        <code>            protected        array
+    <strong>parse</strong>(string $usage)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a BBCode based on its reference usage</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$usage</td>
+                <td>BBCode usage, e.g. [B]{TEXT}[/b]</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAttributes">
+        <div class="location">at         line 339</div>
+        <code>            protected        array
+    <strong>addAttributes</strong>(array $definitions, <a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a> $bbcode, <a href="../../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse a string of attribute definitions and add the attributes/options to the tag/BBCode</p>                    <p>Attributes come in two forms. Most commonly, in the form of a single token, e.g.
+  [a href={URL} title={TEXT}]</p>
+
+<p>Sometimes, however, we need to parse more than one single token. For instance, the phpBB
+[FLASH] BBCode uses two tokens separated by a comma:
+  [flash={NUMBER},{NUMBER}]{URL}[/flash]</p>
+
+<p>In addition, some custom BBCodes circulating for phpBB use a combination of token and static
+text such as:
+  [youtube]http://www.youtube.com/watch?v={SIMPLETEXT}[/youtube]</p>
+
+<p>Any attribute that is not a single token is implemented as an attribute preprocessor, with
+each token generating a matching attribute. Tentatively, those  of those attributes are
+created by taking the attribute preprocessor's name and appending a unique number counting the
+number of created attributes. In the [FLASH] example above, an attribute preprocessor named
+"flash" would be created as well as two attributes named "flash0" and "flash1" respectively.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$definitions</td>
+                <td>List of attributes definitions as [[name, definition]*]</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a></td>
+                <td>$bbcode</td>
+                <td>Owner BBCode</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Owner tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Array of [token id => attribute name] where FALSE in place of the
+                            name indicates that the token is ambiguous (e.g. used multiple
+                            times)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertValue">
+        <div class="location">at         line 544</div>
+        <code>            protected        bool|string
+    <strong>convertValue</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert a human-readable value to a typed PHP value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Original value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string</td>
+            <td>Converted value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseTokens">
+        <div class="location">at         line 565</div>
+        <code>        static    protected        array
+    <strong>parseTokens</strong>(string $definition)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse and return all the tokens contained in a definition</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$definition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateAttribute">
+        <div class="location">at         line 678</div>
+        <code>            protected        <a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a>
+    <strong>generateAttribute</strong>(array $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate an attribute based on a token</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$token</td>
+                <td>Token this attribute is based on</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendFilters">
+        <div class="location">at         line 791</div>
+        <code>            protected        void
+    <strong>appendFilters</strong>(<a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $attribute, string $filters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append a list of filters to an attribute's filterChain</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a></td>
+                <td>$attribute</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filters</td>
+                <td>List of filters, separated with commas</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFilter">
+        <div class="location">at         line 812</div>
+        <code>            protected        bool
+    <strong>isFilter</strong>(string $tokenId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether a token's name is the name of a filter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tokenId</td>
+                <td>Token ID, e.g. "TEXT1"</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
         </tr>
     </table>
 

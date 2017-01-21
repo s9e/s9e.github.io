@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -91,6 +94,35 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_isGlobal">
+                                        protected                                        bool
+                </td>
+                <td>$isGlobal</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_jsRegexp">
+                                        protected                                        string
+                </td>
+                <td>$jsRegexp</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_regexp">
+                                        protected                                        string
+                </td>
+                <td>$regexp</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -167,6 +199,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNamedCapturesExpressions">getNamedCapturesExpressions</a>(array $tokens)
+        
+                                            <p>Return the expression used in each named capture</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     void
                 </div>
                 <div class="col-md-8 type">
@@ -183,7 +225,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 39</div>
+        <div class="location">at         line 39</div>
         <code>                    
     <strong>__construct</strong>($regexp, $isGlobal = false)
         </code>
@@ -219,7 +261,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at line         line 55</div>
+        <div class="location">at         line 55</div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -249,7 +291,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 63</div>
+        <div class="location">at         line 63</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -280,7 +322,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_filterConfig">
-        <div class="location">at line         line 71</div>
+        <div class="location">at         line 71</div>
         <code>                    mixed
     <strong>filterConfig</strong>($target)
         </code>
@@ -320,7 +362,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCaptureNames">
-        <div class="location">at line         line 81</div>
+        <div class="location">at         line 81</div>
         <code>                    string[]
     <strong>getCaptureNames</strong>()
         </code>
@@ -350,7 +392,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJS">
-        <div class="location">at line         line 91</div>
+        <div class="location">at         line 91</div>
         <code>                    string
     <strong>getJS</strong>()
         </code>
@@ -380,7 +422,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getNamedCaptures">
-        <div class="location">at line         line 106</div>
+        <div class="location">at         line 106</div>
         <code>                    array
     <strong>getNamedCaptures</strong>()
         </code>
@@ -409,8 +451,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getNamedCapturesExpressions">
+        <div class="location">at         line 133</div>
+        <code>            protected        array
+    <strong>getNamedCapturesExpressions</strong>(array $tokens)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the expression used in each named capture</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_setJS">
-        <div class="location">at line         line 161</div>
+        <div class="location">at         line 161</div>
         <code>                    void
     <strong>setJS</strong>(string $jsRegexp)
         </code>

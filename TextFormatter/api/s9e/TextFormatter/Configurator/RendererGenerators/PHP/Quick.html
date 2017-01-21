@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -107,12 +110,103 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_export">export</a>(array $arr)
+        
+                                            <p>Export an array as PHP</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     static&nbsp;array|bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getRenderingStrategy">getRenderingStrategy</a>(string $php)
         
                                             <p>Compute the rendering strategy for a compiled template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuickRendering">getQuickRendering</a>(string $php)
+        
+                                            <p>Generate the code for rendering a compiled template with the Quick renderer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertPHP">convertPHP</a>(string $head, string $tail, bool $passthrough)
+        
+                                            <p>Convert the two sides of a compiled template to quick rendering</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replacePHP">replacePHP</a>(string $php)
+        
+                                            <p>Replace the PHP code used in a compiled template to be used by the Quick renderer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildPHP">buildPHP</a>(array $branches)
+        
+                                            <p>Build the source for the two sides of a templates based on the structure extracted from its
+original source</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBranchesPassthrough">getBranchesPassthrough</a>(array $branches)
+        
+                                            <p>Get the unique values for the "passthrough" key of given branches</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDynamicRendering">getDynamicRendering</a>(string $php)
+        
+                                            <p>Get a string suitable as a preg_replace() replacement for given PHP code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStaticRendering">getStaticRendering</a>(string $php)
+        
+                                            <p>Get a string suitable as a str_replace() replacement for given PHP code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replacePlaceholder">replacePlaceholder</a>(string $str, string $uniqid, integer $index)
+        
+                                            <p>Replace all instances of a uniqid with a PCRE replacement in a string</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -143,7 +237,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getSource">
-        <div class="location">at line         line 21</div>
+        <div class="location">at         line 21</div>
         <code>        static            string
     <strong>getSource</strong>(array $compiledTemplates)
         </code>
@@ -182,8 +276,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_export">
+        <div class="location">at         line 214</div>
+        <code>        static    protected        string
+    <strong>export</strong>(array $arr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Export an array as PHP</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arr</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getRenderingStrategy">
-        <div class="location">at line         line 236</div>
+        <div class="location">at         line 236</div>
         <code>        static            array|bool
     <strong>getRenderingStrategy</strong>(string $php)
         </code>
@@ -223,8 +357,354 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getQuickRendering">
+        <div class="location">at         line 308</div>
+        <code>        static    protected        array|bool
+    <strong>getQuickRendering</strong>(string $php)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate the code for rendering a compiled template with the Quick renderer</p>                    <p>Parse and record every code path that contains a passthrough. Parse every if-else structure.
+When the whole structure is parsed, there are 3 possible situations:
+ - no code path contains a passthrough, in which case we discard the data
+ - all the code paths including the mandatory "else" branch contain a passthrough, in which
+   case we keep the data
+ - only some code paths contain a passthrough, in which case we throw an exception</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$php</td>
+                <td>Template compiled for the PHP renderer</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td>An array containing one or two strings of PHP, or FALSE</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertPHP">
+        <div class="location">at         line 492</div>
+        <code>        static    protected        void
+    <strong>convertPHP</strong>(string $head, string $tail, bool $passthrough)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the two sides of a compiled template to quick rendering</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$head</td>
+                <td>&amp;$head</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tail</td>
+                <td>&amp;$tail</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$passthrough</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replacePHP">
+        <div class="location">at         line 549</div>
+        <code>        static    protected        void
+    <strong>replacePHP</strong>(string $php)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace the PHP code used in a compiled template to be used by the Quick renderer</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$php</td>
+                <td>&amp;$php</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildPHP">
+        <div class="location">at         line 674</div>
+        <code>        static    protected        string[]
+    <strong>buildPHP</strong>(array $branches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build the source for the two sides of a templates based on the structure extracted from its
+original source</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$branches</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBranchesPassthrough">
+        <div class="location">at         line 703</div>
+        <code>        static    protected        integer[]
+    <strong>getBranchesPassthrough</strong>(array $branches)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the unique values for the "passthrough" key of given branches</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$branches</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDynamicRendering">
+        <div class="location">at         line 727</div>
+        <code>        static    protected        array|bool
+    <strong>getDynamicRendering</strong>(string $php)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a string suitable as a preg_replace() replacement for given PHP code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$php</td>
+                <td>Original code</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td>Array of [regexp, replacement] if possible, or FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStaticRendering">
+        <div class="location">at         line 865</div>
+        <code>        static    protected        bool|string
+    <strong>getStaticRendering</strong>(string $php)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a string suitable as a str_replace() replacement for given PHP code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$php</td>
+                <td>Original code</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string</td>
+            <td>Static replacement if possible, or FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replacePlaceholder">
+        <div class="location">at         line 890</div>
+        <code>        static    protected        void
+    <strong>replacePlaceholder</strong>(string $str, string $uniqid, integer $index)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace all instances of a uniqid with a PCRE replacement in a string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>&amp;$str    PCRE replacement</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$uniqid</td>
+                <td>Unique ID</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td>Capture index</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_generateConditionals">
-        <div class="location">at line         line 917</div>
+        <div class="location">at         line 917</div>
         <code>        static            string
     <strong>generateConditionals</strong>(string $expr, array $statements)
         </code>
@@ -269,7 +749,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateBranchTable">
-        <div class="location">at line         line 957</div>
+        <div class="location">at         line 957</div>
         <code>        static            array
     <strong>generateBranchTable</strong>(string $expr, array $statements)
         </code>

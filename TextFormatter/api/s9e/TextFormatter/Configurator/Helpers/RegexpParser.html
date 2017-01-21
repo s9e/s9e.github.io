@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -133,7 +136,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getAllowedCharacterRegexp">
-        <div class="location">at line         line 26</div>
+        <div class="location">at         line 26</div>
         <code>        static            string
     <strong>getAllowedCharacterRegexp</strong>(string $regexp)
         </code>
@@ -177,7 +180,7 @@ after the literal "foo".</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getCaptureNames">
-        <div class="location">at line         line 192</div>
+        <div class="location">at         line 192</div>
         <code>        static            string[]
     <strong>getCaptureNames</strong>(string $regexp)
         </code>
@@ -217,7 +220,7 @@ after the literal "foo".</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line         line 211</div>
+        <div class="location">at         line 211</div>
         <code>        static            array
     <strong>parse</strong>(string $regexp)
         </code>

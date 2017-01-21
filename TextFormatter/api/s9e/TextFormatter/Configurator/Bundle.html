@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -131,7 +134,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_configure">
-        <div class="location">at line         line 20</div>
+        <div class="location">at         line 20</div>
         <code>    abstract                void
     <strong>configure</strong>(<a href="../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator)
         </code>
@@ -171,7 +174,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getConfigurator">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>        static            <a href="../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a>
     <strong>getConfigurator</strong>()
         </code>
@@ -201,7 +204,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getOptions">
-        <div class="location">at line         line 44</div>
+        <div class="location">at         line 44</div>
         <code>        static            array
     <strong>getOptions</strong>()
         </code>

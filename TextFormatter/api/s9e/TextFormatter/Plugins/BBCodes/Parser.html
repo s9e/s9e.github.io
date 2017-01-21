@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,99 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parser">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                </td>
+                <td>$parser</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attributes">
+                                        protected                                        array
+                </td>
+                <td>$attributes</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bbcodeConfig">
+                                        protected                                        array
+                </td>
+                <td>$bbcodeConfig</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bbcodeName">
+                                        protected                                        string
+                </td>
+                <td>$bbcodeName</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bbcodeSuffix">
+                                        protected                                        string
+                </td>
+                <td>$bbcodeSuffix</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pos">
+                                        protected                                        integer
+                </td>
+                <td>$pos</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_startPos">
+                                        protected                                        integer
+                </td>
+                <td>$startPos</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_text">
+                                        protected                                        string
+                </td>
+                <td>$text</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_textLen">
+                                        protected                                        integer
+                </td>
+                <td>$textLen</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uppercaseText">
+                                        protected                                        string
+                </td>
+                <td>$uppercaseText</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -109,10 +205,120 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Plugin's setup</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_parse">parse</a>(string $text, array $matches)
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addBBCodeEndTag">addBBCodeEndTag</a>()
+        
+                                            <p>Add the end tag that matches current BBCode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addBBCodeSelfClosingTag">addBBCodeSelfClosingTag</a>()
+        
+                                            <p>Add the self-closing tag that matches current BBCode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addBBCodeStartTag">addBBCodeStartTag</a>()
+        
+                                            <p>Add the start tag that matches current BBCode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_captureEndTag">captureEndTag</a>()
+        
+                                            <p>Parse the end tag that matches given BBCode name and suffix starting at current position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTagName">getTagName</a>()
+        
+                                            <p>Get the tag name for current BBCode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseAttributes">parseAttributes</a>()
+        
+                                            <p>Parse attributes starting at current position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseAttributeValue">parseAttributeValue</a>()
+        
+                                            <p>Parse the attribute value starting at current position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseBBCode">parseBBCode</a>()
+        
+                                            <p>Parse current BBCode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseBBCodeSuffix">parseBBCodeSuffix</a>()
+        
+                                            <p>Parse the BBCode suffix starting at current position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseQuotedAttributeValue">parseQuotedAttributeValue</a>()
+        
+                                            <p>Parse a quoted attribute value that starts at current offset</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -123,7 +329,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at line         line 30</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 30</div>
         <code>final                    
     <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         </code>
@@ -158,8 +364,38 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 43</div>
+        <code>            protected        void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Plugin's setup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line         line 64</div>
+        <div class="location">at         line 64</div>
         <code>                    void
     <strong>parse</strong>(string $text, array $matches)
         </code>
@@ -191,6 +427,307 @@
                     <table class="table table-condensed">
         <tr>
             <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBBCodeEndTag">
+        <div class="location">at         line 96</div>
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+    <strong>addBBCodeEndTag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the end tag that matches current BBCode</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBBCodeSelfClosingTag">
+        <div class="location">at         line 106</div>
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+    <strong>addBBCodeSelfClosingTag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the self-closing tag that matches current BBCode</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBBCodeStartTag">
+        <div class="location">at         line 119</div>
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+    <strong>addBBCodeStartTag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the start tag that matches current BBCode</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_captureEndTag">
+        <div class="location">at         line 132</div>
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>|null
+    <strong>captureEndTag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the end tag that matches given BBCode name and suffix starting at current position</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTagName">
+        <div class="location">at         line 153</div>
+        <code>            protected        string
+    <strong>getTagName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the tag name for current BBCode</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseAttributes">
+        <div class="location">at         line 166</div>
+        <code>            protected        array
+    <strong>parseAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse attributes starting at current position</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Associative array of [name => value]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseAttributeValue">
+        <div class="location">at         line 227</div>
+        <code>            protected        string
+    <strong>parseAttributeValue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the attribute value starting at current position</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseBBCode">
+        <div class="location">at         line 260</div>
+        <code>            protected        void
+    <strong>parseBBCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse current BBCode</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseBBCodeSuffix">
+        <div class="location">at         line 349</div>
+        <code>            protected        void
+    <strong>parseBBCodeSuffix</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the BBCode suffix starting at current position</p>                    <p>Used to explicitly pair specific tags together, e.g.
+  [code:123][code]type your code here[/code][/code:123]</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseQuotedAttributeValue">
+        <div class="location">at         line 368</div>
+        <code>            protected        string
+    <strong>parseQuotedAttributeValue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse a quoted attribute value that starts at current offset</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
             <td></td>
         </tr>
     </table>

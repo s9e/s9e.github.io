@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,83 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_configurator">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a>
+                </td>
+                <td>$configurator</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_configurator"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quickMatch">
+                                        protected                                        
+                </td>
+                <td>$quickMatch</td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_regexpLimit">
+                                        protected                                        integer
+                </td>
+                <td>$regexpLimit</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_regexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_aliases">
+                                        protected                                        array
+                </td>
+                <td>$aliases</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attributeFilters">
+                                        protected                                        array
+                </td>
+                <td>$attributeFilters</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_elements">
+                                        protected                                        array
+                </td>
+                <td>$elements</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_prefix">
+                                        protected                                        string
+                </td>
+                <td>$prefix</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_unsafeElements">
+                                        protected                                        array
+                </td>
+                <td>$unsafeElements</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_unsafeAttributes">
+                                        protected                                        array
+                </td>
+                <td>$unsafeAttributes</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -99,11 +179,21 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = array())
+                    <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = [])
         
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Executed by this plugin's constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -180,6 +270,16 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setAttrName">setAttrName</a>(string $attrName)
+        
+                                            <p>Set $this->attrName with given attribute name, normalized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setAttrName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setQuickMatch">setQuickMatch</a>(string $quickMatch)
         
                                             <p>Set the quickMatch string</p>                </div>
@@ -194,6 +294,16 @@
         
                                             <p>Set the maximum number of regexp matches</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTagName">setTagName</a>(string $tagName)
+        
+                                            <p>Set $this->tagName with given tag name, normalized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setTagName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -237,6 +347,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allowElementWithSafety">allowElementWithSafety</a>(string $elName, bool $allowUnsafe)
+        
+                                            <p>Allow a (potentially unsafe) HTML element to be used</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="s9e\Configurator\Items\Attribute">Attribute</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -255,6 +375,46 @@
                                             <p>Allow an unsafe attribute to be used in an HTML element</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="s9e\Configurator\Items\Attribute">Attribute</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allowAttributeWithSafety">allowAttributeWithSafety</a>(string $elName, string $attrName, bool $allowUnsafe)
+        
+                                            <p>Allow a (potentially unsafe) attribute to be used in an HTML element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeElementName">normalizeElementName</a>(string $elName)
+        
+                                            <p>Validate and normalize an element name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeAttributeName">normalizeAttributeName</a>(string $attrName)
+        
+                                            <p>Validate and normalize an attribute name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rebuildTemplate">rebuildTemplate</a>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, string $elName, bool $allowUnsafe)
+        
+                                            <p>Rebuild a tag's template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -263,9 +423,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 42</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 42</div>
         <code>final                    
-    <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = array())
+    <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = [])
         </code>
     </h3>
     <div class="details">
@@ -296,8 +456,29 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 70</div>
+        <code>            protected        
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Executed by this plugin's constructor</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_finalize">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 84</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 84</div>
         <code>                    
     <strong>finalize</strong>()
         </code>
@@ -323,7 +504,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 318</div>
+        <div class="location">at         line 318</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -353,7 +534,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getBaseProperties">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getBaseProperties"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 109</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getBaseProperties"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 109</div>
         <code>final                    array
     <strong>getBaseProperties</strong>()
         </code>
@@ -386,7 +567,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSHints">
-        <div class="location">at line         line 363</div>
+        <div class="location">at         line 363</div>
         <code>                    array
     <strong>getJSHints</strong>()
         </code>
@@ -416,7 +597,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSParser">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getJSParser"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 144</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getJSParser"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 144</div>
         <code>                    string|null
     <strong>getJSParser</strong>()
         </code>
@@ -447,7 +628,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_getTag">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getTag"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 167</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getTag"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 167</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>getTag</strong>()
         </code>
@@ -477,7 +658,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_disableQuickMatch">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_disableQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 186</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_disableQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 186</div>
         <code>                    void
     <strong>disableQuickMatch</strong>()
         </code>
@@ -506,8 +687,48 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setAttrName">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setAttrName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 197</div>
+        <code>            protected        void
+    <strong>setAttrName</strong>(string $attrName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set $this->attrName with given attribute name, normalized</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td>New attribute name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_setQuickMatch">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 213</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 213</div>
         <code>                    void
     <strong>setQuickMatch</strong>(string $quickMatch)
         </code>
@@ -547,7 +768,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_setRegexpLimit">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 229</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 229</div>
         <code>                    void
     <strong>setRegexpLimit</strong>(integer $limit)
         </code>
@@ -586,8 +807,48 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setTagName">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setTagName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 247</div>
+        <code>            protected        void
+    <strong>setTagName</strong>(string $tagName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set $this->tagName with given tag name, normalized</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tagName</td>
+                <td>New tag name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_aliasAttribute">
-        <div class="location">at line         line 98</div>
+        <div class="location">at         line 98</div>
         <code>                    void
     <strong>aliasAttribute</strong>(string $elName, string $attrName, string $alias)
         </code>
@@ -637,7 +898,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_aliasElement">
-        <div class="location">at line         line 115</div>
+        <div class="location">at         line 115</div>
         <code>                    void
     <strong>aliasElement</strong>(string $elName, string $tagName)
         </code>
@@ -682,7 +943,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_allowElement">
-        <div class="location">at line         line 128</div>
+        <div class="location">at         line 128</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>allowElement</strong>(string $elName)
         </code>
@@ -722,7 +983,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_allowUnsafeElement">
-        <div class="location">at line         line 139</div>
+        <div class="location">at         line 139</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>allowUnsafeElement</strong>(string $elName)
         </code>
@@ -761,8 +1022,53 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_allowElementWithSafety">
+        <div class="location">at         line 151</div>
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
+    <strong>allowElementWithSafety</strong>(string $elName, bool $allowUnsafe)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allow a (potentially unsafe) HTML element to be used</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$elName</td>
+                <td>Name of the element</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowUnsafe</td>
+                <td>Whether to allow unsafe elements</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
+            <td>Tag that represents this element</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_allowAttribute">
-        <div class="location">at line         line 182</div>
+        <div class="location">at         line 182</div>
         <code>                    <abbr title="s9e\Configurator\Items\Attribute">Attribute</abbr>
     <strong>allowAttribute</strong>(string $elName, string $attrName)
         </code>
@@ -807,7 +1113,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_allowUnsafeAttribute">
-        <div class="location">at line         line 194</div>
+        <div class="location">at         line 194</div>
         <code>                    <abbr title="s9e\Configurator\Items\Attribute">Attribute</abbr>
     <strong>allowUnsafeAttribute</strong>(string $elName, string $attrName)
         </code>
@@ -840,6 +1146,188 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
                     <table class="table table-condensed">
         <tr>
             <td><abbr title="s9e\Configurator\Items\Attribute">Attribute</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allowAttributeWithSafety">
+        <div class="location">at         line 207</div>
+        <code>            protected        <abbr title="s9e\Configurator\Items\Attribute">Attribute</abbr>
+    <strong>allowAttributeWithSafety</strong>(string $elName, string $attrName, bool $allowUnsafe)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allow a (potentially unsafe) attribute to be used in an HTML element</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$elName</td>
+                <td>Name of the element</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td>Name of the attribute</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowUnsafe</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="s9e\Configurator\Items\Attribute">Attribute</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeElementName">
+        <div class="location">at         line 260</div>
+        <code>            protected        string
+    <strong>normalizeElementName</strong>(string $elName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate and normalize an element name</p>                    <p>Accepts any name that would be valid, regardless of whether this element exists in HTML5.
+Might be slightly off as the HTML5 specs don't seem to require it to start with a letter but
+our implementation does.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$elName</td>
+                <td>Original element name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Normalized element name, in lowercase</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeAttributeName">
+        <div class="location">at         line 278</div>
+        <code>            protected        string
+    <strong>normalizeAttributeName</strong>(string $attrName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate and normalize an attribute name</p>                    <p>More restrictive than the specs but allows all HTML5 attributes and more.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td>Original attribute name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Normalized attribute name, in lowercase</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rebuildTemplate">
+        <div class="location">at         line 296</div>
+        <code>            protected        void
+    <strong>rebuildTemplate</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, string $elName, bool $allowUnsafe)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Rebuild a tag's template</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Source tag</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$elName</td>
+                <td>Name of the HTML element created by the template</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowUnsafe</td>
+                <td>Whether to allow unsafe markup</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
             <td></td>
         </tr>
     </table>

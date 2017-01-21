@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -209,6 +212,62 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_cntOpen">
+                                        protected                                        array
+                </td>
+                <td>$cntOpen</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cntTotal">
+                                        protected                                        array
+                </td>
+                <td>$cntTotal</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_context">
+                                        protected                                        array
+                </td>
+                <td>$context</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentFixingCost">
+                                        protected                                        integer
+                </td>
+                <td>$currentFixingCost</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentTag">
+                                        protected                                        <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                </td>
+                <td>$currentTag</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isRich">
+                                        protected                                        bool
+                </td>
+                <td>$isRich</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_logger">
+                                        protected                                        <a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a>
+                </td>
+                <td>$logger</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_maxFixingCost">
                                                                                 integer
                 </td>
@@ -217,10 +276,122 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_namespaces">
+                                        protected                                        array
+                </td>
+                <td>$namespaces</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_openTags">
+                                        protected                                        array
+                </td>
+                <td>$openTags</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_output">
+                                        protected                                        string
+                </td>
+                <td>$output</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pos">
+                                        protected                                        integer
+                </td>
+                <td>$pos</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pluginParsers">
+                                        protected                                        array
+                </td>
+                <td>$pluginParsers</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pluginsConfig">
+                                        protected                                        array
+                </td>
+                <td>$pluginsConfig</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_registeredVars">
                                                                                 array
                 </td>
                 <td>$registeredVars</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rootContext">
+                                        protected                                        array
+                </td>
+                <td>$rootContext</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tagsConfig">
+                                        protected                                        array
+                </td>
+                <td>$tagsConfig</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tagStack">
+                                        protected                                        array
+                </td>
+                <td>$tagStack</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tagStackIsSorted">
+                                        protected                                        bool
+                </td>
+                <td>$tagStackIsSorted</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_text">
+                                        protected                                        string
+                </td>
+                <td>$text</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_textLen">
+                                        protected                                        integer
+                </td>
+                <td>$textLen</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uid">
+                                        protected                                        integer
+                </td>
+                <td>$uid</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wsPos">
+                                        protected                                        integer
+                </td>
+                <td>$wsPos</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -258,6 +429,26 @@
                     <a href="#method___wakeup">__wakeup</a>()
         
                                             <p>Unserializer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>(string $text)
+        
+                                            <p>Reset the parser for a new parsing</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTagOption">setTagOption</a>(string $tagName, string $optionName, mixed $optionValue)
+        
+                                            <p>Set a tag's option</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -342,12 +533,142 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_executeAttributePreprocessor">executeAttributePreprocessor</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $attrName, string $regexp, string[] $map)
+        
+                                            <p>Execute an attribute preprocessor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNamedCaptures">getNamedCaptures</a>(string $attrValue, string $regexp, string[] $map)
+        
+                                            <p>Execute a regexp and return the values of the mapped captures</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_executeFilter">executeFilter</a>(array $filter, array $vars)
+        
+                                            <p>Execute a filter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_filterAttributes">filterAttributes</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, array $tagConfig, array $registeredVars, <a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a> $logger)
         
                                             <p>Filter the attributes of given tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_filterTag">filterTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Execute given tag's filterChain</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_finalizeOutput">finalizeOutput</a>()
+        
+                                            <p>Finalize the output by appending the rest of the unprocessed text and create the root node</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputTag">outputTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Append a tag to the output</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputText">outputText</a>(integer $catchupPos, integer $maxLines, bool $closeParagraph)
+        
+                                            <p>Output the text between the cursor's position (included) and given position (not included)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputBrTag">outputBrTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Output a linebreak tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputIgnoreTag">outputIgnoreTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Output an ignore tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputParagraphStart">outputParagraphStart</a>(integer $maxPos)
+        
+                                            <p>Start a paragraph between current position and given position, if applicable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputParagraphEnd">outputParagraphEnd</a>()
+        
+                                            <p>Close current paragraph at current position if applicable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputVerbatim">outputVerbatim</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Output the content of a verbatim tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_outputWhitespace">outputWhitespace</a>(integer $maxPos)
+        
+                                            <p>Skip as much whitespace after current position as possible</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -375,9 +696,199 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_executePluginParser">executePluginParser</a>(string $pluginName)
+        
+                                            <p>Execute given plugin</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_executePluginParsers">executePluginParsers</a>()
+        
+                                            <p>Execute all the plugins</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMatches">getMatches</a>(string $regexp, integer $limit)
+        
+                                            <p>Execute given regexp and returns as many matches as given limit</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPluginParser">getPluginParser</a>(string $pluginName)
+        
+                                            <p>Get the cached callback for given plugin's parser</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_registerParser">registerParser</a>($pluginName, $parser, $regexp = null, $limit = PHP_INT_MAX)
         
                                             <p>Register a parser</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_closeAncestor">closeAncestor</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Apply closeAncestor rules associated with given tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_closeParent">closeParent</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Apply closeParent rules associated with given tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createChild">createChild</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Apply the createChild rules associated with given tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fosterParent">fosterParent</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Apply fosterParent rules associated with given tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_requireAncestor">requireAncestor</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Apply requireAncestor rules associated with given tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addMagicEndTag">addMagicEndTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $startTag, integer $tagPos, integer $prio)
+        
+                                            <p>Create and add an end tag for given start tag at given position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMagicPos">getMagicPos</a>(integer $tagPos)
+        
+                                            <p>Compute the position of a magic end tag, adjusted for whitespace</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isFollowedByClosingTag">isFollowedByClosingTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Test whether given start tag is immediately followed by a closing tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processTags">processTags</a>()
+        
+                                            <p>Process all tags in the stack</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processCurrentTag">processCurrentTag</a>()
+        
+                                            <p>Process current tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processStartTag">processStartTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Process given start tag (including self-closing tags) at current position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processEndTag">processEndTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Process given end tag at current position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_popContext">popContext</a>()
+        
+                                            <p>Update counters and replace current context with its parent context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pushContext">pushContext</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Update counters and replace current context with a new context based on given tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tagIsAllowed">tagIsAllowed</a>(string $tagName)
+        
+                                            <p>Return whether given tag is allowed in current context</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -455,6 +966,26 @@
                     <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_addTag">addTag</a>(integer $type, string $name, integer $pos, integer $len, integer $prio)
+        
+                                            <p>Add a tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertTag">insertTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        
+                                            <p>Insert given tag in the tag stack</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_addTagPair">addTagPair</a>(string $name, integer $startPos, integer $startLen, integer $endPos, integer $endLen, integer $prio)
         
                                             <p>Add a pair of tags</p>                </div>
@@ -470,6 +1001,26 @@
                                             <p>Add a tag that represents a verbatim copy of the original text</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sortTags">sortTags</a>()
+        
+                                            <p>Sort tags by position and precedence</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compareTags">compareTags</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $a, <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $b)
+        
+                                            <p>sortTags() callback</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -478,7 +1029,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 169</div>
+        <div class="location">at         line 169</div>
         <code>                    
     <strong>__construct</strong>(array $config)
         </code>
@@ -509,7 +1060,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___sleep">
-        <div class="location">at line         line 189</div>
+        <div class="location">at         line 189</div>
         <code>                    array
     <strong>__sleep</strong>()
         </code>
@@ -542,7 +1093,7 @@ of the serializer to the user (e.g. igbinary)</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___wakeup">
-        <div class="location">at line         line 199</div>
+        <div class="location">at         line 199</div>
         <code>                    void
     <strong>__wakeup</strong>()
         </code>
@@ -571,8 +1122,99 @@ of the serializer to the user (e.g. igbinary)</p>            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at         line 210</div>
+        <code>            protected        void
+    <strong>reset</strong>(string $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset the parser for a new parsing</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>Text to be parsed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTagOption">
+        <div class="location">at         line 254</div>
+        <code>            protected        void
+    <strong>setTagOption</strong>(string $tagName, string $optionName, mixed $optionValue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a tag's option</p>                    <p>This method ensures that the tag's config is a value and not a reference, to prevent
+potential side-effects. References contained <em>inside</em> the tag's config are left untouched</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tagName</td>
+                <td>Tag's name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$optionName</td>
+                <td>Option's name</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$optionValue</td>
+                <td>Option's value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_disableTag">
-        <div class="location">at line         line 278</div>
+        <div class="location">at         line 278</div>
         <code>                    void
     <strong>disableTag</strong>(string $tagName)
         </code>
@@ -612,7 +1254,7 @@ of the serializer to the user (e.g. igbinary)</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_enableTag">
-        <div class="location">at line         line 289</div>
+        <div class="location">at         line 289</div>
         <code>                    void
     <strong>enableTag</strong>(string $tagName)
         </code>
@@ -652,7 +1294,7 @@ of the serializer to the user (e.g. igbinary)</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getLogger">
-        <div class="location">at line         line 302</div>
+        <div class="location">at         line 302</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a>
     <strong>getLogger</strong>()
         </code>
@@ -682,7 +1324,7 @@ of the serializer to the user (e.g. igbinary)</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getText">
-        <div class="location">at line         line 319</div>
+        <div class="location">at         line 319</div>
         <code>                    string
     <strong>getText</strong>()
         </code>
@@ -724,7 +1366,7 @@ normalized text</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line         line 330</div>
+        <div class="location">at         line 330</div>
         <code>                    string
     <strong>parse</strong>(string $text)
         </code>
@@ -764,7 +1406,7 @@ normalized text</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagLimit">
-        <div class="location">at line         line 367</div>
+        <div class="location">at         line 367</div>
         <code>                    void
     <strong>setTagLimit</strong>(string $tagName, integer $tagLimit)
         </code>
@@ -809,7 +1451,7 @@ normalized text</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setNestingLimit">
-        <div class="location">at line         line 381</div>
+        <div class="location">at         line 381</div>
         <code>                    void
     <strong>setNestingLimit</strong>(string $tagName, integer $nestingLimit)
         </code>
@@ -854,7 +1496,7 @@ normalized text</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_executeAttributePreprocessors">
-        <div class="location">at line         line 399</div>
+        <div class="location">at         line 399</div>
         <code>        static            bool
     <strong>executeAttributePreprocessors</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, array $tagConfig)
         </code>
@@ -898,8 +1540,167 @@ normalized text</p>            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_executeAttributePreprocessor">
+        <div class="location">at         line 426</div>
+        <code>        static    protected        void
+    <strong>executeAttributePreprocessor</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $attrName, string $regexp, string[] $map)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute an attribute preprocessor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$map</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNamedCaptures">
+        <div class="location">at         line 449</div>
+        <code>        static    protected        array
+    <strong>getNamedCaptures</strong>(string $attrValue, string $regexp, string[] $map)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a regexp and return the values of the mapped captures</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attrValue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$map</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_executeFilter">
+        <div class="location">at         line 477</div>
+        <code>        static    protected        mixed
+    <strong>executeFilter</strong>(array $filter, array $vars)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a filter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$filter</td>
+                <td>Programmed callback</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$vars</td>
+                <td>Variables to be used when executing the callback</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Whatever the callback returns</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>s9e\TextFormatter\Configurator\Items\ProgrammableCallback</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_filterAttributes">
-        <div class="location">at line         line 521</div>
+        <div class="location">at         line 521</div>
         <code>        static            bool
     <strong>filterAttributes</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, array $tagConfig, array $registeredVars, <a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a> $logger)
         </code>
@@ -953,8 +1754,398 @@ normalized text</p>            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_filterTag">
+        <div class="location">at         line 628</div>
+        <code>            protected        bool
+    <strong>filterTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute given tag's filterChain</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Tag to filter</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>Whether the tag is valid</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_finalizeOutput">
+        <div class="location">at         line 676</div>
+        <code>            protected        void
+    <strong>finalizeOutput</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Finalize the output by appending the rest of the unprocessed text and create the root node</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputTag">
+        <div class="location">at         line 716</div>
+        <code>            protected        void
+    <strong>outputTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append a tag to the output</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Tag to append</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputText">
+        <div class="location">at         line 841</div>
+        <code>            protected        void
+    <strong>outputText</strong>(integer $catchupPos, integer $maxLines, bool $closeParagraph)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Output the text between the cursor's position (included) and given position (not included)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$catchupPos</td>
+                <td>Position we're catching up to</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$maxLines</td>
+                <td>Maximum number of lines to ignore at the end of the text</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$closeParagraph</td>
+                <td>Whether to close the paragraph at the end, if applicable</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputBrTag">
+        <div class="location">at         line 999</div>
+        <code>            protected        void
+    <strong>outputBrTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Output a linebreak tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputIgnoreTag">
+        <div class="location">at         line 1011</div>
+        <code>            protected        void
+    <strong>outputIgnoreTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Output an ignore tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputParagraphStart">
+        <div class="location">at         line 1034</div>
+        <code>            protected        void
+    <strong>outputParagraphStart</strong>(integer $maxPos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Start a paragraph between current position and given position, if applicable</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$maxPos</td>
+                <td>Rightmost position at which the paragraph can be opened</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputParagraphEnd">
+        <div class="location">at         line 1059</div>
+        <code>            protected        void
+    <strong>outputParagraphEnd</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Close current paragraph at current position if applicable</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputVerbatim">
+        <div class="location">at         line 1077</div>
+        <code>            protected        void
+    <strong>outputVerbatim</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Output the content of a verbatim tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_outputWhitespace">
+        <div class="location">at         line 1091</div>
+        <code>            protected        void
+    <strong>outputWhitespace</strong>(integer $maxPos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Skip as much whitespace after current position as possible</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$maxPos</td>
+                <td>Rightmost character to be skipped</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_disablePlugin">
-        <div class="location">at line         line 1115</div>
+        <div class="location">at         line 1115</div>
         <code>                    void
     <strong>disablePlugin</strong>(string $pluginName)
         </code>
@@ -994,7 +2185,7 @@ normalized text</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_enablePlugin">
-        <div class="location">at line         line 1135</div>
+        <div class="location">at         line 1135</div>
         <code>                    void
     <strong>enablePlugin</strong>(string $pluginName)
         </code>
@@ -1033,8 +2224,163 @@ normalized text</p>            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_executePluginParser">
+        <div class="location">at         line 1149</div>
+        <code>            protected        void
+    <strong>executePluginParser</strong>(string $pluginName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute given plugin</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pluginName</td>
+                <td>Plugin's name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_executePluginParsers">
+        <div class="location">at         line 1176</div>
+        <code>            protected        void
+    <strong>executePluginParsers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute all the plugins</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMatches">
+        <div class="location">at         line 1194</div>
+        <code>            protected        array
+    <strong>getMatches</strong>(string $regexp, integer $limit)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute given regexp and returns as many matches as given limit</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPluginParser">
+        <div class="location">at         line 1211</div>
+        <code>            protected        callable
+    <strong>getPluginParser</strong>(string $pluginName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the cached callback for given plugin's parser</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pluginName</td>
+                <td>Plugin's name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_registerParser">
-        <div class="location">at line         line 1238</div>
+        <div class="location">at         line 1238</div>
         <code>                    void
     <strong>registerParser</strong>($pluginName, $parser, $regexp = null, $limit = PHP_INT_MAX)
         </code>
@@ -1089,8 +2435,593 @@ existing plugin</p>            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_closeAncestor">
+        <div class="location">at         line 1267</div>
+        <code>            protected        bool
+    <strong>closeAncestor</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Apply closeAncestor rules associated with given tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>Whether a new tag has been added</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_closeParent">
+        <div class="location">at         line 1306</div>
+        <code>            protected        bool
+    <strong>closeParent</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Apply closeParent rules associated with given tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>Whether a new tag has been added</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createChild">
+        <div class="location">at         line 1340</div>
+        <code>            protected        void
+    <strong>createChild</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Apply the createChild rules associated with given tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fosterParent">
+        <div class="location">at         line 1367</div>
+        <code>            protected        bool
+    <strong>fosterParent</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Apply fosterParent rules associated with given tag</p>                    <p>NOTE: this rule has the potential for creating an unbounded loop, either if a tag tries to
+      foster itself or two or more tags try to foster each other in a loop. We mitigate the
+      risk by preventing a tag from creating a child of itself (the parent still gets closed)
+      and by checking and increasing the currentFixingCost so that a loop of multiple tags
+      do not run indefinitely. The default tagLimit and nestingLimit also serve to prevent the
+      loop from running indefinitely</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>Whether a new tag has been added</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_requireAncestor">
+        <div class="location">at         line 1413</div>
+        <code>            protected        bool
+    <strong>requireAncestor</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Apply requireAncestor rules associated with given tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>Whether this tag has an unfulfilled requireAncestor requirement</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addMagicEndTag">
+        <div class="location">at         line 1451</div>
+        <code>            protected        <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+    <strong>addMagicEndTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $startTag, integer $tagPos, integer $prio)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create and add an end tag for given start tag at given position</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$startTag</td>
+                <td>Start tag</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$tagPos</td>
+                <td>End tag's position (will be adjusted for whitespace if applicable)</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$prio</td>
+                <td>End tag's priority</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMagicPos">
+        <div class="location">at         line 1474</div>
+        <code>            protected        integer
+    <strong>getMagicPos</strong>(integer $tagPos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the position of a magic end tag, adjusted for whitespace</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$tagPos</td>
+                <td>Rightmost possible position for the tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFollowedByClosingTag">
+        <div class="location">at         line 1492</div>
+        <code>            protected        bool
+    <strong>isFollowedByClosingTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given start tag is immediately followed by a closing tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Start tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processTags">
+        <div class="location">at         line 1502</div>
+        <code>            protected        void
+    <strong>processTags</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process all tags in the stack</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processCurrentTag">
+        <div class="location">at         line 1547</div>
+        <code>            protected        void
+    <strong>processCurrentTag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process current tag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processStartTag">
+        <div class="location">at         line 1640</div>
+        <code>            protected        void
+    <strong>processStartTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process given start tag (including self-closing tags) at current position</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Start tag (including self-closing)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processEndTag">
+        <div class="location">at         line 1757</div>
+        <code>            protected        void
+    <strong>processEndTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process given end tag at current position</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>end tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_popContext">
+        <div class="location">at         line 1913</div>
+        <code>            protected        void
+    <strong>popContext</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update counters and replace current context with its parent context</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushContext">
+        <div class="location">at         line 1928</div>
+        <code>            protected        void
+    <strong>pushContext</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update counters and replace current context with a new context based on given tag</p>                    <p>If given tag is a self-closing tag, the context won't change</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td>Start tag (including self-closing)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tagIsAllowed">
+        <div class="location">at         line 1984</div>
+        <code>            protected        bool
+    <strong>tagIsAllowed</strong>(string $tagName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return whether given tag is allowed in current context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tagName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_addStartTag">
-        <div class="location">at line         line 2004</div>
+        <div class="location">at         line 2004</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addStartTag</strong>(string $name, integer $pos, integer $len, integer $prio)
         </code>
@@ -1145,7 +3076,7 @@ existing plugin</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addEndTag">
-        <div class="location">at line         line 2018</div>
+        <div class="location">at         line 2018</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addEndTag</strong>(string $name, integer $pos, integer $len, integer $prio)
         </code>
@@ -1200,7 +3131,7 @@ existing plugin</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addSelfClosingTag">
-        <div class="location">at line         line 2032</div>
+        <div class="location">at         line 2032</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addSelfClosingTag</strong>(string $name, integer $pos, integer $len, integer $prio)
         </code>
@@ -1255,7 +3186,7 @@ existing plugin</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addBrTag">
-        <div class="location">at line         line 2044</div>
+        <div class="location">at         line 2044</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addBrTag</strong>(integer $pos, integer $prio)
         </code>
@@ -1300,7 +3231,7 @@ existing plugin</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addIgnoreTag">
-        <div class="location">at line         line 2057</div>
+        <div class="location">at         line 2057</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addIgnoreTag</strong>(integer $pos, integer $len, integer $prio)
         </code>
@@ -1350,7 +3281,7 @@ existing plugin</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addParagraphBreak">
-        <div class="location">at line         line 2071</div>
+        <div class="location">at         line 2071</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addParagraphBreak</strong>(integer $pos, integer $prio)
         </code>
@@ -1395,7 +3326,7 @@ existing plugin</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addCopyTag">
-        <div class="location">at line         line 2085</div>
+        <div class="location">at         line 2085</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addCopyTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, integer $pos, integer $len, integer $prio = null)
         </code>
@@ -1449,8 +3380,108 @@ existing plugin</p>            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_addTag">
+        <div class="location">at         line 2107</div>
+        <code>            protected        <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+    <strong>addTag</strong>(integer $type, string $name, integer $pos, integer $len, integer $prio)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$type</td>
+                <td>Tag's type</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the tag</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td>Position of the tag in the text</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$len</td>
+                <td>Length of text consumed by the tag</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$prio</td>
+                <td>Tag's priority</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertTag">
+        <div class="location">at         line 2153</div>
+        <code>            protected        void
+    <strong>insertTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Insert given tag in the tag stack</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_addTagPair">
-        <div class="location">at line         line 2183</div>
+        <div class="location">at         line 2183</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addTagPair</strong>(string $name, integer $startPos, integer $startLen, integer $endPos, integer $endLen, integer $prio)
         </code>
@@ -1515,7 +3546,7 @@ existing plugin</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addVerbatim">
-        <div class="location">at line         line 2201</div>
+        <div class="location">at         line 2201</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addVerbatim</strong>(integer $pos, integer $len, integer $prio)
         </code>
@@ -1553,6 +3584,82 @@ existing plugin</p>            </div>
                     <table class="table table-condensed">
         <tr>
             <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sortTags">
+        <div class="location">at         line 2211</div>
+        <code>            protected        void
+    <strong>sortTags</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sort tags by position and precedence</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compareTags">
+        <div class="location">at         line 2227</div>
+        <code>        static    protected        integer
+    <strong>compareTags</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $a, <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $b)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>sortTags() callback</p>                    <p>Tags are stored as a stack, in LIFO order. We sort tags by position <em>descending</em> so that they
+are processed in the order they appear in the text.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$a</td>
+                <td>First tag to compare</td>
+            </tr>
+                    <tr>
+                <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+                <td>$b</td>
+                <td>Second tag to compare</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
             <td></td>
         </tr>
     </table>

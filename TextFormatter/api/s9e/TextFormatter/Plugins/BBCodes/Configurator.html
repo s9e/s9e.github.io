@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -109,6 +112,30 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_configurator">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a>
+                </td>
+                <td>$configurator</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_configurator"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quickMatch">
+                                        protected                                        
+                </td>
+                <td>$quickMatch</td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_regexpLimit">
+                                        protected                                        integer
+                </td>
+                <td>$regexpLimit</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_regexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_collection">
                                                                                 <a href="../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCodeCollection.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCodeCollection">BBCodeCollection</abbr></a>
                 </td>
@@ -122,6 +149,14 @@
                 </td>
                 <td>$bbcodeMonkey</td>
                 <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_regexp">
+                                        protected                                        
+                </td>
+                <td>$regexp</td>
+                <td class="last">{@inheritdoc}</td>
                 <td></td>
             </tr>
                     <tr>
@@ -143,11 +178,21 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = array())
+                    <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = [])
         
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Plugin setup</p>                </div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -225,6 +270,16 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setAttrName">setAttrName</a>(string $attrName)
+        
+                                            <p>Set $this->attrName with given attribute name, normalized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setAttrName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setQuickMatch">setQuickMatch</a>(string $quickMatch)
         
                                             <p>Set the quickMatch string</p>                </div>
@@ -239,6 +294,16 @@
         
                                             <p>Set the maximum number of regexp matches</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTagName">setTagName</a>(string $tagName)
+        
+                                            <p>Set $this->tagName with given tag name, normalized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setTagName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -475,7 +540,7 @@
                     <a href="../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addCustom">addCustom</a>(string $usage, string|<a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template, array $options = array())
+                    <a href="#method_addCustom">addCustom</a>(string $usage, string|<a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template, array $options = [])
         
                                             <p>Add a BBCode using their human-readable representation</p>                </div>
                 <div class="col-md-2"></div>
@@ -485,9 +550,19 @@
                     <a href="../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addFromRepository">addFromRepository</a>(string $name, mixed $repository = &#039;default&#039;, array $vars = array())
+                    <a href="#method_addFromRepository">addFromRepository</a>(string $name, mixed $repository = &#039;default&#039;, array $vars = [])
         
                                             <p>Add a BBCode from a repository</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFromConfig">addFromConfig</a>(array $config)
+        
+                                            <p>Add a BBCode and its tag based on the return config from BBCodeMonkey</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -509,9 +584,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 42</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 42</div>
         <code>final                    
-    <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = array())
+    <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = [])
         </code>
     </h3>
     <div class="details">
@@ -542,8 +617,29 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">at         line 84</div>
+        <code>            protected        
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Plugin setup</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_finalize">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 84</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 84</div>
         <code>                    
     <strong>finalize</strong>()
         </code>
@@ -569,7 +665,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    array
     <strong>asConfig</strong>()
         </code>
@@ -597,7 +693,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getBaseProperties">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getBaseProperties"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 109</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getBaseProperties"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 109</div>
         <code>final                    array
     <strong>getBaseProperties</strong>()
         </code>
@@ -630,7 +726,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSHints">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getJSHints"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 131</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getJSHints"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 131</div>
         <code>                    array
     <strong>getJSHints</strong>()
         </code>
@@ -660,7 +756,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSParser">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getJSParser"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 144</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getJSParser"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 144</div>
         <code>                    string|null
     <strong>getJSParser</strong>()
         </code>
@@ -691,7 +787,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_getTag">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getTag"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 167</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getTag"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 167</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>getTag</strong>()
         </code>
@@ -721,7 +817,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_disableQuickMatch">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_disableQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 186</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_disableQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 186</div>
         <code>                    void
     <strong>disableQuickMatch</strong>()
         </code>
@@ -750,8 +846,48 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setAttrName">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setAttrName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 197</div>
+        <code>            protected        void
+    <strong>setAttrName</strong>(string $attrName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set $this->attrName with given attribute name, normalized</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td>New attribute name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_setQuickMatch">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 213</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 213</div>
         <code>                    void
     <strong>setQuickMatch</strong>(string $quickMatch)
         </code>
@@ -791,7 +927,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_setRegexpLimit">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 229</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 229</div>
         <code>                    void
     <strong>setRegexpLimit</strong>(integer $limit)
         </code>
@@ -830,8 +966,48 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setTagName">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setTagName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 247</div>
+        <code>            protected        void
+    <strong>setTagName</strong>(string $tagName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set $this->tagName with given tag name, normalized</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tagName</td>
+                <td>New tag name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___call">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/CollectionProxy.html#method___call"><abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a> at line         line 36</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/CollectionProxy.html#method___call"><abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a> at         line 36</div>
         <code>                    mixed
     <strong>__call</strong>(string $methodName, array $args)
         </code>
@@ -876,7 +1052,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetExists">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    bool
     <strong>offsetExists</strong>(string|integer  $offset)
         </code>
@@ -914,7 +1090,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetGet">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    mixed
     <strong>offsetGet</strong>(string|integer  $offset)
         </code>
@@ -952,7 +1128,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetSet">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    void
     <strong>offsetSet</strong>(string|integer  $offset, mixed  $value)
         </code>
@@ -995,7 +1171,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetUnset">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    void
     <strong>offsetUnset</strong>(string|integer  $offset)
         </code>
@@ -1033,7 +1209,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_count">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    integer
     <strong>count</strong>()
         </code>
@@ -1061,7 +1237,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    mixed
     <strong>current</strong>()
         </code>
@@ -1089,7 +1265,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_key">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    integer|string
     <strong>key</strong>()
         </code>
@@ -1117,7 +1293,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    mixed
     <strong>next</strong>()
         </code>
@@ -1145,7 +1321,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    void
     <strong>rewind</strong>()
         </code>
@@ -1173,7 +1349,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_valid">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    bool
     <strong>valid</strong>()
         </code>
@@ -1201,7 +1377,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    mixed
     <strong>add</strong>(string  $key, mixed  $value)
         </code>
@@ -1244,7 +1420,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_contains">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    bool
     <strong>contains</strong>(mixed  $value)
         </code>
@@ -1282,7 +1458,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    void
     <strong>delete</strong>(string  $key)
         </code>
@@ -1320,7 +1496,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_exists">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    bool
     <strong>exists</strong>(string  $key)
         </code>
@@ -1358,7 +1534,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    mixed
     <strong>get</strong>(string  $key)
         </code>
@@ -1396,7 +1572,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_indexOf">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    mixed
     <strong>indexOf</strong>(mixed  $value)
         </code>
@@ -1434,7 +1610,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeKey">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    string
     <strong>normalizeKey</strong>(string  $key)
         </code>
@@ -1472,7 +1648,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeValue">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    mixed
     <strong>normalizeValue</strong>(mixed  $value)
         </code>
@@ -1510,7 +1686,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_onDuplicate">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    string
     <strong>onDuplicate</strong>(string|null  $action)
         </code>
@@ -1548,7 +1724,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    mixed
     <strong>set</strong>(string  $key, mixed  $value)
         </code>
@@ -1591,9 +1767,9 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_addCustom">
-        <div class="location">at line         line 102</div>
+        <div class="location">at         line 102</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a>
-    <strong>addCustom</strong>(string $usage, string|<a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template, array $options = array())
+    <strong>addCustom</strong>(string $usage, string|<a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template, array $options = [])
         </code>
     </h3>
     <div class="details">
@@ -1650,9 +1826,9 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_addFromRepository">
-        <div class="location">at line         line 127</div>
+        <div class="location">at         line 127</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a>
-    <strong>addFromRepository</strong>(string $name, mixed $repository = &#039;default&#039;, array $vars = array())
+    <strong>addFromRepository</strong>(string $name, mixed $repository = &#039;default&#039;, array $vars = [])
         </code>
     </h3>
     <div class="details">
@@ -1699,8 +1875,48 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_addFromConfig">
+        <div class="location">at         line 149</div>
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a>
+    <strong>addFromConfig</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a BBCode and its tag based on the return config from BBCodeMonkey</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>BBCodeMonkey::create()'s return array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">at line         line 50</div>
+        <div class="location">at         line 50</div>
         <code>                    void
     <strong>clear</strong>()
         </code>

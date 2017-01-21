@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -231,6 +234,16 @@
 given rendering configuration</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_export">export</a>(array $value)
+        
+                                            <p>Export given array as PHP code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -239,7 +252,7 @@ given rendering configuration</p>                </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 87</div>
+        <div class="location">at         line 87</div>
         <code>                    
     <strong>__construct</strong>(string $cacheDir = null)
         </code>
@@ -270,7 +283,7 @@ given rendering configuration</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getRenderer">
-        <div class="location">at line         line 105</div>
+        <div class="location">at         line 105</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
     <strong>getRenderer</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Rendering.html"><abbr title="s9e\TextFormatter\Configurator\Rendering">Rendering</abbr></a> $rendering)
         </code>
@@ -310,7 +323,7 @@ given rendering configuration</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_generate">
-        <div class="location">at line         line 143</div>
+        <div class="location">at         line 143</div>
         <code>                    string
     <strong>generate</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Rendering.html"><abbr title="s9e\TextFormatter\Configurator\Rendering">Rendering</abbr></a> $rendering)
         </code>
@@ -340,6 +353,46 @@ given rendering configuration</p>                                </div>
         <tr>
             <td>string</td>
             <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_export">
+        <div class="location">at         line 434</div>
+        <code>        static    protected        string
+    <strong>export</strong>(array $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Export given array as PHP code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td>Original value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>PHP code</td>
         </tr>
     </table>
 

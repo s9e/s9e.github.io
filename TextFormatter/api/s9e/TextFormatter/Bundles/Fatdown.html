@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -89,6 +92,27 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parser">
+                    static                    protected                                        <abbr title="s9e\TextFormatter\Bundles\s9e\TextFormatter\Parser">Parser</abbr>
+                </td>
+                <td>$parser</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_renderer">
+                    static                    protected                                        <abbr title="s9e\TextFormatter\Bundles\s9e\TextFormatter\Renderer">Renderer</abbr>
+                </td>
+                <td>$renderer</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -128,7 +152,7 @@
                     static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_render">render</a>(string $xml, array $params = array())
+                    <a href="#method_render">render</a>(string $xml, array $params = [])
         
                                             <p>Render an intermediate representation using a singleton instance of the bundled Renderer</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_render"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
@@ -181,7 +205,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getCachedParser">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedParser"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line         line 21</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedParser"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 21</div>
         <code>        static            <a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
     <strong>getCachedParser</strong>()
         </code>
@@ -211,7 +235,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCachedRenderer">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedRenderer"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line         line 36</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedRenderer"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 36</div>
         <code>        static            <a href="../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
     <strong>getCachedRenderer</strong>()
         </code>
@@ -241,7 +265,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_parse"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line         line 52</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_parse"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 52</div>
         <code>        static            string
     <strong>parse</strong>(string $text)
         </code>
@@ -281,9 +305,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_render"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line         line 76</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_render"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 76</div>
         <code>        static            string
-    <strong>render</strong>(string $xml, array $params = array())
+    <strong>render</strong>(string $xml, array $params = [])
         </code>
     </h3>
     <div class="details">
@@ -326,7 +350,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reset">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_reset"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line         line 105</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_reset"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 105</div>
         <code>        static            void
     <strong>reset</strong>()
         </code>
@@ -356,7 +380,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unparse">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_unparse"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line         line 117</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_unparse"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 117</div>
         <code>        static            string
     <strong>unparse</strong>(string $xml)
         </code>
@@ -396,7 +420,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParser">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>        static            Parser
     <strong>getParser</strong>()
         </code>
@@ -426,7 +450,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getRenderer">
-        <div class="location">at line         line 37</div>
+        <div class="location">at         line 37</div>
         <code>        static            Renderer
     <strong>getRenderer</strong>()
         </code>

@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -91,6 +94,19 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_templateGenerators">
+                                        protected                                        array
+                </td>
+                <td>$templateGenerators</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -125,6 +141,16 @@
                                             <p>Generate and return a template based on given config</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addSiteId">addSiteId</a>(string $siteId, string $template)
+        
+                                            <p>Added the siteId value to given template in a data-s9e-mediaembed attribute</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -133,7 +159,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 26</div>
+        <div class="location">at         line 26</div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -154,7 +180,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_build">
-        <div class="location">at line         line 40</div>
+        <div class="location">at         line 40</div>
         <code>                    string
     <strong>build</strong>(string $siteId, array $siteConfig)
         </code>
@@ -199,7 +225,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getTemplate">
-        <div class="location">at line         line 51</div>
+        <div class="location">at         line 51</div>
         <code>                    string
     <strong>getTemplate</strong>(array $config)
         </code>
@@ -228,6 +254,51 @@
         <tr>
             <td>string</td>
             <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addSiteId">
+        <div class="location">at         line 71</div>
+        <code>            protected        string
+    <strong>addSiteId</strong>(string $siteId, string $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Added the siteId value to given template in a data-s9e-mediaembed attribute</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$siteId</td>
+                <td>Site ID</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td>Original template</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Modified template</td>
         </tr>
     </table>
 

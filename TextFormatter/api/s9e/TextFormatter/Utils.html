@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -142,6 +145,56 @@
                                             <p>Replace the attributes of all tags of given name in given XML</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeUnicodeSupplementaryCharactersCallback">encodeUnicodeSupplementaryCharactersCallback</a>(array $m)
+        
+                                            <p>Encode given Unicode character into an XML entity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadXML">loadXML</a>(string $xml)
+        
+                                            <p>Create a return a new DOMDocument loaded with given XML</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseAttributes">parseAttributes</a>(string $xml)
+        
+                                            <p>Parse the attributes contained in given XML</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveXML">saveXML</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        
+                                            <p>Serialize given DOMDocument</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeAttributes">serializeAttributes</a>(array $attributes)
+        
+                                            <p>Serialize an array of attribute values</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -150,7 +203,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getAttributeValues">
-        <div class="location">at line         line 25</div>
+        <div class="location">at         line 25</div>
         <code>        static            string[]
     <strong>getAttributeValues</strong>(string $xml, string $tagName, string $attrName)
         </code>
@@ -200,7 +253,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeUnicodeSupplementaryCharacters">
-        <div class="location">at line         line 47</div>
+        <div class="location">at         line 47</div>
         <code>        static            string
     <strong>encodeUnicodeSupplementaryCharacters</strong>(string $str)
         </code>
@@ -240,7 +293,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeFormatting">
-        <div class="location">at line         line 64</div>
+        <div class="location">at         line 64</div>
         <code>        static            string
     <strong>removeFormatting</strong>(string $xml)
         </code>
@@ -280,7 +333,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeTag">
-        <div class="location">at line         line 84</div>
+        <div class="location">at         line 84</div>
         <code>        static            string
     <strong>removeTag</strong>(string $xml, string $tagName, integer $nestingLevel)
         </code>
@@ -330,7 +383,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceAttributes">
-        <div class="location">at line         line 111</div>
+        <div class="location">at         line 111</div>
         <code>        static            string
     <strong>replaceAttributes</strong>(string $xml, string $tagName, callable $callback)
         </code>
@@ -370,6 +423,206 @@
         <tr>
             <td>string</td>
             <td>Modified XML</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeUnicodeSupplementaryCharactersCallback">
+        <div class="location">at         line 134</div>
+        <code>        static    protected        string
+    <strong>encodeUnicodeSupplementaryCharactersCallback</strong>(array $m)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode given Unicode character into an XML entity</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$m</td>
+                <td>Array of captures</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Encoded character</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadXML">
+        <div class="location">at         line 148</div>
+        <code>        static    protected        <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+    <strong>loadXML</strong>(string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a return a new DOMDocument loaded with given XML</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>Source XML</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseAttributes">
+        <div class="location">at         line 165</div>
+        <code>        static    protected        array
+    <strong>parseAttributes</strong>(string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the attributes contained in given XML</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>XML string, normally a start tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Associative array of attribute values</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveXML">
+        <div class="location">at         line 186</div>
+        <code>        static    protected        string
+    <strong>saveXML</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Serialize given DOMDocument</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$dom</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeAttributes">
+        <div class="location">at         line 197</div>
+        <code>        static    protected        string
+    <strong>serializeAttributes</strong>(array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Serialize an array of attribute values</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td>Associative array of attribute values</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Attributes, sorted by name and serialized to XML</td>
         </tr>
     </table>
 

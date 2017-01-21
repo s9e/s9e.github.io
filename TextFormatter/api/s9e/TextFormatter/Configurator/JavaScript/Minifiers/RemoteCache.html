@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -164,6 +167,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFromCache">getFromCache</a>(string $src)
+        
+                                            <p>Get the minified source from cache, or minify and cache the result</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_getFromCache"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     void
                 </div>
                 <div class="col-md-8 type">
@@ -171,6 +184,16 @@
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/OnlineMinifier.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\JavaScript\OnlineMinifier">OnlineMinifier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHash">getHash</a>(string $src)
+        
+                                            <p>Compute a source's hash</p>                </div>
+                <div class="col-md-2"></div>
             </div>
             </div>
 
@@ -180,7 +203,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_minify">
-        <div class="location">at line         line 23</div>
+        <div class="location">at         line 23</div>
         <code>                    string
     <strong>minify</strong>(string $src)
         </code>
@@ -220,7 +243,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_get"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> at line         line 38</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_get"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> at         line 38</div>
         <code>                    string
     <strong>get</strong>(string $src)
         </code>
@@ -260,7 +283,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCacheDifferentiator">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_getCacheDifferentiator"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> at line         line 60</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_getCacheDifferentiator"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> at         line 60</div>
         <code>                    array|string
     <strong>getCacheDifferentiator</strong>()
         </code>
@@ -289,8 +312,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getFromCache">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#method_getFromCache"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a> at         line 71</div>
+        <code>            protected        string
+    <strong>getFromCache</strong>(string $src)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the minified source from cache, or minify and cache the result</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$src</td>
+                <td>JavaScript source</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Minified source</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/OnlineMinifier.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\JavaScript\OnlineMinifier">OnlineMinifier</abbr></a> at line         line 24</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/OnlineMinifier.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\JavaScript\OnlineMinifier">OnlineMinifier</abbr></a> at         line 24</div>
         <code>                    void
     <strong>__construct</strong>()
         </code>
@@ -309,6 +372,46 @@
         <tr>
             <td>void</td>
             <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHash">
+        <div class="location">at         line 43</div>
+        <code>            protected        string
+    <strong>getHash</strong>(string $src)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute a source's hash</p>                    <p>160 bits of SHA1 + 128 bits of MD5, base64-encoded to a 48 bytes string</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$src</td>
+                <td>Original source</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>48 bytes string</td>
         </tr>
     </table>
 

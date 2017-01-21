@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -104,6 +107,57 @@
                                             <p>Generate the allowedChildren and allowedDescendants bitfields for every tag and for the root context</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initMatrix">initMatrix</a>(array $rules)
+        
+                                            <p>Initialize a matrix of settings</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applyTargetedRule">applyTargetedRule</a>(array $matrix, array $rules, string $ruleName, string $key, integer $value)
+        
+                                            <p>Apply given rule from each applicable tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unrollRules">unrollRules</a>(array $rules)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pruneMatrix">pruneMatrix</a>(array $matrix)
+        
+                                            <p>Remove unusable tags from the matrix</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pack">pack</a>(string $allowedChildren, string $allowedDescendants)
+        
+                                            <p>Convert a binary representation such as "101011" to an array of integer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -112,7 +166,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getBitfields">
-        <div class="location">at line         line 22</div>
+        <div class="location">at         line 22</div>
         <code>        static            array
     <strong>getBitfields</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Collections/TagCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\TagCollection">TagCollection</abbr></a> $tags, <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a> $rootRules)
         </code>
@@ -145,6 +199,232 @@
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initMatrix">
+        <div class="location">at         line 101</div>
+        <code>        static    protected        array
+    <strong>initMatrix</strong>(array $rules)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize a matrix of settings</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$rules</td>
+                <td>Rules for each tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Multidimensional array of [tagName => [scope => [targetName => setting]]]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyTargetedRule">
+        <div class="location">at         line 139</div>
+        <code>        static    protected        void
+    <strong>applyTargetedRule</strong>(array $matrix, array $rules, string $ruleName, string $key, integer $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Apply given rule from each applicable tag</p>                    <p>For each tag, if the rule has any target we set the corresponding value for each target in the
+matrix</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$matrix</td>
+                <td>&amp;$matrix   Settings matrix</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$rules</td>
+                <td>Rules for each tag</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ruleName</td>
+                <td>Rule name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>Key in the matrix</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$value</td>
+                <td>Value to be set</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unrollRules">
+        <div class="location">at         line 159</div>
+        <code>        static    protected        array
+    <strong>unrollRules</strong>(array $rules)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$rules</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pruneMatrix">
+        <div class="location">at         line 202</div>
+        <code>        static    protected        void
+    <strong>pruneMatrix</strong>(array $matrix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove unusable tags from the matrix</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$matrix</td>
+                <td>&amp;$matrix</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pack">
+        <div class="location">at         line 252</div>
+        <code>        static    protected        integer[]
+    <strong>pack</strong>(string $allowedChildren, string $allowedDescendants)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert a binary representation such as "101011" to an array of integer</p>                    <p>Each bitfield is split in groups of 8 bits, then converted to a 16-bit integer where the
+allowedChildren bitfield occupies the least significant bits and the allowedDescendants
+bitfield occupies the most significant bits</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$allowedChildren</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$allowedDescendants</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer[]</td>
             <td></td>
         </tr>
     </table>

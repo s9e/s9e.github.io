@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,19 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_items">
+                                        protected                                        array
+                </td>
+                <td>$items</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#property_items"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -209,7 +225,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_clear"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 25</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_clear"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 25</div>
         <code>                    
     <strong>clear</strong>()
         </code>
@@ -230,7 +246,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 98</div>
+        <div class="location">at         line 98</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -258,7 +274,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_count">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_count"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 45</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_count"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 45</div>
         <code>                    integer
     <strong>count</strong>()
         </code>
@@ -286,7 +302,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_current"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 57</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_current"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 57</div>
         <code>                    mixed
     <strong>current</strong>()
         </code>
@@ -314,7 +330,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_key">
-        <div class="location">at line         line 39</div>
+        <div class="location">at         line 39</div>
         <code>                    integer|string
     <strong>key</strong>()
         </code>
@@ -342,7 +358,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_next"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 73</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_next"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 73</div>
         <code>                    mixed
     <strong>next</strong>()
         </code>
@@ -370,7 +386,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_rewind"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 81</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_rewind"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 81</div>
         <code>                    void
     <strong>rewind</strong>()
         </code>
@@ -398,7 +414,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_valid">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_valid"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 89</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_valid"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 89</div>
         <code>                    bool
     <strong>valid</strong>()
         </code>
@@ -426,7 +442,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">at line         line 26</div>
+        <div class="location">at         line 26</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/AttributePreprocessor.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributePreprocessor">AttributePreprocessor</abbr></a>
     <strong>add</strong>(string $attrName, string $regexp)
         </code>
@@ -471,7 +487,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_merge">
-        <div class="location">at line         line 51</div>
+        <div class="location">at         line 51</div>
         <code>                    
     <strong>merge</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributePreprocessorCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributePreprocessorCollection">AttributePreprocessorCollection</abbr></a> $attributePreprocessors)
         </code>

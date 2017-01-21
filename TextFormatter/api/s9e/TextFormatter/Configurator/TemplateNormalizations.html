@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -119,6 +122,15 @@
                     <div class="row">
                 <div class="col-md-6">
                                             <a href="../../../s9e/TextFormatter/Configurator/TemplateNormalizations/FoldArithmeticConstants.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\FoldArithmeticConstants">FoldArithmeticConstants</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../s9e/TextFormatter/Configurator/TemplateNormalizations/FoldConstantXPathExpressions.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\FoldConstantXPathExpressions">FoldConstantXPathExpressions</abbr></a>
                                             
                 </div>
                 <div class="col-md-6">

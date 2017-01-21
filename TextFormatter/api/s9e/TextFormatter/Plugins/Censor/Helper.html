@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -197,6 +200,36 @@
                                             <p>Update an intermediate representation to match a different list of words</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildTag">buildTag</a>(string $word)
+        
+                                            <p>Build and return the censor tag that matches given word</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getReplacement">getReplacement</a>(string $word)
+        
+                                            <p>Get the replacement for given word</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAllowed">isAllowed</a>(string $word)
+        
+                                            <p>Test whether given word is allowed (whitelisted)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -205,7 +238,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 47</div>
+        <div class="location">at         line 47</div>
         <code>                    
     <strong>__construct</strong>(array $config)
         </code>
@@ -236,7 +269,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_censorHtml">
-        <div class="location">at line         line 64</div>
+        <div class="location">at         line 64</div>
         <code>                    string
     <strong>censorHtml</strong>(string $html, bool $censorAttributes = false)
         </code>
@@ -281,7 +314,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_censorText">
-        <div class="location">at line         line 98</div>
+        <div class="location">at         line 98</div>
         <code>                    string
     <strong>censorText</strong>(string $text)
         </code>
@@ -321,7 +354,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isCensored">
-        <div class="location">at line         line 116</div>
+        <div class="location">at         line 116</div>
         <code>                    bool
     <strong>isCensored</strong>(string $word)
         </code>
@@ -361,7 +394,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reparse">
-        <div class="location">at line         line 137</div>
+        <div class="location">at         line 137</div>
         <code>                    string
     <strong>reparse</strong>(string $xml)
         </code>
@@ -398,6 +431,126 @@ the whole text as new.</p>
         <tr>
             <td>string</td>
             <td>Updated intermediate representation</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildTag">
+        <div class="location">at         line 191</div>
+        <code>            protected        string
+    <strong>buildTag</strong>(string $word)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build and return the censor tag that matches given word</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$word</td>
+                <td>Word to censor</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Censor tag, complete with its replacement attribute</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReplacement">
+        <div class="location">at         line 209</div>
+        <code>            protected        string
+    <strong>getReplacement</strong>(string $word)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the replacement for given word</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$word</td>
+                <td>Original word</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Replacement if the word is censored, or the original word otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAllowed">
+        <div class="location">at         line 233</div>
+        <code>            protected        bool
+    <strong>isAllowed</strong>(string $word)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given word is allowed (whitelisted)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$word</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
         </tr>
     </table>
 

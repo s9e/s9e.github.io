@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -129,7 +132,7 @@
                     string|bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_get">get</a>(string $url, string[] $headers = array())
+                    <a href="#method_get">get</a>(string $url, string[] $headers = [])
         
                                             <p>Execute a GET request and return the response's body</p>                </div>
                 <div class="col-md-2"></div>
@@ -139,7 +142,7 @@
                     string|bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_post">post</a>(string $url, string[] $headers = array(), string $body = &#039;&#039;)
+                    <a href="#method_post">post</a>(string $url, string[] $headers = [], string $body = &#039;&#039;)
         
                                             <p>Execute a POST request and return the response's body</p>                </div>
                 <div class="col-md-2"></div>
@@ -154,6 +157,46 @@
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    resource
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createContext">createContext</a>(string $method, array $headers, string $body)
+        
+                                            <p>Create a stream context for given request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decompress">decompress</a>(string $content)
+        
+                                            <p>Decompress given page if applicable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateHeaders">generateHeaders</a>(array $headers, string $body)
+        
+                                            <p>Generate a list of headers for given request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_request">request</a>($method, $url, $headers, $body = &#039;&#039;)
+        
+                                            <p>Execute an HTTP request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -162,9 +205,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at line         line 30</div>
+        <div class="location">at         line 30</div>
         <code>                    string|bool
-    <strong>get</strong>(string $url, string[] $headers = array())
+    <strong>get</strong>(string $url, string[] $headers = [])
         </code>
     </h3>
     <div class="details">
@@ -207,9 +250,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_post">
-        <div class="location">at line         line 38</div>
+        <div class="location">at         line 38</div>
         <code>                    string|bool
-    <strong>post</strong>(string $url, string[] $headers = array(), string $body = &#039;&#039;)
+    <strong>post</strong>(string $url, string[] $headers = [], string $body = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -257,7 +300,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 22</div>
+        <div class="location">at         line 22</div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -270,6 +313,196 @@
                                     <p>Constructor</p>                                </div>
                 <div class="tags">
             
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createContext">
+        <div class="location">at         line 51</div>
+        <code>            protected        resource
+    <strong>createContext</strong>(string $method, array $headers, string $body)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a stream context for given request</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Request method</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Request headers</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>resource</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decompress">
+        <div class="location">at         line 72</div>
+        <code>            protected        string
+    <strong>decompress</strong>(string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decompress given page if applicable</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>Response body, potentially compressed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Response body, uncompressed</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateHeaders">
+        <div class="location">at         line 89</div>
+        <code>            protected        string[]
+    <strong>generateHeaders</strong>(array $headers, string $body)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate a list of headers for given request</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Request headers</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_request">
+        <div class="location">at         line 108</div>
+        <code>            protected        string|bool
+    <strong>request</strong>($method, $url, $headers, $body = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute an HTTP request</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$body</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td>Response body or FALSE</td>
+        </tr>
+    </table>
+
             
             
                     </div>

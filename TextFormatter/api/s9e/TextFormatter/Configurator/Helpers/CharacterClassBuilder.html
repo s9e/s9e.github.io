@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -94,10 +97,26 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_chars">
+                                        protected                                        string[]
+                </td>
+                <td>$chars</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_delimiter">
                                                                                 string
                 </td>
                 <td>$delimiter</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ranges">
+                                        protected                                        array[]
+                </td>
+                <td>$ranges</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -117,6 +136,66 @@
                                             <p>Create a character class that matches the given list of characters</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildCharacterClass">buildCharacterClass</a>()
+        
+                                            <p>Build the character class based</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_escapeSpecialChars">escapeSpecialChars</a>()
+        
+                                            <p>Escape special characters in stored chars</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fixCaret">fixCaret</a>()
+        
+                                            <p>Reorder or escape the caret character so that the regexp doesn't start with it</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reorderDash">reorderDash</a>()
+        
+                                            <p>Reorder the characters so that a literal dash isn't mistaken for a range</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_storeRanges">storeRanges</a>()
+        
+                                            <p>Store the character ranges from the list of characters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unescapeLiterals">unescapeLiterals</a>()
+        
+                                            <p>Unescape literals in stored chars</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -125,7 +204,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_fromList">
-        <div class="location">at line         line 33</div>
+        <div class="location">at         line 33</div>
         <code>                    string
     <strong>fromList</strong>(array $chars)
         </code>
@@ -153,6 +232,186 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildCharacterClass">
+        <div class="location">at         line 52</div>
+        <code>            protected        string
+    <strong>buildCharacterClass</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build the character class based</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escapeSpecialChars">
+        <div class="location">at         line 76</div>
+        <code>            protected        void
+    <strong>escapeSpecialChars</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Escape special characters in stored chars</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixCaret">
+        <div class="location">at         line 90</div>
+        <code>            protected        void
+    <strong>fixCaret</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reorder or escape the caret character so that the regexp doesn't start with it</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reorderDash">
+        <div class="location">at         line 117</div>
+        <code>            protected        void
+    <strong>reorderDash</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reorder the characters so that a literal dash isn't mistaken for a range</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_storeRanges">
+        <div class="location">at         line 150</div>
+        <code>            protected        void
+    <strong>storeRanges</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store the character ranges from the list of characters</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unescapeLiterals">
+        <div class="location">at         line 187</div>
+        <code>            protected        void
+    <strong>unescapeLiterals</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unescape literals in stored chars</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
             <td></td>
         </tr>
     </table>

@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,51 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parser">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                </td>
+                <td>$parser</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_asciiRegexp">
+                                        protected                                        string
+                </td>
+                <td>$asciiRegexp</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_map">
+                    static                    protected                                        array
+                </td>
+                <td>$map</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_unicodeRegexp">
+                                        protected                                        string
+                </td>
+                <td>$unicodeRegexp</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -109,10 +157,70 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Plugin's setup</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_parse">parse</a>(string $text, array $matches)
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTag">addTag</a>(integer $tagPos, integer $tagLen, string $seq)
+        
+                                            <p>Add an emoji tag for given sequence</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSequence">getSequence</a>(string $str)
+        
+                                            <p>Get the sequence of Unicode codepoints that corresponds to given emoji</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseAliases">parseAliases</a>(string $text)
+        
+                                            <p>Parse aliases in given text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseAsciiEmoji">parseAsciiEmoji</a>(string $text)
+        
+                                            <p>Parse ASCII emoji in given text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseUnicodeEmoji">parseUnicodeEmoji</a>(string $text)
+        
+                                            <p>Parse Unicode emoji in given text</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -123,7 +231,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at line         line 30</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 30</div>
         <code>final                    
     <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         </code>
@@ -158,8 +266,38 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 43</div>
+        <code>            protected        void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Plugin's setup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line         line 33</div>
+        <div class="location">at         line 33</div>
         <code>                    void
     <strong>parse</strong>(string $text, array $matches)
         </code>
@@ -182,6 +320,216 @@
                 <td>$matches</td>
                 <td>If the config array has a "regexp" key, the corresponding matches are
                         passed as second parameter. Otherwise, an empty array is passed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTag">
+        <div class="location">at         line 48</div>
+        <code>            protected        void
+    <strong>addTag</strong>(integer $tagPos, integer $tagLen, string $seq)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an emoji tag for given sequence</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$tagPos</td>
+                <td>Position of the tag in the original text</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$tagLen</td>
+                <td>Length of text consumed by the tag</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$seq</td>
+                <td>Sequence of Unicode codepoints in hex</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSequence">
+        <div class="location">at         line 60</div>
+        <code>            protected        string
+    <strong>getSequence</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the sequence of Unicode codepoints that corresponds to given emoji</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>UTF-8 emoji</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Codepoint sequence, e.g. "23-20e3"</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseAliases">
+        <div class="location">at         line 94</div>
+        <code>            protected        void
+    <strong>parseAliases</strong>(string $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse aliases in given text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>Original text</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseAsciiEmoji">
+        <div class="location">at         line 128</div>
+        <code>            protected        void
+    <strong>parseAsciiEmoji</strong>(string $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse ASCII emoji in given text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>Original text</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseUnicodeEmoji">
+        <div class="location">at         line 152</div>
+        <code>            protected        void
+    <strong>parseUnicodeEmoji</strong>(string $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse Unicode emoji in given text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>Original text</td>
             </tr>
             </table>
 

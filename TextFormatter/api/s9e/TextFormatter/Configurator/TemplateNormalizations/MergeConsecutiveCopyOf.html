@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -139,6 +142,26 @@
                                             <p>Make an ASCII string lowercase</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalization">TemplateNormalization</abbr></a></small></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mergeCopyOfSiblings">mergeCopyOfSiblings</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Merge the select expression of xsl:copy-of siblings into given xsl:copy-of</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextSiblingIsCopyOf">nextSiblingIsCopyOf</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Test whether the next sibling to given node is an xsl:copy-of element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -147,7 +170,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_normalize">
-        <div class="location">at line         line 22</div>
+        <div class="location">at         line 22</div>
         <code>                    void
     <strong>normalize</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
         </code>
@@ -187,7 +210,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_lowercase">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalization">TemplateNormalization</abbr></a> at line         line 41</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalization">TemplateNormalization</abbr></a> at         line 41</div>
         <code>        static            string
     <strong>lowercase</strong>(string $str)
         </code>
@@ -216,6 +239,86 @@
         <tr>
             <td>string</td>
             <td>Lowercased string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeCopyOfSiblings">
+        <div class="location">at         line 37</div>
+        <code>            protected        void
+    <strong>mergeCopyOfSiblings</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Merge the select expression of xsl:copy-of siblings into given xsl:copy-of</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:copy-of/> element</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextSiblingIsCopyOf">
+        <div class="location">at         line 52</div>
+        <code>            protected        bool
+    <strong>nextSiblingIsCopyOf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether the next sibling to given node is an xsl:copy-of element</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td>Context node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
         </tr>
     </table>
 

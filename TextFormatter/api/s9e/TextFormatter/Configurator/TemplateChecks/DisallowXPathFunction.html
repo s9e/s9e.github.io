@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -139,6 +142,16 @@
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressions">getExpressions</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+        
+                                            <p>Get all the potential XPath expressions used in given template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -147,7 +160,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_check">
-        <div class="location">at line         line 41</div>
+        <div class="location">at         line 41</div>
         <code>                    void
     <strong>check</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template, <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
         </code>
@@ -192,7 +205,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 29</div>
+        <div class="location">at         line 29</div>
         <code>                    
     <strong>__construct</strong>(string $funcName)
         </code>
@@ -215,6 +228,46 @@
             </table>
 
             
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressions">
+        <div class="location">at         line 68</div>
+        <code>            protected        array
+    <strong>getExpressions</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all the potential XPath expressions used in given template</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$template</td>
+                <td><xsl:template/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>XPath expression as key, reference node as value</td>
+        </tr>
+    </table>
+
             
             
                     </div>

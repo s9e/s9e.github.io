@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,35 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_inspector">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a>
+                </td>
+                <td>$inspector</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isNormalized">
+                                        protected                                        bool
+                </td>
+                <td>$isNormalized</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_template">
+                                        protected                                        string
+                </td>
+                <td>$template</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -232,7 +264,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 37</div>
+        <div class="location">at         line 37</div>
         <code>                    
     <strong>__construct</strong>(string $template)
         </code>
@@ -263,7 +295,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___call">
-        <div class="location">at line         line 49</div>
+        <div class="location">at         line 49</div>
         <code>                    mixed
     <strong>__call</strong>($methodName, $args)
         </code>
@@ -308,7 +340,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at line         line 59</div>
+        <div class="location">at         line 59</div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -338,7 +370,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asDOM">
-        <div class="location">at line         line 71</div>
+        <div class="location">at         line 71</div>
         <code>                    <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
     <strong>asDOM</strong>()
         </code>
@@ -368,7 +400,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSNodes">
-        <div class="location">at line         line 88</div>
+        <div class="location">at         line 88</div>
         <code>                    array
     <strong>getCSSNodes</strong>()
         </code>
@@ -398,7 +430,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getInspector">
-        <div class="location">at line         line 98</div>
+        <div class="location">at         line 98</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a>
     <strong>getInspector</strong>()
         </code>
@@ -428,7 +460,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSNodes">
-        <div class="location">at line         line 113</div>
+        <div class="location">at         line 113</div>
         <code>                    array
     <strong>getJSNodes</strong>()
         </code>
@@ -458,7 +490,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getURLNodes">
-        <div class="location">at line         line 123</div>
+        <div class="location">at         line 123</div>
         <code>                    array
     <strong>getURLNodes</strong>()
         </code>
@@ -488,7 +520,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParameters">
-        <div class="location">at line         line 133</div>
+        <div class="location">at         line 133</div>
         <code>                    array
     <strong>getParameters</strong>()
         </code>
@@ -518,7 +550,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isNormalized">
-        <div class="location">at line         line 144</div>
+        <div class="location">at         line 144</div>
         <code>                    bool
     <strong>isNormalized</strong>(bool $bool = null)
         </code>
@@ -558,7 +590,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalize">
-        <div class="location">at line         line 160</div>
+        <div class="location">at         line 160</div>
         <code>                    void
     <strong>normalize</strong>(<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizer.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizer">TemplateNormalizer</abbr></a> $templateNormalizer)
         </code>
@@ -598,7 +630,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceTokens">
-        <div class="location">at line         line 174</div>
+        <div class="location">at         line 174</div>
         <code>                    void
     <strong>replaceTokens</strong>(string $regexp, <abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr> $fn)
         </code>
@@ -643,7 +675,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setContent">
-        <div class="location">at line         line 187</div>
+        <div class="location">at         line 187</div>
         <code>                    void
     <strong>setContent</strong>(string $template)
         </code>

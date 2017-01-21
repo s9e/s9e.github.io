@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,51 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parser">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                </td>
+                <td>$parser</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasDoubleQuote">
+                                        protected                                        bool
+                </td>
+                <td>$hasDoubleQuote</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasSingleQuote">
+                                        protected                                        bool
+                </td>
+                <td>$hasSingleQuote</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_text">
+                                        protected                                        string
+                </td>
+                <td>$text</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -109,10 +157,130 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Plugin's setup</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_parse">parse</a>(string $text, array $matches)
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTag">addTag</a>(integer $tagPos, integer $tagLen, string $chr, integer $prio)
+        
+                                            <p>Add a fancy replacement tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseDashesAndEllipses">parseDashesAndEllipses</a>()
+        
+                                            <p>Parse dashes and ellipses</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseDoubleQuotePairs">parseDoubleQuotePairs</a>()
+        
+                                            <p>Parse pairs of double quotes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseFractions">parseFractions</a>()
+        
+                                            <p>Parse vulgar fractions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseGuillemets">parseGuillemets</a>()
+        
+                                            <p>Parse guillemets-style quotation marks</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseNotEqualSign">parseNotEqualSign</a>()
+        
+                                            <p>Parse the not equal sign</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseQuotePairs">parseQuotePairs</a>(string $regexp, string $leftQuote, string $rightQuote)
+        
+                                            <p>Parse pairs of quotes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseSingleQuotePairs">parseSingleQuotePairs</a>()
+        
+                                            <p>Parse pairs of single quotes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseSingleQuotes">parseSingleQuotes</a>()
+        
+                                            <p>Parse single quotes in general</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseSymbolsAfterDigits">parseSymbolsAfterDigits</a>()
+        
+                                            <p>Parse symbols found after digits</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseSymbolsInParentheses">parseSymbolsInParentheses</a>()
+        
+                                            <p>Parse symbols found in parentheses such as (c)</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -123,7 +291,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at line         line 30</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 30</div>
         <code>final                    
     <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         </code>
@@ -158,8 +326,38 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 43</div>
+        <code>            protected        void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Plugin's setup</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line         line 32</div>
+        <div class="location">at         line 32</div>
         <code>                    void
     <strong>parse</strong>(string $text, array $matches)
         </code>
@@ -185,6 +383,384 @@
             </tr>
             </table>
 
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTag">
+        <div class="location">at         line 75</div>
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+    <strong>addTag</strong>(integer $tagPos, integer $tagLen, string $chr, integer $prio)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a fancy replacement tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$tagPos</td>
+                <td>Position of the tag in the text</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$tagLen</td>
+                <td>Length of text consumed by the tag</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$chr</td>
+                <td>Replacement character</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$prio</td>
+                <td>Tag's priority</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseDashesAndEllipses">
+        <div class="location">at         line 90</div>
+        <code>            protected        void
+    <strong>parseDashesAndEllipses</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse dashes and ellipses</p>                    <p>Does en dash –, em dash — and ellipsis …</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseDoubleQuotePairs">
+        <div class="location">at         line 117</div>
+        <code>            protected        void
+    <strong>parseDoubleQuotePairs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse pairs of double quotes</p>                    <p>Does quote pairs “” -- must be done separately to handle nesting</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseFractions">
+        <div class="location">at         line 134</div>
+        <code>            protected        void
+    <strong>parseFractions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse vulgar fractions</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseGuillemets">
+        <div class="location">at         line 176</div>
+        <code>            protected        void
+    <strong>parseGuillemets</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse guillemets-style quotation marks</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseNotEqualSign">
+        <div class="location">at         line 201</div>
+        <code>            protected        void
+    <strong>parseNotEqualSign</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the not equal sign</p>                    <p>Supports != and =/=</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseQuotePairs">
+        <div class="location">at         line 224</div>
+        <code>            protected        void
+    <strong>parseQuotePairs</strong>(string $regexp, string $leftQuote, string $rightQuote)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse pairs of quotes</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td>Regexp used to identify quote pairs</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leftQuote</td>
+                <td>Fancy replacement for left quote</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rightQuote</td>
+                <td>Fancy replacement for right quote</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseSingleQuotePairs">
+        <div class="location">at         line 245</div>
+        <code>            protected        void
+    <strong>parseSingleQuotePairs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse pairs of single quotes</p>                    <p>Does quote pairs ‘’ must be done separately to handle nesting</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseSingleQuotes">
+        <div class="location">at         line 264</div>
+        <code>            protected        void
+    <strong>parseSingleQuotes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse single quotes in general</p>                    <p>Does apostrophes ’ after a letter or at the beginning of a word or a couple of digits</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseSymbolsAfterDigits">
+        <div class="location">at         line 290</div>
+        <code>            protected        void
+    <strong>parseSymbolsAfterDigits</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse symbols found after digits</p>                    <p>Does symbols found after a digit:
+ - apostrophe ’ if it's followed by an "s" as in 80's
+ - prime ′ and double prime ″
+ - multiply sign × if it's followed by an optional space and another digit</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseSymbolsInParentheses">
+        <div class="location">at         line 335</div>
+        <code>            protected        void
+    <strong>parseSymbolsInParentheses</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse symbols found in parentheses such as (c)</p>                    <p>Does symbols ©, ® and ™</p>            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 

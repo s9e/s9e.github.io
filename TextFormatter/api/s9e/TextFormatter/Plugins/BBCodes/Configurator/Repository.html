@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -91,6 +94,27 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_bbcodeMonkey">
+                                        protected                                        <a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCodeMonkey.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCodeMonkey">BBCodeMonkey</abbr></a>
+                </td>
+                <td>$bbcodeMonkey</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dom">
+                                        protected                                        <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                </td>
+                <td>$dom</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -110,7 +134,7 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_get">get</a>(string $name, array $vars = array())
+                    <a href="#method_get">get</a>(string $name, array $vars = [])
         
                                             <p>Get a BBCode and its associated tag from this repository</p>                </div>
                 <div class="col-md-2"></div>
@@ -123,7 +147,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 34</div>
+        <div class="location">at         line 34</div>
         <code>                    
     <strong>__construct</strong>(mixed $value, <a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCodeMonkey.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCodeMonkey">BBCodeMonkey</abbr></a> $bbcodeMonkey)
         </code>
@@ -159,9 +183,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at line         line 69</div>
+        <div class="location">at         line 69</div>
         <code>                    array
-    <strong>get</strong>(string $name, array $vars = array())
+    <strong>get</strong>(string $name, array $vars = [])
         </code>
     </h3>
     <div class="details">

@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -139,6 +142,36 @@
                                             <p>Make an ASCII string lowercase</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalization">TemplateNormalization</abbr></a></small></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRelAttribute">addRelAttribute</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+        
+                                            <p>Add a rel="noreferrer" attribute to given element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_linkTargetCanAccessOpener">linkTargetCanAccessOpener</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+        
+                                            <p>Test whether given link element will let the target access window.opener</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeElements">normalizeElements</a>(<a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a> $elements)
+        
+                                            <p>Normalize a list of links</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -147,7 +180,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_normalize">
-        <div class="location">at line         line 28</div>
+        <div class="location">at         line 28</div>
         <code>                    void
     <strong>normalize</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
         </code>
@@ -188,7 +221,7 @@ accessed.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_lowercase">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalization">TemplateNormalization</abbr></a> at line         line 41</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalization">TemplateNormalization</abbr></a> at         line 41</div>
         <code>        static            string
     <strong>lowercase</strong>(string $str)
         </code>
@@ -217,6 +250,126 @@ accessed.</p>            </div>
         <tr>
             <td>string</td>
             <td>Lowercased string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRelAttribute">
+        <div class="location">at         line 40</div>
+        <code>            protected        void
+    <strong>addRelAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a rel="noreferrer" attribute to given element</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$element</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_linkTargetCanAccessOpener">
+        <div class="location">at         line 58</div>
+        <code>            protected        bool
+    <strong>linkTargetCanAccessOpener</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given link element will let the target access window.opener</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$element</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeElements">
+        <div class="location">at         line 81</div>
+        <code>            protected        void
+    <strong>normalizeElements</strong>(<a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a> $elements)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalize a list of links</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a></td>
+                <td>$elements</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
         </tr>
     </table>
 

@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -140,6 +143,347 @@
 and a constant part</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseChildren">parseChildren</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parent)
+        
+                                            <p>Parse all the children of a given element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseNode">parseNode</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse a given node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslApplyTemplates">parseXslApplyTemplates</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:apply-templates/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslAttribute">parseXslAttribute</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:attribute/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslChoose">parseXslChoose</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:choose/> node and its <xsl:when/> and <xsl:otherwise/> children into the
+internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslComment">parseXslComment</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:comment/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslCopyOf">parseXslCopyOf</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:copy-of/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslElement">parseXslElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:element/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslIf">parseXslIf</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:if/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslText">parseXslText</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:text/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslValueOf">parseXslValueOf</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:value-of/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalize">normalize</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Normalize an IR</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDefaultCase">addDefaultCase</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Add an empty default <case/> to <switch/> nodes that don't have one</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addElementIds">addElementIds</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Add an id attribute to <element/> nodes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCloseTagElements">addCloseTagElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Add <closeTag/> elements everywhere an open start tag should be closed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_markConditionalCloseTagElements">markConditionalCloseTagElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Mark conditional <closeTag/> nodes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_markEmptyElements">markEmptyElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Mark void elements and elements with no content</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOutputContext">getOutputContext</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $output)
+        
+                                            <p>Get the context type for given output element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParentElementId">getParentElementId</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+        
+                                            <p>Get the ID of the closest "element" ancestor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOutputContext">setOutputContext</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Fill in output context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_optimize">optimize</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Optimize an IR</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeCloseTagSiblings">removeCloseTagSiblings</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove redundant closeTag siblings after a switch</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeEmptyDefaultCases">removeEmptyDefaultCases</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove empty default cases (no test and no descendants)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mergeConsecutiveLiteralOutputElements">mergeConsecutiveLiteralOutputElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Merge consecutive literal outputs</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_optimizeCloseTagElements">optimizeCloseTagElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Optimize closeTags elements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cloneCloseTagElementsIntoSwitch">cloneCloseTagElementsIntoSwitch</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Clone closeTag elements that follow a switch into said switch</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cloneCloseTagElementsOutOfSwitch">cloneCloseTagElementsOutOfSwitch</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Clone closeTag elements from the head of a switch's cases before said switch</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeRedundantCloseTagElementsInSwitch">removeRedundantCloseTagElementsInSwitch</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeRedundantCloseTagElements">removeRedundantCloseTagElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeContentFromVoidElements">removeContentFromVoidElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove content from void elements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_markBranchTables">markBranchTables</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Mark switch elements that are used as branch tables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendElement">appendElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $name, string $value = &#039;&#039;)
+        
+                                            <p>Create and append an element to given node in the IR</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendOutput">appendOutput</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, string $type, string $content)
+        
+                                            <p>Append an <output/> element to given node in the IR</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEmpty">isEmpty</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
+        
+                                            <p>Test whether given element will be empty at runtime (no content, no children)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -148,7 +492,7 @@ and a constant part</p>                </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line         line 35</div>
+        <div class="location">at         line 35</div>
         <code>        static            <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
     <strong>parse</strong>(string $template)
         </code>
@@ -188,7 +532,7 @@ and a constant part</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parseEqualityExpr">
-        <div class="location">at line         line 58</div>
+        <div class="location">at         line 58</div>
         <code>        static            array|<abbr title="s9e\TextFormatter\Configurator\Helpers\false">false</abbr>
     <strong>parseEqualityExpr</strong>(string $expr)
         </code>
@@ -218,6 +562,1450 @@ and a constant part</p>                                </div>
         <tr>
             <td>array|<abbr title="s9e\TextFormatter\Configurator\Helpers\false">false</abbr></td>
             <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseChildren">
+        <div class="location">at         line 123</div>
+        <code>        static    protected        void
+    <strong>parseChildren</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse all the children of a given element</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the parent node</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parent</td>
+                <td>Parent node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseNode">
+        <div class="location">at         line 157</div>
+        <code>        static    protected        void
+    <strong>parseNode</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse a given node into the internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td>Node to parse</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslApplyTemplates">
+        <div class="location">at         line 207</div>
+        <code>        static    protected        void
+    <strong>parseXslApplyTemplates</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:apply-templates/> node into the internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:apply-templates/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslAttribute">
+        <div class="location">at         line 227</div>
+        <code>        static    protected        void
+    <strong>parseXslAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:attribute/> node into the internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:attribute/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslChoose">
+        <div class="location">at         line 251</div>
+        <code>        static    protected        void
+    <strong>parseXslChoose</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:choose/> node and its <xsl:when/> and <xsl:otherwise/> children into the
+internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:choose/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslComment">
+        <div class="location">at         line 297</div>
+        <code>        static    protected        void
+    <strong>parseXslComment</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:comment/> node into the internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:comment/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslCopyOf">
+        <div class="location">at         line 314</div>
+        <code>        static    protected        void
+    <strong>parseXslCopyOf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:copy-of/> node into the internal representation</p>                    <p>NOTE: only attributes are supported</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:copy-of/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslElement">
+        <div class="location">at         line 354</div>
+        <code>        static    protected        void
+    <strong>parseXslElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:element/> node into the internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:element/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslIf">
+        <div class="location">at         line 377</div>
+        <code>        static    protected        void
+    <strong>parseXslIf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:if/> node into the internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:if/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslText">
+        <div class="location">at         line 395</div>
+        <code>        static    protected        void
+    <strong>parseXslText</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:text/> node into the internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:text/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslValueOf">
+        <div class="location">at         line 407</div>
+        <code>        static    protected        void
+    <strong>parseXslValueOf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:value-of/> node into the internal representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:value-of/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalize">
+        <div class="location">at         line 422</div>
+        <code>        static    protected        void
+    <strong>normalize</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalize an IR</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDefaultCase">
+        <div class="location">at         line 440</div>
+        <code>        static    protected        void
+    <strong>addDefaultCase</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an empty default <case/> to <switch/> nodes that don't have one</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addElementIds">
+        <div class="location">at         line 455</div>
+        <code>        static    protected        void
+    <strong>addElementIds</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an id attribute to <element/> nodes</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCloseTagElements">
+        <div class="location">at         line 470</div>
+        <code>        static    protected        void
+    <strong>addCloseTagElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add <closeTag/> elements everywhere an open start tag should be closed</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markConditionalCloseTagElements">
+        <div class="location">at         line 504</div>
+        <code>        static    protected        void
+    <strong>markConditionalCloseTagElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark conditional <closeTag/> nodes</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markEmptyElements">
+        <div class="location">at         line 535</div>
+        <code>        static    protected        void
+    <strong>markEmptyElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark void elements and elements with no content</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOutputContext">
+        <div class="location">at         line 567</div>
+        <code>        static    protected        string
+    <strong>getOutputContext</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $output)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the context type for given output element</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$output</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParentElementId">
+        <div class="location">at         line 589</div>
+        <code>        static    protected        string|null
+    <strong>getParentElementId</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the ID of the closest "element" ancestor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td>Context node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOutputContext">
+        <div class="location">at         line 608</div>
+        <code>        static    protected        void
+    <strong>setOutputContext</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fill in output context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_optimize">
+        <div class="location">at         line 622</div>
+        <code>        static    protected        void
+    <strong>optimize</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Optimize an IR</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCloseTagSiblings">
+        <div class="location">at         line 653</div>
+        <code>        static    protected        void
+    <strong>removeCloseTagSiblings</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove redundant closeTag siblings after a switch</p>                    <p>If all branches of a switch have a closeTag we can remove any closeTag siblings of the switch</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeEmptyDefaultCases">
+        <div class="location">at         line 669</div>
+        <code>        static    protected        void
+    <strong>removeEmptyDefaultCases</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove empty default cases (no test and no descendants)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeConsecutiveLiteralOutputElements">
+        <div class="location">at         line 684</div>
+        <code>        static    protected        void
+    <strong>mergeConsecutiveLiteralOutputElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Merge consecutive literal outputs</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_optimizeCloseTagElements">
+        <div class="location">at         line 706</div>
+        <code>        static    protected        void
+    <strong>optimizeCloseTagElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Optimize closeTags elements</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cloneCloseTagElementsIntoSwitch">
+        <div class="location">at         line 723</div>
+        <code>        static    protected        void
+    <strong>cloneCloseTagElementsIntoSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone closeTag elements that follow a switch into said switch</p>                    <p>If there's a <closeTag/> right after a <switch/>, clone the <closeTag/> at the end of
+the every <case/> that does not end with a <closeTag/></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cloneCloseTagElementsOutOfSwitch">
+        <div class="location">at         line 749</div>
+        <code>        static    protected        void
+    <strong>cloneCloseTagElementsOutOfSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone closeTag elements from the head of a switch's cases before said switch</p>                    <p>If there's a <closeTag/> at the beginning of every <case/>, clone it and insert it
+right before the <switch/> unless there's already one</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeRedundantCloseTagElementsInSwitch">
+        <div class="location">at         line 779</div>
+        <code>        static    protected        void
+    <strong>removeRedundantCloseTagElementsInSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                    <p>If there's a <closeTag/> right after a <switch/>, remove all <closeTag/> nodes at the
+end of every <case/></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeRedundantCloseTagElements">
+        <div class="location">at         line 804</div>
+        <code>        static    protected        void
+    <strong>removeRedundantCloseTagElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                    <p>For each <closeTag/> remove duplicate <closeTag/> nodes that are either siblings or
+descendants of a sibling</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeContentFromVoidElements">
+        <div class="location">at         line 827</div>
+        <code>        static    protected        void
+    <strong>removeContentFromVoidElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove content from void elements</p>                    <p>For each void element, we find whichever <closeTag/> elements close it and remove everything
+after</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markBranchTables">
+        <div class="location">at         line 852</div>
+        <code>        static    protected        void
+    <strong>markBranchTables</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark switch elements that are used as branch tables</p>                    <p>If a switch is used for a series of equality tests against the same attribute or variable, the
+attribute/variable is stored within the switch as "branch-key" and the values it is compared
+against are stored JSON-encoded in the case as "branch-values". It can be used to create
+optimized branch tables</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendElement">
+        <div class="location">at         line 914</div>
+        <code>        static    protected        <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+    <strong>appendElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $name, string $value = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create and append an element to given node in the IR</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parentNode</td>
+                <td>Parent node of the element</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Tag name of the element</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Value of the element</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+            <td>The created element</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendOutput">
+        <div class="location">at         line 938</div>
+        <code>        static    protected        void
+    <strong>appendOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, string $type, string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append an <output/> element to given node in the IR</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Parent node</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Either 'avt', 'literal' or 'xpath'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>Content to output</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEmpty">
+        <div class="location">at         line 974</div>
+        <code>        static    protected        string
+    <strong>isEmpty</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given element will be empty at runtime (no content, no children)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Element in the IR</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>'yes', 'maybe' or 'no'</td>
         </tr>
     </table>
 

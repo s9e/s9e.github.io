@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -144,7 +147,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">at line         line 30</div>
+        <div class="location">at         line 30</div>
         <code>                    mixed
     <strong>__get</strong>(string $propName)
         </code>
@@ -185,7 +188,7 @@ neither exists</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___set">
-        <div class="location">at line         line 61</div>
+        <div class="location">at         line 61</div>
         <code>                    void
     <strong>__set</strong>(string $propName, mixed $propValue)
         </code>
@@ -234,7 +237,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___isset">
-        <div class="location">at line         line 157</div>
+        <div class="location">at         line 157</div>
         <code>                    bool
     <strong>__isset</strong>(string $propName)
         </code>
@@ -274,7 +277,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___unset">
-        <div class="location">at line         line 175</div>
+        <div class="location">at         line 175</div>
         <code>                    void
     <strong>__unset</strong>(string $propName)
         </code>

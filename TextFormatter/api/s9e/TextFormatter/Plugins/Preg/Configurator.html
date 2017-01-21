@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,83 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_configurator">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a>
+                </td>
+                <td>$configurator</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_configurator"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quickMatch">
+                                        protected                                        mixed
+                </td>
+                <td>$quickMatch</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_quickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_regexpLimit">
+                                        protected                                        integer
+                </td>
+                <td>$regexpLimit</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_regexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_captures">
+                                        protected                                        array[]
+                </td>
+                <td>$captures</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_collection">
+                                        protected                                        array[]
+                </td>
+                <td>$collection</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_delimiter">
+                                        protected                                        string
+                </td>
+                <td>$delimiter</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modifiers">
+                                        protected                                        string
+                </td>
+                <td>$modifiers</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_references">
+                                        protected                                        array
+                </td>
+                <td>$references</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_referencesRegexp">
+                                        protected                                        string
+                </td>
+                <td>$referencesRegexp</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -99,11 +179,21 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = array())
+                    <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = [])
         
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Executed by this plugin's constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -181,6 +271,16 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setAttrName">setAttrName</a>(string $attrName)
+        
+                                            <p>Set $this->attrName with given attribute name, normalized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setAttrName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setQuickMatch">setQuickMatch</a>(string $quickMatch)
         
                                             <p>Set the quickMatch string</p>                </div>
@@ -195,6 +295,16 @@
         
                                             <p>Set the maximum number of regexp matches</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTagName">setTagName</a>(string $tagName)
+        
+                                            <p>Set $this->tagName with given tag name, normalized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setTagName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -216,6 +326,106 @@
                                             <p>Configure a pattern-based replacement</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAttribute">addAttribute</a>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, string $attrName)
+        
+                                            <p>Add given attribute to given tag based on parsed captures</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertTemplate">convertTemplate</a>(string $template, integer $passthrough)
+        
+                                            <p>Convert a preg-style replacement to a template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createTag">createTag</a>(string $tagName, string $template)
+        
+                                            <p>Create the tag that matches current regexp</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fixUnnamedCaptures">fixUnnamedCaptures</a>(string $regexp)
+        
+                                            <p>Give a name to unnamed captures that are referenced in current replacement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPassthroughCapture">getPassthroughCapture</a>()
+        
+                                            <p>Get the index of the capture used for passthrough in current replacement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRegexpInfo">getRegexpInfo</a>(string $regexp)
+        
+                                            <p>Parse a regexp and return its info</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCatchAll">isCatchAll</a>(string $expr)
+        
+                                            <p>Test whether given expression is a catch-all expression such as .*?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseRegexp">parseRegexp</a>(string $regexp)
+        
+                                            <p>Parse given regexp and store its information</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseTemplate">parseTemplate</a>(string $template)
+        
+                                            <p>Parse given template and store the references it contains</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeUnknownReferences">removeUnknownReferences</a>()
+        
+                                            <p>Remove references that do not correspond to an existing capture</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -224,9 +434,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 42</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 42</div>
         <code>final                    
-    <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = array())
+    <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator, array $overrideProps = [])
         </code>
     </h3>
     <div class="details">
@@ -257,8 +467,29 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 70</div>
+        <code>            protected        
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Executed by this plugin's constructor</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_finalize">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 84</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 84</div>
         <code>                    
     <strong>finalize</strong>()
         </code>
@@ -284,7 +515,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 58</div>
+        <div class="location">at         line 58</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -312,7 +543,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getBaseProperties">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getBaseProperties"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 109</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getBaseProperties"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 109</div>
         <code>final                    array
     <strong>getBaseProperties</strong>()
         </code>
@@ -345,7 +576,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSHints">
-        <div class="location">at line         line 78</div>
+        <div class="location">at         line 78</div>
         <code>                    array
     <strong>getJSHints</strong>()
         </code>
@@ -375,7 +606,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSParser">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getJSParser"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 144</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getJSParser"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 144</div>
         <code>                    string|null
     <strong>getJSParser</strong>()
         </code>
@@ -406,7 +637,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_getTag">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getTag"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 167</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_getTag"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 167</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>getTag</strong>()
         </code>
@@ -436,7 +667,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_disableQuickMatch">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_disableQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 186</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_disableQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 186</div>
         <code>                    void
     <strong>disableQuickMatch</strong>()
         </code>
@@ -465,8 +696,48 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setAttrName">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setAttrName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 197</div>
+        <code>            protected        void
+    <strong>setAttrName</strong>(string $attrName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set $this->attrName with given attribute name, normalized</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td>New attribute name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_setQuickMatch">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 213</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setQuickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 213</div>
         <code>                    void
     <strong>setQuickMatch</strong>(string $quickMatch)
         </code>
@@ -506,7 +777,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_setRegexpLimit">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at line         line 229</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setRegexpLimit"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 229</div>
         <code>                    void
     <strong>setRegexpLimit</strong>(integer $limit)
         </code>
@@ -545,8 +816,48 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setTagName">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_setTagName"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 247</div>
+        <code>            protected        void
+    <strong>setTagName</strong>(string $tagName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set $this->tagName with given tag name, normalized</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tagName</td>
+                <td>New tag name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_match">
-        <div class="location">at line         line 100</div>
+        <div class="location">at         line 100</div>
         <code>                    void
     <strong>match</strong>(string $regexp, string $tagName)
         </code>
@@ -591,7 +902,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_replace">
-        <div class="location">at line         line 125</div>
+        <div class="location">at         line 125</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>replace</strong>(string $regexp, string $template, string $tagName = null)
         </code>
@@ -631,6 +942,401 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
         <tr>
             <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
             <td>The tag created to represent this replacement</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAttribute">
+        <div class="location">at         line 155</div>
+        <code>            protected        void
+    <strong>addAttribute</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, string $attrName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add given attribute to given tag based on parsed captures</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertTemplate">
+        <div class="location">at         line 197</div>
+        <code>            protected        string
+    <strong>convertTemplate</strong>(string $template, integer $passthrough)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert a preg-style replacement to a template</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td>Original template</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$passthrough</td>
+                <td>Index of the passthrough capture</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Modified template</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createTag">
+        <div class="location">at         line 248</div>
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
+    <strong>createTag</strong>(string $tagName, string $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the tag that matches current regexp</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tagName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixUnnamedCaptures">
+        <div class="location">at         line 283</div>
+        <code>            protected        string
+    <strong>fixUnnamedCaptures</strong>(string $regexp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Give a name to unnamed captures that are referenced in current replacement</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td>Original regexp</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Modified regexp</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPassthroughCapture">
+        <div class="location">at         line 321</div>
+        <code>            protected        integer
+    <strong>getPassthroughCapture</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the index of the capture used for passthrough in current replacement</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRegexpInfo">
+        <div class="location">at         line 349</div>
+        <code>            protected        array
+    <strong>getRegexpInfo</strong>(string $regexp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse a regexp and return its info</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCatchAll">
+        <div class="location">at         line 374</div>
+        <code>            protected        bool
+    <strong>isCatchAll</strong>(string $expr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given expression is a catch-all expression such as .*?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expr</td>
+                <td>Subpattern</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseRegexp">
+        <div class="location">at         line 385</div>
+        <code>            protected        void
+    <strong>parseRegexp</strong>(string $regexp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse given regexp and store its information</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseTemplate">
+        <div class="location">at         line 411</div>
+        <code>            protected        void
+    <strong>parseTemplate</strong>(string $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse given template and store the references it contains</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeUnknownReferences">
+        <div class="location">at         line 457</div>
+        <code>            protected        void
+    <strong>removeUnknownReferences</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove references that do not correspond to an existing capture</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
         </tr>
     </table>
 

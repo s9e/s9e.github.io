@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -110,7 +113,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_attributes">
-                                                                                AttributeCollection
+                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributeCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributeCollection">AttributeCollection</abbr></a>
                 </td>
                 <td>$attributes</td>
                 <td class="last">This tag's attributes</td>
@@ -118,7 +121,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_attributePreprocessors">
-                                                                                AttributePreprocessorCollection
+                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributePreprocessorCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributePreprocessorCollection">AttributePreprocessorCollection</abbr></a>
                 </td>
                 <td>$attributePreprocessors</td>
                 <td class="last">This tag's attribute parsers</td>
@@ -126,7 +129,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_filterChain">
-                                                                                TagFilterChain
+                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Collections/TagFilterChain.html"><abbr title="s9e\TextFormatter\Configurator\Collections\TagFilterChain">TagFilterChain</abbr></a>
                 </td>
                 <td>$filterChain</td>
                 <td class="last">This tag's filter chain</td>
@@ -142,7 +145,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_rules">
-                                                                                Ruleset
+                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
                 </td>
                 <td>$rules</td>
                 <td class="last">Rules associated with this tag</td>
@@ -158,7 +161,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_template">
-                                                                                Template
+                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a>
                 </td>
                 <td>$template</td>
                 <td class="last">Template associated with this tag</td>
@@ -318,7 +321,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 30</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 30</div>
         <code>                    mixed
     <strong>__get</strong>(string $propName)
         </code>
@@ -359,7 +362,7 @@ neither exists</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___set">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 61</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 61</div>
         <code>                    void
     <strong>__set</strong>(string $propName, mixed $propValue)
         </code>
@@ -408,7 +411,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___isset">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 157</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 157</div>
         <code>                    bool
     <strong>__isset</strong>(string $propName)
         </code>
@@ -448,7 +451,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___unset">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 175</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 175</div>
         <code>                    void
     <strong>__unset</strong>(string $propName)
         </code>
@@ -488,7 +491,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 74</div>
+        <div class="location">at         line 74</div>
         <code>                    
     <strong>__construct</strong>(array $options = null)
         </code>
@@ -519,7 +522,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 108</div>
+        <div class="location">at         line 108</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -550,7 +553,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getTemplate">
-        <div class="location">at line         line 147</div>
+        <div class="location">at         line 147</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a>
     <strong>getTemplate</strong>()
         </code>
@@ -580,7 +583,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_issetTemplate">
-        <div class="location">at line         line 157</div>
+        <div class="location">at         line 157</div>
         <code>                    bool
     <strong>issetTemplate</strong>()
         </code>
@@ -610,7 +613,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setAttributePreprocessors">
-        <div class="location">at line         line 168</div>
+        <div class="location">at         line 168</div>
         <code>                    void
     <strong>setAttributePreprocessors</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributePreprocessorCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributePreprocessorCollection">AttributePreprocessorCollection</abbr></a> $attributePreprocessors)
         </code>
@@ -650,7 +653,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setNestingLimit">
-        <div class="location">at line         line 180</div>
+        <div class="location">at         line 180</div>
         <code>                    void
     <strong>setNestingLimit</strong>(integer $limit)
         </code>
@@ -690,7 +693,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setRules">
-        <div class="location">at line         line 198</div>
+        <div class="location">at         line 198</div>
         <code>                    void
     <strong>setRules</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a> $rules)
         </code>
@@ -730,7 +733,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagLimit">
-        <div class="location">at line         line 210</div>
+        <div class="location">at         line 210</div>
         <code>                    void
     <strong>setTagLimit</strong>(integer $limit)
         </code>
@@ -770,7 +773,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTemplate">
-        <div class="location">at line         line 228</div>
+        <div class="location">at         line 228</div>
         <code>                    void
     <strong>setTemplate</strong>(string|<a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template)
         </code>
@@ -810,7 +813,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_unsetTemplate">
-        <div class="location">at line         line 243</div>
+        <div class="location">at         line 243</div>
         <code>                    void
     <strong>unsetTemplate</strong>()
         </code>

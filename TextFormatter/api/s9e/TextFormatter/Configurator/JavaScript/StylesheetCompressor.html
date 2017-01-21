@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -94,10 +97,50 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_deduplicateTargets">
+                                        protected                                        string[]
+                </td>
+                <td>$deduplicateTargets</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dictionary">
+                                        protected                                        array
+                </td>
+                <td>$dictionary</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_keyPrefix">
+                                        protected                                        string
+                </td>
+                <td>$keyPrefix</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_minSaving">
                                                                                 integer
                 </td>
                 <td>$minSaving</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_savings">
+                                        protected                                        array
+                </td>
+                <td>$savings</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_xsl">
+                                        protected                                        string
+                </td>
+                <td>$xsl</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -117,6 +160,96 @@
                                             <p>Encode given stylesheet into a compact JavaScript representation</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildDictionary">buildDictionary</a>()
+        
+                                            <p>Build a dictionary of all cost-effective string replacements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_estimateSavings">estimateSavings</a>()
+        
+                                            <p>Estimate the savings of every possible string replacement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_filterSavings">filterSavings</a>()
+        
+                                            <p>Filter the savings according to the minSaving property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAvailableKeys">getAvailableKeys</a>()
+        
+                                            <p>Return all the possible dictionary keys that are not present in the original stylesheet</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCompressedStylesheet">getCompressedStylesheet</a>()
+        
+                                            <p>Return the stylesheet after dictionary replacements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPossibleKeys">getPossibleKeys</a>()
+        
+                                            <p>Return a list of possible dictionary keys</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getReplacementRegexp">getReplacementRegexp</a>()
+        
+                                            <p>Return a regexp that matches all used dictionary keys</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStringsFrequency">getStringsFrequency</a>()
+        
+                                            <p>Return the frequency of all deduplicatable strings</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUnavailableKeys">getUnavailableKeys</a>()
+        
+                                            <p>Return the list of possible dictionary keys that appear in the original stylesheet</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -125,7 +258,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_encode">
-        <div class="location">at line         line 66</div>
+        <div class="location">at         line 66</div>
         <code>                    string
     <strong>encode</strong>(string $xsl)
         </code>
@@ -154,6 +287,276 @@
         <tr>
             <td>string</td>
             <td>JavaScript representation of the compressed stylesheet</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildDictionary">
+        <div class="location">at         line 88</div>
+        <code>            protected        void
+    <strong>buildDictionary</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build a dictionary of all cost-effective string replacements</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_estimateSavings">
+        <div class="location">at         line 112</div>
+        <code>            protected        void
+    <strong>estimateSavings</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Estimate the savings of every possible string replacement</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filterSavings">
+        <div class="location">at         line 131</div>
+        <code>            protected        void
+    <strong>filterSavings</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Filter the savings according to the minSaving property</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAvailableKeys">
+        <div class="location">at         line 147</div>
+        <code>            protected        string[]
+    <strong>getAvailableKeys</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all the possible dictionary keys that are not present in the original stylesheet</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCompressedStylesheet">
+        <div class="location">at         line 157</div>
+        <code>            protected        string
+    <strong>getCompressedStylesheet</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the stylesheet after dictionary replacements</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPossibleKeys">
+        <div class="location">at         line 167</div>
+        <code>            protected        string[]
+    <strong>getPossibleKeys</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a list of possible dictionary keys</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReplacementRegexp">
+        <div class="location">at         line 183</div>
+        <code>            protected        string
+    <strong>getReplacementRegexp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a regexp that matches all used dictionary keys</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStringsFrequency">
+        <div class="location">at         line 193</div>
+        <code>            protected        array
+    <strong>getStringsFrequency</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the frequency of all deduplicatable strings</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Array of [string => frequency]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUnavailableKeys">
+        <div class="location">at         line 206</div>
+        <code>            protected        string[]
+    <strong>getUnavailableKeys</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the list of possible dictionary keys that appear in the original stylesheet</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
         </tr>
     </table>
 

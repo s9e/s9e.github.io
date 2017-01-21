@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,35 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_allowedSchemes">
+                                        protected                                        <a href="../../../s9e/TextFormatter/Configurator/Collections/SchemeList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\SchemeList">SchemeList</abbr></a>
+                </td>
+                <td>$allowedSchemes</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_disallowedHosts">
+                                        protected                                        <a href="../../../s9e/TextFormatter/Configurator/Collections/HostnameList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\HostnameList">HostnameList</abbr></a>
+                </td>
+                <td>$disallowedHosts</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_restrictedHosts">
+                                        protected                                        <a href="../../../s9e/TextFormatter/Configurator/Collections/HostnameList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\HostnameList">HostnameList</abbr></a>
+                </td>
+                <td>$restrictedHosts</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -172,7 +204,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 35</div>
+        <div class="location">at         line 35</div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -193,7 +225,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 48</div>
+        <div class="location">at         line 48</div>
         <code>                    array|<a href="../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -224,7 +256,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_allowScheme">
-        <div class="location">at line         line 59</div>
+        <div class="location">at         line 59</div>
         <code>                    void
     <strong>allowScheme</strong>(string $scheme)
         </code>
@@ -264,7 +296,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_disallowHost">
-        <div class="location">at line         line 76</div>
+        <div class="location">at         line 76</div>
         <code>                    void
     <strong>disallowHost</strong>(string $host, bool $matchSubdomains = true)
         </code>
@@ -309,7 +341,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_disallowScheme">
-        <div class="location">at line         line 92</div>
+        <div class="location">at         line 92</div>
         <code>                    void
     <strong>disallowScheme</strong>(string $scheme)
         </code>
@@ -349,7 +381,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAllowedSchemes">
-        <div class="location">at line         line 102</div>
+        <div class="location">at         line 102</div>
         <code>                    array
     <strong>getAllowedSchemes</strong>()
         </code>
@@ -379,7 +411,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_restrictHost">
-        <div class="location">at line         line 116</div>
+        <div class="location">at         line 116</div>
         <code>                    void
     <strong>restrictHost</strong>(string $host, bool $matchSubdomains = true)
         </code>

@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -125,7 +128,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at line         line 25</div>
+        <div class="location">at         line 25</div>
         <code>        static            string
     <strong>get</strong>(string $funcName)
         </code>

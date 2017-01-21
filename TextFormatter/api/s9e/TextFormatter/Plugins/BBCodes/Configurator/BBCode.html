@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -111,7 +114,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_contentAttributes">
-                                                                                AttributeList
+                                                                                <a href="../../../../../s9e/TextFormatter/Configurator/Collections/AttributeList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributeList">AttributeList</abbr></a>
                 </td>
                 <td>$contentAttributes</td>
                 <td class="last">List of attributes whose value is to be made the content between the BBCode's tags if it's not explicitly given</td>
@@ -135,7 +138,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_predefinedAttributes">
-                                                                                AttributeValueCollection
+                                                                                <a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/AttributeValueCollection.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\AttributeValueCollection">AttributeValueCollection</abbr></a>
                 </td>
                 <td>$predefinedAttributes</td>
                 <td class="last">Predefined attribute values, can be overwritten by user input</td>
@@ -254,7 +257,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 30</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 30</div>
         <code>                    mixed
     <strong>__get</strong>(string $propName)
         </code>
@@ -295,7 +298,7 @@ neither exists</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___set">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 61</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 61</div>
         <code>                    void
     <strong>__set</strong>(string $propName, mixed $propValue)
         </code>
@@ -344,7 +347,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___isset">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 157</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 157</div>
         <code>                    bool
     <strong>__isset</strong>(string $propName)
         </code>
@@ -384,7 +387,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___unset">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 175</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 175</div>
         <code>                    void
     <strong>__unset</strong>(string $propName)
         </code>
@@ -424,7 +427,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 60</div>
+        <div class="location">at         line 60</div>
         <code>                    
     <strong>__construct</strong>(array $options = null)
         </code>
@@ -453,7 +456,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 77</div>
+        <div class="location">at         line 77</div>
         <code>                    array|<a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -484,7 +487,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeName">
-        <div class="location">at line         line 101</div>
+        <div class="location">at         line 101</div>
         <code>        static            string
     <strong>normalizeName</strong>(string $bbcodeName)
         </code>
@@ -525,7 +528,7 @@ other BBCode engines</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setDefaultAttribute">
-        <div class="location">at line         line 121</div>
+        <div class="location">at         line 121</div>
         <code>                    
     <strong>setDefaultAttribute</strong>(string $attrName)
         </code>
@@ -556,7 +559,7 @@ other BBCode engines</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagName">
-        <div class="location">at line         line 131</div>
+        <div class="location">at         line 131</div>
         <code>                    
     <strong>setTagName</strong>(string $tagName)
         </code>

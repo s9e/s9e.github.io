@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -145,22 +148,22 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                                            <a href="../../../s9e/TextFormatter/Configurator/Helpers/TemplateForensics.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateForensics">TemplateForensics</abbr></a>
+                                            <a href="../../../s9e/TextFormatter/Configurator/Helpers/TemplateHelper.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateHelper">TemplateHelper</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a>
                                             
                 </div>
                 <div class="col-md-6">
                     This class helps the RulesGenerator by analyzing a given template in order to answer questions
 such as "can this tag be a child/descendant of that other tag?" and others related to the HTML5
 content model.
-                </div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                                            <a href="../../../s9e/TextFormatter/Configurator/Helpers/TemplateHelper.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateHelper">TemplateHelper</abbr></a>
-                                            
-                </div>
-                <div class="col-md-6">
-                    
                 </div>
             </div>
                     <div class="row">

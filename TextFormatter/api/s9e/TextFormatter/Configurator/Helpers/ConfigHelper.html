@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -119,7 +122,7 @@
                     static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_optimizeArray">optimizeArray</a>(array $config, array $cache = array())
+                    <a href="#method_optimizeArray">optimizeArray</a>(array $config, array $cache = [])
         
                                             <p>Optimize the size of a deep array by deduplicating identical structures</p>                </div>
                 <div class="col-md-2"></div>
@@ -142,7 +145,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_filterConfig">
-        <div class="location">at line         line 24</div>
+        <div class="location">at         line 24</div>
         <code>        static            array
     <strong>filterConfig</strong>(array $config, string $target = &#039;PHP&#039;)
         </code>
@@ -187,7 +190,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateQuickMatchFromList">
-        <div class="location">at line         line 55</div>
+        <div class="location">at         line 55</div>
         <code>        static            mixed
     <strong>generateQuickMatchFromList</strong>(array $strings)
         </code>
@@ -227,9 +230,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeArray">
-        <div class="location">at line         line 106</div>
+        <div class="location">at         line 106</div>
         <code>        static            array
-    <strong>optimizeArray</strong>(array $config, array $cache = array())
+    <strong>optimizeArray</strong>(array $config, array $cache = [])
         </code>
     </h3>
     <div class="details">
@@ -272,7 +275,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_toArray">
-        <div class="location">at line         line 140</div>
+        <div class="location">at         line 140</div>
         <code>        static            array
     <strong>toArray</strong>(mixed $value, bool $keepEmpty = false, bool $keepNull = false)
         </code>

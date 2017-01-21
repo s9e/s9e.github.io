@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -358,7 +361,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___call">
-        <div class="location">at line         line 36</div>
+        <div class="location">at         line 36</div>
         <code>                    mixed
     <strong>__call</strong>(string $methodName, array $args)
         </code>
@@ -403,7 +406,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetExists">
-        <div class="location">at line         line 49</div>
+        <div class="location">at         line 49</div>
         <code>                    bool
     <strong>offsetExists</strong>(string|integer $offset)
         </code>
@@ -441,7 +444,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetGet">
-        <div class="location">at line         line 58</div>
+        <div class="location">at         line 58</div>
         <code>                    mixed
     <strong>offsetGet</strong>(string|integer $offset)
         </code>
@@ -479,7 +482,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetSet">
-        <div class="location">at line         line 68</div>
+        <div class="location">at         line 68</div>
         <code>                    void
     <strong>offsetSet</strong>(string|integer $offset, mixed $value)
         </code>
@@ -522,7 +525,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetUnset">
-        <div class="location">at line         line 77</div>
+        <div class="location">at         line 77</div>
         <code>                    void
     <strong>offsetUnset</strong>(string|integer $offset)
         </code>
@@ -560,7 +563,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_count">
-        <div class="location">at line         line 89</div>
+        <div class="location">at         line 89</div>
         <code>                    integer
     <strong>count</strong>()
         </code>
@@ -588,7 +591,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">at line         line 101</div>
+        <div class="location">at         line 101</div>
         <code>                    mixed
     <strong>current</strong>()
         </code>
@@ -616,7 +619,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_key">
-        <div class="location">at line         line 109</div>
+        <div class="location">at         line 109</div>
         <code>                    string|integer
     <strong>key</strong>()
         </code>
@@ -644,7 +647,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">at line         line 117</div>
+        <div class="location">at         line 117</div>
         <code>                    mixed
     <strong>next</strong>()
         </code>
@@ -672,7 +675,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">at line         line 125</div>
+        <div class="location">at         line 125</div>
         <code>                    void
     <strong>rewind</strong>()
         </code>
@@ -700,7 +703,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_valid">
-        <div class="location">at line         line 133</div>
+        <div class="location">at         line 133</div>
         <code>                    boolean
     <strong>valid</strong>()
         </code>
@@ -728,7 +731,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    mixed
     <strong>add</strong>(string  $key, mixed  $value)
         </code>
@@ -771,7 +774,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    array
     <strong>asConfig</strong>()
         </code>
@@ -799,7 +802,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_contains">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    bool
     <strong>contains</strong>(mixed  $value)
         </code>
@@ -837,7 +840,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    void
     <strong>delete</strong>(string  $key)
         </code>
@@ -875,7 +878,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_exists">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    bool
     <strong>exists</strong>(string  $key)
         </code>
@@ -913,7 +916,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    mixed
     <strong>get</strong>(string  $key)
         </code>
@@ -951,7 +954,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_indexOf">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    mixed
     <strong>indexOf</strong>(mixed  $value)
         </code>
@@ -989,7 +992,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeKey">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    string
     <strong>normalizeKey</strong>(string  $key)
         </code>
@@ -1027,7 +1030,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeValue">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    mixed
     <strong>normalizeValue</strong>(mixed  $value)
         </code>
@@ -1065,7 +1068,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_onDuplicate">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    string
     <strong>onDuplicate</strong>(string  $action)
         </code>
@@ -1103,7 +1106,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at line         line 27</div>
+        <div class="location">at         line 27</div>
         <code>                    mixed
     <strong>set</strong>(string  $key, mixed  $value)
         </code>

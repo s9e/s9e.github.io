@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,27 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_items">
+                                        protected                                        array
+                </td>
+                <td>$items</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#property_items"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_onDuplicateAction">
+                                        protected                                        string
+                </td>
+                <td>$onDuplicateAction</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#property_onDuplicateAction"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -190,6 +214,26 @@
         
                                             <p>Query and set the action to take when add() is called with a key that already exists</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_onDuplicate"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAlreadyExistsException">getAlreadyExistsException</a>(string $key)
+        
+                                            <p>Return the exception that is thrown when creating an item using a key that already exists</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_getAlreadyExistsException"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNotExistException">getNotExistException</a>(string $key)
+        
+                                            <p>Return the exception that is thrown when accessing an item that does not exist</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_getNotExistException"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -373,7 +417,7 @@ chain</p>                </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_clear"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 25</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_clear"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 25</div>
         <code>                    
     <strong>clear</strong>()
         </code>
@@ -394,7 +438,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 24</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 24</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -422,7 +466,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_count">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_count"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 45</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_count"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 45</div>
         <code>                    integer
     <strong>count</strong>()
         </code>
@@ -450,7 +494,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_current"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 57</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_current"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 57</div>
         <code>                    mixed
     <strong>current</strong>()
         </code>
@@ -478,7 +522,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_key">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_key"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 65</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_key"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 65</div>
         <code>                    integer|string
     <strong>key</strong>()
         </code>
@@ -506,7 +550,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_next"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 73</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_next"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 73</div>
         <code>                    mixed
     <strong>next</strong>()
         </code>
@@ -534,7 +578,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_rewind"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 81</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_rewind"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 81</div>
         <code>                    void
     <strong>rewind</strong>()
         </code>
@@ -562,7 +606,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_valid">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_valid"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at line         line 89</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#method_valid"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a> at         line 89</div>
         <code>                    bool
     <strong>valid</strong>()
         </code>
@@ -590,7 +634,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_onDuplicate">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_onDuplicate"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 38</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_onDuplicate"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 38</div>
         <code>                    string
     <strong>onDuplicate</strong>(string|null $action = null)
         </code>
@@ -629,8 +673,88 @@ chain</p>                </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getAlreadyExistsException">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_getAlreadyExistsException"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 63</div>
+        <code>            protected        <a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a>
+    <strong>getAlreadyExistsException</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the exception that is thrown when creating an item using a key that already exists</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>Item's key</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNotExistException">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_getNotExistException"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 74</div>
+        <code>            protected        <a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a>
+    <strong>getNotExistException</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the exception that is thrown when accessing an item that does not exist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>Item's key</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_normalizeKey">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_normalizeKey"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at line         line 86</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_normalizeKey"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at         line 86</div>
         <code>                    string
     <strong>normalizeKey</strong>(string $key)
         </code>
@@ -670,7 +794,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeValue">
-        <div class="location">at line         line 20</div>
+        <div class="location">at         line 20</div>
         <code>                    mixed
     <strong>normalizeValue</strong>(mixed $check)
         </code>
@@ -710,7 +834,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_add"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at line         line 23</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_add"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at         line 23</div>
         <code>                    mixed
     <strong>add</strong>(mixed $value, null $void = null)
         </code>
@@ -755,7 +879,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_contains">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_contains"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 144</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_contains"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 144</div>
         <code>                    bool
     <strong>contains</strong>(mixed $value)
         </code>
@@ -795,7 +919,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_delete"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at line         line 51</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_delete"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at         line 51</div>
         <code>                    void
     <strong>delete</strong>(string $key)
         </code>
@@ -835,7 +959,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_exists">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_exists"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 168</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_exists"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 168</div>
         <code>                    bool
     <strong>exists</strong>(string $key)
         </code>
@@ -875,7 +999,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_get"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 181</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_get"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 181</div>
         <code>                    mixed
     <strong>get</strong>(string $key)
         </code>
@@ -915,7 +1039,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_indexOf">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_indexOf"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 201</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_indexOf"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 201</div>
         <code>                    mixed
     <strong>indexOf</strong>(mixed $value)
         </code>
@@ -955,7 +1079,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_set"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 213</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_set"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 213</div>
         <code>                    mixed
     <strong>set</strong>(string $key, mixed $value)
         </code>
@@ -1000,7 +1124,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetExists">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetExists"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 230</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetExists"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 230</div>
         <code>                    bool
     <strong>offsetExists</strong>(string|integer $offset)
         </code>
@@ -1038,7 +1162,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetGet">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetGet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 239</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetGet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 239</div>
         <code>                    mixed
     <strong>offsetGet</strong>(string|integer $offset)
         </code>
@@ -1076,7 +1200,7 @@ chain</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetSet">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_offsetSet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at line         line 115</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_offsetSet"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at         line 115</div>
         <code>                    void
     <strong>offsetSet</strong>(string|integer $offset, mixed $value)
         </code>
@@ -1122,7 +1246,7 @@ chain</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetUnset">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetUnset"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at line         line 258</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_offsetUnset"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a> at         line 258</div>
         <code>                    void
     <strong>offsetUnset</strong>(string|integer $offset)
         </code>
@@ -1160,7 +1284,7 @@ chain</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_append">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_append"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at line         line 34</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_append"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at         line 34</div>
         <code>                    mixed
     <strong>append</strong>(mixed $value)
         </code>
@@ -1200,7 +1324,7 @@ chain</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_insert">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_insert"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at line         line 66</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_insert"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at         line 66</div>
         <code>                    mixed
     <strong>insert</strong>(integer $offset, mixed $value)
         </code>
@@ -1245,7 +1369,7 @@ chain</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_prepend">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_prepend"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at line         line 135</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_prepend"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at         line 135</div>
         <code>                    mixed
     <strong>prepend</strong>(mixed $value)
         </code>
@@ -1285,7 +1409,7 @@ chain</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_remove">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_remove"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at line         line 150</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_remove"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a> at         line 150</div>
         <code>                    integer
     <strong>remove</strong>(mixed $value)
         </code>

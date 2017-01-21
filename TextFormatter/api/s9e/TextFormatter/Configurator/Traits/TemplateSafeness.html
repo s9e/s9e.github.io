@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,10 +93,33 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_markedSafe">
+                                        protected                                        array
+                </td>
+                <td>$markedSafe</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSafe">isSafe</a>(string $context)
+        
+                                            <p>Return whether this object is safe to be used in given context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
@@ -171,8 +197,48 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_isSafe">
+        <div class="location">at         line 23</div>
+        <code>            protected        bool
+    <strong>isSafe</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return whether this object is safe to be used in given context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td>Either 'AsURL', 'InCSS' or 'InJS'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isSafeAsURL">
-        <div class="location">at line         line 34</div>
+        <div class="location">at         line 34</div>
         <code>                    bool
     <strong>isSafeAsURL</strong>()
         </code>
@@ -202,7 +268,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isSafeInCSS">
-        <div class="location">at line         line 44</div>
+        <div class="location">at         line 44</div>
         <code>                    bool
     <strong>isSafeInCSS</strong>()
         </code>
@@ -232,7 +298,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isSafeInJS">
-        <div class="location">at line         line 54</div>
+        <div class="location">at         line 54</div>
         <code>                    bool
     <strong>isSafeInJS</strong>()
         </code>
@@ -262,7 +328,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_markAsSafeAsURL">
-        <div class="location">at line         line 64</div>
+        <div class="location">at         line 64</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a>
     <strong>markAsSafeAsURL</strong>()
         </code>
@@ -292,7 +358,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_markAsSafeInCSS">
-        <div class="location">at line         line 76</div>
+        <div class="location">at         line 76</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a>
     <strong>markAsSafeInCSS</strong>()
         </code>
@@ -322,7 +388,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_markAsSafeInJS">
-        <div class="location">at line         line 88</div>
+        <div class="location">at         line 88</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a>
     <strong>markAsSafeInJS</strong>()
         </code>
@@ -352,7 +418,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resetSafeness">
-        <div class="location">at line         line 100</div>
+        <div class="location">at         line 100</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a>
     <strong>resetSafeness</strong>()
         </code>

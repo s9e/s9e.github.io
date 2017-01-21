@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -90,6 +93,43 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hints">
+                                        protected                                        array
+                </td>
+                <td>$hints</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_plugins">
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator/Collections/PluginCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\PluginCollection">PluginCollection</abbr></a>
+                </td>
+                <td>$plugins</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_xsl">
+                                        protected                                        string
+                </td>
+                <td>$xsl</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -134,6 +174,56 @@
                                             <p>Set the XSL on which hints are based</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPluginsHints">setPluginsHints</a>()
+        
+                                            <p>Set custom hints from plugins</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRenderingHints">setRenderingHints</a>()
+        
+                                            <p>Set hints related to rendering</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRulesHints">setRulesHints</a>()
+        
+                                            <p>Set hints related to rules</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTagAttributesHints">setTagAttributesHints</a>(array $tagConfig)
+        
+                                            <p>Set hints based on given tag's attributes config</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTagsHints">setTagsHints</a>()
+        
+                                            <p>Set hints related to tags config</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -142,7 +232,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getHints">
-        <div class="location">at line         line 40</div>
+        <div class="location">at         line 40</div>
         <code>                    string
     <strong>getHints</strong>()
         </code>
@@ -172,7 +262,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setConfig">
-        <div class="location">at line         line 66</div>
+        <div class="location">at         line 66</div>
         <code>                    void
     <strong>setConfig</strong>(array $config)
         </code>
@@ -212,7 +302,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPlugins">
-        <div class="location">at line         line 77</div>
+        <div class="location">at         line 77</div>
         <code>                    void
     <strong>setPlugins</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Collections/PluginCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\PluginCollection">PluginCollection</abbr></a> $plugins)
         </code>
@@ -252,7 +342,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setXSL">
-        <div class="location">at line         line 88</div>
+        <div class="location">at         line 88</div>
         <code>                    void
     <strong>setXSL</strong>(string $xsl)
         </code>
@@ -274,6 +364,166 @@
             </tr>
             </table>
 
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPluginsHints">
+        <div class="location">at         line 98</div>
+        <code>            protected        void
+    <strong>setPluginsHints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set custom hints from plugins</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRenderingHints">
+        <div class="location">at         line 111</div>
+        <code>            protected        void
+    <strong>setRenderingHints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set hints related to rendering</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRulesHints">
+        <div class="location">at         line 123</div>
+        <code>            protected        void
+    <strong>setRulesHints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set hints related to rules</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTagAttributesHints">
+        <div class="location">at         line 161</div>
+        <code>            protected        void
+    <strong>setTagAttributesHints</strong>(array $tagConfig)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set hints based on given tag's attributes config</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tagConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTagsHints">
+        <div class="location">at         line 180</div>
+        <code>            protected        void
+    <strong>setTagsHints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set hints related to tags config</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 

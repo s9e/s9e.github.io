@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -99,6 +102,14 @@
                 <td class="last"></td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_params">
+                                        protected                                        array
+                </td>
+                <td>$params</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -107,12 +118,42 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadXML">loadXML</a>(string $xml)
+        
+                                            <p>Create a return a new DOMDocument loaded with given XML</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_render">render</a>(string $xml)
         
                                             <p>Render an intermediate representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderPlainText">renderPlainText</a>(string $xml)
+        
+                                            <p>Render an intermediate representation of plain text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderRichText">renderRichText</a>(string $xml)
+        
+                                            <p>Render an intermediate representation of rich text</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -155,6 +196,36 @@
                                             <p>Set the values of several parameters from the stylesheet</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkUnsupported">checkUnsupported</a>(string $xml)
+        
+                                            <p>Test for the presence of unsupported XML and throw an exception if found</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decodeSMP">decodeSMP</a>(string $str)
+        
+                                            <p>Decode encoded characters from the Supplementary Multilingual Plane</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decodeEntity">decodeEntity</a>(array $m)
+        
+                                            <p>Decode a matched SGML entity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -162,8 +233,48 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_loadXML">
+        <div class="location">at         line 31</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+    <strong>loadXML</strong>(string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a return a new DOMDocument loaded with given XML</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>Source XML</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at line         line 51</div>
+        <div class="location">at         line 51</div>
         <code>                    string
     <strong>render</strong>(string $xml)
         </code>
@@ -202,8 +313,88 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_renderPlainText">
+        <div class="location">at         line 69</div>
+        <code>            protected        string
+    <strong>renderPlainText</strong>(string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render an intermediate representation of plain text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>Intermediate representation</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Rendered result</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderRichText">
+        <div class="location">at         line 89</div>
+        <code>    abstract        protected        string
+    <strong>renderRichText</strong>(string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render an intermediate representation of rich text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>Intermediate representation</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Rendered result</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getParameter">
-        <div class="location">at line         line 97</div>
+        <div class="location">at         line 97</div>
         <code>                    string
     <strong>getParameter</strong>(string $paramName)
         </code>
@@ -243,7 +434,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParameters">
-        <div class="location">at line         line 107</div>
+        <div class="location">at         line 107</div>
         <code>                    array
     <strong>getParameters</strong>()
         </code>
@@ -273,7 +464,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setParameter">
-        <div class="location">at line         line 119</div>
+        <div class="location">at         line 119</div>
         <code>                    void
     <strong>setParameter</strong>(string $paramName, mixed $paramValue)
         </code>
@@ -318,7 +509,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setParameters">
-        <div class="location">at line         line 130</div>
+        <div class="location">at         line 130</div>
         <code>                    void
     <strong>setParameters</strong>(array $params)
         </code>
@@ -347,6 +538,126 @@
         <tr>
             <td>void</td>
             <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkUnsupported">
+        <div class="location">at         line 144</div>
+        <code>            protected        void
+    <strong>checkUnsupported</strong>(string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test for the presence of unsupported XML and throw an exception if found</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>XML</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decodeSMP">
+        <div class="location">at         line 162</div>
+        <code>            protected        string
+    <strong>decodeSMP</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decode encoded characters from the Supplementary Multilingual Plane</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>Encoded string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Decoded string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decodeEntity">
+        <div class="location">at         line 178</div>
+        <code>        static    protected        string
+    <strong>decodeEntity</strong>(array $m)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decode a matched SGML entity</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$m</td>
+                <td>Captures from PCRE</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Decoded entity</td>
         </tr>
     </table>
 

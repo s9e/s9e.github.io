@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -142,7 +145,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line         line 23</div>
+        <div class="location">at         line 23</div>
         <code>        static            array
     <strong>parse</strong>(string $attrValue)
         </code>
@@ -182,7 +185,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_replace">
-        <div class="location">at line         line 117</div>
+        <div class="location">at         line 117</div>
         <code>        static            void
     <strong>replace</strong>(<a target="_blank" href="http://php.net/DOMAttr">DOMAttr</a> $attribute, callable $callback)
         </code>
@@ -228,7 +231,7 @@ Its return value should use the same format</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_serialize">
-        <div class="location">at line         line 134</div>
+        <div class="location">at         line 134</div>
         <code>        static            string
     <strong>serialize</strong>(array $tokens)
         </code>
@@ -268,7 +271,7 @@ Its return value should use the same format</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_toXSL">
-        <div class="location">at line         line 162</div>
+        <div class="location">at         line 162</div>
         <code>        static            string
     <strong>toXSL</strong>(string $attrValue)
         </code>

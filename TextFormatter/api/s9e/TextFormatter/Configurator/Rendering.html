@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -107,8 +110,16 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_configurator">
+                                        protected                                        <a href="../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a>
+                </td>
+                <td>$configurator</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_engine">
-                                                                                RendererGenerator
+                                                                                <a href="../../../s9e/TextFormatter/Configurator/RendererGenerator.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerator">RendererGenerator</abbr></a>
                 </td>
                 <td>$engine</td>
                 <td class="last"></td>
@@ -116,7 +127,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_parameters">
-                                                                                TemplateParameterCollection
+                                                                                <a href="../../../s9e/TextFormatter/Configurator/Collections/TemplateParameterCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\TemplateParameterCollection">TemplateParameterCollection</abbr></a>
                 </td>
                 <td>$parameters</td>
                 <td class="last">Parameters used by the renderer</td>
@@ -236,7 +247,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 30</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 30</div>
         <code>                    mixed
     <strong>__get</strong>(string $propName)
         </code>
@@ -277,7 +288,7 @@ neither exists</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___set">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 61</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 61</div>
         <code>                    void
     <strong>__set</strong>(string $propName, mixed $propValue)
         </code>
@@ -326,7 +337,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___isset">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 157</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 157</div>
         <code>                    bool
     <strong>__isset</strong>(string $propName)
         </code>
@@ -366,7 +377,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___unset">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line         line 175</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 175</div>
         <code>                    void
     <strong>__unset</strong>(string $propName)
         </code>
@@ -406,7 +417,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 45</div>
+        <div class="location">at         line 45</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator)
         </code>
@@ -437,7 +448,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getAllParameters">
-        <div class="location">at line         line 56</div>
+        <div class="location">at         line 56</div>
         <code>                    array
     <strong>getAllParameters</strong>()
         </code>
@@ -467,7 +478,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getEngine">
-        <div class="location">at line         line 86</div>
+        <div class="location">at         line 86</div>
         <code>                    <a href="../../../s9e/TextFormatter/Configurator/RendererGenerator.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerator">RendererGenerator</abbr></a>
     <strong>getEngine</strong>()
         </code>
@@ -497,7 +508,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getRenderer">
-        <div class="location">at line         line 101</div>
+        <div class="location">at         line 101</div>
         <code>                    <abbr title="s9e\TextFormatter\Configurator\Renderer">Renderer</abbr>
     <strong>getRenderer</strong>()
         </code>
@@ -527,7 +538,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getTemplates">
-        <div class="location">at line         line 111</div>
+        <div class="location">at         line 111</div>
         <code>                    array
     <strong>getTemplates</strong>()
         </code>
@@ -557,7 +568,7 @@ without incurring data loss.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setEngine">
-        <div class="location">at line         line 142</div>
+        <div class="location">at         line 142</div>
         <code>                    <a href="../../../s9e/TextFormatter/Configurator/RendererGenerator.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerator">RendererGenerator</abbr></a>
     <strong>setEngine</strong>(string|<a href="../../../s9e/TextFormatter/Configurator/RendererGenerator.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerator">RendererGenerator</abbr></a> $engine)
         </code>

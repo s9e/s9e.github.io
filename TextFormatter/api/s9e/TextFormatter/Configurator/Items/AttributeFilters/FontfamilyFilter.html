@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -105,6 +108,51 @@
             </div>
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_callback">
+                                        protected                                        <abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr>
+                </td>
+                <td>$callback</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#property_callback"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_js">
+                                        protected                                        string
+                </td>
+                <td>$js</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#property_js"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_params">
+                                        protected                                        array
+                </td>
+                <td>$params</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#property_params"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_vars">
+                                        protected                                        array
+                </td>
+                <td>$vars</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#property_vars"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_markedSafe">
+                                        protected                                        array
+                </td>
+                <td>$markedSafe</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#property_markedSafe"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -221,6 +269,36 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_autoloadJS">autoloadJS</a>()
+        
+                                            <p>Try to load the JavaScript source for this callback</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_autoloadJS"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeCallback">normalizeCallback</a>(callable $callback)
+        
+                                            <p>Normalize a callback's representation</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_normalizeCallback"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSafe">isSafe</a>(string $context)
+        
+                                            <p>Return whether this object is safe to be used in given context</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_isSafe"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8 type">
@@ -309,6 +387,46 @@
                                             <p>Set this filter's regexp</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_setRegexp"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evaluateSafeness">evaluateSafeness</a>()
+        
+                                            <p>Mark in which contexts values processed by this filter are safe to be used</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafeness"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evaluateSafenessAsURL">evaluateSafenessAsURL</a>()
+        
+                                            <p>Mark whether this filter makes a value safe to be used as a URL</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessAsURL"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evaluateSafenessInCSS">evaluateSafenessInCSS</a>()
+        
+                                            <p>Mark whether this filter makes a value safe to be used in CSS</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessInCSS"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evaluateSafenessInJS">evaluateSafenessInJS</a>()
+        
+                                            <p>Mark whether this filter makes a value safe to be used in JS</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessInJS"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
+            </div>
             </div>
 
 
@@ -317,7 +435,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 12</div>
+        <div class="location">at         line 12</div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -338,7 +456,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addParameterByValue">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_addParameterByValue"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 58</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_addParameterByValue"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 58</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a>
     <strong>addParameterByValue</strong>(mixed $paramValue)
         </code>
@@ -378,7 +496,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addParameterByName">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_addParameterByName"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 73</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_addParameterByName"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 73</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a>
     <strong>addParameterByName</strong>(string $paramName)
         </code>
@@ -418,7 +536,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCallback">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_getCallback"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 90</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_getCallback"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 90</div>
         <code>                    <abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr>
     <strong>getCallback</strong>()
         </code>
@@ -448,7 +566,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJS">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_getJS"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 100</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_getJS"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 100</div>
         <code>                    string
     <strong>getJS</strong>()
         </code>
@@ -478,7 +596,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVars">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_getVars"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 110</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_getVars"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 110</div>
         <code>                    array
     <strong>getVars</strong>()
         </code>
@@ -508,7 +626,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resetParameters">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_resetParameters"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 120</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_resetParameters"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 120</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a>
     <strong>resetParameters</strong>()
         </code>
@@ -538,7 +656,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setJS">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_setJS"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 133</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_setJS"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 133</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a>
     <strong>setJS</strong>(string $js)
         </code>
@@ -578,7 +696,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setVar">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_setVar"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 147</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_setVar"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 147</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a>
     <strong>setVar</strong>(string $name, string $value)
         </code>
@@ -623,7 +741,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setVars">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_setVars"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at line         line 160</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_setVars"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 160</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a>
     <strong>setVars</strong>(array $vars)
         </code>
@@ -663,7 +781,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at line         line 42</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_asConfig"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at         line 42</div>
         <code>                    array|<a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -693,8 +811,118 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_autoloadJS">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_autoloadJS"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 209</div>
+        <code>            protected        void
+    <strong>autoloadJS</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Try to load the JavaScript source for this callback</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeCallback">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method_normalizeCallback"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a> at         line 232</div>
+        <code>            protected        callable
+    <strong>normalizeCallback</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalize a callback's representation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSafe">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_isSafe"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at         line 23</div>
+        <code>            protected        bool
+    <strong>isSafe</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return whether this object is safe to be used in given context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td>Either 'AsURL', 'InCSS' or 'InJS'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isSafeAsURL">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_isSafeAsURL"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at line         line 34</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_isSafeAsURL"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at         line 34</div>
         <code>                    bool
     <strong>isSafeAsURL</strong>()
         </code>
@@ -724,7 +952,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isSafeInCSS">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_isSafeInCSS"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at line         line 44</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_isSafeInCSS"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at         line 44</div>
         <code>                    bool
     <strong>isSafeInCSS</strong>()
         </code>
@@ -754,7 +982,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isSafeInJS">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_isSafeInJS"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at line         line 54</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_isSafeInJS"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at         line 54</div>
         <code>                    bool
     <strong>isSafeInJS</strong>()
         </code>
@@ -784,7 +1012,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_markAsSafeAsURL">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_markAsSafeAsURL"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at line         line 64</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_markAsSafeAsURL"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at         line 64</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a>
     <strong>markAsSafeAsURL</strong>()
         </code>
@@ -814,7 +1042,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_markAsSafeInCSS">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_markAsSafeInCSS"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at line         line 76</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_markAsSafeInCSS"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at         line 76</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a>
     <strong>markAsSafeInCSS</strong>()
         </code>
@@ -844,7 +1072,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_markAsSafeInJS">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_markAsSafeInJS"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at line         line 88</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_markAsSafeInJS"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at         line 88</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a>
     <strong>markAsSafeInJS</strong>()
         </code>
@@ -874,7 +1102,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resetSafeness">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_resetSafeness"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at line         line 100</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html#method_resetSafeness"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a> at         line 100</div>
         <code>                    <a href="../../../../../s9e/TextFormatter/Configurator/Traits/TemplateSafeness.html"><abbr title="s9e\TextFormatter\Configurator\Traits\TemplateSafeness">TemplateSafeness</abbr></a>
     <strong>resetSafeness</strong>()
         </code>
@@ -904,7 +1132,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getRegexp">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_getRegexp"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at line         line 57</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_getRegexp"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at         line 57</div>
         <code>                    string
     <strong>getRegexp</strong>()
         </code>
@@ -934,7 +1162,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setRegexp">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_setRegexp"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at line         line 68</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_setRegexp"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at         line 68</div>
         <code>                    void
     <strong>setRegexp</strong>(string $regexp)
         </code>
@@ -956,6 +1184,126 @@
             </tr>
             </table>
 
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluateSafeness">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafeness"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at         line 85</div>
+        <code>            protected        void
+    <strong>evaluateSafeness</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark in which contexts values processed by this filter are safe to be used</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluateSafenessAsURL">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessAsURL"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at         line 104</div>
+        <code>            protected        void
+    <strong>evaluateSafenessAsURL</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark whether this filter makes a value safe to be used as a URL</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluateSafenessInCSS">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessInCSS"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at         line 140</div>
+        <code>            protected        void
+    <strong>evaluateSafenessInCSS</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark whether this filter makes a value safe to be used in CSS</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluateSafenessInJS">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessInJS"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at         line 160</div>
+        <code>            protected        void
+    <strong>evaluateSafenessInJS</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark whether this filter makes a value safe to be used in JS</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 

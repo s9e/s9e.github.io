@@ -23,7 +23,10 @@
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../../../search.html" method="GET">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
             <span class="glyphicon glyphicon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -236,6 +239,56 @@
                                             <p>Serialize a loaded template back into a string</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fixEntities">fixEntities</a>(string $template)
+        
+                                            <p>Replace HTML entities and unescaped ampersands in given template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_innerXML">innerXML</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+        
+                                            <p>Get the XML content of an element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadTemplateAsHTML">loadTemplateAsHTML</a>(string $template)
+        
+                                            <p>Load given HTML template in a DOM document</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool|<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadTemplateAsXML">loadTemplateAsXML</a>(string $template)
+        
+                                            <p>Load given XSL template in a DOM document</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeInvalidAttributes">removeInvalidAttributes</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        
+                                            <p>Remove attributes with an invalid name from given DOM document</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -244,7 +297,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getAttributesByRegexp">
-        <div class="location">at line         line 35</div>
+        <div class="location">at         line 35</div>
         <code>        static            array
     <strong>getAttributesByRegexp</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom, string $regexp)
         </code>
@@ -289,7 +342,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSNodes">
-        <div class="location">at line         line 79</div>
+        <div class="location">at         line 79</div>
         <code>        static            array
     <strong>getCSSNodes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
@@ -329,7 +382,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getElementsByRegexp">
-        <div class="location">at line         line 97</div>
+        <div class="location">at         line 97</div>
         <code>        static            array
     <strong>getElementsByRegexp</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom, string $regexp)
         </code>
@@ -374,7 +427,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSNodes">
-        <div class="location">at line         line 142</div>
+        <div class="location">at         line 142</div>
         <code>        static            array
     <strong>getJSNodes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
@@ -414,7 +467,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMetaElementsRegexp">
-        <div class="location">at line         line 159</div>
+        <div class="location">at         line 159</div>
         <code>        static            string
     <strong>getMetaElementsRegexp</strong>(array $templates)
         </code>
@@ -454,7 +507,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getObjectParamsByRegexp">
-        <div class="location">at line         line 237</div>
+        <div class="location">at         line 237</div>
         <code>        static            array
     <strong>getObjectParamsByRegexp</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom, string $regexp)
         </code>
@@ -501,7 +554,7 @@ set via an <xsl:attribute/></p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getParametersFromXSL">
-        <div class="location">at line         line 280</div>
+        <div class="location">at         line 280</div>
         <code>        static            array
     <strong>getParametersFromXSL</strong>(string $xsl)
         </code>
@@ -541,7 +594,7 @@ set via an <xsl:attribute/></p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getURLNodes">
-        <div class="location">at line         line 356</div>
+        <div class="location">at         line 356</div>
         <code>        static            array
     <strong>getURLNodes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
@@ -581,7 +634,7 @@ set via an <xsl:attribute/></p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_highlightNode">
-        <div class="location">at line         line 385</div>
+        <div class="location">at         line 385</div>
         <code>        static            string
     <strong>highlightNode</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node, string $prepend, string $append)
         </code>
@@ -631,7 +684,7 @@ set via an <xsl:attribute/></p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_loadTemplate">
-        <div class="location">at line         line 445</div>
+        <div class="location">at         line 445</div>
         <code>        static            <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
     <strong>loadTemplate</strong>(string $template)
         </code>
@@ -672,7 +725,7 @@ node is returned</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceHomogeneousTemplates">
-        <div class="location">at line         line 484</div>
+        <div class="location">at         line 484</div>
         <code>        static            void
     <strong>replaceHomogeneousTemplates</strong>(array $templates, integer $minCount = 3)
         </code>
@@ -723,7 +776,7 @@ lowercase using XPath's translate() function</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceTokens">
-        <div class="location">at line         line 557</div>
+        <div class="location">at         line 557</div>
         <code>        static            string
     <strong>replaceTokens</strong>(string $template, string $regexp, <abbr title="s9e\TextFormatter\Configurator\Helpers\callback">callback</abbr> $fn)
         </code>
@@ -786,7 +839,7 @@ becomes an <xsl:apply-templates/> node.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_saveTemplate">
-        <div class="location">at line         line 694</div>
+        <div class="location">at         line 694</div>
         <code>        static            string
     <strong>saveTemplate</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
@@ -814,6 +867,206 @@ becomes an <xsl:apply-templates/> node.</li>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixEntities">
+        <div class="location">at         line 705</div>
+        <code>        static    protected        string
+    <strong>fixEntities</strong>(string $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace HTML entities and unescaped ampersands in given template</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_innerXML">
+        <div class="location">at         line 723</div>
+        <code>        static    protected        string
+    <strong>innerXML</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the XML content of an element</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$element</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadTemplateAsHTML">
+        <div class="location">at         line 748</div>
+        <code>        static    protected        <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+    <strong>loadTemplateAsHTML</strong>(string $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load given HTML template in a DOM document</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td>Original template</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadTemplateAsXML">
+        <div class="location">at         line 774</div>
+        <code>        static    protected        bool|<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+    <strong>loadTemplateAsXML</strong>(string $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load given XSL template in a DOM document</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td>Original template</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+            <td>DOMDocument on success, FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeInvalidAttributes">
+        <div class="location">at         line 793</div>
+        <code>        static    protected        void
+    <strong>removeInvalidAttributes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove attributes with an invalid name from given DOM document</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$dom</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
