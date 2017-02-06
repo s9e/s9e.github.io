@@ -379,6 +379,16 @@ models and rules, with some liberties taken.</td>
                     bool
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_isIframe">isIframe</a>()
+        
+                                            <p>Return whether this template represents a single iframe</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_isPassthrough">isPassthrough</a>()
         
                                             <p>Return whether this template lets content through via an xsl:apply-templates element</p>                </div>
@@ -862,8 +872,38 @@ models and rules, with some liberties taken.</td>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_isPassthrough">
+                    <h3 id="method_isIframe">
         <div class="location">at         line 293</div>
+        <code>                    bool
+    <strong>isIframe</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return whether this template represents a single iframe</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPassthrough">
+        <div class="location">at         line 303</div>
         <code>                    bool
     <strong>isPassthrough</strong>()
         </code>
@@ -893,7 +933,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_isTransparent">
-        <div class="location">at         line 303</div>
+        <div class="location">at         line 313</div>
         <code>                    bool
     <strong>isTransparent</strong>()
         </code>
@@ -923,7 +963,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_isVoid">
-        <div class="location">at         line 313</div>
+        <div class="location">at         line 323</div>
         <code>                    bool
     <strong>isVoid</strong>()
         </code>
@@ -953,7 +993,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_preservesNewLines">
-        <div class="location">at         line 323</div>
+        <div class="location">at         line 333</div>
         <code>                    bool
     <strong>preservesNewLines</strong>()
         </code>
@@ -983,7 +1023,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_analyseContent">
-        <div class="location">at         line 331</div>
+        <div class="location">at         line 341</div>
         <code>            protected        
     <strong>analyseContent</strong>()
         </code>
@@ -1004,7 +1044,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_analyseRootNodes">
-        <div class="location">at         line 349</div>
+        <div class="location">at         line 359</div>
         <code>            protected        
     <strong>analyseRootNodes</strong>()
         </code>
@@ -1025,7 +1065,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_analyseBranches">
-        <div class="location">at         line 400</div>
+        <div class="location">at         line 410</div>
         <code>            protected        
     <strong>analyseBranches</strong>()
         </code>
@@ -1046,7 +1086,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_elementIsBlock">
-        <div class="location">at         line 618</div>
+        <div class="location">at         line 628</div>
         <code>            protected        bool
     <strong>elementIsBlock</strong>(string $elName, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1091,7 +1131,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_evaluate">
-        <div class="location">at         line 640</div>
+        <div class="location">at         line 650</div>
         <code>            protected        boolean
     <strong>evaluate</strong>(string $query, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1136,7 +1176,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_getStyle">
-        <div class="location">at         line 651</div>
+        <div class="location">at         line 661</div>
         <code>            protected        string
     <strong>getStyle</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1176,7 +1216,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_getXSLElements">
-        <div class="location">at         line 673</div>
+        <div class="location">at         line 683</div>
         <code>            protected        <a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a>
     <strong>getXSLElements</strong>(string $elName)
         </code>
@@ -1216,7 +1256,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_isFormattingSpan">
-        <div class="location">at         line 687</div>
+        <div class="location">at         line 697</div>
         <code>            protected        boolean
     <strong>isFormattingSpan</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1257,7 +1297,7 @@ and no other attributes</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getBitfield">
-        <div class="location">at         line 875</div>
+        <div class="location">at         line 885</div>
         <code>            protected        string
     <strong>getBitfield</strong>(string $elName, string $k, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1307,7 +1347,7 @@ and no other attributes</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_hasProperty">
-        <div class="location">at         line 926</div>
+        <div class="location">at         line 936</div>
         <code>            protected        bool
     <strong>hasProperty</strong>(string $elName, string $propName, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1357,7 +1397,7 @@ and no other attributes</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_match">
-        <div class="location">at         line 948</div>
+        <div class="location">at         line 958</div>
         <code>        static    protected        bool
     <strong>match</strong>(string $bitfield1, string $bitfield2)
         </code>
