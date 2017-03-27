@@ -233,6 +233,16 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_isXslChoose">isXslChoose</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+        
+                                            <p>Test whether given node is an xsl:choose element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_matchBranches">matchBranches</a>(string $childType)
         
                                             <p>Test whether all branches of current xsl:choose element share a common firstChild/lastChild</p>                </div>
@@ -686,8 +696,48 @@ Unlike the DOM 3 function, attributes order matters</p>            </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_matchBranches">
+                    <h3 id="method_isXslChoose">
         <div class="location">at         line 142</div>
+        <code>            protected        bool
+    <strong>isXslChoose</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given node is an xsl:choose element</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchBranches">
+        <div class="location">at         line 153</div>
         <code>            protected        bool
     <strong>matchBranches</strong>(string $childType)
         </code>
@@ -727,7 +777,7 @@ Unlike the DOM 3 function, attributes order matters</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_matchOnlyChild">
-        <div class="location">at         line 167</div>
+        <div class="location">at         line 178</div>
         <code>            protected        bool
     <strong>matchOnlyChild</strong>()
         </code>
@@ -757,7 +807,7 @@ Unlike the DOM 3 function, attributes order matters</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_moveFirstChildBefore">
-        <div class="location">at         line 196</div>
+        <div class="location">at         line 213</div>
         <code>            protected        void
     <strong>moveFirstChildBefore</strong>()
         </code>
@@ -787,7 +837,7 @@ Unlike the DOM 3 function, attributes order matters</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_moveLastChildAfter">
-        <div class="location">at         line 211</div>
+        <div class="location">at         line 228</div>
         <code>            protected        void
     <strong>moveLastChildAfter</strong>()
         </code>
@@ -817,7 +867,7 @@ Unlike the DOM 3 function, attributes order matters</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeChooseElement">
-        <div class="location">at         line 234</div>
+        <div class="location">at         line 251</div>
         <code>            protected        void
     <strong>optimizeChooseElement</strong>()
         </code>
@@ -847,7 +897,7 @@ Unlike the DOM 3 function, attributes order matters</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeCommonFirstChild">
-        <div class="location">at         line 258</div>
+        <div class="location">at         line 275</div>
         <code>            protected        void
     <strong>optimizeCommonFirstChild</strong>()
         </code>
@@ -877,7 +927,7 @@ Unlike the DOM 3 function, attributes order matters</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeCommonLastChild">
-        <div class="location">at         line 271</div>
+        <div class="location">at         line 288</div>
         <code>            protected        void
     <strong>optimizeCommonLastChild</strong>()
         </code>
@@ -907,7 +957,7 @@ Unlike the DOM 3 function, attributes order matters</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeCommonOnlyChild">
-        <div class="location">at         line 287</div>
+        <div class="location">at         line 304</div>
         <code>            protected        void
     <strong>optimizeCommonOnlyChild</strong>()
         </code>
@@ -938,7 +988,7 @@ the same only child (excluding the child's own descendants)</p>            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeEmptyOtherwise">
-        <div class="location">at         line 300</div>
+        <div class="location">at         line 317</div>
         <code>            protected        void
     <strong>optimizeEmptyOtherwise</strong>()
         </code>
@@ -968,7 +1018,7 @@ the same only child (excluding the child's own descendants)</p>            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeSingleBranch">
-        <div class="location">at         line 314</div>
+        <div class="location">at         line 331</div>
         <code>            protected        void
     <strong>optimizeSingleBranch</strong>()
         </code>
@@ -998,7 +1048,7 @@ the same only child (excluding the child's own descendants)</p>            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_reparentChild">
-        <div class="location">at         line 339</div>
+        <div class="location">at         line 356</div>
         <code>            protected        void
     <strong>reparentChild</strong>()
         </code>
