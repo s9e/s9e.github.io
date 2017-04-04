@@ -160,7 +160,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_normalize">
-        <div class="location">at         line 28</div>
+        <div class="location">at         line 30</div>
         <code>                    void
     <strong>normalize</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
         </code>
@@ -172,8 +172,10 @@
                     <div class="method-description">
                                     <p>Fix unescaped curly braces in HTML attributes</p>                    <p>Will replace
     <hr onclick="if(1){alert(1)}">
+    <hr title="x{x">
 with
-    <hr onclick="if(1){{alert(1)}"></p>            </div>
+    <hr onclick="if(1){{alert(1)}">
+    <hr title="x{{x"></p>            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -243,7 +245,7 @@ with
             </div>
                     <div class="method-item">
                     <h3 id="method_fixAttribute">
-        <div class="location">at         line 45</div>
+        <div class="location">at         line 47</div>
         <code>            protected        void
     <strong>fixAttribute</strong>(<a target="_blank" href="http://php.net/DOMAttr">DOMAttr</a> $attribute)
         </code>
