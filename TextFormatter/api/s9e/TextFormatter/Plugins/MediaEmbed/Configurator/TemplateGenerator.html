@@ -154,16 +154,6 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getResponsivePadding">getResponsivePadding</a>()
-        
-                                            <p>Generate and return the padding declaration used in the responsive wrapper</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
                     <a href="#method_generateAttributes">generateAttributes</a>(array $attributes)
         
                                             <p>Generate xsl:attributes elements from an array</p>                </div>
@@ -177,6 +167,36 @@
                     <a href="#method_generateStyle">generateStyle</a>(array $properties)
         
                                             <p>Generate a CSS declaration based on an array of CSS properties</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponsivePadding">getResponsivePadding</a>()
+        
+                                            <p>Generate and return the padding declaration used in the responsive wrapper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUnwrappedTemplate">getUnwrappedTemplate</a>()
+        
+                                            <p>Generate and return a responsive template for the embedded content</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWrappedTemplate">getWrappedTemplate</a>()
+        
+                                            <p>Generate and return a template for the embedded content, complete with a responsive wrapper</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -297,7 +317,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_expr">
-        <div class="location">at         line 92</div>
+        <div class="location">at         line 55</div>
         <code>            protected        string
     <strong>expr</strong>(string $expr)
         </code>
@@ -336,38 +356,8 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getResponsivePadding">
-        <div class="location">at         line 104</div>
-        <code>            protected        string
-    <strong>getResponsivePadding</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Generate and return the padding declaration used in the responsive wrapper</p>                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_generateAttributes">
-        <div class="location">at         line 135</div>
+        <div class="location">at         line 68</div>
         <code>            protected        string
     <strong>generateAttributes</strong>(array $attributes)
         </code>
@@ -407,7 +397,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateStyle">
-        <div class="location">at         line 160</div>
+        <div class="location">at         line 93</div>
         <code>            protected        string
     <strong>generateStyle</strong>(array $properties)
         </code>
@@ -446,8 +436,98 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getResponsivePadding">
+        <div class="location">at         line 111</div>
+        <code>            protected        string
+    <strong>getResponsivePadding</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate and return the padding declaration used in the responsive wrapper</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUnwrappedTemplate">
+        <div class="location">at         line 141</div>
+        <code>            protected        string
+    <strong>getUnwrappedTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate and return a responsive template for the embedded content</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWrappedTemplate">
+        <div class="location">at         line 170</div>
+        <code>            protected        string
+    <strong>getWrappedTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate and return a template for the embedded content, complete with a responsive wrapper</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_hasDynamicHeight">
-        <div class="location">at         line 178</div>
+        <div class="location">at         line 193</div>
         <code>            protected        bool
     <strong>hasDynamicHeight</strong>()
         </code>
@@ -477,7 +557,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasDynamicWidth">
-        <div class="location">at         line 188</div>
+        <div class="location">at         line 203</div>
         <code>            protected        bool
     <strong>hasDynamicWidth</strong>()
         </code>
@@ -507,7 +587,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeAttributes">
-        <div class="location">at         line 200</div>
+        <div class="location">at         line 215</div>
         <code>            protected        array
     <strong>mergeAttributes</strong>(array $defaultAttributes, array $newAttributes)
         </code>
@@ -552,7 +632,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_needsWrapper">
-        <div class="location">at         line 217</div>
+        <div class="location">at         line 232</div>
         <code>            protected        bool
     <strong>needsWrapper</strong>()
         </code>
