@@ -30,8 +30,8 @@
 							var data = JSON.parse(e.data);
 							if (data.message === 'resize_imgur')
 							{
-								width  = 28 + data.width;
-								height = 28 + data.height;
+								width  = data.width;
+								height = data.height;
 							}
 						}
 
