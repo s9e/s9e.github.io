@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>SVG sprite test</title>
+	<style>p { padding:5px; margin: 5px; border: 1px solid green; }</style>
 </head>
-<body>
+<body style="font-size:1px">
 	<p>
 		<img src="sprite.svg#emoji-1f600" width="40" height="40">
 		<img src="sprite.svg#emoji-1f601" width="40" height="40">
@@ -11,6 +12,10 @@
 	<p>
 		<span style="display:inline-block;width:40px;height:40px;background-image:url('sprite.svg#emoji-1f600')"></span>
 		<span style="display:inline-block;width:40px;height:40px;background-image:url('sprite.svg#emoji-1f601')"></span>
+	</p>
+	<p>
+		<span style="display:inline-block;width:40px;height:40px;background-image:url('sprite.svgz#emoji-1f600')"></span>
+		<span style="display:inline-block;width:40px;height:40px;background-image:url('sprite.svgz#emoji-1f601')"></span>
 	</p>
 	<p>
 		<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="sprite.svg#emoji-1f600"></use></svg>
