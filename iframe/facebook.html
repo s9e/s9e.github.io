@@ -8,8 +8,9 @@
 		<script>
 		(function(div, hash)
 		{
-			var path = (hash.indexOf('video') < 0) ? 'user/post' : 'v/video';
-			div.setAttribute('data-href', 'https://www.facebook.com/' + path + 's/' + hash.replace(/\D/g, ''));
+			var type = (hash.indexOf('video') < 0) ? 'post' : 'video',
+				path = (type === 'post') ? 'user/' : 'v/';
+			div.setAttribute('data-href', 'https://www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, ''));
 			div.className = 'fb-' + type;
 
 			addEventListener(
