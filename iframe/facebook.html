@@ -4,13 +4,18 @@
 	<head>
 		<title>&nbsp;</title>
 	</head>
-	<body style="margin:0"><div data-width="640"></div>
+	<body style="margin:0"><div class="fb-post" data-width="640"></div>
 		<script>
 		(function(div, hash)
 		{
-			var type = (hash.indexOf('video') < 0) ? 'post' : 'video';
-			div.setAttribute('data-href', 'https://www.facebook.com/user/' + type + 's/' + hash.replace(/\D/g, ''));
-			div.className = 'fb-' + type;
+			var id = hash.replace(/\D/g, '');
+			if (hash.indexOf('video') > 0)
+			{
+				location = 'https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fv%2Fvideos%2F' + id + '%2F&amp;show_text=0&amp;width=640'
+
+				return;
+			}
+			div.setAttribute('data-href', 'https://www.facebook.com/user/posts/' + id);
 
 			addEventListener(
 				'message',
