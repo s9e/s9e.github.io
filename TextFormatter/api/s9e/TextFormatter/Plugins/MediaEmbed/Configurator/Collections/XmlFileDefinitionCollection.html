@@ -114,6 +114,14 @@
                 <td class="last">{@inheritdoc}</td>
                 <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/MediaEmbed/Configurator/Collections/SiteDefinitionCollection.html#property_onDuplicateAction"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\Collections\SiteDefinitionCollection">SiteDefinitionCollection</abbr></a></small></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_configTypes">
+                                        protected                                        array
+                </td>
+                <td>$configTypes</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -379,6 +387,46 @@
                     <a href="#method___construct">__construct</a>(string $path)
         
                                             <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_castConfigValue">castConfigValue</a>(string $name, string $value)
+        
+                                            <p>Cast given config value to the appropriate type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_castToBool">castToBool</a>(string $value)
+        
+                                            <p>Cast given config value to a boolean</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_castToInt">castToInt</a>(string $value)
+        
+                                            <p>Cast given config value to an integer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertValueTypes">convertValueTypes</a>(array $config)
+        
+                                            <p>Convert known config values to the appropriate type</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1293,7 +1341,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 21</div>
+        <div class="location">at         line 30</div>
         <code>                    
     <strong>__construct</strong>(string $path)
         </code>
@@ -1323,8 +1371,173 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_castConfigValue">
+        <div class="location">at         line 50</div>
+        <code>            protected        mixed
+    <strong>castConfigValue</strong>(string $name, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cast given config value to the appropriate type</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the config value</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Config value in string form</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Config value in appropriate type</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_castToBool">
+        <div class="location">at         line 69</div>
+        <code>            protected        bool
+    <strong>castToBool</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cast given config value to a boolean</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_castToInt">
+        <div class="location">at         line 80</div>
+        <code>            protected        integer
+    <strong>castToInt</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cast given config value to an integer</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertValueTypes">
+        <div class="location">at         line 93</div>
+        <code>            protected        array
+    <strong>convertValueTypes</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert known config values to the appropriate type</p>                    <p>Will cast properties whose name is "defaultValue" or ends in "height" or "width" to integers</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>Original config</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Converted config</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_flattenConfig">
-        <div class="location">at         line 40</div>
+        <div class="location">at         line 116</div>
         <code>            protected        array
     <strong>flattenConfig</strong>(array $config)
         </code>
@@ -1364,7 +1577,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getConfigFromXmlFile">
-        <div class="location">at         line 59</div>
+        <div class="location">at         line 135</div>
         <code>            protected        mixed
     <strong>getConfigFromXmlFile</strong>(string $filepath)
         </code>
@@ -1404,7 +1617,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getElementConfig">
-        <div class="location">at         line 73</div>
+        <div class="location">at         line 149</div>
         <code>            protected        mixed
     <strong>getElementConfig</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         </code>
@@ -1444,7 +1657,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getValueFromElement">
-        <div class="location">at         line 97</div>
+        <div class="location">at         line 173</div>
         <code>            protected        mixed
     <strong>getValueFromElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         </code>
