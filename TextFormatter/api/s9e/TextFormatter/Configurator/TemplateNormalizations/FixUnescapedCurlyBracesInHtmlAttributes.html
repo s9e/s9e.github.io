@@ -66,12 +66,7 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                                                            <li><a href="../../../../s9e.html">s9e</a></li>
-                                        <li><a href="../../../../s9e/TextFormatter.html">TextFormatter</a></li>
-                                        <li><a href="../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li>
-                                        <li><a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations.html">TemplateNormalizations</a></li>
-    
-                <li>FixUnescapedCurlyBracesInHtmlAttributes</li>
+                        <li><a href="../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations.html">TemplateNormalizations</a></li><li class="backslash">\</li><li>FixUnescapedCurlyBracesInHtmlAttributes</li>
             </ol>
         </div>
                 <div id="page-content">
@@ -170,12 +165,20 @@
     
 
                     <div class="method-description">
-                                    <p>Fix unescaped curly braces in HTML attributes</p>                    <p>Will replace
-    <hr onclick="if(1){alert(1)}">
-    <hr title="x{x">
-with
-    <hr onclick="if(1){{alert(1)}">
-    <hr title="x{{x"></p>            </div>
+                                    <p>Fix unescaped curly braces in HTML attributes</p>                    <p>Will replace</p>
+
+<hr onclick="if(1){alert(1)}">
+
+<pre><code>&lt;hr title="x{x"&gt;
+</code></pre>
+
+<p>with</p>
+
+<hr onclick="if(1){{alert(1)}">
+
+<pre><code>&lt;hr title="x{{x"&gt;
+</code></pre>
+</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -215,7 +218,7 @@ with
     
 
                     <div class="method-description">
-                                    <p>Make an ASCII string lowercase</p>                                </div>
+                                    <p>Make an ASCII string lowercase</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -255,7 +258,7 @@ with
     
 
                     <div class="method-description">
-                                    <p>Fix unescaped braces in give attribute</p>                                </div>
+                                    <p>Fix unescaped braces in give attribute</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 

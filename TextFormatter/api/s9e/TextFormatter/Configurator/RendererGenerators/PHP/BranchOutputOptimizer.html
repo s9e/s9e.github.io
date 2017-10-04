@@ -66,13 +66,7 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                                                            <li><a href="../../../../../s9e.html">s9e</a></li>
-                                        <li><a href="../../../../../s9e/TextFormatter.html">TextFormatter</a></li>
-                                        <li><a href="../../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li>
-                                        <li><a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators.html">RendererGenerators</a></li>
-                                        <li><a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP.html">PHP</a></li>
-    
-                <li>BranchOutputOptimizer</li>
+                        <li><a href="../../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators.html">RendererGenerators</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP.html">PHP</a></li><li class="backslash">\</li><li>BranchOutputOptimizer</li>
             </ol>
         </div>
                 <div id="page-content">
@@ -316,7 +310,7 @@
 
                     <div class="method-description">
                                     <p>Optimize the code used to output content</p>                    <p>This method will go through the array of tokens, identify if/elseif/else blocks that contain
-identical code at the beginning or the end and move the common code outside of the block</p>            </div>
+identical code at the beginning or the end and move the common code outside of the block</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -324,7 +318,7 @@ identical code at the beginning or the end and move the common code outside of t
                     <tr>
                 <td>array</td>
                 <td>$tokens</td>
-                <td>Array of tokens from token<em>get</em>all()</td>
+                <td>Array of tokens from token_get_all()</td>
             </tr>
             </table>
 
@@ -357,7 +351,7 @@ identical code at the beginning or the end and move the common code outside of t
 
                     <div class="method-description">
                                     <p>Capture the expressions used in any number of consecutive output statements</p>                    <p>Starts looking at current index. Ends at the first token that's not part of an output
-statement</p>            </div>
+statement</p>                            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -387,7 +381,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Capture an expression used in output at current index</p>                    <p>Ends on "." or ";"</p>            </div>
+                                    <p>Capture an expression used in output at current index</p>                    <p>Ends on "." or ";"</p>                            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -417,7 +411,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Capture the source of a control structure from its keyword to its opening brace</p>                    <p>Ends after the brace, but the brace itself is not returned</p>            </div>
+                                    <p>Capture the source of a control structure from its keyword to its opening brace</p>                    <p>Ends after the brace, but the brace itself is not returned</p>                            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -447,7 +441,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Test whether the token at current index is an if/elseif/else token</p>                                </div>
+                                    <p>Test whether the token at current index is an if/elseif/else token</p>                                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -484,7 +478,7 @@ statement</p>            </div>
 <li>source: PHP code for the if block</li>
 <li>after:  array of PHP expressions to be output after the block</li>
 </ul>
-</p>            </div>
+</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -524,7 +518,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Merge two consecutive series of consecutive output expressions together</p>                                </div>
+                                    <p>Merge two consecutive series of consecutive output expressions together</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -569,7 +563,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Optimize the "head" part of a series of branches in-place</p>                                </div>
+                                    <p>Optimize the "head" part of a series of branches in-place</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -609,7 +603,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Optimize the output of given branches</p>                                </div>
+                                    <p>Optimize the output of given branches</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -654,7 +648,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Optimize the "tail" part of a series of branches in-place</p>                                </div>
+                                    <p>Optimize the "tail" part of a series of branches in-place</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -694,7 +688,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Parse the if, elseif or else branch starting at current index</p>                    <p>Ends at the last }</p>            </div>
+                                    <p>Parse the if, elseif or else branch starting at current index</p>                    <p>Ends at the last }</p>                            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -724,7 +718,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Parse the if block (including elseif/else branches) starting at current index</p>                                </div>
+                                    <p>Parse the if block (including elseif/else branches) starting at current index</p>                                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -754,7 +748,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Serialize a recorded branch back to PHP</p>                                </div>
+                                    <p>Serialize a recorded branch back to PHP</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -794,7 +788,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Serialize a series of recorded branch back to PHP</p>                                </div>
+                                    <p>Serialize a series of recorded branch back to PHP</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -834,7 +828,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Serialize a series of output expressions</p>                                </div>
+                                    <p>Serialize a series of output expressions</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -874,7 +868,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Serialize a token back to PHP</p>                                </div>
+                                    <p>Serialize a token back to PHP</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -882,7 +876,7 @@ statement</p>            </div>
                     <tr>
                 <td>array|string</td>
                 <td>$token</td>
-                <td>Token from token<em>get</em>all()</td>
+                <td>Token from token_get_all()</td>
             </tr>
             </table>
 
@@ -914,7 +908,7 @@ statement</p>            </div>
     
 
                     <div class="method-description">
-                                    <p>Attempt to move past output assignment at current index</p>                                </div>
+                                    <p>Attempt to move past output assignment at current index</p>                                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
