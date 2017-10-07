@@ -321,6 +321,16 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_isAfterWhitespace">isAfterWhitespace</a>(integer $pos)
+        
+                                            <p>Test whether given position is preceded by whitespace</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_isAlnum">isAlnum</a>(string $chr)
         
                                             <p>Test whether given character is alphanumeric</p>                </div>
@@ -331,9 +341,29 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_isBeforeWhitespace">isBeforeWhitespace</a>(integer $pos)
+        
+                                            <p>Test whether given position is followed by whitespace</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_isSurroundedByAlnum">isSurroundedByAlnum</a>(integer $matchPos, integer $matchLen)
         
                                             <p>Test whether a length of text is surrounded by alphanumeric characters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isWhitespace">isWhitespace</a>(string $chr)
+        
+                                            <p>Test whether given character is an ASCII whitespace character</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1228,8 +1258,48 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_isAlnum">
+                    <h3 id="method_isAfterWhitespace">
         <div class="location">at         line 416</div>
+        <code>            protected        bool
+    <strong>isAfterWhitespace</strong>(integer $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given position is preceded by whitespace</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAlnum">
+        <div class="location">at         line 427</div>
         <code>            protected        bool
     <strong>isAlnum</strong>(string $chr)
         </code>
@@ -1268,8 +1338,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_isBeforeWhitespace">
+        <div class="location">at         line 438</div>
+        <code>            protected        bool
+    <strong>isBeforeWhitespace</strong>(integer $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given position is followed by whitespace</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isSurroundedByAlnum">
-        <div class="location">at         line 428</div>
+        <div class="location">at         line 450</div>
         <code>            protected        bool
     <strong>isSurroundedByAlnum</strong>(integer $matchPos, integer $matchLen)
         </code>
@@ -1313,8 +1423,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_isWhitespace">
+        <div class="location">at         line 463</div>
+        <code>            protected        bool
+    <strong>isWhitespace</strong>(string $chr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given character is an ASCII whitespace character</p>                    <p>NOTE: newlines are normalized to LF before parsing so we don't have to check for CR</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$chr</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_markBoundary">
-        <div class="location">at         line 439</div>
+        <div class="location">at         line 474</div>
         <code>            protected        void
     <strong>markBoundary</strong>(integer $pos)
         </code>
@@ -1354,7 +1504,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchBlockLevelMarkup">
-        <div class="location">at         line 449</div>
+        <div class="location">at         line 484</div>
         <code>            protected        void
     <strong>matchBlockLevelMarkup</strong>()
         </code>
@@ -1384,7 +1534,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchEmphasis">
-        <div class="location">at         line 853</div>
+        <div class="location">at         line 888</div>
         <code>            protected        void
     <strong>matchEmphasis</strong>()
         </code>
@@ -1414,7 +1564,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchEmphasisByCharacter">
-        <div class="location">at         line 866</div>
+        <div class="location">at         line 901</div>
         <code>            protected        void
     <strong>matchEmphasisByCharacter</strong>(string $character, string $regexp)
         </code>
@@ -1459,7 +1609,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchForcedLineBreaks">
-        <div class="location">at         line 885</div>
+        <div class="location">at         line 920</div>
         <code>            protected        void
     <strong>matchForcedLineBreaks</strong>()
         </code>
@@ -1489,7 +1639,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchImages">
-        <div class="location">at         line 900</div>
+        <div class="location">at         line 935</div>
         <code>            protected        void
     <strong>matchImages</strong>()
         </code>
@@ -1519,7 +1669,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchInlineImages">
-        <div class="location">at         line 922</div>
+        <div class="location">at         line 957</div>
         <code>            protected        void
     <strong>matchInlineImages</strong>()
         </code>
@@ -1549,7 +1699,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchReferenceImages">
-        <div class="location">at         line 947</div>
+        <div class="location">at         line 982</div>
         <code>            protected        void
     <strong>matchReferenceImages</strong>()
         </code>
@@ -1579,7 +1729,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchInlineCode">
-        <div class="location">at         line 982</div>
+        <div class="location">at         line 1017</div>
         <code>            protected        void
     <strong>matchInlineCode</strong>()
         </code>
@@ -1609,7 +1759,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchInlineLinks">
-        <div class="location">at         line 1015</div>
+        <div class="location">at         line 1050</div>
         <code>            protected        void
     <strong>matchInlineLinks</strong>()
         </code>
@@ -1639,7 +1789,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchLinkReferences">
-        <div class="location">at         line 1039</div>
+        <div class="location">at         line 1074</div>
         <code>            protected        void
     <strong>matchLinkReferences</strong>()
         </code>
@@ -1669,7 +1819,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchLinks">
-        <div class="location">at         line 1071</div>
+        <div class="location">at         line 1106</div>
         <code>            protected        void
     <strong>matchLinks</strong>()
         </code>
@@ -1699,7 +1849,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchReferenceLinks">
-        <div class="location">at         line 1088</div>
+        <div class="location">at         line 1123</div>
         <code>            protected        void
     <strong>matchReferenceLinks</strong>()
         </code>
@@ -1729,7 +1879,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchStrikethrough">
-        <div class="location">at         line 1118</div>
+        <div class="location">at         line 1153</div>
         <code>            protected        void
     <strong>matchStrikethrough</strong>()
         </code>
@@ -1759,7 +1909,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchSuperscript">
-        <div class="location">at         line 1146</div>
+        <div class="location">at         line 1181</div>
         <code>            protected        void
     <strong>matchSuperscript</strong>()
         </code>
@@ -1789,7 +1939,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwrite">
-        <div class="location">at         line 1185</div>
+        <div class="location">at         line 1220</div>
         <code>            protected        void
     <strong>overwrite</strong>(integer $pos, integer $len)
         </code>
@@ -1834,7 +1984,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_processEmphasisBlock">
-        <div class="location">at         line 1199</div>
+        <div class="location">at         line 1234</div>
         <code>            protected        void
     <strong>processEmphasisBlock</strong>(array $block)
         </code>
@@ -1874,7 +2024,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setLinkAttributes">
-        <div class="location">at         line 1271</div>
+        <div class="location">at         line 1309</div>
         <code>            protected        void
     <strong>setLinkAttributes</strong>(<a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $linkInfo, string $attrName)
         </code>
