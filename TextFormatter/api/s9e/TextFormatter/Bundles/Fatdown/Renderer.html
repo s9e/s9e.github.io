@@ -79,7 +79,7 @@
     </div>
 
     <p>    class
-    <strong>Renderer</strong>        extends <a href="../../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
+    <strong>Renderer</strong>        extends <a href="../../../../s9e/TextFormatter/Renderers/PHP.html"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a>
 </p>
 
         
@@ -98,6 +98,78 @@
                 <td>$params</td>
                 <td class="last"></td>
                 <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attributes">
+                                        protected                                        array[]
+                </td>
+                <td>$attributes</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#property_attributes"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dynamic">
+                                        protected                                        
+                </td>
+                <td>$dynamic</td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_enableQuickRenderer">
+                                                                                
+                </td>
+                <td>$enableQuickRenderer</td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_out">
+                                        protected                                        string
+                </td>
+                <td>$out</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#property_out"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quickBranches">
+                                        protected                                        
+                </td>
+                <td>$quickBranches</td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quickRegexp">
+                                        protected                                        
+                </td>
+                <td>$quickRegexp</td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quickRenderingTest">
+                                        protected                                        string
+                </td>
+                <td>$quickRenderingTest</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#property_quickRenderingTest"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_static">
+                                        protected                                        
+                </td>
+                <td>$static</td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_xpath">
+                                        protected                                        <a target="_blank" href="http://php.net/DOMXPath">DOMXPath</a>
+                </td>
+                <td>$xpath</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#property_xpath"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_tagBranches">
@@ -151,7 +223,7 @@
                     <a href="#method_renderRichText">renderRichText</a>(string $xml)
         
                                             <p>Render an intermediate representation of rich text</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderRichText"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -225,6 +297,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderNode">renderNode</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+        
+                                            <p>Render given DOMNode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8 type">
@@ -232,51 +314,107 @@
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method___sleep"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_at">at</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $root, string $query = null)
+        
+                                            <p>Render the content of given node</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_at"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_canQuickRender">canQuickRender</a>(string $xml)
+        
+                                            <p>Test whether given XML can be rendered with the Quick renderer</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_canQuickRender"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuickTextContent">getQuickTextContent</a>(string $xml)
+        
+                                            <p>Extract the text content from given XML</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_getQuickTextContent"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasNonNullValues">hasNonNullValues</a>(array $array)
+        
+                                            <p>Test whether given array has any non-null values</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_hasNonNullValues"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchAttributes">matchAttributes</a>(string $xml)
+        
+                                            <p>Capture and return the attributes of an XML element</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_matchAttributes"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderQuick">renderQuick</a>(string $xml)
+        
+                                            <p>Render an intermediate representation using the Quick renderer</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuick"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderQuickCallback">renderQuickCallback</a>(array $m)
+        
+                                            <p>Render a string matched by the Quick renderer</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuickCallback"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderQuickSelfClosingTag">renderQuickSelfClosingTag</a>(array $m)
+        
+                                            <p>Render a self-closing tag using the Quick renderer</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuickSelfClosingTag"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderQuickTemplate">renderQuickTemplate</a>(integer $qb, string $xml)
+        
+                                            <p>Render a string matched by the Quick renderer using a generated PHP template</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_at">at</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $root)
+                    <a href="#method_reset">reset</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_renderQuick">renderQuick</a>($xml)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_quick">quick</a>($m)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_hasNonNullValues">hasNonNullValues</a>($array)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
+                                            <p>Reset object properties that are populated during rendering</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_reset"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
             </div>
             </div>
 
@@ -406,8 +544,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderRichText">
-        <div class="location">at         line 20</div>
-        <code>                    string
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderRichText"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 257</div>
+        <code>            protected        string
     <strong>renderRichText</strong>(string $xml)
         </code>
     </h3>
@@ -720,8 +858,48 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method___sleep">
+                    <h3 id="method_renderNode">
         <div class="location">at         line 14</div>
+        <code>            protected        void
+    <strong>renderNode</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render given DOMNode</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___sleep">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method___sleep"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 70</div>
         <code>                    
     <strong>__sleep</strong>()
         </code>
@@ -740,15 +918,17 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_at">
-        <div class="location">at         line 35</div>
-        <code>            protected        
-    <strong>at</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $root)
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_at"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 84</div>
+        <code>            protected        void
+    <strong>at</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $root, string $query = null)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Render the content of given node</p>                    <p>Matches the behaviour of an xsl:apply-templates element</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -756,11 +936,25 @@
                     <tr>
                 <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
                 <td>$root</td>
-                <td></td>
+                <td>Context node</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>XPath query used to filter which child nodes to render</td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -768,28 +962,39 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_renderQuick">
-        <div class="location">at         line 54</div>
-        <code>            protected        
-    <strong>renderQuick</strong>($xml)
+                    <h3 id="method_canQuickRender">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_canQuickRender"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 107</div>
+        <code>            protected        bool
+    <strong>canQuickRender</strong>(string $xml)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Test whether given XML can be rendered with the Quick renderer</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$xml</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -797,28 +1002,39 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_quick">
-        <div class="location">at         line 67</div>
-        <code>            protected        
-    <strong>quick</strong>($m)
+                    <h3 id="method_getQuickTextContent">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_getQuickTextContent"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 120</div>
+        <code>            protected        string
+    <strong>getQuickTextContent</strong>(string $xml)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Extract the text content from given XML</p>                    <p>NOTE: numeric character entities are decoded beforehand, we don't need to decode them here</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
-                <td>$m</td>
-                <td></td>
+                <td>string</td>
+                <td>$xml</td>
+                <td>Original XML</td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Text content, with special characters decoded</td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -827,27 +1043,273 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasNonNullValues">
-        <div class="location">at         line 131</div>
-        <code>        static    protected        
-    <strong>hasNonNullValues</strong>($array)
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_hasNonNullValues"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 131</div>
+        <code>            protected        bool
+    <strong>hasNonNullValues</strong>(array $array)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Test whether given array has any non-null values</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$array</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchAttributes">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_matchAttributes"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 152</div>
+        <code>            protected        array
+    <strong>matchAttributes</strong>(string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Capture and return the attributes of an XML element</p>                    <p>NOTE: XML character entities are left as-is</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>Element in XML form</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Dictionary of [attrName => attrValue]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderQuick">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuick"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 171</div>
+        <code>            protected        string
+    <strong>renderQuick</strong>(string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render an intermediate representation using the Quick renderer</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>Intermediate representation</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderQuickCallback">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuickCallback"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 196</div>
+        <code>            protected        string
+    <strong>renderQuickCallback</strong>(array $m)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render a string matched by the Quick renderer</p>                    <p>This stub should be overwritten by generated renderers</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$m</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderQuickSelfClosingTag">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuickSelfClosingTag"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 226</div>
+        <code>            protected        string
+    <strong>renderQuickSelfClosingTag</strong>(array $m)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render a self-closing tag using the Quick renderer</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$m</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderQuickTemplate">
+        <div class="location">at         line 35</div>
+        <code>            protected        string
+    <strong>renderQuickTemplate</strong>(integer $qb, string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render a string matched by the Quick renderer using a generated PHP template</p>                    <p>This stub should be overwritten by generated renderers</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$qb</td>
+                <td>Template's index in the quick branch table</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_reset"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 286</div>
+        <code>            protected        void
+    <strong>reset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset object properties that are populated during rendering</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
