@@ -203,26 +203,6 @@ original source</p>                </div>
                                             <p>Replace all instances of a uniqid with a PCRE replacement in a string</p>                </div>
                 <div class="col-md-2"></div>
             </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_generateConditionals">generateConditionals</a>(string $expr, array $statements)
-        
-                                            <p>Generate a series of conditionals</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;array
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_generateBranchTable">generateBranchTable</a>(string $expr, array $statements)
-        
-                                            <p>Generate a branch table (with its source) for an array of PHP statements</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
             </div>
 
 
@@ -271,7 +251,7 @@ original source</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_export">
-        <div class="location">at         line 106</div>
+        <div class="location">at         line 104</div>
         <code>        static    protected        string
     <strong>export</strong>(array $arr)
         </code>
@@ -311,7 +291,7 @@ original source</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getRenderingStrategy">
-        <div class="location">at         line 128</div>
+        <div class="location">at         line 126</div>
         <code>        static            array|bool
     <strong>getRenderingStrategy</strong>(string $php)
         </code>
@@ -352,7 +332,7 @@ original source</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getQuickRendering">
-        <div class="location">at         line 200</div>
+        <div class="location">at         line 198</div>
         <code>        static    protected        array|bool
     <strong>getQuickRendering</strong>(string $php)
         </code>
@@ -397,7 +377,7 @@ When the whole structure is parsed, there are 3 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_convertPHP">
-        <div class="location">at         line 384</div>
+        <div class="location">at         line 382</div>
         <code>        static    protected        void
     <strong>convertPHP</strong>(string $head, string $tail, bool $passthrough)
         </code>
@@ -447,7 +427,7 @@ When the whole structure is parsed, there are 3 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_replacePHP">
-        <div class="location">at         line 437</div>
+        <div class="location">at         line 435</div>
         <code>        static    protected        void
     <strong>replacePHP</strong>(string $php)
         </code>
@@ -487,7 +467,7 @@ When the whole structure is parsed, there are 3 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_buildPHP">
-        <div class="location">at         line 525</div>
+        <div class="location">at         line 523</div>
         <code>        static    protected        string[]
     <strong>buildPHP</strong>(array $branches)
         </code>
@@ -528,7 +508,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getBranchesPassthrough">
-        <div class="location">at         line 554</div>
+        <div class="location">at         line 552</div>
         <code>        static    protected        integer[]
     <strong>getBranchesPassthrough</strong>(array $branches)
         </code>
@@ -568,7 +548,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getDynamicRendering">
-        <div class="location">at         line 578</div>
+        <div class="location">at         line 576</div>
         <code>        static    protected        array|bool
     <strong>getDynamicRendering</strong>(string $php)
         </code>
@@ -608,7 +588,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getStaticRendering">
-        <div class="location">at         line 716</div>
+        <div class="location">at         line 714</div>
         <code>        static    protected        bool|string
     <strong>getStaticRendering</strong>(string $php)
         </code>
@@ -648,7 +628,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_replacePlaceholder">
-        <div class="location">at         line 740</div>
+        <div class="location">at         line 738</div>
         <code>        static    protected        void
     <strong>replacePlaceholder</strong>(string $str, string $uniqid, integer $index)
         </code>
@@ -687,96 +667,6 @@ original source</p>                                                </div>
         <tr>
             <td>void</td>
             <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_generateConditionals">
-        <div class="location">at         line 767</div>
-        <code>        static            string
-    <strong>generateConditionals</strong>(string $expr, array $statements)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Generate a series of conditionals</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$expr</td>
-                <td>Expression tested for equality</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$statements</td>
-                <td>List of PHP statements</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_generateBranchTable">
-        <div class="location">at         line 807</div>
-        <code>        static            array
-    <strong>generateBranchTable</strong>(string $expr, array $statements)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Generate a branch table (with its source) for an array of PHP statements</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$expr</td>
-                <td>PHP expression used to determine the branch</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$statements</td>
-                <td>Map of [value => statement]</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td>Two elements: first is the branch table, second is the source</td>
         </tr>
     </table>
 

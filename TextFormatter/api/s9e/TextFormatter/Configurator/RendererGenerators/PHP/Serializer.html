@@ -92,22 +92,6 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_branchTableThreshold">
-                                                                                integer
-                </td>
-                <td>$branchTableThreshold</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_branchTables">
-                                                                                array
-                </td>
-                <td>$branchTables</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_convertor">
                                                                                 <a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor">XPathConvertor</abbr></a>
                 </td>
@@ -187,6 +171,16 @@
                     <a href="#method_escapePHPOutput">escapePHPOutput</a>(string $php, string $context)
         
                                             <p>Escape the output of given PHP expression</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasMultipleCases">hasMultipleCases</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
+        
+                                            <p>Test whether given switch has more than one non-default case</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -307,7 +301,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 41</div>
+        <div class="location">at         line 31</div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -328,7 +322,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_convertAttributeValueTemplate">
-        <div class="location">at         line 56</div>
+        <div class="location">at         line 46</div>
         <code>            protected        string
     <strong>convertAttributeValueTemplate</strong>(string $attrValue)
         </code>
@@ -368,7 +362,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_convertCondition">
-        <div class="location">at         line 83</div>
+        <div class="location">at         line 73</div>
         <code>                    string
     <strong>convertCondition</strong>(string $expr)
         </code>
@@ -409,7 +403,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_convertXPath">
-        <div class="location">at         line 96</div>
+        <div class="location">at         line 86</div>
         <code>                    string
     <strong>convertXPath</strong>(string $expr)
         </code>
@@ -449,7 +443,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_escapeLiteral">
-        <div class="location">at         line 110</div>
+        <div class="location">at         line 100</div>
         <code>            protected        string
     <strong>escapeLiteral</strong>(string $text, string $context)
         </code>
@@ -494,7 +488,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_escapePHPOutput">
-        <div class="location">at         line 129</div>
+        <div class="location">at         line 119</div>
         <code>            protected        string
     <strong>escapePHPOutput</strong>(string $php, string $context)
         </code>
@@ -538,8 +532,48 @@ with the corresponding DOM method for performance reasons</p>                   
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_hasMultipleCases">
+        <div class="location">at         line 137</div>
+        <code>            protected        bool
+    <strong>hasMultipleCases</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given switch has more than one non-default case</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$switch</td>
+                <td><switch/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_serializeApplyTemplates">
-        <div class="location">at         line 147</div>
+        <div class="location">at         line 150</div>
         <code>            protected        string
     <strong>serializeApplyTemplates</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $applyTemplates)
         </code>
@@ -579,7 +613,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeAttribute">
-        <div class="location">at         line 165</div>
+        <div class="location">at         line 168</div>
         <code>            protected        string
     <strong>serializeAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $attribute)
         </code>
@@ -619,7 +653,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serialize">
-        <div class="location">at         line 186</div>
+        <div class="location">at         line 189</div>
         <code>                    string
     <strong>serialize</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
         </code>
@@ -659,7 +693,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeChildren">
-        <div class="location">at         line 199</div>
+        <div class="location">at         line 200</div>
         <code>            protected        string
     <strong>serializeChildren</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
         </code>
@@ -699,7 +733,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeCloseTag">
-        <div class="location">at         line 217</div>
+        <div class="location">at         line 218</div>
         <code>            protected        string
     <strong>serializeCloseTag</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $closeTag)
         </code>
@@ -739,7 +773,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeComment">
-        <div class="location">at         line 262</div>
+        <div class="location">at         line 263</div>
         <code>            protected        string
     <strong>serializeComment</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $comment)
         </code>
@@ -779,7 +813,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeCopyOfAttributes">
-        <div class="location">at         line 275</div>
+        <div class="location">at         line 276</div>
         <code>            protected        string
     <strong>serializeCopyOfAttributes</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $copyOfAttributes)
         </code>
@@ -819,7 +853,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeElement">
-        <div class="location">at         line 293</div>
+        <div class="location">at         line 294</div>
         <code>            protected        string
     <strong>serializeElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         </code>
@@ -859,7 +893,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeHash">
-        <div class="location">at         line 355</div>
+        <div class="location">at         line 356</div>
         <code>            protected        string
     <strong>serializeHash</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
         </code>
@@ -899,7 +933,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeOutput">
-        <div class="location">at         line 405</div>
+        <div class="location">at         line 394</div>
         <code>            protected        string
     <strong>serializeOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $output)
         </code>
@@ -939,7 +973,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeSwitch">
-        <div class="location">at         line 429</div>
+        <div class="location">at         line 418</div>
         <code>            protected        string
     <strong>serializeSwitch</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
         </code>
