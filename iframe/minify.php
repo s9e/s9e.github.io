@@ -18,7 +18,7 @@ function minify($m)
 	$content = http_build_query($params) . '&output_info=errors';
 
 	$response = file_get_contents(
-		'http://closure-compiler.appspot.com/compile',
+		'https://closure-compiler.appspot.com/compile',
 		false,
 		stream_context_create([
 			'http' => [
@@ -53,7 +53,7 @@ foreach (glob(__DIR__ . '/*.html') as $source)
 
 	// Remove quotes around attribute values
 	$html = preg_replace_callback(
-		'(</?[^>]+)',
+		'(<[^>]+)',
 		function ($m)
 		{
 			return preg_replace('(=""|(=)"([^\\s<=>"]*)")', '$1$2', $m[0]);
