@@ -193,7 +193,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;array
+                    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_parseTokens">parseTokens</a>(string $definition)
@@ -229,6 +229,16 @@
                     <a href="#method_isFilter">isFilter</a>(string $tokenId)
         
                                             <p>Test whether a token's name is the name of a filter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseOptionString">parseOptionString</a>(string $string)
+        
+                                            <p>Parse the option string into an associative array</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -464,7 +474,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
                     <div class="method-item">
                     <h3 id="method_parseTokens">
         <div class="location">at         line 572</div>
-        <code>        static    protected        array
+        <code>            protected        array
     <strong>parseTokens</strong>(string $definition)
         </code>
     </h3>
@@ -503,7 +513,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
             </div>
                     <div class="method-item">
                     <h3 id="method_generateAttribute">
-        <div class="location">at         line 686</div>
+        <div class="location">at         line 664</div>
         <code>            protected        <a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a>
     <strong>generateAttribute</strong>(array $token)
         </code>
@@ -543,7 +553,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
             </div>
                     <div class="method-item">
                     <h3 id="method_appendFilters">
-        <div class="location">at         line 799</div>
+        <div class="location">at         line 777</div>
         <code>            protected        void
     <strong>appendFilters</strong>(<a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $attribute, string $filters)
         </code>
@@ -588,7 +598,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
             </div>
                     <div class="method-item">
                     <h3 id="method_isFilter">
-        <div class="location">at         line 820</div>
+        <div class="location">at         line 798</div>
         <code>            protected        bool
     <strong>isFilter</strong>(string $tokenId)
         </code>
@@ -617,6 +627,46 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
         <tr>
             <td>bool</td>
             <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseOptionString">
+        <div class="location">at         line 829</div>
+        <code>            protected        array
+    <strong>parseOptionString</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the option string into an associative array</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td>Serialized options</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Associative array of options</td>
         </tr>
     </table>
 
