@@ -107,6 +107,62 @@
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_text"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a></small></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_closeEm">
+                                        protected                                        bool
+                </td>
+                <td>$closeEm</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_closeStrong">
+                                        protected                                        bool
+                </td>
+                <td>$closeStrong</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_emPos">
+                                        protected                                        integer
+                </td>
+                <td>$emPos</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_emEndPos">
+                                        protected                                        integer
+                </td>
+                <td>$emEndPos</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_remaining">
+                                        protected                                        integer
+                </td>
+                <td>$remaining</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_strongPos">
+                                        protected                                        integer
+                </td>
+                <td>$strongPos</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_strongEndPos">
+                                        protected                                        integer
+                </td>
+                <td>$strongEndPos</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -132,6 +188,36 @@
                     <a href="#method_parse">parse</a>()
         
                                             <p>Parse the prepared text from stored parser</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_adjustEndingPositions">adjustEndingPositions</a>()
+        
+                                            <p>Adjust the ending position of current EM and STRONG spans</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_adjustStartingPositions">adjustStartingPositions</a>()
+        
+                                            <p>Adjust the starting position of current EM and STRONG spans</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_closeSpans">closeSpans</a>()
+        
+                                            <p>End current valid EM and STRONG spans</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -169,9 +255,29 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_openSpans">openSpans</a>(integer $pos)
+        
+                                            <p>Open EM and STRONG spans whose content starts at given position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_processEmphasisBlock">processEmphasisBlock</a>(array $block)
         
                                             <p>Process a list of emphasis markup strings</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processEmphasisMatch">processEmphasisMatch</a>(integer $matchPos, integer $matchLen)
+        
+                                            <p>Process an emphasis mark</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -216,7 +322,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at         line 15</div>
+        <div class="location">at         line 50</div>
         <code>                    void
     <strong>parse</strong>()
         </code>
@@ -245,8 +351,100 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_adjustEndingPositions">
+        <div class="location">at         line 61</div>
+        <code>            protected        void
+    <strong>adjustEndingPositions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adjust the ending position of current EM and STRONG spans</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_adjustStartingPositions">
+        <div class="location">at         line 85</div>
+        <code>            protected        void
+    <strong>adjustStartingPositions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adjust the starting position of current EM and STRONG spans</p>                    <p>If both EM and STRONG are set to start at the same position, we adjust their position
+to match the order they are closed. If they start and end at the same position, STRONG
+starts before EM to match Markdown's behaviour</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_closeSpans">
+        <div class="location">at         line 105</div>
+        <code>            protected        void
+    <strong>closeSpans</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>End current valid EM and STRONG spans</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_parseEmphasisByCharacter">
-        <div class="location">at         line 28</div>
+        <div class="location">at         line 128</div>
         <code>            protected        void
     <strong>parseEmphasisByCharacter</strong>(string $character, string $regexp)
         </code>
@@ -291,7 +489,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getEmphasisByBlock">
-        <div class="location">at         line 49</div>
+        <div class="location">at         line 149</div>
         <code>            protected        array[]
     <strong>getEmphasisByBlock</strong>(string $regexp, integer $pos)
         </code>
@@ -336,7 +534,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_ignoreEmphasis">
-        <div class="location">at         line 87</div>
+        <div class="location">at         line 187</div>
         <code>            protected        bool
     <strong>ignoreEmphasis</strong>(integer $matchPos, integer $matchLen)
         </code>
@@ -380,8 +578,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_openSpans">
+        <div class="location">at         line 199</div>
+        <code>            protected        void
+    <strong>openSpans</strong>(integer $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Open EM and STRONG spans whose content starts at given position</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_processEmphasisBlock">
-        <div class="location">at         line 99</div>
+        <div class="location">at         line 217</div>
         <code>            protected        void
     <strong>processEmphasisBlock</strong>(array $block)
         </code>
@@ -400,6 +638,51 @@
                 <td>array</td>
                 <td>$block</td>
                 <td>List of [matchPos, matchLen] pairs</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processEmphasisMatch">
+        <div class="location">at         line 234</div>
+        <code>            protected        void
+    <strong>processEmphasisMatch</strong>(integer $matchPos, integer $matchLen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process an emphasis mark</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$matchPos</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$matchLen</td>
+                <td></td>
             </tr>
             </table>
 
