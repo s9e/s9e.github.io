@@ -98,6 +98,18 @@ would entail. Additionally, it does not evaluate the scope of <xsl:apply-templat
 instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:apply-templates/></p>                    </div>
     
     
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XMLNS_XSL</td>
+                <td class="last">
+                    <p><em>XSL namespace</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
     
             <h2>Properties</h2>
 
@@ -123,6 +135,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                                         protected                                        bool
                 </td>
                 <td>$allowsText</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_branches">
+                                        protected                                        array[]
+                </td>
+                <td>$branches</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -444,7 +464,97 @@ models and rules, with some liberties taken.</td>
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_elementIsBlock">elementIsBlock</a>(string $elName, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+                    <a href="#method_anyBranchHasProperty">anyBranchHasProperty</a>(string $propName)
+        
+                                            <p>Test whether any branch of this template has an element that has given property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeBitfields">computeBitfields</a>()
+        
+                                            <p>Compute the allowChildBitfields and denyDescendantBitfield properties</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeAllowsChildElements">computeAllowsChildElements</a>()
+        
+                                            <p>Compute the allowsChildElements property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeAllowsText">computeAllowsText</a>()
+        
+                                            <p>Compute the allowsText property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeFormattingElement">computeFormattingElement</a>()
+        
+                                            <p>Compute the isFormattingElement property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeIsEmpty">computeIsEmpty</a>()
+        
+                                            <p>Compute the isEmpty property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeIsTransparent">computeIsTransparent</a>()
+        
+                                            <p>Compute the isTransparent property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeIsVoid">computeIsVoid</a>()
+        
+                                            <p>Compute the isVoid property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computePreservesNewLines">computePreservesNewLines</a>()
+        
+                                            <p>Compute the preservesNewLines property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_elementIsBlock">elementIsBlock</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         
                                             <p>Test whether given element is a block-level element</p>                </div>
                 <div class="col-md-2"></div>
@@ -454,19 +564,9 @@ models and rules, with some liberties taken.</td>
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getStyle">getStyle</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+                    <a href="#method_getStyle">getStyle</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node, bool $deep = false)
         
                                             <p>Retrieve and return the inline style assigned to given element</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getXSLElements">getXSLElements</a>(string $elName)
-        
-                                            <p>Get all XSL elements of given name</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -481,12 +581,22 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_storeLeafNodes">storeLeafNodes</a>()
+        
+                                            <p>Store the names of every leaf node</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getBitfield">getBitfield</a>(string $elName, string $k, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+                    <a href="#method_getBitfield">getBitfield</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element, string $k)
         
-                                            <p>Get the bitfield value for a given element name in a given context</p>                </div>
+                                            <p>Get the bitfield value for a given element in a given context</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -517,7 +627,7 @@ models and rules, with some liberties taken.</td>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 134</div>
+        <div class="location">at         line 144</div>
         <code>                    
     <strong>__construct</strong>(string $template)
         </code>
@@ -548,7 +658,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_allowsChild">
-        <div class="location">at         line 150</div>
+        <div class="location">at         line 160</div>
         <code>                    bool
     <strong>allowsChild</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a> $child)
         </code>
@@ -588,7 +698,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_allowsDescendant">
-        <div class="location">at         line 183</div>
+        <div class="location">at         line 188</div>
         <code>                    bool
     <strong>allowsDescendant</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a> $descendant)
         </code>
@@ -1004,7 +1114,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_analyseRootNodes">
-        <div class="location">at         line 352</div>
+        <div class="location">at         line 351</div>
         <code>            protected        
     <strong>analyseRootNodes</strong>()
         </code>
@@ -1025,7 +1135,7 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_analyseBranches">
-        <div class="location">at         line 403</div>
+        <div class="location">at         line 390</div>
         <code>            protected        
     <strong>analyseBranches</strong>()
         </code>
@@ -1045,10 +1155,295 @@ models and rules, with some liberties taken.</td>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_elementIsBlock">
-        <div class="location">at         line 607</div>
+                    <h3 id="method_anyBranchHasProperty">
+        <div class="location">at         line 416</div>
         <code>            protected        bool
-    <strong>elementIsBlock</strong>(string $elName, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+    <strong>anyBranchHasProperty</strong>(string $propName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether any branch of this template has an element that has given property</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeBitfields">
+        <div class="location">at         line 437</div>
+        <code>            protected        void
+    <strong>computeBitfields</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the allowChildBitfields and denyDescendantBitfield properties</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeAllowsChildElements">
+        <div class="location">at         line 483</div>
+        <code>            protected        void
+    <strong>computeAllowsChildElements</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the allowsChildElements property</p>                    <p>A template allows child Elements if it has at least one xsl:apply-templates and none of its
+ancestors have the text-only ("to") property</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeAllowsText">
+        <div class="location">at         line 495</div>
+        <code>            protected        void
+    <strong>computeAllowsText</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the allowsText property</p>                    <p>A template is said to allow text if none of the leaf elements disallow text</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeFormattingElement">
+        <div class="location">at         line 518</div>
+        <code>            protected        void
+    <strong>computeFormattingElement</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the isFormattingElement property</p>                    <p>A template is said to be a formatting element if all (non-zero) of its branches are entirely
+composed of formatting elements</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeIsEmpty">
+        <div class="location">at         line 543</div>
+        <code>            protected        void
+    <strong>computeIsEmpty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the isEmpty property</p>                    <p>A template is said to be empty if it has no xsl:apply-templates elements or any there is a empty
+element ancestor to an xsl:apply-templates element</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeIsTransparent">
+        <div class="location">at         line 556</div>
+        <code>            protected        void
+    <strong>computeIsTransparent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the isTransparent property</p>                    <p>A template is said to be transparent if it has at least one branch and no non-transparent
+elements in its path</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeIsVoid">
+        <div class="location">at         line 581</div>
+        <code>            protected        void
+    <strong>computeIsVoid</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the isVoid property</p>                    <p>A template is said to be void if it has no xsl:apply-templates elements or any there is a void
+element ancestor to an xsl:apply-templates element</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computePreservesNewLines">
+        <div class="location">at         line 591</div>
+        <code>            protected        void
+    <strong>computePreservesNewLines</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the preservesNewLines property</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_elementIsBlock">
+        <div class="location">at         line 617</div>
+        <code>            protected        bool
+    <strong>elementIsBlock</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         </code>
     </h3>
     <div class="details">
@@ -1062,14 +1457,9 @@ models and rules, with some liberties taken.</td>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$elName</td>
-                <td>Element name</td>
-            </tr>
-                    <tr>
                 <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
-                <td>$node</td>
-                <td>Context node</td>
+                <td>$element</td>
+                <td></td>
             </tr>
             </table>
 
@@ -1091,9 +1481,9 @@ models and rules, with some liberties taken.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_getStyle">
-        <div class="location">at         line 628</div>
+        <div class="location">at         line 639</div>
         <code>            protected        string
-    <strong>getStyle</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+    <strong>getStyle</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node, bool $deep = false)
         </code>
     </h3>
     <div class="details">
@@ -1110,6 +1500,11 @@ models and rules, with some liberties taken.</td>
                 <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
                 <td>$node</td>
                 <td>Context node</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$deep</td>
+                <td>Whether to retrieve the content of all xsl:attribute descendants</td>
             </tr>
             </table>
 
@@ -1130,48 +1525,8 @@ models and rules, with some liberties taken.</td>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getXSLElements">
-        <div class="location">at         line 650</div>
-        <code>            protected        <a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a>
-    <strong>getXSLElements</strong>(string $elName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Get all XSL elements of given name</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$elName</td>
-                <td>XSL element's name, e.g. "apply-templates"</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_isFormattingSpan">
-        <div class="location">at         line 664</div>
+        <div class="location">at         line 667</div>
         <code>            protected        boolean
     <strong>isFormattingSpan</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1211,10 +1566,10 @@ and no other attributes</p>                            </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getBitfield">
-        <div class="location">at         line 851</div>
-        <code>            protected        string
-    <strong>getBitfield</strong>(string $elName, string $k, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+                    <h3 id="method_storeLeafNodes">
+        <div class="location">at         line 697</div>
+        <code>            protected        void
+    <strong>storeLeafNodes</strong>()
         </code>
     </h3>
     <div class="details">
@@ -1222,25 +1577,50 @@ and no other attributes</p>                            </div>
     
 
                     <div class="method-description">
-                                    <p>Get the bitfield value for a given element name in a given context</p>                                                </div>
+                                    <p>Store the names of every leaf node</p>                    <p>A leaf node is defined as the closest non-XSL ancestor to an xsl:apply-templates element</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBitfield">
+        <div class="location">at         line 868</div>
+        <code>            protected        string
+    <strong>getBitfield</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element, string $k)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the bitfield value for a given element in a given context</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$elName</td>
-                <td>Name of the HTML element</td>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$element</td>
+                <td>Context node</td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$k</td>
                 <td>Bitfield name: either 'c', 'ac' or 'dd'</td>
-            </tr>
-                    <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
-                <td>$node</td>
-                <td>Context node (not necessarily the same as $elName)</td>
             </tr>
             </table>
 
@@ -1262,7 +1642,7 @@ and no other attributes</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_hasProperty">
-        <div class="location">at         line 902</div>
+        <div class="location">at         line 920</div>
         <code>            protected        bool
     <strong>hasProperty</strong>(string $elName, string $propName, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1312,7 +1692,7 @@ and no other attributes</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_match">
-        <div class="location">at         line 924</div>
+        <div class="location">at         line 942</div>
         <code>        static    protected        bool
     <strong>match</strong>(string $bitfield1, string $bitfield2)
         </code>
