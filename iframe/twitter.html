@@ -21,7 +21,7 @@
 					}
 				}
 			})(document.body.firstChild);
-
+/*
 			addEventListener(
 				'message',
 				function (e)
@@ -32,27 +32,33 @@
 					}
 
 					e.stopImmediatePropagation();
+*/
+					var height,
+//						id        = e.data.substr(4),
+						interval  = 50;
 
-					var height, id = e.data.substr(4);
-					setInterval(
-						function ()
+					addEventListener('mouseover', function() { interval = 50; });
+
+					(function checkHeight()
+					{
+						setTimeout(checkHeight, interval);
+						interval  *= 1.1;
+
+console.dir(interval+' :: '+height);
+						if (height === (height = document.documentElement.scrollHeight)
+						 || height < 100)
 						{
-							if (height === (height = document.documentElement.scrollHeight)
-							 || height < 100)
-							{
-								return;
-							}
-
-							e.source.postMessage(
-								{ 'height': height, 'id': id, 'url': location.toString() },
-								e.origin
-							);
-						},
-						100
-					);
-				}
+							return;
+						}
+/*
+						e.source.postMessage(
+							{ 'height': height, 'id': id },
+							e.origin
+						);
+*/					})();
+/*				}
 			);
-		</script>
+*/		</script>
 		<script src="//platform.twitter.com/widgets.js"></script>
 	</body>
 </html>
