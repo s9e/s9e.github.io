@@ -195,7 +195,7 @@ d=d.value,d!==a.getAttributeNS(w,l)&&(a.setAttributeNS(w,l,d),f=a);c(a,b);return
 				rect = node.getBoundingClientRect();
 				if (rect.bottom > previewRect.bottom || rect.top < previewRect.top)
 				{
-					node.scrollIntoView({ behavior: 'smooth' });
+					node.scrollIntoView();
 
 					return;
 				}
