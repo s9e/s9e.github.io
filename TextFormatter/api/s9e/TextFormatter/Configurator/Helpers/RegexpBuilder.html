@@ -120,7 +120,7 @@
                     static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_mergeChains">mergeChains</a>(array $chains)
+                    <a href="#method_mergeChains">mergeChains</a>(array $chains, bool $preventRemerge = false)
         
                                             <p>Merge a 2D array of split words into a 1D array of expressions</p>                </div>
                 <div class="col-md-2"></div>
@@ -308,9 +308,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeChains">
-        <div class="location">at         line 163</div>
+        <div class="location">at         line 164</div>
         <code>        static    protected        array
-    <strong>mergeChains</strong>(array $chains)
+    <strong>mergeChains</strong>(array $chains, bool $preventRemerge = false)
         </code>
     </h3>
     <div class="details">
@@ -343,6 +343,11 @@ that no group has more than 1 chain. When we're done, we remerge all the chains 
                 <td>$chains</td>
                 <td></td>
             </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$preventRemerge</td>
+                <td></td>
+            </tr>
             </table>
 
             
@@ -363,7 +368,7 @@ that no group has more than 1 chain. When we're done, we remerge all the chains 
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeTails">
-        <div class="location">at         line 307</div>
+        <div class="location">at         line 308</div>
         <code>        static    protected        
     <strong>mergeTails</strong>(array $chains)
         </code>
@@ -397,7 +402,7 @@ group by group. This method should only be called AFTER chains have been group-m
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeTailsCC">
-        <div class="location">at         line 324</div>
+        <div class="location">at         line 325</div>
         <code>        static    protected        
     <strong>mergeTailsCC</strong>(array $chains)
         </code>
@@ -428,7 +433,7 @@ group by group. This method should only be called AFTER chains have been group-m
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeTailsAltern">
-        <div class="location">at         line 365</div>
+        <div class="location">at         line 366</div>
         <code>        static    protected        
     <strong>mergeTailsAltern</strong>(array $chains)
         </code>
@@ -463,7 +468,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_removeLongestCommonPrefix">
-        <div class="location">at         line 414</div>
+        <div class="location">at         line 415</div>
         <code>        static    protected        array
     <strong>removeLongestCommonPrefix</strong>(array $chains)
         </code>
@@ -503,7 +508,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_removeLongestCommonSuffix">
-        <div class="location">at         line 476</div>
+        <div class="location">at         line 477</div>
         <code>        static    protected        array
     <strong>removeLongestCommonSuffix</strong>(array $chains)
         </code>
@@ -544,7 +549,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_assemble">
-        <div class="location">at         line 545</div>
+        <div class="location">at         line 546</div>
         <code>        static    protected        string
     <strong>assemble</strong>(array $chains)
         </code>
@@ -584,7 +589,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_makeRegexpOptional">
-        <div class="location">at         line 618</div>
+        <div class="location">at         line 619</div>
         <code>        static    protected        string
     <strong>makeRegexpOptional</strong>(string $regexp)
         </code>
@@ -624,7 +629,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_generateCharacterClass">
-        <div class="location">at         line 711</div>
+        <div class="location">at         line 712</div>
         <code>        static    protected        string
     <strong>generateCharacterClass</strong>(array $chars)
         </code>
@@ -664,7 +669,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_canBeUsedInCharacterClass">
-        <div class="location">at         line 722</div>
+        <div class="location">at         line 723</div>
         <code>        static    protected        bool
     <strong>canBeUsedInCharacterClass</strong>(string $char)
         </code>
@@ -704,7 +709,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeDotChains">
-        <div class="location">at         line 765</div>
+        <div class="location">at         line 766</div>
         <code>        static    protected        void
     <strong>optimizeDotChains</strong>(array $chains)
         </code>
@@ -745,7 +750,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeCatchallChains">
-        <div class="location">at         line 863</div>
+        <div class="location">at         line 864</div>
         <code>        static    protected        void
     <strong>optimizeCatchallChains</strong>(array $chains)
         </code>
@@ -786,7 +791,7 @@ and
             </div>
                     <div class="method-item">
                     <h3 id="method_matchesAtLeastOneCharacter">
-        <div class="location">at         line 1024</div>
+        <div class="location">at         line 1025</div>
         <code>        static    protected        bool
     <strong>matchesAtLeastOneCharacter</strong>(string $expr)
         </code>
@@ -828,7 +833,7 @@ the expression [ab]+ as matching at least one character.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_canUseAtomicGrouping">
-        <div class="location">at         line 1061</div>
+        <div class="location">at         line 1062</div>
         <code>        static    protected        bool
     <strong>canUseAtomicGrouping</strong>(string $expr)
         </code>
