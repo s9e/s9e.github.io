@@ -100,6 +100,14 @@
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Collections/Collection.html#property_items"><abbr title="s9e\TextFormatter\Configurator\Collections\Collection">Collection</abbr></a></small></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_rules">
+                                        protected                                        array
+                </td>
+                <td>$rules</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -205,6 +213,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $methodName, array $args)
+        
+                                            <p>Add a rule to this set</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8 type">
@@ -268,7 +286,7 @@
                     <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addBooleanRule">addBooleanRule</a>(string $ruleName, bool $bool)
+                    <a href="#method_addBooleanRule">addBooleanRule</a>(string $ruleName, bool $bool = true)
         
                                             <p>Add a boolean rule</p>                </div>
                 <div class="col-md-2"></div>
@@ -281,236 +299,6 @@
                     <a href="#method_addTargetedRule">addTargetedRule</a>(string $ruleName, string $tagName)
         
                                             <p>Add a targeted rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_allowChild">allowChild</a>(string $tagName)
-        
-                                            <p>Add an allowChild rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_allowDescendant">allowDescendant</a>(string $tagName)
-        
-                                            <p>Add an allowDescendant rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_autoClose">autoClose</a>(bool $bool = true)
-        
-                                            <p>Add an autoClose rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_autoReopen">autoReopen</a>(bool $bool = true)
-        
-                                            <p>Add an autoReopen rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_breakParagraph">breakParagraph</a>(bool $bool = true)
-        
-                                            <p>Add a breakParagraph rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_closeAncestor">closeAncestor</a>(string $tagName)
-        
-                                            <p>Add a closeAncestor rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_closeParent">closeParent</a>(string $tagName)
-        
-                                            <p>Add a closeParent rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_createChild">createChild</a>(string $tagName)
-        
-                                            <p>Add a createChild rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_createParagraphs">createParagraphs</a>(bool $bool = true)
-        
-                                            <p>Add a createParagraphs rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_denyChild">denyChild</a>(string $tagName)
-        
-                                            <p>Add a denyChild rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_denyDescendant">denyDescendant</a>(string $tagName)
-        
-                                            <p>Add a denyDescendant rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_disableAutoLineBreaks">disableAutoLineBreaks</a>(bool $bool = true)
-        
-                                            <p>Add a disableAutoLineBreaks rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_enableAutoLineBreaks">enableAutoLineBreaks</a>(bool $bool = true)
-        
-                                            <p>Add a enableAutoLineBreaks rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_fosterParent">fosterParent</a>(string $tagName)
-        
-                                            <p>Add a fosterParent rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_ignoreSurroundingWhitespace">ignoreSurroundingWhitespace</a>(bool $bool = true)
-        
-                                            <p>Ignore (some) whitespace around tags</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_ignoreTags">ignoreTags</a>(bool $bool = true)
-        
-                                            <p>Add an ignoreTags rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_ignoreText">ignoreText</a>(bool $bool = true)
-        
-                                            <p>Add an ignoreText rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_isTransparent">isTransparent</a>(bool $bool = true)
-        
-                                            <p>Add a isTransparent rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_preventLineBreaks">preventLineBreaks</a>(bool $bool = true)
-        
-                                            <p>Add a preventLineBreaks rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_requireParent">requireParent</a>(string $tagName)
-        
-                                            <p>Add a requireParent rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_requireAncestor">requireAncestor</a>(string $tagName)
-        
-                                            <p>Add a requireAncestor rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_suspendAutoLineBreaks">suspendAutoLineBreaks</a>(bool $bool = true)
-        
-                                            <p>Add a suspendAutoLineBreaks rule</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_trimFirstLine">trimFirstLine</a>(bool $bool = true)
-        
-                                            <p>Add a trimFirstLine rule</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -542,7 +330,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at         line 83</div>
+        <div class="location">at         line 133</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -738,7 +526,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 26</div>
+        <div class="location">at         line 56</div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -758,8 +546,53 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         line 68</div>
+        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
+    <strong>__call</strong>(string $methodName, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a rule to this set</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td>Rule name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Arguments used to add given rule</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_offsetExists">
-        <div class="location">at         line 40</div>
+        <div class="location">at         line 90</div>
         <code>                    
     <strong>offsetExists</strong>(string $k)
         </code>
@@ -790,7 +623,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetGet">
-        <div class="location">at         line 51</div>
+        <div class="location">at         line 101</div>
         <code>                    mixed
     <strong>offsetGet</strong>(string $k)
         </code>
@@ -830,7 +663,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetSet">
-        <div class="location">at         line 59</div>
+        <div class="location">at         line 109</div>
         <code>                    
     <strong>offsetSet</strong>($k, $v)
         </code>
@@ -866,7 +699,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetUnset">
-        <div class="location">at         line 71</div>
+        <div class="location">at         line 121</div>
         <code>                    
     <strong>offsetUnset</strong>(string $k)
         </code>
@@ -906,7 +739,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_merge">
-        <div class="location">at         line 145</div>
+        <div class="location">at         line 195</div>
         <code>                    
     <strong>merge</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a> $rules, bool $overwrite = true)
         </code>
@@ -942,7 +775,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_remove">
-        <div class="location">at         line 176</div>
+        <div class="location">at         line 226</div>
         <code>                    void
     <strong>remove</strong>(string $type, string $tagName = null)
         </code>
@@ -987,9 +820,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addBooleanRule">
-        <div class="location">at         line 224</div>
+        <div class="location">at         line 274</div>
         <code>            protected        <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>addBooleanRule</strong>(string $ruleName, bool $bool)
+    <strong>addBooleanRule</strong>(string $ruleName, bool $bool = true)
         </code>
     </h3>
     <div class="details">
@@ -1032,7 +865,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTargetedRule">
-        <div class="location">at         line 243</div>
+        <div class="location">at         line 291</div>
         <code>            protected        <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
     <strong>addTargetedRule</strong>(string $ruleName, string $tagName)
         </code>
@@ -1056,933 +889,6 @@
                 <td>string</td>
                 <td>$tagName</td>
                 <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_allowChild">
-        <div class="location">at         line 256</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>allowChild</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add an allowChild rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_allowDescendant">
-        <div class="location">at         line 267</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>allowDescendant</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add an allowDescendant rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_autoClose">
-        <div class="location">at         line 281</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>autoClose</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add an autoClose rule</p>                    <p>NOTE: this rule exists so that plugins don't have to specifically handle tags whose end tag
-      may/must be omitted such as</p>
-
-<hr>
-
-<p>or [img]</p>                            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not the tag should automatically be closed if its start tag is not followed by an end tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_autoReopen">
-        <div class="location">at         line 292</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>autoReopen</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add an autoReopen rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not the tag should automatically be reopened if closed by an end tag of a different name</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_breakParagraph">
-        <div class="location">at         line 303</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>breakParagraph</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a breakParagraph rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not this tag breaks current paragraph if applicable</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_closeAncestor">
-        <div class="location">at         line 314</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>closeAncestor</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a closeAncestor rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_closeParent">
-        <div class="location">at         line 325</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>closeParent</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a closeParent rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_createChild">
-        <div class="location">at         line 336</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>createChild</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a createChild rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_createParagraphs">
-        <div class="location">at         line 347</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>createParagraphs</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a createParagraphs rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not paragraphs should automatically be created to handle content</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_denyChild">
-        <div class="location">at         line 358</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>denyChild</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a denyChild rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_denyDescendant">
-        <div class="location">at         line 369</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>denyDescendant</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a denyDescendant rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_disableAutoLineBreaks">
-        <div class="location">at         line 380</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>disableAutoLineBreaks</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a disableAutoLineBreaks rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not automatic line breaks should be disabled</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_enableAutoLineBreaks">
-        <div class="location">at         line 391</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>enableAutoLineBreaks</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a enableAutoLineBreaks rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not automatic line breaks should be enabled</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_fosterParent">
-        <div class="location">at         line 402</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>fosterParent</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a fosterParent rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_ignoreSurroundingWhitespace">
-        <div class="location">at         line 417</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>ignoreSurroundingWhitespace</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Ignore (some) whitespace around tags</p>                    <p>When true, some whitespace around this tag will be ignored (not transformed to line breaks.)
-Up to 2 lines outside of a tag pair and 1 line inside of it:
-    {2 lines}{START_TAG}{1 line}{CONTENT}{1 line}{END_TAG}{2 lines}</p>                            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether whitespace around this tag should be ignored</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_ignoreTags">
-        <div class="location">at         line 428</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>ignoreTags</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add an ignoreTags rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether to silently ignore all tags until current tag is closed</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_ignoreText">
-        <div class="location">at         line 439</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>ignoreText</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add an ignoreText rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not the tag should ignore text nodes</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_isTransparent">
-        <div class="location">at         line 450</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>isTransparent</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a isTransparent rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not the tag should use the "transparent" content model</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_preventLineBreaks">
-        <div class="location">at         line 461</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>preventLineBreaks</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a preventLineBreaks rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not manual line breaks should be ignored in this tag's context</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_requireParent">
-        <div class="location">at         line 472</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>requireParent</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a requireParent rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_requireAncestor">
-        <div class="location">at         line 483</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>requireAncestor</strong>(string $tagName)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a requireAncestor rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$tagName</td>
-                <td>Name of the target tag</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_suspendAutoLineBreaks">
-        <div class="location">at         line 494</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>suspendAutoLineBreaks</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a suspendAutoLineBreaks rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether or not automatic line breaks should be temporarily suspended</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_trimFirstLine">
-        <div class="location">at         line 505</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
-    <strong>trimFirstLine</strong>(bool $bool = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add a trimFirstLine rule</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$bool</td>
-                <td>Whether the white space inside this tag should be trimmed</td>
             </tr>
             </table>
 
