@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>s9e\TextFormatter &bull; Scroller Demo</title>
-	<base href="http://s9e.github.io/TextFormatter/scroller.html" />
+	<base href="https://s9e.github.io/TextFormatter/scroller.html" />
 	<style type="text/css">
 		#preview
 		{
@@ -168,12 +168,10 @@ u),f=a)}for(g=h;0<=--g;)d=e[g],q=d.namespaceURI,u=d.name,d=d.value,-1<l.indexOf(
 			{
 				return;
 			}
-			var wasEmpty = (text === '');
 			text = textarea.value;
 
 			var lastUpdated = s9e.TextFormatter.preview(text, preview);
-
-			if (!wasEmpty)
+			if (!preview.isSameNode(lastUpdated))
 			{
 				scrollToNode(lastUpdated);
 			}
@@ -213,6 +211,6 @@ u),f=a)}for(g=h;0<=--g;)d=e[g],q=d.namespaceURI,u=d.name,d=d.value,-1<l.indexOf(
 			text = '';
 		}
 	</script>
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js"></script>
 </body>
 </html>
