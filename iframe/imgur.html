@@ -6,11 +6,12 @@
 	</head>
 	<body style="margin:0"><blockquote class="imgur-embed-pub" lang="en"></blockquote>
 		<script>
-			document.body.firstChild.setAttribute('data-id', location.hash.substr(1));	
 
 			(function()
 			{
-				var id, origin, source, width, height;
+				var imgurId = location.hash.substr(1), id, origin, source, width, height;
+				document.body.firstChild.setAttribute('data-id', ((imgurId.length === 5) ? 'a/' : '') + imgurId);	
+
 				addEventListener(
 					'message',
 					function (e)
