@@ -10,7 +10,7 @@
 			(function()
 			{
 				var imgurId = location.hash.substr(1), id, origin, source, width, height;
-				document.body.firstChild.setAttribute('data-id', ((imgurId.length < 6) ? 'a/' : '') + imgurId);	
+				document.body.firstChild.setAttribute('data-id', (imgurId.length < 6) ? 'a/' + imgurId : imgurId.replace('gallery', 'a'));	
 
 				addEventListener(
 					'message',
