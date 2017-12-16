@@ -38,17 +38,17 @@
 					}
 				);
 
-				var path = location.hash.replace(/[^\w/]/g, ''),
-					el   = document.createElement('script');
-				if (/\/r(?:\/\w+){5}/.test(path))
+				var id = location.hash.replace(/[^\w/]/g, '').replace(/^\/r\//, '')
+					el = document.createElement('script');
+				if (/(?:\w+\/){4}/.test(id))
 				{
-					document.body.innerHTML = '<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-live="true"><a href="https://www.reddit.com' + path + '">Loading Reddit comment...</a></div>';
+					document.body.innerHTML = '<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-live="true"><a href="https://www.reddit.com/r/' + id + '">Loading Reddit comment...</a></div>';
 
 					el.src = '//www.redditstatic.com/comment-embed.js';
 				}
 				else
 				{
-					document.body.innerHTML = '<blockquote class="reddit-card"><a href="https://www.reddit.com' + path + '">Loading Reddit submission...</a></blockquote>';
+					document.body.innerHTML = '<blockquote class="reddit-card"><a href="https://www.reddit.com/r/' + id + '">Loading Reddit submission...</a></blockquote>';
 
 					el.src = '//embed.redditmedia.com/widgets/platform.js';
 				}
