@@ -101,11 +101,11 @@
             </tr>
                     <tr>
                 <td class="type" id="property_quickMatch">
-                                        protected                                        mixed
+                                        protected                                        
                 </td>
                 <td>$quickMatch</td>
-                <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_quickMatch"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_regexpLimit">
@@ -145,6 +145,14 @@
                 </td>
                 <td>$defaultSites</td>
                 <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_regexp">
+                                        protected                                        
+                </td>
+                <td>$regexp</td>
+                <td class="last">{@inheritdoc}</td>
                 <td></td>
             </tr>
                     <tr>
@@ -343,16 +351,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string[]
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getSchemes">getSchemes</a>()
-        
-                                            <p>Return the list of custom schemes supported via media sites</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8 type">
@@ -403,7 +401,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setUp">
-        <div class="location">at         line 60</div>
+        <div class="location">at         line 70</div>
         <code>            protected        
     <strong>setUp</strong>()
         </code>
@@ -450,7 +448,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at         line 106</div>
+        <div class="location">at         line 116</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -792,7 +790,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">at         line 138</div>
+        <div class="location">at         line 141</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>add</strong>(string $siteId, array $siteConfig = null)
         </code>
@@ -837,7 +835,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_addAttribute">
-        <div class="location">at         line 249</div>
+        <div class="location">at         line 252</div>
         <code>            protected        <a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a>
     <strong>addAttribute</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, string $attrName, array $attrConfig)
         </code>
@@ -887,7 +885,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_addScrapes">
-        <div class="location">at         line 298</div>
+        <div class="location">at         line 301</div>
         <code>            protected        array
     <strong>addScrapes</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, array $scrapes)
         </code>
@@ -932,7 +930,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_appendFilter">
-        <div class="location">at         line 355</div>
+        <div class="location">at         line 358</div>
         <code>            protected        void
     <strong>appendFilter</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $attribute, string $filter)
         </code>
@@ -976,38 +974,8 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getSchemes">
-        <div class="location">at         line 370</div>
-        <code>            protected        string[]
-    <strong>getSchemes</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Return the list of custom schemes supported via media sites</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string[]</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_normalizeId">
-        <div class="location">at         line 393</div>
+        <div class="location">at         line 374</div>
         <code>            protected        string
     <strong>normalizeId</strong>(string $siteId)
         </code>
