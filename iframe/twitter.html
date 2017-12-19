@@ -34,7 +34,7 @@
 					setInterval(
 						function ()
 						{
-							if (height === (height = document.documentElement.scrollHeight)
+							if (height === (height = document.documentElement.getBoundingClientRect().height)
 							 || height < 100)
 							{
 								return;
