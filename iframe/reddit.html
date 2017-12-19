@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <!-- This file is PUBLIC DOMAIN -->
-<html>
-	<head>
-		<title>&nbsp;</title>
-		<style>.embedly-card,.embedly-card-hug{width:100%!important;background:#fff}</style>
-	</head>
-	<body style="margin:0">
-		<script>
-			(function(document)
+<title>Content from Reddit</title>
+<style>.embedly-card,.embedly-card-hug{width:100%!important;background:#fff}</style>
+<body style="margin:0">
+<script>
+	(function(document)
+	{
+		addEventListener(
+			'message',
+			function (e)
 			{
-				addEventListener(
-					'message',
-					function (e)
+				if (e.data.substr(0, 4) !== 's9e:')
+				{
+					return;
+				}
+
+				var height, id = e.data.substr(4);
+				setInterval(
+					function ()
 					{
-						if (e.data.substr(0, 4) !== 's9e:')
+						if (height === (height = document.documentElement.getBoundingClientRect().height)
+						 || height < 100)
 						{
 							return;
 						}
 
-						var height, id = e.data.substr(4);
-						setInterval(
-							function ()
-							{
-								if (height === (height = document.documentElement.getBoundingClientRect().height)
-								 || height < 100)
-								{
-									return;
-								}
-
-								e.source.postMessage(
-									{ 'height': height, 'id': id },
-									e.origin
-								);
-							},
-							100
+						e.source.postMessage(
+							{ 'height': height, 'id': id },
+							e.origin
 						);
-					}
+					},
+					100
 				);
+			}
+		);
 
-				var id = location.hash.replace(/[^\w/]/g, '').replace(/^\/r\//, ''),
-					el = document.createElement('script');
-				if (/(?:\w+\/){4}/.test(id))
-				{
-					document.body.innerHTML = '<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-live="true"><a href="https://www.reddit.com/r/' + id + '">Loading Reddit comment...</a></div>';
+		var id   = location.hash.replace(/[^\w/]/g, '').replace(/^\/r\//, ''),
+			el   = document.createElement('script'),
+			type = (/(?:\w+\/){4}/.test(id)) ? 'comment' : 'submission',
+			html = '<a href="https://www.reddit.com/r/' + id + '">Loading Reddit ' + type + '...</a>';
+		if (type === 'comment')
+		{
+			el.src = '//www.redditstatic.com/comment-embed.js';
+			html = '<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-live="true">' + html + '</div>';
+		}
+		else
+		{
+			el.src = '//embed.redditmedia.com/widgets/platform.js';
+			html = '<blockquote class="reddit-card">' + html + '</blockquote>';
+		}
 
-					el.src = '//www.redditstatic.com/comment-embed.js';
-				}
-				else
-				{
-					document.body.innerHTML = '<blockquote class="reddit-card"><a href="https://www.reddit.com/r/' + id + '/">Loading Reddit submission...</a></blockquote>';
-
-					el.src = '//embed.redditmedia.com/widgets/platform.js';
-				}
-
-				document.body.appendChild(el);
-			})(document);
-		</script>
-	</body>
-</html>
+		document.body.innerHTML = html;
+		document.body.appendChild(el);
+	})(document);
+</script>

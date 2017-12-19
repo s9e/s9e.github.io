@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <!-- This file is PUBLIC DOMAIN -->
-<html>
-	<head>
-		<title>&nbsp;</title>
-	</head>
-	<body style="margin:0"><div data-width="640"></div>
-		<script>
-		(function(div, hash)
-		{
-			var type = (hash.indexOf('video') < 0) ? 'post' : 'video',
-				path = (type === 'post') ? 'user/' : 'v/';
-			div.setAttribute('data-href', 'https://www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, ''));
-			div.className = 'fb-' + type;
+<title>Content from Facebook</title>
+<body style="margin:0"><div data-width="640"></div>
+<script>
+(function(div, hash)
+{
+	var type = (hash.indexOf('video') < 0) ? 'post' : 'video',
+		path = (type === 'post') ? 'user/' : 'v/';
+	div.setAttribute('data-href', 'https://www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, ''));
+	div.className = 'fb-' + type;
 
-			addEventListener(
-				'message',
-				function (e)
+	addEventListener(
+		'message',
+		function (e)
+		{
+			if (e.data.substr(0, 4) !== 's9e:')
+			{
+				return;
+			}
+
+			var height, id = e.data.substr(4);
+			setInterval(
+				function ()
 				{
-					if (e.data.substr(0, 4) !== 's9e:')
+					var iframe = document.getElementsByTagName('iframe')[0];
+					if (iframe && iframe.style.height === '180px')
+					{
+						iframe.style.height = '';
+					}
+					if (height === (height = document.documentElement.getBoundingClientRect().height)
+					 || height < 100)
 					{
 						return;
 					}
 
-					var height, id = e.data.substr(4);
-					setInterval(
-						function ()
-						{
-							var iframe = document.getElementsByTagName('iframe')[0];
-							if (iframe && iframe.style.height === '180px')
-							{
-								iframe.style.height = '';
-							}
-							if (height === (height = document.documentElement.getBoundingClientRect().height)
-							 || height < 100)
-							{
-								return;
-							}
-
-							e.source.postMessage(
-								{ 'height': height, 'id': id },
-								e.origin
-							);
-						},
-						100
+					e.source.postMessage(
+						{ 'height': height, 'id': id },
+						e.origin
 					);
-				}
+				},
+				100
 			);
-		})(document.body.firstChild, location.hash);
-		</script>
-		<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.6"></script>
-	</body>
-</html>
+		}
+	);
+})(document.body.firstChild, location.hash);
+</script>
+<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.6"></script>

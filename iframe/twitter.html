@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <!-- This file is PUBLIC DOMAIN. Idea inspired by https://twitframe.com -->
-<html>
-	<head>
-		<title>Tweet</title>
-	</head>
-	<body style="margin:0"><blockquote class="twitter-tweet"><a data-dnt="true" rel="nofollow">Loading tweet...</a></blockquote>
-		<script>
-			(function(blockquote, navigator)
-			{
-				blockquote.firstChild.href = '//twitter.com/user/status/' + location.hash.substr(1);
-				if (navigator.languages && navigator.languages.length)
-				{
-					blockquote.setAttribute('data-lang', navigator.languages[0]);
-				}
-				else if (navigator.language)
-				{
-					blockquote.setAttribute('data-lang', navigator.language);
-				}
-			})(document.body.firstChild, window['navigator'] || {});
+<title>Content from Twitter</title>
+<body style="margin:0"><blockquote class="twitter-tweet"><a data-dnt="true" rel="nofollow">Loading tweet...</a></blockquote>
+<script>
+	(function(blockquote, navigator)
+	{
+		blockquote.firstChild.href = '//twitter.com/user/status/' + location.hash.substr(1);
+		if (navigator.languages && navigator.languages.length)
+		{
+			blockquote.setAttribute('data-lang', navigator.languages[0]);
+		}
+		else if (navigator.language)
+		{
+			blockquote.setAttribute('data-lang', navigator.language);
+		}
+	})(document.body.firstChild, window['navigator'] || {});
 
-			addEventListener(
-				'message',
-				function (e)
+	addEventListener(
+		'message',
+		function (e)
+		{
+			if (e.data.substr(0, 4) !== 's9e:')
+			{
+				return;
+			}
+
+			e.stopImmediatePropagation();
+
+			var height, id = e.data.substr(4);
+			setInterval(
+				function ()
 				{
-					if (e.data.substr(0, 4) !== 's9e:')
+					if (height === (height = document.documentElement.getBoundingClientRect().height)
+					 || height < 100)
 					{
 						return;
 					}
 
-					e.stopImmediatePropagation();
-
-					var height, id = e.data.substr(4);
-					setInterval(
-						function ()
-						{
-							if (height === (height = document.documentElement.getBoundingClientRect().height)
-							 || height < 100)
-							{
-								return;
-							}
-
-							e.source.postMessage(
-								{ 'height': height, 'id': id },
-								e.origin
-							);
-						},
-						100
+					e.source.postMessage(
+						{ 'height': height, 'id': id },
+						e.origin
 					);
-				}
+				},
+				100
 			);
-		</script>
-		<script src="//platform.twitter.com/widgets.js"></script>
-	</body>
-</html>
+		}
+	);
+</script>
+<script src="//platform.twitter.com/widgets.js"></script>

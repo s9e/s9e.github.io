@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <!-- This file is PUBLIC DOMAIN -->
-<html>
-	<head>
-		<title>&nbsp;</title>
-	</head>
-	<body style="margin:0"><blockquote class="imgur-embed-pub" lang="en"></blockquote>
-		<script>
+<title>Content from Imgur</title>
+<body style="margin:0"><blockquote class="imgur-embed-pub" lang="en"></blockquote>
+<script>
 
-			(function()
+	(function()
+	{
+		var imgurId = location.hash.substr(1), id, origin, source, width, height;
+		document.body.firstChild.setAttribute('data-id', (imgurId.length < 6) ? 'a/' + imgurId : imgurId.replace('gallery', 'a'));
+
+		addEventListener(
+			'message',
+			function (e)
 			{
-				var imgurId = location.hash.substr(1), id, origin, source, width, height;
-				document.body.firstChild.setAttribute('data-id', (imgurId.length < 6) ? 'a/' + imgurId : imgurId.replace('gallery', 'a'));	
+				if (e.data.substr(0, 4) === 's9e:')
+				{
+					// Don't let the inner iframe receive this message because it expects
+					// a JSON string, not an object
+					e.stopImmediatePropagation();
 
-				addEventListener(
-					'message',
-					function (e)
+					id     = e.data.substr(4);
+					origin = e.origin;
+					source = e.source;
+				}
+				else if (e.data.charAt(0) === '{')
+				{
+					var data = JSON.parse(e.data);
+					if (data.message === 'resize_imgur')
 					{
-						if (e.data.substr(0, 4) === 's9e:')
-						{
-							// Don't let the inner iframe receive this message because it expects
-							// a JSON string, not an object
-							e.stopImmediatePropagation();
-
-							id     = e.data.substr(4);
-							origin = e.origin;
-							source = e.source;
-						}
-						else if (e.data.charAt(0) === '{')
-						{
-							var data = JSON.parse(e.data);
-							if (data.message === 'resize_imgur')
-							{
-								width  = data.width;
-								height = data.height;
-							}
-						}
-
-						if (id && width && height)
-						{
-							source.postMessage(
-								{ 'height': height, 'id': id, 'width': width },
-								origin
-							);
-						}
+						width  = data.width;
+						height = data.height;
 					}
-				);
-			})();
-		</script>
-		<script src="//s.imgur.com/min/embed.js"></script>
-	</body>
-</html>
+				}
+
+				if (id && width && height)
+				{
+					source.postMessage(
+						{ 'height': height, 'id': id, 'width': width },
+						origin
+					);
+				}
+			}
+		);
+	})();
+</script>
+<script src="//s.imgur.com/min/embed.js"></script>

@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <!-- This file is PUBLIC DOMAIN -->
-<html>
-	<head>
-		<title>&nbsp;</title>
-	</head>
-	<body style="margin:0">
-		<script>
-			addEventListener(
-				'message',
-				function (e)
+<title>Content from Gist</title>
+<body style="margin:0">
+<script>
+	addEventListener(
+		'message',
+		function (e)
+		{
+			if (e.data.substr(0, 4) !== 's9e:')
+			{
+				return;
+			}
+
+			var height, id = e.data.substr(4);
+			setInterval(
+				function ()
 				{
-					if (e.data.substr(0, 4) !== 's9e:')
+					if (height === (height = document.documentElement.getBoundingClientRect().height)
+					 || height < 100)
 					{
 						return;
 					}
 
-					var height, id = e.data.substr(4);
-					setInterval(
-						function ()
-						{
-							if (height === (height = document.documentElement.getBoundingClientRect().height)
-							 || height < 100)
-							{
-								return;
-							}
-
-							e.source.postMessage(
-								{ 'height': height, 'id': id },
-								e.origin
-							);
-						},
-						100
+					e.source.postMessage(
+						{ 'height': height, 'id': id },
+						e.origin
 					);
-				}
+				},
+				100
 			);
+		}
+	);
 
-			/** @param {{div,stylesheet}} o */
-			cb = function (o)
-			{
-				var link  = document.createElement('link');
-				link.rel  = 'stylesheet';
-				link.href = o['stylesheet'];
+	/** @param {{div,stylesheet}} o */
+	cb = function (o)
+	{
+		var link  = document.createElement('link');
+		link.rel  = 'stylesheet';
+		link.href = o['stylesheet'];
 
-				document.head.appendChild(link);
-				document.body.innerHTML = o['div'];
-			};
+		document.head.appendChild(link);
+		document.body.innerHTML = o['div'];
+	};
 
-			var script  = document.createElement('script');
-			script.type = 'text/javascript';
-			script.src  = 'https://gist.github.com/' + location.hash.substr(1) + '.json?callback=cb';
+	var script  = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src  = '//gist.github.com/' + location.hash.substr(1) + '.json?callback=cb';
 
-			document.body.appendChild(script);
-		</script>
-	</body>
-</html>
+	document.body.appendChild(script);
+</script>
