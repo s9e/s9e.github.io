@@ -62,7 +62,7 @@ foreach (glob(__DIR__ . '/*.html') as $source)
 	);
 
 	$html = preg_replace('/>\\n\\s*</', '><', $html);
-	$html = preg_replace_callback('#(<script>)(.*?)(</script>)#s', 'minify', $html);
+	$html = preg_replace_callback('#(<script>)(.+?)(</script>)#s', 'minify', $html);
 
 	file_put_contents($target, $html);
 	touch($target, filemtime($source));
