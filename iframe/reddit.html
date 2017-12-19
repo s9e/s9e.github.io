@@ -38,7 +38,7 @@
 		var id   = location.hash.replace(/[^\w/]/g, '').replace(/^\/r\//, ''),
 			el   = document.createElement('script'),
 			type = (/(?:\w+\/){4}/.test(id)) ? 'comment' : 'submission',
-			html = '<a href="https://www.reddit.com/r/' + id + '">Loading Reddit ' + type + '...</a>';
+			html = '<a href="https://www.reddit.com/r/' + id + '/">Loading Reddit ' + type + '...</a>';
 		if (type === 'comment')
 		{
 			el.src = '//www.redditstatic.com/comment-embed.js';
