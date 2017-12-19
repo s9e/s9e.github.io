@@ -31,7 +31,7 @@ function minify($m)
 		])
 	);
 
-	return $m[1] . trim(json_decode($response)->compiledCode, ';') . $m[3];
+	return $m[1] . str_replace("\n", '', trim(json_decode($response)->compiledCode, ';')) . $m[3];
 }
 
 foreach (glob(__DIR__ . '/*.html') as $source)
