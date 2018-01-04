@@ -124,14 +124,6 @@
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_collection">
-                                        protected                                        <a href="../../../../s9e/TextFormatter/Plugins/MediaEmbed/Configurator/Collections/SiteCollection.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\Collections\SiteCollection">SiteCollection</abbr></a>
-                </td>
-                <td>$collection</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_createMediaBBCode">
                                         protected                                        bool
                 </td>
@@ -153,6 +145,14 @@
                 </td>
                 <td>$regexp</td>
                 <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sites">
+                                        protected                                        array
+                </td>
+                <td>$sites</td>
+                <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
@@ -206,7 +206,7 @@
                     <a href="#method_finalize">finalize</a>()
         
                                             <p>Finalize this plugin's configuration</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -321,12 +321,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a>
+                    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addAttribute">addAttribute</a>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, string $attrName, array $attrConfig)
+                    <a href="#method_checkAttributeFilters">checkAttributeFilters</a>(array $attributes)
         
-                                            <p>Add an attribute to given tag</p>                </div>
+                                            <p>Check the safety of given attributes</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -334,9 +334,39 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addScrapes">addScrapes</a>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, array $scrapes)
+                    <a href="#method_convertRegexp">convertRegexp</a>(string $regexp)
         
-                                            <p>Add the defined scrapes to given tag</p>                </div>
+                                            <p>Convert given regexp to a [regexp, map] pair</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertRegexps">convertRegexps</a>(array $regexps)
+        
+                                            <p>Convert a list of regexps</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertScrapeConfig">convertScrapeConfig</a>(array $config)
+        
+                                            <p>Convert all regexps in a scraping config</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertScrapes">convertScrapes</a>(array $scrapes)
+        
+                                            <p>Convert all regexps in a list of scraping configs</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -344,9 +374,29 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_appendFilter">appendFilter</a>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $attribute, string $filter)
+                    <a href="#method_createMediaTag">createMediaTag</a>()
         
-                                            <p>Append a filter to an attribute's filterChain</p>                </div>
+                                            <p>Create the default MEDIA tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeNamesFromRegexps">getAttributeNamesFromRegexps</a>(array $regexps)
+        
+                                            <p>Return the list of named captures from a list of [regexp, map] pairs</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributesConfig">getAttributesConfig</a>(array $siteConfig)
+        
+                                            <p>Get the attributes config for given site config</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -401,7 +451,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setUp">
-        <div class="location">at         line 70</div>
+        <div class="location">at         line 64</div>
         <code>            protected        
     <strong>setUp</strong>()
         </code>
@@ -422,7 +472,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_finalize">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 84</div>
+        <div class="location">at         line 143</div>
         <code>                    
     <strong>finalize</strong>()
         </code>
@@ -448,7 +498,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at         line 116</div>
+        <div class="location">at         line 82</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -790,7 +840,7 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">at         line 141</div>
+        <div class="location">at         line 103</div>
         <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a>
     <strong>add</strong>(string $siteId, array $siteConfig = null)
         </code>
@@ -834,105 +884,10 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_addAttribute">
-        <div class="location">at         line 252</div>
-        <code>            protected        <a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a>
-    <strong>addAttribute</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, string $attrName, array $attrConfig)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add an attribute to given tag</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
-                <td>$tag</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$attrName</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$attrConfig</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_addScrapes">
-        <div class="location">at         line 301</div>
-        <code>            protected        array
-    <strong>addScrapes</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag, array $scrapes)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Add the defined scrapes to given tag</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
-                <td>$tag</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$scrapes</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td>Attributes created from scraped data</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_appendFilter">
-        <div class="location">at         line 358</div>
+                    <h3 id="method_checkAttributeFilters">
+        <div class="location">at         line 166</div>
         <code>            protected        void
-    <strong>appendFilter</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $attribute, string $filter)
+    <strong>checkAttributeFilters</strong>(array $attributes)
         </code>
     </h3>
     <div class="details">
@@ -940,20 +895,15 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
     
 
                     <div class="method-description">
-                                    <p>Append a filter to an attribute's filterChain</p>                                                </div>
+                                    <p>Check the safety of given attributes</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a></td>
-                <td>$attribute</td>
-                <td>Target attribute</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$filter</td>
-                <td>Filter's name</td>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
             </tr>
             </table>
 
@@ -974,8 +924,278 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_convertRegexp">
+        <div class="location">at         line 190</div>
+        <code>            protected        array
+    <strong>convertRegexp</strong>(string $regexp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert given regexp to a [regexp, map] pair</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td>Original regexp</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>[regexp, [list of captures' names]]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertRegexps">
+        <div class="location">at         line 203</div>
+        <code>            protected        array[]
+    <strong>convertRegexps</strong>(array $regexps)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert a list of regexps</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$regexps</td>
+                <td>Original list</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array[]</td>
+            <td>Converted list</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertScrapeConfig">
+        <div class="location">at         line 214</div>
+        <code>            protected        array
+    <strong>convertScrapeConfig</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert all regexps in a scraping config</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>Original config</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Converted config</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertScrapes">
+        <div class="location">at         line 228</div>
+        <code>            protected        array[]
+    <strong>convertScrapes</strong>(array $scrapes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert all regexps in a list of scraping configs</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$scrapes</td>
+                <td>Original config</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array[]</td>
+            <td>Converted config</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMediaTag">
+        <div class="location">at         line 238</div>
+        <code>            protected        void
+    <strong>createMediaTag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the default MEDIA tag</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeNamesFromRegexps">
+        <div class="location">at         line 265</div>
+        <code>            protected        string[]
+    <strong>getAttributeNamesFromRegexps</strong>(array $regexps)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the list of named captures from a list of [regexp, map] pairs</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$regexps</td>
+                <td>List of [regexp, map] pairs</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributesConfig">
+        <div class="location">at         line 282</div>
+        <code>            protected        array
+    <strong>getAttributesConfig</strong>(array $siteConfig)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the attributes config for given site config</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$siteConfig</td>
+                <td>Site's config</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Map of [attrName => attrConfig]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_normalizeId">
-        <div class="location">at         line 374</div>
+        <div class="location">at         line 306</div>
         <code>            protected        string
     <strong>normalizeId</strong>(string $siteId)
         </code>
