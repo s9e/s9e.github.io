@@ -114,7 +114,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;array|bool
+                    static&nbsp;array[]
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getRenderingStrategy">getRenderingStrategy</a>(string $php)
@@ -301,8 +301,8 @@ original source</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getRenderingStrategy">
-        <div class="location">at         line 126</div>
-        <code>        static            array|bool
+        <div class="location">at         line 125</div>
+        <code>        static            array[]
     <strong>getRenderingStrategy</strong>(string $php)
         </code>
     </h3>
@@ -328,9 +328,8 @@ original source</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>array|bool</td>
-            <td>An array containing the type of replacement ('static', 'dynamic' or
-                        'php') and the replacement, or FALSE</td>
+            <td>array[]</td>
+            <td>An array containing 0 to 2 pairs of [<rendering type>, <replacement>]</td>
         </tr>
     </table>
 
@@ -342,7 +341,7 @@ original source</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getQuickRendering">
-        <div class="location">at         line 155</div>
+        <div class="location">at         line 154</div>
         <code>        static    protected        string[]
     <strong>getQuickRendering</strong>(string $php)
         </code>
@@ -387,7 +386,7 @@ When the whole structure is parsed, there are 2 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_convertPHP">
-        <div class="location">at         line 337</div>
+        <div class="location">at         line 336</div>
         <code>        static    protected        void
     <strong>convertPHP</strong>(string $head, string $tail, bool $passthrough)
         </code>
@@ -437,7 +436,7 @@ When the whole structure is parsed, there are 2 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_replacePHP">
-        <div class="location">at         line 390</div>
+        <div class="location">at         line 389</div>
         <code>        static    protected        void
     <strong>replacePHP</strong>(string $php)
         </code>
@@ -477,7 +476,7 @@ When the whole structure is parsed, there are 2 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_buildPHP">
-        <div class="location">at         line 482</div>
+        <div class="location">at         line 481</div>
         <code>        static    protected        string[]
     <strong>buildPHP</strong>(array $branches)
         </code>
@@ -518,7 +517,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getBranchesPassthrough">
-        <div class="location">at         line 511</div>
+        <div class="location">at         line 510</div>
         <code>        static    protected        integer[]
     <strong>getBranchesPassthrough</strong>(array $branches)
         </code>
@@ -558,7 +557,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getDynamicRendering">
-        <div class="location">at         line 535</div>
+        <div class="location">at         line 534</div>
         <code>        static    protected        array|bool
     <strong>getDynamicRendering</strong>(string $php)
         </code>
@@ -598,7 +597,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getStaticRendering">
-        <div class="location">at         line 672</div>
+        <div class="location">at         line 671</div>
         <code>        static    protected        bool|string
     <strong>getStaticRendering</strong>(string $php)
         </code>
@@ -638,7 +637,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getStringRenderings">
-        <div class="location">at         line 694</div>
+        <div class="location">at         line 693</div>
         <code>        static    protected        array
     <strong>getStringRenderings</strong>(string $php)
         </code>
@@ -678,7 +677,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_replacePlaceholder">
-        <div class="location">at         line 735</div>
+        <div class="location">at         line 734</div>
         <code>        static    protected        void
     <strong>replacePlaceholder</strong>(string $str, string $uniqid, integer $index)
         </code>
