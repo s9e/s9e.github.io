@@ -414,6 +414,16 @@ internal representation</p>                </div>
                     static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_removeNodes">removeNodes</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir, string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $contextNode = null)
+        
+                                            <p>Remove all nodes that match given XPath query</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_removeRedundantCloseTagElementsInSwitch">removeRedundantCloseTagElementsInSwitch</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         
                                             <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                </div>
@@ -1504,7 +1514,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_removeEmptyDefaultCases">
-        <div class="location">at         line 675</div>
+        <div class="location">at         line 671</div>
         <code>        static    protected        void
     <strong>removeEmptyDefaultCases</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1544,7 +1554,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeConsecutiveLiteralOutputElements">
-        <div class="location">at         line 690</div>
+        <div class="location">at         line 683</div>
         <code>        static    protected        void
     <strong>mergeConsecutiveLiteralOutputElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1584,7 +1594,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeCloseTagElements">
-        <div class="location">at         line 712</div>
+        <div class="location">at         line 705</div>
         <code>        static    protected        void
     <strong>optimizeCloseTagElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1624,7 +1634,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_cloneCloseTagElementsIntoSwitch">
-        <div class="location">at         line 729</div>
+        <div class="location">at         line 722</div>
         <code>        static    protected        void
     <strong>cloneCloseTagElementsIntoSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1665,7 +1675,7 @@ the every <case/> that does not end with a <closeTag/></p>                      
             </div>
                     <div class="method-item">
                     <h3 id="method_cloneCloseTagElementsOutOfSwitch">
-        <div class="location">at         line 755</div>
+        <div class="location">at         line 748</div>
         <code>        static    protected        void
     <strong>cloneCloseTagElementsOutOfSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1705,8 +1715,58 @@ right before the <switch/> unless there's already one</p>                       
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_removeNodes">
+        <div class="location">at         line 777</div>
+        <code>        static    protected        void
+    <strong>removeNodes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir, string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $contextNode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove all nodes that match given XPath query</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$contextNode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_removeRedundantCloseTagElementsInSwitch">
-        <div class="location">at         line 785</div>
+        <div class="location">at         line 798</div>
         <code>        static    protected        void
     <strong>removeRedundantCloseTagElementsInSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1747,7 +1807,7 @@ end of every <case/></p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRedundantCloseTagElements">
-        <div class="location">at         line 810</div>
+        <div class="location">at         line 823</div>
         <code>        static    protected        void
     <strong>removeRedundantCloseTagElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1788,7 +1848,7 @@ descendants of a sibling</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_removeContentFromVoidElements">
-        <div class="location">at         line 833</div>
+        <div class="location">at         line 844</div>
         <code>        static    protected        void
     <strong>removeContentFromVoidElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1829,7 +1889,7 @@ after</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_markBranchTables">
-        <div class="location">at         line 858</div>
+        <div class="location">at         line 867</div>
         <code>        static    protected        void
     <strong>markBranchTables</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -1872,7 +1932,7 @@ optimized branch tables</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_appendElement">
-        <div class="location">at         line 920</div>
+        <div class="location">at         line 929</div>
         <code>        static    protected        <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
     <strong>appendElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $name, string $value = &#039;&#039;)
         </code>
@@ -1922,7 +1982,7 @@ optimized branch tables</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_appendOutput">
-        <div class="location">at         line 944</div>
+        <div class="location">at         line 953</div>
         <code>        static    protected        void
     <strong>appendOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, string $type, string $content)
         </code>
@@ -1972,7 +2032,7 @@ optimized branch tables</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isEmpty">
-        <div class="location">at         line 980</div>
+        <div class="location">at         line 989</div>
         <code>        static    protected        string
     <strong>isEmpty</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
         </code>
