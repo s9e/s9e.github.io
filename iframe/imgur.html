@@ -6,7 +6,8 @@
 
 	(function()
 	{
-		var imgurId = location.hash.substr(1), id, origin, source, width, height;
+		// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
+		var imgurId = location.hash.substr(1).replace('%2F', '/'), id, origin, source, width, height;
 		document.body.firstChild.setAttribute('data-id', (imgurId.length < 6) ? 'a/' + imgurId : imgurId.replace('gallery', 'a'));
 
 		addEventListener(
