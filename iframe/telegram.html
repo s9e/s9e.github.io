@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<!-- This file is PUBLIC DOMAIN -->
 <title>Content from Telegram</title>
 <body style="margin:0">
 <script>
 onmessage = function(e)
 {
-	var origin = e.origin;
+	var hostOrigin = e.origin;
 	onmessage = function(e)
 	{
-		parent.postMessage(e.data, origin);
+		if (e.source !== document.body.firstChild.contentWindow)
+		{
+			return;
+		}
+
+		var m = /"height":(\d+)/.exec(e.data);
+		if (m && m[1])
+		{
+			parent.postMessage(m[1] + 'px', hostOrigin);
+		}
 	};
 	document.body.innerHTML = '<iframe scrolling=no src=//t.me/' + location.hash.replace(/[^\w\/]/g, '') + '?embed=1 style=border:0;height:100vh;width:100%></iframe>';
 };
