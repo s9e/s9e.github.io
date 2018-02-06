@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <!-- This file is PUBLIC DOMAIN -->
 <title>Content from Imgur</title>
-<body style="margin:0"><blockquote class="imgur-embed-pub" lang="en"></blockquote>
+<style>body,iframe{margin:0!important}</style>
+<body><blockquote class="imgur-embed-pub" lang="en"></blockquote>
 <script>
 
 	(function()
 	{
+		var id, origin, source, width, height;
+
 		// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
-		var imgurId = location.hash.substr(1).replace('%2F', '/'), id, origin, source, width, height;
-		document.body.firstChild.setAttribute('data-id', (imgurId.length < 6) ? 'a/' + imgurId : imgurId.replace('gallery', 'a'));
+		document.body.firstChild.setAttribute('data-id', location.hash.substr(1).replace('%2F', '/').replace('gallery', 'a'));
 
 		addEventListener(
 			'message',
@@ -29,8 +31,9 @@
 					var data = JSON.parse(e.data);
 					if (data.message === 'resize_imgur')
 					{
-						width  = data.width;
-						height = data.height;
+						// Imgur doesn't include the border's width/height in its dimensions
+						width  = 2 + data.width;
+						height = 2 + data.height;
 					}
 				}
 
