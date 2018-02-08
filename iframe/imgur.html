@@ -4,16 +4,12 @@
 <style>body,iframe{margin:0!important}</style>
 <body><blockquote class="imgur-embed-pub" lang="en"></blockquote>
 <script>
-
 	(function()
 	{
+		var id, origin, source, width, height;
+
 		// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
-		var imgurId = location.hash.substr(1).replace('%2F', '/'), id, origin, source, width, height;
-		if (imgurId.length > 5)
-		{
-			imgurId = imgurId.replace('gallery/', '');
-		}
-		document.body.firstChild.setAttribute('data-id', imgurId.replace('gallery', 'a'));
+		document.body.firstChild.setAttribute('data-id', location.hash.substr(1).replace('%2F', '/').replace(/gallery\/(?=\w{6,})/, '').replace('gallery', 'a'));
 
 		addEventListener(
 			'message',

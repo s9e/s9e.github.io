@@ -9,7 +9,7 @@ if (php_sapi_name() !== 'cli')
 function minify($m)
 {
 	$params = [
-		'compilation_level' => 'ADVANCED_OPTIMIZATIONS',
+		'compilation_level' => 'SIMPLE_OPTIMIZATIONS',
 		'js_code'           => $m[2],
 		'output_format'     => 'json',
 		'output_info'       => 'compiled_code'
