@@ -9,7 +9,7 @@
 		var id, origin, source, width, height;
 
 		// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
-		document.body.firstChild.setAttribute('data-id', location.hash.substr(1).replace('%2F', '/').replace(/gallery\/(?=\w{6,})/, '').replace('gallery', 'a'));
+		document.body.firstChild.setAttribute('data-id', location.hash.substr(1).replace('%2F', '/').replace('gallery', 'a').replace(/a\/(?=\w{6,})/, ''));
 
 		addEventListener(
 			'message',
