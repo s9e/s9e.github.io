@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>s9e\TextFormatter\Configurator\Helpers\TemplateParser\Optimizer | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_TemplateParser_Optimizer" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/Helpers.html">Helpers</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser.html">TemplateParser</a></li><li class="backslash">\</li><li>Optimizer</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Optimizer
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Optimizer</strong>        extends <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XMLNS_XSL</td>
+                <td class="last">
+                    <p><em>XSL namespace</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_xpath">
+                                        protected                                        <a target="_blank" href="http://php.net/DOMXPath">DOMXPath</a>
+                </td>
+                <td>$xpath</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#property_xpath"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendElement">appendElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $name, string $value = &#039;&#039;)
+        
+                                            <p>Create and append an element to given node in the IR</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_appendElement"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createXPath">createXPath</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        
+                                            <p>Create and store an instance of DOMXPath for given document</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_createXPath"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evaluate">evaluate</a>(string $expr, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        
+                                            <p>Evaluate an XPath expression and return its result</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_evaluate"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_query">query</a>(string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        
+                                            <p>Run an XPath query and return its result</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_query"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_optimize">optimize</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Optimize an IR</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cloneCloseTagElementsIntoSwitch">cloneCloseTagElementsIntoSwitch</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Clone closeTag elements that follow a switch into said switch</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cloneCloseTagElementsOutOfSwitch">cloneCloseTagElementsOutOfSwitch</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Clone closeTag elements from the head of a switch's cases before said switch</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mergeConsecutiveLiteralOutputElements">mergeConsecutiveLiteralOutputElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Merge consecutive literal outputs</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextSiblingIsLiteralOutput">nextSiblingIsLiteralOutput</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node, string $disableOutputEscaping)
+        
+                                            <p>Test whether the next sibling of an element is a literal output element with matching escaping</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_optimizeCloseTagElements">optimizeCloseTagElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Optimize closeTags elements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeCloseTagSiblings">removeCloseTagSiblings</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove redundant closeTag siblings after a switch</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeContentFromVoidElements">removeContentFromVoidElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove content from void elements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeEmptyDefaultCases">removeEmptyDefaultCases</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove empty default cases (no test and no descendants)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeNodes">removeNodes</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir, string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $contextNode = null)
+        
+                                            <p>Remove all nodes that match given XPath query</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeRedundantCloseTagElements">removeRedundantCloseTagElements</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeRedundantCloseTagElementsInSwitch">removeRedundantCloseTagElementsInSwitch</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        
+                                            <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_appendElement">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_appendElement"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a> at         line 35</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+    <strong>appendElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $name, string $value = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create and append an element to given node in the IR</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parentNode</td>
+                <td>Parent node of the element</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Tag name of the element</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Value of the element</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+            <td>The created element</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createXPath">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_createXPath"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a> at         line 46</div>
+        <code>            protected        void
+    <strong>createXPath</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create and store an instance of DOMXPath for given document</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$dom</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluate">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_evaluate"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a> at         line 58</div>
+        <code>            protected        mixed
+    <strong>evaluate</strong>(string $expr, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Evaluate an XPath expression and return its result</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expr</td>
+                <td>XPath expression</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td>Context node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_query"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a> at         line 70</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a>
+    <strong>query</strong>(string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run an XPath query and return its result</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>XPath query</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td>Context node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_optimize">
+        <div class="location">at         line 22</div>
+        <code>                    void
+    <strong>optimize</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Optimize an IR</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cloneCloseTagElementsIntoSwitch">
+        <div class="location">at         line 56</div>
+        <code>            protected        void
+    <strong>cloneCloseTagElementsIntoSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone closeTag elements that follow a switch into said switch</p>                    <p>If there's a <closeTag/> right after a <switch/>, clone the <closeTag/> at the end of
+the every <case/> that does not end with a <closeTag/></p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cloneCloseTagElementsOutOfSwitch">
+        <div class="location">at         line 81</div>
+        <code>            protected        void
+    <strong>cloneCloseTagElementsOutOfSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone closeTag elements from the head of a switch's cases before said switch</p>                    <p>If there's a <closeTag/> at the beginning of every <case/>, clone it and insert it
+right before the <switch/> unless there's already one</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeConsecutiveLiteralOutputElements">
+        <div class="location">at         line 107</div>
+        <code>            protected        void
+    <strong>mergeConsecutiveLiteralOutputElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Merge consecutive literal outputs</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextSiblingIsLiteralOutput">
+        <div class="location">at         line 127</div>
+        <code>            protected        bool
+    <strong>nextSiblingIsLiteralOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node, string $disableOutputEscaping)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether the next sibling of an element is a literal output element with matching escaping</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$disableOutputEscaping</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_optimizeCloseTagElements">
+        <div class="location">at         line 138</div>
+        <code>            protected        void
+    <strong>optimizeCloseTagElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Optimize closeTags elements</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCloseTagSiblings">
+        <div class="location">at         line 154</div>
+        <code>            protected        void
+    <strong>removeCloseTagSiblings</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove redundant closeTag siblings after a switch</p>                    <p>If all branches of a switch have a closeTag we can remove any closeTag siblings of the switch</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeContentFromVoidElements">
+        <div class="location">at         line 169</div>
+        <code>            protected        void
+    <strong>removeContentFromVoidElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove content from void elements</p>                    <p>For each void element, we find whichever <closeTag/> elements close it and remove everything
+after</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeEmptyDefaultCases">
+        <div class="location">at         line 186</div>
+        <code>            protected        void
+    <strong>removeEmptyDefaultCases</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove empty default cases (no test and no descendants)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeNodes">
+        <div class="location">at         line 200</div>
+        <code>            protected        void
+    <strong>removeNodes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir, string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $contextNode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove all nodes that match given XPath query</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$contextNode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeRedundantCloseTagElements">
+        <div class="location">at         line 220</div>
+        <code>            protected        void
+    <strong>removeRedundantCloseTagElements</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                    <p>For each <closeTag/> remove duplicate <closeTag/> nodes that are either siblings or
+descendants of a sibling</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeRedundantCloseTagElementsInSwitch">
+        <div class="location">at         line 240</div>
+        <code>            protected        void
+    <strong>removeRedundantCloseTagElementsInSwitch</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                    <p>If there's a <closeTag/> right after a <switch/>, remove all <closeTag/> nodes at the
+end of every <case/></p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$ir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

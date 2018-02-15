@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>s9e\TextFormatter\Configurator\Helpers\TemplateParser\Parser | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_TemplateParser_Parser" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/Helpers.html">Helpers</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser.html">TemplateParser</a></li><li class="backslash">\</li><li>Parser</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Parser
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Parser</strong>        extends <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XMLNS_XSL</td>
+                <td class="last">
+                    <p><em>XSL namespace</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_xpath">
+                                        protected                                        <a target="_blank" href="http://php.net/DOMXPath">DOMXPath</a>
+                </td>
+                <td>$xpath</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#property_xpath"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_normalizer">
+                                        protected                                        <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Normalizer">Normalizer</abbr></a>
+                </td>
+                <td>$normalizer</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendElement">appendElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $name, string $value = &#039;&#039;)
+        
+                                            <p>Create and append an element to given node in the IR</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_appendElement"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createXPath">createXPath</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        
+                                            <p>Create and store an instance of DOMXPath for given document</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_createXPath"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evaluate">evaluate</a>(string $expr, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        
+                                            <p>Evaluate an XPath expression and return its result</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_evaluate"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_query">query</a>(string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        
+                                            <p>Run an XPath query and return its result</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_query"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Normalizer">Normalizer</abbr></a> $normalizer)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parse">parse</a>(string $template)
+        
+                                            <p>Parse a template into an internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendAVT">appendAVT</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $avt)
+        
+                                            <p>Append <output/> elements corresponding to given AVT</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendLiteralOutput">appendLiteralOutput</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $content)
+        
+                                            <p>Append an <output/> element with literal content to given node</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendXPathOutput">appendXPathOutput</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $expr)
+        
+                                            <p>Append an <output/> element for given XPath expression to given node</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseChildren">parseChildren</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parent)
+        
+                                            <p>Parse all the children of a given element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseNode">parseNode</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse a given node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslApplyTemplates">parseXslApplyTemplates</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:apply-templates/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslAttribute">parseXslAttribute</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:attribute/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslChoose">parseXslChoose</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:choose/> node and its <xsl:when/> and <xsl:otherwise/> children into the
+internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslComment">parseXslComment</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:comment/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslCopyOf">parseXslCopyOf</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:copy-of/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslElement">parseXslElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:element/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslIf">parseXslIf</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:if/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslText">parseXslText</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:text/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXslValueOf">parseXslValueOf</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        
+                                            <p>Parse an <xsl:value-of/> node into the internal representation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_appendElement">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_appendElement"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a> at         line 35</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+    <strong>appendElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $name, string $value = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create and append an element to given node in the IR</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parentNode</td>
+                <td>Parent node of the element</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Tag name of the element</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Value of the element</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+            <td>The created element</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createXPath">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_createXPath"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a> at         line 46</div>
+        <code>            protected        void
+    <strong>createXPath</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create and store an instance of DOMXPath for given document</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$dom</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluate">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_evaluate"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a> at         line 58</div>
+        <code>            protected        mixed
+    <strong>evaluate</strong>(string $expr, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Evaluate an XPath expression and return its result</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expr</td>
+                <td>XPath expression</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td>Context node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_query"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a> at         line 70</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a>
+    <strong>query</strong>(string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run an XPath query and return its result</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>XPath query</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td>Context node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMNodeList">DOMNodeList</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 28</div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Normalizer">Normalizer</abbr></a> $normalizer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Normalizer">Normalizer</abbr></a></td>
+                <td>$normalizer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parse">
+        <div class="location">at         line 39</div>
+        <code>                    <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+    <strong>parse</strong>(string $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse a template into an internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td>Source template</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+            <td>Internal representation</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendAVT">
+        <div class="location">at         line 60</div>
+        <code>            protected        void
+    <strong>appendAVT</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $avt)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append <output/> elements corresponding to given AVT</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parentNode</td>
+                <td>Parent node</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$avt</td>
+                <td>Attribute value template</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendLiteralOutput">
+        <div class="location">at         line 82</div>
+        <code>            protected        void
+    <strong>appendLiteralOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append an <output/> element with literal content to given node</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parentNode</td>
+                <td>Parent node</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>Content to output</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendXPathOutput">
+        <div class="location">at         line 100</div>
+        <code>            protected        void
+    <strong>appendXPathOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $expr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append an <output/> element for given XPath expression to given node</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parentNode</td>
+                <td>Parent node</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$expr</td>
+                <td>XPath expression</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseChildren">
+        <div class="location">at         line 113</div>
+        <code>            protected        void
+    <strong>parseChildren</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse all the children of a given element</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the parent node</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parent</td>
+                <td>Parent node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseNode">
+        <div class="location">at         line 147</div>
+        <code>            protected        void
+    <strong>parseNode</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse a given node into the internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td>Node to parse</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslApplyTemplates">
+        <div class="location">at         line 198</div>
+        <code>            protected        void
+    <strong>parseXslApplyTemplates</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:apply-templates/> node into the internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:apply-templates/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslAttribute">
+        <div class="location">at         line 214</div>
+        <code>            protected        void
+    <strong>parseXslAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:attribute/> node into the internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:attribute/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslChoose">
+        <div class="location">at         line 229</div>
+        <code>            protected        void
+    <strong>parseXslChoose</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:choose/> node and its <xsl:when/> and <xsl:otherwise/> children into the
+internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:choose/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslComment">
+        <div class="location">at         line 258</div>
+        <code>            protected        void
+    <strong>parseXslComment</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:comment/> node into the internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:comment/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslCopyOf">
+        <div class="location">at         line 273</div>
+        <code>            protected        void
+    <strong>parseXslCopyOf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:copy-of/> node into the internal representation</p>                    <p>NOTE: only attributes are supported</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:copy-of/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslElement">
+        <div class="location">at         line 313</div>
+        <code>            protected        void
+    <strong>parseXslElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:element/> node into the internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:element/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslIf">
+        <div class="location">at         line 327</div>
+        <code>            protected        void
+    <strong>parseXslIf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:if/> node into the internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:if/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslText">
+        <div class="location">at         line 345</div>
+        <code>            protected        void
+    <strong>parseXslText</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:text/> node into the internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:text/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXslValueOf">
+        <div class="location">at         line 361</div>
+        <code>            protected        void
+    <strong>parseXslValueOf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an <xsl:value-of/> node into the internal representation</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Node in the internal representation that represents the node's parent</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$node</td>
+                <td><xsl:value-of/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
