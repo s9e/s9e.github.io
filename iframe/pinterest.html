@@ -2,52 +2,45 @@
 <title>Content from Pinterest</title>
 <body><div><a data-pin-board-width="900" data-pin-width="medium" data-pin-scale-height="360"></a></div>
 <script>
-	(function()
+(function(a, url, id, type)
+{
+	if (/^\d+$/.test(id))
 	{
-		var a    = document.body.firstChild.firstChild,
-			url  = 'https://www.pinterest.com/',
-			id   = location.hash.substr(1),
-			type = 'embed';
-		if (/^\d+$/.test(id))
-		{
-			url  += 'pin/';
-			type += 'Pin';
-		}
-		else
-		{
-			type += 'Board';
-		}
-		a.href = url + id;
-		a.setAttribute('data-pin-do', type);
-	})();
+		url  += 'pin/';
+		type += 'Pin';
+	}
+	else
+	{
+		type += 'Board';
+	}
+	a.href = url + id;
+	a.setAttribute('data-pin-do', type);
+})(document.body.firstChild.firstChild, 'https://www.pinterest.com/', location.hash.substr(1), 'embed');
 
-	addEventListener(
-		'message',
-		function (e)
+onmessage = function (e)
+{
+	if (e.data.substr(0, 4) !== 's9e:')
+	{
+		return;
+	}
+
+	var height, id = e.data.substr(4);
+	setInterval(
+		function ()
 		{
-			if (e.data.substr(0, 4) !== 's9e:')
+			if (height === (height = document.documentElement.getBoundingClientRect().height)
+			 || height < 100)
 			{
 				return;
 			}
 
-			var height, id = e.data.substr(4);
-			setInterval(
-				function ()
-				{
-					if (height === (height = document.documentElement.getBoundingClientRect().height)
-					 || height < 100)
-					{
-						return;
-					}
-
-					e.source.postMessage(
-						{ 'height': height, 'id': id },
-						e.origin
-					);
-				},
-				100
+			e.source.postMessage(
+				{ 'height': height, 'id': id },
+				e.origin
 			);
-		}
+		},
+		100
 	);
+};
 </script>
 <script src="//assets.pinterest.com/js/pinit.js"></script>

@@ -2,34 +2,33 @@
 <title>Content from Gist</title>
 <body style="margin:0">
 <script>
-	addEventListener(
-		'message',
-		function (e)
+(function (document)
+{
+	onmessage = function (e)
+	{
+		if (e.data.substr(0, 4) !== 's9e:')
 		{
-			if (e.data.substr(0, 4) !== 's9e:')
-			{
-				return;
-			}
-
-			var height, id = e.data.substr(4);
-			setInterval(
-				function ()
-				{
-					if (height === (height = document.documentElement.getBoundingClientRect().height)
-					 || height < 100)
-					{
-						return;
-					}
-
-					e.source.postMessage(
-						{ 'height': height, 'id': id },
-						e.origin
-					);
-				},
-				100
-			);
+			return;
 		}
-	);
+
+		var height, id = e.data.substr(4);
+		setInterval(
+			function ()
+			{
+				if (height === (height = document.documentElement.getBoundingClientRect().height)
+				 || height < 100)
+				{
+					return;
+				}
+
+				e.source.postMessage(
+					{ 'height': height, 'id': id },
+					e.origin
+				);
+			},
+			100
+		);
+	};
 
 	/** @param {{div,stylesheet}} o */
 	cb = function (o)
@@ -47,4 +46,5 @@
 	script.src  = '//gist.github.com/' + location.hash.substr(1) + '.json?callback=cb';
 
 	document.body.appendChild(script);
+})(document);
 </script>
