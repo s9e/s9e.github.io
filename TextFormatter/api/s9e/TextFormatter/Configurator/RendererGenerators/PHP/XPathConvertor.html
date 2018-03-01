@@ -391,6 +391,16 @@
                                             <p>Generate a regexp used to parse XPath expressions</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tokenizeXPathForExport">tokenizeXPathForExport</a>(string $expr)
+        
+                                            <p>Tokenize an XPath expression for use in PHP</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -1167,7 +1177,7 @@ variables which are returned as a method call to XPath::export()</p>            
             </div>
                     <div class="method-item">
                     <h3 id="method_generateXPathRegexp">
-        <div class="location">at         line 487</div>
+        <div class="location">at         line 464</div>
         <code>            protected        void
     <strong>generateXPathRegexp</strong>()
         </code>
@@ -1185,6 +1195,46 @@ variables which are returned as a method call to XPath::export()</p>            
                     <table class="table table-condensed">
         <tr>
             <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tokenizeXPathForExport">
+        <div class="location">at         line 603</div>
+        <code>            protected        array
+    <strong>tokenizeXPathForExport</strong>(string $expr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Tokenize an XPath expression for use in PHP</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expr</td>
+                <td>XPath expression</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
