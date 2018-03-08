@@ -322,6 +322,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkTagPairContent">checkTagPairContent</a>(string $id, string $xml)
+        
+                                            <p>Ensure that a tag pair does not contain a start tag of itself</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_checkTagPairContent"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8 type">
@@ -379,16 +389,6 @@
         
                                             <p>Render a string matched by the Quick renderer</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuickCallback"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_checkTagPairContent">checkTagPairContent</a>(string $id, string $xml)
-        
-                                            <p>Ensure that a tag pair does not contain a start tag of itself</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_checkTagPairContent"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1006,8 +1006,53 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_checkTagPairContent">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_checkTagPairContent"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 117</div>
+        <code>            protected        void
+    <strong>checkTagPairContent</strong>(string $id, string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that a tag pair does not contain a start tag of itself</p>                    <p>Detects malformed matches such as <X><X></X></p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getParamAsXPath">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_getParamAsXPath"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 114</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_getParamAsXPath"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 131</div>
         <code>            protected        string
     <strong>getParamAsXPath</strong>(string $paramName)
         </code>
@@ -1047,7 +1092,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getQuickTextContent">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_getQuickTextContent"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 127</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_getQuickTextContent"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 144</div>
         <code>            protected        string
     <strong>getQuickTextContent</strong>(string $xml)
         </code>
@@ -1087,7 +1132,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasNonNullValues">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_hasNonNullValues"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 138</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_hasNonNullValues"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 155</div>
         <code>            protected        bool
     <strong>hasNonNullValues</strong>(array $array)
         </code>
@@ -1127,7 +1172,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchAttributes">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_matchAttributes"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 159</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_matchAttributes"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 176</div>
         <code>            protected        array
     <strong>matchAttributes</strong>(string $xml)
         </code>
@@ -1167,7 +1212,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderQuick">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuick"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 178</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuick"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 195</div>
         <code>            protected        string
     <strong>renderQuick</strong>(string $xml)
         </code>
@@ -1207,7 +1252,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderQuickCallback">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuickCallback"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 203</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_renderQuickCallback"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 220</div>
         <code>            protected        string
     <strong>renderQuickCallback</strong>(array $m)
         </code>
@@ -1235,51 +1280,6 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_checkTagPairContent">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Renderers/PHP.html#method_checkTagPairContent"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a> at         line 243</div>
-        <code>            protected        void
-    <strong>checkTagPairContent</strong>(string $id, string $xml)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Ensure that a tag pair does not contain a start tag of itself</p>                    <p>Detects malformed matches such as <X><X></X></p>                            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$id</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$xml</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
             <td></td>
         </tr>
     </table>
