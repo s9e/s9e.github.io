@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <title>Content from Facebook</title>
-<body style="margin:0"><div data-width="640"></div>
+<body style="margin:0"><div></div>
 <script>
-(function(div, hash)
+(function(document, hash)
 {
-	var type = (hash.indexOf('video') < 0) ? 'post' : 'video',
+	var div  = document.body.firstChild,
+		type = (hash.indexOf('video') < 0) ? 'post' : 'video',
 		path = (type === 'post') ? 'user/' : 'v/';
 	div.setAttribute('data-href', 'https://www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, ''));
 	div.className = 'fb-' + type;
@@ -39,6 +40,6 @@
 			100
 		);
 	};
-})(document.body.firstChild, location.hash);
+})(document, location.hash);
 </script>
-<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.6"></script>
+<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12"></script>
