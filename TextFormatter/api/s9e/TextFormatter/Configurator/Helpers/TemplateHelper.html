@@ -216,6 +216,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/DOMNode">DOMNode</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createReplacementNode">createReplacementNode</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom, array $replacement)
+        
+                                            <p>Create a node that implements given replacement strategy</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
@@ -803,8 +813,53 @@ becomes an <xsl:apply-templates/> node.</li>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_createReplacementNode">
+        <div class="location">at         line 509</div>
+        <code>        static    protected        <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>
+    <strong>createReplacementNode</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom, array $replacement)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a node that implements given replacement strategy</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$dom</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$replacement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_replaceTokensInAttribute">
-        <div class="location">at         line 510</div>
+        <div class="location">at         line 540</div>
         <code>        static    protected        void
     <strong>replaceTokensInAttribute</strong>(<a target="_blank" href="http://php.net/DOMAttr">DOMAttr</a> $attribute, string $regexp, <abbr title="s9e\TextFormatter\Configurator\Helpers\callback">callback</abbr> $fn)
         </code>
@@ -854,7 +909,7 @@ becomes an <xsl:apply-templates/> node.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceTokensInText">
-        <div class="location">at         line 543</div>
+        <div class="location">at         line 572</div>
         <code>        static    protected        void
     <strong>replaceTokensInText</strong>(<a target="_blank" href="http://php.net/DOMText">DOMText</a> $node, string $regexp, <abbr title="s9e\TextFormatter\Configurator\Helpers\callback">callback</abbr> $fn)
         </code>
@@ -904,7 +959,7 @@ becomes an <xsl:apply-templates/> node.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_saveTemplate">
-        <div class="location">at         line 597</div>
+        <div class="location">at         line 614</div>
         <code>        static            string
     <strong>saveTemplate</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
@@ -944,7 +999,7 @@ becomes an <xsl:apply-templates/> node.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_fixEntities">
-        <div class="location">at         line 608</div>
+        <div class="location">at         line 625</div>
         <code>        static    protected        string
     <strong>fixEntities</strong>(string $template)
         </code>
@@ -984,7 +1039,7 @@ becomes an <xsl:apply-templates/> node.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_innerXML">
-        <div class="location">at         line 626</div>
+        <div class="location">at         line 643</div>
         <code>        static    protected        string
     <strong>innerXML</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         </code>
@@ -1024,7 +1079,7 @@ becomes an <xsl:apply-templates/> node.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_loadTemplateAsHTML">
-        <div class="location">at         line 651</div>
+        <div class="location">at         line 668</div>
         <code>        static    protected        <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
     <strong>loadTemplateAsHTML</strong>(string $template)
         </code>
@@ -1064,7 +1119,7 @@ becomes an <xsl:apply-templates/> node.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_loadTemplateAsXML">
-        <div class="location">at         line 677</div>
+        <div class="location">at         line 694</div>
         <code>        static    protected        bool|<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
     <strong>loadTemplateAsXML</strong>(string $template)
         </code>
@@ -1104,7 +1159,7 @@ becomes an <xsl:apply-templates/> node.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_removeInvalidAttributes">
-        <div class="location">at         line 696</div>
+        <div class="location">at         line 713</div>
         <code>        static    protected        void
     <strong>removeInvalidAttributes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
