@@ -133,6 +133,26 @@
                                             <p>Get a BBCode and its associated tag from this repository</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createRepositoryException">createRepositoryException</a>(mixed $filepath)
+        
+                                            <p>Create an exception for a bad repository file path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadRepository">loadRepository</a>(string $filepath)
+        
+                                            <p>Load a repository file into a DOMDocument</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -177,7 +197,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at         line 58</div>
+        <div class="location">at         line 47</div>
         <code>                    array
     <strong>get</strong>(string $name, array $vars = [])
         </code>
@@ -211,6 +231,86 @@
         <tr>
             <td>array</td>
             <td>Array with three elements: "bbcode", "name" and "tag"</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRepositoryException">
+        <div class="location">at         line 126</div>
+        <code>            protected        <a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a>
+    <strong>createRepositoryException</strong>(mixed $filepath)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an exception for a bad repository file path</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$filepath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadRepository">
+        <div class="location">at         line 137</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+    <strong>loadRepository</strong>(string $filepath)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load a repository file into a DOMDocument</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filepath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+            <td></td>
         </tr>
     </table>
 
