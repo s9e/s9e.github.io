@@ -8,7 +8,7 @@
 	var id, origin, source, width, height;
 
 	// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
-	document.body.firstChild.setAttribute('data-id', location.hash.substr(1).replace('%2F', '/').replace('gallery', 'a').replace(/a\/(?=\w{6,})/, ''));
+	document.body.firstChild.setAttribute('data-id', location.hash.substr(1).replace('%2F', '/').replace('gallery', 'a'));
 
 	onmessage = function (e)
 	{
@@ -21,6 +21,17 @@
 			id     = e.data.substr(4);
 			origin = e.origin;
 			source = e.source;
+
+			// Reload the iframe without /a/ if we haven't received a resize_imgur
+			// message laready
+			if (!width)
+			{
+				var iframe = document.getElementsByTagName('iframe')[0];
+				if (iframe && iframe.src.indexOf('/a/') > 0)
+				{
+					iframe.contentWindow.location.replace(iframe.src.replace('/a/', '/'));
+				}
+			}
 		}
 		else if (e.data.charAt(0) === '{')
 		{
