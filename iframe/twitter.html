@@ -17,14 +17,15 @@
 
 onmessage = function (e)
 {
-	if (e.data.substr(0, 4) !== 's9e:')
+	var m = /^s9e:(.+)/.exec(e.data);
+	if (!m)
 	{
 		return;
 	}
 
 	e.stopImmediatePropagation();
 
-	var height, id = e.data.substr(4);
+	var height, id = m[1];
 	setInterval(
 		function ()
 		{
