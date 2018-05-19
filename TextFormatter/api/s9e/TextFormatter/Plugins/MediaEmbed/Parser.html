@@ -237,7 +237,7 @@
                     static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_wget">wget</a>(string $url, string|null $cacheDir)
+                    <a href="#method_wget">wget</a>(string $url, string|null $cacheDir, array $config)
         
                                             <p>Retrieve external content</p>                </div>
                 <div class="col-md-2"></div>
@@ -756,9 +756,9 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_wget">
-        <div class="location">at         line 235</div>
+        <div class="location">at         line 237</div>
         <code>        static    protected        string
-    <strong>wget</strong>(string $url, string|null $cacheDir)
+    <strong>wget</strong>(string $url, string|null $cacheDir, array $config)
         </code>
     </h3>
     <div class="details">
@@ -781,6 +781,11 @@ corresponds to the media site</p>                            </div>
                 <td>$cacheDir</td>
                 <td>Path to the cache directory</td>
             </tr>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>Scraping config</td>
+            </tr>
             </table>
 
             
@@ -789,7 +794,7 @@ corresponds to the media site</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>External content</td>
+            <td>Response body</td>
         </tr>
     </table>
 
