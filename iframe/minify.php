@@ -51,6 +51,9 @@ foreach (glob(__DIR__ . '/*.html') as $source)
 	$html = file_get_contents($source);
 	echo $source, "\n";
 
+	// Remove comments
+	$html = preg_replace('(<!--.*?-->)s', '', $html);
+
 	// Remove quotes around attribute values
 	$html = preg_replace_callback(
 		'(<[^>]+)',
