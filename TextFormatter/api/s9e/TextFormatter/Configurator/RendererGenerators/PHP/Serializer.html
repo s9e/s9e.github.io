@@ -107,6 +107,14 @@
                 <td class="last"></td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_xpath">
+                                        protected                                        <a target="_blank" href="http://php.net/DOMXPath">DOMXPath</a>
+                </td>
+                <td>$xpath</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -128,16 +136,6 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertAttributeValueTemplate">convertAttributeValueTemplate</a>(string $attrValue)
-        
-                                            <p>Convert an attribute value template into PHP</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
                     <a href="#method_convertCondition">convertCondition</a>(string $expr)
         
                                             <p>Convert an XPath expression (used in a condition) into PHP code</p>                </div>
@@ -151,6 +149,26 @@
                     <a href="#method_convertXPath">convertXPath</a>(string $expr)
         
                                             <p>Convert an XPath expression (used as value) into PHP code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
+        
+                                            <p>Serialize the internal representation of a template into PHP</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertAttributeValueTemplate">convertAttributeValueTemplate</a>(string $attrValue)
+        
+                                            <p>Convert an attribute value template into PHP</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -201,16 +219,6 @@
                     <a href="#method_serializeAttribute">serializeAttribute</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $attribute)
         
                                             <p>Serialize an <attribute/> node</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_serialize">serialize</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
-        
-                                            <p>Serialize the internal representation of a template into PHP</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -301,7 +309,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 31</div>
+        <div class="location">at         line 36</div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -321,48 +329,8 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertAttributeValueTemplate">
-        <div class="location">at         line 46</div>
-        <code>            protected        string
-    <strong>convertAttributeValueTemplate</strong>(string $attrValue)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Convert an attribute value template into PHP</p>                    <p>NOTE: escaping must be performed by the caller</p>                            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$attrValue</td>
-                <td>Attribute value template</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_convertCondition">
-        <div class="location">at         line 73</div>
+        <div class="location">at         line 50</div>
         <code>                    string
     <strong>convertCondition</strong>(string $expr)
         </code>
@@ -403,7 +371,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_convertXPath">
-        <div class="location">at         line 86</div>
+        <div class="location">at         line 63</div>
         <code>                    string
     <strong>convertXPath</strong>(string $expr)
         </code>
@@ -442,8 +410,88 @@ with the corresponding DOM method for performance reasons</p>                   
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">at         line 76</div>
+        <code>                    string
+    <strong>serialize</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Serialize the internal representation of a template into PHP</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$ir</td>
+                <td>Internal representation</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertAttributeValueTemplate">
+        <div class="location">at         line 93</div>
+        <code>            protected        string
+    <strong>convertAttributeValueTemplate</strong>(string $attrValue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert an attribute value template into PHP</p>                    <p>NOTE: escaping must be performed by the caller</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attrValue</td>
+                <td>Attribute value template</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_escapeLiteral">
-        <div class="location">at         line 100</div>
+        <div class="location">at         line 118</div>
         <code>            protected        string
     <strong>escapeLiteral</strong>(string $text, string $context)
         </code>
@@ -488,7 +536,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_escapePHPOutput">
-        <div class="location">at         line 119</div>
+        <div class="location">at         line 137</div>
         <code>            protected        string
     <strong>escapePHPOutput</strong>(string $php, string $context)
         </code>
@@ -533,7 +581,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_hasMultipleCases">
-        <div class="location">at         line 137</div>
+        <div class="location">at         line 155</div>
         <code>            protected        bool
     <strong>hasMultipleCases</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
         </code>
@@ -573,7 +621,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeApplyTemplates">
-        <div class="location">at         line 150</div>
+        <div class="location">at         line 166</div>
         <code>            protected        string
     <strong>serializeApplyTemplates</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $applyTemplates)
         </code>
@@ -613,7 +661,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeAttribute">
-        <div class="location">at         line 168</div>
+        <div class="location">at         line 184</div>
         <code>            protected        string
     <strong>serializeAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $attribute)
         </code>
@@ -652,48 +700,8 @@ with the corresponding DOM method for performance reasons</p>                   
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_serialize">
-        <div class="location">at         line 189</div>
-        <code>                    string
-    <strong>serialize</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Serialize the internal representation of a template into PHP</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
-                <td>$ir</td>
-                <td>Internal representation</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_serializeChildren">
-        <div class="location">at         line 200</div>
+        <div class="location">at         line 205</div>
         <code>            protected        string
     <strong>serializeChildren</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
         </code>
@@ -733,7 +741,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeCloseTag">
-        <div class="location">at         line 221</div>
+        <div class="location">at         line 226</div>
         <code>            protected        string
     <strong>serializeCloseTag</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $closeTag)
         </code>
@@ -773,7 +781,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeComment">
-        <div class="location">at         line 266</div>
+        <div class="location">at         line 269</div>
         <code>            protected        string
     <strong>serializeComment</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $comment)
         </code>
@@ -813,7 +821,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeCopyOfAttributes">
-        <div class="location">at         line 279</div>
+        <div class="location">at         line 282</div>
         <code>            protected        string
     <strong>serializeCopyOfAttributes</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $copyOfAttributes)
         </code>
@@ -853,7 +861,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeElement">
-        <div class="location">at         line 297</div>
+        <div class="location">at         line 300</div>
         <code>            protected        string
     <strong>serializeElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         </code>
@@ -893,7 +901,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeHash">
-        <div class="location">at         line 359</div>
+        <div class="location">at         line 362</div>
         <code>            protected        string
     <strong>serializeHash</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
         </code>
@@ -933,7 +941,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeOutput">
-        <div class="location">at         line 397</div>
+        <div class="location">at         line 390</div>
         <code>            protected        string
     <strong>serializeOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $output)
         </code>
@@ -973,7 +981,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeSwitch">
-        <div class="location">at         line 421</div>
+        <div class="location">at         line 414</div>
         <code>            protected        string
     <strong>serializeSwitch</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
         </code>
