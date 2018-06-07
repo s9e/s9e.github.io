@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>s9e\TextFormatter\Configurator\Helpers\TemplateHelper | API</title>
+    <title>s9e\TextFormatter\Configurator\Helpers\NodeLocator | API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
     
     </head>
 
-    <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_TemplateHelper" data-root-path="../../../../">
+    <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_NodeLocator" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -66,20 +66,20 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator/Helpers.html">Helpers</a></li><li class="backslash">\</li><li>TemplateHelper</li>
+                        <li><a href="../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator/Helpers.html">Helpers</a></li><li class="backslash">\</li><li>NodeLocator</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            TemplateHelper
+            NodeLocator
                 
         </h1>
     </div>
 
     <p>abstract     class
-    <strong>TemplateHelper</strong>
+    <strong>NodeLocator</strong>
 </p>
 
         
@@ -87,18 +87,6 @@
 
     
     
-            <h2>Constants</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td>XMLNS_XSL</td>
-                <td class="last">
-                    <p><em>XSL namespace</em></p>
-                    <p></p>
-                </td>
-            </tr>
-            </table>
-
     
     
             <h2>Methods</h2>
@@ -159,69 +147,9 @@
                     static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getParametersFromXSL">getParametersFromXSL</a>(string $xsl)
-        
-                                            <p>Return a list of parameters in use in given XSL</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;array
-                </div>
-                <div class="col-md-8 type">
                     <a href="#method_getURLNodes">getURLNodes</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         
                                             <p>Return all DOMNodes whose content is an URL</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_highlightNode">highlightNode</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node, string $prepend, string $append)
-        
-                                            <p>Highlight the source of a node inside of a template</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_loadTemplate">loadTemplate</a>(string $template)
-        
-                                            <p>Load a template as an xsl:template node</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_replaceHomogeneousTemplates">replaceHomogeneousTemplates</a>(array $templates, integer $minCount = 3)
-        
-                                            <p>Replace simple templates (in an array, in-place) with a common template</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_replaceTokens">replaceTokens</a>(string $template, string $regexp, <abbr title="s9e\TextFormatter\Configurator\Helpers\callback">callback</abbr> $fn)
-        
-                                            <p>Replace parts of a template that match given regexp</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_saveTemplate">saveTemplate</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
-        
-                                            <p>Serialize a loaded template back into a string</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -232,7 +160,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getAttributesByRegexp">
-        <div class="location">at         line 33</div>
+        <div class="location">at         line 22</div>
         <code>        static            array
     <strong>getAttributesByRegexp</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom, string $regexp)
         </code>
@@ -277,7 +205,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSNodes">
-        <div class="location">at         line 44</div>
+        <div class="location">at         line 64</div>
         <code>        static            array
     <strong>getCSSNodes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
@@ -317,7 +245,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getElementsByRegexp">
-        <div class="location">at         line 56</div>
+        <div class="location">at         line 82</div>
         <code>        static            array
     <strong>getElementsByRegexp</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom, string $regexp)
         </code>
@@ -362,7 +290,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSNodes">
-        <div class="location">at         line 67</div>
+        <div class="location">at         line 125</div>
         <code>        static            array
     <strong>getJSNodes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
@@ -402,7 +330,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getObjectParamsByRegexp">
-        <div class="location">at         line 83</div>
+        <div class="location">at         line 147</div>
         <code>        static            array
     <strong>getObjectParamsByRegexp</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom, string $regexp)
         </code>
@@ -448,48 +376,8 @@ set via an <xsl:attribute/></p>                            </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getParametersFromXSL">
-        <div class="location">at         line 94</div>
-        <code>        static            array
-    <strong>getParametersFromXSL</strong>(string $xsl)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Return a list of parameters in use in given XSL</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$xsl</td>
-                <td>XSL source</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td>Alphabetically sorted list of unique parameter names</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_getURLNodes">
-        <div class="location">at         line 170</div>
+        <div class="location">at         line 192</div>
         <code>        static            array
     <strong>getURLNodes</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
         </code>
@@ -518,251 +406,6 @@ set via an <xsl:attribute/></p>                            </div>
         <tr>
             <td>array</td>
             <td>Array of DOMNode instances</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_highlightNode">
-        <div class="location">at         line 183</div>
-        <code>        static            string
-    <strong>highlightNode</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node, string $prepend, string $append)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Highlight the source of a node inside of a template</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
-                <td>$node</td>
-                <td>Node to highlight</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$prepend</td>
-                <td>HTML to prepend</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$append</td>
-                <td>HTML to append</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>Template's source, as HTML</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_loadTemplate">
-        <div class="location">at         line 241</div>
-        <code>        static            <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
-    <strong>loadTemplate</strong>(string $template)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Load a template as an xsl:template node</p>                    <p>Will attempt to load it as XML first, then as HTML as a fallback. Either way, an xsl:template
-node is returned</p>                            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$template</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_replaceHomogeneousTemplates">
-        <div class="location">at         line 261</div>
-        <code>        static            void
-    <strong>replaceHomogeneousTemplates</strong>(array $templates, integer $minCount = 3)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Replace simple templates (in an array, in-place) with a common template</p>                    <p>In some situations, renderers can take advantage of multiple tags having the same template. In
-any configuration, there's almost always a number of "simple" tags that are rendered as an
-HTML element of the same name with no HTML attributes. For instance, the system tag "p" used
-for paragraphs, "B" tags used for "b" HTML elements, etc... This method replaces those
-templates with a common template that uses a dynamic element name based on the tag's name,
-either its nodeName or localName depending on whether the tag is namespaced, and normalized to
-lowercase using XPath's translate() function</p>                            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>array</td>
-                <td>$templates</td>
-                <td>&amp;$templates Associative array of [tagName => template]</td>
-            </tr>
-                    <tr>
-                <td>integer</td>
-                <td>$minCount</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_replaceTokens">
-        <div class="location">at         line 334</div>
-        <code>        static            string
-    <strong>replaceTokens</strong>(string $template, string $regexp, <abbr title="s9e\TextFormatter\Configurator\Helpers\callback">callback</abbr> $fn)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Replace parts of a template that match given regexp</p>                    <p>Treats attribute values as plain text. Replacements within XPath expression is unsupported.
-The callback must return an array with two elements. The first must be either of 'expression',
-'literal' or 'passthrough', and the second element depends on the first.</p>
-
-<ul>
-<li>'expression' indicates that the replacement must be treated as an XPath expression such as
-'@foo', which must be passed as the second element.</li>
-<li>'literal' indicates a literal (plain text) replacement, passed as its second element.</li>
-<li>'passthrough' indicates that the replacement should the tag's content. It works differently
-whether it is inside an attribute's value or a text node. Within an attribute's value, the
-replacement will be the text content of the tag. Within a text node, the replacement
-becomes an <xsl:apply-templates/> node.</li>
-</ul>
-</p>                            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$template</td>
-                <td>Original template</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$regexp</td>
-                <td>Regexp for matching parts that need replacement</td>
-            </tr>
-                    <tr>
-                <td><abbr title="s9e\TextFormatter\Configurator\Helpers\callback">callback</abbr></td>
-                <td>$fn</td>
-                <td>Callback used to get the replacement</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>Processed template</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_saveTemplate">
-        <div class="location">at         line 347</div>
-        <code>        static            string
-    <strong>saveTemplate</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Serialize a loaded template back into a string</p>                    <p>NOTE: removes the root node created by loadTemplate()</p>                            </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
-                <td>$dom</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
         </tr>
     </table>
 
