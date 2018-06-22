@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <title>Content from Instagram</title>
 <!-- Limit the width to 99vw because Mobile Safari seems to miscalculate a 100% layout -->
-<!-- Set iframes' height to 100% because Instagram sets it to 0px if the post was removed -->
-<style>body,iframe{height:100%;margin:auto;width:99vw}</style>
+<!-- Set iframes' min-height because Instagram sets it to 0px if the post was removed -->
+<style>body,iframe{min-height:150px;margin:auto;width:99vw}</style>
 <blockquote class="instagram-media" data-instgrm-captioned><a>Loading Instagram...</a></blockquote>
 <script>
 document.body.firstChild.firstChild.href = '//instagram.com/p/' + location.hash.substr(1);
