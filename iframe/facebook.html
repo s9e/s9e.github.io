@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <title>Content from Facebook</title>
-<body style="margin:0"><div data-width="100%"></div>
+<body style="margin:0"><div></div>
 <script>
 (function(document, hash)
 {
@@ -9,6 +9,11 @@
 		path = (type === 'post') ? 'user/' : 'v/';
 	div.setAttribute('data-href', 'https://www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, ''));
 	div.className = 'fb-' + type;
+
+	if (innerWidth === 640)
+	{
+		div.setAttribute('data-width', '640px');
+	}
 
 	onmessage = function (e)
 	{
