@@ -5,16 +5,16 @@
 <style>body,iframe{min-height:150px;margin:auto;width:99vw}</style>
 <blockquote class="instagram-media" data-instgrm-captioned><a>Loading Instagram...</a></blockquote>
 <script>
-document.body.firstChild.firstChild.href = '//instagram.com/p/' + location.hash.substr(1);
+document.querySelector('a').href = '//instagram.com/p/' + location.hash.substr(1);
 
 onmessage = function (e)
 {
-	if (e.data.substr(0, 4) !== 's9e:')
+	var m = /^s9e:(.*)/.exec(e.data), height;
+	if (!m)
 	{
 		return;
 	}
 
-	var height, id = e.data.substr(4);
 	setInterval(
 		function ()
 		{
@@ -25,7 +25,7 @@ onmessage = function (e)
 			}
 
 			e.source.postMessage(
-				{ 'height': height, 'id': id },
+				{ 'height': height, 'id': m[1] },
 				e.origin
 			);
 		},
@@ -33,4 +33,4 @@ onmessage = function (e)
 	);
 };
 </script>
-<script src="//platform.instagram.com/en_US/embeds.js"></script>
+<script src="//platform.instagram.com/en_US/embeds.js" onerror="document.querySelector('a').innerHTML='Cannot load Instagram. Disable any adblocker or tracking protection and try again.'"></script>
