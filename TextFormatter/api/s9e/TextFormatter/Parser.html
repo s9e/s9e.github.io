@@ -930,6 +930,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isInvalidTextSpan">isInvalidTextSpan</a>(integer $pos, integer $len)
+        
+                                            <p>Test whether given text span is outside text boundaries or an invalid UTF sequence</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     void
                 </div>
                 <div class="col-md-8 type">
@@ -3183,8 +3193,53 @@ existing plugin</p>                            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_isInvalidTextSpan">
+        <div class="location">at         line 1931</div>
+        <code>            protected        bool
+    <strong>isInvalidTextSpan</strong>(integer $pos, integer $len)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given text span is outside text boundaries or an invalid UTF sequence</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td>Start of text</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$len</td>
+                <td>Length of text</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_insertTag">
-        <div class="location">at         line 1933</div>
+        <div class="location">at         line 1942</div>
         <code>            protected        void
     <strong>insertTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -3224,7 +3279,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addTagPair">
-        <div class="location">at         line 1963</div>
+        <div class="location">at         line 1972</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addTagPair</strong>(string $name, integer $startPos, integer $startLen, integer $endPos, integer $endLen, integer $prio = 0)
         </code>
@@ -3289,7 +3344,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addVerbatim">
-        <div class="location">at         line 1981</div>
+        <div class="location">at         line 1990</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addVerbatim</strong>(integer $pos, integer $len, integer $prio = 0)
         </code>
@@ -3339,7 +3394,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_sortTags">
-        <div class="location">at         line 1991</div>
+        <div class="location">at         line 2000</div>
         <code>            protected        void
     <strong>sortTags</strong>()
         </code>
@@ -3369,7 +3424,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_compareTags">
-        <div class="location">at         line 2007</div>
+        <div class="location">at         line 2016</div>
         <code>        static    protected        integer
     <strong>compareTags</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $a, <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $b)
         </code>
