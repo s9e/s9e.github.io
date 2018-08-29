@@ -21,17 +21,6 @@
 			id     = e.data.substr(4);
 			origin = e.origin;
 			source = e.source;
-
-			// Reload the iframe without /a/ if we haven't received a resize_imgur
-			// message already
-			if (!width)
-			{
-				var iframe = document.getElementsByTagName('iframe')[0];
-				if (iframe && iframe.src.indexOf('/a/') > 0)
-				{
-					iframe.contentWindow.location.replace(iframe.src.replace('/a/', '/'));
-				}
-			}
 		}
 		else if (e.data.charAt(0) === '{')
 		{
