@@ -125,7 +125,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_aliases">
-                                        protected                                        array
+                                                                                array
                 </td>
                 <td>$aliases</td>
                 <td class="last"></td>
@@ -174,7 +174,7 @@
                     <a href="#method_finalize">finalize</a>()
         
                                             <p>Finalize this plugin's configuration</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -283,7 +283,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_addAlias">addAlias</a>(string $alias, string $emoji)
-        
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
                                             <p>Add an emoji alias</p>                </div>
                 <div class="col-md-2"></div>
             </div>
@@ -293,7 +293,7 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_removeAlias">removeAlias</a>(string $alias)
-        
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
                                             <p>Remove an emoji alias</p>                </div>
                 <div class="col-md-2"></div>
             </div>
@@ -303,8 +303,28 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getAliases">getAliases</a>()
-        
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
                                             <p>Get all emoji aliases</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAliasesConfig">getAliasesConfig</a>()
+        
+                                            <p>Generate the config options related to aliases</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomAliases">getCustomAliases</a>()
+        
+                                            <p>Get a list of custom aliases (not shortnames)</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -349,7 +369,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setUp">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 39</div>
         <code>            protected        
     <strong>setUp</strong>()
         </code>
@@ -370,7 +390,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_finalize">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ConfiguratorBase.html#method_finalize"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a> at         line 84</div>
+        <div class="location">at         line 106</div>
         <code>                    
     <strong>finalize</strong>()
         </code>
@@ -396,7 +416,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at         line 87</div>
+        <div class="location">at         line 95</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -457,7 +477,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSHints">
-        <div class="location">at         line 115</div>
+        <div class="location">at         line 114</div>
         <code>                    array
     <strong>getJSHints</strong>()
         </code>
@@ -738,13 +758,20 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_addAlias">
-        <div class="location">at         line 58</div>
+        <div class="location">at         line 62</div>
         <code>                    void
     <strong>addAlias</strong>(string $alias, string $emoji)
-        </code>
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
     </h3>
     <div class="details">
             
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>1.3.0</td>
+                    <td>$this->aliases can be accessed directly</td>
+                </tr>
+                    </p>
     
 
                     <div class="method-description">
@@ -783,13 +810,20 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_removeAlias">
-        <div class="location">at         line 69</div>
+        <div class="location">at         line 75</div>
         <code>                    void
     <strong>removeAlias</strong>(string $alias)
-        </code>
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
     </h3>
     <div class="details">
             
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>1.3.0</td>
+                    <td>$this->aliases can be accessed directly</td>
+                </tr>
+                    </p>
     
 
                     <div class="method-description">
@@ -823,13 +857,20 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_getAliases">
-        <div class="location">at         line 79</div>
+        <div class="location">at         line 87</div>
         <code>                    array
     <strong>getAliases</strong>()
-        </code>
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
     </h3>
     <div class="details">
             
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>1.3.0</td>
+                    <td>$this->aliases can be accessed directly</td>
+                </tr>
+                    </p>
     
 
                     <div class="method-description">
@@ -841,6 +882,66 @@ returns the Parser.js file from stock plugins' directory, if available</p>      
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAliasesConfig">
+        <div class="location">at         line 132</div>
+        <code>            protected        array
+    <strong>getAliasesConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate the config options related to aliases</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomAliases">
+        <div class="location">at         line 158</div>
+        <code>            protected        string[]
+    <strong>getCustomAliases</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a list of custom aliases (not shortnames)</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
             <td></td>
         </tr>
     </table>
