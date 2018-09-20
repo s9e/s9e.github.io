@@ -115,6 +115,14 @@
                 <td class="last"></td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_clientCacheDir">
+                    static                    protected                                        string|null
+                </td>
+                <td>$clientCacheDir</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -316,7 +324,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at         line 25</div>
+        <div class="location">at         line 30</div>
         <code>                    void
     <strong>parse</strong>(string $text, array $matches)
         </code>
@@ -360,7 +368,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_filterTag">
-        <div class="location">at         line 52</div>
+        <div class="location">at         line 57</div>
         <code>        static            void
     <strong>filterTag</strong>(<a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $tagStack, array $hosts, array $sites, string|null $cacheDir)
         </code>
@@ -421,7 +429,7 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addNamedCaptures">
-        <div class="location">at         line 80</div>
+        <div class="location">at         line 85</div>
         <code>        static    protected        bool
     <strong>addNamedCaptures</strong>(array $attributes, string $string, array $regexps)
         </code>
@@ -471,7 +479,7 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_createTag">
-        <div class="location">at         line 106</div>
+        <div class="location">at         line 111</div>
         <code>        static    protected        <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>createTag</strong>(string $tagName, <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $tagStack, <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -521,7 +529,7 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getAttributes">
-        <div class="location">at         line 134</div>
+        <div class="location">at         line 139</div>
         <code>        static    protected        array
     <strong>getAttributes</strong>(string $url, array $config, string|null $cacheDir)
         </code>
@@ -571,7 +579,7 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getHttpClient">
-        <div class="location">at         line 152</div>
+        <div class="location">at         line 157</div>
         <code>        static    protected        <a href="../../../../s9e/TextFormatter/Utils/Http/Client.html"><abbr title="s9e\TextFormatter\Utils\Http\Client">Client</abbr></a>
     <strong>getHttpClient</strong>(string|null $cacheDir)
         </code>
@@ -611,7 +619,7 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSiteIdFromUrl">
-        <div class="location">at         line 169</div>
+        <div class="location">at         line 175</div>
         <code>        static    protected        string
     <strong>getSiteIdFromUrl</strong>(string $url, array $hosts)
         </code>
@@ -656,7 +664,7 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_interpolateVars">
-        <div class="location">at         line 191</div>
+        <div class="location">at         line 197</div>
         <code>        static    protected        string
     <strong>interpolateVars</strong>(string $str, array $vars)
         </code>
@@ -701,7 +709,7 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_scrape">
-        <div class="location">at         line 212</div>
+        <div class="location">at         line 218</div>
         <code>        static    protected        void
     <strong>scrape</strong>(array $attributes, $url, array $config, $cacheDir)
         </code>
@@ -756,7 +764,7 @@ corresponds to the media site</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_wget">
-        <div class="location">at         line 237</div>
+        <div class="location">at         line 243</div>
         <code>        static    protected        string
     <strong>wget</strong>(string $url, string|null $cacheDir, array $config)
         </code>
