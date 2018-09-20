@@ -116,6 +116,14 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_command">
+                                                                                string
+                </td>
+                <td>$command</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_compilationLevel">
                                                                                 string
                 </td>
@@ -198,7 +206,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $filepath = null)
+                    <a href="#method___construct">__construct</a>(string $filepathOrCommand = null)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
@@ -231,7 +239,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_minify">
-        <div class="location">at         line 80</div>
+        <div class="location">at         line 96</div>
         <code>                    string
     <strong>minify</strong>(string $src)
         </code>
@@ -311,7 +319,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCacheDifferentiator">
-        <div class="location">at         line 57</div>
+        <div class="location">at         line 70</div>
         <code>                    array|string
     <strong>getCacheDifferentiator</strong>()
         </code>
@@ -381,9 +389,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 45</div>
+        <div class="location">at         line 52</div>
         <code>                    
-    <strong>__construct</strong>(string $filepath = null)
+    <strong>__construct</strong>(string $filepathOrCommand = null)
         </code>
     </h3>
     <div class="details">
@@ -398,8 +406,8 @@
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
-                <td>$filepath</td>
-                <td>Path to the Closure Compiler .jar</td>
+                <td>$filepathOrCommand</td>
+                <td>Path to the Closure Compiler .jar or command to execute</td>
             </tr>
             </table>
 
@@ -412,7 +420,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getClosureCompilerBinHash">
-        <div class="location">at         line 126</div>
+        <div class="location">at         line 149</div>
         <code>            protected        string
     <strong>getClosureCompilerBinHash</strong>()
         </code>
@@ -442,7 +450,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_testFilepaths">
-        <div class="location">at         line 143</div>
+        <div class="location">at         line 166</div>
         <code>            protected        void
     <strong>testFilepaths</strong>()
         </code>
