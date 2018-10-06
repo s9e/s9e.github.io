@@ -211,6 +211,16 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_appendConditionalAttributes">appendConditionalAttributes</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $expr)
+        
+                                            <p>Append the structure for a <xsl:copy-of/> element to given node</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_appendXPathOutput">appendXPathOutput</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $expr)
         
                                             <p>Append an <output/> element for given XPath expression to given node</p>                </div>
@@ -682,8 +692,53 @@ internal representation</p>                </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_appendXPathOutput">
+                    <h3 id="method_appendConditionalAttributes">
         <div class="location">at         line 100</div>
+        <code>            protected        void
+    <strong>appendConditionalAttributes</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $expr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append the structure for a <xsl:copy-of/> element to given node</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$parentNode</td>
+                <td>Parent node</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$expr</td>
+                <td>Select expression, which is should only contain attributes</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendXPathOutput">
+        <div class="location">at         line 126</div>
         <code>            protected        void
     <strong>appendXPathOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parentNode, string $expr)
         </code>
@@ -728,7 +783,7 @@ internal representation</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parseChildren">
-        <div class="location">at         line 113</div>
+        <div class="location">at         line 139</div>
         <code>            protected        void
     <strong>parseChildren</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $parent)
         </code>
@@ -773,7 +828,7 @@ internal representation</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parseNode">
-        <div class="location">at         line 147</div>
+        <div class="location">at         line 173</div>
         <code>            protected        void
     <strong>parseNode</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -818,7 +873,7 @@ internal representation</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslApplyTemplates">
-        <div class="location">at         line 198</div>
+        <div class="location">at         line 224</div>
         <code>            protected        void
     <strong>parseXslApplyTemplates</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -863,7 +918,7 @@ internal representation</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslAttribute">
-        <div class="location">at         line 214</div>
+        <div class="location">at         line 240</div>
         <code>            protected        void
     <strong>parseXslAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -908,7 +963,7 @@ internal representation</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslChoose">
-        <div class="location">at         line 229</div>
+        <div class="location">at         line 255</div>
         <code>            protected        void
     <strong>parseXslChoose</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -954,7 +1009,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslComment">
-        <div class="location">at         line 258</div>
+        <div class="location">at         line 284</div>
         <code>            protected        void
     <strong>parseXslComment</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -999,7 +1054,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslCopyOf">
-        <div class="location">at         line 273</div>
+        <div class="location">at         line 299</div>
         <code>            protected        void
     <strong>parseXslCopyOf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1044,7 +1099,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslElement">
-        <div class="location">at         line 313</div>
+        <div class="location">at         line 325</div>
         <code>            protected        void
     <strong>parseXslElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1089,7 +1144,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslIf">
-        <div class="location">at         line 327</div>
+        <div class="location">at         line 339</div>
         <code>            protected        void
     <strong>parseXslIf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1134,7 +1189,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslText">
-        <div class="location">at         line 345</div>
+        <div class="location">at         line 357</div>
         <code>            protected        void
     <strong>parseXslText</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
@@ -1179,7 +1234,7 @@ internal representation</p>                                                </div
             </div>
                     <div class="method-item">
                     <h3 id="method_parseXslValueOf">
-        <div class="location">at         line 361</div>
+        <div class="location">at         line 373</div>
         <code>            protected        void
     <strong>parseXslValueOf</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir, <a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $node)
         </code>
