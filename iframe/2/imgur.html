@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<title>Content from Imgur</title>
+<style>body,iframe{margin:0!important}</style>
+<body><blockquote class="imgur-embed-pub" lang="en"></blockquote>
+<script>
+(function()
+{
+	// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
+	document.body.firstChild.setAttribute('data-id', location.hash.substr(1).replace('%2F', '/').replace('gallery', 'a'));
+
+	let height, port, width;
+	onmessage = function (e)
+	{
+		if (e.data === 's9e:init')
+		{
+			port = e.ports[0];
+			e.stopImmediatePropagation();
+		}
+		else if (e.data.charAt(0) === '{')
+		{
+			let data = JSON.parse(e.data);
+			if (data.message === 'resize_imgur')
+			{
+				// Imgur doesn't include the border's width/height in its dimensions
+				width  = 2 + data.width;
+				height = 2 + data.height;
+			}
+		}
+
+		if (height && port && width)
+		{
+			port.postMessage(width + ',' + height);
+		}
+	};
+})();
+</script>
+<script src="//s.imgur.com/min/embed.js"></script>

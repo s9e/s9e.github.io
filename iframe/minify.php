@@ -34,39 +34,45 @@ function minify($m)
 	return $m[1] . str_replace("\n", '', trim(json_decode($response)->compiledCode, ';')) . $m[3];
 }
 
-foreach (glob(__DIR__ . '/*.html') as $source)
+function minifyDir($dir)
 {
-	if (strpos(basename($source), '.min.') !== false)
+	foreach (glob($dir . '/*.html') as $source)
 	{
-		continue;
-	}
-
-	$target = substr($source, 0, -4) . 'min.html';
-
-	if (@filemtime($target) === filemtime($source))
-	{
-		continue;
-	}
-
-	$html = file_get_contents($source);
-	echo $source, "\n";
-
-	// Remove comments
-	$html = preg_replace('(<!--.*?-->)s', '', $html);
-
-	// Remove quotes around attribute values
-	$html = preg_replace_callback(
-		'(<[^>]+)',
-		function ($m)
+		if (strpos(basename($source), '.min.') !== false)
 		{
-			return preg_replace('(=""|(=)"([^\\s<=>"]*)")', '$1$2', $m[0]);
-		},
-		$html
-	);
+			continue;
+		}
 
-	$html = preg_replace('/>\\n\\s*</', '><', $html);
-	$html = preg_replace_callback('#(<script>)(.+?)(</script>)#s', 'minify', $html);
+		$target = substr($source, 0, -4) . 'min.html';
 
-	file_put_contents($target, $html);
-	touch($target, filemtime($source));
+		if (@filemtime($target) === filemtime($source))
+		{
+			continue;
+		}
+
+		$html = file_get_contents($source);
+		echo $source, "\n";
+
+		// Remove comments
+		$html = preg_replace('(<!--.*?-->)s', '', $html);
+
+		// Remove quotes around attribute values
+		$html = preg_replace_callback(
+			'(<[^>]+)',
+			function ($m)
+			{
+				return preg_replace('(=""|(=)"([^\\s<=>"]*)")', '$1$2', $m[0]);
+			},
+			$html
+		);
+
+		$html = preg_replace('/>\\n\\s*</', '><', $html);
+		$html = preg_replace_callback('#(<script>)(.+?)(</script>)#s', 'minify', $html);
+
+		file_put_contents($target, $html);
+		touch($target, filemtime($source));
+	}
 }
+
+minifyDir(__DIR__);
+minifyDir(__DIR__ . '/2');

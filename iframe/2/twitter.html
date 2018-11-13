@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<title>Content from Twitter</title>
+<style>body{margin:0}*{max-width:100vw}</style>
+<blockquote class="twitter-tweet"><a data-dnt="true" rel="nofollow" target="_blank">Loading tweet...</a></blockquote>
+<script>
+(function(blockquote, navigator)
+{
+	blockquote.firstChild.href = '//twitter.com/user/status/' + location.hash.substr(1);
+
+	let lang = (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language;
+	if (lang > '')
+	{
+		blockquote.setAttribute('data-lang', lang);
+	}
+})(document.body.firstChild, window['navigator'] || {});
+
+// onload="var c=new MessageChannel;c.port1.onmessage=function(e){style.height=e.data+'px'};contentWindow.postMessage('s9e:init','*',[c.port2])"
+
+onmessage = function (e)
+{
+	if (e.data !== 's9e:init')
+	{
+		return;
+	}
+	e.stopImmediatePropagation();
+
+	let delay     = 50,
+		height    = innerHeight,
+		port      = e.ports[0],
+		timeoutId = 0;
+	function checkHeight()
+	{
+		if (height >= (height = document.documentElement.getBoundingClientRect().height))
+		{
+			delay += 10;
+		}
+		else
+		{
+			port.postMessage(height);
+			delay = 50;
+		}
+		if (delay < 1000)
+		{
+			timeoutId = setTimeout(checkHeight, delay);
+		}
+	}
+	checkHeight();
+	onfocus = onclick = function ()
+	{
+		delay = 50;
+		clearTimeout(timeoutId);
+		checkHeight();
+	};
+};
+</script>
+<script src="//platform.twitter.com/widgets.js" onerror="document.querySelector('a').textContent='Cannot load tweet. Disable your adblocker and tracking protection.'"></script>

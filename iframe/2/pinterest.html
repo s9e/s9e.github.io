@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<title>Content from Pinterest</title>
+<body><div><a data-pin-board-width="900" data-pin-width="medium" data-pin-scale-height="360"></a></div>
+<script>
+(function(a, url, id, type)
+{
+	if (/^\d+$/.test(id))
+	{
+		url  += 'pin/';
+		type += 'Pin';
+	}
+	else
+	{
+		type += 'Board';
+	}
+	a.href = url + id;
+	a.setAttribute('data-pin-do', type);
+})(document.body.firstChild.firstChild, 'https://www.pinterest.com/', location.hash.substr(1), 'embed');
+
+onmessage = function (e)
+{
+	if (e.data !== 's9e:init')
+	{
+		return;
+	}
+	e.stopImmediatePropagation();
+
+	let delay     = 50,
+		height    = innerHeight,
+		port      = e.ports[0],
+		timeoutId = 0;
+	function checkHeight()
+	{
+		if (height >= (height = document.documentElement.getBoundingClientRect().height))
+		{
+			delay += 10;
+		}
+		else
+		{
+			port.postMessage(height);
+			delay = 50;
+		}
+		if (delay < 1000)
+		{
+			timeoutId = setTimeout(checkHeight, delay);
+		}
+	}
+	checkHeight();
+	onfocus = onclick = function ()
+	{
+		delay = 50;
+		clearTimeout(timeoutId);
+		checkHeight();
+	};
+};
+</script>
+<script src="//assets.pinterest.com/js/pinit.js"></script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<title>Content from Facebook</title>
+<body style="margin:0"><div></div>
+<script>
+(function(document, hash)
+{
+	var div  = document.body.firstChild,
+		type = (hash.indexOf('video') < 0) ? 'post' : 'video',
+		path = (type === 'post') ? 'user/' : 'v/';
+	div.setAttribute('data-href', 'https://www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, ''));
+	div.className = 'fb-' + type;
+
+	if (innerWidth === 640)
+	{
+		div.setAttribute('data-width', '640');
+	}
+
+	onmessage = function (e)
+	{
+		if (e.data !== 's9e:init')
+		{
+			return;
+		}
+		e.stopImmediatePropagation();
+
+		let delay     = 50,
+			height    = innerHeight,
+			port      = e.ports[0],
+			timeoutId = 0;
+		function checkHeight()
+		{
+			if (height >= (height = document.documentElement.getBoundingClientRect().height))
+			{
+				delay += 10;
+			}
+			else
+			{
+				port.postMessage(height);
+				delay = 50;
+			}
+			if (delay < 1000)
+			{
+				timeoutId = setTimeout(checkHeight, delay);
+			}
+		}
+		checkHeight();
+		onfocus = onclick = function ()
+		{
+			delay = 50;
+			clearTimeout(timeoutId);
+			checkHeight();
+		};
+	};
+})(document, location.hash);
+</script>
+<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" onerror="document.body.innerHTML='Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.'"></script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<title>Content from Gist</title>
+<body style="margin:0">
+<script>
+(function (document)
+{
+	onmessage = function (e)
+	{
+		if (e.data !== 's9e:init')
+		{
+			return;
+		}
+		e.stopImmediatePropagation();
+
+		let delay     = 50,
+			height    = innerHeight,
+			port      = e.ports[0],
+			timeoutId = 0;
+		function checkHeight()
+		{
+			if (height >= (height = document.documentElement.getBoundingClientRect().height))
+			{
+				delay += 10;
+			}
+			else
+			{
+				port.postMessage(height);
+				delay = 50;
+			}
+			if (delay < 1000)
+			{
+				timeoutId = setTimeout(checkHeight, delay);
+			}
+		}
+		checkHeight();
+		onfocus = onclick = function ()
+		{
+			delay = 50;
+			clearTimeout(timeoutId);
+			checkHeight();
+		};
+	};
+
+	/** @param {{div,stylesheet}} o */
+	cb = function (o)
+	{
+		var link  = document.createElement('link');
+		link.rel  = 'stylesheet';
+		link.href = o['stylesheet'];
+
+		document.head.appendChild(link);
+		document.body.innerHTML = o['div'];
+	};
+
+	var script  = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src  = '//gist.github.com/' + location.hash.substr(1) + '.json?callback=cb';
+
+	document.body.appendChild(script);
+})(document);
+</script>
