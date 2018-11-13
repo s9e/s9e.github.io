@@ -5,7 +5,7 @@
 <style>body,iframe{min-height:150px;margin:auto;width:99vw}</style>
 <blockquote class="instagram-media" data-instgrm-captioned><a>Loading Instagram...</a></blockquote>
 <script>
-document.querySelector('a').href = '//instagram.com/p/' + location.hash.replace(/\D/g, '');
+document.querySelector('a').href = '//instagram.com/p/' + location.hash.replace(/\W/g, '');
 
 onmessage = function (e)
 {
