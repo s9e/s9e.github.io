@@ -23,33 +23,36 @@
 		}
 		e.stopImmediatePropagation();
 
-		let delay     = 50,
-			height    = 100,
+		let delay     = 48,
+			height    = 90,
 			port      = e.ports[0],
 			timeoutId = 0;
 		function checkHeight()
 		{
 			if (height >= (height = document.documentElement.getBoundingClientRect().height))
 			{
-				delay += 10;
+				delay += 12;
 			}
 			else
 			{
 				port.postMessage(height);
-				delay = 50;
 			}
 			if (delay < 1000)
 			{
-				timeoutId = setTimeout(checkHeight, delay);
+				schedule();
 			}
 		}
-		checkHeight();
-		onfocus = onclick = function ()
+		function schedule()
 		{
-			delay = 50;
 			clearTimeout(timeoutId);
-			checkHeight();
+			timeoutId = setTimeout(checkHeight, delay);
+		}
+		onclick = onresize = function ()
+		{
+			delay = 48;
+			schedule();
 		};
+		schedule();
 	};
 })(document, location.hash);
 </script>

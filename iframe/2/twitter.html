@@ -14,8 +14,6 @@
 	}
 })(document.body.firstChild, window['navigator'] || {});
 
-// onload="var c=new MessageChannel;c.port1.onmessage=function(e){style.height=e.data+'px'};contentWindow.postMessage('s9e:init','*',[c.port2])"
-
 onmessage = function (e)
 {
 	if (e.data !== 's9e:init')
@@ -24,33 +22,36 @@ onmessage = function (e)
 	}
 	e.stopImmediatePropagation();
 
-	let delay     = 50,
-		height    = 100,
+	let delay     = 48,
+		height    = 90,
 		port      = e.ports[0],
 		timeoutId = 0;
 	function checkHeight()
 	{
 		if (height >= (height = document.documentElement.getBoundingClientRect().height))
 		{
-			delay += 10;
+			delay += 12;
 		}
 		else
 		{
 			port.postMessage(height);
-			delay = 50;
 		}
 		if (delay < 1000)
 		{
-			timeoutId = setTimeout(checkHeight, delay);
+			schedule();
 		}
 	}
-	checkHeight();
-	onfocus = onclick = function ()
+	function schedule()
 	{
-		delay = 50;
 		clearTimeout(timeoutId);
-		checkHeight();
+		timeoutId = setTimeout(checkHeight, delay);
+	}
+	onclick = onresize = function ()
+	{
+		delay = 48;
+		schedule();
 	};
+	schedule();
 };
 </script>
 <script src="//platform.twitter.com/widgets.js" onerror="document.querySelector('a').textContent='Cannot load tweet. Disable your adblocker and tracking protection.'"></script>
