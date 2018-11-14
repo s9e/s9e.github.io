@@ -24,12 +24,12 @@
 		e.stopImmediatePropagation();
 
 		let delay     = 48,
-			height    = 90,
+			height    = 0,
 			port      = e.ports[0],
 			timeoutId = 0;
 		function checkHeight()
 		{
-			if (height >= (height = document.documentElement.getBoundingClientRect().height))
+			if (height === (height = document.documentElement.getBoundingClientRect().height) || height < 90)
 			{
 				delay += 12;
 			}

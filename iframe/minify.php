@@ -15,9 +15,8 @@ function minify($m)
 		'output_info'       => 'compiled_code'
 	];
 
-	$content = http_build_query($params) . '&output_info=errors';
-
-	$response = file_get_contents(
+	$content  = http_build_query($params) . '&output_info=errors';
+	$response = json_decode(file_get_contents(
 		'https://closure-compiler.appspot.com/compile',
 		false,
 		stream_context_create([
@@ -29,9 +28,13 @@ function minify($m)
 				'content' => $content
 			]
 		])
-	);
+	));
+	if (!isset($response->compiledCode))
+	{
+		throw new RuntimeException;
+	}
 
-	return $m[1] . str_replace("\n", '', trim(json_decode($response)->compiledCode, ';')) . $m[3];
+	return $m[1] . str_replace("\n", '', trim($response->compiledCode, ';')) . $m[3];
 }
 
 function minifyDir($dir)
@@ -44,7 +47,6 @@ function minifyDir($dir)
 		}
 
 		$target = substr($source, 0, -4) . 'min.html';
-
 		if (@filemtime($target) === filemtime($source))
 		{
 			continue;
@@ -67,7 +69,15 @@ function minifyDir($dir)
 		);
 
 		$html = preg_replace('/>\\n\\s*</', '><', $html);
-		$html = preg_replace_callback('#(<script>)(.+?)(</script>)#s', 'minify', $html);
+		try
+		{
+			$html = preg_replace_callback('#(<script>)(.+?)(</script>)#s', 'minify', $html);
+		}
+		catch (RuntimeException $e)
+		{
+			echo "FAILED\n";
+			continue;
+		}
 
 		file_put_contents($target, $html);
 		touch($target, filemtime($source));
