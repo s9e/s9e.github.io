@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <title>Content from Instagram</title>
-<!-- Set iframe's min-height because Instagram sets it to 0px if the post was removed -->
+<!-- Removed iframe's min-height. Instagram does not set it to 0px if the post was removed anymore -->
 <!-- Remove 2px from the iframe's width to account for border -->
 <!-- Remove the default margin around blockquotes -->
-<style>blockquote,body{margin:0}iframe{min-height:150px;width:calc(100% - 2px)}</style>
+<style>blockquote,body{margin:0}iframe{width:calc(100% - 2px)}</style>
 <blockquote class="instagram-media" data-instgrm-captioned><a>Loading Instagram...</a></blockquote>
 <script>
 document.querySelector('a').href = '//instagram.com/p/' + location.hash.replace(/\W/g, '');
