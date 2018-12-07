@@ -27,9 +27,13 @@ onmessage = function (e)
 		height    = 0,
 		port      = e.ports[0],
 		timeoutId = 0;
+	function getHeight()
+	{
+		return Math.ceil(document.documentElement.getBoundingClientRect().height);
+	}
 	function checkHeight()
 	{
-		if (height === (height = document.documentElement.getBoundingClientRect().height) || height < 90)
+		if (height === (height = getHeight()) || height < 90)
 		{
 			delay += 12;
 		}
