@@ -231,6 +231,11 @@ v),e=a)}for(l=h;0<=--l;)d=f[l],p=d.namespaceURI,v=d.name,d=d.value,-1<m.indexOf(
 				break;
 			}
 			while (++i < 2);
+
+			if (i > 1)
+			{
+				outline.style.width = outline.style.height = 0;
+			}
 		}
 
 		function toggle(el)
