@@ -176,14 +176,14 @@ f[k],p=d.namespaceURI,v=d.name,d=d.value,-1<m.indexOf(" "+v+" ")||d===a.getAttri
 			{
 				return;
 			}
-			text = textarea.value;
 
-			var lastUpdated = s9e.TextFormatter.preview(text, preview);
-			if (lastUpdated && !preview.isSameNode(lastUpdated))
+			var lastUpdated = s9e.TextFormatter.preview(textarea.value, preview);
+			if (text !== '' && !preview.isSameNode(lastUpdated))
 			{
 				scrollToNode(lastUpdated);
 				highlightNode(lastUpdated);
 			}
+			text = textarea.value;
 		}, 20);
 
 		function scrollToNode(target)
