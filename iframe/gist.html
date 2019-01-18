@@ -38,7 +38,7 @@
 		link.href = o['stylesheet'];
 
 		document.head.appendChild(link);
-		document.body.innerHTML = o['div'].replace(/<a\b/g, '<a target=_blank rel=noopener');
+		document.body.innerHTML = o['div'].replace(/<a\b/g, '<a target=_top');
 	};
 
 	var script  = document.createElement('script');
