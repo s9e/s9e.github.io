@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<title>Content from Instagram</title>
+<body style="margin:0">
+<script>
+(function (body)
+{
+	let height, port;
+	body.innerHTML = '<iframe scrolling="no" src="https://www.instagram.com/p/' + location.hash.replace(/\W/g, '') + '/embed/captioned/?cr=1&wp=540" style="border-radius:3px;border:1px solid #dbdbdb;margin:0 0 12px;width:calc(100% - 2px)"></iframe>';
+
+	onmessage = function (e)
+	{
+		if (e.data === 's9e:init')
+		{
+			port = e.ports[0];
+		}
+		else
+		{
+			let m = /"height":(\d+)/.exec(e.data);
+			if (m)
+			{
+				body.firstChild.style.height = m[1] + 'px';
+				height = +m[1] + 2;
+			}
+		}
+		if (height && port)
+		{
+			port.postMessage(height);
+		}
+	};
+})(document.body);
+</script>
