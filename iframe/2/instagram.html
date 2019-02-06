@@ -8,7 +8,7 @@
 <script>
 document.querySelector('a').href = '//instagram.com/p/' + location.hash.replace(/\W/g, '');
 
-onmessage = function (e)
+addEventListener('message', function (e)
 {
 	if (e.data !== 's9e:init')
 	{
@@ -50,6 +50,6 @@ onmessage = function (e)
 		schedule();
 	};
 	schedule();
-};
+});
 </script>
 <script src="//www.instagram.com/embed.js" onerror="document.querySelector('a').innerHTML='Cannot load Instagram. Disable any adblocker or tracking protection and try again.'"></script>
