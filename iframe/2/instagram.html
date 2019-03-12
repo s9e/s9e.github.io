@@ -6,7 +6,7 @@
 <style>blockquote,body{margin:0}iframe{width:calc(100% - 2px)}</style>
 <blockquote class="instagram-media" data-instgrm-captioned><a>Loading Instagram...</a></blockquote>
 <script>
-document.querySelector('a').href = '//instagram.com/p/' + location.hash.replace(/\W/g, '');
+document.querySelector('a').href = '//instagram.com/p/' + location.hash.replace(/[^-\w]/g, '');
 
 addEventListener('message', function (e)
 {
