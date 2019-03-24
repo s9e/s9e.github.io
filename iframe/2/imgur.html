@@ -16,15 +16,13 @@
 			port = e.ports[0];
 			e.stopImmediatePropagation();
 		}
-		else if (e.data.charAt(0) === '{')
+		else if (/^\{.*"message":"resize_imgur"/.test(e.data))
 		{
 			let data = JSON.parse(e.data);
-			if (data.message === 'resize_imgur')
-			{
-				// Imgur doesn't include the border's width/height in its dimensions
-				width  = 2 + data.width;
-				height = 2 + data.height;
-			}
+
+			// Imgur doesn't include the border's width/height in its dimensions
+			height = 2 + data.height;
+			width  = 2 + data.width;
 		}
 
 		// NOTE: Imgur sometimes reports 0 width
