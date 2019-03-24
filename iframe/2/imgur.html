@@ -25,6 +25,10 @@
 				width  = 2 + data.width;
 				height = 2 + data.height;
 			}
+			if (typeof console !== 'undefined')
+			{
+				console.dir(e.data);
+			}
 		}
 
 		if (height && port && width)
