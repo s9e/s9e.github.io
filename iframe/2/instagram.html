@@ -1,55 +1,30 @@
 <!DOCTYPE html>
 <title>Content from Instagram</title>
-<!-- Removed iframe's min-height. Instagram does not set it to 0px if the post was removed anymore -->
-<!-- Remove 2px from the iframe's width to account for border -->
-<!-- Remove the default margin around blockquotes -->
-<style>blockquote,body{margin:0}iframe{width:calc(100% - 2px)}</style>
-<blockquote class="instagram-media" data-instgrm-captioned><a>Loading Instagram...</a></blockquote>
+<body style="margin:0">
 <script>
-document.querySelector('a').href = '//instagram.com/p/' + location.hash.replace(/[^-\w]/g, '');
-
-addEventListener('message', function (e)
+(function (body)
 {
-	if (e.data !== 's9e:init')
-	{
-		return;
-	}
-	e.stopImmediatePropagation();
+	body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;margin:0 0 12px;width:calc(100% - 2px)" src="//www.instagram.com/p/' + location.hash.replace(/[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + '"></iframe>';
 
-	let delay     = 48,
-		height    = 0,
-		port      = e.ports[0],
-		timeoutId = 0;
-	function getHeight()
+	let height, port;
+	onmessage = function (e)
 	{
-		return Math.ceil(document.documentElement.getBoundingClientRect().height);
-	}
-	function checkHeight()
-	{
-		if (height === (height = getHeight()) || height < 90)
+		let m;
+		if (e.data === 's9e:init')
 		{
-			delay += 12;
+			port = e.ports[0];
+			e.stopImmediatePropagation();
 		}
-		else
+		else if (m = /MEASURE.*height\":(\d+)/.exec(e.data))
 		{
-			port.postMessage(height);
+			height = m[1];
+			body.firstChild.style.height = height + 'px';
 		}
-		if (delay < 1000)
+
+		if (height && port)
 		{
-			schedule();
+			port.postMessage(height + 14);
 		}
-	}
-	function schedule()
-	{
-		clearTimeout(timeoutId);
-		timeoutId = setTimeout(checkHeight, delay);
-	}
-	onclick = onresize = function ()
-	{
-		delay = 48;
-		schedule();
 	};
-	schedule();
-});
+})(document.body);
 </script>
-<script src="//www.instagram.com/embed.js" onerror="document.querySelector('a').innerHTML='Cannot load Instagram. Disable any adblocker or tracking protection and try again.'"></script>
