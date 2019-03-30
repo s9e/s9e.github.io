@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <title>Content from Imgur</title>
-<style>body,iframe{margin:0!important}</style>
-<blockquote class="imgur-embed-pub"></blockquote>
+<body style="margin:0">
 <script>
-(function()
+(function (body)
 {
 	// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
-	document.body.firstChild.setAttribute('data-id', location.hash.substr(1).replace('%2F', '/').replace('gallery', 'a'));
+	// Replace non-word characters to avoid HTML injections
+	body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:solid 1px #ddd;border-radius:2px;height:398px;width:540px" src="//imgur.com' + location.hash.replace(/g(a)llery\/|%2F|\W/g, '$1/') + '/embed?pub=true&w=' + innerWidth + '"></iframe>';
 
 	let height, port, width;
 	onmessage = function (e)
 	{
+		let m;
 		if (e.data === 's9e:init')
 		{
 			port = e.ports[0];
 			e.stopImmediatePropagation();
 		}
-		else if (/^\{.*"message":"resize_imgur"/.test(e.data))
+		else if (m = /height":(\d+),"width":(\d+)/.exec(e.data))
 		{
-			let data = JSON.parse(e.data);
+			height = +m[1];
+			width  = +m[2];
 
-			// Imgur doesn't include the border's width/height in its dimensions
-			height = 2 + data.height;
-			width  = 2 + data.width;
+			body.firstChild.style.height = height + 'px';
+			body.firstChild.style.width  = width + 'px';
 		}
 
 		// NOTE: Imgur sometimes reports 0 width
-		if (height > 2 && port && width > 2)
+		if (height && port && width)
 		{
-			port.postMessage(height + ' ' + width);
+			port.postMessage((height + 2) + ' ' + (width + 2));
 		}
 	};
-})();
+})(document.body);
 </script>
-<script src="//s.imgur.com/min/embed.js"></script>
