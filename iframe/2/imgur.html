@@ -6,7 +6,7 @@
 {
 	// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
 	// Replace non-word characters to avoid HTML injections
-	body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:solid 1px #ddd;border-radius:2px;height:398px;width:540px" src="//imgur.com' + location.hash.replace(/g(a)llery\/|%2F|\W/g, '$1/') + '/embed?pub=true&w=' + innerWidth + '"></iframe>';
+	body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:solid 1px #ddd;border-radius:2px;height:398px;width:calc(100% - 2px)" src="//imgur.com' + location.hash.replace(/g(a)llery\/|%2F|\W/g, '$1/') + '/embed?pub=true&w=' + innerWidth + '"></iframe>';
 
 	let height, port, width;
 	onmessage = function (e)
