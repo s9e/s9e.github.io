@@ -5,7 +5,7 @@
 (function(document, hash)
 {
 	var div  = document.body.firstChild,
-		type = (hash.indexOf('video') < 0) ? 'post' : 'video',
+		type = (/video/.test(hash)) ? 'video' : 'post',
 		path = (type === 'post') ? 'user/' : 'v/';
 	div.setAttribute('data-href', 'https://www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, ''));
 	div.className = 'fb-' + type;
@@ -60,4 +60,4 @@
 	};
 })(document, location.hash);
 </script>
-<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" onerror="document.body.innerHTML='Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.'"></script>
+<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" onerror="parentNode.innerHTML='Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.'"></script>
