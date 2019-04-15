@@ -5,8 +5,10 @@
 <link rel="preconnect" crossorigin="" href="//cdn.syndication.twimg.com">
 <blockquote class="twitter-tweet" data-dnt="true"><a rel="nofollow" target="_blank"></a></blockquote>
 <script>
-document.querySelector('a').href = '//twitter.com/user/status/' + location.hash.substr(1);
-document.body.firstChild.setAttribute('data-lang', (window['navigator'] || {}).language);
+
+var b = document.body.firstChild;
+b.setAttribute('data-lang', (window['navigator'] || {}).language);
+b.firstChild.href = '//twitter.com/user/status/' + location.hash.substr(1);
 
 onmessage = function (e)
 {
