@@ -118,7 +118,7 @@
                     string|bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_get">get</a>(string $url, string[] $headers = [])
+                    <a href="#method_get">get</a>(string $url, array $options = [])
         
                                             <p>Execute a GET request and return the response's body</p>                </div>
                 <div class="col-md-2"></div>
@@ -128,7 +128,7 @@
                     string|bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_post">post</a>(string $url, string[] $headers = [], string $body = &#039;&#039;)
+                    <a href="#method_post">post</a>(string $url, array $options = [], string $body = &#039;&#039;)
         
                                             <p>Execute a POST request and return the response's body</p>                </div>
                 <div class="col-md-2"></div>
@@ -143,7 +143,7 @@
                     <h3 id="method_get">
         <div class="location">at         line 29</div>
         <code>    abstract                string|bool
-    <strong>get</strong>(string $url, string[] $headers = [])
+    <strong>get</strong>(string $url, array $options = [])
         </code>
     </h3>
     <div class="details">
@@ -162,9 +162,9 @@
                 <td>Request URL</td>
             </tr>
                     <tr>
-                <td>string[]</td>
-                <td>$headers</td>
-                <td>Request headers</td>
+                <td>array</td>
+                <td>$options</td>
+                <td>Request options</td>
             </tr>
             </table>
 
@@ -174,7 +174,7 @@
                     <table class="table table-condensed">
         <tr>
             <td>string|bool</td>
-            <td>Response body or FALSE</td>
+            <td>Response content or FALSE</td>
         </tr>
     </table>
 
@@ -188,7 +188,7 @@
                     <h3 id="method_post">
         <div class="location">at         line 39</div>
         <code>    abstract                string|bool
-    <strong>post</strong>(string $url, string[] $headers = [], string $body = &#039;&#039;)
+    <strong>post</strong>(string $url, array $options = [], string $body = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -207,9 +207,9 @@
                 <td>Request URL</td>
             </tr>
                     <tr>
-                <td>string[]</td>
-                <td>$headers</td>
-                <td>Request headers</td>
+                <td>array</td>
+                <td>$options</td>
+                <td>Request options</td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -224,7 +224,7 @@
                     <table class="table table-condensed">
         <tr>
             <td>string|bool</td>
-            <td>Response body or FALSE</td>
+            <td>Response content or FALSE</td>
         </tr>
     </table>
 
