@@ -108,14 +108,6 @@
                 <td><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Minifier.html#property_keepGoing"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifier">Minifier</abbr></a></small></td>
             </tr>
                     <tr>
-                <td class="type" id="property_closureCompilerBin">
-                                                                                string
-                </td>
-                <td>$closureCompilerBin</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_command">
                                                                                 string
                 </td>
@@ -136,14 +128,6 @@
                                                                                 bool
                 </td>
                 <td>$excludeDefaultExterns</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_javaBin">
-                                                                                string
-                </td>
-                <td>$javaBin</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -206,29 +190,9 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $filepathOrCommand = null)
+                    <a href="#method___construct">__construct</a>(string $command)
         
                                             <p>Constructor</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getClosureCompilerBinHash">getClosureCompilerBinHash</a>()
-        
-                                            <p>Compute and return the hash for current Closure Compiler binary</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_testFilepaths">testFilepaths</a>()
-        
-                                            <p>Test that the Closure Compiler file exists</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -239,7 +203,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_minify">
-        <div class="location">at         line 96</div>
+        <div class="location">at         line 70</div>
         <code>                    string
     <strong>minify</strong>(string $src)
         </code>
@@ -319,7 +283,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCacheDifferentiator">
-        <div class="location">at         line 70</div>
+        <div class="location">at         line 48</div>
         <code>                    array|string
     <strong>getCacheDifferentiator</strong>()
         </code>
@@ -389,9 +353,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 52</div>
+        <div class="location">at         line 40</div>
         <code>                    
-    <strong>__construct</strong>(string $filepathOrCommand = null)
+    <strong>__construct</strong>(string $command)
         </code>
     </h3>
     <div class="details">
@@ -406,72 +370,12 @@
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
-                <td>$filepathOrCommand</td>
-                <td>Path to the Closure Compiler .jar or command to execute</td>
+                <td>$command</td>
+                <td>Command to execute</td>
             </tr>
             </table>
 
             
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getClosureCompilerBinHash">
-        <div class="location">at         line 149</div>
-        <code>            protected        string
-    <strong>getClosureCompilerBinHash</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Compute and return the hash for current Closure Compiler binary</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_testFilepaths">
-        <div class="location">at         line 166</div>
-        <code>            protected        void
-    <strong>testFilepaths</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Test that the Closure Compiler file exists</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
             
             
                     </div>
