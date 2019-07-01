@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>s9e\TextFormatter\Configurator\RecursiveParser\CachingRecursiveParser | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:s9e_TextFormatter_Configurator_RecursiveParser_CachingRecursiveParser" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html">RecursiveParser</a></li><li class="backslash">\</li><li>CachingRecursiveParser</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            CachingRecursiveParser
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>CachingRecursiveParser</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_callbacks">
+                                        protected                                        array
+                </td>
+                <td>$callbacks</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#property_callbacks"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_matchGroups">
+                                        protected                                        array
+                </td>
+                <td>$matchGroups</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#property_matchGroups"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_regexp">
+                                        protected                                        string
+                </td>
+                <td>$regexp</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#property_regexp"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cache">
+                                        protected                                        array
+                </td>
+                <td>$cache</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parse">parse</a>(string $str, string $restrict = &#039;&#039;)
+        
+                                            <p>Parse given string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMatchers">setMatchers</a>(array $matchers)
+        
+                                            <p>Set the list of matchers used by this parser</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArguments">getArguments</a>(array $matches, string $name)
+        
+                                            <p>Get the list of arguments produced by a regexp's match</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#method_getArguments"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMatchersConfig">getMatchersConfig</a>(array $matchers)
+        
+                                            <p>Collect, normalize, sort and return the config for all matchers</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#method_getMatchersConfig"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertCaptureNames">insertCaptureNames</a>(string $name, string $regexp)
+        
+                                            <p>Insert capture names into given regexp</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#method_insertCaptureNames"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sortMatcherConfig">sortMatcherConfig</a>(array $a, array $b)
+        
+                                            <p>Compare two matchers' config</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#method_sortMatcherConfig"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_parse">
+        <div class="location">at         line 22</div>
+        <code>                    mixed
+    <strong>parse</strong>(string $str, string $restrict = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse given string</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$restrict</td>
+                <td>Pipe-separated list of allowed matches (ignored if empty)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMatchers">
+        <div class="location">at         line 35</div>
+        <code>                    void
+    <strong>setMatchers</strong>(array $matchers)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the list of matchers used by this parser</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$matchers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArguments">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#method_getArguments"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> at         line 105</div>
+        <code>            protected        string[]
+    <strong>getArguments</strong>(array $matches, string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the list of arguments produced by a regexp's match</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$matches</td>
+                <td>Regexp matches</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Regexp name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMatchersConfig">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#method_getMatchersConfig"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> at         line 124</div>
+        <code>            protected        array
+    <strong>getMatchersConfig</strong>(array $matchers)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Collect, normalize, sort and return the config for all matchers</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$matchers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertCaptureNames">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#method_insertCaptureNames"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> at         line 160</div>
+        <code>            protected        string
+    <strong>insertCaptureNames</strong>(string $name, string $regexp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Insert capture names into given regexp</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the regexp, used to name captures</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$regexp</td>
+                <td>Original regexp</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Modified regexp</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sortMatcherConfig">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/RecursiveParser.html#method_sortMatcherConfig"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> at         line 181</div>
+        <code>        static    protected        integer
+    <strong>sortMatcherConfig</strong>(array $a, array $b)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compare two matchers' config</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$a</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$b</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
