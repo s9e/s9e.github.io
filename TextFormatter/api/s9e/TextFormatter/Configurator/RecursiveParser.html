@@ -100,6 +100,14 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_groupMatches">
+                                        protected                                        array
+                </td>
+                <td>$groupMatches</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_matchGroups">
                                         protected                                        array
                 </td>
@@ -126,7 +134,7 @@
                     mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_parse">parse</a>(string $str, string $restrict = &#039;&#039;)
+                    <a href="#method_parse">parse</a>(string $str, string $name = &#039;&#039;)
         
                                             <p>Parse given string</p>                </div>
                 <div class="col-md-2"></div>
@@ -189,9 +197,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 42</div>
         <code>                    mixed
-    <strong>parse</strong>(string $str, string $restrict = &#039;&#039;)
+    <strong>parse</strong>(string $str, string $name = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -211,8 +219,8 @@
             </tr>
                     <tr>
                 <td>string</td>
-                <td>$restrict</td>
-                <td>Pipe-separated list of allowed matches (ignored if empty)</td>
+                <td>$name</td>
+                <td>Allowed match, either match name or group name (default: allow all)</td>
             </tr>
             </table>
 
@@ -234,7 +242,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setMatchers">
-        <div class="location">at         line 68</div>
+        <div class="location">at         line 73</div>
         <code>                    void
     <strong>setMatchers</strong>(array $matchers)
         </code>
@@ -274,7 +282,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getArguments">
-        <div class="location">at         line 105</div>
+        <div class="location">at         line 110</div>
         <code>            protected        string[]
     <strong>getArguments</strong>(array $matches, string $name)
         </code>
@@ -319,7 +327,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMatchersConfig">
-        <div class="location">at         line 124</div>
+        <div class="location">at         line 129</div>
         <code>            protected        array
     <strong>getMatchersConfig</strong>(array $matchers)
         </code>
@@ -359,7 +367,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_insertCaptureNames">
-        <div class="location">at         line 160</div>
+        <div class="location">at         line 165</div>
         <code>            protected        string
     <strong>insertCaptureNames</strong>(string $name, string $regexp)
         </code>
@@ -404,7 +412,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sortMatcherConfig">
-        <div class="location">at         line 181</div>
+        <div class="location">at         line 186</div>
         <code>        static    protected        integer
     <strong>sortMatcherConfig</strong>(array $a, array $b)
         </code>
