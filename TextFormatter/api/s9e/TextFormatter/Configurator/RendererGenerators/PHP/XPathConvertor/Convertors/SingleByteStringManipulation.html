@@ -92,12 +92,12 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_runner">
-                                        protected                                        <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a>
+                <td class="type" id="property_parser">
+                                        protected                                        <a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a>
                 </td>
-                <td>$runner</td>
+                <td>$parser</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#property_runner"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#property_parser"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a></small></td>
             </tr>
             </table>
 
@@ -110,40 +110,21 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a> $runner)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> $parser)
         
-                                            <p>Constructor</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a></small></div>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getRegexpGroups">getRegexpGroups</a>()
+                    <a href="#method_recurse">recurse</a>(string $str, string $restrict = &#039;&#039;)
         
-                                            <p>Return the name of the group each regexp belongs to</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    array
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getRegexps">getRegexps</a>()
-        
-                                            <p>Return the regexps associated with this convertor</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_convert">convert</a>(string $expr)
-        
-                                            <p>Convert given XPath expression to PHP</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_convert"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a></small></div>
+                                            <p>Parse given string and return its value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method_recurse"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -167,10 +148,20 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMatchers">getMatchers</a>()
+        
+                                            <p>Return the matchers configuration</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertConcat">convertConcat</a>(string $expr1, string $expr2 = null)
+                    <a href="#method_parseConcat">parseConcat</a>(string $expr1, string $expr2 = null)
         
                                             <p>Convert a call to concat()</p>                </div>
                 <div class="col-md-2"></div>
@@ -180,7 +171,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertNormalizeSpace">convertNormalizeSpace</a>(string $expr)
+                    <a href="#method_parseNormalizeSpace">parseNormalizeSpace</a>(string $expr)
         
                                             <p>Convert a call to normalize-space()</p>                </div>
                 <div class="col-md-2"></div>
@@ -190,7 +181,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertSubstringAfter">convertSubstringAfter</a>(string $expr, string $str)
+                    <a href="#method_parseSubstringAfter">parseSubstringAfter</a>(string $expr, string $str)
         
                                             <p>Convert a call to substring-after() where the second argument is a literal string</p>                </div>
                 <div class="col-md-2"></div>
@@ -200,7 +191,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertSubstringBefore">convertSubstringBefore</a>(string $expr1, string $expr2)
+                    <a href="#method_parseSubstringBefore">parseSubstringBefore</a>(string $expr1, string $expr2)
         
                                             <p>Convert a call to substring-before()</p>                </div>
                 <div class="col-md-2"></div>
@@ -210,7 +201,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertTranslate">convertTranslate</a>(string $expr, string $from, string $to)
+                    <a href="#method_parseTranslate">parseTranslate</a>(string $expr, string $from, string $to)
         
                                             <p>Convert a call to translate() where the second and third arguments are literal strings</p>                </div>
                 <div class="col-md-2"></div>
@@ -263,24 +254,22 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 25</div>
+        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a> at         line 23</div>
         <code>                    void
-    <strong>__construct</strong>(<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a> $runner)
+    <strong>__construct</strong>(<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> $parser)
         </code>
     </h3>
     <div class="details">
             
     
 
-                    <div class="method-description">
-                                    <p>Constructor</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a></td>
-                <td>$runner</td>
+                <td><a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></td>
+                <td>$parser</td>
                 <td></td>
             </tr>
             </table>
@@ -302,10 +291,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getRegexpGroups">
-        <div class="location">at         line 15</div>
-        <code>                    array
-    <strong>getRegexpGroups</strong>()
+                    <h3 id="method_recurse">
+        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method_recurse"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a> at         line 35</div>
+        <code>            protected        mixed
+    <strong>recurse</strong>(string $str, string $restrict = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -313,75 +302,20 @@
     
 
                     <div class="method-description">
-                                    <p>Return the name of the group each regexp belongs to</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td>Regexp's name as key, regexp's group as value</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getRegexps">
-        <div class="location">at         line 29</div>
-        <code>                    array
-    <strong>getRegexps</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Return the regexps associated with this convertor</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td>Regexp's name as key, regexp as value</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_convert">
-        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_convert"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 50</div>
-        <code>            protected        string
-    <strong>convert</strong>(string $expr)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Convert given XPath expression to PHP</p>                                                </div>
+                                    <p>Parse given string and return its value</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
-                <td>$expr</td>
+                <td>$str</td>
                 <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$restrict</td>
+                <td>Pipe-separated list of allowed matches (ignored if empty)</td>
             </tr>
             </table>
 
@@ -390,7 +324,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>mixed</td>
             <td></td>
         </tr>
     </table>
@@ -403,7 +337,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAttributeName">
-        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_getAttributeName"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 61</div>
+        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_getAttributeName"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 20</div>
         <code>            protected        string
     <strong>getAttributeName</strong>(string $expr)
         </code>
@@ -443,7 +377,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeNumber">
-        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_normalizeNumber"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 73</div>
+        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_normalizeNumber"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 32</div>
         <code>            protected        string
     <strong>normalizeNumber</strong>(string $sign, string $number)
         </code>
@@ -487,10 +421,51 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertConcat">
-        <div class="location">at         line 47</div>
+                    <h3 id="method_getMatchers">
+        <div class="location">at         line 15</div>
+        <code>                    array
+    <strong>getMatchers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the matchers configuration</p>                    <p>Match name as key. Can be prefixed with a colon-separated list of groups, e.g. "Group:Name".
+Value must be a string or an array with the following elements:</p>
+
+<ul>
+<li>regexp:   the regular expression used to match input.</li>
+<li>order:    used to sort matchers. Defaults to 0.</li>
+<li>groups:   list of groups this match belongs to. Defaults to an empty array.</li>
+<li>callback: called with the matched strings. Defaults to [$this, "parseX"] where X is the
+         match name.</li>
+</ul>
+
+<p>If the config is a string, the string is used for the "regexp" element.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseConcat">
+        <div class="location">at         line 33</div>
         <code>                    string
-    <strong>convertConcat</strong>(string $expr1, string $expr2 = null)
+    <strong>parseConcat</strong>(string $expr1, string $expr2 = null)
         </code>
     </h3>
     <div class="details">
@@ -532,10 +507,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertNormalizeSpace">
-        <div class="location">at         line 64</div>
+                    <h3 id="method_parseNormalizeSpace">
+        <div class="location">at         line 50</div>
         <code>                    string
-    <strong>convertNormalizeSpace</strong>(string $expr)
+    <strong>parseNormalizeSpace</strong>(string $expr)
         </code>
     </h3>
     <div class="details">
@@ -572,10 +547,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertSubstringAfter">
-        <div class="location">at         line 76</div>
+                    <h3 id="method_parseSubstringAfter">
+        <div class="location">at         line 62</div>
         <code>                    string
-    <strong>convertSubstringAfter</strong>(string $expr, string $str)
+    <strong>parseSubstringAfter</strong>(string $expr, string $str)
         </code>
     </h3>
     <div class="details">
@@ -617,10 +592,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertSubstringBefore">
-        <div class="location">at         line 88</div>
+                    <h3 id="method_parseSubstringBefore">
+        <div class="location">at         line 74</div>
         <code>                    string
-    <strong>convertSubstringBefore</strong>(string $expr1, string $expr2)
+    <strong>parseSubstringBefore</strong>(string $expr1, string $expr2)
         </code>
     </h3>
     <div class="details">
@@ -662,10 +637,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertTranslate">
-        <div class="location">at         line 101</div>
+                    <h3 id="method_parseTranslate">
+        <div class="location">at         line 87</div>
         <code>                    string
-    <strong>convertTranslate</strong>(string $expr, string $from, string $to)
+    <strong>parseTranslate</strong>(string $expr, string $from, string $to)
         </code>
     </h3>
     <div class="details">
@@ -713,7 +688,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isAsciiChars">
-        <div class="location">at         line 132</div>
+        <div class="location">at         line 118</div>
         <code>            protected        bool
     <strong>isAsciiChars</strong>(array $chars)
         </code>
@@ -753,7 +728,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeAsciiChars">
-        <div class="location">at         line 143</div>
+        <div class="location">at         line 129</div>
         <code>            protected        string
     <strong>serializeAsciiChars</strong>(array $chars)
         </code>
@@ -793,7 +768,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeMap">
-        <div class="location">at         line 155</div>
+        <div class="location">at         line 141</div>
         <code>            protected        string
     <strong>serializeMap</strong>(array $from, array $to)
         </code>
@@ -838,7 +813,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_splitStringChars">
-        <div class="location">at         line 172</div>
+        <div class="location">at         line 158</div>
         <code>            protected        string[]
     <strong>splitStringChars</strong>(string $string)
         </code>

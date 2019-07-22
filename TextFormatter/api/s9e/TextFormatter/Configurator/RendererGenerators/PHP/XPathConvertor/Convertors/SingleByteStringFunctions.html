@@ -92,12 +92,12 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_runner">
-                                        protected                                        <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a>
+                <td class="type" id="property_parser">
+                                        protected                                        <a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a>
                 </td>
-                <td>$runner</td>
+                <td>$parser</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#property_runner"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#property_parser"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a></small></td>
             </tr>
             </table>
 
@@ -110,40 +110,21 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a> $runner)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> $parser)
         
-                                            <p>Constructor</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a></small></div>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getRegexpGroups">getRegexpGroups</a>()
+                    <a href="#method_recurse">recurse</a>(string $str, string $restrict = &#039;&#039;)
         
-                                            <p>Return the name of the group each regexp belongs to</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    array
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getRegexps">getRegexps</a>()
-        
-                                            <p>Return the regexps associated with this convertor</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_convert">convert</a>(string $expr)
-        
-                                            <p>Convert given XPath expression to PHP</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_convert"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a></small></div>
+                                            <p>Parse given string and return its value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method_recurse"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -167,10 +148,20 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMatchers">getMatchers</a>()
+        
+                                            <p>Return the matchers configuration</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertContains">convertContains</a>(string $haystack, string $needle)
+                    <a href="#method_parseContains">parseContains</a>(string $haystack, string $needle)
         
                                             <p>Convert a call to contains()</p>                </div>
                 <div class="col-md-2"></div>
@@ -180,7 +171,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertEndsWith">convertEndsWith</a>(string $string, string $substring)
+                    <a href="#method_parseEndsWith">parseEndsWith</a>(string $string, string $substring)
         
                                             <p>Convert a call to ends-with()</p>                </div>
                 <div class="col-md-2"></div>
@@ -190,7 +181,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertNotContains">convertNotContains</a>(string $haystack, string $needle)
+                    <a href="#method_parseNotContains">parseNotContains</a>(string $haystack, string $needle)
         
                                             <p>Convert a call to not(contains())</p>                </div>
                 <div class="col-md-2"></div>
@@ -200,7 +191,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertNotEndsWith">convertNotEndsWith</a>(string $string, string $substring)
+                    <a href="#method_parseNotEndsWith">parseNotEndsWith</a>(string $string, string $substring)
         
                                             <p>Convert a call to not(ends-with())</p>                </div>
                 <div class="col-md-2"></div>
@@ -210,7 +201,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertNotStartsWith">convertNotStartsWith</a>(string $string, string $substring)
+                    <a href="#method_parseNotStartsWith">parseNotStartsWith</a>(string $string, string $substring)
         
                                             <p>Convert a call to not(starts-with())</p>                </div>
                 <div class="col-md-2"></div>
@@ -220,7 +211,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertStartsWith">convertStartsWith</a>(string $string, string $substring)
+                    <a href="#method_parseStartsWith">parseStartsWith</a>(string $string, string $substring)
         
                                             <p>Convert a call to starts-with()</p>                </div>
                 <div class="col-md-2"></div>
@@ -230,7 +221,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertStringLength">convertStringLength</a>(string $expr = &#039;.&#039;)
+                    <a href="#method_parseStringLength">parseStringLength</a>(string $expr = &#039;.&#039;)
         
                                             <p>Convert a call to string-length()</p>                </div>
                 <div class="col-md-2"></div>
@@ -293,24 +284,22 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 25</div>
+        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method___construct"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a> at         line 23</div>
         <code>                    void
-    <strong>__construct</strong>(<a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a> $runner)
+    <strong>__construct</strong>(<a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> $parser)
         </code>
     </h3>
     <div class="details">
             
     
 
-                    <div class="method-description">
-                                    <p>Constructor</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a></td>
-                <td>$runner</td>
+                <td><a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></td>
+                <td>$parser</td>
                 <td></td>
             </tr>
             </table>
@@ -332,10 +321,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getRegexpGroups">
-        <div class="location">at         line 15</div>
-        <code>                    array
-    <strong>getRegexpGroups</strong>()
+                    <h3 id="method_recurse">
+        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method_recurse"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a> at         line 35</div>
+        <code>            protected        mixed
+    <strong>recurse</strong>(string $str, string $restrict = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -343,75 +332,20 @@
     
 
                     <div class="method-description">
-                                    <p>Return the name of the group each regexp belongs to</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td>Regexp's name as key, regexp's group as value</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getRegexps">
-        <div class="location">at         line 31</div>
-        <code>                    array
-    <strong>getRegexps</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Return the regexps associated with this convertor</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td>Regexp's name as key, regexp as value</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_convert">
-        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_convert"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 50</div>
-        <code>            protected        string
-    <strong>convert</strong>(string $expr)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Convert given XPath expression to PHP</p>                                                </div>
+                                    <p>Parse given string and return its value</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
-                <td>$expr</td>
+                <td>$str</td>
                 <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$restrict</td>
+                <td>Pipe-separated list of allowed matches (ignored if empty)</td>
             </tr>
             </table>
 
@@ -420,7 +354,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>mixed</td>
             <td></td>
         </tr>
     </table>
@@ -433,7 +367,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAttributeName">
-        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_getAttributeName"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 61</div>
+        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_getAttributeName"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 20</div>
         <code>            protected        string
     <strong>getAttributeName</strong>(string $expr)
         </code>
@@ -473,7 +407,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeNumber">
-        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_normalizeNumber"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 73</div>
+        <div class="location">in <a href="../../../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Convertors/AbstractConvertor.html#method_normalizeNumber"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Convertors\AbstractConvertor">AbstractConvertor</abbr></a> at         line 32</div>
         <code>            protected        string
     <strong>normalizeNumber</strong>(string $sign, string $number)
         </code>
@@ -517,10 +451,51 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertContains">
-        <div class="location">at         line 51</div>
+                    <h3 id="method_getMatchers">
+        <div class="location">at         line 15</div>
+        <code>                    array
+    <strong>getMatchers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the matchers configuration</p>                    <p>Match name as key. Can be prefixed with a colon-separated list of groups, e.g. "Group:Name".
+Value must be a string or an array with the following elements:</p>
+
+<ul>
+<li>regexp:   the regular expression used to match input.</li>
+<li>order:    used to sort matchers. Defaults to 0.</li>
+<li>groups:   list of groups this match belongs to. Defaults to an empty array.</li>
+<li>callback: called with the matched strings. Defaults to [$this, "parseX"] where X is the
+         match name.</li>
+</ul>
+
+<p>If the config is a string, the string is used for the "regexp" element.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseContains">
+        <div class="location">at         line 35</div>
         <code>                    string
-    <strong>convertContains</strong>(string $haystack, string $needle)
+    <strong>parseContains</strong>(string $haystack, string $needle)
         </code>
     </h3>
     <div class="details">
@@ -562,10 +537,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertEndsWith">
-        <div class="location">at         line 63</div>
+                    <h3 id="method_parseEndsWith">
+        <div class="location">at         line 47</div>
         <code>                    string
-    <strong>convertEndsWith</strong>(string $string, string $substring)
+    <strong>parseEndsWith</strong>(string $string, string $substring)
         </code>
     </h3>
     <div class="details">
@@ -607,10 +582,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertNotContains">
-        <div class="location">at         line 75</div>
+                    <h3 id="method_parseNotContains">
+        <div class="location">at         line 59</div>
         <code>                    string
-    <strong>convertNotContains</strong>(string $haystack, string $needle)
+    <strong>parseNotContains</strong>(string $haystack, string $needle)
         </code>
     </h3>
     <div class="details">
@@ -652,10 +627,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertNotEndsWith">
-        <div class="location">at         line 87</div>
+                    <h3 id="method_parseNotEndsWith">
+        <div class="location">at         line 71</div>
         <code>                    string
-    <strong>convertNotEndsWith</strong>(string $string, string $substring)
+    <strong>parseNotEndsWith</strong>(string $string, string $substring)
         </code>
     </h3>
     <div class="details">
@@ -697,10 +672,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertNotStartsWith">
-        <div class="location">at         line 99</div>
+                    <h3 id="method_parseNotStartsWith">
+        <div class="location">at         line 83</div>
         <code>                    string
-    <strong>convertNotStartsWith</strong>(string $string, string $substring)
+    <strong>parseNotStartsWith</strong>(string $string, string $substring)
         </code>
     </h3>
     <div class="details">
@@ -742,10 +717,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertStartsWith">
-        <div class="location">at         line 111</div>
+                    <h3 id="method_parseStartsWith">
+        <div class="location">at         line 95</div>
         <code>                    string
-    <strong>convertStartsWith</strong>(string $string, string $substring)
+    <strong>parseStartsWith</strong>(string $string, string $substring)
         </code>
     </h3>
     <div class="details">
@@ -787,10 +762,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertStringLength">
-        <div class="location">at         line 122</div>
+                    <h3 id="method_parseStringLength">
+        <div class="location">at         line 106</div>
         <code>                    string
-    <strong>convertStringLength</strong>(string $expr = &#039;.&#039;)
+    <strong>parseStringLength</strong>(string $expr = &#039;.&#039;)
         </code>
     </h3>
     <div class="details">
@@ -828,7 +803,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateContains">
-        <div class="location">at         line 135</div>
+        <div class="location">at         line 119</div>
         <code>            protected        string
     <strong>generateContains</strong>(string $haystack, string $needle, bool $bool)
         </code>
@@ -878,7 +853,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateEndsWith">
-        <div class="location">at         line 150</div>
+        <div class="location">at         line 134</div>
         <code>            protected        string
     <strong>generateEndsWith</strong>(string $string, string $substring, bool $bool)
         </code>
@@ -928,7 +903,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateEndsWithLiteral">
-        <div class="location">at         line 165</div>
+        <div class="location">at         line 149</div>
         <code>            protected        string
     <strong>generateEndsWithLiteral</strong>(string $string, string $substring, bool $bool)
         </code>
@@ -978,7 +953,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateEndsWithExpression">
-        <div class="location">at         line 180</div>
+        <div class="location">at         line 164</div>
         <code>            protected        string
     <strong>generateEndsWithExpression</strong>(string $string, string $substring, bool $bool)
         </code>
@@ -1028,7 +1003,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateStartsWith">
-        <div class="location">at         line 195</div>
+        <div class="location">at         line 179</div>
         <code>            protected        string
     <strong>generateStartsWith</strong>(string $string, string $substring, bool $bool)
         </code>

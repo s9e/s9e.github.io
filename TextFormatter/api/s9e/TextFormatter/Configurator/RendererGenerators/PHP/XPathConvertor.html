@@ -92,10 +92,10 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_runner">
-                                        protected                                        <a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a>
+                <td class="type" id="property_parser">
+                                        protected                                        <a href="../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a>
                 </td>
-                <td>$runner</td>
+                <td>$parser</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -110,7 +110,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a> $runner = null)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> $parser = null)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
@@ -177,6 +177,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a href="../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultParser">getDefaultParser</a>()
+        
+                                            <p>Generate and return the a parser with the default set of matchers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
                 </div>
                 <div class="col-md-8 type">
@@ -193,9 +203,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 23</div>
+        <div class="location">at         line 31</div>
         <code>                    
-    <strong>__construct</strong>(<a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a> $runner = null)
+    <strong>__construct</strong>(<a href="../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a> $parser = null)
         </code>
     </h3>
     <div class="details">
@@ -209,8 +219,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../../../s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor/Runner.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor\Runner">Runner</abbr></a></td>
-                <td>$runner</td>
+                <td><a href="../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></td>
+                <td>$parser</td>
                 <td></td>
             </tr>
             </table>
@@ -224,7 +234,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_convertCondition">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 45</div>
         <code>                    string
     <strong>convertCondition</strong>(string $expr)
         </code>
@@ -265,7 +275,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_convertXPath">
-        <div class="location">at         line 78</div>
+        <div class="location">at         line 86</div>
         <code>                    string
     <strong>convertXPath</strong>(string $expr)
         </code>
@@ -305,7 +315,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_exportXPath">
-        <div class="location">at         line 108</div>
+        <div class="location">at         line 116</div>
         <code>            protected        string
     <strong>exportXPath</strong>(string $expr)
         </code>
@@ -346,7 +356,7 @@ variables which are returned as a method call to XPath::export()</p>            
             </div>
                     <div class="method-item">
                     <h3 id="method_exportXPathCurrent">
-        <div class="location">at         line 125</div>
+        <div class="location">at         line 133</div>
         <code>            protected        string
     <strong>exportXPathCurrent</strong>()
         </code>
@@ -376,7 +386,7 @@ variables which are returned as a method call to XPath::export()</p>            
             </div>
                     <div class="method-item">
                     <h3 id="method_exportXPathFragment">
-        <div class="location">at         line 136</div>
+        <div class="location">at         line 144</div>
         <code>            protected        string
     <strong>exportXPathFragment</strong>(string $fragment)
         </code>
@@ -416,7 +426,7 @@ variables which are returned as a method call to XPath::export()</p>            
             </div>
                     <div class="method-item">
                     <h3 id="method_exportXPathParam">
-        <div class="location">at         line 147</div>
+        <div class="location">at         line 155</div>
         <code>            protected        string
     <strong>exportXPathParam</strong>(string $param)
         </code>
@@ -455,8 +465,38 @@ variables which are returned as a method call to XPath::export()</p>            
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getDefaultParser">
+        <div class="location">at         line 167</div>
+        <code>            protected        <a href="../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a>
+    <strong>getDefaultParser</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate and return the a parser with the default set of matchers</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../s9e/TextFormatter/Configurator/RecursiveParser.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser">RecursiveParser</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_tokenizeXPathForExport">
-        <div class="location">at         line 160</div>
+        <div class="location">at         line 194</div>
         <code>            protected        array
     <strong>tokenizeXPathForExport</strong>(string $expr)
         </code>
