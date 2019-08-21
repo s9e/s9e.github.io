@@ -209,7 +209,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addTableCell">addTableCell</a>($tagName, $align, $text)
+                    <a href="#method_addTableCell">addTableCell</a>(string $tagName, string $align, string $content)
         
                                             <p>Add a cell's tags for current table at current position</p>                </div>
                 <div class="col-md-2"></div>
@@ -602,9 +602,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTableCell">
-        <div class="location">at         line 112</div>
+        <div class="location">at         line 113</div>
         <code>            protected        void
-    <strong>addTableCell</strong>($tagName, $align, $text)
+    <strong>addTableCell</strong>(string $tagName, string $align, string $content)
         </code>
     </h3>
     <div class="details">
@@ -618,19 +618,19 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$tagName</td>
-                <td></td>
+                <td>Either TD or TH</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$align</td>
-                <td></td>
+                <td>Either "left", "center", "right" or ""</td>
             </tr>
                     <tr>
-                <td></td>
-                <td>$text</td>
-                <td></td>
+                <td>string</td>
+                <td>$content</td>
+                <td>Cell's text content</td>
             </tr>
             </table>
 
@@ -652,7 +652,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTableHead">
-        <div class="location">at         line 140</div>
+        <div class="location">at         line 141</div>
         <code>            protected        void
     <strong>addTableHead</strong>()
         </code>
@@ -682,7 +682,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTableRow">
-        <div class="location">at         line 153</div>
+        <div class="location">at         line 154</div>
         <code>            protected        void
     <strong>addTableRow</strong>(string $tagName, array $row)
         </code>
@@ -727,7 +727,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_captureTables">
-        <div class="location">at         line 176</div>
+        <div class="location">at         line 177</div>
         <code>            protected        void
     <strong>captureTables</strong>()
         </code>
@@ -757,7 +757,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createBodyTags">
-        <div class="location">at         line 204</div>
+        <div class="location">at         line 205</div>
         <code>            protected        void
     <strong>createBodyTags</strong>(integer $startPos, integer $endPos)
         </code>
@@ -802,7 +802,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createCellTags">
-        <div class="location">at         line 218</div>
+        <div class="location">at         line 219</div>
         <code>            protected        void
     <strong>createCellTags</strong>(string $tagName, integer $startPos, integer $endPos, string $align)
         </code>
@@ -857,7 +857,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createHeadTags">
-        <div class="location">at         line 241</div>
+        <div class="location">at         line 242</div>
         <code>            protected        void
     <strong>createHeadTags</strong>(integer $startPos, integer $endPos)
         </code>
@@ -902,7 +902,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createIgnoreTag">
-        <div class="location">at         line 253</div>
+        <div class="location">at         line 254</div>
         <code>            protected        void
     <strong>createIgnoreTag</strong>(integer $pos, integer $len)
         </code>
@@ -947,7 +947,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createRowTags">
-        <div class="location">at         line 265</div>
+        <div class="location">at         line 266</div>
         <code>            protected        void
     <strong>createRowTags</strong>(integer $startPos, integer $endPos)
         </code>
@@ -992,7 +992,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createSeparatorTag">
-        <div class="location">at         line 276</div>
+        <div class="location">at         line 277</div>
         <code>            protected        void
     <strong>createSeparatorTag</strong>(array $row)
         </code>
@@ -1032,7 +1032,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createTableTags">
-        <div class="location">at         line 288</div>
+        <div class="location">at         line 289</div>
         <code>            protected        void
     <strong>createTableTags</strong>(integer $startPos, integer $endPos)
         </code>
@@ -1077,7 +1077,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_endTable">
-        <div class="location">at         line 298</div>
+        <div class="location">at         line 299</div>
         <code>            protected        void
     <strong>endTable</strong>()
         </code>
@@ -1107,7 +1107,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasValidTable">
-        <div class="location">at         line 313</div>
+        <div class="location">at         line 314</div>
         <code>            protected        bool
     <strong>hasValidTable</strong>()
         </code>
@@ -1137,7 +1137,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isValidSeparator">
-        <div class="location">at         line 324</div>
+        <div class="location">at         line 325</div>
         <code>            protected        bool
     <strong>isValidSeparator</strong>(string $line)
         </code>
@@ -1177,7 +1177,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwriteBlockquoteCallback">
-        <div class="location">at         line 335</div>
+        <div class="location">at         line 336</div>
         <code>            protected        string
     <strong>overwriteBlockquoteCallback</strong>(array $m)
         </code>
@@ -1217,7 +1217,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwriteEscapes">
-        <div class="location">at         line 345</div>
+        <div class="location">at         line 346</div>
         <code>            protected        void
     <strong>overwriteEscapes</strong>()
         </code>
@@ -1247,7 +1247,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwriteInlineCodeCallback">
-        <div class="location">at         line 359</div>
+        <div class="location">at         line 360</div>
         <code>            protected        string
     <strong>overwriteInlineCodeCallback</strong>(array $m)
         </code>
@@ -1287,7 +1287,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwriteMarkdown">
-        <div class="location">at         line 369</div>
+        <div class="location">at         line 370</div>
         <code>            protected        void
     <strong>overwriteMarkdown</strong>()
         </code>
@@ -1317,7 +1317,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseColumnAlignments">
-        <div class="location">at         line 390</div>
+        <div class="location">at         line 391</div>
         <code>            protected        string[]
     <strong>parseColumnAlignments</strong>(string $line)
         </code>
@@ -1357,7 +1357,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_processCurrentTable">
-        <div class="location">at         line 416</div>
+        <div class="location">at         line 417</div>
         <code>            protected        void
     <strong>processCurrentTable</strong>()
         </code>
@@ -1387,7 +1387,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_processTables">
-        <div class="location">at         line 432</div>
+        <div class="location">at         line 433</div>
         <code>            protected        void
     <strong>processTables</strong>()
         </code>
