@@ -2,20 +2,24 @@
 <title>Content from Facebook</title>
 <link rel="preconnect" crossorigin="" href="//staticxx.facebook.com">
 <link rel="preconnect" crossorigin="" href="//www.facebook.com">
-<body style="margin:0"><div></div>
+<body style="margin:0">
 <script>
 (function(document, hash)
 {
-	var div  = document.body.firstChild,
-		type = (/video/.test(hash)) ? 'video' : 'post',
-		path = (type === 'post') ? 'user/' : 'v/';
-	div.setAttribute('data-href', 'https://www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, ''));
-	div.className = 'fb-' + type;
+	var body   = document.body,
+		script = document.createElement('script'),
+		type   = (/video/.test(hash)) ? 'video' : 'post',
+		path   = (type === 'post') ? 'user/' : 'v/',
+		lang   = (window['navigator'] || {}).language || 'enUS';
 
-	if (innerWidth === 640)
+	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, '') + ' class=fb-' + type + ((innerWidth === 640) ? ' data-width=640' : '') + '></div>';
+
+	script.src     = '//connect.facebook.net/' + lang.substr(0, 2) + '_' + lang.toUpperCase().substr(-2) + '/sdk.js#xfbml=1&version=v3.2';
+	script.onerror = function ()
 	{
-		div.setAttribute('data-width', '640');
-	}
+		body.innerHTML = 'Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.';
+	};
+	body.appendChild(script);
 
 	onmessage = function (e)
 	{
@@ -62,4 +66,3 @@
 	};
 })(document, location.hash);
 </script>
-<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" onerror="parentNode.innerHTML='Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.'"></script>
