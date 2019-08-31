@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>s9e\TextFormatter\Configurator\TemplateNormalizations\RenameLivePreviewEvent | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:s9e_TextFormatter_Configurator_TemplateNormalizations_RenameLivePreviewEvent" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations.html">TemplateNormalizations</a></li><li class="backslash">\</li><li>RenameLivePreviewEvent</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            RenameLivePreviewEvent
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>RenameLivePreviewEvent</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Rename deprecated data-s9e-livepreview-postprocess attributes to data-s9e-livepreview-onrender</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XMLNS_XSL</td>
+                <td class="last">
+                    <p><em>XSL namespace</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_ownerDocument">
+                                        protected                                        <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\DOMDocument">DOMDocument</abbr>
+                </td>
+                <td>$ownerDocument</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#property_ownerDocument"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queries">
+                                        protected                                        
+                </td>
+                <td>$queries</td>
+                <td class="last">{@inheritdoc}</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_xpath">
+                                        protected                                        <a target="_blank" href="http://php.net/DOMXPath">DOMXPath</a>
+                </td>
+                <td>$xpath</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#property_xpath"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalize">normalize</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+        
+                                            <p>Apply this normalization rule to given template</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalize"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createElement">createElement</a>(string $nodeName, string $textContent = &#039;&#039;)
+        
+                                            <p>Create an element in current template</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createElement"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createText">createText</a>(string $content)
+        
+                                            <p>Create an xsl:text element or a text node in current template</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createText"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\DOMText">DOMText</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createTextNode">createTextNode</a>(string $content)
+        
+                                            <p>Create a text node in current template</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createTextNode"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNodes">getNodes</a>()
+        
+                                            <p>Query and return a list of nodes of interest</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_getNodes"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isXsl">isXsl</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node, string $localName = null)
+        
+                                            <p>Test whether given node is an XSL element</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_isXsl"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lowercase">lowercase</a>(string $str)
+        
+                                            <p>Make an ASCII string lowercase</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeAttribute">normalizeAttribute</a>(<a target="_blank" href="http://php.net/DOMAttr">DOMAttr</a> $attribute)
+        
+                                            <p>Normalize given attribute</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeElement">normalizeElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+        
+                                            <p>Normalize given element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeNode">normalizeNode</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+        
+                                            <p>Normalize given node</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeNode"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>()
+        
+                                            <p>Reset this instance's properties after usage</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_reset"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_xpath">xpath</a>(string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        
+                                            <p>Evaluate given XPath expression</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_xpath"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_normalize">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalize"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 44</div>
+        <code>                    void
+    <strong>normalize</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Apply this normalization rule to given template</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$template</td>
+                <td><xsl:template/> node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createElement">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createElement"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 62</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+    <strong>createElement</strong>(string $nodeName, string $textContent = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an element in current template</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$nodeName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$textContent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createText">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createText"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 90</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>
+    <strong>createText</strong>(string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an xsl:text element or a text node in current template</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createTextNode">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createTextNode"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 103</div>
+        <code>            protected        <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\DOMText">DOMText</abbr>
+    <strong>createTextNode</strong>(string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a text node in current template</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\DOMText">DOMText</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNodes">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_getNodes"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 113</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>[]
+    <strong>getNodes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Query and return a list of nodes of interest</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isXsl">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_isXsl"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 127</div>
+        <code>            protected        bool
+    <strong>isXsl</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node, string $localName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given node is an XSL element</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$localName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lowercase">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 138</div>
+        <code>            protected        string
+    <strong>lowercase</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make an ASCII string lowercase</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>Original string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Lowercased string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeAttribute">
+        <div class="location">at         line 29</div>
+        <code>            protected        void
+    <strong>normalizeAttribute</strong>(<a target="_blank" href="http://php.net/DOMAttr">DOMAttr</a> $attribute)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalize given attribute</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMAttr">DOMAttr</a></td>
+                <td>$attribute</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeElement">
+        <div class="location">at         line 37</div>
+        <code>            protected        void
+    <strong>normalizeElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalize given element</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$element</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeNode">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeNode"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 169</div>
+        <code>            protected        void
+    <strong>normalizeNode</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalize given node</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_reset"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 191</div>
+        <code>            protected        void
+    <strong>reset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset this instance's properties after usage</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_xpath">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_xpath"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 206</div>
+        <code>            protected        <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>[]
+    <strong>xpath</strong>(string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Evaluate given XPath expression</p>                    <p>For convenience, $XSL is replaced with the XSL namespace URI as a string</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>XPath query</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$node</td>
+                <td>Context node</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
