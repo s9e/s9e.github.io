@@ -12,13 +12,9 @@
 		path   = (type === 'post') ? 'user/' : 'v/',
 		lang   = (window['navigator'] || {}).language || 'enUS';
 
-	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, '') + ' class=fb-' + type + ((innerWidth === 640) ? ' data-width=640' : '') + '></div>';
+	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, '') + ' class=fb-' + type + ((innerWidth === 640) ? ' data-width=640' : '') + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
 
 	script.src     = '//connect.facebook.net/' + lang.substr(0, 2) + '_' + lang.toUpperCase().substr(-2) + '/sdk.js#xfbml=1&version=v3.2';
-	script.onerror = function ()
-	{
-		body.innerHTML = 'Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.';
-	};
 	body.appendChild(script);
 
 	onmessage = function (e)
