@@ -17,7 +17,8 @@
 			port = e.ports[0];
 			e.stopImmediatePropagation();
 		}
-		else if (m = /height":(\d+),"width":(\d+)/.exec(e.data))
+		// NOTE: Imgur sometimes reports 0 width
+		else if (m = /height":(\d+),"width":(?!0)(\d+)/.exec(e.data))
 		{
 			height = +m[1];
 			width  = +m[2];
@@ -26,8 +27,7 @@
 			body.firstChild.style.width  = width + 'px';
 		}
 
-		// NOTE: Imgur sometimes reports 0 width
-		if (height && port && width)
+		if (height && port)
 		{
 			port.postMessage((height + 2) + ' ' + (width + 2));
 		}
