@@ -2329,8 +2329,10 @@ window.projectVersion = 'master';
             
             {"type": "Class", "fromName": "s9e\\TextFormatter\\Utils", "fromLink": "s9e/TextFormatter/Utils.html", "link": "s9e/TextFormatter/Utils/XPath.html", "name": "s9e\\TextFormatter\\Utils\\XPath", "doc": "&quot;&quot;"},
                                                         {"type": "Method", "fromName": "s9e\\TextFormatter\\Utils\\XPath", "fromLink": "s9e/TextFormatter/Utils/XPath.html", "link": "s9e/TextFormatter/Utils/XPath.html#method_export", "name": "s9e\\TextFormatter\\Utils\\XPath::export", "doc": "&quot;Export a literal as an XPath expression&quot;"},
+                    {"type": "Method", "fromName": "s9e\\TextFormatter\\Utils\\XPath", "fromLink": "s9e/TextFormatter/Utils/XPath.html", "link": "s9e/TextFormatter/Utils/XPath.html#method_exportBoolean", "name": "s9e\\TextFormatter\\Utils\\XPath::exportBoolean", "doc": "&quot;Export given boolean value&quot;"},
+                    {"type": "Method", "fromName": "s9e\\TextFormatter\\Utils\\XPath", "fromLink": "s9e/TextFormatter/Utils/XPath.html", "link": "s9e/TextFormatter/Utils/XPath.html#method_exportDouble", "name": "s9e\\TextFormatter\\Utils\\XPath::exportDouble", "doc": "&quot;Export given float value&quot;"},
+                    {"type": "Method", "fromName": "s9e\\TextFormatter\\Utils\\XPath", "fromLink": "s9e/TextFormatter/Utils/XPath.html", "link": "s9e/TextFormatter/Utils/XPath.html#method_exportInteger", "name": "s9e\\TextFormatter\\Utils\\XPath::exportInteger", "doc": "&quot;Export given integer value&quot;"},
                     {"type": "Method", "fromName": "s9e\\TextFormatter\\Utils\\XPath", "fromLink": "s9e/TextFormatter/Utils/XPath.html", "link": "s9e/TextFormatter/Utils/XPath.html#method_exportString", "name": "s9e\\TextFormatter\\Utils\\XPath::exportString", "doc": "&quot;Export a string as an XPath expression&quot;"},
-                    {"type": "Method", "fromName": "s9e\\TextFormatter\\Utils\\XPath", "fromLink": "s9e/TextFormatter/Utils/XPath.html", "link": "s9e/TextFormatter/Utils/XPath.html#method_isIrrational", "name": "s9e\\TextFormatter\\Utils\\XPath::isIrrational", "doc": "&quot;Test whether given value is an irrational number&quot;"},
             
             
                                         // Fix trailing commas in the index
