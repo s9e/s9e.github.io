@@ -214,11 +214,11 @@ potentially unsafe either inside or outside of a string.</p>
 
 <ul>
 <li>"(" and ")" are disallowed to prevent executing functions.</li>
-<li>'"',  "'" and "\" are disallowed to prevent breaking out of or interfering with strings.</li>
+<li>'"',  "'", "\" and "`" are disallowed to prevent breaking out of or interfering with strings.</li>
 <li>"\r", "\n", U+2028 and U+2029 are disallowed inside of JavaScript strings.</li>
 <li>":" and "%" are disallowed to prevent potential exploits that set document.location to a
 javascript: URI.</li>
-<li>"=" is disallowed to prevent overwriting existing vars (or constructor, such as Array's) if
+<li>"=" is disallowed to prevent overwriting existing vars (or constructors, such as Array's) if
 the input is used outside of a string</li>
 </ul>
 </p>                            </div>
