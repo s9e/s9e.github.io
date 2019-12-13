@@ -9,7 +9,7 @@ document.querySelector('a').href = '//twitter.com/user/status/' + location.hash.
 document.body.firstChild.setAttribute('data-lang', navigator.language);
 
 // https://www.koskila.net/how-to-fix-twitter-embed-in-sharepoint/
-if (/MSIE/.test(navigator.userAgent))
+if (/MSIE|Trident/.test(navigator.userAgent))
 {
 	Object.defineProperty(
 		navigator,
