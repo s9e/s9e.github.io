@@ -6,7 +6,22 @@
 <blockquote class="twitter-tweet" data-dnt="true"><a rel="nofollow" target="_blank"></a></blockquote>
 <script>
 document.querySelector('a').href = '//twitter.com/user/status/' + location.hash.substr(1);
-document.body.firstChild.setAttribute('data-lang', (window['navigator'] || {}).language);
+document.body.firstChild.setAttribute('data-lang', navigator.language);
+
+// https://www.koskila.net/how-to-fix-twitter-embed-in-sharepoint/
+if (/MSIE/.test(navigator.userAgent))
+{
+	Object.defineProperty(
+		navigator,
+		'userAgent',
+		{
+			get: function ()
+			{
+				return 'Mozilla/5.0';
+			}
+		}
+	);
+}
 
 onmessage = function (e)
 {
