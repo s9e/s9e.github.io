@@ -235,7 +235,7 @@
                     static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_scrape">scrape</a>(array $attributes, $url, array $config, $cacheDir)
+                    <a href="#method_scrape">scrape</a>(array $attributes, string $url, array $config, string|null $cacheDir)
         
                                             <p>Scrape values and add them to current attributes</p>                </div>
                 <div class="col-md-2"></div>
@@ -711,7 +711,7 @@ corresponds to the media site</p>                            </div>
                     <h3 id="method_scrape">
         <div class="location">at         line 218</div>
         <code>        static    protected        void
-    <strong>scrape</strong>(array $attributes, $url, array $config, $cacheDir)
+    <strong>scrape</strong>(array $attributes, string $url, array $config, string|null $cacheDir)
         </code>
     </h3>
     <div class="details">
@@ -727,22 +727,22 @@ corresponds to the media site</p>                            </div>
                     <tr>
                 <td>array</td>
                 <td>$attributes</td>
-                <td></td>
+                <td>&amp;$attributes Attributes</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$url</td>
-                <td></td>
+                <td>Original URL</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$config</td>
-                <td></td>
+                <td>Scraping config</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string|null</td>
                 <td>$cacheDir</td>
-                <td></td>
+                <td>Path to the cache directory</td>
             </tr>
             </table>
 
