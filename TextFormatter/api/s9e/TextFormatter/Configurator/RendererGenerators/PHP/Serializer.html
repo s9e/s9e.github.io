@@ -203,6 +203,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isBooleanAttribute">isBooleanAttribute</a>(string $attrName, string $php)
+        
+                                            <p>Test whether given attribute declaration is a minimizable boolean attribute</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8 type">
@@ -620,8 +630,53 @@ with the corresponding DOM method for performance reasons</p>                   
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_isBooleanAttribute">
+        <div class="location">at         line 176</div>
+        <code>            protected        bool
+    <strong>isBooleanAttribute</strong>(string $attrName, string $php)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether given attribute declaration is a minimizable boolean attribute</p>                    <p>The test is case-sensitive and only covers attribute that are minimized by libxslt</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td>Attribute name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$php</td>
+                <td>Attribute content, in PHP</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_serializeApplyTemplates">
-        <div class="location">at         line 173</div>
+        <div class="location">at         line 193</div>
         <code>            protected        string
     <strong>serializeApplyTemplates</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $applyTemplates)
         </code>
@@ -661,7 +716,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeAttribute">
-        <div class="location">at         line 191</div>
+        <div class="location">at         line 211</div>
         <code>            protected        string
     <strong>serializeAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $attribute)
         </code>
@@ -701,7 +756,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeChildren">
-        <div class="location">at         line 212</div>
+        <div class="location">at         line 238</div>
         <code>            protected        string
     <strong>serializeChildren</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $ir)
         </code>
@@ -741,7 +796,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeCloseTag">
-        <div class="location">at         line 233</div>
+        <div class="location">at         line 259</div>
         <code>            protected        string
     <strong>serializeCloseTag</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $closeTag)
         </code>
@@ -781,7 +836,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeComment">
-        <div class="location">at         line 263</div>
+        <div class="location">at         line 289</div>
         <code>            protected        string
     <strong>serializeComment</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $comment)
         </code>
@@ -821,7 +876,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeCopyOfAttributes">
-        <div class="location">at         line 276</div>
+        <div class="location">at         line 302</div>
         <code>            protected        string
     <strong>serializeCopyOfAttributes</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $copyOfAttributes)
         </code>
@@ -861,7 +916,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeElement">
-        <div class="location">at         line 294</div>
+        <div class="location">at         line 320</div>
         <code>            protected        string
     <strong>serializeElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         </code>
@@ -901,7 +956,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeHash">
-        <div class="location">at         line 356</div>
+        <div class="location">at         line 382</div>
         <code>            protected        string
     <strong>serializeHash</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
         </code>
@@ -941,7 +996,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeOutput">
-        <div class="location">at         line 384</div>
+        <div class="location">at         line 410</div>
         <code>            protected        string
     <strong>serializeOutput</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $output)
         </code>
@@ -981,7 +1036,7 @@ with the corresponding DOM method for performance reasons</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeSwitch">
-        <div class="location">at         line 408</div>
+        <div class="location">at         line 434</div>
         <code>            protected        string
     <strong>serializeSwitch</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $switch)
         </code>
