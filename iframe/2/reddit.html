@@ -51,7 +51,7 @@
 
 	let id   = location.hash.replace(/[^\w/]/g, '').replace(/^\/r\//, ''),
 		el   = document.createElement('script'),
-		html = '<a href="https://www.reddit.com/r/' + id + '/">Loading Reddit content...</a>';
+		html = '<a href="https://www.reddit.com/r/' + id + '/" rel="noreferrer" target="_top">Loading Reddit content...</a>';
 	if (/(?:\w+\/){4}/.test(id))
 	{
 		el.src = '//www.redditstatic.com/comment-embed.js';
