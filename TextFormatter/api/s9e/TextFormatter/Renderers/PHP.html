@@ -100,6 +100,14 @@
                 <td><small>from&nbsp;<a href="../../../s9e/TextFormatter/Renderer.html#property_params"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a></small></td>
             </tr>
                     <tr>
+                <td class="type" id="property_savedLocale">
+                                        protected                                        mixed
+                </td>
+                <td>$savedLocale</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../s9e/TextFormatter/Renderer.html#property_savedLocale"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_attributes">
                                         protected                                        array[]
                 </td>
@@ -284,6 +292,26 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_restoreLocale">restoreLocale</a>()
+        
+                                            <p>Restore the original locale</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Renderer.html#method_restoreLocale"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLocale">setLocale</a>()
+        
+                                            <p>Temporarily set the locale to C</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Renderer.html#method_setLocale"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_renderNode">renderNode</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
         
                                             <p>Render given DOMNode</p>                </div>
@@ -428,7 +456,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_loadXML">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_loadXML"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 26</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_loadXML"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 31</div>
         <code>            protected        <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
     <strong>loadXML</strong>(string $xml)
         </code>
@@ -468,7 +496,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_render"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 53</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_render"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 58</div>
         <code>                    string
     <strong>render</strong>(string $xml)
         </code>
@@ -508,7 +536,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderPlainText">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_renderPlainText"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 71</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_renderPlainText"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 76</div>
         <code>            protected        string
     <strong>renderPlainText</strong>(string $xml)
         </code>
@@ -588,7 +616,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParameter">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_getParameter"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 99</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_getParameter"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 104</div>
         <code>                    string
     <strong>getParameter</strong>(string $paramName)
         </code>
@@ -628,7 +656,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParameters">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_getParameters"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 109</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_getParameters"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 114</div>
         <code>                    array
     <strong>getParameters</strong>()
         </code>
@@ -658,7 +686,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setParameter">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_setParameter"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 121</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_setParameter"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 126</div>
         <code>                    void
     <strong>setParameter</strong>(string $paramName, mixed $paramValue)
         </code>
@@ -703,7 +731,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setParameters">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_setParameters"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 132</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_setParameters"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 137</div>
         <code>                    void
     <strong>setParameters</strong>(array $params)
         </code>
@@ -743,7 +771,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkUnsupported">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_checkUnsupported"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 146</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_checkUnsupported"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 151</div>
         <code>            protected        void
     <strong>checkUnsupported</strong>(string $xml)
         </code>
@@ -783,7 +811,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_decodeSMP">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_decodeSMP"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 165</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_decodeSMP"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 170</div>
         <code>            protected        string
     <strong>decodeSMP</strong>(string $str)
         </code>
@@ -823,7 +851,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_decodeEntity">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_decodeEntity"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 181</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_decodeEntity"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 186</div>
         <code>        static    protected        string
     <strong>decodeEntity</strong>(array $m)
         </code>
@@ -852,6 +880,66 @@
         <tr>
             <td>string</td>
             <td>Decoded entity</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreLocale">
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_restoreLocale"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 194</div>
+        <code>            protected        void
+    <strong>restoreLocale</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Restore the original locale</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLocale">
+        <div class="location">in <a href="../../../s9e/TextFormatter/Renderer.html#method_setLocale"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a> at         line 205</div>
+        <code>            protected        void
+    <strong>setLocale</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Temporarily set the locale to C</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1377,7 +1465,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reset">
-        <div class="location">at         line 317</div>
+        <div class="location">at         line 323</div>
         <code>            protected        void
     <strong>reset</strong>()
         </code>
