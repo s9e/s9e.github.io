@@ -79,7 +79,7 @@
     </div>
 
     <p>    class
-    <strong>SetRelNoreferrerOnTargetedLinks</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a>
+    <strong>SetRelNoreferrerOnTargetedLinks</strong>        extends <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AddAttributeValueToElements.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AddAttributeValueToElements">AddAttributeValueToElements</abbr></a>
 </p>
 
         
@@ -116,11 +116,11 @@ accessed.</p>                                </div>
             </tr>
                     <tr>
                 <td class="type" id="property_queries">
-                                        protected                                        
+                                        protected                                        string[]
                 </td>
                 <td>$queries</td>
-                <td class="last">{@inheritdoc}</td>
-                <td></td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#property_queries"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_xpath">
@@ -129,6 +129,22 @@ accessed.</p>                                </div>
                 <td>$xpath</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#property_xpath"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attrName">
+                                        protected                                        string
+                </td>
+                <td>$attrName</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AddAttributeValueToElements.html#property_attrName"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AddAttributeValueToElements">AddAttributeValueToElements</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_value">
+                                        protected                                        string
+                </td>
+                <td>$value</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AddAttributeValueToElements.html#property_value"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AddAttributeValueToElements">AddAttributeValueToElements</abbr></a></small></td>
             </tr>
             </table>
 
@@ -258,23 +274,24 @@ accessed.</p>                                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addRelAttribute">addRelAttribute</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+                    <a href="#method___construct">__construct</a>(string $query = &#039;//a[@target] | //area[@target]&#039;, string $attrName = &#039;rel&#039;, string $value = &#039;noreferrer&#039;)
         
-                                            <p>Add a rel="noreferrer" attribute to given element</p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_linkTargetCanAccessOpener">linkTargetCanAccessOpener</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+                    <a href="#method_getValues">getValues</a>(string $attrValue)
         
-                                            <p>Test whether given link element will let the target access window.opener</p>                </div>
-                <div class="col-md-2"></div>
+                                            <p>Explode a string of space-separated values into an array</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AddAttributeValueToElements.html#method_getValues"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AddAttributeValueToElements">AddAttributeValueToElements</abbr></a></small></div>
             </div>
             </div>
 
@@ -324,7 +341,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_createElement">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createElement"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 62</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createElement"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 63</div>
         <code>            protected        <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
     <strong>createElement</strong>(string $nodeName, string $textContent = &#039;&#039;)
         </code>
@@ -369,7 +386,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_createText">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createText"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 90</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createText"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 91</div>
         <code>            protected        <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>
     <strong>createText</strong>(string $content)
         </code>
@@ -409,7 +426,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_createTextNode">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createTextNode"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 103</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createTextNode"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 104</div>
         <code>            protected        <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\DOMText">DOMText</abbr>
     <strong>createTextNode</strong>(string $content)
         </code>
@@ -449,7 +466,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getNodes">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_getNodes"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 113</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_getNodes"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 114</div>
         <code>            protected        <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>[]
     <strong>getNodes</strong>()
         </code>
@@ -479,7 +496,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isXsl">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_isXsl"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 127</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_isXsl"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 128</div>
         <code>            protected        bool
     <strong>isXsl</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node, string $localName = null)
         </code>
@@ -524,7 +541,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_lowercase">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 138</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_lowercase"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 139</div>
         <code>            protected        string
     <strong>lowercase</strong>(string $str)
         </code>
@@ -564,7 +581,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeAttribute">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeAttribute"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 149</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeAttribute"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 150</div>
         <code>            protected        void
     <strong>normalizeAttribute</strong>(<a target="_blank" href="http://php.net/DOMAttr">DOMAttr</a> $attribute)
         </code>
@@ -604,7 +621,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeElement">
-        <div class="location">at         line 70</div>
+        <div class="location">at         line 32</div>
         <code>            protected        void
     <strong>normalizeElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
         </code>
@@ -644,7 +661,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeNode">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeNode"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 169</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeNode"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 170</div>
         <code>            protected        void
     <strong>normalizeNode</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
         </code>
@@ -684,7 +701,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_reset">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_reset"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 191</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_reset"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 192</div>
         <code>            protected        void
     <strong>reset</strong>()
         </code>
@@ -714,7 +731,7 @@ accessed.</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_xpath">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_xpath"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 206</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_xpath"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at         line 207</div>
         <code>            protected        <a target="_blank" href="http://php.net/DOMNode">DOMNode</a>[]
     <strong>xpath</strong>(string $query, <a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node = null)
         </code>
@@ -758,39 +775,38 @@ accessed.</p>                                </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_addRelAttribute">
-        <div class="location">at         line 32</div>
-        <code>            protected        void
-    <strong>addRelAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+                    <h3 id="method___construct">
+        <div class="location">at         line 24</div>
+        <code>                    
+    <strong>__construct</strong>(string $query = &#039;//a[@target] | //area[@target]&#039;, string $attrName = &#039;rel&#039;, string $value = &#039;noreferrer&#039;)
         </code>
     </h3>
     <div class="details">
             
     
 
-                    <div class="method-description">
-                                    <p>Add a rel="noreferrer" attribute to given element</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
-                <td>$element</td>
-                <td></td>
+                <td>string</td>
+                <td>$query</td>
+                <td>XPath query used to locate elements</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attrName</td>
+                <td>Name of the attribute to modify</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Value to be added to the attribute</td>
             </tr>
             </table>
 
             
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
             
             
                     </div>
@@ -798,10 +814,10 @@ accessed.</p>                                </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_linkTargetCanAccessOpener">
-        <div class="location">at         line 50</div>
-        <code>            protected        bool
-    <strong>linkTargetCanAccessOpener</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+                    <h3 id="method_getValues">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AddAttributeValueToElements.html#method_getValues"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AddAttributeValueToElements">AddAttributeValueToElements</abbr></a> at         line 45</div>
+        <code>            protected        array
+    <strong>getValues</strong>(string $attrValue)
         </code>
     </h3>
     <div class="details">
@@ -809,15 +825,15 @@ accessed.</p>                                </div>
     
 
                     <div class="method-description">
-                                    <p>Test whether given link element will let the target access window.opener</p>                                                </div>
+                                    <p>Explode a string of space-separated values into an array</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
-                <td>$element</td>
-                <td></td>
+                <td>string</td>
+                <td>$attrValue</td>
+                <td>Attribute's value</td>
             </tr>
             </table>
 
@@ -826,7 +842,7 @@ accessed.</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
