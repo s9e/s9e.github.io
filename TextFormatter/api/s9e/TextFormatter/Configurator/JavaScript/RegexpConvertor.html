@@ -148,6 +148,116 @@
                     static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_serializeOption">serializeOption</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeCapturingSubpatternStart">serializeCapturingSubpatternStart</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeNonCapturingSubpatternStart">serializeNonCapturingSubpatternStart</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeCapturingSubpatternEnd">serializeCapturingSubpatternEnd</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeNonCapturingSubpatternEnd">serializeNonCapturingSubpatternEnd</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeCharacterClass">serializeCharacterClass</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeLookaheadAssertionStart">serializeLookaheadAssertionStart</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeNegativeLookaheadAssertionStart">serializeNegativeLookaheadAssertionStart</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeLookaheadAssertionEnd">serializeLookaheadAssertionEnd</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeNegativeLookaheadAssertionEnd">serializeNegativeLookaheadAssertionEnd</a>(array $tok)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_unfoldUnicodeProperties">unfoldUnicodeProperties</a>(string $str, bool $inCharacterClass, bool $dotAll)
         
                                             <p>Replace Unicode properties in a string</p>                </div>
@@ -206,7 +316,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_convertUnicodeCharacters">
-        <div class="location">at         line 132</div>
+        <div class="location">at         line 88</div>
         <code>        static    protected        string
     <strong>convertUnicodeCharacters</strong>(string $str, bool $inCharacterClass, bool $dotAll)
         </code>
@@ -256,7 +366,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_escapeLineTerminators">
-        <div class="location">at         line 149</div>
+        <div class="location">at         line 105</div>
         <code>        static    protected        string
     <strong>escapeLineTerminators</strong>(string $regexp)
         </code>
@@ -295,8 +405,388 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_serializeOption">
+        <div class="location">at         line 130</div>
+        <code>        static    protected        string
+    <strong>serializeOption</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeCapturingSubpatternStart">
+        <div class="location">at         line 140</div>
+        <code>        static    protected        string
+    <strong>serializeCapturingSubpatternStart</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeNonCapturingSubpatternStart">
+        <div class="location">at         line 145</div>
+        <code>        static    protected        string
+    <strong>serializeNonCapturingSubpatternStart</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeCapturingSubpatternEnd">
+        <div class="location">at         line 155</div>
+        <code>        static    protected        string
+    <strong>serializeCapturingSubpatternEnd</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeNonCapturingSubpatternEnd">
+        <div class="location">at         line 160</div>
+        <code>        static    protected        string
+    <strong>serializeNonCapturingSubpatternEnd</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeCharacterClass">
+        <div class="location">at         line 165</div>
+        <code>        static    protected        string
+    <strong>serializeCharacterClass</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeLookaheadAssertionStart">
+        <div class="location">at         line 170</div>
+        <code>        static    protected        string
+    <strong>serializeLookaheadAssertionStart</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeNegativeLookaheadAssertionStart">
+        <div class="location">at         line 175</div>
+        <code>        static    protected        string
+    <strong>serializeNegativeLookaheadAssertionStart</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeLookaheadAssertionEnd">
+        <div class="location">at         line 180</div>
+        <code>        static    protected        string
+    <strong>serializeLookaheadAssertionEnd</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeNegativeLookaheadAssertionEnd">
+        <div class="location">at         line 185</div>
+        <code>        static    protected        string
+    <strong>serializeNegativeLookaheadAssertionEnd</strong>(array $tok)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tok</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_unfoldUnicodeProperties">
-        <div class="location">at         line 186</div>
+        <div class="location">at         line 202</div>
         <code>        static    protected        string
     <strong>unfoldUnicodeProperties</strong>(string $str, bool $inCharacterClass, bool $dotAll)
         </code>
