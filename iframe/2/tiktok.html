@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<title>Content from Tiktok</title>
+<body style="margin:0"><blockquote class="tiktok-embed"><section></section></blockquote>
+<script>
+document.body.firstChild.dataset.videoId = location.hash.substr(1);
+
+let height, port;
+onmessage = function (e)
+{
+	let m;
+	if (e.data === 's9e:init')
+	{
+		port = e.ports[0];
+		e.stopImmediatePropagation();
+	}
+	else if (m = /height":(\d+)/.exec(e.data))
+	{
+		height = m[1];
+	}
+
+	if (height && port)
+	{
+		port.postMessage(height);
+	}
+};
+</script>
+<script src="https://www.tiktok.com/embed.js"></script>
