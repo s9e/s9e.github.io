@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<title>Redirect to Twitch</title>
+<script>
+onmessage = function (e)
+{
+	if (e.source !== parent)
+	{
+		return;
+	}
+
+	var regexp = /(\w+)=(\w+)/g,
+		m,
+		vars = {};
+	while (m = regexp.exec(location.hash))
+	{
+		vars[m[1]] = m[2];
+	}
+
+	var url = 'https://';
+	if (vars['clip_id'])
+	{
+		url += 'clips.twitch.tv/embed?clip=' + (vars['channel'] ? vars['channel'] + '/' : '') + vars['clip_id'];
+	}
+	else
+	{
+		url += 'player.twitch.tv/?' + (vars['video_id'] ? 'video=v' + vars['video_id'] : 'channel=' + vars['channel']);
+		if (vars['t'])
+		{
+			url += '&time=' + vars['t'];
+		}
+	}
+	url += '&autoplay=false&parent=' + e.origin.replace(/.*\//, '');
+
+	location.replace(url);
+};
+</script>
