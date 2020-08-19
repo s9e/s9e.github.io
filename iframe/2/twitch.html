@@ -19,7 +19,7 @@ onmessage = function (e)
 	var url = 'https://';
 	if (vars['clip_id'])
 	{
-		url += 'clips.twitch.tv/embed?clip=' + (vars['channel'] ? vars['channel'] + '/' : '') + vars['clip_id'];
+		url += 'clips.twitch.tv/embed?clip=' + vars['clip_id'];
 	}
 	else
 	{
