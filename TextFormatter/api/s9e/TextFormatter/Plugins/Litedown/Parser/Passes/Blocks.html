@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
-        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../fonts/doctum-font.css">
+        <script src="../../../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../../../js/bootstrap.min.js"></script>
         <script src="../../../../../../js/typeahead.min.js"></script>
-        <script src="../../../../../../sami.js"></script>
+        <script src="../../../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_Litedown_Parser_Passes_Blocks" data-root-path="../../../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../../../search.html">Search</a></li>
@@ -93,19 +89,21 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_parser">
-                                        protected                                        <a href="../../../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                                        protected                                        Parser
                 </td>
                 <td>$parser</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_parser"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_parser">
+<abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_text">
-                                        protected                                        <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a>
+                                        protected                                        ParsedText
                 </td>
                 <td>$text</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_text"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_text">
+<abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_setextLines">
@@ -130,7 +128,8 @@
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#method___construct">
+<abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -147,27 +146,27 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_closeList">closeList</a>(array $list, integer $textBoundary)
+                    <a href="#method_closeList">closeList</a>(array $list, int $textBoundary)
         
                                             <p>Close a list at given offset</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer
+                    int
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_computeBlockIgnoreLen">computeBlockIgnoreLen</a>(string $str, integer $maxBlockDepth)
+                    <a href="#method_computeBlockIgnoreLen">computeBlockIgnoreLen</a>(string $str, int $maxBlockDepth)
         
                                             <p>Compute the amount of text to ignore at the start of a block line</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer
+                    int
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getAtxHeaderEndTagLen">getAtxHeaderEndTagLen</a>(integer $startPos, integer $endPos)
+                    <a href="#method_getAtxHeaderEndTagLen">getAtxHeaderEndTagLen</a>(int $startPos, int $endPos)
         
                                             <p>Return the length of the markup at the end of an ATX header</p>                </div>
                 <div class="col-md-2"></div>
@@ -200,7 +199,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a> at         line 29</div>
+        <div class="location">in <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#method___construct">
+<abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a> at line 29</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a> $text)
         </code>
@@ -234,7 +234,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at         line 22</div>
+        <div class="location">at line 22</div>
         <code>                    void
     <strong>parse</strong>()
         </code>
@@ -264,9 +264,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_closeList">
-        <div class="location">at         line 415</div>
+        <div class="location">at line 415</div>
         <code>            protected        void
-    <strong>closeList</strong>(array $list, integer $textBoundary)
+    <strong>closeList</strong>(array $list, int $textBoundary)
         </code>
     </h3>
     <div class="details">
@@ -285,7 +285,7 @@
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$textBoundary</td>
                 <td></td>
             </tr>
@@ -309,9 +309,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_computeBlockIgnoreLen">
-        <div class="location">at         line 436</div>
-        <code>            protected        integer
-    <strong>computeBlockIgnoreLen</strong>(string $str, integer $maxBlockDepth)
+        <div class="location">at line 436</div>
+        <code>            protected        int
+    <strong>computeBlockIgnoreLen</strong>(string $str, int $maxBlockDepth)
         </code>
     </h3>
     <div class="details">
@@ -330,7 +330,7 @@
                 <td>Original block markup</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$maxBlockDepth</td>
                 <td>Maximum block depth</td>
             </tr>
@@ -341,7 +341,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer</td>
+            <td>int</td>
             <td>Number of characters to ignore</td>
         </tr>
     </table>
@@ -354,9 +354,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAtxHeaderEndTagLen">
-        <div class="location">at         line 454</div>
-        <code>            protected        integer
-    <strong>getAtxHeaderEndTagLen</strong>(integer $startPos, integer $endPos)
+        <div class="location">at line 454</div>
+        <code>            protected        int
+    <strong>getAtxHeaderEndTagLen</strong>(int $startPos, int $endPos)
         </code>
     </h3>
     <div class="details">
@@ -370,12 +370,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$startPos</td>
                 <td>Start of the header's text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$endPos</td>
                 <td>End of the header's text</td>
             </tr>
@@ -386,7 +386,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -399,7 +399,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getBlockMarks">
-        <div class="location">at         line 468</div>
+        <div class="location">at line 468</div>
         <code>            protected        string[]
     <strong>getBlockMarks</strong>(string $str)
         </code>
@@ -439,7 +439,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_matchSetextLines">
-        <div class="location">at         line 480</div>
+        <div class="location">at line 480</div>
         <code>            protected        void
     <strong>matchSetextLines</strong>()
         </code>
@@ -470,12 +470,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

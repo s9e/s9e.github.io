@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
-        <script src="../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
-        <script src="../../../../sami.js"></script>
+        <script src="../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_TemplateChecks_DisallowUnsupportedXSL" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../search.html">Search</a></li>
@@ -125,7 +121,8 @@
                 </td>
                 <td>$supportedOperators</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#property_supportedOperators"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#property_supportedOperators">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></td>
             </tr>
             </table>
 
@@ -138,10 +135,11 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_check">check</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template, <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
+                    <a href="#method_check">check</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template, <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
         
                                             <p>Check for elements not supported by the PHP renderer</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_check"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_check">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -151,44 +149,48 @@
                     <a href="#method_checkXPathExpression">checkXPathExpression</a>(string $expr)
         
                                             <p>Check given XPath expression</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXPathExpression"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXPathExpression">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXPathExpressions">checkXPathExpressions</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+                    <a href="#method_checkXPathExpressions">checkXPathExpressions</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template)
         
                                             <p>Check all XPath expressions in given template</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXPathExpressions"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXPathExpressions">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslElements">checkXslElements</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+                    <a href="#method_checkXslElements">checkXslElements</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template)
         
                                             <p>Check all XSL elements in given template</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXslElements"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXslElements">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getXPathExpressions">getXPathExpressions</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+                    <a href="#method_getXPathExpressions">getXPathExpressions</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template)
         
                                             <p>Return all XPath expressions in given template</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_getXPathExpressions"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_getXPathExpressions">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslApplyTemplatesElement">checkXslApplyTemplatesElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $applyTemplates)
+                    <a href="#method_checkXslApplyTemplatesElement">checkXslApplyTemplatesElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $applyTemplates)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -199,7 +201,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslCopyOfElement">checkXslCopyOfElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $copyOf)
+                    <a href="#method_checkXslCopyOfElement">checkXslCopyOfElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $copyOf)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -210,7 +212,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslAttributeElement">checkXslAttributeElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $attribute)
+                    <a href="#method_checkXslAttributeElement">checkXslAttributeElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $attribute)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -221,7 +223,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslElementElement">checkXslElementElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+                    <a href="#method_checkXslElementElement">checkXslElementElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -232,7 +234,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslIfElement">checkXslIfElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $if)
+                    <a href="#method_checkXslIfElement">checkXslIfElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $if)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -243,7 +245,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslValueOfElement">checkXslValueOfElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $valueOf)
+                    <a href="#method_checkXslValueOfElement">checkXslValueOfElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $valueOf)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -254,7 +256,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslVariableElement">checkXslVariableElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $variable)
+                    <a href="#method_checkXslVariableElement">checkXslVariableElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $variable)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -265,7 +267,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_checkXslWhenElement">checkXslWhenElement</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $when)
+                    <a href="#method_checkXslWhenElement">checkXslWhenElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $when)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -276,7 +278,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_requireAttribute">requireAttribute</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element, string $attrName)
+                    <a href="#method_requireAttribute">requireAttribute</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element, string $attrName)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -290,9 +292,10 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_check">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_check"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at         line 40</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_check">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at line 40</div>
         <code>                    void
-    <strong>check</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template, <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
+    <strong>check</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template, <a href="../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
         </code>
     </h3>
     <div class="details">
@@ -306,7 +309,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$template</td>
                 <td><xsl:template/> node</td>
             </tr>
@@ -335,7 +338,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXPathExpression">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXPathExpression"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at         line 49</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXPathExpression">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at line 49</div>
         <code>            protected        void
     <strong>checkXPathExpression</strong>(string $expr)
         </code>
@@ -375,9 +379,10 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXPathExpressions">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXPathExpressions"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at         line 65</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXPathExpressions">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at line 65</div>
         <code>            protected        void
-    <strong>checkXPathExpressions</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+    <strong>checkXPathExpressions</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template)
         </code>
     </h3>
     <div class="details">
@@ -391,7 +396,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$template</td>
                 <td></td>
             </tr>
@@ -415,9 +420,10 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslElements">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXslElements"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at         line 76</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_checkXslElements">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at line 76</div>
         <code>            protected        void
-    <strong>checkXslElements</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+    <strong>checkXslElements</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template)
         </code>
     </h3>
     <div class="details">
@@ -431,7 +437,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$template</td>
                 <td></td>
             </tr>
@@ -455,9 +461,10 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getXPathExpressions">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_getXPathExpressions"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at         line 98</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html#method_getXPathExpressions">
+<abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a> at line 98</div>
         <code>            protected        array
-    <strong>getXPathExpressions</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $template)
+    <strong>getXPathExpressions</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template)
         </code>
     </h3>
     <div class="details">
@@ -471,7 +478,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$template</td>
                 <td></td>
             </tr>
@@ -495,9 +502,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslApplyTemplatesElement">
-        <div class="location">at         line 19</div>
+        <div class="location">at line 19</div>
         <code>            protected        void
-    <strong>checkXslApplyTemplatesElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $applyTemplates)
+    <strong>checkXslApplyTemplatesElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $applyTemplates)
         </code>
     </h3>
     <div class="details">
@@ -509,7 +516,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$applyTemplates</td>
                 <td></td>
             </tr>
@@ -533,9 +540,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslCopyOfElement">
-        <div class="location">at         line 27</div>
+        <div class="location">at line 27</div>
         <code>            protected        void
-    <strong>checkXslCopyOfElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $copyOf)
+    <strong>checkXslCopyOfElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $copyOf)
         </code>
     </h3>
     <div class="details">
@@ -547,7 +554,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$copyOf</td>
                 <td></td>
             </tr>
@@ -571,9 +578,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslAttributeElement">
-        <div class="location">at         line 32</div>
+        <div class="location">at line 32</div>
         <code>            protected        void
-    <strong>checkXslAttributeElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $attribute)
+    <strong>checkXslAttributeElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $attribute)
         </code>
     </h3>
     <div class="details">
@@ -585,7 +592,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$attribute</td>
                 <td></td>
             </tr>
@@ -609,9 +616,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslElementElement">
-        <div class="location">at         line 43</div>
+        <div class="location">at line 43</div>
         <code>            protected        void
-    <strong>checkXslElementElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element)
+    <strong>checkXslElementElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element)
         </code>
     </h3>
     <div class="details">
@@ -623,7 +630,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$element</td>
                 <td></td>
             </tr>
@@ -647,9 +654,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslIfElement">
-        <div class="location">at         line 54</div>
+        <div class="location">at line 54</div>
         <code>            protected        void
-    <strong>checkXslIfElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $if)
+    <strong>checkXslIfElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $if)
         </code>
     </h3>
     <div class="details">
@@ -661,7 +668,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$if</td>
                 <td></td>
             </tr>
@@ -685,9 +692,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslValueOfElement">
-        <div class="location">at         line 59</div>
+        <div class="location">at line 59</div>
         <code>            protected        void
-    <strong>checkXslValueOfElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $valueOf)
+    <strong>checkXslValueOfElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $valueOf)
         </code>
     </h3>
     <div class="details">
@@ -699,7 +706,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$valueOf</td>
                 <td></td>
             </tr>
@@ -723,9 +730,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslVariableElement">
-        <div class="location">at         line 64</div>
+        <div class="location">at line 64</div>
         <code>            protected        void
-    <strong>checkXslVariableElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $variable)
+    <strong>checkXslVariableElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $variable)
         </code>
     </h3>
     <div class="details">
@@ -737,7 +744,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$variable</td>
                 <td></td>
             </tr>
@@ -761,9 +768,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkXslWhenElement">
-        <div class="location">at         line 69</div>
+        <div class="location">at line 69</div>
         <code>            protected        void
-    <strong>checkXslWhenElement</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $when)
+    <strong>checkXslWhenElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $when)
         </code>
     </h3>
     <div class="details">
@@ -775,7 +782,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$when</td>
                 <td></td>
             </tr>
@@ -799,9 +806,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_requireAttribute">
-        <div class="location">at         line 74</div>
+        <div class="location">at line 74</div>
         <code>            protected        
-    <strong>requireAttribute</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $element, string $attrName)
+    <strong>requireAttribute</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element, string $attrName)
         </code>
     </h3>
     <div class="details">
@@ -813,7 +820,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$element</td>
                 <td></td>
             </tr>
@@ -834,12 +841,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

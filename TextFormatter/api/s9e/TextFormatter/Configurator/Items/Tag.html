@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
-        <script src="../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
-        <script src="../../../../sami.js"></script>
+        <script src="../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Items_Tag" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../search.html">Search</a></li>
@@ -93,12 +89,8 @@
     <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-6">
-                                            <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a>
-                                            
-                </div>
-                <div class="col-md-6">
-                    Provides magic __get, __set, __isset and __unset implementations
-                </div>
+                    <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a>    </div>
+                <div class="col-md-6">Provides magic __get, __set, __isset and __unset implementations</div>
             </div>
             </div>
     
@@ -108,7 +100,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_attributes">
-                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributeCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributeCollection">AttributeCollection</abbr></a>
+                                                                                AttributeCollection
                 </td>
                 <td>$attributes</td>
                 <td class="last">This tag's attributes</td>
@@ -116,7 +108,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_attributePreprocessors">
-                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributePreprocessorCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributePreprocessorCollection">AttributePreprocessorCollection</abbr></a>
+                                                                                AttributePreprocessorCollection
                 </td>
                 <td>$attributePreprocessors</td>
                 <td class="last">This tag's attribute parsers</td>
@@ -124,7 +116,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_filterChain">
-                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Collections/TagFilterChain.html"><abbr title="s9e\TextFormatter\Configurator\Collections\TagFilterChain">TagFilterChain</abbr></a>
+                                                                                TagFilterChain
                 </td>
                 <td>$filterChain</td>
                 <td class="last">This tag's filter chain</td>
@@ -132,7 +124,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_nestingLimit">
-                                                                                integer
+                                                                                int
                 </td>
                 <td>$nestingLimit</td>
                 <td class="last">Maximum nesting level for this tag</td>
@@ -140,7 +132,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_rules">
-                                                                                <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a>
+                                                                                Ruleset
                 </td>
                 <td>$rules</td>
                 <td class="last">Rules associated with this tag</td>
@@ -148,7 +140,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_tagLimit">
-                                                                                integer
+                                                                                int
                 </td>
                 <td>$tagLimit</td>
                 <td class="last">Maximum number of this tag per message</td>
@@ -156,7 +148,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_template">
-                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a>
+                                        protected                                        Template
                 </td>
                 <td>$template</td>
                 <td class="last"></td>
@@ -176,7 +168,8 @@
                     <a href="#method___get">__get</a>(string $propName)
         
                                             <p>Magic getter</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get">
+<abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -186,7 +179,8 @@
                     <a href="#method___set">__set</a>(string $propName, mixed $propValue)
         
                                             <p>Magic setter</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set">
+<abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -196,7 +190,8 @@
                     <a href="#method___isset">__isset</a>(string $propName)
         
                                             <p>Test whether a property is set</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset">
+<abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -206,7 +201,8 @@
                     <a href="#method___unset">__unset</a>(string $propName)
         
                                             <p>Unset a property, if the class supports it</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset">
+<abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -230,7 +226,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a>
+                    Template
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getTemplate">getTemplate</a>()
@@ -253,7 +249,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setAttributePreprocessors">setAttributePreprocessors</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributePreprocessorCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributePreprocessorCollection">AttributePreprocessorCollection</abbr></a> $attributePreprocessors)
+                    <a href="#method_setAttributePreprocessors">setAttributePreprocessors</a>(array|AttributePreprocessorCollection $attributePreprocessors)
         
                                             <p>Set this tag's attribute preprocessors</p>                </div>
                 <div class="col-md-2"></div>
@@ -263,7 +259,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setNestingLimit">setNestingLimit</a>(integer $limit)
+                    <a href="#method_setNestingLimit">setNestingLimit</a>(int $limit)
         
                                             <p>Set this tag's nestingLimit</p>                </div>
                 <div class="col-md-2"></div>
@@ -273,7 +269,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setRules">setRules</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a> $rules)
+                    <a href="#method_setRules">setRules</a>(array|Ruleset $rules)
         
                                             <p>Set this tag's rules</p>                </div>
                 <div class="col-md-2"></div>
@@ -283,7 +279,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setTagLimit">setTagLimit</a>(integer $limit)
+                    <a href="#method_setTagLimit">setTagLimit</a>(int $limit)
         
                                             <p>Set this tag's tagLimit</p>                </div>
                 <div class="col-md-2"></div>
@@ -293,7 +289,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setTemplate">setTemplate</a>(string|<a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template)
+                    <a href="#method_setTemplate">setTemplate</a>(string|Template $template)
         
                                             <p>Set the template associated with this tag</p>                </div>
                 <div class="col-md-2"></div>
@@ -316,7 +312,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 30</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get">
+<abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line 30</div>
         <code>                    mixed
     <strong>__get</strong>(string $propName)
         </code>
@@ -357,7 +354,8 @@ neither exists</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___set">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 61</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___set">
+<abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line 61</div>
         <code>                    void
     <strong>__set</strong>(string $propName, mixed $propValue)
         </code>
@@ -406,7 +404,8 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___isset">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 147</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___isset">
+<abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line 147</div>
         <code>                    bool
     <strong>__isset</strong>(string $propName)
         </code>
@@ -446,7 +445,8 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___unset">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at         line 164</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/Traits/Configurable.html#method___unset">
+<abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a> at line 164</div>
         <code>                    void
     <strong>__unset</strong>(string $propName)
         </code>
@@ -486,7 +486,7 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 74</div>
+        <div class="location">at line 74</div>
         <code>                    
     <strong>__construct</strong>(array $options = null)
         </code>
@@ -517,7 +517,7 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at         line 108</div>
+        <div class="location">at line 108</div>
         <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -528,7 +528,7 @@ without incurring data loss.</p>                            </div>
 
                     <div class="method-description">
                                     <p>Return an array-based representation of this object to be used for parsing</p>                    <p>NOTE: if this method was named getConfig() it could interfere with magic getters from
-      the Configurable trait</p>                            </div>
+the Configurable trait</p>                            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -548,8 +548,8 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getTemplate">
-        <div class="location">at         line 145</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a>
+        <div class="location">at line 145</div>
+        <code>                    Template
     <strong>getTemplate</strong>()
         </code>
     </h3>
@@ -565,7 +565,7 @@ without incurring data loss.</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a></td>
+            <td>Template</td>
             <td></td>
         </tr>
     </table>
@@ -578,7 +578,7 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_issetTemplate">
-        <div class="location">at         line 155</div>
+        <div class="location">at line 155</div>
         <code>                    bool
     <strong>issetTemplate</strong>()
         </code>
@@ -608,9 +608,9 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setAttributePreprocessors">
-        <div class="location">at         line 166</div>
+        <div class="location">at line 166</div>
         <code>                    void
-    <strong>setAttributePreprocessors</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributePreprocessorCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributePreprocessorCollection">AttributePreprocessorCollection</abbr></a> $attributePreprocessors)
+    <strong>setAttributePreprocessors</strong>(array|AttributePreprocessorCollection $attributePreprocessors)
         </code>
     </h3>
     <div class="details">
@@ -624,7 +624,7 @@ without incurring data loss.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/AttributePreprocessorCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributePreprocessorCollection">AttributePreprocessorCollection</abbr></a></td>
+                <td>array|AttributePreprocessorCollection</td>
                 <td>$attributePreprocessors</td>
                 <td>2D array of [attrName=>[regexp]], or an instance of AttributePreprocessorCollection</td>
             </tr>
@@ -648,9 +648,9 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setNestingLimit">
-        <div class="location">at         line 178</div>
+        <div class="location">at line 178</div>
         <code>                    void
-    <strong>setNestingLimit</strong>(integer $limit)
+    <strong>setNestingLimit</strong>(int $limit)
         </code>
     </h3>
     <div class="details">
@@ -664,7 +664,7 @@ without incurring data loss.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$limit</td>
                 <td></td>
             </tr>
@@ -688,9 +688,9 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setRules">
-        <div class="location">at         line 196</div>
+        <div class="location">at line 196</div>
         <code>                    void
-    <strong>setRules</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a> $rules)
+    <strong>setRules</strong>(array|Ruleset $rules)
         </code>
     </h3>
     <div class="details">
@@ -704,7 +704,7 @@ without incurring data loss.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array|<a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></td>
+                <td>array|Ruleset</td>
                 <td>$rules</td>
                 <td>2D array of rule definitions, or instance of Ruleset</td>
             </tr>
@@ -728,9 +728,9 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagLimit">
-        <div class="location">at         line 208</div>
+        <div class="location">at line 208</div>
         <code>                    void
-    <strong>setTagLimit</strong>(integer $limit)
+    <strong>setTagLimit</strong>(int $limit)
         </code>
     </h3>
     <div class="details">
@@ -744,7 +744,7 @@ without incurring data loss.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$limit</td>
                 <td></td>
             </tr>
@@ -768,9 +768,9 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTemplate">
-        <div class="location">at         line 226</div>
+        <div class="location">at line 226</div>
         <code>                    void
-    <strong>setTemplate</strong>(string|<a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template)
+    <strong>setTemplate</strong>(string|Template $template)
         </code>
     </h3>
     <div class="details">
@@ -784,7 +784,7 @@ without incurring data loss.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|<a href="../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a></td>
+                <td>string|Template</td>
                 <td>$template</td>
                 <td></td>
             </tr>
@@ -808,7 +808,7 @@ without incurring data loss.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_unsetTemplate">
-        <div class="location">at         line 241</div>
+        <div class="location">at line 241</div>
         <code>                    void
     <strong>unsetTemplate</strong>()
         </code>
@@ -839,12 +839,9 @@ without incurring data loss.</p>                            </div>
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

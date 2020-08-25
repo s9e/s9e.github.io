@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
-        <script src="../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
-        <script src="../../../../sami.js"></script>
+        <script src="../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_JavaScript_HintGenerator" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../search.html">Search</a></li>
@@ -109,7 +105,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_plugins">
-                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator/Collections/PluginCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\PluginCollection">PluginCollection</abbr></a>
+                                        protected                                        PluginCollection
                 </td>
                 <td>$plugins</td>
                 <td class="last"></td>
@@ -227,7 +223,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getHints">
-        <div class="location">at         line 40</div>
+        <div class="location">at line 40</div>
         <code>                    string
     <strong>getHints</strong>()
         </code>
@@ -257,7 +253,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setConfig">
-        <div class="location">at         line 66</div>
+        <div class="location">at line 66</div>
         <code>                    void
     <strong>setConfig</strong>(array $config)
         </code>
@@ -297,7 +293,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPlugins">
-        <div class="location">at         line 77</div>
+        <div class="location">at line 77</div>
         <code>                    void
     <strong>setPlugins</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Collections/PluginCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\PluginCollection">PluginCollection</abbr></a> $plugins)
         </code>
@@ -337,7 +333,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setXSL">
-        <div class="location">at         line 88</div>
+        <div class="location">at line 88</div>
         <code>                    void
     <strong>setXSL</strong>(string $xsl)
         </code>
@@ -377,7 +373,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPluginsHints">
-        <div class="location">at         line 98</div>
+        <div class="location">at line 98</div>
         <code>            protected        void
     <strong>setPluginsHints</strong>()
         </code>
@@ -407,7 +403,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setRenderingHints">
-        <div class="location">at         line 119</div>
+        <div class="location">at line 119</div>
         <code>            protected        void
     <strong>setRenderingHints</strong>()
         </code>
@@ -437,7 +433,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setRulesHints">
-        <div class="location">at         line 140</div>
+        <div class="location">at line 140</div>
         <code>            protected        void
     <strong>setRulesHints</strong>()
         </code>
@@ -467,7 +463,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagAttributesHints">
-        <div class="location">at         line 178</div>
+        <div class="location">at line 178</div>
         <code>            protected        void
     <strong>setTagAttributesHints</strong>(array $tagConfig)
         </code>
@@ -507,7 +503,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagsHints">
-        <div class="location">at         line 196</div>
+        <div class="location">at line 196</div>
         <code>            protected        void
     <strong>setTagsHints</strong>()
         </code>
@@ -538,12 +534,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

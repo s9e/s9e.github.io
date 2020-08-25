@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
-        <script src="../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
-        <script src="../../../../sami.js"></script>
+        <script src="../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_RulesHelper" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../search.html">Search</a></li>
@@ -117,7 +113,7 @@
                     static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_applyTargetedRule">applyTargetedRule</a>(array $matrix, array $rules, string $ruleName, string $key, integer $value)
+                    <a href="#method_applyTargetedRule">applyTargetedRule</a>(array $matrix, array $rules, string $ruleName, string $key, int $value)
         
                                             <p>Apply given rule from each applicable tag</p>                </div>
                 <div class="col-md-2"></div>
@@ -145,7 +141,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;integer[]
+                    static&nbsp;int[]
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_pack">pack</a>(string $allowedChildren, string $allowedDescendants)
@@ -161,7 +157,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getBitfields">
-        <div class="location">at         line 22</div>
+        <div class="location">at line 22</div>
         <code>        static            array
     <strong>getBitfields</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Collections/TagCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\TagCollection">TagCollection</abbr></a> $tags, <a href="../../../../s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a> $rootRules)
         </code>
@@ -206,7 +202,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_initMatrix">
-        <div class="location">at         line 101</div>
+        <div class="location">at line 101</div>
         <code>        static    protected        array
     <strong>initMatrix</strong>(array $rules)
         </code>
@@ -246,9 +242,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_applyTargetedRule">
-        <div class="location">at         line 128</div>
+        <div class="location">at line 128</div>
         <code>        static    protected        void
-    <strong>applyTargetedRule</strong>(array $matrix, array $rules, string $ruleName, string $key, integer $value)
+    <strong>applyTargetedRule</strong>(array $matrix, array $rules, string $ruleName, string $key, int $value)
         </code>
     </h3>
     <div class="details">
@@ -283,7 +279,7 @@ matrix</p>                            </div>
                 <td>Key in the matrix</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$value</td>
                 <td>Value to be set</td>
             </tr>
@@ -307,7 +303,7 @@ matrix</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_unrollRules">
-        <div class="location">at         line 148</div>
+        <div class="location">at line 148</div>
         <code>        static    protected        array
     <strong>unrollRules</strong>(array $rules)
         </code>
@@ -345,7 +341,7 @@ matrix</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_pruneMatrix">
-        <div class="location">at         line 190</div>
+        <div class="location">at line 190</div>
         <code>        static    protected        void
     <strong>pruneMatrix</strong>(array $matrix)
         </code>
@@ -385,8 +381,8 @@ matrix</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_pack">
-        <div class="location">at         line 240</div>
-        <code>        static    protected        integer[]
+        <div class="location">at line 240</div>
+        <code>        static    protected        int[]
     <strong>pack</strong>(string $allowedChildren, string $allowedDescendants)
         </code>
     </h3>
@@ -419,7 +415,7 @@ bitfield occupies the most significant bits</p>                            </div
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer[]</td>
+            <td>int[]</td>
             <td></td>
         </tr>
     </table>
@@ -433,12 +429,9 @@ bitfield occupies the most significant bits</p>                            </div
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

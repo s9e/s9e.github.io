@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
-        <script src="../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
-        <script src="../../../../sami.js"></script>
+        <script src="../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_FancyPants_Parser" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../search.html">Search</a></li>
@@ -97,15 +93,17 @@
                 </td>
                 <td>$config</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_parser">
-                                        protected                                        <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                                        protected                                        Parser
                 </td>
                 <td>$parser</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_hasDoubleQuote">
@@ -145,7 +143,8 @@
                     <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         
                                             <p>Constructor</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -155,7 +154,8 @@
                     <a href="#method_setUp">setUp</a>()
         
                                             <p>Plugin's setup</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -173,7 +173,7 @@
                     <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addTag">addTag</a>(integer $tagPos, integer $tagLen, string $chr, integer $prio = 0)
+                    <a href="#method_addTag">addTag</a>(int $tagPos, int $tagLen, string $chr, int $prio = 0)
         
                                             <p>Add a fancy replacement tag</p>                </div>
                 <div class="col-md-2"></div>
@@ -286,7 +286,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 30</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at line 30</div>
         <code>final                    
     <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         </code>
@@ -322,7 +323,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setUp">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 43</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at line 43</div>
         <code>            protected        void
     <strong>setUp</strong>()
         </code>
@@ -352,7 +354,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at         line 32</div>
+        <div class="location">at line 32</div>
         <code>                    void
     <strong>parse</strong>(string $text, array $matches)
         </code>
@@ -374,7 +376,7 @@
                 <td>array</td>
                 <td>$matches</td>
                 <td>If the config array has a "regexp" key, the corresponding matches are
-                        passed as second parameter. Otherwise, an empty array is passed</td>
+passed as second parameter. Otherwise, an empty array is passed</td>
             </tr>
             </table>
 
@@ -396,9 +398,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTag">
-        <div class="location">at         line 75</div>
+        <div class="location">at line 75</div>
         <code>            protected        <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addTag</strong>(integer $tagPos, integer $tagLen, string $chr, integer $prio = 0)
+    <strong>addTag</strong>(int $tagPos, int $tagLen, string $chr, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -412,12 +414,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$tagPos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$tagLen</td>
                 <td>Length of text consumed by the tag</td>
             </tr>
@@ -427,7 +429,7 @@
                 <td>Replacement character</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -451,7 +453,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseDashesAndEllipses">
-        <div class="location">at         line 90</div>
+        <div class="location">at line 90</div>
         <code>            protected        void
     <strong>parseDashesAndEllipses</strong>()
         </code>
@@ -481,7 +483,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseDoubleQuotePairs">
-        <div class="location">at         line 117</div>
+        <div class="location">at line 117</div>
         <code>            protected        void
     <strong>parseDoubleQuotePairs</strong>()
         </code>
@@ -511,7 +513,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseFractions">
-        <div class="location">at         line 134</div>
+        <div class="location">at line 134</div>
         <code>            protected        void
     <strong>parseFractions</strong>()
         </code>
@@ -541,7 +543,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseGuillemets">
-        <div class="location">at         line 176</div>
+        <div class="location">at line 176</div>
         <code>            protected        void
     <strong>parseGuillemets</strong>()
         </code>
@@ -571,7 +573,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseNotEqualSign">
-        <div class="location">at         line 201</div>
+        <div class="location">at line 201</div>
         <code>            protected        void
     <strong>parseNotEqualSign</strong>()
         </code>
@@ -601,7 +603,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseQuotePairs">
-        <div class="location">at         line 224</div>
+        <div class="location">at line 224</div>
         <code>            protected        void
     <strong>parseQuotePairs</strong>(string $regexp, string $leftQuote, string $rightQuote)
         </code>
@@ -651,7 +653,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseSingleQuotePairs">
-        <div class="location">at         line 245</div>
+        <div class="location">at line 245</div>
         <code>            protected        void
     <strong>parseSingleQuotePairs</strong>()
         </code>
@@ -681,7 +683,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseSingleQuotes">
-        <div class="location">at         line 264</div>
+        <div class="location">at line 264</div>
         <code>            protected        void
     <strong>parseSingleQuotes</strong>()
         </code>
@@ -711,7 +713,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseSymbolsAfterDigits">
-        <div class="location">at         line 290</div>
+        <div class="location">at line 290</div>
         <code>            protected        void
     <strong>parseSymbolsAfterDigits</strong>()
         </code>
@@ -722,9 +724,9 @@
 
                     <div class="method-description">
                                     <p>Parse symbols found after digits</p>                    <p>Does symbols found after a digit:
- - apostrophe ’ if it's followed by an "s" as in 80's
- - prime ′ and double prime ″
- - multiply sign × if it's followed by an optional space and another digit</p>                            </div>
+- apostrophe ’ if it's followed by an "s" as in 80's
+- prime ′ and double prime ″
+- multiply sign × if it's followed by an optional space and another digit</p>                            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -744,7 +746,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseSymbolsInParentheses">
-        <div class="location">at         line 335</div>
+        <div class="location">at line 335</div>
         <code>            protected        void
     <strong>parseSymbolsInParentheses</strong>()
         </code>
@@ -775,12 +777,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

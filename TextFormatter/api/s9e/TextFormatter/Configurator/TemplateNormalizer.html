@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <script src="../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
-        <script src="../../../sami.js"></script>
+        <script src="../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_TemplateNormalizer" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
                     <li><a href="../../../search.html">Search</a></li>
@@ -80,7 +76,7 @@
 
     <p>    class
     <strong>TemplateNormalizer</strong>        implements
-        <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a>, <a target="_blank" href="http://php.net/Iterator">Iterator</a>
+        <a target="_blank" rel="noopener" href="https://www.php.net/ArrayAccess">ArrayAccess</a>, <a target="_blank" rel="noopener" href="https://www.php.net/Iterator">Iterator</a>
 </p>
 
         
@@ -93,12 +89,8 @@
     <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-6">
-                                            <a href="../../../s9e/TextFormatter/Configurator/Traits/CollectionProxy.html"><abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a>
-                                            
-                </div>
-                <div class="col-md-6">
-                    Allows an object to act as a proxy for a NormalizedCollection stored in $this->collection
-                </div>
+                    <a href="../../../s9e/TextFormatter/Configurator/Traits/CollectionProxy.html"><abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a>    </div>
+                <div class="col-md-6">Allows an object to act as a proxy for a NormalizedCollection stored in $this->collection</div>
             </div>
             </div>
     
@@ -108,7 +100,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_collection">
-                                        protected                                        <a href="../../../s9e/TextFormatter/Configurator/Collections/TemplateNormalizationList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\TemplateNormalizationList">TemplateNormalizationList</abbr></a>
+                                        protected                                        TemplateNormalizationList
                 </td>
                 <td>$collection</td>
                 <td class="last"></td>
@@ -124,7 +116,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_maxIterations">
-                                        protected                                        integer
+                                        protected                                        int
                 </td>
                 <td>$maxIterations</td>
                 <td class="last"></td>
@@ -144,14 +136,15 @@
                     <a href="#method___call">__call</a>(string $methodName, array $args)
         
                                             <p>Forward all unknown method calls to $this->collection</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Configurator/Traits/CollectionProxy.html#method___call"><abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Configurator/Traits/CollectionProxy.html#method___call">
+<abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetExists">offsetExists</a>(string|integer  $offset)
+                    <a href="#method_offsetExists">offsetExists</a>(string|int  $offset)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -162,7 +155,7 @@
                     mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetGet">offsetGet</a>(string|integer  $offset)
+                    <a href="#method_offsetGet">offsetGet</a>(string|int  $offset)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -183,7 +176,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetUnset">offsetUnset</a>(string|integer  $offset)
+                    <a href="#method_offsetUnset">offsetUnset</a>(string|int  $offset)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -191,7 +184,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_count">count</a>()
@@ -213,7 +206,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer|string
+                    int|string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_key">key</a>()
@@ -328,7 +321,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_normalizeKey">normalizeKey</a>(mixed  $key)
@@ -421,7 +414,7 @@
                     mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_insert">insert</a>(integer  $offset, mixed  $value)
+                    <a href="#method_insert">insert</a>(int  $offset, mixed  $value)
         
                                             <p>Insert a value at an arbitrary 0-based position</p>                </div>
                 <div class="col-md-2"></div>
@@ -438,7 +431,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_remove">remove</a>(mixed  $value)
@@ -454,7 +447,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___call">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/CollectionProxy.html#method___call"><abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a> at         line 36</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Configurator/Traits/CollectionProxy.html#method___call">
+<abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a> at line 36</div>
         <code>                    mixed
     <strong>__call</strong>(string $methodName, array $args)
         </code>
@@ -499,9 +493,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetExists">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    bool
-    <strong>offsetExists</strong>(string|integer  $offset)
+    <strong>offsetExists</strong>(string|int  $offset)
         </code>
     </h3>
     <div class="details">
@@ -513,7 +507,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|integer </td>
+                <td>string|int </td>
                 <td>$offset</td>
                 <td></td>
             </tr>
@@ -537,9 +531,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetGet">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
-    <strong>offsetGet</strong>(string|integer  $offset)
+    <strong>offsetGet</strong>(string|int  $offset)
         </code>
     </h3>
     <div class="details">
@@ -551,7 +545,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|integer </td>
+                <td>string|int </td>
                 <td>$offset</td>
                 <td></td>
             </tr>
@@ -575,7 +569,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetSet">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    void
     <strong>offsetSet</strong>(mixed  $offset, mixed  $value)
         </code>
@@ -620,9 +614,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetUnset">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    void
-    <strong>offsetUnset</strong>(string|integer  $offset)
+    <strong>offsetUnset</strong>(string|int  $offset)
         </code>
     </h3>
     <div class="details">
@@ -634,7 +628,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|integer </td>
+                <td>string|int </td>
                 <td>$offset</td>
                 <td></td>
             </tr>
@@ -658,8 +652,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_count">
-        <div class="location">at         line 45</div>
-        <code>                    integer
+        <div class="location">at line 45</div>
+        <code>                    int
     <strong>count</strong>()
         </code>
     </h3>
@@ -673,7 +667,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -686,7 +680,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
     <strong>current</strong>()
         </code>
@@ -714,8 +708,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_key">
-        <div class="location">at         line 45</div>
-        <code>                    integer|string
+        <div class="location">at line 45</div>
+        <code>                    int|string
     <strong>key</strong>()
         </code>
     </h3>
@@ -729,7 +723,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer|string</td>
+            <td>int|string</td>
             <td></td>
         </tr>
     </table>
@@ -742,7 +736,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
     <strong>next</strong>()
         </code>
@@ -770,7 +764,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    void
     <strong>rewind</strong>()
         </code>
@@ -798,7 +792,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_valid">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    bool
     <strong>valid</strong>()
         </code>
@@ -826,7 +820,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
     <strong>add</strong>(mixed  $value, null  $void)
         </code>
@@ -871,7 +865,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    array
     <strong>asConfig</strong>()
         </code>
@@ -899,7 +893,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_contains">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    bool
     <strong>contains</strong>(mixed  $value)
         </code>
@@ -939,7 +933,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    void
     <strong>delete</strong>(string  $key)
         </code>
@@ -979,7 +973,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_exists">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    bool
     <strong>exists</strong>(string  $key)
         </code>
@@ -1019,7 +1013,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
     <strong>get</strong>(string  $key)
         </code>
@@ -1059,7 +1053,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_indexOf">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
     <strong>indexOf</strong>(mixed  $value)
         </code>
@@ -1099,8 +1093,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeKey">
-        <div class="location">at         line 45</div>
-        <code>                    integer
+        <div class="location">at line 45</div>
+        <code>                    int
     <strong>normalizeKey</strong>(mixed  $key)
         </code>
     </h3>
@@ -1126,7 +1120,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -1139,7 +1133,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeValue">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    AbstractNormalization
     <strong>normalizeValue</strong>(mixed  $value)
         </code>
@@ -1179,7 +1173,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_onDuplicate">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    string
     <strong>onDuplicate</strong>(string|null  $action)
         </code>
@@ -1219,7 +1213,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
     <strong>set</strong>(string  $key, mixed  $value)
         </code>
@@ -1264,7 +1258,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 99</div>
+        <div class="location">at line 99</div>
         <code>                    
     <strong>__construct</strong>(array $normalizations = null)
         </code>
@@ -1295,7 +1289,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeTag">
-        <div class="location">at         line 119</div>
+        <div class="location">at line 119</div>
         <code>                    void
     <strong>normalizeTag</strong>(<a href="../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1335,7 +1329,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeTemplate">
-        <div class="location">at         line 133</div>
+        <div class="location">at line 133</div>
         <code>                    string
     <strong>normalizeTemplate</strong>(string $template)
         </code>
@@ -1375,7 +1369,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_append">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
     <strong>append</strong>(mixed  $value)
         </code>
@@ -1415,7 +1409,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    void
     <strong>clear</strong>()
         </code>
@@ -1445,9 +1439,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_insert">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
-    <strong>insert</strong>(integer  $offset, mixed  $value)
+    <strong>insert</strong>(int  $offset, mixed  $value)
         </code>
     </h3>
     <div class="details">
@@ -1461,7 +1455,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer </td>
+                <td>int </td>
                 <td>$offset</td>
                 <td></td>
             </tr>
@@ -1490,7 +1484,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_prepend">
-        <div class="location">at         line 45</div>
+        <div class="location">at line 45</div>
         <code>                    mixed
     <strong>prepend</strong>(mixed  $value)
         </code>
@@ -1530,8 +1524,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_remove">
-        <div class="location">at         line 45</div>
-        <code>                    integer
+        <div class="location">at line 45</div>
+        <code>                    int
     <strong>remove</strong>(mixed  $value)
         </code>
     </h3>
@@ -1557,7 +1551,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -1571,12 +1565,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

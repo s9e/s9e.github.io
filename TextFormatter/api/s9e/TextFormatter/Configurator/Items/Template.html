@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
-        <script src="../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
-        <script src="../../../../sami.js"></script>
+        <script src="../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Items_Template" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../search.html">Search</a></li>
@@ -93,7 +89,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_inspector">
-                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a>
+                                        protected                                        TemplateInspector
                 </td>
                 <td>$inspector</td>
                 <td class="last"></td>
@@ -153,7 +149,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                    <a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_asDOM">asDOM</a>()
@@ -173,7 +169,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a>
+                    TemplateInspector
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getInspector">getInspector</a>()
@@ -236,7 +232,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_replaceTokens">replaceTokens</a>(string $regexp, <abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr> $fn)
+                    <a href="#method_replaceTokens">replaceTokens</a>(string $regexp, callable $fn)
         
                                             <p>Replace parts of this template that match given regexp</p>                </div>
                 <div class="col-md-2"></div>
@@ -259,7 +255,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 39</div>
+        <div class="location">at line 39</div>
         <code>                    
     <strong>__construct</strong>(string $template)
         </code>
@@ -290,7 +286,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___call">
-        <div class="location">at         line 51</div>
+        <div class="location">at line 51</div>
         <code>                    mixed
     <strong>__call</strong>($methodName, $args)
         </code>
@@ -335,7 +331,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         line 61</div>
+        <div class="location">at line 61</div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -365,8 +361,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asDOM">
-        <div class="location">at         line 73</div>
-        <code>                    <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+        <div class="location">at line 73</div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
     <strong>asDOM</strong>()
         </code>
     </h3>
@@ -382,7 +378,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a></td>
             <td></td>
         </tr>
     </table>
@@ -395,7 +391,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSNodes">
-        <div class="location">at         line 90</div>
+        <div class="location">at line 90</div>
         <code>                    array
     <strong>getCSSNodes</strong>()
         </code>
@@ -425,8 +421,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getInspector">
-        <div class="location">at         line 100</div>
-        <code>                    <a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a>
+        <div class="location">at line 100</div>
+        <code>                    TemplateInspector
     <strong>getInspector</strong>()
         </code>
     </h3>
@@ -442,7 +438,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a></td>
+            <td>TemplateInspector</td>
             <td></td>
         </tr>
     </table>
@@ -455,7 +451,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJSNodes">
-        <div class="location">at         line 115</div>
+        <div class="location">at line 115</div>
         <code>                    array
     <strong>getJSNodes</strong>()
         </code>
@@ -485,7 +481,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getURLNodes">
-        <div class="location">at         line 125</div>
+        <div class="location">at line 125</div>
         <code>                    array
     <strong>getURLNodes</strong>()
         </code>
@@ -515,7 +511,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParameters">
-        <div class="location">at         line 135</div>
+        <div class="location">at line 135</div>
         <code>                    array
     <strong>getParameters</strong>()
         </code>
@@ -545,7 +541,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isNormalized">
-        <div class="location">at         line 146</div>
+        <div class="location">at line 146</div>
         <code>                    bool
     <strong>isNormalized</strong>(bool $bool = null)
         </code>
@@ -585,7 +581,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalize">
-        <div class="location">at         line 162</div>
+        <div class="location">at line 162</div>
         <code>                    void
     <strong>normalize</strong>(<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizer.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizer">TemplateNormalizer</abbr></a> $templateNormalizer)
         </code>
@@ -625,9 +621,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceTokens">
-        <div class="location">at         line 176</div>
+        <div class="location">at line 176</div>
         <code>                    void
-    <strong>replaceTokens</strong>(string $regexp, <abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr> $fn)
+    <strong>replaceTokens</strong>(string $regexp, callable $fn)
         </code>
     </h3>
     <div class="details">
@@ -646,7 +642,7 @@
                 <td>Regexp for matching parts that need replacement</td>
             </tr>
                     <tr>
-                <td><abbr title="s9e\TextFormatter\Configurator\Items\callback">callback</abbr></td>
+                <td>callable</td>
                 <td>$fn</td>
                 <td>Callback used to get the replacement</td>
             </tr>
@@ -670,7 +666,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setContent">
-        <div class="location">at         line 189</div>
+        <div class="location">at line 189</div>
         <code>                    void
     <strong>setContent</strong>(string $template)
         </code>
@@ -711,12 +707,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
-        <script src="../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
-        <script src="../../../../sami.js"></script>
+        <script src="../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_PipeTables_Parser" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../search.html">Search</a></li>
@@ -97,19 +93,21 @@
                 </td>
                 <td>$config</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_parser">
-                                        protected                                        <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                                        protected                                        Parser
                 </td>
                 <td>$parser</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_pos">
-                                        protected                                        integer
+                                        protected                                        int
                 </td>
                 <td>$pos</td>
                 <td class="last"></td>
@@ -161,7 +159,8 @@
                     <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         
                                             <p>Constructor</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -171,7 +170,8 @@
                     <a href="#method_setUp">setUp</a>()
         
                                             <p>Plugin's setup</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -249,7 +249,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createBodyTags">createBodyTags</a>(integer $startPos, integer $endPos)
+                    <a href="#method_createBodyTags">createBodyTags</a>(int $startPos, int $endPos)
         
                                             <p>Create a pair of TBODY tags for given text span</p>                </div>
                 <div class="col-md-2"></div>
@@ -259,7 +259,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createCellTags">createCellTags</a>(string $tagName, integer $startPos, integer $endPos, string $align)
+                    <a href="#method_createCellTags">createCellTags</a>(string $tagName, int $startPos, int $endPos, string $align)
         
                                             <p>Create a pair of TD or TH tags for given text span</p>                </div>
                 <div class="col-md-2"></div>
@@ -269,7 +269,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createHeadTags">createHeadTags</a>(integer $startPos, integer $endPos)
+                    <a href="#method_createHeadTags">createHeadTags</a>(int $startPos, int $endPos)
         
                                             <p>Create a pair of THEAD tags for given text span</p>                </div>
                 <div class="col-md-2"></div>
@@ -279,7 +279,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createIgnoreTag">createIgnoreTag</a>(integer $pos, integer $len)
+                    <a href="#method_createIgnoreTag">createIgnoreTag</a>(int $pos, int $len)
         
                                             <p>Create an ignore tag for given text span</p>                </div>
                 <div class="col-md-2"></div>
@@ -289,7 +289,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createRowTags">createRowTags</a>(integer $startPos, integer $endPos)
+                    <a href="#method_createRowTags">createRowTags</a>(int $startPos, int $endPos)
         
                                             <p>Create a pair of TR tags for given text span</p>                </div>
                 <div class="col-md-2"></div>
@@ -309,7 +309,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createTableTags">createTableTags</a>(integer $startPos, integer $endPos)
+                    <a href="#method_createTableTags">createTableTags</a>(int $startPos, int $endPos)
         
                                             <p>Create a pair of TABLE tags for given text span</p>                </div>
                 <div class="col-md-2"></div>
@@ -422,7 +422,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 30</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at line 30</div>
         <code>final                    
     <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         </code>
@@ -458,7 +459,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setUp">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at         line 43</div>
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp">
+<abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a> at line 43</div>
         <code>            protected        void
     <strong>setUp</strong>()
         </code>
@@ -488,7 +490,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at         line 42</div>
+        <div class="location">at line 42</div>
         <code>                    void
     <strong>parse</strong>(string $text, array $matches)
         </code>
@@ -510,7 +512,7 @@
                 <td>array</td>
                 <td>$matches</td>
                 <td>If the config array has a "regexp" key, the corresponding matches are
-                        passed as second parameter. Otherwise, an empty array is passed</td>
+passed as second parameter. Otherwise, an empty array is passed</td>
             </tr>
             </table>
 
@@ -532,7 +534,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addLine">
-        <div class="location">at         line 67</div>
+        <div class="location">at line 67</div>
         <code>            protected        void
     <strong>addLine</strong>(string $line)
         </code>
@@ -572,7 +574,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTableBody">
-        <div class="location">at         line 93</div>
+        <div class="location">at line 93</div>
         <code>            protected        void
     <strong>addTableBody</strong>()
         </code>
@@ -602,7 +604,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTableCell">
-        <div class="location">at         line 113</div>
+        <div class="location">at line 113</div>
         <code>            protected        void
     <strong>addTableCell</strong>(string $tagName, string $align, string $content)
         </code>
@@ -652,7 +654,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTableHead">
-        <div class="location">at         line 141</div>
+        <div class="location">at line 141</div>
         <code>            protected        void
     <strong>addTableHead</strong>()
         </code>
@@ -682,7 +684,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTableRow">
-        <div class="location">at         line 154</div>
+        <div class="location">at line 154</div>
         <code>            protected        void
     <strong>addTableRow</strong>(string $tagName, array $row)
         </code>
@@ -727,7 +729,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_captureTables">
-        <div class="location">at         line 177</div>
+        <div class="location">at line 177</div>
         <code>            protected        void
     <strong>captureTables</strong>()
         </code>
@@ -757,9 +759,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createBodyTags">
-        <div class="location">at         line 205</div>
+        <div class="location">at line 205</div>
         <code>            protected        void
-    <strong>createBodyTags</strong>(integer $startPos, integer $endPos)
+    <strong>createBodyTags</strong>(int $startPos, int $endPos)
         </code>
     </h3>
     <div class="details">
@@ -773,12 +775,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$startPos</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$endPos</td>
                 <td></td>
             </tr>
@@ -802,9 +804,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createCellTags">
-        <div class="location">at         line 219</div>
+        <div class="location">at line 219</div>
         <code>            protected        void
-    <strong>createCellTags</strong>(string $tagName, integer $startPos, integer $endPos, string $align)
+    <strong>createCellTags</strong>(string $tagName, int $startPos, int $endPos, string $align)
         </code>
     </h3>
     <div class="details">
@@ -823,12 +825,12 @@
                 <td>Either TD or TH</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$startPos</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$endPos</td>
                 <td></td>
             </tr>
@@ -857,9 +859,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createHeadTags">
-        <div class="location">at         line 242</div>
+        <div class="location">at line 242</div>
         <code>            protected        void
-    <strong>createHeadTags</strong>(integer $startPos, integer $endPos)
+    <strong>createHeadTags</strong>(int $startPos, int $endPos)
         </code>
     </h3>
     <div class="details">
@@ -873,12 +875,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$startPos</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$endPos</td>
                 <td></td>
             </tr>
@@ -902,9 +904,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createIgnoreTag">
-        <div class="location">at         line 254</div>
+        <div class="location">at line 254</div>
         <code>            protected        void
-    <strong>createIgnoreTag</strong>(integer $pos, integer $len)
+    <strong>createIgnoreTag</strong>(int $pos, int $len)
         </code>
     </h3>
     <div class="details">
@@ -918,12 +920,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td></td>
             </tr>
@@ -947,9 +949,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createRowTags">
-        <div class="location">at         line 266</div>
+        <div class="location">at line 266</div>
         <code>            protected        void
-    <strong>createRowTags</strong>(integer $startPos, integer $endPos)
+    <strong>createRowTags</strong>(int $startPos, int $endPos)
         </code>
     </h3>
     <div class="details">
@@ -963,12 +965,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$startPos</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$endPos</td>
                 <td></td>
             </tr>
@@ -992,7 +994,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createSeparatorTag">
-        <div class="location">at         line 277</div>
+        <div class="location">at line 277</div>
         <code>            protected        void
     <strong>createSeparatorTag</strong>(array $row)
         </code>
@@ -1032,9 +1034,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createTableTags">
-        <div class="location">at         line 289</div>
+        <div class="location">at line 289</div>
         <code>            protected        void
-    <strong>createTableTags</strong>(integer $startPos, integer $endPos)
+    <strong>createTableTags</strong>(int $startPos, int $endPos)
         </code>
     </h3>
     <div class="details">
@@ -1048,12 +1050,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$startPos</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$endPos</td>
                 <td></td>
             </tr>
@@ -1077,7 +1079,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_endTable">
-        <div class="location">at         line 299</div>
+        <div class="location">at line 299</div>
         <code>            protected        void
     <strong>endTable</strong>()
         </code>
@@ -1107,7 +1109,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasValidTable">
-        <div class="location">at         line 314</div>
+        <div class="location">at line 314</div>
         <code>            protected        bool
     <strong>hasValidTable</strong>()
         </code>
@@ -1137,7 +1139,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isValidSeparator">
-        <div class="location">at         line 325</div>
+        <div class="location">at line 325</div>
         <code>            protected        bool
     <strong>isValidSeparator</strong>(string $line)
         </code>
@@ -1177,7 +1179,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwriteBlockquoteCallback">
-        <div class="location">at         line 336</div>
+        <div class="location">at line 336</div>
         <code>            protected        string
     <strong>overwriteBlockquoteCallback</strong>(array $m)
         </code>
@@ -1217,7 +1219,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwriteEscapes">
-        <div class="location">at         line 346</div>
+        <div class="location">at line 346</div>
         <code>            protected        void
     <strong>overwriteEscapes</strong>()
         </code>
@@ -1247,7 +1249,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwriteInlineCodeCallback">
-        <div class="location">at         line 360</div>
+        <div class="location">at line 360</div>
         <code>            protected        string
     <strong>overwriteInlineCodeCallback</strong>(array $m)
         </code>
@@ -1287,7 +1289,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwriteMarkdown">
-        <div class="location">at         line 370</div>
+        <div class="location">at line 370</div>
         <code>            protected        void
     <strong>overwriteMarkdown</strong>()
         </code>
@@ -1317,7 +1319,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseColumnAlignments">
-        <div class="location">at         line 391</div>
+        <div class="location">at line 391</div>
         <code>            protected        string[]
     <strong>parseColumnAlignments</strong>(string $line)
         </code>
@@ -1357,7 +1359,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_processCurrentTable">
-        <div class="location">at         line 417</div>
+        <div class="location">at line 417</div>
         <code>            protected        void
     <strong>processCurrentTable</strong>()
         </code>
@@ -1387,7 +1389,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_processTables">
-        <div class="location">at         line 433</div>
+        <div class="location">at line 433</div>
         <code>            protected        void
     <strong>processTables</strong>()
         </code>
@@ -1418,12 +1420,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

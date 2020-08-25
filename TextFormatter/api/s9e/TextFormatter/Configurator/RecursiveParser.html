@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <script src="../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
-        <script src="../../../sami.js"></script>
+        <script src="../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_RecursiveParser" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
                     <li><a href="../../../search.html">Search</a></li>
@@ -197,7 +193,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at         line 42</div>
+        <div class="location">at line 42</div>
         <code>                    mixed
     <strong>parse</strong>(string $str, string $name = &#039;&#039;)
         </code>
@@ -242,7 +238,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setMatchers">
-        <div class="location">at         line 73</div>
+        <div class="location">at line 73</div>
         <code>                    void
     <strong>setMatchers</strong>(array $matchers)
         </code>
@@ -282,7 +278,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getArguments">
-        <div class="location">at         line 112</div>
+        <div class="location">at line 112</div>
         <code>            protected        array
     <strong>getArguments</strong>(array $matches, string $name)
         </code>
@@ -327,7 +323,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMatchersConfig">
-        <div class="location">at         line 131</div>
+        <div class="location">at line 131</div>
         <code>            protected        array
     <strong>getMatchersConfig</strong>(array $matchers)
         </code>
@@ -367,7 +363,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_insertCaptureNames">
-        <div class="location">at         line 168</div>
+        <div class="location">at line 168</div>
         <code>            protected        string
     <strong>insertCaptureNames</strong>(string $name, string $regexp)
         </code>
@@ -412,7 +408,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sortMatcherConfig">
-        <div class="location">at         line 189</div>
+        <div class="location">at line 189</div>
         <code>        static    protected        int
     <strong>sortMatcherConfig</strong>(array $a, array $b)
         </code>
@@ -458,12 +454,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

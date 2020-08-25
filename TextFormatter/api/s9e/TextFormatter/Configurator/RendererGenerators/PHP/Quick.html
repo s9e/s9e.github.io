@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
-        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../fonts/doctum-font.css">
+        <script src="../../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../../js/bootstrap.min.js"></script>
         <script src="../../../../../js/typeahead.min.js"></script>
-        <script src="../../../../../sami.js"></script>
+        <script src="../../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_RendererGenerators_PHP_Quick" data-root-path="../../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../../search.html">Search</a></li>
@@ -165,7 +161,7 @@ original source</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;integer[]
+                    static&nbsp;int[]
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getBranchesPassthrough">getBranchesPassthrough</a>(array $branches)
@@ -208,7 +204,7 @@ original source</p>                </div>
                     static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_replacePlaceholder">replacePlaceholder</a>(string $str, string $uniqid, integer $index)
+                    <a href="#method_replacePlaceholder">replacePlaceholder</a>(string $str, string $uniqid, int $index)
         
                                             <p>Replace all instances of a uniqid with a PCRE replacement in a string</p>                </div>
                 <div class="col-md-2"></div>
@@ -221,7 +217,7 @@ original source</p>                </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getSource">
-        <div class="location">at         line 22</div>
+        <div class="location">at line 22</div>
         <code>        static            string
     <strong>getSource</strong>(array $compiledTemplates)
         </code>
@@ -261,7 +257,7 @@ original source</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_export">
-        <div class="location">at         line 104</div>
+        <div class="location">at line 104</div>
         <code>        static    protected        string
     <strong>export</strong>(array $arr)
         </code>
@@ -301,7 +297,7 @@ original source</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getRenderingStrategy">
-        <div class="location">at         line 125</div>
+        <div class="location">at line 125</div>
         <code>        static            array[]
     <strong>getRenderingStrategy</strong>(string $php)
         </code>
@@ -341,7 +337,7 @@ original source</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getQuickRendering">
-        <div class="location">at         line 159</div>
+        <div class="location">at line 159</div>
         <code>        static    protected        string[]
     <strong>getQuickRendering</strong>(string $php)
         </code>
@@ -374,7 +370,7 @@ When the whole structure is parsed, there are 2 possible situations:
         <tr>
             <td>string[]</td>
             <td>An array containing one or two strings of PHP, or an empty array
-                        if the PHP cannot be converted</td>
+if the PHP cannot be converted</td>
         </tr>
     </table>
 
@@ -386,7 +382,7 @@ When the whole structure is parsed, there are 2 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_convertPHP">
-        <div class="location">at         line 341</div>
+        <div class="location">at line 341</div>
         <code>        static    protected        void
     <strong>convertPHP</strong>(string $head, string $tail, bool $passthrough)
         </code>
@@ -436,7 +432,7 @@ When the whole structure is parsed, there are 2 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_replacePHP">
-        <div class="location">at         line 394</div>
+        <div class="location">at line 394</div>
         <code>        static    protected        void
     <strong>replacePHP</strong>(string $php)
         </code>
@@ -476,7 +472,7 @@ When the whole structure is parsed, there are 2 possible situations:
             </div>
                     <div class="method-item">
                     <h3 id="method_buildPHP">
-        <div class="location">at         line 489</div>
+        <div class="location">at line 489</div>
         <code>        static    protected        string[]
     <strong>buildPHP</strong>(array $branches)
         </code>
@@ -517,8 +513,8 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getBranchesPassthrough">
-        <div class="location">at         line 518</div>
-        <code>        static    protected        integer[]
+        <div class="location">at line 518</div>
+        <code>        static    protected        int[]
     <strong>getBranchesPassthrough</strong>(array $branches)
         </code>
     </h3>
@@ -544,7 +540,7 @@ original source</p>                                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer[]</td>
+            <td>int[]</td>
             <td></td>
         </tr>
     </table>
@@ -557,7 +553,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getDynamicRendering">
-        <div class="location">at         line 542</div>
+        <div class="location">at line 542</div>
         <code>        static    protected        array|bool
     <strong>getDynamicRendering</strong>(string $php)
         </code>
@@ -597,7 +593,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getStaticRendering">
-        <div class="location">at         line 679</div>
+        <div class="location">at line 679</div>
         <code>        static    protected        bool|string
     <strong>getStaticRendering</strong>(string $php)
         </code>
@@ -637,7 +633,7 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getStringRenderings">
-        <div class="location">at         line 701</div>
+        <div class="location">at line 701</div>
         <code>        static    protected        array
     <strong>getStringRenderings</strong>(string $php)
         </code>
@@ -677,9 +673,9 @@ original source</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_replacePlaceholder">
-        <div class="location">at         line 742</div>
+        <div class="location">at line 742</div>
         <code>        static    protected        void
-    <strong>replacePlaceholder</strong>(string $str, string $uniqid, integer $index)
+    <strong>replacePlaceholder</strong>(string $str, string $uniqid, int $index)
         </code>
     </h3>
     <div class="details">
@@ -703,7 +699,7 @@ original source</p>                                                </div>
                 <td>Unique ID</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$index</td>
                 <td>Capture index</td>
             </tr>
@@ -728,12 +724,9 @@ original source</p>                                                </div>
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

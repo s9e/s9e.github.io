@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
-        <script src="../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
         <script src="../../js/typeahead.min.js"></script>
-        <script src="../../sami.js"></script>
+        <script src="../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Renderer" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../classes.html">Classes</a></li>
-                                            <li><a href="../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../traits.html">Traits</a></li>
                     <li><a href="../../doc-index.html">Index</a></li>
                     <li><a href="../../search.html">Search</a></li>
@@ -115,7 +111,7 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+                    <a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_loadXML">loadXML</a>(string $xml)
@@ -251,8 +247,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_loadXML">
-        <div class="location">at         line 31</div>
-        <code>            protected        <a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a>
+        <div class="location">at line 31</div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
     <strong>loadXML</strong>(string $xml)
         </code>
     </h3>
@@ -278,7 +274,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a></td>
             <td></td>
         </tr>
     </table>
@@ -291,7 +287,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at         line 58</div>
+        <div class="location">at line 58</div>
         <code>                    string
     <strong>render</strong>(string $xml)
         </code>
@@ -331,7 +327,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderPlainText">
-        <div class="location">at         line 76</div>
+        <div class="location">at line 76</div>
         <code>            protected        string
     <strong>renderPlainText</strong>(string $xml)
         </code>
@@ -371,7 +367,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_renderRichText">
-        <div class="location">at         line 96</div>
+        <div class="location">at line 96</div>
         <code>    abstract        protected        string
     <strong>renderRichText</strong>(string $xml)
         </code>
@@ -411,7 +407,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParameter">
-        <div class="location">at         line 104</div>
+        <div class="location">at line 104</div>
         <code>                    string
     <strong>getParameter</strong>(string $paramName)
         </code>
@@ -451,7 +447,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParameters">
-        <div class="location">at         line 114</div>
+        <div class="location">at line 114</div>
         <code>                    array
     <strong>getParameters</strong>()
         </code>
@@ -481,7 +477,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setParameter">
-        <div class="location">at         line 126</div>
+        <div class="location">at line 126</div>
         <code>                    void
     <strong>setParameter</strong>(string $paramName, mixed $paramValue)
         </code>
@@ -526,7 +522,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setParameters">
-        <div class="location">at         line 137</div>
+        <div class="location">at line 137</div>
         <code>                    void
     <strong>setParameters</strong>(array $params)
         </code>
@@ -566,7 +562,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkUnsupported">
-        <div class="location">at         line 151</div>
+        <div class="location">at line 151</div>
         <code>            protected        void
     <strong>checkUnsupported</strong>(string $xml)
         </code>
@@ -606,7 +602,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_decodeSMP">
-        <div class="location">at         line 170</div>
+        <div class="location">at line 170</div>
         <code>            protected        string
     <strong>decodeSMP</strong>(string $str)
         </code>
@@ -646,7 +642,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_decodeEntity">
-        <div class="location">at         line 186</div>
+        <div class="location">at line 186</div>
         <code>        static    protected        string
     <strong>decodeEntity</strong>(array $m)
         </code>
@@ -686,7 +682,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_restoreLocale">
-        <div class="location">at         line 194</div>
+        <div class="location">at line 194</div>
         <code>            protected        void
     <strong>restoreLocale</strong>()
         </code>
@@ -716,7 +712,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setLocale">
-        <div class="location">at         line 205</div>
+        <div class="location">at line 205</div>
         <code>            protected        void
     <strong>setLocale</strong>()
         </code>
@@ -747,12 +743,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

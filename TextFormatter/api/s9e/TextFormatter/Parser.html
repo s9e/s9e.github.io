@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
-        <script src="../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
         <script src="../../js/typeahead.min.js"></script>
-        <script src="../../sami.js"></script>
+        <script src="../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Parser" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../classes.html">Classes</a></li>
-                                            <li><a href="../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../traits.html">Traits</a></li>
                     <li><a href="../../doc-index.html">Index</a></li>
                     <li><a href="../../search.html">Search</a></li>
@@ -234,7 +230,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_currentFixingCost">
-                                        protected                                        integer
+                                        protected                                        int
                 </td>
                 <td>$currentFixingCost</td>
                 <td class="last"></td>
@@ -242,7 +238,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_currentTag">
-                                        protected                                        <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                                        protected                                        Tag
                 </td>
                 <td>$currentTag</td>
                 <td class="last"></td>
@@ -258,7 +254,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_logger">
-                                        protected                                        <a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a>
+                                        protected                                        Logger
                 </td>
                 <td>$logger</td>
                 <td class="last"></td>
@@ -266,7 +262,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_maxFixingCost">
-                                                                                integer
+                                                                                int
                 </td>
                 <td>$maxFixingCost</td>
                 <td class="last"></td>
@@ -298,7 +294,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_pos">
-                                        protected                                        integer
+                                        protected                                        int
                 </td>
                 <td>$pos</td>
                 <td class="last"></td>
@@ -370,7 +366,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_textLen">
-                                        protected                                        integer
+                                        protected                                        int
                 </td>
                 <td>$textLen</td>
                 <td class="last"></td>
@@ -378,7 +374,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_uid">
-                                        protected                                        integer
+                                        protected                                        int
                 </td>
                 <td>$uid</td>
                 <td class="last"></td>
@@ -386,7 +382,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_wsPos">
-                                        protected                                        integer
+                                        protected                                        int
                 </td>
                 <td>$wsPos</td>
                 <td class="last"></td>
@@ -470,7 +466,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a>
+                    Logger
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getLogger">getLogger</a>()
@@ -503,7 +499,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setTagLimit">setTagLimit</a>(string $tagName, integer $tagLimit)
+                    <a href="#method_setTagLimit">setTagLimit</a>(string $tagName, int $tagLimit)
         
                                             <p>Change a tag's tagLimit</p>                </div>
                 <div class="col-md-2"></div>
@@ -513,7 +509,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setNestingLimit">setNestingLimit</a>(string $tagName, integer $nestingLimit)
+                    <a href="#method_setNestingLimit">setNestingLimit</a>(string $tagName, int $nestingLimit)
         
                                             <p>Change a tag's nestingLimit</p>                </div>
                 <div class="col-md-2"></div>
@@ -543,7 +539,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_outputText">outputText</a>(integer $catchupPos, integer $maxLines, bool $closeParagraph)
+                    <a href="#method_outputText">outputText</a>(int $catchupPos, int $maxLines, bool $closeParagraph)
         
                                             <p>Output the text between the cursor's position (included) and given position (not included)</p>                </div>
                 <div class="col-md-2"></div>
@@ -573,7 +569,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_outputParagraphStart">outputParagraphStart</a>(integer $maxPos)
+                    <a href="#method_outputParagraphStart">outputParagraphStart</a>(int $maxPos)
         
                                             <p>Start a paragraph between current position and given position, if applicable</p>                </div>
                 <div class="col-md-2"></div>
@@ -603,7 +599,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_outputWhitespace">outputWhitespace</a>(integer $maxPos)
+                    <a href="#method_outputWhitespace">outputWhitespace</a>(int $maxPos)
         
                                             <p>Skip as much whitespace after current position as possible</p>                </div>
                 <div class="col-md-2"></div>
@@ -653,7 +649,7 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getMatches">getMatches</a>(string $regexp, integer $limit)
+                    <a href="#method_getMatches">getMatches</a>(string $regexp, int $limit)
         
                                             <p>Execute given regexp and returns as many matches as given limit</p>                </div>
                 <div class="col-md-2"></div>
@@ -673,7 +669,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_registerParser">registerParser</a>(string $pluginName, <abbr title="s9e\TextFormatter\callback">callback</abbr> $parser, string $regexp = null, integer $limit = PHP_INT_MAX)
+                    <a href="#method_registerParser">registerParser</a>(string $pluginName, callable $parser, string $regexp = null, int $limit = PHP_INT_MAX)
         
                                             <p>Register a parser</p>                </div>
                 <div class="col-md-2"></div>
@@ -740,30 +736,30 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addMagicEndTag">addMagicEndTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $startTag, integer $tagPos, integer $prio = 0)
+                    <a href="#method_addMagicEndTag">addMagicEndTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $startTag, int $tagPos, int $prio = 0)
         
                                             <p>Create and add an end tag for given start tag at given position</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer
+                    int
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getMagicEndPos">getMagicEndPos</a>(integer $tagPos)
+                    <a href="#method_getMagicEndPos">getMagicEndPos</a>(int $tagPos)
         
                                             <p>Compute the position of a magic end tag, adjusted for whitespace</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer[]
+                    int[]
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getMagicStartCoords">getMagicStartCoords</a>(integer $tagPos)
+                    <a href="#method_getMagicStartCoords">getMagicStartCoords</a>(int $tagPos)
         
                                             <p>Compute the position and priority of a magic start tag, adjusted for whitespace</p>                </div>
                 <div class="col-md-2"></div>
@@ -850,80 +846,80 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addStartTag">addStartTag</a>(string $name, integer $pos, integer $len, integer $prio = 0)
+                    <a href="#method_addStartTag">addStartTag</a>(string $name, int $pos, int $len, int $prio = 0)
         
                                             <p>Add a start tag</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addEndTag">addEndTag</a>(string $name, integer $pos, integer $len, integer $prio = 0)
+                    <a href="#method_addEndTag">addEndTag</a>(string $name, int $pos, int $len, int $prio = 0)
         
                                             <p>Add an end tag</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addSelfClosingTag">addSelfClosingTag</a>(string $name, integer $pos, integer $len, integer $prio = 0)
+                    <a href="#method_addSelfClosingTag">addSelfClosingTag</a>(string $name, int $pos, int $len, int $prio = 0)
         
                                             <p>Add a self-closing tag</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addBrTag">addBrTag</a>(integer $pos, integer $prio = 0)
+                    <a href="#method_addBrTag">addBrTag</a>(int $pos, int $prio = 0)
         
                                             <p>Add a 0-width "br" tag to force a line break at given position</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addIgnoreTag">addIgnoreTag</a>(integer $pos, integer $len, integer $prio = 0)
+                    <a href="#method_addIgnoreTag">addIgnoreTag</a>(int $pos, int $len, int $prio = 0)
         
                                             <p>Add an "ignore" tag</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addParagraphBreak">addParagraphBreak</a>(integer $pos, integer $prio = 0)
+                    <a href="#method_addParagraphBreak">addParagraphBreak</a>(int $pos, int $prio = 0)
         
                                             <p>Add a paragraph break at given position</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addCopyTag">addCopyTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, integer $pos, integer $len, integer $prio = null)
+                    <a href="#method_addCopyTag">addCopyTag</a>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, int $pos, int $len, int $prio = null)
         
                                             <p>Add a copy of given tag at given position and length</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addTag">addTag</a>(integer $type, string $name, integer $pos, integer $len, integer $prio)
+                    <a href="#method_addTag">addTag</a>(int $type, string $name, int $pos, int $len, int $prio)
         
                                             <p>Add a tag</p>                </div>
                 <div class="col-md-2"></div>
@@ -933,7 +929,7 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isInvalidTextSpan">isInvalidTextSpan</a>(integer $pos, integer $len)
+                    <a href="#method_isInvalidTextSpan">isInvalidTextSpan</a>(int $pos, int $len)
         
                                             <p>Test whether given text span is outside text boundaries or an invalid UTF sequence</p>                </div>
                 <div class="col-md-2"></div>
@@ -950,20 +946,20 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addTagPair">addTagPair</a>(string $name, integer $startPos, integer $startLen, integer $endPos, integer $endLen, integer $prio = 0)
+                    <a href="#method_addTagPair">addTagPair</a>(string $name, int $startPos, int $startLen, int $endPos, int $endLen, int $prio = 0)
         
                                             <p>Add a pair of tags</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
+                    Tag
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addVerbatim">addVerbatim</a>(integer $pos, integer $len, integer $prio = 0)
+                    <a href="#method_addVerbatim">addVerbatim</a>(int $pos, int $len, int $prio = 0)
         
                                             <p>Add a tag that represents a verbatim copy of the original text</p>                </div>
                 <div class="col-md-2"></div>
@@ -996,7 +992,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 170</div>
+        <div class="location">at line 170</div>
         <code>                    
     <strong>__construct</strong>(array $config)
         </code>
@@ -1027,7 +1023,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___sleep">
-        <div class="location">at         line 190</div>
+        <div class="location">at line 190</div>
         <code>                    array
     <strong>__sleep</strong>()
         </code>
@@ -1060,7 +1056,7 @@ of the serializer to the user (e.g. igbinary)</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method___wakeup">
-        <div class="location">at         line 200</div>
+        <div class="location">at line 200</div>
         <code>                    void
     <strong>__wakeup</strong>()
         </code>
@@ -1090,7 +1086,7 @@ of the serializer to the user (e.g. igbinary)</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method_reset">
-        <div class="location">at         line 211</div>
+        <div class="location">at line 211</div>
         <code>            protected        void
     <strong>reset</strong>(string $text)
         </code>
@@ -1130,7 +1126,7 @@ of the serializer to the user (e.g. igbinary)</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagOption">
-        <div class="location">at         line 261</div>
+        <div class="location">at line 261</div>
         <code>            protected        void
     <strong>setTagOption</strong>(string $tagName, string $optionName, mixed $optionValue)
         </code>
@@ -1181,7 +1177,7 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
             </div>
                     <div class="method-item">
                     <h3 id="method_disableTag">
-        <div class="location">at         line 285</div>
+        <div class="location">at line 285</div>
         <code>                    void
     <strong>disableTag</strong>(string $tagName)
         </code>
@@ -1221,7 +1217,7 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
             </div>
                     <div class="method-item">
                     <h3 id="method_enableTag">
-        <div class="location">at         line 296</div>
+        <div class="location">at line 296</div>
         <code>                    void
     <strong>enableTag</strong>(string $tagName)
         </code>
@@ -1261,8 +1257,8 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
             </div>
                     <div class="method-item">
                     <h3 id="method_getLogger">
-        <div class="location">at         line 309</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a>
+        <div class="location">at line 309</div>
+        <code>                    Logger
     <strong>getLogger</strong>()
         </code>
     </h3>
@@ -1278,7 +1274,7 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a></td>
+            <td>Logger</td>
             <td></td>
         </tr>
     </table>
@@ -1291,7 +1287,7 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
             </div>
                     <div class="method-item">
                     <h3 id="method_getText">
-        <div class="location">at         line 326</div>
+        <div class="location">at line 326</div>
         <code>                    string
     <strong>getText</strong>()
         </code>
@@ -1323,7 +1319,7 @@ normalized text</p>                            </div>
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            <a href="../../s9e/TextFormatter/Parser.html#method_reset"><abbr title="s9e\TextFormatter\Parser">Parser</abbr>::reset</a>
+                                            \Parser::reset()
                                     </td>
                 <td></td>
             </tr>
@@ -1335,7 +1331,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at         line 337</div>
+        <div class="location">at line 337</div>
         <code>                    string
     <strong>parse</strong>(string $text)
         </code>
@@ -1375,9 +1371,9 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagLimit">
-        <div class="location">at         line 374</div>
+        <div class="location">at line 374</div>
         <code>                    void
-    <strong>setTagLimit</strong>(string $tagName, integer $tagLimit)
+    <strong>setTagLimit</strong>(string $tagName, int $tagLimit)
         </code>
     </h3>
     <div class="details">
@@ -1396,7 +1392,7 @@ normalized text</p>                            </div>
                 <td>The tag's name, in UPPERCASE</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$tagLimit</td>
                 <td></td>
             </tr>
@@ -1420,9 +1416,9 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setNestingLimit">
-        <div class="location">at         line 388</div>
+        <div class="location">at line 388</div>
         <code>                    void
-    <strong>setNestingLimit</strong>(string $tagName, integer $nestingLimit)
+    <strong>setNestingLimit</strong>(string $tagName, int $nestingLimit)
         </code>
     </h3>
     <div class="details">
@@ -1441,7 +1437,7 @@ normalized text</p>                            </div>
                 <td>The tag's name, in UPPERCASE</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$nestingLimit</td>
                 <td></td>
             </tr>
@@ -1465,7 +1461,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_finalizeOutput">
-        <div class="location">at         line 402</div>
+        <div class="location">at line 402</div>
         <code>            protected        void
     <strong>finalizeOutput</strong>()
         </code>
@@ -1495,7 +1491,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputTag">
-        <div class="location">at         line 445</div>
+        <div class="location">at line 445</div>
         <code>            protected        void
     <strong>outputTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1535,9 +1531,9 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputText">
-        <div class="location">at         line 570</div>
+        <div class="location">at line 570</div>
         <code>            protected        void
-    <strong>outputText</strong>(integer $catchupPos, integer $maxLines, bool $closeParagraph)
+    <strong>outputText</strong>(int $catchupPos, int $maxLines, bool $closeParagraph)
         </code>
     </h3>
     <div class="details">
@@ -1551,12 +1547,12 @@ normalized text</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$catchupPos</td>
                 <td>Position we're catching up to</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$maxLines</td>
                 <td>Maximum number of lines to ignore at the end of the text</td>
             </tr>
@@ -1585,7 +1581,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputBrTag">
-        <div class="location">at         line 728</div>
+        <div class="location">at line 728</div>
         <code>            protected        void
     <strong>outputBrTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1625,7 +1621,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputIgnoreTag">
-        <div class="location">at         line 740</div>
+        <div class="location">at line 740</div>
         <code>            protected        void
     <strong>outputIgnoreTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1665,9 +1661,9 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputParagraphStart">
-        <div class="location">at         line 763</div>
+        <div class="location">at line 763</div>
         <code>            protected        void
-    <strong>outputParagraphStart</strong>(integer $maxPos)
+    <strong>outputParagraphStart</strong>(int $maxPos)
         </code>
     </h3>
     <div class="details">
@@ -1681,7 +1677,7 @@ normalized text</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$maxPos</td>
                 <td>Rightmost position at which the paragraph can be opened</td>
             </tr>
@@ -1705,7 +1701,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputParagraphEnd">
-        <div class="location">at         line 788</div>
+        <div class="location">at line 788</div>
         <code>            protected        void
     <strong>outputParagraphEnd</strong>()
         </code>
@@ -1735,7 +1731,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputVerbatim">
-        <div class="location">at         line 806</div>
+        <div class="location">at line 806</div>
         <code>            protected        void
     <strong>outputVerbatim</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1775,9 +1771,9 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputWhitespace">
-        <div class="location">at         line 820</div>
+        <div class="location">at line 820</div>
         <code>            protected        void
-    <strong>outputWhitespace</strong>(integer $maxPos)
+    <strong>outputWhitespace</strong>(int $maxPos)
         </code>
     </h3>
     <div class="details">
@@ -1791,7 +1787,7 @@ normalized text</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$maxPos</td>
                 <td>Rightmost character to be skipped</td>
             </tr>
@@ -1815,7 +1811,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_disablePlugin">
-        <div class="location">at         line 844</div>
+        <div class="location">at line 844</div>
         <code>                    void
     <strong>disablePlugin</strong>(string $pluginName)
         </code>
@@ -1855,7 +1851,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_enablePlugin">
-        <div class="location">at         line 864</div>
+        <div class="location">at line 864</div>
         <code>                    void
     <strong>enablePlugin</strong>(string $pluginName)
         </code>
@@ -1895,7 +1891,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_executePluginParser">
-        <div class="location">at         line 878</div>
+        <div class="location">at line 878</div>
         <code>            protected        void
     <strong>executePluginParser</strong>(string $pluginName)
         </code>
@@ -1935,7 +1931,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_executePluginParsers">
-        <div class="location">at         line 905</div>
+        <div class="location">at line 905</div>
         <code>            protected        void
     <strong>executePluginParsers</strong>()
         </code>
@@ -1965,9 +1961,9 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getMatches">
-        <div class="location">at         line 923</div>
+        <div class="location">at line 923</div>
         <code>            protected        array
-    <strong>getMatches</strong>(string $regexp, integer $limit)
+    <strong>getMatches</strong>(string $regexp, int $limit)
         </code>
     </h3>
     <div class="details">
@@ -1986,7 +1982,7 @@ normalized text</p>                            </div>
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$limit</td>
                 <td></td>
             </tr>
@@ -2010,7 +2006,7 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPluginParser">
-        <div class="location">at         line 940</div>
+        <div class="location">at line 940</div>
         <code>            protected        callable
     <strong>getPluginParser</strong>(string $pluginName)
         </code>
@@ -2050,9 +2046,9 @@ normalized text</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_registerParser">
-        <div class="location">at         line 969</div>
+        <div class="location">at line 969</div>
         <code>                    void
-    <strong>registerParser</strong>(string $pluginName, <abbr title="s9e\TextFormatter\callback">callback</abbr> $parser, string $regexp = null, integer $limit = PHP_INT_MAX)
+    <strong>registerParser</strong>(string $pluginName, callable $parser, string $regexp = null, int $limit = PHP_INT_MAX)
         </code>
     </h3>
     <div class="details">
@@ -2072,7 +2068,7 @@ existing plugin</p>                            </div>
                 <td></td>
             </tr>
                     <tr>
-                <td><abbr title="s9e\TextFormatter\callback">callback</abbr></td>
+                <td>callable</td>
                 <td>$parser</td>
                 <td></td>
             </tr>
@@ -2082,7 +2078,7 @@ existing plugin</p>                            </div>
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$limit</td>
                 <td></td>
             </tr>
@@ -2106,7 +2102,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_closeAncestor">
-        <div class="location">at         line 998</div>
+        <div class="location">at line 998</div>
         <code>            protected        bool
     <strong>closeAncestor</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2146,7 +2142,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_closeParent">
-        <div class="location">at         line 1039</div>
+        <div class="location">at line 1039</div>
         <code>            protected        bool
     <strong>closeParent</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2186,7 +2182,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_createChild">
-        <div class="location">at         line 1075</div>
+        <div class="location">at line 1075</div>
         <code>            protected        void
     <strong>createChild</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2226,7 +2222,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_fosterParent">
-        <div class="location">at         line 1102</div>
+        <div class="location">at line 1102</div>
         <code>            protected        bool
     <strong>fosterParent</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2237,11 +2233,11 @@ existing plugin</p>                            </div>
 
                     <div class="method-description">
                                     <p>Apply fosterParent rules associated with given tag</p>                    <p>NOTE: this rule has the potential for creating an unbounded loop, either if a tag tries to
-      foster itself or two or more tags try to foster each other in a loop. We mitigate the
-      risk by preventing a tag from creating a child of itself (the parent still gets closed)
-      and by checking and increasing the currentFixingCost so that a loop of multiple tags
-      do not run indefinitely. The default tagLimit and nestingLimit also serve to prevent the
-      loop from running indefinitely</p>                            </div>
+foster itself or two or more tags try to foster each other in a loop. We mitigate the
+risk by preventing a tag from creating a child of itself (the parent still gets closed)
+and by checking and increasing the currentFixingCost so that a loop of multiple tags
+do not run indefinitely. The default tagLimit and nestingLimit also serve to prevent the
+loop from running indefinitely</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -2271,7 +2267,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_requireAncestor">
-        <div class="location">at         line 1145</div>
+        <div class="location">at line 1145</div>
         <code>            protected        bool
     <strong>requireAncestor</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2311,7 +2307,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addFosterTag">
-        <div class="location">at         line 1182</div>
+        <div class="location">at line 1182</div>
         <code>            protected        void
     <strong>addFosterTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $fosterTag)
         </code>
@@ -2356,9 +2352,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addMagicEndTag">
-        <div class="location">at         line 1199</div>
-        <code>            protected        <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addMagicEndTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $startTag, integer $tagPos, integer $prio = 0)
+        <div class="location">at line 1199</div>
+        <code>            protected        Tag
+    <strong>addMagicEndTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $startTag, int $tagPos, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -2377,12 +2373,12 @@ existing plugin</p>                            </div>
                 <td>Start tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$tagPos</td>
                 <td>End tag's position (will be adjusted for whitespace if applicable)</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>End tag's priority</td>
             </tr>
@@ -2393,7 +2389,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -2406,9 +2402,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getMagicEndPos">
-        <div class="location">at         line 1222</div>
-        <code>            protected        integer
-    <strong>getMagicEndPos</strong>(integer $tagPos)
+        <div class="location">at line 1222</div>
+        <code>            protected        int
+    <strong>getMagicEndPos</strong>(int $tagPos)
         </code>
     </h3>
     <div class="details">
@@ -2422,7 +2418,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$tagPos</td>
                 <td>Rightmost possible position for the tag</td>
             </tr>
@@ -2433,7 +2429,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -2446,9 +2442,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getMagicStartCoords">
-        <div class="location">at         line 1240</div>
-        <code>            protected        integer[]
-    <strong>getMagicStartCoords</strong>(integer $tagPos)
+        <div class="location">at line 1240</div>
+        <code>            protected        int[]
+    <strong>getMagicStartCoords</strong>(int $tagPos)
         </code>
     </h3>
     <div class="details">
@@ -2462,7 +2458,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$tagPos</td>
                 <td>Leftmost possible position for the tag</td>
             </tr>
@@ -2473,7 +2469,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer[]</td>
+            <td>int[]</td>
             <td>[Tag pos, priority]</td>
         </tr>
     </table>
@@ -2486,7 +2482,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isFollowedByClosingTag">
-        <div class="location">at         line 1273</div>
+        <div class="location">at line 1273</div>
         <code>            protected        bool
     <strong>isFollowedByClosingTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2526,7 +2522,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_processTags">
-        <div class="location">at         line 1283</div>
+        <div class="location">at line 1283</div>
         <code>            protected        void
     <strong>processTags</strong>()
         </code>
@@ -2556,7 +2552,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_processCurrentTag">
-        <div class="location">at         line 1328</div>
+        <div class="location">at line 1328</div>
         <code>            protected        void
     <strong>processCurrentTag</strong>()
         </code>
@@ -2586,7 +2582,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_processStartTag">
-        <div class="location">at         line 1421</div>
+        <div class="location">at line 1421</div>
         <code>            protected        void
     <strong>processStartTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2626,7 +2622,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_processEndTag">
-        <div class="location">at         line 1541</div>
+        <div class="location">at line 1541</div>
         <code>            protected        void
     <strong>processEndTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2666,7 +2662,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_popContext">
-        <div class="location">at         line 1705</div>
+        <div class="location">at line 1705</div>
         <code>            protected        void
     <strong>popContext</strong>()
         </code>
@@ -2696,7 +2692,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_pushContext">
-        <div class="location">at         line 1720</div>
+        <div class="location">at line 1720</div>
         <code>            protected        void
     <strong>pushContext</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2736,7 +2732,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_tagIsAllowed">
-        <div class="location">at         line 1772</div>
+        <div class="location">at line 1772</div>
         <code>            protected        bool
     <strong>tagIsAllowed</strong>(string $tagName)
         </code>
@@ -2776,9 +2772,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addStartTag">
-        <div class="location">at         line 1792</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addStartTag</strong>(string $name, integer $pos, integer $len, integer $prio = 0)
+        <div class="location">at line 1792</div>
+        <code>                    Tag
+    <strong>addStartTag</strong>(string $name, int $pos, int $len, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -2797,17 +2793,17 @@ existing plugin</p>                            </div>
                 <td>Name of the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of text consumed by the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -2818,7 +2814,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -2831,9 +2827,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addEndTag">
-        <div class="location">at         line 1806</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addEndTag</strong>(string $name, integer $pos, integer $len, integer $prio = 0)
+        <div class="location">at line 1806</div>
+        <code>                    Tag
+    <strong>addEndTag</strong>(string $name, int $pos, int $len, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -2852,17 +2848,17 @@ existing plugin</p>                            </div>
                 <td>Name of the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of text consumed by the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -2873,7 +2869,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -2886,9 +2882,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addSelfClosingTag">
-        <div class="location">at         line 1820</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addSelfClosingTag</strong>(string $name, integer $pos, integer $len, integer $prio = 0)
+        <div class="location">at line 1820</div>
+        <code>                    Tag
+    <strong>addSelfClosingTag</strong>(string $name, int $pos, int $len, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -2907,17 +2903,17 @@ existing plugin</p>                            </div>
                 <td>Name of the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of text consumed by the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -2928,7 +2924,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -2941,9 +2937,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addBrTag">
-        <div class="location">at         line 1832</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addBrTag</strong>(integer $pos, integer $prio = 0)
+        <div class="location">at line 1832</div>
+        <code>                    Tag
+    <strong>addBrTag</strong>(int $pos, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -2957,12 +2953,12 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -2973,7 +2969,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -2986,9 +2982,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addIgnoreTag">
-        <div class="location">at         line 1845</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addIgnoreTag</strong>(integer $pos, integer $len, integer $prio = 0)
+        <div class="location">at line 1845</div>
+        <code>                    Tag
+    <strong>addIgnoreTag</strong>(int $pos, int $len, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -3002,17 +2998,17 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of text consumed by the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -3023,7 +3019,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -3036,9 +3032,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addParagraphBreak">
-        <div class="location">at         line 1859</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addParagraphBreak</strong>(integer $pos, integer $prio = 0)
+        <div class="location">at line 1859</div>
+        <code>                    Tag
+    <strong>addParagraphBreak</strong>(int $pos, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -3052,12 +3048,12 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -3068,7 +3064,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -3081,9 +3077,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addCopyTag">
-        <div class="location">at         line 1873</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addCopyTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, integer $pos, integer $len, integer $prio = null)
+        <div class="location">at line 1873</div>
+        <code>                    Tag
+    <strong>addCopyTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, int $pos, int $len, int $prio = null)
         </code>
     </h3>
     <div class="details">
@@ -3102,17 +3098,17 @@ existing plugin</p>                            </div>
                 <td>Original tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Copy's position</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Copy's length</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Copy's priority (same as original by default)</td>
             </tr>
@@ -3123,7 +3119,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td>Copy tag</td>
         </tr>
     </table>
@@ -3136,9 +3132,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addTag">
-        <div class="location">at         line 1895</div>
-        <code>            protected        <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addTag</strong>(integer $type, string $name, integer $pos, integer $len, integer $prio)
+        <div class="location">at line 1895</div>
+        <code>            protected        Tag
+    <strong>addTag</strong>(int $type, string $name, int $pos, int $len, int $prio)
         </code>
     </h3>
     <div class="details">
@@ -3152,7 +3148,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$type</td>
                 <td>Tag's type</td>
             </tr>
@@ -3162,17 +3158,17 @@ existing plugin</p>                            </div>
                 <td>Name of the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of text consumed by the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -3183,7 +3179,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -3196,9 +3192,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isInvalidTextSpan">
-        <div class="location">at         line 1939</div>
+        <div class="location">at line 1939</div>
         <code>            protected        bool
-    <strong>isInvalidTextSpan</strong>(integer $pos, integer $len)
+    <strong>isInvalidTextSpan</strong>(int $pos, int $len)
         </code>
     </h3>
     <div class="details">
@@ -3212,12 +3208,12 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Start of text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of text</td>
             </tr>
@@ -3241,7 +3237,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_insertTag">
-        <div class="location">at         line 1950</div>
+        <div class="location">at line 1950</div>
         <code>            protected        void
     <strong>insertTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -3281,9 +3277,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addTagPair">
-        <div class="location">at         line 1981</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addTagPair</strong>(string $name, integer $startPos, integer $startLen, integer $endPos, integer $endLen, integer $prio = 0)
+        <div class="location">at line 1981</div>
+        <code>                    Tag
+    <strong>addTagPair</strong>(string $name, int $startPos, int $startLen, int $endPos, int $endLen, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -3302,27 +3298,27 @@ existing plugin</p>                            </div>
                 <td>Name of the tags</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$startPos</td>
                 <td>Position of the start tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$startLen</td>
                 <td>Length of the start tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$endPos</td>
                 <td>Position of the start tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$endLen</td>
                 <td>Length of the start tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Start tag's priority (the end tag will be set to minus that value)</td>
             </tr>
@@ -3333,7 +3329,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td>Start tag</td>
         </tr>
     </table>
@@ -3346,9 +3342,9 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_addVerbatim">
-        <div class="location">at         line 1999</div>
-        <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
-    <strong>addVerbatim</strong>(integer $pos, integer $len, integer $prio = 0)
+        <div class="location">at line 1999</div>
+        <code>                    Tag
+    <strong>addVerbatim</strong>(int $pos, int $len, int $prio = 0)
         </code>
     </h3>
     <div class="details">
@@ -3362,17 +3358,17 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Position of the tag in the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of text consumed by the tag</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$prio</td>
                 <td>Tag's priority</td>
             </tr>
@@ -3383,7 +3379,7 @@ existing plugin</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td>Tag</td>
             <td></td>
         </tr>
     </table>
@@ -3396,7 +3392,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_sortTags">
-        <div class="location">at         line 2009</div>
+        <div class="location">at line 2009</div>
         <code>            protected        void
     <strong>sortTags</strong>()
         </code>
@@ -3426,7 +3422,7 @@ existing plugin</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSortKey">
-        <div class="location">at         line 2036</div>
+        <div class="location">at line 2036</div>
         <code>            protected        string
     <strong>getSortKey</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, int $tagIndex = 0)
         </code>
@@ -3476,12 +3472,9 @@ are at the end of the array.</p>                            </div>
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <script src="../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
-        <script src="../../../sami.js"></script>
+        <script src="../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_UrlConfig" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
                     <li><a href="../../../search.html">Search</a></li>
@@ -94,7 +90,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_allowedSchemes">
-                                        protected                                        <a href="../../../s9e/TextFormatter/Configurator/Collections/SchemeList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\SchemeList">SchemeList</abbr></a>
+                                        protected                                        SchemeList
                 </td>
                 <td>$allowedSchemes</td>
                 <td class="last"></td>
@@ -102,7 +98,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_disallowedHosts">
-                                        protected                                        <a href="../../../s9e/TextFormatter/Configurator/Collections/HostnameList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\HostnameList">HostnameList</abbr></a>
+                                        protected                                        HostnameList
                 </td>
                 <td>$disallowedHosts</td>
                 <td class="last"></td>
@@ -110,7 +106,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_restrictedHosts">
-                                        protected                                        <a href="../../../s9e/TextFormatter/Configurator/Collections/HostnameList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\HostnameList">HostnameList</abbr></a>
+                                        protected                                        HostnameList
                 </td>
                 <td>$restrictedHosts</td>
                 <td class="last"></td>
@@ -200,7 +196,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 35</div>
+        <div class="location">at line 35</div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -221,7 +217,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">at         line 48</div>
+        <div class="location">at line 48</div>
         <code>                    array|<a href="../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -232,7 +228,7 @@
 
                     <div class="method-description">
                                     <p>Return an array-based representation of this object to be used for parsing</p>                    <p>NOTE: if this method was named getConfig() it could interfere with magic getters from
-      the Configurable trait</p>                            </div>
+the Configurable trait</p>                            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -252,7 +248,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_allowScheme">
-        <div class="location">at         line 59</div>
+        <div class="location">at line 59</div>
         <code>                    void
     <strong>allowScheme</strong>(string $scheme)
         </code>
@@ -292,7 +288,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_disallowHost">
-        <div class="location">at         line 76</div>
+        <div class="location">at line 76</div>
         <code>                    void
     <strong>disallowHost</strong>(string $host, bool $matchSubdomains = true)
         </code>
@@ -337,7 +333,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_disallowScheme">
-        <div class="location">at         line 92</div>
+        <div class="location">at line 92</div>
         <code>                    void
     <strong>disallowScheme</strong>(string $scheme)
         </code>
@@ -377,7 +373,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAllowedSchemes">
-        <div class="location">at         line 102</div>
+        <div class="location">at line 102</div>
         <code>                    array
     <strong>getAllowedSchemes</strong>()
         </code>
@@ -407,7 +403,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_restrictHost">
-        <div class="location">at         line 116</div>
+        <div class="location">at line 116</div>
         <code>                    void
     <strong>restrictHost</strong>(string $host, bool $matchSubdomains = true)
         </code>
@@ -453,12 +449,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

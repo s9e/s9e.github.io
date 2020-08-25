@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
-        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../fonts/doctum-font.css">
+        <script src="../../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../../js/bootstrap.min.js"></script>
         <script src="../../../../../js/typeahead.min.js"></script>
-        <script src="../../../../../sami.js"></script>
+        <script src="../../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_Litedown_Parser_ParsedText" data-root-path="../../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../../search.html">Search</a></li>
@@ -164,7 +160,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_charAt">charAt</a>(integer $pos)
+                    <a href="#method_charAt">charAt</a>(int $pos)
         
                                             <p>Return the character at given position</p>                </div>
                 <div class="col-md-2"></div>
@@ -181,10 +177,10 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool|integer
+                    bool|int
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_indexOf">indexOf</a>(string $str, integer $pos = 0)
+                    <a href="#method_indexOf">indexOf</a>(string $str, int $pos = 0)
         
                                             <p>Find the first occurence of given substring starting at given position</p>                </div>
                 <div class="col-md-2"></div>
@@ -194,7 +190,7 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isAfterWhitespace">isAfterWhitespace</a>(integer $pos)
+                    <a href="#method_isAfterWhitespace">isAfterWhitespace</a>(int $pos)
         
                                             <p>Test whether given position is preceded by whitespace</p>                </div>
                 <div class="col-md-2"></div>
@@ -214,7 +210,7 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isBeforeWhitespace">isBeforeWhitespace</a>(integer $pos)
+                    <a href="#method_isBeforeWhitespace">isBeforeWhitespace</a>(int $pos)
         
                                             <p>Test whether given position is followed by whitespace</p>                </div>
                 <div class="col-md-2"></div>
@@ -224,7 +220,7 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isSurroundedByAlnum">isSurroundedByAlnum</a>(integer $pos, integer $len)
+                    <a href="#method_isSurroundedByAlnum">isSurroundedByAlnum</a>(int $pos, int $len)
         
                                             <p>Test whether a length of text is surrounded by alphanumeric characters</p>                </div>
                 <div class="col-md-2"></div>
@@ -244,7 +240,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_markBoundary">markBoundary</a>(integer $pos)
+                    <a href="#method_markBoundary">markBoundary</a>(int $pos)
         
                                             <p>Mark the boundary of a block in the original text</p>                </div>
                 <div class="col-md-2"></div>
@@ -254,7 +250,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_overwrite">overwrite</a>(integer $pos, integer $len)
+                    <a href="#method_overwrite">overwrite</a>(int $pos, int $len)
         
                                             <p>Overwrite part of the text with substitution characters ^Z (0x1A)</p>                </div>
                 <div class="col-md-2"></div>
@@ -267,7 +263,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 40</div>
+        <div class="location">at line 40</div>
         <code>                    
     <strong>__construct</strong>(string $text)
         </code>
@@ -296,7 +292,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         line 67</div>
+        <div class="location">at line 67</div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -324,9 +320,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_charAt">
-        <div class="location">at         line 78</div>
+        <div class="location">at line 78</div>
         <code>                    string
-    <strong>charAt</strong>(integer $pos)
+    <strong>charAt</strong>(int $pos)
         </code>
     </h3>
     <div class="details">
@@ -340,7 +336,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td></td>
             </tr>
@@ -364,7 +360,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_decode">
-        <div class="location">at         line 91</div>
+        <div class="location">at line 91</div>
         <code>                    string
     <strong>decode</strong>(string $str)
         </code>
@@ -404,9 +400,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_indexOf">
-        <div class="location">at         line 122</div>
-        <code>                    bool|integer
-    <strong>indexOf</strong>(string $str, integer $pos = 0)
+        <div class="location">at line 122</div>
+        <code>                    bool|int
+    <strong>indexOf</strong>(string $str, int $pos = 0)
         </code>
     </h3>
     <div class="details">
@@ -425,7 +421,7 @@
                 <td></td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td></td>
             </tr>
@@ -436,7 +432,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool|integer</td>
+            <td>bool|int</td>
             <td></td>
         </tr>
     </table>
@@ -449,9 +445,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isAfterWhitespace">
-        <div class="location">at         line 133</div>
+        <div class="location">at line 133</div>
         <code>                    bool
-    <strong>isAfterWhitespace</strong>(integer $pos)
+    <strong>isAfterWhitespace</strong>(int $pos)
         </code>
     </h3>
     <div class="details">
@@ -465,7 +461,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td></td>
             </tr>
@@ -489,7 +485,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isAlnum">
-        <div class="location">at         line 144</div>
+        <div class="location">at line 144</div>
         <code>                    bool
     <strong>isAlnum</strong>(string $chr)
         </code>
@@ -529,9 +525,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isBeforeWhitespace">
-        <div class="location">at         line 155</div>
+        <div class="location">at line 155</div>
         <code>                    bool
-    <strong>isBeforeWhitespace</strong>(integer $pos)
+    <strong>isBeforeWhitespace</strong>(int $pos)
         </code>
     </h3>
     <div class="details">
@@ -545,7 +541,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td></td>
             </tr>
@@ -569,9 +565,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isSurroundedByAlnum">
-        <div class="location">at         line 167</div>
+        <div class="location">at line 167</div>
         <code>                    bool
-    <strong>isSurroundedByAlnum</strong>(integer $pos, integer $len)
+    <strong>isSurroundedByAlnum</strong>(int $pos, int $len)
         </code>
     </h3>
     <div class="details">
@@ -585,12 +581,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Start of the text</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of the text</td>
             </tr>
@@ -614,7 +610,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isWhitespace">
-        <div class="location">at         line 180</div>
+        <div class="location">at line 180</div>
         <code>                    bool
     <strong>isWhitespace</strong>(string $chr)
         </code>
@@ -654,9 +650,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_markBoundary">
-        <div class="location">at         line 191</div>
+        <div class="location">at line 191</div>
         <code>                    void
-    <strong>markBoundary</strong>(integer $pos)
+    <strong>markBoundary</strong>(int $pos)
         </code>
     </h3>
     <div class="details">
@@ -670,7 +666,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td></td>
             </tr>
@@ -694,9 +690,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwrite">
-        <div class="location">at         line 203</div>
+        <div class="location">at line 203</div>
         <code>                    void
-    <strong>overwrite</strong>(integer $pos, integer $len)
+    <strong>overwrite</strong>(int $pos, int $len)
         </code>
     </h3>
     <div class="details">
@@ -710,12 +706,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$pos</td>
                 <td>Start of the range</td>
             </tr>
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$len</td>
                 <td>Length of text to overwrite</td>
             </tr>
@@ -740,12 +736,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

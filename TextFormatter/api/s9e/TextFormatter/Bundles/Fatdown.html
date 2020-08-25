@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <script src="../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
-        <script src="../../../sami.js"></script>
+        <script src="../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Bundles_Fatdown" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
                     <li><a href="../../../search.html">Search</a></li>
@@ -93,7 +89,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_parser">
-                    static                    protected                                        <abbr title="s9e\TextFormatter\Bundles\s9e\TextFormatter\Parser">Parser</abbr>
+                    static                    protected                                        <a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
                 </td>
                 <td>$parser</td>
                 <td class="last"></td>
@@ -101,7 +97,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_renderer">
-                    static                    protected                                        <abbr title="s9e\TextFormatter\Bundles\s9e\TextFormatter\Renderer">Renderer</abbr>
+                    static                    protected                                        <a href="../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
                 </td>
                 <td>$renderer</td>
                 <td class="last"></td>
@@ -115,27 +111,29 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                    static&nbsp;Parser
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getCachedParser">getCachedParser</a>()
         
                                             <p>Return a cached instance of the parser</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedParser"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedParser">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
+                    static&nbsp;Renderer
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getCachedRenderer">getCachedRenderer</a>()
         
                                             <p>Return a cached instance of the renderer</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedRenderer"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedRenderer">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                    static&nbsp;Parser
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getParser">getParser</a>()
@@ -145,7 +143,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
+                    static&nbsp;Renderer
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getRenderer">getRenderer</a>()
@@ -171,7 +169,8 @@
                     <a href="#method_parse">parse</a>(string $text)
         
                                             <p>Parse given text using a singleton instance of the bundled Parser</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_parse"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_parse">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -181,7 +180,8 @@
                     <a href="#method_render">render</a>(string $xml, array $params = [])
         
                                             <p>Render an intermediate representation using a singleton instance of the bundled Renderer</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_render"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_render">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -191,7 +191,8 @@
                     <a href="#method_reset">reset</a>()
         
                                             <p>Reset the cached parser and renderer</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_reset"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_reset">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -201,7 +202,8 @@
                     <a href="#method_unparse">unparse</a>(string $xml)
         
                                             <p>Transform an intermediate representation back to its original form</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_unparse"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../s9e/TextFormatter/Bundle.html#method_unparse">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a></small></div>
             </div>
             </div>
 
@@ -211,8 +213,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getCachedParser">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedParser"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 17</div>
-        <code>        static            <a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedParser">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line 17</div>
+        <code>        static            Parser
     <strong>getCachedParser</strong>()
         </code>
     </h3>
@@ -228,7 +231,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></td>
+            <td>Parser</td>
             <td></td>
         </tr>
     </table>
@@ -241,8 +244,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCachedRenderer">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedRenderer"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 32</div>
-        <code>        static            <a href="../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_getCachedRenderer">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line 32</div>
+        <code>        static            Renderer
     <strong>getCachedRenderer</strong>()
         </code>
     </h3>
@@ -258,7 +262,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a></td>
+            <td>Renderer</td>
             <td></td>
         </tr>
     </table>
@@ -271,8 +275,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getParser">
-        <div class="location">at         line 112</div>
-        <code>        static            <a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+        <div class="location">at line 112</div>
+        <code>        static            Parser
     <strong>getParser</strong>()
         </code>
     </h3>
@@ -288,7 +292,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></td>
+            <td>Parser</td>
             <td></td>
         </tr>
     </table>
@@ -301,8 +305,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getRenderer">
-        <div class="location">at         line 120</div>
-        <code>        static            <a href="../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a>
+        <div class="location">at line 120</div>
+        <code>        static            Renderer
     <strong>getRenderer</strong>()
         </code>
     </h3>
@@ -318,7 +322,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../s9e/TextFormatter/Renderer.html"><abbr title="s9e\TextFormatter\Renderer">Renderer</abbr></a></td>
+            <td>Renderer</td>
             <td></td>
         </tr>
     </table>
@@ -331,7 +335,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJS">
-        <div class="location">at         line 25</div>
+        <div class="location">at line 25</div>
         <code>        static            string
     <strong>getJS</strong>()
         </code>
@@ -361,7 +365,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_parse"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 72</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_parse">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line 72</div>
         <code>        static            string
     <strong>parse</strong>(string $text)
         </code>
@@ -401,7 +406,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_render"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 96</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_render">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line 96</div>
         <code>        static            string
     <strong>render</strong>(string $xml, array $params = [])
         </code>
@@ -446,7 +452,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reset">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_reset"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 125</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_reset">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line 125</div>
         <code>        static            void
     <strong>reset</strong>()
         </code>
@@ -476,7 +483,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unparse">
-        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_unparse"><abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at         line 137</div>
+        <div class="location">in <a href="../../../s9e/TextFormatter/Bundle.html#method_unparse">
+<abbr title="s9e\TextFormatter\Bundle">Bundle</abbr></a> at line 137</div>
         <code>        static            string
     <strong>unparse</strong>(string $xml)
         </code>
@@ -517,12 +525,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 

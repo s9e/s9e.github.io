@@ -7,27 +7,23 @@
 
             <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
-        <script src="../../../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../../../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
         <script src="../../../../js/typeahead.min.js"></script>
-        <script src="../../../../sami.js"></script>
+        <script src="../../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    
-    
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_JavaScript_ConfigValue" data-root-path="../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <script>
-            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
-        </script>
-        <form id="search-form" action="../../../../search.html" method="GET">
-            <span class="glyphicon glyphicon-search"></span>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
                    type="search"
@@ -53,8 +49,8 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../../classes.html">Classes</a></li>
-                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../../traits.html">Traits</a></li>
                     <li><a href="../../../../doc-index.html">Index</a></li>
                     <li><a href="../../../../search.html">Search</a></li>
@@ -109,7 +105,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_useCount">
-                                        protected                                        integer
+                                        protected                                        int
                 </td>
                 <td>$useCount</td>
                 <td class="last"></td>
@@ -117,7 +113,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_value">
-                                        protected                                        array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
+                                        protected                                        array|Code|Dictionary
                 </td>
                 <td>$value</td>
                 <td class="last"></td>
@@ -142,7 +138,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $value, string $varName)
+                    <a href="#method___construct">__construct</a>(array|Code|Dictionary $value, string $varName)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
@@ -159,7 +155,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getUseCount">getUseCount</a>()
@@ -169,7 +165,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
+                    array|Code|Dictionary
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getValue">getValue</a>()
@@ -212,7 +208,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_decrementUseCount">decrementUseCount</a>(integer $step = 1)
+                    <a href="#method_decrementUseCount">decrementUseCount</a>(int $step = 1)
         
                                             <p>Decrement the use counter of this value as well as the values it contains</p>                </div>
                 <div class="col-md-2"></div>
@@ -225,9 +221,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 43</div>
+        <div class="location">at line 43</div>
         <code>                    
-    <strong>__construct</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $value, string $varName)
+    <strong>__construct</strong>(array|Code|Dictionary $value, string $varName)
         </code>
     </h3>
     <div class="details">
@@ -241,7 +237,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
+                <td>array|Code|Dictionary</td>
                 <td>$value</td>
                 <td>Original value</td>
             </tr>
@@ -261,7 +257,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deduplicate">
-        <div class="location">at         line 54</div>
+        <div class="location">at line 54</div>
         <code>                    void
     <strong>deduplicate</strong>()
         </code>
@@ -291,8 +287,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getUseCount">
-        <div class="location">at         line 68</div>
-        <code>                    integer
+        <div class="location">at line 68</div>
+        <code>                    int
     <strong>getUseCount</strong>()
         </code>
     </h3>
@@ -308,7 +304,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -321,8 +317,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getValue">
-        <div class="location">at         line 78</div>
-        <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
+        <div class="location">at line 78</div>
+        <code>                    array|Code|Dictionary
     <strong>getValue</strong>()
         </code>
     </h3>
@@ -338,7 +334,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
+            <td>array|Code|Dictionary</td>
             <td></td>
         </tr>
     </table>
@@ -351,7 +347,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVarName">
-        <div class="location">at         line 88</div>
+        <div class="location">at line 88</div>
         <code>                    string
     <strong>getVarName</strong>()
         </code>
@@ -381,7 +377,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_incrementUseCount">
-        <div class="location">at         line 98</div>
+        <div class="location">at line 98</div>
         <code>                    void
     <strong>incrementUseCount</strong>()
         </code>
@@ -411,7 +407,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isDeduplicated">
-        <div class="location">at         line 108</div>
+        <div class="location">at line 108</div>
         <code>                    bool
     <strong>isDeduplicated</strong>()
         </code>
@@ -441,9 +437,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_decrementUseCount">
-        <div class="location">at         line 119</div>
+        <div class="location">at line 119</div>
         <code>            protected        void
-    <strong>decrementUseCount</strong>(integer $step = 1)
+    <strong>decrementUseCount</strong>(int $step = 1)
         </code>
     </h3>
     <div class="details">
@@ -457,7 +453,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>integer</td>
+                <td>int</td>
                 <td>$step</td>
                 <td>How much to remove from the counter</td>
             </tr>
@@ -482,12 +478,9 @@
             </div>
 
     
-            </div>
-                <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
-    </div>
-
-        </div>
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
 
