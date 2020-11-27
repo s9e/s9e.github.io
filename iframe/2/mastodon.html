@@ -7,18 +7,16 @@
 	let height, port;
 	onmessage = function (e)
 	{
+		e.stopImmediatePropagation();
 		if (e.data === 's9e:init')
 		{
 			port = e.ports[0];
-			e.stopImmediatePropagation();
 		}
 		else
 		{
-			let iframe = body.firstChild;
-			if (e.source === iframe.contentWindow)
+			if (e.source === body.firstChild.contentWindow)
 			{
-				height = e.data.height;
-				iframe.style.height = height + 'px';
+				height = +e.data.height;
 			}
 		}
 
@@ -28,6 +26,6 @@
 		}
 	};
 
-	body.innerHTML='<iframe onload="contentWindow.postMessage({id:0,type:\'setHeight\'},\'*\')" scrolling="no" src="https://mastodon.social/@' + location.hash.replace(/[^\w/]/g, '') + '/embed" style="border:0;width:100%"></iframe>';
+	body.innerHTML='<iframe onload="contentWindow.postMessage({id:0,type:\'setHeight\'},\'*\')" scrolling="no" src="https://mastodon.social/@' + location.hash.replace(/[^\w/]/g, '') + '/embed" style="border:0;height:100vh;width:100%"></iframe>';
 })(document.body);
 </script>
