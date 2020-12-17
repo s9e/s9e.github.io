@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>s9e\TextFormatter\Configurator\Items\AttributeFilters\MapFilter | API</title>
+    <title>s9e\TextFormatter\Configurator\Items\AttributeFilters\AbstractMapFilter | API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
@@ -18,7 +18,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     </head>
 
-    <body id="class" data-name="class:s9e_TextFormatter_Configurator_Items_AttributeFilters_MapFilter" data-root-path="../../../../../">
+    <body id="class" data-name="class:s9e_TextFormatter_Configurator_Items_AttributeFilters_AbstractMapFilter" data-root-path="../../../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -62,20 +62,20 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/Items.html">Items</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters.html">AttributeFilters</a></li><li class="backslash">\</li><li>MapFilter</li>
+                        <li><a href="../../../../../s9e.html">s9e</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter.html">TextFormatter</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator.html">Configurator</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/Items.html">Items</a></li><li class="backslash">\</li><li><a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters.html">AttributeFilters</a></li><li class="backslash">\</li><li>AbstractMapFilter</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            MapFilter
+            AbstractMapFilter
                 
         </h1>
     </div>
 
-    <p>    class
-    <strong>MapFilter</strong>        extends <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/AbstractMapFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\AbstractMapFilter">AbstractMapFilter</abbr></a>
+    <p>abstract     class
+    <strong>AbstractMapFilter</strong>        extends <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilter">AttributeFilter</abbr></a>
 </p>
 
         
@@ -153,10 +153,11 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(array $map = null, bool $caseSensitive = false, bool $strict = false)
+                    <a href="#method___construct">__construct</a>(callable $callback)
         
                                             <p>Constructor</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilter.html#method___construct">
+<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilter">AttributeFilter</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -265,8 +266,7 @@
                     <a href="#method_asConfig">asConfig</a>()
         
                                             <p>Return an array-based representation of this object to be used for parsing</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/AbstractMapFilter.html#method_asConfig">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\AbstractMapFilter">AbstractMapFilter</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -386,17 +386,6 @@
                     <a href="#method_assessSafeness">assessSafeness</a>(array $strings)
         
                                             <p>Assess the safeness of this attribute filter based on given list of strings</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/AbstractMapFilter.html#method_assessSafeness">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\AbstractMapFilter">AbstractMapFilter</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_setMap">setMap</a>(array $map, bool $caseSensitive = false, bool $strict = false)
-        
-                                            <p>Set the content of this map</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -407,9 +396,10 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 23</div>
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilter.html#method___construct">
+<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilter">AttributeFilter</abbr></a> at line 21</div>
         <code>                    
-    <strong>__construct</strong>(array $map = null, bool $caseSensitive = false, bool $strict = false)
+    <strong>__construct</strong>(callable $callback)
         </code>
     </h3>
     <div class="details">
@@ -423,19 +413,9 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array</td>
-                <td>$map</td>
-                <td>Associative array in the form [word => replacement]</td>
-            </tr>
-                    <tr>
-                <td>bool</td>
-                <td>$caseSensitive</td>
-                <td>Whether this map is case-sensitive</td>
-            </tr>
-                    <tr>
-                <td>bool</td>
-                <td>$strict</td>
-                <td>Whether this map is strict (values with no match are invalid)</td>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
             </tr>
             </table>
 
@@ -782,8 +762,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_asConfig">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/AbstractMapFilter.html#method_asConfig">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\AbstractMapFilter">AbstractMapFilter</abbr></a> at line 19</div>
+        <div class="location">at line 19</div>
         <code>                    array|<a href="../../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>|null
     <strong>asConfig</strong>()
         </code>
@@ -1144,8 +1123,7 @@ the Configurable trait</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_assessSafeness">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/AbstractMapFilter.html#method_assessSafeness">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\AbstractMapFilter">AbstractMapFilter</abbr></a> at line 37</div>
+        <div class="location">at line 37</div>
         <code>            protected        void
     <strong>assessSafeness</strong>(array $strings)
         </code>
@@ -1164,56 +1142,6 @@ the Configurable trait</p>                            </div>
                 <td>array</td>
                 <td>$strings</td>
                 <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setMap">
-        <div class="location">at line 46</div>
-        <code>                    void
-    <strong>setMap</strong>(array $map, bool $caseSensitive = false, bool $strict = false)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Set the content of this map</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>array</td>
-                <td>$map</td>
-                <td>Associative array in the form [word => replacement]</td>
-            </tr>
-                    <tr>
-                <td>bool</td>
-                <td>$caseSensitive</td>
-                <td>Whether this map is case-sensitive</td>
-            </tr>
-                    <tr>
-                <td>bool</td>
-                <td>$strict</td>
-                <td>Whether this map is strict (values with no match are invalid)</td>
             </tr>
             </table>
 
