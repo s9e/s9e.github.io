@@ -405,43 +405,10 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_evaluateSafeness">evaluateSafeness</a>()
+                    <a href="#method_assessSafeness">assessSafeness</a>(string $filterRegexp)
         
-                                            <p>Mark in which contexts values processed by this filter are safe to be used</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafeness">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_evaluateSafenessAsURL">evaluateSafenessAsURL</a>()
-        
-                                            <p>Mark whether this filter makes a value safe to be used as a URL</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessAsURL">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_evaluateSafenessInCSS">evaluateSafenessInCSS</a>()
-        
-                                            <p>Mark whether this filter makes a value safe to be used in CSS</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessInCSS">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_evaluateSafenessInJS">evaluateSafenessInJS</a>()
-        
-                                            <p>Mark whether this filter makes a value safe to be used in JS</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessInJS">
+                                            <p>Assess the safeness of this attribute filter based on given regexp</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_assessSafeness">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -1265,11 +1232,11 @@ the Configurable trait</p>                            </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_evaluateSafeness">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafeness">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at line 85</div>
+                    <h3 id="method_assessSafeness">
+        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_assessSafeness">
+<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at line 86</div>
         <code>            protected        void
-    <strong>evaluateSafeness</strong>()
+    <strong>assessSafeness</strong>(string $filterRegexp)
         </code>
     </h3>
     <div class="details">
@@ -1277,101 +1244,18 @@ the Configurable trait</p>                            </div>
     
 
                     <div class="method-description">
-                                    <p>Mark in which contexts values processed by this filter are safe to be used</p>                                                </div>
+                                    <p>Assess the safeness of this attribute filter based on given regexp</p>                                                </div>
                 <div class="tags">
-            
-                            <h4>Return Value</h4>
+                            <h4>Parameters</h4>
 
                     <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
+                    <tr>
+                <td>string</td>
+                <td>$filterRegexp</td>
+                <td></td>
+            </tr>
+            </table>
 
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_evaluateSafenessAsURL">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessAsURL">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at line 104</div>
-        <code>            protected        void
-    <strong>evaluateSafenessAsURL</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Mark whether this filter makes a value safe to be used as a URL</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_evaluateSafenessInCSS">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessInCSS">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at line 140</div>
-        <code>            protected        void
-    <strong>evaluateSafenessInCSS</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Mark whether this filter makes a value safe to be used in CSS</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_evaluateSafenessInJS">
-        <div class="location">in <a href="../../../../../s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method_evaluateSafenessInJS">
-<abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a> at line 160</div>
-        <code>            protected        void
-    <strong>evaluateSafenessInJS</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Mark whether this filter makes a value safe to be used in JS</p>                                                </div>
-                <div class="tags">
             
                             <h4>Return Value</h4>
 
