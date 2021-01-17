@@ -173,7 +173,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_cloneCloseTagElementsIntoSwitch">cloneCloseTagElementsIntoSwitch</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
+                    <a href="#method_cloneCloseTagElementsIntoSwitch">cloneCloseTagElementsIntoSwitch</a>()
         
                                             <p>Clone closeTag elements that follow a switch into said switch</p>                </div>
                 <div class="col-md-2"></div>
@@ -183,7 +183,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_cloneCloseTagElementsOutOfSwitch">cloneCloseTagElementsOutOfSwitch</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
+                    <a href="#method_cloneCloseTagElementsOutOfSwitch">cloneCloseTagElementsOutOfSwitch</a>()
         
                                             <p>Clone closeTag elements from the head of a switch's cases before said switch</p>                </div>
                 <div class="col-md-2"></div>
@@ -193,7 +193,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_mergeConsecutiveLiteralOutputElements">mergeConsecutiveLiteralOutputElements</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
+                    <a href="#method_mergeConsecutiveLiteralOutputElements">mergeConsecutiveLiteralOutputElements</a>()
         
                                             <p>Merge consecutive literal outputs</p>                </div>
                 <div class="col-md-2"></div>
@@ -273,7 +273,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_removeRedundantCloseTagElementsInSwitch">removeRedundantCloseTagElementsInSwitch</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
+                    <a href="#method_removeRedundantCloseTagElementsInSwitch">removeRedundantCloseTagElementsInSwitch</a>()
         
                                             <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                </div>
                 <div class="col-md-2"></div>
@@ -510,9 +510,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_cloneCloseTagElementsIntoSwitch">
-        <div class="location">at line 56</div>
+        <div class="location">at line 55</div>
         <code>            protected        void
-    <strong>cloneCloseTagElementsIntoSwitch</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
+    <strong>cloneCloseTagElementsIntoSwitch</strong>()
         </code>
     </h3>
     <div class="details">
@@ -523,16 +523,6 @@
                                     <p>Clone closeTag elements that follow a switch into said switch</p>                    <p>If there's a <closeTag/> right after a <switch/>, clone the <closeTag/> at the end of
 the every <case/> that does not end with a <closeTag/></p>                            </div>
                 <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a></td>
-                <td>$ir</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
@@ -551,9 +541,9 @@ the every <case/> that does not end with a <closeTag/></p>                      
             </div>
                     <div class="method-item">
                     <h3 id="method_cloneCloseTagElementsOutOfSwitch">
-        <div class="location">at line 81</div>
+        <div class="location">at line 79</div>
         <code>            protected        void
-    <strong>cloneCloseTagElementsOutOfSwitch</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
+    <strong>cloneCloseTagElementsOutOfSwitch</strong>()
         </code>
     </h3>
     <div class="details">
@@ -564,16 +554,6 @@ the every <case/> that does not end with a <closeTag/></p>                      
                                     <p>Clone closeTag elements from the head of a switch's cases before said switch</p>                    <p>If there's a <closeTag/> at the beginning of every <case/>, clone it and insert it
 right before the <switch/> unless there's already one</p>                            </div>
                 <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a></td>
-                <td>$ir</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
@@ -592,9 +572,9 @@ right before the <switch/> unless there's already one</p>                       
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeConsecutiveLiteralOutputElements">
-        <div class="location">at line 97</div>
+        <div class="location">at line 94</div>
         <code>            protected        void
-    <strong>mergeConsecutiveLiteralOutputElements</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
+    <strong>mergeConsecutiveLiteralOutputElements</strong>()
         </code>
     </h3>
     <div class="details">
@@ -604,16 +584,6 @@ right before the <switch/> unless there's already one</p>                       
                     <div class="method-description">
                                     <p>Merge consecutive literal outputs</p>                                                </div>
                 <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a></td>
-                <td>$ir</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
@@ -632,7 +602,7 @@ right before the <switch/> unless there's already one</p>                       
             </div>
                     <div class="method-item">
                     <h3 id="method_nextSiblingIsLiteralOutput">
-        <div class="location">at line 117</div>
+        <div class="location">at line 114</div>
         <code>            protected        bool
     <strong>nextSiblingIsLiteralOutput</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $node, string $disableOutputEscaping)
         </code>
@@ -677,7 +647,7 @@ right before the <switch/> unless there's already one</p>                       
             </div>
                     <div class="method-item">
                     <h3 id="method_optimizeCloseTagElements">
-        <div class="location">at line 128</div>
+        <div class="location">at line 125</div>
         <code>            protected        void
     <strong>optimizeCloseTagElements</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -717,7 +687,7 @@ right before the <switch/> unless there's already one</p>                       
             </div>
                     <div class="method-item">
                     <h3 id="method_removeCloseTagSiblings">
-        <div class="location">at line 144</div>
+        <div class="location">at line 141</div>
         <code>            protected        void
     <strong>removeCloseTagSiblings</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -757,7 +727,7 @@ right before the <switch/> unless there's already one</p>                       
             </div>
                     <div class="method-item">
                     <h3 id="method_removeContentFromVoidElements">
-        <div class="location">at line 159</div>
+        <div class="location">at line 156</div>
         <code>            protected        void
     <strong>removeContentFromVoidElements</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -798,7 +768,7 @@ after</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_removeEmptyDefaultCases">
-        <div class="location">at line 176</div>
+        <div class="location">at line 173</div>
         <code>            protected        void
     <strong>removeEmptyDefaultCases</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -838,7 +808,7 @@ after</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_removeNodes">
-        <div class="location">at line 190</div>
+        <div class="location">at line 187</div>
         <code>            protected        void
     <strong>removeNodes</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir, string $query, <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $contextNode = null)
         </code>
@@ -888,7 +858,7 @@ after</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRedundantCloseTagElements">
-        <div class="location">at line 210</div>
+        <div class="location">at line 207</div>
         <code>            protected        void
     <strong>removeRedundantCloseTagElements</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
         </code>
@@ -929,9 +899,9 @@ descendants of a sibling</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRedundantCloseTagElementsInSwitch">
-        <div class="location">at line 230</div>
+        <div class="location">at line 226</div>
         <code>            protected        void
-    <strong>removeRedundantCloseTagElementsInSwitch</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $ir)
+    <strong>removeRedundantCloseTagElementsInSwitch</strong>()
         </code>
     </h3>
     <div class="details">
@@ -942,16 +912,6 @@ descendants of a sibling</p>                            </div>
                                     <p>Remove redundant closeTag elements from the tail of a switch's cases</p>                    <p>If there's a <closeTag/> right after a <switch/>, remove all <closeTag/> nodes at the
 end of every <case/></p>                            </div>
                 <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a></td>
-                <td>$ir</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
