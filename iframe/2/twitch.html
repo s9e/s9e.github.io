@@ -8,7 +8,7 @@ onmessage = function (e)
 		return;
 	}
 
-	var regexp = /(\w+)=(\w+)/g,
+	var regexp = /(\w+)=([-\w]+)/g,
 		m,
 		vars = {};
 	while (m = regexp.exec(location.hash))
