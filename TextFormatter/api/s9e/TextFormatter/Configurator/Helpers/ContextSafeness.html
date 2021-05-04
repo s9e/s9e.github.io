@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_ContextSafeness" data-root-path="../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            ContextSafeness
-                
-        </h1>
+        <h1>ContextSafeness    
+            </h1>
     </div>
 
+    
     <p>    abstract     class
     <strong>ContextSafeness</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
     
             <h2>Methods</h2>
@@ -92,30 +92,30 @@
                 <div class="col-md-2 type">
                     static&nbsp;string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getDisallowedCharactersAsURL">getDisallowedCharactersAsURL</a>()
         
-                                            <p>Get the list of UTF-8 characters that are disallowed as a URL</p>                </div>
+                                            <p><p>Get the list of UTF-8 characters that are disallowed as a URL</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getDisallowedCharactersInCSS">getDisallowedCharactersInCSS</a>()
         
-                                            <p>Get the list of UTF-8 characters that are disallowed in CSS</p>                </div>
+                                            <p><p>Get the list of UTF-8 characters that are disallowed in CSS</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getDisallowedCharactersInJS">getDisallowedCharactersInJS</a>()
         
-                                            <p>Get the list of UTF-8 characters that are disallowed in JS</p>                </div>
+                                            <p><p>Get the list of UTF-8 characters that are disallowed in JS</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -131,13 +131,14 @@
     <strong>getDisallowedCharactersAsURL</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Get the list of UTF-8 characters that are disallowed as a URL</p>                    <p>":" is disallowed to prevent the URL to have a scheme.</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Get the list of UTF-8 characters that are disallowed as a URL</p></p>                <p><p>&quot;:&quot; is disallowed to prevent the URL to have a scheme.</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -148,6 +149,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -161,21 +163,21 @@
     <strong>getDisallowedCharactersInCSS</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Get the list of UTF-8 characters that are disallowed in CSS</p>                    <p><ul>
-<li>"(" and ")" are disallowed to prevent executing CSS functions or proprietary extensions that
+        <div class="method-description">
+                            <p><p>Get the list of UTF-8 characters that are disallowed in CSS</p></p>                <p><ul>
+<li>&quot;(&quot; and &quot;)&quot; are disallowed to prevent executing CSS functions or proprietary extensions that
 may execute JavaScript.</li>
-<li>":" is disallowed to prevent setting extra CSS properties as well as possibly misusing the
+<li>&quot;:&quot; is disallowed to prevent setting extra CSS properties as well as possibly misusing the
 url() function with javascript: URIs.</li>
-<li>"\", '"' and "'" are disallowed to prevent breaking out of or interfering with strings.</li>
-<li>";", "{" and "}" to prevent breaking out of a declaration</li>
-</ul>
-</p>                            </div>
-                <div class="tags">
+<li>&quot;\&quot;, '&quot;' and &quot;'&quot; are disallowed to prevent breaking out of or interfering with strings.</li>
+<li>&quot;;&quot;, &quot;{&quot; and &quot;}&quot; to prevent breaking out of a declaration</li>
+</ul></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -186,6 +188,7 @@ url() function with javascript: URIs.</li>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -199,26 +202,25 @@ url() function with javascript: URIs.</li>
     <strong>getDisallowedCharactersInJS</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Get the list of UTF-8 characters that are disallowed in JS</p>                    <p>Allowing <em>any</em> input inside of a JavaScript context is a risky proposition. The use cases are
+        <div class="method-description">
+                            <p><p>Get the list of UTF-8 characters that are disallowed in JS</p></p>                <p><p>Allowing <em>any</em> input inside of a JavaScript context is a risky proposition. The use cases are
 also pretty rare. This list of disallowed characters attempts to block any character that is
 potentially unsafe either inside or outside of a string.</p>
-
 <ul>
-<li>"(" and ")" are disallowed to prevent executing functions.</li>
-<li>'"',  "'", "\" and "`" are disallowed to prevent breaking out of or interfering with strings.</li>
-<li>"\r", "\n", U+2028 and U+2029 are disallowed inside of JavaScript strings.</li>
-<li>":" and "%" are disallowed to prevent potential exploits that set document.location to a
+<li>&quot;(&quot; and &quot;)&quot; are disallowed to prevent executing functions.</li>
+<li>'&quot;',  &quot;'&quot;, &quot;\&quot; and &quot;`&quot; are disallowed to prevent breaking out of or interfering with strings.</li>
+<li>&quot;\r&quot;, &quot;\n&quot;, U+2028 and U+2029 are disallowed inside of JavaScript strings.</li>
+<li>&quot;:&quot; and &quot;%&quot; are disallowed to prevent potential exploits that set document.location to a
 javascript: URI.</li>
-<li>"=" is disallowed to prevent overwriting existing vars (or constructors, such as Array's) if
+<li>&quot;=&quot; is disallowed to prevent overwriting existing vars (or constructors, such as Array's) if
 the input is used outside of a string</li>
-</ul>
-</p>                            </div>
-                <div class="tags">
+</ul></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -231,6 +233,7 @@ the input is used outside of a string</li>
 
             
             
+            
                     </div>
     </div>
 
@@ -238,7 +241,7 @@ the input is used outside of a string</li>
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

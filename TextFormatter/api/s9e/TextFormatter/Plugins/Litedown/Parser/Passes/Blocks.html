@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_Litedown_Parser_Passes_Blocks" data-root-path="../../../../../../">
@@ -66,31 +67,31 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            Blocks
-                
-        </h1>
+        <h1>Blocks    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>Blocks</strong>        extends <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
             <h2>Properties</h2>
 
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_parser">
-                                        protected                                        Parser
-                </td>
+                                        protected                                        <a href="../../../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                                                                                
+                                    </td>
                 <td>$parser</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_parser">
@@ -98,8 +99,9 @@
             </tr>
                     <tr>
                 <td class="type" id="property_text">
-                                        protected                                        ParsedText
-                </td>
+                                        protected                                        <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a>
+                                                                                
+                                    </td>
                 <td>$text</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_text">
@@ -108,7 +110,8 @@
                     <tr>
                 <td class="type" id="property_setextLines">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$setextLines</td>
                 <td class="last"></td>
                 <td></td>
@@ -123,7 +126,7 @@
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method___construct">__construct</a>(<a href="../../../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a> $text)
         
                                             <p class="no-description">No description</p>
@@ -135,60 +138,60 @@
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parse">parse</a>()
         
-                                            <p>Parse the prepared text from stored parser</p>                </div>
+                                            <p><p>Parse the prepared text from stored parser</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_closeList">closeList</a>(array $list, int $textBoundary)
         
-                                            <p>Close a list at given offset</p>                </div>
+                                            <p><p>Close a list at given offset</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     int
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computeBlockIgnoreLen">computeBlockIgnoreLen</a>(string $str, int $maxBlockDepth)
         
-                                            <p>Compute the amount of text to ignore at the start of a block line</p>                </div>
+                                            <p><p>Compute the amount of text to ignore at the start of a block line</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     int
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getAtxHeaderEndTagLen">getAtxHeaderEndTagLen</a>(int $startPos, int $endPos)
         
-                                            <p>Return the length of the markup at the end of an ATX header</p>                </div>
+                                            <p><p>Return the length of the markup at the end of an ATX header</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getBlockMarks">getBlockMarks</a>(string $str)
         
-                                            <p>Capture and return block marks from given string</p>                </div>
+                                            <p><p>Capture and return block marks from given string</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_matchSetextLines">matchSetextLines</a>()
         
-                                            <p>Capture and store lines that contain a Setext-tyle header</p>                </div>
+                                            <p><p>Capture and store lines that contain a Setext-tyle header</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -205,11 +208,15 @@
     <strong>__construct</strong>(<a href="../../../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a> $text)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -228,6 +235,7 @@
             
             
             
+            
                     </div>
     </div>
 
@@ -239,13 +247,14 @@
     <strong>parse</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse the prepared text from stored parser</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Parse the prepared text from stored parser</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -256,6 +265,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -269,13 +279,14 @@
     <strong>closeList</strong>(array $list, int $textBoundary)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Close a list at given offset</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Close a list at given offset</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -303,6 +314,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -314,25 +326,26 @@
     <strong>computeBlockIgnoreLen</strong>(string $str, int $maxBlockDepth)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the amount of text to ignore at the start of a block line</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the amount of text to ignore at the start of a block line</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$str</td>
-                <td>Original block markup</td>
+                <td><p>Original block markup</p></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$maxBlockDepth</td>
-                <td>Maximum block depth</td>
+                <td><p>Maximum block depth</p></td>
             </tr>
             </table>
 
@@ -342,10 +355,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td></td>
+            <td><p>Number of characters to ignore</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -359,25 +373,26 @@
     <strong>getAtxHeaderEndTagLen</strong>(int $startPos, int $endPos)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the length of the markup at the end of an ATX header</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return the length of the markup at the end of an ATX header</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$startPos</td>
-                <td>Start of the header's text</td>
+                <td><p>Start of the header's text</p></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$endPos</td>
-                <td>End of the header's text</td>
+                <td><p>End of the header's text</p></td>
             </tr>
             </table>
 
@@ -393,6 +408,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -404,20 +420,21 @@
     <strong>getBlockMarks</strong>(string $str)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Capture and return block marks from given string</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Capture and return block marks from given string</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$str</td>
-                <td>Block markup, composed of ">", "!" and whitespace</td>
+                <td><p>Block markup, composed of &quot;&gt;&quot;, &quot;!&quot; and whitespace</p></td>
             </tr>
             </table>
 
@@ -433,6 +450,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -444,13 +462,14 @@
     <strong>matchSetextLines</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Capture and store lines that contain a Setext-tyle header</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Capture and store lines that contain a Setext-tyle header</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -463,6 +482,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -470,7 +490,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

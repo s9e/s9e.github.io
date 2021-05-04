@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_TemplateInspector" data-root-path="../../../../">
@@ -66,41 +67,39 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            TemplateInspector
-                
-        </h1>
+        <h1>TemplateInspector    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>TemplateInspector</strong>
 </p>
 
         
     
+        
 
             <div class="description">
-            <p>This class helps the RulesGenerator by analyzing a given template in order to answer questions
-such as "can this tag be a child/descendant of that other tag?" and others related to the HTML5
-content model.</p>            <p>We use the HTML5 specs to determine which children or descendants should be allowed or denied
+            <p><p>This class helps the RulesGenerator by analyzing a given template in order to answer questions
+such as &quot;can this tag be a child/descendant of that other tag?&quot; and others related to the HTML5
+content model.</p></p>            <p><p>We use the HTML5 specs to determine which children or descendants should be allowed or denied
 based on HTML5 content models. While it does not exactly match HTML5 content models, it gets
-pretty close. We also use HTML5 "optional end tag" rules to create closeParent rules.</p>
-
+pretty close. We also use HTML5 &quot;optional end tag&quot; rules to create closeParent rules.</p>
 <p>Currently, this method does not evaluate elements created with <xsl:element> correctly, or
 attributes created with <xsl:attribute> and may never will due to the increased complexity it
 would entail. Additionally, it does not evaluate the scope of <xsl:apply-templates/>. For
-instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:apply-templates/></p>                    </div>
-    
-    
-            <h2>Constants</h2>
-
-            <table class="table table-condensed">
+instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:apply-templates/></p></p>        </div>
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
                     <tr>
-                <td>XMLNS_XSL</td>
+                <td>
+                                                                                                                        XMLNS_XSL
+                                    </td>
                 <td class="last">
-                    <p><em>XSL namespace</em></p>
+                    <p><em><p>XSL namespace</p></em></p>
                     <p></p>
                 </td>
             </tr>
@@ -113,7 +112,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_allowChildBitfields">
                                         protected                                        string[]
-                </td>
+                                                                                
+                                    </td>
                 <td>$allowChildBitfields</td>
                 <td class="last"></td>
                 <td></td>
@@ -121,7 +121,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_allowsChildElements">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$allowsChildElements</td>
                 <td class="last"></td>
                 <td></td>
@@ -129,7 +130,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_allowsText">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$allowsText</td>
                 <td class="last"></td>
                 <td></td>
@@ -137,7 +139,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_branches">
                                         protected                                        array[]
-                </td>
+                                                                                
+                                    </td>
                 <td>$branches</td>
                 <td class="last"></td>
                 <td></td>
@@ -145,7 +148,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_contentBitfield">
                                         protected                                        string
-                </td>
+                                                                                
+                                    </td>
                 <td>$contentBitfield</td>
                 <td class="last"></td>
                 <td></td>
@@ -153,7 +157,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_defaultBranchBitfield">
                                         protected                                        string
-                </td>
+                                                                                
+                                    </td>
                 <td>$defaultBranchBitfield</td>
                 <td class="last"></td>
                 <td></td>
@@ -161,7 +166,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_denyDescendantBitfield">
                                         protected                                        string
-                </td>
+                                                                                
+                                    </td>
                 <td>$denyDescendantBitfield</td>
                 <td class="last"></td>
                 <td></td>
@@ -169,7 +175,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_dom">
                                         protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
-                </td>
+                                                                                
+                                    </td>
                 <td>$dom</td>
                 <td class="last"></td>
                 <td></td>
@@ -177,7 +184,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_hasElements">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$hasElements</td>
                 <td class="last"></td>
                 <td></td>
@@ -185,7 +193,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_hasRootText">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$hasRootText</td>
                 <td class="last"></td>
                 <td></td>
@@ -193,7 +202,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_isBlock">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$isBlock</td>
                 <td class="last"></td>
                 <td></td>
@@ -201,7 +211,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_isEmpty">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$isEmpty</td>
                 <td class="last"></td>
                 <td></td>
@@ -209,7 +220,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_isFormattingElement">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$isFormattingElement</td>
                 <td class="last"></td>
                 <td></td>
@@ -217,7 +229,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_isPassthrough">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$isPassthrough</td>
                 <td class="last"></td>
                 <td></td>
@@ -225,7 +238,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_isTransparent">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$isTransparent</td>
                 <td class="last"></td>
                 <td></td>
@@ -233,7 +247,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_isVoid">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$isVoid</td>
                 <td class="last"></td>
                 <td></td>
@@ -241,7 +256,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_leafNodes">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$leafNodes</td>
                 <td class="last"></td>
                 <td></td>
@@ -249,7 +265,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_preservesNewLines">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$preservesNewLines</td>
                 <td class="last"></td>
                 <td></td>
@@ -257,7 +274,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_rootBitfields">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$rootBitfields</td>
                 <td class="last"></td>
                 <td></td>
@@ -265,7 +283,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_rootNodes">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$rootNodes</td>
                 <td class="last"></td>
                 <td></td>
@@ -273,7 +292,8 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                     <tr>
                 <td class="type" id="property_xpath">
                                         protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/DOMXPath">DOMXPath</a>
-                </td>
+                                                                                
+                                    </td>
                 <td>$xpath</td>
                 <td class="last"></td>
                 <td></td>
@@ -288,310 +308,310 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method___construct">__construct</a>(string $template)
         
-                                            <p>Constructor</p>                </div>
+                                            <p><p>Constructor</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_allowsChild">allowsChild</a>(<a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a> $child)
         
-                                            <p>Return whether this template allows a given child</p>                </div>
+                                            <p><p>Return whether this template allows a given child</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_allowsDescendant">allowsDescendant</a>(<a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a> $descendant)
         
-                                            <p>Return whether this template allows a given descendant</p>                </div>
+                                            <p><p>Return whether this template allows a given descendant</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_allowsChildElements">allowsChildElements</a>()
         
-                                            <p>Return whether this template allows elements as children</p>                </div>
+                                            <p><p>Return whether this template allows elements as children</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_allowsText">allowsText</a>()
         
-                                            <p>Return whether this template allows text nodes as children</p>                </div>
+                                            <p><p>Return whether this template allows text nodes as children</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_closesParent">closesParent</a>(<a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a> $parent)
         
-                                            <p>Return whether this template automatically closes given parent template</p>                </div>
+                                            <p><p>Return whether this template automatically closes given parent template</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     mixed
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_evaluate">evaluate</a>(string $expr, <a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $node = null)
         
-                                            <p>Evaluate an XPath expression</p>                </div>
+                                            <p><p>Evaluate an XPath expression</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isBlock">isBlock</a>()
         
-                                            <p>Return whether this template should be considered a block-level element</p>                </div>
+                                            <p><p>Return whether this template should be considered a block-level element</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isFormattingElement">isFormattingElement</a>()
         
-                                            <p>Return whether this template adds to the list of active formatting elements</p>                </div>
+                                            <p><p>Return whether this template adds to the list of active formatting elements</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isEmpty">isEmpty</a>()
         
-                                            <p>Return whether this template uses the "empty" content model</p>                </div>
+                                            <p><p>Return whether this template uses the &quot;empty&quot; content model</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isPassthrough">isPassthrough</a>()
         
-                                            <p>Return whether this template lets content through via an xsl:apply-templates element</p>                </div>
+                                            <p><p>Return whether this template lets content through via an xsl:apply-templates element</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isTransparent">isTransparent</a>()
         
-                                            <p>Return whether this template uses the "transparent" content model</p>                </div>
+                                            <p><p>Return whether this template uses the &quot;transparent&quot; content model</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isVoid">isVoid</a>()
         
-                                            <p>Return whether all branches have an ancestor that is a void element</p>                </div>
+                                            <p><p>Return whether all branches have an ancestor that is a void element</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_preservesNewLines">preservesNewLines</a>()
         
-                                            <p>Return whether this template preserves the whitespace in its descendants</p>                </div>
+                                            <p><p>Return whether this template preserves the whitespace in its descendants</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_analyseContent">analyseContent</a>()
         
-                                            <p>Analyses the content of the whole template and set $this->contentBitfield accordingly</p>                </div>
+                                            <p><p>Analyses the content of the whole template and set $this-&gt;contentBitfield accordingly</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_analyseRootNodes">analyseRootNodes</a>()
         
-                                            <p>Records the HTML elements (and their bitfield) rendered at the root of the template</p>                </div>
+                                            <p><p>Records the HTML elements (and their bitfield) rendered at the root of the template</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_analyseBranches">analyseBranches</a>()
         
-                                            <p>Analyses each branch that leads to an <xsl:apply-templates/> tag</p>                </div>
+                                            <p><p>Analyses each branch that leads to an <xsl:apply-templates/> tag</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_anyBranchHasProperty">anyBranchHasProperty</a>(string $methodName)
         
-                                            <p>Test whether any branch of this template has an element that has given property</p>                </div>
+                                            <p><p>Test whether any branch of this template has an element that has given property</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computeBitfields">computeBitfields</a>()
         
-                                            <p>Compute the allowChildBitfields and denyDescendantBitfield properties</p>                </div>
+                                            <p><p>Compute the allowChildBitfields and denyDescendantBitfield properties</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computeAllowsChildElements">computeAllowsChildElements</a>()
         
-                                            <p>Compute the allowsChildElements property</p>                </div>
+                                            <p><p>Compute the allowsChildElements property</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computeAllowsText">computeAllowsText</a>()
         
-                                            <p>Compute the allowsText property</p>                </div>
+                                            <p><p>Compute the allowsText property</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computeFormattingElement">computeFormattingElement</a>()
         
-                                            <p>Compute the isFormattingElement property</p>                </div>
+                                            <p><p>Compute the isFormattingElement property</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computeIsEmpty">computeIsEmpty</a>()
         
-                                            <p>Compute the isEmpty property</p>                </div>
+                                            <p><p>Compute the isEmpty property</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computeIsTransparent">computeIsTransparent</a>()
         
-                                            <p>Compute the isTransparent property</p>                </div>
+                                            <p><p>Compute the isTransparent property</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computeIsVoid">computeIsVoid</a>()
         
-                                            <p>Compute the isVoid property</p>                </div>
+                                            <p><p>Compute the isVoid property</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_computePreservesNewLines">computePreservesNewLines</a>()
         
-                                            <p>Compute the preservesNewLines property</p>                </div>
+                                            <p><p>Compute the preservesNewLines property</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_elementIsBlock">elementIsBlock</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element)
         
-                                            <p>Test whether given element is a block-level element</p>                </div>
+                                            <p><p>Test whether given element is a block-level element</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getStyle">getStyle</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $node, bool $deep = false)
         
-                                            <p>Retrieve and return the inline style assigned to given element</p>                </div>
+                                            <p><p>Retrieve and return the inline style assigned to given element</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isFormattingSpan">isFormattingSpan</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $node)
         
-                                            <p>Test whether given node is a span element used for formatting</p>                </div>
+                                            <p><p>Test whether given node is a span element used for formatting</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_storeLeafNodes">storeLeafNodes</a>()
         
-                                            <p>Store the names of every leaf node</p>                </div>
+                                            <p><p>Store the names of every leaf node</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_match">match</a>(string $bitfield1, string $bitfield2)
         
-                                            <p>Test whether two bitfields have any bits in common</p>                </div>
+                                            <p><p>Test whether two bitfields have any bits in common</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -607,23 +627,25 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>__construct</strong>(string $template)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Constructor</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Constructor</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$template</td>
-                <td>Template content</td>
+                <td><p>Template content</p></td>
             </tr>
             </table>
 
+            
             
             
             
@@ -638,13 +660,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>allowsChild</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a> $child)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template allows a given child</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template allows a given child</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -667,6 +690,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
 
             
             
+            
                     </div>
     </div>
 
@@ -678,13 +702,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>allowsDescendant</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a> $descendant)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template allows a given descendant</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template allows a given descendant</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -707,6 +732,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
 
             
             
+            
                     </div>
     </div>
 
@@ -718,13 +744,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>allowsChildElements</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template allows elements as children</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template allows elements as children</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -735,6 +762,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -748,13 +776,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>allowsText</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template allows text nodes as children</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template allows text nodes as children</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -765,6 +794,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -778,13 +808,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>closesParent</strong>(<a href="../../../../s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a> $parent)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template automatically closes given parent template</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template automatically closes given parent template</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -807,6 +838,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
 
             
             
+            
                     </div>
     </div>
 
@@ -818,25 +850,26 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>evaluate</strong>(string $expr, <a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $node = null)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Evaluate an XPath expression</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Evaluate an XPath expression</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$expr</td>
-                <td>XPath expression</td>
+                <td><p>XPath expression</p></td>
             </tr>
                     <tr>
                 <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$node</td>
-                <td>Context node</td>
+                <td><p>Context node</p></td>
             </tr>
             </table>
 
@@ -852,6 +885,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
 
             
             
+            
                     </div>
     </div>
 
@@ -863,13 +897,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>isBlock</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template should be considered a block-level element</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template should be considered a block-level element</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -880,6 +915,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -893,13 +929,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>isFormattingElement</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template adds to the list of active formatting elements</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template adds to the list of active formatting elements</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -910,6 +947,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -923,13 +961,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>isEmpty</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template uses the "empty" content model</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template uses the &quot;empty&quot; content model</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -940,6 +979,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -953,13 +993,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>isPassthrough</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template lets content through via an xsl:apply-templates element</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template lets content through via an xsl:apply-templates element</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -970,6 +1011,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -983,13 +1025,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>isTransparent</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template uses the "transparent" content model</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template uses the &quot;transparent&quot; content model</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1000,6 +1043,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1013,13 +1057,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>isVoid</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether all branches have an ancestor that is a void element</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether all branches have an ancestor that is a void element</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1030,6 +1075,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1043,13 +1089,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>preservesNewLines</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether this template preserves the whitespace in its descendants</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether this template preserves the whitespace in its descendants</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1060,6 +1107,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1073,13 +1121,15 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>analyseContent</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Analyses the content of the whole template and set $this->contentBitfield accordingly</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Analyses the content of the whole template and set $this-&gt;contentBitfield accordingly</p></p>                        
+        </div>
+        <div class="tags">
+            
             
             
             
@@ -1094,13 +1144,15 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>analyseRootNodes</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Records the HTML elements (and their bitfield) rendered at the root of the template</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Records the HTML elements (and their bitfield) rendered at the root of the template</p></p>                        
+        </div>
+        <div class="tags">
+            
             
             
             
@@ -1115,13 +1167,15 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>analyseBranches</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Analyses each branch that leads to an <xsl:apply-templates/> tag</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Analyses each branch that leads to an <xsl:apply-templates/> tag</p></p>                        
+        </div>
+        <div class="tags">
+            
             
             
             
@@ -1136,13 +1190,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>anyBranchHasProperty</strong>(string $methodName)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether any branch of this template has an element that has given property</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether any branch of this template has an element that has given property</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1165,6 +1220,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
 
             
             
+            
                     </div>
     </div>
 
@@ -1176,13 +1232,14 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>computeBitfields</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the allowChildBitfields and denyDescendantBitfield properties</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the allowChildBitfields and denyDescendantBitfield properties</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1193,6 +1250,7 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1206,14 +1264,15 @@ instance, it will treat <xsl:apply-templates select="LI"/> as if it was <xsl:app
     <strong>computeAllowsChildElements</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the allowsChildElements property</p>                    <p>A template allows child Elements if it has at least one xsl:apply-templates and none of its
-ancestors have the text-only ("to") property</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the allowsChildElements property</p></p>                <p><p>A template allows child Elements if it has at least one xsl:apply-templates and none of its
+ancestors have the text-only (&quot;to&quot;) property</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1224,6 +1283,7 @@ ancestors have the text-only ("to") property</p>                            </di
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1237,13 +1297,14 @@ ancestors have the text-only ("to") property</p>                            </di
     <strong>computeAllowsText</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the allowsText property</p>                    <p>A template is said to allow text if none of the leaf elements disallow text</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the allowsText property</p></p>                <p><p>A template is said to allow text if none of the leaf elements disallow text</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1254,6 +1315,7 @@ ancestors have the text-only ("to") property</p>                            </di
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1267,14 +1329,15 @@ ancestors have the text-only ("to") property</p>                            </di
     <strong>computeFormattingElement</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the isFormattingElement property</p>                    <p>A template is said to be a formatting element if all (non-zero) of its branches are entirely
-composed of formatting elements</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the isFormattingElement property</p></p>                <p><p>A template is said to be a formatting element if all (non-zero) of its branches are entirely
+composed of formatting elements</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1285,6 +1348,7 @@ composed of formatting elements</p>                            </div>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1298,14 +1362,15 @@ composed of formatting elements</p>                            </div>
     <strong>computeIsEmpty</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the isEmpty property</p>                    <p>A template is said to be empty if it has no xsl:apply-templates elements or any there is a empty
-element ancestor to an xsl:apply-templates element</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the isEmpty property</p></p>                <p><p>A template is said to be empty if it has no xsl:apply-templates elements or any there is a empty
+element ancestor to an xsl:apply-templates element</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1316,6 +1381,7 @@ element ancestor to an xsl:apply-templates element</p>                          
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1329,14 +1395,15 @@ element ancestor to an xsl:apply-templates element</p>                          
     <strong>computeIsTransparent</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the isTransparent property</p>                    <p>A template is said to be transparent if it has at least one branch and no non-transparent
-elements in its path</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the isTransparent property</p></p>                <p><p>A template is said to be transparent if it has at least one branch and no non-transparent
+elements in its path</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1347,6 +1414,7 @@ elements in its path</p>                            </div>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1360,14 +1428,15 @@ elements in its path</p>                            </div>
     <strong>computeIsVoid</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the isVoid property</p>                    <p>A template is said to be void if it has no xsl:apply-templates elements or any there is a void
-element ancestor to an xsl:apply-templates element</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the isVoid property</p></p>                <p><p>A template is said to be void if it has no xsl:apply-templates elements or any there is a void
+element ancestor to an xsl:apply-templates element</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1378,6 +1447,7 @@ element ancestor to an xsl:apply-templates element</p>                          
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1391,13 +1461,14 @@ element ancestor to an xsl:apply-templates element</p>                          
     <strong>computePreservesNewLines</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Compute the preservesNewLines property</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Compute the preservesNewLines property</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1408,6 +1479,7 @@ element ancestor to an xsl:apply-templates element</p>                          
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1421,13 +1493,14 @@ element ancestor to an xsl:apply-templates element</p>                          
     <strong>elementIsBlock</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether given element is a block-level element</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether given element is a block-level element</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1450,6 +1523,7 @@ element ancestor to an xsl:apply-templates element</p>                          
 
             
             
+            
                     </div>
     </div>
 
@@ -1461,25 +1535,26 @@ element ancestor to an xsl:apply-templates element</p>                          
     <strong>getStyle</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $node, bool $deep = false)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Retrieve and return the inline style assigned to given element</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Retrieve and return the inline style assigned to given element</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
                 <td>$node</td>
-                <td>Context node</td>
+                <td><p>Context node</p></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$deep</td>
-                <td>Whether to retrieve the content of all xsl:attribute descendants</td>
+                <td><p>Whether to retrieve the content of all xsl:attribute descendants</p></td>
             </tr>
             </table>
 
@@ -1495,6 +1570,7 @@ element ancestor to an xsl:apply-templates element</p>                          
 
             
             
+            
                     </div>
     </div>
 
@@ -1506,14 +1582,15 @@ element ancestor to an xsl:apply-templates element</p>                          
     <strong>isFormattingSpan</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $node)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether given node is a span element used for formatting</p>                    <p>Will return TRUE if the node is a span element with a class attribute and/or a style attribute
-and no other attributes</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether given node is a span element used for formatting</p></p>                <p><p>Will return TRUE if the node is a span element with a class attribute and/or a style attribute
+and no other attributes</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1536,6 +1613,7 @@ and no other attributes</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -1547,13 +1625,14 @@ and no other attributes</p>                            </div>
     <strong>storeLeafNodes</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Store the names of every leaf node</p>                    <p>A leaf node is defined as the closest non-XSL ancestor to an xsl:apply-templates element</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Store the names of every leaf node</p></p>                <p><p>A leaf node is defined as the closest non-XSL ancestor to an xsl:apply-templates element</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1564,6 +1643,7 @@ and no other attributes</p>                            </div>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1577,13 +1657,14 @@ and no other attributes</p>                            </div>
     <strong>match</strong>(string $bitfield1, string $bitfield2)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether two bitfields have any bits in common</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether two bitfields have any bits in common</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1611,6 +1692,7 @@ and no other attributes</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -1618,7 +1700,7 @@ and no other attributes</p>                            </div>
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

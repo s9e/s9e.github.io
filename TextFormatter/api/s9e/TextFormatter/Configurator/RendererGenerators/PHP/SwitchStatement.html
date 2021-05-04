@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_RendererGenerators_PHP_SwitchStatement" data-root-path="../../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            SwitchStatement
-                
-        </h1>
+        <h1>SwitchStatement    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>SwitchStatement</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
             <h2>Properties</h2>
 
@@ -90,7 +90,8 @@
                     <tr>
                 <td class="type" id="property_branchesCode">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$branchesCode</td>
                 <td class="last"></td>
                 <td></td>
@@ -98,7 +99,8 @@
                     <tr>
                 <td class="type" id="property_defaultCode">
                                         protected                                        string
-                </td>
+                                                                                
+                                    </td>
                 <td>$defaultCode</td>
                 <td class="last"></td>
                 <td></td>
@@ -113,7 +115,7 @@
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method___construct">__construct</a>(array $branchesCode, string $defaultCode = &#039;&#039;)
         
                                             <p class="no-description">No description</p>
@@ -124,30 +126,30 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_generate">generate</a>(string $expr, array $branchesCode, string $defaultCode = &#039;&#039;)
         
-                                            <p>Create and return the source code for a switch statement</p>                </div>
+                                            <p><p>Create and return the source code for a switch statement</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getSource">getSource</a>(string $expr)
         
-                                            <p>Return the source code for this switch statement</p>                </div>
+                                            <p><p>Return the source code for this switch statement</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getValuesPerCodeBranch">getValuesPerCodeBranch</a>()
         
-                                            <p>Group branches by their content and return the switch values for each branch</p>                </div>
+                                            <p><p>Group branches by their content and return the switch values for each branch</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -163,26 +165,31 @@
     <strong>__construct</strong>(array $branchesCode, string $defaultCode = &#039;&#039;)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$branchesCode</td>
-                <td>Dictionary of [value => php code]</td>
+                <td><p>Dictionary of [value =&gt; php code]</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$defaultCode</td>
-                <td>PHP code for the default case</td>
+                <td><p>PHP code for the default case</p></td>
             </tr>
             </table>
 
+            
             
             
             
@@ -197,30 +204,31 @@
     <strong>generate</strong>(string $expr, array $branchesCode, string $defaultCode = &#039;&#039;)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Create and return the source code for a switch statement</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Create and return the source code for a switch statement</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$expr</td>
-                <td>Expression used for the switch clause</td>
+                <td><p>Expression used for the switch clause</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$branchesCode</td>
-                <td>Dictionary of [value => php code]</td>
+                <td><p>Dictionary of [value =&gt; php code]</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$defaultCode</td>
-                <td>PHP code for the default case</td>
+                <td><p>PHP code for the default case</p></td>
             </tr>
             </table>
 
@@ -230,10 +238,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>PHP code</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -247,20 +256,21 @@
     <strong>getSource</strong>(string $expr)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the source code for this switch statement</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return the source code for this switch statement</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$expr</td>
-                <td>Expression used for the switch clause</td>
+                <td><p>Expression used for the switch clause</p></td>
             </tr>
             </table>
 
@@ -270,10 +280,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>PHP code</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -287,13 +298,14 @@
     <strong>getValuesPerCodeBranch</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Group branches by their content and return the switch values for each branch</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Group branches by their content and return the switch values for each branch</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -306,6 +318,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -313,7 +326,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_MediaEmbed_Parser" data-root-path="../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            Parser
-                
-        </h1>
+        <h1>Parser    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>Parser</strong>        extends <a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
             <h2>Properties</h2>
 
@@ -90,7 +90,8 @@
                     <tr>
                 <td class="type" id="property_config">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$config</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_config">
@@ -98,8 +99,9 @@
             </tr>
                     <tr>
                 <td class="type" id="property_parser">
-                                        protected                                        Parser
-                </td>
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                                                                                
+                                    </td>
                 <td>$parser</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#property_parser">
@@ -108,7 +110,8 @@
                     <tr>
                 <td class="type" id="property_client">
                     static                    protected                                        <a href="../../../../s9e/TextFormatter/Utils/Http/Client.html"><abbr title="s9e\TextFormatter\Utils\Http\Client">Client</abbr></a>
-                </td>
+                                                                                
+                                    </td>
                 <td>$client</td>
                 <td class="last"></td>
                 <td></td>
@@ -116,7 +119,8 @@
                     <tr>
                 <td class="type" id="property_clientCacheDir">
                     static                    protected                                        string|null
-                </td>
+                                                                                
+                                    </td>
                 <td>$clientCacheDir</td>
                 <td class="last"></td>
                 <td></td>
@@ -131,10 +135,10 @@
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         
-                                            <p>Constructor</p>                </div>
+                                            <p><p>Constructor</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
             </div>
@@ -142,10 +146,10 @@
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_setUp">setUp</a>()
         
-                                            <p>Plugin's setup</p>                </div>
+                                            <p><p>Plugin's setup</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Plugins/ParserBase.html#method_setUp">
 <abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></small></div>
             </div>
@@ -153,7 +157,7 @@
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parse">parse</a>(string $text, array $matches)
         
                                             <p class="no-description">No description</p>
@@ -164,90 +168,90 @@
                 <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_filterTag">filterTag</a>(<a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $tagStack, array $hosts, array $sites, string|null $cacheDir)
         
-                                            <p>Filter a MEDIA tag</p>                </div>
+                                            <p><p>Filter a MEDIA tag</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_addNamedCaptures">addNamedCaptures</a>(array $attributes, string $string, array $regexps)
         
-                                            <p>Add named captures from a set of regular expressions to a set of attributes</p>                </div>
+                                            <p><p>Add named captures from a set of regular expressions to a set of attributes</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;Tag
+                    static&nbsp;<a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_createTag">createTag</a>(string $tagName, <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $tagStack, <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         
-                                            <p>Create a tag for a media embed</p>                </div>
+                                            <p><p>Create a tag for a media embed</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getAttributes">getAttributes</a>(string $url, array $config, string|null $cacheDir)
         
-                                            <p>Return a set of attributes for given URL based on a site's config</p>                </div>
+                                            <p><p>Return a set of attributes for given URL based on a site's config</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;<a href="../../../../s9e/TextFormatter/Utils/Http/Client.html"><abbr title="s9e\TextFormatter\Utils\Http\Client">Client</abbr></a>
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getHttpClient">getHttpClient</a>(string|null $cacheDir)
         
-                                            <p>Return a cached instance of the HTTP client</p>                </div>
+                                            <p><p>Return a cached instance of the HTTP client</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getSiteIdFromUrl">getSiteIdFromUrl</a>(string $url, array $hosts)
         
-                                            <p>Return the siteId that corresponds to given URL</p>                </div>
+                                            <p><p>Return the siteId that corresponds to given URL</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_interpolateVars">interpolateVars</a>(string $str, array $vars)
         
-                                            <p>Interpolate {@vars} in given string</p>                </div>
+                                            <p><p>Interpolate {@vars} in given string</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_scrape">scrape</a>(array $attributes, string $url, array $config, string|null $cacheDir)
         
-                                            <p>Scrape values and add them to current attributes</p>                </div>
+                                            <p><p>Scrape values and add them to current attributes</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_wget">wget</a>(string $url, string|null $cacheDir, array $config)
         
-                                            <p>Retrieve external content</p>                </div>
+                                            <p><p>Retrieve external content</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -264,13 +268,14 @@
     <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $config)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Constructor</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Constructor</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -289,6 +294,7 @@
             
             
             
+            
                     </div>
     </div>
 
@@ -301,13 +307,14 @@
     <strong>setUp</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Plugin's setup</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Plugin's setup</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -318,6 +325,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -331,11 +339,15 @@
     <strong>parse</strong>(string $text, array $matches)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -347,8 +359,8 @@
                     <tr>
                 <td>array</td>
                 <td>$matches</td>
-                <td>If the config array has a "regexp" key, the corresponding matches are
-passed as second parameter. Otherwise, an empty array is passed</td>
+                <td><p>If the config array has a &quot;regexp&quot; key, the corresponding matches are
+passed as second parameter. Otherwise, an empty array is passed</p></td>
             </tr>
             </table>
 
@@ -362,6 +374,7 @@ passed as second parameter. Otherwise, an empty array is passed</td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -375,41 +388,42 @@ passed as second parameter. Otherwise, an empty array is passed</td>
     <strong>filterTag</strong>(<a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $tagStack, array $hosts, array $sites, string|null $cacheDir)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Filter a MEDIA tag</p>                    <p>This will always invalidate the original tag, and possibly replace it with the tag that
-corresponds to the media site</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Filter a MEDIA tag</p></p>                <p><p>This will always invalidate the original tag, and possibly replace it with the tag that
+corresponds to the media site</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td>The original tag</td>
+                <td><p>The original tag</p></td>
             </tr>
                     <tr>
                 <td><a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></td>
                 <td>$tagStack</td>
-                <td>Parser instance, so that we can add the new tag to the stack</td>
+                <td><p>Parser instance, so that we can add the new tag to the stack</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$hosts</td>
-                <td>Map of [hostname => siteId]</td>
+                <td><p>Map of [hostname =&gt; siteId]</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$sites</td>
-                <td>Map of [siteId => siteConfig]</td>
+                <td><p>Map of [siteId =&gt; siteConfig]</p></td>
             </tr>
                     <tr>
                 <td>string|null</td>
                 <td>$cacheDir</td>
-                <td>Path to the cache directory</td>
+                <td><p>Path to the cache directory</p></td>
             </tr>
             </table>
 
@@ -425,6 +439,7 @@ corresponds to the media site</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -436,30 +451,31 @@ corresponds to the media site</p>                            </div>
     <strong>addNamedCaptures</strong>(array $attributes, string $string, array $regexps)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Add named captures from a set of regular expressions to a set of attributes</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Add named captures from a set of regular expressions to a set of attributes</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$attributes</td>
-                <td>Associative array of strings</td>
+                <td><p>Associative array of strings</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$string</td>
-                <td>Text to match</td>
+                <td><p>Text to match</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$regexps</td>
-                <td>List of [regexp, map] pairs</td>
+                <td><p>List of [regexp, map] pairs</p></td>
             </tr>
             </table>
 
@@ -469,10 +485,11 @@ corresponds to the media site</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td></td>
+            <td><p>Whether any regexp matched</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -482,24 +499,25 @@ corresponds to the media site</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_createTag">
         <div class="location">at line 111</div>
-        <code>        static    protected        Tag
+        <code>        static    protected        <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>createTag</strong>(string $tagName, <a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $tagStack, <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Create a tag for a media embed</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Create a tag for a media embed</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$tagName</td>
-                <td>Tag's name</td>
+                <td><p>Tag's name</p></td>
             </tr>
                     <tr>
                 <td><a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></td>
@@ -509,7 +527,7 @@ corresponds to the media site</p>                            </div>
                     <tr>
                 <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td>Reference tag</td>
+                <td><p>Reference tag</p></td>
             </tr>
             </table>
 
@@ -518,11 +536,12 @@ corresponds to the media site</p>                            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>Tag</td>
-            <td></td>
+            <td><a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
+            <td><p>New tag</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -536,30 +555,31 @@ corresponds to the media site</p>                            </div>
     <strong>getAttributes</strong>(string $url, array $config, string|null $cacheDir)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return a set of attributes for given URL based on a site's config</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return a set of attributes for given URL based on a site's config</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$url</td>
-                <td>Original URL</td>
+                <td><p>Original URL</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$config</td>
-                <td>Site config</td>
+                <td><p>Site config</p></td>
             </tr>
                     <tr>
                 <td>string|null</td>
                 <td>$cacheDir</td>
-                <td>Path to the cache directory</td>
+                <td><p>Path to the cache directory</p></td>
             </tr>
             </table>
 
@@ -569,10 +589,11 @@ corresponds to the media site</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>Associative array of attributes</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -586,13 +607,14 @@ corresponds to the media site</p>                            </div>
     <strong>getHttpClient</strong>(string|null $cacheDir)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return a cached instance of the HTTP client</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return a cached instance of the HTTP client</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -615,6 +637,7 @@ corresponds to the media site</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -626,25 +649,26 @@ corresponds to the media site</p>                            </div>
     <strong>getSiteIdFromUrl</strong>(string $url, array $hosts)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the siteId that corresponds to given URL</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return the siteId that corresponds to given URL</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$url</td>
-                <td>Original URL</td>
+                <td><p>Original URL</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$hosts</td>
-                <td>Map of [hostname => siteId]</td>
+                <td><p>Map of [hostname =&gt; siteId]</p></td>
             </tr>
             </table>
 
@@ -654,10 +678,11 @@ corresponds to the media site</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>URL's siteId, or an empty string</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -671,25 +696,26 @@ corresponds to the media site</p>                            </div>
     <strong>interpolateVars</strong>(string $str, array $vars)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Interpolate {@vars} in given string</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Interpolate {@vars} in given string</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$str</td>
-                <td>Original string</td>
+                <td><p>Original string</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$vars</td>
-                <td>Associative array</td>
+                <td><p>Associative array</p></td>
             </tr>
             </table>
 
@@ -699,10 +725,11 @@ corresponds to the media site</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Interpolated string</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -716,35 +743,36 @@ corresponds to the media site</p>                            </div>
     <strong>scrape</strong>(array $attributes, string $url, array $config, string|null $cacheDir)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Scrape values and add them to current attributes</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Scrape values and add them to current attributes</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$attributes</td>
-                <td>Attributes</td>
+                <td><p>Attributes</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$url</td>
-                <td>Original URL</td>
+                <td><p>Original URL</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$config</td>
-                <td>Scraping config</td>
+                <td><p>Scraping config</p></td>
             </tr>
                     <tr>
                 <td>string|null</td>
                 <td>$cacheDir</td>
-                <td>Path to the cache directory</td>
+                <td><p>Path to the cache directory</p></td>
             </tr>
             </table>
 
@@ -760,6 +788,7 @@ corresponds to the media site</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -771,30 +800,31 @@ corresponds to the media site</p>                            </div>
     <strong>wget</strong>(string $url, string|null $cacheDir, array $config)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Retrieve external content</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Retrieve external content</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$url</td>
-                <td>URL</td>
+                <td><p>URL</p></td>
             </tr>
                     <tr>
                 <td>string|null</td>
                 <td>$cacheDir</td>
-                <td>Path to the cache directory</td>
+                <td><p>Path to the cache directory</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$config</td>
-                <td>Scraping config</td>
+                <td><p>Scraping config</p></td>
             </tr>
             </table>
 
@@ -804,10 +834,11 @@ corresponds to the media site</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Response body</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -817,7 +848,7 @@ corresponds to the media site</p>                            </div>
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_BBCodes_Configurator_BBCodeMonkey" data-root-path="../../../../../">
@@ -66,30 +67,29 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            BBCodeMonkey
-                
-        </h1>
+        <h1>BBCodeMonkey    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>BBCodeMonkey</strong>
 </p>
 
         
     
+        
 
-    
-    
-            <h2>Constants</h2>
-
-            <table class="table table-condensed">
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
                     <tr>
-                <td>REGEXP</td>
+                <td>
+                                                                                                                        REGEXP
+                                    </td>
                 <td class="last">
-                    <p><em>Expression that matches a regexp such as /foo/i</em></p>
+                    <p><em><p>Expression that matches a regexp such as /foo/i</p></em></p>
                     <p></p>
                 </td>
             </tr>
@@ -102,15 +102,17 @@
                     <tr>
                 <td class="type" id="property_allowedFilters">
                                                                                 array
-                </td>
+                                                                                
+                                    </td>
                 <td>$allowedFilters</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_configurator">
-                                        protected                                        Configurator
-                </td>
+                                        protected                                        <a href="../../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a>
+                                                                                
+                                    </td>
                 <td>$configurator</td>
                 <td class="last"></td>
                 <td></td>
@@ -118,7 +120,8 @@
                     <tr>
                 <td class="type" id="property_tokenRegexp">
                                                                                 array
-                </td>
+                                                                                
+                                    </td>
                 <td>$tokenRegexp</td>
                 <td class="last"></td>
                 <td></td>
@@ -126,7 +129,8 @@
                     <tr>
                 <td class="type" id="property_unfilteredTokens">
                                                                                 array
-                </td>
+                                                                                
+                                    </td>
                 <td>$unfilteredTokens</td>
                 <td class="last"></td>
                 <td></td>
@@ -141,100 +145,100 @@
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method___construct">__construct</a>(<a href="../../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator)
         
-                                            <p>Constructor</p>                </div>
+                                            <p><p>Constructor</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
-                    <a href="#method_create">create</a>(string $usage, string|Template $template)
+                <div class="col-md-8">
+                    <a href="#method_create">create</a>(string $usage, string|<a href="../../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template)
         
-                                            <p>Create a BBCode and its underlying tag and template(s) based on its reference usage</p>                </div>
+                                            <p><p>Create a BBCode and its underlying tag and template(s) based on its reference usage</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parse">parse</a>(string $usage)
         
-                                            <p>Create a BBCode based on its reference usage</p>                </div>
+                                            <p><p>Create a BBCode based on its reference usage</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_addAttributes">addAttributes</a>(array $definitions, <a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a> $bbcode, <a href="../../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
         
-                                            <p>Parse a string of attribute definitions and add the attributes/options to the tag/BBCode</p>                </div>
+                                            <p><p>Parse a string of attribute definitions and add the attributes/options to the tag/BBCode</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool|string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_convertValue">convertValue</a>(string $value)
         
-                                            <p>Convert a human-readable value to a typed PHP value</p>                </div>
+                                            <p><p>Convert a human-readable value to a typed PHP value</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parseTokens">parseTokens</a>(string $definition)
         
-                                            <p>Parse and return all the tokens contained in a definition</p>                </div>
+                                            <p><p>Parse and return all the tokens contained in a definition</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    Attribute
+                    <a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a>
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_generateAttribute">generateAttribute</a>(array $token)
         
-                                            <p>Generate an attribute based on a token</p>                </div>
+                                            <p><p>Generate an attribute based on a token</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_appendFilters">appendFilters</a>(<a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $attribute, string $filters)
         
-                                            <p>Append a list of filters to an attribute's filterChain</p>                </div>
+                                            <p><p>Append a list of filters to an attribute's filterChain</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isFilter">isFilter</a>(string $tokenId)
         
-                                            <p>Test whether a token's name is the name of a filter</p>                </div>
+                                            <p><p>Test whether a token's name is the name of a filter</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parseOptionString">parseOptionString</a>(string $string)
         
-                                            <p>Parse the option string into an associative array</p>                </div>
+                                            <p><p>Parse the option string into an associative array</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -250,23 +254,25 @@
     <strong>__construct</strong>(<a href="../../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a> $configurator)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Constructor</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Constructor</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../../../s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a></td>
                 <td>$configurator</td>
-                <td>Instance of Configurator</td>
+                <td><p>Instance of Configurator</p></td>
             </tr>
             </table>
 
+            
             
             
             
@@ -278,28 +284,29 @@
                     <h3 id="method_create">
         <div class="location">at line 107</div>
         <code>                    array
-    <strong>create</strong>(string $usage, string|Template $template)
+    <strong>create</strong>(string $usage, string|<a href="../../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a> $template)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Create a BBCode and its underlying tag and template(s) based on its reference usage</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Create a BBCode and its underlying tag and template(s) based on its reference usage</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$usage</td>
-                <td>BBCode usage, e.g. [B]{TEXT}[/b]</td>
+                <td><p>BBCode usage, e.g. [B]{TEXT}[/b]</p></td>
             </tr>
                     <tr>
-                <td>string|Template</td>
+                <td>string|<a href="../../../../../s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a></td>
                 <td>$template</td>
-                <td>BBCode's template</td>
+                <td><p>BBCode's template</p></td>
             </tr>
             </table>
 
@@ -309,10 +316,12 @@
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>An array containing three elements: 'bbcode', 'bbcodeName'
+and 'tag'</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -326,20 +335,21 @@
     <strong>parse</strong>(string $usage)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Create a BBCode based on its reference usage</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Create a BBCode based on its reference usage</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$usage</td>
-                <td>BBCode usage, e.g. [B]{TEXT}[/b]</td>
+                <td><p>BBCode usage, e.g. [B]{TEXT}[/b]</p></td>
             </tr>
             </table>
 
@@ -353,6 +363,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -366,45 +377,43 @@
     <strong>addAttributes</strong>(array $definitions, <a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a> $bbcode, <a href="../../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a> $tag)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse a string of attribute definitions and add the attributes/options to the tag/BBCode</p>                    <p>Attributes come in two forms. Most commonly, in the form of a single token, e.g.
-  [a href={URL} title={TEXT}]</p>
-
+        <div class="method-description">
+                            <p><p>Parse a string of attribute definitions and add the attributes/options to the tag/BBCode</p></p>                <p><p>Attributes come in two forms. Most commonly, in the form of a single token, e.g.
+[a href={URL} title={TEXT}]</p>
 <p>Sometimes, however, we need to parse more than one single token. For instance, the phpBB
 [FLASH] BBCode uses two tokens separated by a comma:
-  [flash={NUMBER},{NUMBER}]{URL}[/flash]</p>
-
+[flash={NUMBER},{NUMBER}]{URL}[/flash]</p>
 <p>In addition, some custom BBCodes circulating for phpBB use a combination of token and static
 text such as:
-  [youtube]http://www.youtube.com/watch?v={SIMPLETEXT}[/youtube]</p>
-
+[youtube]<a href="http://www.youtube.com/watch?v={SIMPLETEXT}[/youtube">http://www.youtube.com/watch?v={SIMPLETEXT}[/youtube</a>]</p>
 <p>Any attribute that is not a single token is implemented as an attribute preprocessor, with
 each token generating a matching attribute. Tentatively, those  of those attributes are
 created by taking the attribute preprocessor's name and appending a unique number counting the
 number of created attributes. In the [FLASH] example above, an attribute preprocessor named
-"flash" would be created as well as two attributes named "flash0" and "flash1" respectively.</p>                            </div>
-                <div class="tags">
+&quot;flash&quot; would be created as well as two attributes named &quot;flash0&quot; and &quot;flash1&quot; respectively.</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$definitions</td>
-                <td>List of attributes definitions as [[name, definition]*]</td>
+                <td><p>List of attributes definitions as [[name, definition]*]</p></td>
             </tr>
                     <tr>
                 <td><a href="../../../../../s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a></td>
                 <td>$bbcode</td>
-                <td>Owner BBCode</td>
+                <td><p>Owner BBCode</p></td>
             </tr>
                     <tr>
                 <td><a href="../../../../../s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td>Owner tag</td>
+                <td><p>Owner tag</p></td>
             </tr>
             </table>
 
@@ -414,10 +423,13 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>Array of [token id =&gt; attribute name] where FALSE in place of the
+name indicates that the token is ambiguous (e.g. used multiple
+times)</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -431,20 +443,21 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
     <strong>convertValue</strong>(string $value)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Convert a human-readable value to a typed PHP value</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Convert a human-readable value to a typed PHP value</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$value</td>
-                <td>Original value</td>
+                <td><p>Original value</p></td>
             </tr>
             </table>
 
@@ -454,10 +467,11 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
                     <table class="table table-condensed">
         <tr>
             <td>bool|string</td>
-            <td></td>
+            <td><p>Converted value</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -471,13 +485,14 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
     <strong>parseTokens</strong>(string $definition)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse and return all the tokens contained in a definition</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Parse and return all the tokens contained in a definition</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -500,6 +515,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
 
             
             
+            
                     </div>
     </div>
 
@@ -507,24 +523,25 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
                     <div class="method-item">
                     <h3 id="method_generateAttribute">
         <div class="location">at line 664</div>
-        <code>            protected        Attribute
+        <code>            protected        <a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a>
     <strong>generateAttribute</strong>(array $token)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Generate an attribute based on a token</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Generate an attribute based on a token</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$token</td>
-                <td>Token this attribute is based on</td>
+                <td><p>Token this attribute is based on</p></td>
             </tr>
             </table>
 
@@ -533,11 +550,12 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
 
                     <table class="table table-condensed">
         <tr>
-            <td>Attribute</td>
+            <td><a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a></td>
             <td></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -551,13 +569,14 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
     <strong>appendFilters</strong>(<a href="../../../../../s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a> $attribute, string $filters)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Append a list of filters to an attribute's filterChain</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Append a list of filters to an attribute's filterChain</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -569,7 +588,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
                     <tr>
                 <td>string</td>
                 <td>$filters</td>
-                <td>List of filters, separated with commas</td>
+                <td><p>List of filters, separated with commas</p></td>
             </tr>
             </table>
 
@@ -585,6 +604,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
 
             
             
+            
                     </div>
     </div>
 
@@ -596,20 +616,21 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
     <strong>isFilter</strong>(string $tokenId)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether a token's name is the name of a filter</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether a token's name is the name of a filter</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$tokenId</td>
-                <td>Token ID, e.g. "TEXT1"</td>
+                <td><p>Token ID, e.g. &quot;TEXT1&quot;</p></td>
             </tr>
             </table>
 
@@ -625,6 +646,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
 
             
             
+            
                     </div>
     </div>
 
@@ -636,20 +658,21 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
     <strong>parseOptionString</strong>(string $string)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse the option string into an associative array</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Parse the option string into an associative array</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$string</td>
-                <td>Serialized options</td>
+                <td><p>Serialized options</p></td>
             </tr>
             </table>
 
@@ -659,10 +682,11 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>Associative array of options</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -672,7 +696,7 @@ number of created attributes. In the [FLASH] example above, an attribute preproc
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_JavaScript_RegexpConvertor" data-root-path="../../../../">
@@ -66,23 +67,29 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            RegexpConvertor
-                
-        </h1>
+        <h1>RegexpConvertor    
+            </h1>
     </div>
 
+    
     <p>    abstract     class
     <strong>RegexpConvertor</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+                    <p>
+                        
+                                    <tr>
+                        <td>create</td>
+                        <td>a method that replaces capturing subpatterns with non-capturing subpatterns, and perhaps even no subpattern at all. Unless backreferences are used</td>
+                        </tr>
+                            </p>
+        
     
             <h2>Properties</h2>
 
@@ -90,17 +97,19 @@
                     <tr>
                 <td class="type" id="property_unicodePropsRegexp">
                     static                    protected                                        
-                </td>
+                                                                                
+                                    </td>
                 <td>$unicodePropsRegexp</td>
-                <td class="last">Regexp that matches Unicode properties escape sequences</td>
+                <td class="last"><p>Regexp that matches Unicode properties escape sequences</p></td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_unicodeProps">
                     static                    protected                                        
-                </td>
+                                                                                
+                                    </td>
                 <td>$unicodeProps</td>
-                <td class="last">Ranges to be used in JavaScript regexps in place of PCRE's Unicode properties</td>
+                <td class="last"><p>Ranges to be used in JavaScript regexps in place of PCRE's Unicode properties</p></td>
                 <td></td>
             </tr>
             </table>
@@ -111,39 +120,39 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;Code
+                    static&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_toJS">toJS</a>(string $regexp, bool $isGlobal = false)
         
-                                            <p>Convert a PCRE regexp to a JavaScript regexp</p>                </div>
+                                            <p><p>Convert a PCRE regexp to a JavaScript regexp</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_convertUnicodeCharacters">convertUnicodeCharacters</a>(string $str, bool $inCharacterClass, bool $dotAll)
         
-                                            <p>Replace Unicode characters and properties in a string</p>                </div>
+                                            <p><p>Replace Unicode characters and properties in a string</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_escapeLineTerminators">escapeLineTerminators</a>(string $regexp)
         
-                                            <p>Escape line terminators in given regexp</p>                </div>
+                                            <p><p>Escape line terminators in given regexp</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeOption">serializeOption</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -154,7 +163,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeCapturingSubpatternStart">serializeCapturingSubpatternStart</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -165,7 +174,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeNonCapturingSubpatternStart">serializeNonCapturingSubpatternStart</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -176,7 +185,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeCapturingSubpatternEnd">serializeCapturingSubpatternEnd</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -187,7 +196,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeNonCapturingSubpatternEnd">serializeNonCapturingSubpatternEnd</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -198,7 +207,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeCharacterClass">serializeCharacterClass</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -209,7 +218,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeLookaheadAssertionStart">serializeLookaheadAssertionStart</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -220,7 +229,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeNegativeLookaheadAssertionStart">serializeNegativeLookaheadAssertionStart</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -231,7 +240,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeLookaheadAssertionEnd">serializeLookaheadAssertionEnd</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -242,7 +251,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeNegativeLookaheadAssertionEnd">serializeNegativeLookaheadAssertionEnd</a>(array $tok)
         
                                             <p class="no-description">No description</p>
@@ -253,10 +262,10 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_unfoldUnicodeProperties">unfoldUnicodeProperties</a>(string $str, bool $inCharacterClass, bool $dotAll)
         
-                                            <p>Replace Unicode properties in a string</p>                </div>
+                                            <p><p>Replace Unicode properties in a string</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -268,29 +277,30 @@
                     <div class="method-item">
                     <h3 id="method_toJS">
         <div class="location">at line 30</div>
-        <code>        static            Code
+        <code>        static            <a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>
     <strong>toJS</strong>(string $regexp, bool $isGlobal = false)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Convert a PCRE regexp to a JavaScript regexp</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Convert a PCRE regexp to a JavaScript regexp</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$regexp</td>
-                <td>PCRE regexp</td>
+                <td><p>PCRE regexp</p></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$isGlobal</td>
-                <td>Whether the global flag should be set</td>
+                <td><p>Whether the global flag should be set</p></td>
             </tr>
             </table>
 
@@ -299,11 +309,12 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>Code</td>
-            <td></td>
+            <td><a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a></td>
+            <td><p>JavaScript regexp</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -317,30 +328,31 @@
     <strong>convertUnicodeCharacters</strong>(string $str, bool $inCharacterClass, bool $dotAll)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Replace Unicode characters and properties in a string</p>                    <p>NOTE: does not support \X</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Replace Unicode characters and properties in a string</p></p>                <p><p>NOTE: does not support \X</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$str</td>
-                <td>Original string</td>
+                <td><p>Original string</p></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$inCharacterClass</td>
-                <td>Whether this string is in a character class</td>
+                <td><p>Whether this string is in a character class</p></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$dotAll</td>
-                <td>Whether PCRE_DOTALL is set</td>
+                <td><p>Whether PCRE_DOTALL is set</p></td>
             </tr>
             </table>
 
@@ -350,10 +362,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Modified string</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -367,20 +380,21 @@
     <strong>escapeLineTerminators</strong>(string $regexp)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Escape line terminators in given regexp</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Escape line terminators in given regexp</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$regexp</td>
-                <td>Original regexp</td>
+                <td><p>Original regexp</p></td>
             </tr>
             </table>
 
@@ -390,10 +404,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Modified regexp</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -407,11 +422,15 @@
     <strong>serializeOption</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -432,6 +451,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -445,11 +465,15 @@
     <strong>serializeCapturingSubpatternStart</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -470,6 +494,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -483,11 +508,15 @@
     <strong>serializeNonCapturingSubpatternStart</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -508,6 +537,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -521,11 +551,15 @@
     <strong>serializeCapturingSubpatternEnd</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -546,6 +580,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -559,11 +594,15 @@
     <strong>serializeNonCapturingSubpatternEnd</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -584,6 +623,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -597,11 +637,15 @@
     <strong>serializeCharacterClass</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -622,6 +666,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -635,11 +680,15 @@
     <strong>serializeLookaheadAssertionStart</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -660,6 +709,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -673,11 +723,15 @@
     <strong>serializeNegativeLookaheadAssertionStart</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -698,6 +752,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -711,11 +766,15 @@
     <strong>serializeLookaheadAssertionEnd</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -736,6 +795,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -749,11 +809,15 @@
     <strong>serializeNegativeLookaheadAssertionEnd</strong>(array $tok)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -776,6 +840,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -787,30 +852,31 @@
     <strong>unfoldUnicodeProperties</strong>(string $str, bool $inCharacterClass, bool $dotAll)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Replace Unicode properties in a string</p>                    <p>NOTE: does not support \X</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Replace Unicode properties in a string</p></p>                <p><p>NOTE: does not support \X</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$str</td>
-                <td>Original string</td>
+                <td><p>Original string</p></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$inCharacterClass</td>
-                <td>Whether this string is in a character class</td>
+                <td><p>Whether this string is in a character class</p></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$dotAll</td>
-                <td>Whether PCRE_DOTALL is set</td>
+                <td><p>Whether PCRE_DOTALL is set</p></td>
             </tr>
             </table>
 
@@ -820,10 +886,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Modified string</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -833,7 +900,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

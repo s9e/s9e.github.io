@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_RegexpParser" data-root-path="../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            RegexpParser
-                
-        </h1>
+        <h1>RegexpParser    
+            </h1>
     </div>
 
+    
     <p>    abstract     class
     <strong>RegexpParser</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
     
             <h2>Methods</h2>
@@ -92,27 +92,27 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getAllowedCharacterRegexp">getAllowedCharacterRegexp</a>(string $regexp)
         
-                                            <p>Generate a regexp that matches any single character allowed in a regexp</p>                </div>
+                                            <p><p>Generate a regexp that matches any single character allowed in a regexp</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getCaptureNames">getCaptureNames</a>(string $regexp)
         
-                                            <p>Return the name of each capture in given regexp</p>                </div>
+                                            <p><p>Return the name of each capture in given regexp</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parse">parse</a>(string $regexp)
         
                                             <p class="no-description">No description</p>
@@ -132,24 +132,25 @@
     <strong>getAllowedCharacterRegexp</strong>(string $regexp)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Generate a regexp that matches any single character allowed in a regexp</p>                    <p>This method will generate a regexp that can be used to determine whether a given character
+        <div class="method-description">
+                            <p><p>Generate a regexp that matches any single character allowed in a regexp</p></p>                <p><p>This method will generate a regexp that can be used to determine whether a given character
 could in theory be allowed in a string that matches the source regexp. For example, the source
 regexp /^a+$/D would generate /a/ while /^foo\d+$/D would generate /[fo\d]/ whereas the regexp
 /foo/ would generate // because it's not anchored so any characters could be found before or
-after the literal "foo".</p>                            </div>
-                <div class="tags">
+after the literal &quot;foo&quot;.</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$regexp</td>
-                <td>Source regexp</td>
+                <td><p>Source regexp</p></td>
             </tr>
             </table>
 
@@ -159,10 +160,11 @@ after the literal "foo".</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Regexp that matches any single character allowed in the source regexp</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -176,13 +178,14 @@ after the literal "foo".</p>                            </div>
     <strong>getCaptureNames</strong>(string $regexp)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the name of each capture in given regexp</p>                    <p>Will return an empty string for unnamed captures</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return the name of each capture in given regexp</p></p>                <p><p>Will return an empty string for unnamed captures</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -205,6 +208,7 @@ after the literal "foo".</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -216,11 +220,15 @@ after the literal "foo".</p>                            </div>
     <strong>parse</strong>(string $regexp)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -243,6 +251,7 @@ after the literal "foo".</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -250,7 +259,7 @@ after the literal "foo".</p>                            </div>
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

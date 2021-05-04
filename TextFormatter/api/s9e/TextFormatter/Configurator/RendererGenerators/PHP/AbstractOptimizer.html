@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_RendererGenerators_PHP_AbstractOptimizer" data-root-path="../../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            AbstractOptimizer
-                
-        </h1>
+        <h1>AbstractOptimizer    
+            </h1>
     </div>
 
+    
     <p>    abstract     class
     <strong>AbstractOptimizer</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
             <h2>Properties</h2>
 
@@ -90,7 +90,8 @@
                     <tr>
                 <td class="type" id="property_cnt">
                                         protected                                        int
-                </td>
+                                                                                
+                                    </td>
                 <td>$cnt</td>
                 <td class="last"></td>
                 <td></td>
@@ -98,7 +99,8 @@
                     <tr>
                 <td class="type" id="property_i">
                                         protected                                        int
-                </td>
+                                                                                
+                                    </td>
                 <td>$i</td>
                 <td class="last"></td>
                 <td></td>
@@ -106,7 +108,8 @@
                     <tr>
                 <td class="type" id="property_changed">
                                         protected                                        bool
-                </td>
+                                                                                
+                                    </td>
                 <td>$changed</td>
                 <td class="last"></td>
                 <td></td>
@@ -114,7 +117,8 @@
                     <tr>
                 <td class="type" id="property_tokens">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$tokens</td>
                 <td class="last"></td>
                 <td></td>
@@ -129,70 +133,70 @@
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_optimize">optimize</a>(string $php)
         
-                                            <p>Optimize the control structures of a script</p>                </div>
+                                            <p><p>Optimize the control structures of a script</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_optimizeTokens">optimizeTokens</a>()
         
-                                            <p>Optimize the stored tokens</p>                </div>
+                                            <p><p>Optimize the stored tokens</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_reset">reset</a>(string $php)
         
-                                            <p>Reset the internal state of this optimizer</p>                </div>
+                                            <p><p>Reset the internal state of this optimizer</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serialize">serialize</a>()
         
-                                            <p>Serialize the tokens back to source</p>                </div>
+                                            <p><p>Serialize the tokens back to source</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_skipToString">skipToString</a>(string $str)
         
-                                            <p>Move the internal cursor until it reaches given string</p>                </div>
+                                            <p><p>Move the internal cursor until it reaches given string</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_skipWhitespace">skipWhitespace</a>()
         
-                                            <p>Skip all whitespace</p>                </div>
+                                            <p><p>Skip all whitespace</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_unindentBlock">unindentBlock</a>(int $start, int $end)
         
-                                            <p>Remove one tab of indentation off a range of PHP tokens</p>                </div>
+                                            <p><p>Remove one tab of indentation off a range of PHP tokens</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -208,21 +212,22 @@
     <strong>optimize</strong>(string $php)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize the control structures of a script</p>                    <p>Removes brackets in control structures wherever possible. Prevents the generation of EXT_STMT
-opcodes where they're not strictly required.</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize the control structures of a script</p></p>                <p><p>Removes brackets in control structures wherever possible. Prevents the generation of EXT_STMT
+opcodes where they're not strictly required.</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$php</td>
-                <td>Original code</td>
+                <td><p>Original code</p></td>
             </tr>
             </table>
 
@@ -232,10 +237,11 @@ opcodes where they're not strictly required.</p>                            </di
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Optimized code</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -249,13 +255,14 @@ opcodes where they're not strictly required.</p>                            </di
     <strong>optimizeTokens</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize the stored tokens</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize the stored tokens</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -266,6 +273,7 @@ opcodes where they're not strictly required.</p>                            </di
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -279,20 +287,21 @@ opcodes where they're not strictly required.</p>                            </di
     <strong>reset</strong>(string $php)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Reset the internal state of this optimizer</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Reset the internal state of this optimizer</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$php</td>
-                <td>PHP source</td>
+                <td><p>PHP source</p></td>
             </tr>
             </table>
 
@@ -306,6 +315,7 @@ opcodes where they're not strictly required.</p>                            </di
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -319,13 +329,14 @@ opcodes where they're not strictly required.</p>                            </di
     <strong>serialize</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Serialize the tokens back to source</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Serialize the tokens back to source</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -336,6 +347,7 @@ opcodes where they're not strictly required.</p>                            </di
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -349,20 +361,21 @@ opcodes where they're not strictly required.</p>                            </di
     <strong>skipToString</strong>(string $str)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Move the internal cursor until it reaches given string</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Move the internal cursor until it reaches given string</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$str</td>
-                <td>String to reach</td>
+                <td><p>String to reach</p></td>
             </tr>
             </table>
 
@@ -376,6 +389,7 @@ opcodes where they're not strictly required.</p>                            </di
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -389,13 +403,14 @@ opcodes where they're not strictly required.</p>                            </di
     <strong>skipWhitespace</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Skip all whitespace</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Skip all whitespace</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -406,6 +421,7 @@ opcodes where they're not strictly required.</p>                            </di
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -419,25 +435,26 @@ opcodes where they're not strictly required.</p>                            </di
     <strong>unindentBlock</strong>(int $start, int $end)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Remove one tab of indentation off a range of PHP tokens</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Remove one tab of indentation off a range of PHP tokens</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$start</td>
-                <td>Index of the first token to unindent</td>
+                <td><p>Index of the first token to unindent</p></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$end</td>
-                <td>Index of the last token to unindent</td>
+                <td><p>Index of the last token to unindent</p></td>
             </tr>
             </table>
 
@@ -453,6 +470,7 @@ opcodes where they're not strictly required.</p>                            </di
 
             
             
+            
                     </div>
     </div>
 
@@ -460,7 +478,7 @@ opcodes where they're not strictly required.</p>                            </di
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

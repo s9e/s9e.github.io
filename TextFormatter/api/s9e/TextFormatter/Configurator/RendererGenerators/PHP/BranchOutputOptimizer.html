@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_RendererGenerators_PHP_BranchOutputOptimizer" data-root-path="../../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            BranchOutputOptimizer
-                
-        </h1>
+        <h1>BranchOutputOptimizer    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>BranchOutputOptimizer</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
             <h2>Properties</h2>
 
@@ -90,7 +90,8 @@
                     <tr>
                 <td class="type" id="property_cnt">
                                         protected                                        int
-                </td>
+                                                                                
+                                    </td>
                 <td>$cnt</td>
                 <td class="last"></td>
                 <td></td>
@@ -98,7 +99,8 @@
                     <tr>
                 <td class="type" id="property_i">
                                         protected                                        int
-                </td>
+                                                                                
+                                    </td>
                 <td>$i</td>
                 <td class="last"></td>
                 <td></td>
@@ -106,7 +108,8 @@
                     <tr>
                 <td class="type" id="property_tokens">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$tokens</td>
                 <td class="last"></td>
                 <td></td>
@@ -121,170 +124,170 @@
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_optimize">optimize</a>(array $tokens)
         
-                                            <p>Optimize the code used to output content</p>                </div>
+                                            <p><p>Optimize the code used to output content</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_captureOutput">captureOutput</a>()
         
-                                            <p>Capture the expressions used in any number of consecutive output statements</p>                </div>
+                                            <p><p>Capture the expressions used in any number of consecutive output statements</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_captureOutputExpression">captureOutputExpression</a>()
         
-                                            <p>Capture an expression used in output at current index</p>                </div>
+                                            <p><p>Capture an expression used in output at current index</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_captureStructure">captureStructure</a>()
         
-                                            <p>Capture the source of a control structure from its keyword to its opening brace</p>                </div>
+                                            <p><p>Capture the source of a control structure from its keyword to its opening brace</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isBranchToken">isBranchToken</a>()
         
-                                            <p>Test whether the token at current index is an if/elseif/else token</p>                </div>
+                                            <p><p>Test whether the token at current index is an if/elseif/else token</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_mergeIfBranches">mergeIfBranches</a>(array $branches)
         
-                                            <p>Merge the branches of an if/elseif/else block</p>                </div>
+                                            <p><p>Merge the branches of an if/elseif/else block</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_mergeOutput">mergeOutput</a>(array $left, array $right)
         
-                                            <p>Merge two consecutive series of consecutive output expressions together</p>                </div>
+                                            <p><p>Merge two consecutive series of consecutive output expressions together</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_optimizeBranchesHead">optimizeBranchesHead</a>(array $branches)
         
-                                            <p>Optimize the "head" part of a series of branches in-place</p>                </div>
+                                            <p><p>Optimize the &quot;head&quot; part of a series of branches in-place</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_optimizeBranchesOutput">optimizeBranchesOutput</a>(array $branches, string $which)
         
-                                            <p>Optimize the output of given branches</p>                </div>
+                                            <p><p>Optimize the output of given branches</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_optimizeBranchesTail">optimizeBranchesTail</a>(array $branches)
         
-                                            <p>Optimize the "tail" part of a series of branches in-place</p>                </div>
+                                            <p><p>Optimize the &quot;tail&quot; part of a series of branches in-place</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parseBranch">parseBranch</a>()
         
-                                            <p>Parse the if, elseif or else branch starting at current index</p>                </div>
+                                            <p><p>Parse the if, elseif or else branch starting at current index</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parseIfBlock">parseIfBlock</a>()
         
-                                            <p>Parse the if block (including elseif/else branches) starting at current index</p>                </div>
+                                            <p><p>Parse the if block (including elseif/else branches) starting at current index</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeBranch">serializeBranch</a>(array $branch)
         
-                                            <p>Serialize a recorded branch back to PHP</p>                </div>
+                                            <p><p>Serialize a recorded branch back to PHP</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeIfBlock">serializeIfBlock</a>(array $block)
         
-                                            <p>Serialize a series of recorded branch back to PHP</p>                </div>
+                                            <p><p>Serialize a series of recorded branch back to PHP</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeOutput">serializeOutput</a>(array $expressions)
         
-                                            <p>Serialize a series of output expressions</p>                </div>
+                                            <p><p>Serialize a series of output expressions</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_serializeToken">serializeToken</a>(array|string $token)
         
-                                            <p>Serialize a token back to PHP</p>                </div>
+                                            <p><p>Serialize a token back to PHP</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_skipOutputAssignment">skipOutputAssignment</a>()
         
-                                            <p>Attempt to move past output assignment at current index</p>                </div>
+                                            <p><p>Attempt to move past output assignment at current index</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -300,21 +303,22 @@
     <strong>optimize</strong>(array $tokens)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize the code used to output content</p>                    <p>This method will go through the array of tokens, identify if/elseif/else blocks that contain
-identical code at the beginning or the end and move the common code outside of the block</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize the code used to output content</p></p>                <p><p>This method will go through the array of tokens, identify if/elseif/else blocks that contain
+identical code at the beginning or the end and move the common code outside of the block</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$tokens</td>
-                <td>Array of tokens from token_get_all()</td>
+                <td><p>Array of tokens from token_get_all()</p></td>
             </tr>
             </table>
 
@@ -324,10 +328,11 @@ identical code at the beginning or the end and move the common code outside of t
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Optimized code</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -341,14 +346,15 @@ identical code at the beginning or the end and move the common code outside of t
     <strong>captureOutput</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Capture the expressions used in any number of consecutive output statements</p>                    <p>Starts looking at current index. Ends at the first token that's not part of an output
-statement</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Capture the expressions used in any number of consecutive output statements</p></p>                <p><p>Starts looking at current index. Ends at the first token that's not part of an output
+statement</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -359,6 +365,7 @@ statement</p>                            </div>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -372,13 +379,14 @@ statement</p>                            </div>
     <strong>captureOutputExpression</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Capture an expression used in output at current index</p>                    <p>Ends on "." or ";"</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Capture an expression used in output at current index</p></p>                <p><p>Ends on &quot;.&quot; or &quot;;&quot;</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -389,6 +397,7 @@ statement</p>                            </div>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -402,13 +411,14 @@ statement</p>                            </div>
     <strong>captureStructure</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Capture the source of a control structure from its keyword to its opening brace</p>                    <p>Ends after the brace, but the brace itself is not returned</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Capture the source of a control structure from its keyword to its opening brace</p></p>                <p><p>Ends after the brace, but the brace itself is not returned</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -419,6 +429,7 @@ statement</p>                            </div>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -432,13 +443,14 @@ statement</p>                            </div>
     <strong>isBranchToken</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether the token at current index is an if/elseif/else token</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether the token at current index is an if/elseif/else token</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -449,6 +461,7 @@ statement</p>                            </div>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -462,20 +475,19 @@ statement</p>                            </div>
     <strong>mergeIfBranches</strong>(array $branches)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Merge the branches of an if/elseif/else block</p>                    <p>Returns an array that contains the following:</p>
-
+        <div class="method-description">
+                            <p><p>Merge the branches of an if/elseif/else block</p></p>                <p><p>Returns an array that contains the following:</p>
 <ul>
 <li>before: array of PHP expressions to be output before the block</li>
 <li>source: PHP code for the if block</li>
 <li>after:  array of PHP expressions to be output after the block</li>
-</ul>
-</p>                            </div>
-                <div class="tags">
+</ul></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -498,6 +510,7 @@ statement</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -509,25 +522,26 @@ statement</p>                            </div>
     <strong>mergeOutput</strong>(array $left, array $right)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Merge two consecutive series of consecutive output expressions together</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Merge two consecutive series of consecutive output expressions together</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$left</td>
-                <td>First series</td>
+                <td><p>First series</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$right</td>
-                <td>Second series</td>
+                <td><p>Second series</p></td>
             </tr>
             </table>
 
@@ -537,10 +551,11 @@ statement</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>Merged series</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -554,20 +569,21 @@ statement</p>                            </div>
     <strong>optimizeBranchesHead</strong>(array $branches)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize the "head" part of a series of branches in-place</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize the &quot;head&quot; part of a series of branches in-place</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$branches</td>
-                <td>Array of branches, modified in-place</td>
+                <td><p>Array of branches, modified in-place</p></td>
             </tr>
             </table>
 
@@ -577,10 +593,11 @@ statement</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string[]</td>
-            <td></td>
+            <td><p>PHP expressions removed from the &quot;head&quot; part of the branches</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -594,25 +611,26 @@ statement</p>                            </div>
     <strong>optimizeBranchesOutput</strong>(array $branches, string $which)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize the output of given branches</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize the output of given branches</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$branches</td>
-                <td>Array of branches</td>
+                <td><p>Array of branches</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$which</td>
-                <td>Which end to optimize ("head" or "tail")</td>
+                <td><p>Which end to optimize (&quot;head&quot; or &quot;tail&quot;)</p></td>
             </tr>
             </table>
 
@@ -622,10 +640,11 @@ statement</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string[]</td>
-            <td></td>
+            <td><p>PHP expressions removed from the given part of the branches</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -639,20 +658,21 @@ statement</p>                            </div>
     <strong>optimizeBranchesTail</strong>(array $branches)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize the "tail" part of a series of branches in-place</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize the &quot;tail&quot; part of a series of branches in-place</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$branches</td>
-                <td>Array of branches, modified in-place</td>
+                <td><p>Array of branches, modified in-place</p></td>
             </tr>
             </table>
 
@@ -662,10 +682,11 @@ statement</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string[]</td>
-            <td></td>
+            <td><p>PHP expressions removed from the &quot;tail&quot; part of the branches</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -679,23 +700,25 @@ statement</p>                            </div>
     <strong>parseBranch</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse the if, elseif or else branch starting at current index</p>                    <p>Ends at the last }</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Parse the if, elseif or else branch starting at current index</p></p>                <p><p>Ends at the last }</p></p>        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>Branch's data (&quot;structure&quot;, &quot;head&quot;, &quot;body&quot;, &quot;tail&quot;)</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -709,13 +732,14 @@ statement</p>                            </div>
     <strong>parseIfBlock</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse the if block (including elseif/else branches) starting at current index</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Parse the if block (including elseif/else branches) starting at current index</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -726,6 +750,7 @@ statement</p>                            </div>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -739,13 +764,14 @@ statement</p>                            </div>
     <strong>serializeBranch</strong>(array $branch)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Serialize a recorded branch back to PHP</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Serialize a recorded branch back to PHP</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -768,6 +794,7 @@ statement</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -779,13 +806,14 @@ statement</p>                            </div>
     <strong>serializeIfBlock</strong>(array $block)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Serialize a series of recorded branch back to PHP</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Serialize a series of recorded branch back to PHP</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -808,6 +836,7 @@ statement</p>                            </div>
 
             
             
+            
                     </div>
     </div>
 
@@ -819,20 +848,21 @@ statement</p>                            </div>
     <strong>serializeOutput</strong>(array $expressions)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Serialize a series of output expressions</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Serialize a series of output expressions</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$expressions</td>
-                <td>Array of PHP expressions</td>
+                <td><p>Array of PHP expressions</p></td>
             </tr>
             </table>
 
@@ -842,10 +872,11 @@ statement</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>PHP code used to append given expressions to the output</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -859,20 +890,21 @@ statement</p>                            </div>
     <strong>serializeToken</strong>(array|string $token)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Serialize a token back to PHP</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Serialize a token back to PHP</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array|string</td>
                 <td>$token</td>
-                <td>Token from token_get_all()</td>
+                <td><p>Token from token_get_all()</p></td>
             </tr>
             </table>
 
@@ -882,10 +914,11 @@ statement</p>                            </div>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>PHP code</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -899,23 +932,25 @@ statement</p>                            </div>
     <strong>skipOutputAssignment</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Attempt to move past output assignment at current index</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Attempt to move past output assignment at current index</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td></td>
+            <td><p>Whether if an output assignment was skipped</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -925,7 +960,7 @@ statement</p>                            </div>
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

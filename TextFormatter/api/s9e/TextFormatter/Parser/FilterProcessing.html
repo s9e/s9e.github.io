@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Parser_FilterProcessing" data-root-path="../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            FilterProcessing
-                
-        </h1>
+        <h1>FilterProcessing    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>FilterProcessing</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
     
             <h2>Methods</h2>
@@ -90,72 +90,42 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_executeAttributePreprocessors">executeAttributePreprocessors</a>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, array $tagConfig)
-        
-                                            <p>Execute all the attribute preprocessors of given tag</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_filterAttributes">filterAttributes</a>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, array $tagConfig, array $registeredVars, <a href="../../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a> $logger)
-        
-                                            <p>Filter the attributes of given tag</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_filterTag">filterTag</a>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, <a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $tagsConfig, array $openTags)
-        
-                                            <p>Execute a tag's filterChain</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     static&nbsp;mixed
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_executeAttributeFilterChain">executeAttributeFilterChain</a>(array $filterChain, array $vars)
         
-                                            <p>Execute an attribute's filterChain</p>                </div>
+                                            <p><p>Execute an attribute's filterChain</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_executeAttributePreprocessor">executeAttributePreprocessor</a>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $attrName, string $regexp, string[] $map)
         
-                                            <p>Execute an attribute preprocessor</p>                </div>
+                                            <p><p>Execute an attribute preprocessor</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;mixed
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_executeFilter">executeFilter</a>(array $filter, array $vars)
         
-                                            <p>Execute a filter</p>                </div>
+                                            <p><p>Execute a filter</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getNamedCaptures">getNamedCaptures</a>(string $str, string $regexp, string[] $map)
         
-                                            <p>Execute a regexp and return the values of the mapped captures</p>                </div>
+                                            <p><p>Execute a regexp and return the values of the mapped captures</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -165,186 +135,32 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_executeAttributePreprocessors">
-        <div class="location">at line 23</div>
-        <code>        static            void
-    <strong>executeAttributePreprocessors</strong>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, array $tagConfig)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Execute all the attribute preprocessors of given tag</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
-                <td>$tag</td>
-                <td>Source tag</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$tagConfig</td>
-                <td>Tag's config</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_filterAttributes">
-        <div class="location">at line 50</div>
-        <code>        static            void
-    <strong>filterAttributes</strong>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, array $tagConfig, array $registeredVars, <a href="../../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a> $logger)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Filter the attributes of given tag</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
-                <td>$tag</td>
-                <td>Tag being checked</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$tagConfig</td>
-                <td>Tag's config</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$registeredVars</td>
-                <td>Array of registered vars for use in attribute filters</td>
-            </tr>
-                    <tr>
-                <td><a href="../../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a></td>
-                <td>$logger</td>
-                <td>This parser's Logger instance</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_filterTag">
-        <div class="location">at line 94</div>
-        <code>        static            void
-    <strong>filterTag</strong>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, <a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, array $tagsConfig, array $openTags)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Execute a tag's filterChain</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
-                <td>$tag</td>
-                <td>Tag to filter</td>
-            </tr>
-                    <tr>
-                <td><a href="../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></td>
-                <td>$parser</td>
-                <td>Parser</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$tagsConfig</td>
-                <td>Tags' config</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$openTags</td>
-                <td>List of open tags</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_executeAttributeFilterChain">
         <div class="location">at line 144</div>
         <code>        static    protected        mixed
     <strong>executeAttributeFilterChain</strong>(array $filterChain, array $vars)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Execute an attribute's filterChain</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Execute an attribute's filterChain</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$filterChain</td>
-                <td>Attribute's filterChain</td>
+                <td><p>Attribute's filterChain</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$vars</td>
-                <td>Callback vars</td>
+                <td><p>Callback vars</p></td>
             </tr>
             </table>
 
@@ -354,10 +170,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td></td>
+            <td><p>Filtered value</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -371,13 +188,14 @@
     <strong>executeAttributePreprocessor</strong>(<a href="../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $attrName, string $regexp, string[] $map)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Execute an attribute preprocessor</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Execute an attribute preprocessor</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -415,6 +233,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -426,25 +245,26 @@
     <strong>executeFilter</strong>(array $filter, array $vars)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Execute a filter</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Execute a filter</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$filter</td>
-                <td>Programmed callback</td>
+                <td><p>Programmed callback</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$vars</td>
-                <td>Variables to be used when executing the callback</td>
+                <td><p>Variables to be used when executing the callback</p></td>
             </tr>
             </table>
 
@@ -454,7 +274,7 @@
                     <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td></td>
+            <td><p>Whatever the callback returns</p></td>
         </tr>
     </table>
 
@@ -465,12 +285,13 @@
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            <a href="../../../s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a>
+                                            <abbr title="s9e\TextFormatter\Parser\s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr>
                                     </td>
                 <td></td>
             </tr>
             </table>
 
+            
                     </div>
     </div>
 
@@ -482,13 +303,14 @@
     <strong>getNamedCaptures</strong>(string $str, string $regexp, string[] $map)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Execute a regexp and return the values of the mapped captures</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Execute a regexp and return the values of the mapped captures</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -521,6 +343,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -528,7 +351,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

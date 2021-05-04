@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_JavaScript_ConfigOptimizer" data-root-path="../../../../">
@@ -66,25 +67,24 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            ConfigOptimizer
-                
-        </h1>
+        <h1>ConfigOptimizer    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>ConfigOptimizer</strong>
 </p>
 
         
     
+        
 
             <div class="description">
-            <p>This class creates local variables to deduplicate complex configValues</p>                                </div>
-    
-    
+            <p><p>This class creates local variables to deduplicate complex configValues</p></p>                    </div>
+            
+        
     
             <h2>Properties</h2>
 
@@ -92,15 +92,17 @@
                     <tr>
                 <td class="type" id="property_configValues">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$configValues</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_encoder">
-                                        protected                                        Encoder
-                </td>
+                                        protected                                        <a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Encoder.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr></a>
+                                                                                
+                                    </td>
                 <td>$encoder</td>
                 <td class="last"></td>
                 <td></td>
@@ -108,7 +110,8 @@
                     <tr>
                 <td class="type" id="property_jsLengths">
                                         protected                                        array
-                </td>
+                                                                                
+                                    </td>
                 <td>$jsLengths</td>
                 <td class="last"></td>
                 <td></td>
@@ -123,120 +126,120 @@
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method___construct">__construct</a>(<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Encoder.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr></a> $encoder)
         
-                                            <p>Constructor</p>                </div>
+                                            <p><p>Constructor</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getVarDeclarations">getVarDeclarations</a>()
         
-                                            <p>Return the var declarations for all deduplicated config values</p>                </div>
+                                            <p><p>Return the var declarations for all deduplicated config values</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array|Dictionary
+                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
                 </div>
-                <div class="col-md-8 type">
-                    <a href="#method_optimize">optimize</a>(array|Dictionary $object)
+                <div class="col-md-8">
+                    <a href="#method_optimize">optimize</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $object)
         
-                                            <p>Optimize given config object</p>                </div>
+                                            <p><p>Optimize given config object</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_reset">reset</a>()
         
-                                            <p>Clear the deduplicated config values stored in this instance</p>                </div>
+                                            <p><p>Clear the deduplicated config values stored in this instance</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_canDeduplicate">canDeduplicate</a>(mixed $value)
         
-                                            <p>Test whether given value can be deduplicated</p>                </div>
+                                            <p><p>Test whether given value can be deduplicated</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_deduplicateConfigValues">deduplicateConfigValues</a>()
         
-                                            <p>Mark ConfigValue instances that have been used multiple times</p>                </div>
+                                            <p><p>Mark ConfigValue instances that have been used multiple times</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getVarName">getVarName</a>(string $js)
         
-                                            <p>Return the name of the variable that will a given value</p>                </div>
+                                            <p><p>Return the name of the variable that will a given value</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isIterable">isIterable</a>(mixed $value)
         
-                                            <p>Test whether given value is iterable</p>                </div>
+                                            <p><p>Test whether given value is iterable</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array|Dictionary
+                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
                 </div>
-                <div class="col-md-8 type">
-                    <a href="#method_optimizeObjectContent">optimizeObjectContent</a>(array|Dictionary $object)
+                <div class="col-md-8">
+                    <a href="#method_optimizeObjectContent">optimizeObjectContent</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $object)
         
-                                            <p>Optimize given object's content</p>                </div>
+                                            <p><p>Optimize given object's content</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    ConfigValue
+                    <a href="../../../../s9e/TextFormatter/Configurator/JavaScript/ConfigValue.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\ConfigValue">ConfigValue</abbr></a>
                 </div>
-                <div class="col-md-8 type">
-                    <a href="#method_recordObject">recordObject</a>(array|Code|Dictionary $object)
+                <div class="col-md-8">
+                    <a href="#method_recordObject">recordObject</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $object)
         
-                                            <p>Record a given config object as a ConfigValue instance</p>                </div>
+                                            <p><p>Record a given config object as a ConfigValue instance</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array|Dictionary
+                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
                 </div>
-                <div class="col-md-8 type">
-                    <a href="#method_recordObjectContent">recordObjectContent</a>(array|Dictionary $object)
+                <div class="col-md-8">
+                    <a href="#method_recordObjectContent">recordObjectContent</a>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $object)
         
-                                            <p>Record the content of given config object</p>                </div>
+                                            <p><p>Record the content of given config object</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_shouldPreserve">shouldPreserve</a>(mixed $value)
         
-                                            <p>Test whether given value should be preserved and not deduplicated</p>                </div>
+                                            <p><p>Test whether given value should be preserved and not deduplicated</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -252,13 +255,14 @@
     <strong>__construct</strong>(<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Encoder.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr></a> $encoder)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Constructor</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Constructor</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -269,6 +273,7 @@
             </tr>
             </table>
 
+            
             
             
             
@@ -283,23 +288,25 @@
     <strong>getVarDeclarations</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the var declarations for all deduplicated config values</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return the var declarations for all deduplicated config values</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>JavaScript code</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -309,24 +316,25 @@
                     <div class="method-item">
                     <h3 id="method_optimize">
         <div class="location">at line 69</div>
-        <code>                    array|Dictionary
-    <strong>optimize</strong>(array|Dictionary $object)
+        <code>                    array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
+    <strong>optimize</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $object)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize given config object</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize given config object</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array|Dictionary</td>
+                <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
                 <td>$object</td>
-                <td>Original config object</td>
+                <td><p>Original config object</p></td>
             </tr>
             </table>
 
@@ -335,11 +343,12 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>array|Dictionary</td>
-            <td></td>
+            <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
+            <td><p>Modified config object</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -353,13 +362,14 @@
     <strong>reset</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Clear the deduplicated config values stored in this instance</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Clear the deduplicated config values stored in this instance</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -370,6 +380,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -383,13 +394,14 @@
     <strong>canDeduplicate</strong>(mixed $value)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether given value can be deduplicated</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether given value can be deduplicated</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -412,6 +424,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -423,13 +436,14 @@
     <strong>deduplicateConfigValues</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Mark ConfigValue instances that have been used multiple times</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Mark ConfigValue instances that have been used multiple times</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -440,6 +454,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -453,20 +468,21 @@
     <strong>getVarName</strong>(string $js)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the name of the variable that will a given value</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return the name of the variable that will a given value</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$js</td>
-                <td>JavaScript representation of the value</td>
+                <td><p>JavaScript representation of the value</p></td>
             </tr>
             </table>
 
@@ -482,6 +498,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -493,13 +510,14 @@
     <strong>isIterable</strong>(mixed $value)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether given value is iterable</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether given value is iterable</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -522,6 +540,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -529,24 +548,25 @@
                     <div class="method-item">
                     <h3 id="method_optimizeObjectContent">
         <div class="location">at line 148</div>
-        <code>            protected        array|Dictionary
-    <strong>optimizeObjectContent</strong>(array|Dictionary $object)
+        <code>            protected        array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
+    <strong>optimizeObjectContent</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $object)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize given object's content</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize given object's content</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array|Dictionary</td>
+                <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
                 <td>$object</td>
-                <td>Original object</td>
+                <td><p>Original object</p></td>
             </tr>
             </table>
 
@@ -555,11 +575,12 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>array|Dictionary</td>
-            <td></td>
+            <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
+            <td><p>Modified object</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -569,24 +590,25 @@
                     <div class="method-item">
                     <h3 id="method_recordObject">
         <div class="location">at line 162</div>
-        <code>            protected        ConfigValue
-    <strong>recordObject</strong>(array|Code|Dictionary $object)
+        <code>            protected        <a href="../../../../s9e/TextFormatter/Configurator/JavaScript/ConfigValue.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\ConfigValue">ConfigValue</abbr></a>
+    <strong>recordObject</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $object)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Record a given config object as a ConfigValue instance</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Record a given config object as a ConfigValue instance</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array|Code|Dictionary</td>
+                <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a>|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
                 <td>$object</td>
-                <td>Original object</td>
+                <td><p>Original object</p></td>
             </tr>
             </table>
 
@@ -595,11 +617,12 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>ConfigValue</td>
-            <td></td>
+            <td><a href="../../../../s9e/TextFormatter/Configurator/JavaScript/ConfigValue.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\ConfigValue">ConfigValue</abbr></a></td>
+            <td><p>Stored ConfigValue instance</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -609,24 +632,25 @@
                     <div class="method-item">
                     <h3 id="method_recordObjectContent">
         <div class="location">at line 188</div>
-        <code>            protected        array|Dictionary
-    <strong>recordObjectContent</strong>(array|Dictionary $object)
+        <code>            protected        array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a>
+    <strong>recordObjectContent</strong>(array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a> $object)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Record the content of given config object</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Record the content of given config object</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array|Dictionary</td>
+                <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
                 <td>$object</td>
-                <td>Original object</td>
+                <td><p>Original object</p></td>
             </tr>
             </table>
 
@@ -635,11 +659,12 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>array|Dictionary</td>
-            <td></td>
+            <td>array|<a href="../../../../s9e/TextFormatter/Configurator/JavaScript/Dictionary.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Dictionary">Dictionary</abbr></a></td>
+            <td><p>Modified object containing ConfigValue instances</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -653,13 +678,14 @@
     <strong>shouldPreserve</strong>(mixed $value)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Test whether given value should be preserved and not deduplicated</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Test whether given value should be preserved and not deduplicated</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -682,6 +708,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -689,7 +716,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

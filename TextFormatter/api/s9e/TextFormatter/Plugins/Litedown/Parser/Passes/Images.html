@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_Litedown_Parser_Passes_Images" data-root-path="../../../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            Images
-                
-        </h1>
+        <h1>Images    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>Images</strong>        extends <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a>
 </p>
 
         
     
+        
 
-    
-            <h2>Traits</h2>
+            
+                <h2>Traits</h2>
 
         
     <div class="container-fluid underlined">
@@ -99,8 +99,9 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_parser">
-                                        protected                                        Parser
-                </td>
+                                        protected                                        <a href="../../../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a>
+                                                                                
+                                    </td>
                 <td>$parser</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_parser">
@@ -108,8 +109,9 @@
             </tr>
                     <tr>
                 <td class="type" id="property_text">
-                                        protected                                        ParsedText
-                </td>
+                                        protected                                        <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a>
+                                                                                
+                                    </td>
                 <td>$text</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html#property_text">
@@ -125,7 +127,7 @@
                 <div class="col-md-2 type">
                     
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method___construct">__construct</a>(<a href="../../../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a> $text)
         
                                             <p class="no-description">No description</p>
@@ -137,20 +139,20 @@
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parse">parse</a>()
         
-                                            <p>Parse the prepared text from stored parser</p>                </div>
+                                            <p><p>Parse the prepared text from stored parser</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_setLinkAttributes">setLinkAttributes</a>(<a href="../../../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $linkInfo, string $attrName)
         
-                                            <p>Set a URL or IMG tag's attributes</p>                </div>
+                                            <p><p>Set a URL or IMG tag's attributes</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/LinkAttributesSetter.html#method_setLinkAttributes">
 <abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\LinkAttributesSetter">LinkAttributesSetter</abbr></a></small></div>
             </div>
@@ -158,30 +160,30 @@
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_addImageTag">addImageTag</a>(int $startPos, int $endPos, int $endLen, string $linkInfo, string $alt)
         
-                                            <p>Add an image tag for given text span</p>                </div>
+                                            <p><p>Add an image tag for given text span</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parseInlineImages">parseInlineImages</a>()
         
-                                            <p>Parse inline images markup</p>                </div>
+                                            <p><p>Parse inline images markup</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_parseReferenceImages">parseReferenceImages</a>()
         
-                                            <p>Parse reference images markup</p>                </div>
+                                            <p><p>Parse reference images markup</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -198,11 +200,15 @@
     <strong>__construct</strong>(<a href="../../../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, <a href="../../../../../../s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a> $text)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -221,6 +227,7 @@
             
             
             
+            
                     </div>
     </div>
 
@@ -232,13 +239,14 @@
     <strong>parse</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse the prepared text from stored parser</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Parse the prepared text from stored parser</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -249,6 +257,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -263,30 +272,31 @@
     <strong>setLinkAttributes</strong>(<a href="../../../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, string $linkInfo, string $attrName)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Set a URL or IMG tag's attributes</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Set a URL or IMG tag's attributes</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td>URL or IMG tag</td>
+                <td><p>URL or IMG tag</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$linkInfo</td>
-                <td>Link's info: an URL optionally followed by spaces and a title</td>
+                <td><p>Link's info: an URL optionally followed by spaces and a title</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$attrName</td>
-                <td>Name of the URL attribute</td>
+                <td><p>Name of the URL attribute</p></td>
             </tr>
             </table>
 
@@ -300,6 +310,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -313,40 +324,41 @@
     <strong>addImageTag</strong>(int $startPos, int $endPos, int $endLen, string $linkInfo, string $alt)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Add an image tag for given text span</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Add an image tag for given text span</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$startPos</td>
-                <td>Start tag position</td>
+                <td><p>Start tag position</p></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$endPos</td>
-                <td>End tag position</td>
+                <td><p>End tag position</p></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$endLen</td>
-                <td>End tag length</td>
+                <td><p>End tag length</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$linkInfo</td>
-                <td>URL optionally followed by space and a title</td>
+                <td><p>URL optionally followed by space and a title</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$alt</td>
-                <td>Value for the alt attribute</td>
+                <td><p>Value for the alt attribute</p></td>
             </tr>
             </table>
 
@@ -362,6 +374,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -373,13 +386,14 @@
     <strong>parseInlineImages</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse inline images markup</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Parse inline images markup</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -390,6 +404,7 @@
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -403,13 +418,14 @@
     <strong>parseReferenceImages</strong>()
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Parse reference images markup</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Parse reference images markup</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -422,6 +438,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -429,7 +446,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

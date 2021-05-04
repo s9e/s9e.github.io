@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_TemplateHelper" data-root-path="../../../../">
@@ -66,30 +67,29 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            TemplateHelper
-                
-        </h1>
+        <h1>TemplateHelper    
+            </h1>
     </div>
 
+    
     <p>    abstract     class
     <strong>TemplateHelper</strong>
 </p>
 
         
     
+        
 
-    
-    
-            <h2>Constants</h2>
-
-            <table class="table table-condensed">
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
                     <tr>
-                <td>XMLNS_XSL</td>
+                <td>
+                                                                                                                        XMLNS_XSL
+                                    </td>
                 <td class="last">
-                    <p><em>XSL namespace</em></p>
+                    <p><em><p>XSL namespace</p></em></p>
                     <p></p>
                 </td>
             </tr>
@@ -104,40 +104,40 @@
                 <div class="col-md-2 type">
                     static&nbsp;array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getParametersFromXSL">getParametersFromXSL</a>(string $xsl)
         
-                                            <p>Return a list of parameters in use in given XSL</p>                </div>
+                                            <p><p>Return a list of parameters in use in given XSL</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_highlightNode">highlightNode</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node, string $prepend, string $append)
         
-                                            <p>Highlight the source of a node inside of a template</p>                </div>
+                                            <p><p>Highlight the source of a node inside of a template</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_replaceHomogeneousTemplates">replaceHomogeneousTemplates</a>(array $templates, int $minCount = 3)
         
-                                            <p>Replace simple templates (in an array, in-place) with a common template</p>                </div>
+                                            <p><p>Replace simple templates (in an array, in-place) with a common template</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string[]
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getParametersFromExpression">getParametersFromExpression</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node, string $expr)
         
-                                            <p>Get a list of parameters from given XPath expression</p>                </div>
+                                            <p><p>Get a list of parameters from given XPath expression</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -153,20 +153,21 @@
     <strong>getParametersFromXSL</strong>(string $xsl)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return a list of parameters in use in given XSL</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return a list of parameters in use in given XSL</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$xsl</td>
-                <td>XSL source</td>
+                <td><p>XSL source</p></td>
             </tr>
             </table>
 
@@ -176,10 +177,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>Alphabetically sorted list of unique parameter names</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -193,30 +195,31 @@
     <strong>highlightNode</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node, string $prepend, string $append)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Highlight the source of a node inside of a template</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Highlight the source of a node inside of a template</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a></td>
                 <td>$node</td>
-                <td>Node to highlight</td>
+                <td><p>Node to highlight</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$prepend</td>
-                <td>HTML to prepend</td>
+                <td><p>HTML to prepend</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$append</td>
-                <td>HTML to append</td>
+                <td><p>HTML to append</p></td>
             </tr>
             </table>
 
@@ -226,10 +229,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Template's source, as HTML</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -243,26 +247,27 @@
     <strong>replaceHomogeneousTemplates</strong>(array $templates, int $minCount = 3)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Replace simple templates (in an array, in-place) with a common template</p>                    <p>In some situations, renderers can take advantage of multiple tags having the same template. In
-any configuration, there's almost always a number of "simple" tags that are rendered as an
-HTML element of the same name with no HTML attributes. For instance, the system tag "p" used
-for paragraphs, "B" tags used for "b" HTML elements, etc... This method replaces those
+        <div class="method-description">
+                            <p><p>Replace simple templates (in an array, in-place) with a common template</p></p>                <p><p>In some situations, renderers can take advantage of multiple tags having the same template. In
+any configuration, there's almost always a number of &quot;simple&quot; tags that are rendered as an
+HTML element of the same name with no HTML attributes. For instance, the system tag &quot;p&quot; used
+for paragraphs, &quot;B&quot; tags used for &quot;b&quot; HTML elements, etc... This method replaces those
 templates with a common template that uses a dynamic element name based on the tag's name,
 either its nodeName or localName depending on whether the tag is namespaced, and normalized to
-lowercase using XPath's translate() function</p>                            </div>
-                <div class="tags">
+lowercase using XPath's translate() function</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$templates</td>
-                <td>Associative array of [tagName => template]</td>
+                <td><p>Associative array of [tagName =&gt; template]</p></td>
             </tr>
                     <tr>
                 <td>int</td>
@@ -283,6 +288,7 @@ lowercase using XPath's translate() function</p>                            </di
 
             
             
+            
                     </div>
     </div>
 
@@ -294,25 +300,26 @@ lowercase using XPath's translate() function</p>                            </di
     <strong>getParametersFromExpression</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node, string $expr)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Get a list of parameters from given XPath expression</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Get a list of parameters from given XPath expression</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a></td>
                 <td>$node</td>
-                <td>Context node</td>
+                <td><p>Context node</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$expr</td>
-                <td>XPath expression</td>
+                <td><p>XPath expression</p></td>
             </tr>
             </table>
 
@@ -328,6 +335,7 @@ lowercase using XPath's translate() function</p>                            </di
 
             
             
+            
                     </div>
     </div>
 
@@ -335,7 +343,7 @@ lowercase using XPath's translate() function</p>                            </di
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

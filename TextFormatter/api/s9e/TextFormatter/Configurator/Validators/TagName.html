@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Validators_TagName" data-root-path="../../../../">
@@ -66,29 +67,30 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            TagName
-                
-        </h1>
+        <h1>TagName    
+            </h1>
     </div>
 
+    
     <p>    abstract     class
     <strong>TagName</strong>
 </p>
 
         
     
+        
 
             <div class="description">
-            <p>Tag name rules:
- - must start with a letter or an underscore
- - can only contain letters, numbers, dashes and underscores
- - can be prefixed with one prefix following the same rules, separated with one colon
- - the prefixes "xsl" and "s9e" are reserved</p>            <p>Unprefixed names are normalized to uppercase. Prefixed names are preserved as-is.</p>                    </div>
-    
-    
+            <p><p>Tag name rules:</p>
+<ul>
+<li>must start with a letter or an underscore</li>
+<li>can only contain letters, numbers, dashes and underscores</li>
+<li>can be prefixed with one prefix following the same rules, separated with one colon</li>
+<li>the prefixes &quot;xsl&quot; and &quot;s9e&quot; are reserved</li>
+</ul></p>            <p><p>Unprefixed names are normalized to uppercase. Prefixed names are preserved as-is.</p></p>        </div>
+            
+        
     
     
             <h2>Methods</h2>
@@ -98,20 +100,20 @@
                 <div class="col-md-2 type">
                     static&nbsp;bool
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_isValid">isValid</a>(string $name)
         
-                                            <p>Return whether a string is a valid tag name</p>                </div>
+                                            <p><p>Return whether a string is a valid tag name</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_normalize">normalize</a>(string $name)
         
-                                            <p>Normalize a tag name</p>                </div>
+                                            <p><p>Normalize a tag name</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -127,13 +129,14 @@
     <strong>isValid</strong>(string $name)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return whether a string is a valid tag name</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return whether a string is a valid tag name</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -156,6 +159,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -167,20 +171,21 @@
     <strong>normalize</strong>(string $name)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Normalize a tag name</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Normalize a tag name</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$name</td>
-                <td>Original name</td>
+                <td><p>Original name</p></td>
             </tr>
             </table>
 
@@ -190,7 +195,7 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Normalized name</p></td>
         </tr>
     </table>
 
@@ -200,10 +205,11 @@
                     <table class="table table-condensed">
                     <tr>
                 <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
-                <td>if the original name is not valid</td>
+                <td><p>if the original name is not valid</p></td>
             </tr>
             </table>
 
+            
             
                     </div>
     </div>
@@ -212,7 +218,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

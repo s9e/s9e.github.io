@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Plugins_TaskLists_Helper" data-root-path="../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            Helper
-                
-        </h1>
+        <h1>Helper    
+            </h1>
     </div>
 
+    
     <p>        class
     <strong>Helper</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
     
             <h2>Methods</h2>
@@ -92,7 +92,7 @@
                 <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_filterListItem">filterListItem</a>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $listItem, string $text)
         
                                             <p class="no-description">No description</p>
@@ -103,40 +103,40 @@
                 <div class="col-md-2 type">
                     static&nbsp;array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_getStats">getStats</a>(string $xml)
         
-                                            <p>Return stats from a parsed representation</p>                </div>
+                                            <p><p>Return stats from a parsed representation</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_checkTask">checkTask</a>(string $xml, string $id)
         
-                                            <p>Mark given task checked in XML</p>                </div>
+                                            <p><p>Mark given task checked in XML</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_uncheckTask">uncheckTask</a>(string $xml, string $id)
         
-                                            <p>Mark given task unchecked in XML</p>                </div>
+                                            <p><p>Mark given task unchecked in XML</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_setTaskState">setTaskState</a>(string $xml, string $id, string $state, string $marker)
         
-                                            <p>Change the state and marker of given task in XML</p>                </div>
+                                            <p><p>Change the state and marker of given task in XML</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -152,11 +152,15 @@
     <strong>filterListItem</strong>(<a href="../../../../s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a> $parser, <a href="../../../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $listItem, string $text)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                <div class="tags">
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -189,6 +193,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -200,20 +205,21 @@
     <strong>getStats</strong>(string $xml)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return stats from a parsed representation</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Return stats from a parsed representation</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$xml</td>
-                <td>Parsed XML</td>
+                <td><p>Parsed XML</p></td>
             </tr>
             </table>
 
@@ -223,10 +229,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>Number of &quot;checked&quot; and &quot;unchecked&quot; tasks</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -240,25 +247,26 @@
     <strong>checkTask</strong>(string $xml, string $id)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Mark given task checked in XML</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Mark given task checked in XML</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$xml</td>
-                <td>Parsed XML</td>
+                <td><p>Parsed XML</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$id</td>
-                <td>Task's ID</td>
+                <td><p>Task's ID</p></td>
             </tr>
             </table>
 
@@ -268,10 +276,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Updated XML</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -285,25 +294,26 @@
     <strong>uncheckTask</strong>(string $xml, string $id)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Mark given task unchecked in XML</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Mark given task unchecked in XML</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$xml</td>
-                <td>Parsed XML</td>
+                <td><p>Parsed XML</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$id</td>
-                <td>Task's ID</td>
+                <td><p>Task's ID</p></td>
             </tr>
             </table>
 
@@ -313,10 +323,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Updated XML</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -330,35 +341,36 @@
     <strong>setTaskState</strong>(string $xml, string $id, string $state, string $marker)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Change the state and marker of given task in XML</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Change the state and marker of given task in XML</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$xml</td>
-                <td>Parsed XML</td>
+                <td><p>Parsed XML</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$id</td>
-                <td>Task's ID</td>
+                <td><p>Task's ID</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$state</td>
-                <td>Task's state ("checked" or "unchecked")</td>
+                <td><p>Task's state (&quot;checked&quot; or &quot;unchecked&quot;)</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$marker</td>
-                <td>State marker ("x" or " ")</td>
+                <td><p>State marker (&quot;x&quot; or &quot; &quot;)</p></td>
             </tr>
             </table>
 
@@ -368,10 +380,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Updated XML</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -381,7 +394,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

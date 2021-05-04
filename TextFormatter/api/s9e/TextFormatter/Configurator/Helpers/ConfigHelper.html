@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_ConfigHelper" data-root-path="../../../../">
@@ -66,23 +67,22 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            ConfigHelper
-                
-        </h1>
+        <h1>ConfigHelper    
+            </h1>
     </div>
 
+    
     <p>    abstract     class
     <strong>ConfigHelper</strong>
 </p>
 
         
     
+        
 
-    
-    
+            
+        
     
     
             <h2>Methods</h2>
@@ -92,40 +92,40 @@
                 <div class="col-md-2 type">
                     static&nbsp;array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_filterConfig">filterConfig</a>(array $config, string $target = &#039;PHP&#039;)
         
-                                            <p>Recursively filter a config array to replace variants with the desired value</p>                </div>
+                                            <p><p>Recursively filter a config array to replace variants with the desired value</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;mixed
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_generateQuickMatchFromList">generateQuickMatchFromList</a>(array $strings)
         
-                                            <p>Generate a quickMatch string from a list of strings</p>                </div>
+                                            <p><p>Generate a quickMatch string from a list of strings</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_optimizeArray">optimizeArray</a>(array $config, array $cache = [])
         
-                                            <p>Optimize the size of a deep array by deduplicating identical structures</p>                </div>
+                                            <p><p>Optimize the size of a deep array by deduplicating identical structures</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;array
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_toArray">toArray</a>(mixed $value, bool $keepEmpty = false, bool $keepNull = false)
         
-                                            <p>Convert a structure to a (possibly multidimensional) array</p>                </div>
+                                            <p><p>Convert a structure to a (possibly multidimensional) array</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -141,25 +141,26 @@
     <strong>filterConfig</strong>(array $config, string $target = &#039;PHP&#039;)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Recursively filter a config array to replace variants with the desired value</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Recursively filter a config array to replace variants with the desired value</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$config</td>
-                <td>Config array</td>
+                <td><p>Config array</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$target</td>
-                <td>Target parser</td>
+                <td><p>Target parser</p></td>
             </tr>
             </table>
 
@@ -169,10 +170,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td><p>Filtered config</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -186,20 +188,21 @@
     <strong>generateQuickMatchFromList</strong>(array $strings)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Generate a quickMatch string from a list of strings</p>                    <p>This is basically a LCS implementation, tuned for small strings and fast failure</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Generate a quickMatch string from a list of strings</p></p>                <p><p>This is basically a LCS implementation, tuned for small strings and fast failure</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$strings</td>
-                <td>Array of strings</td>
+                <td><p>Array of strings</p></td>
             </tr>
             </table>
 
@@ -209,10 +212,11 @@
                     <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td></td>
+            <td><p>quickMatch string, or FALSE if none could be generated</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -226,13 +230,14 @@
     <strong>optimizeArray</strong>(array $config, array $cache = [])
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Optimize the size of a deep array by deduplicating identical structures</p>                    <p>This method is meant to be used on a config array which is only read and never modified</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Optimize the size of a deep array by deduplicating identical structures</p></p>                <p><p>This method is meant to be used on a config array which is only read and never modified</p></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -260,6 +265,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -271,13 +277,14 @@
     <strong>toArray</strong>(mixed $value, bool $keepEmpty = false, bool $keepNull = false)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Convert a structure to a (possibly multidimensional) array</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Convert a structure to a (possibly multidimensional) array</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -289,12 +296,12 @@
                     <tr>
                 <td>bool</td>
                 <td>$keepEmpty</td>
-                <td>Whether to keep empty arrays instead of removing them</td>
+                <td><p>Whether to keep empty arrays instead of removing them</p></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$keepNull</td>
-                <td>Whether to keep NULL values instead of removing them</td>
+                <td><p>Whether to keep NULL values instead of removing them</p></td>
             </tr>
             </table>
 
@@ -310,6 +317,7 @@
 
             
             
+            
                     </div>
     </div>
 
@@ -317,7 +325,7 @@
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

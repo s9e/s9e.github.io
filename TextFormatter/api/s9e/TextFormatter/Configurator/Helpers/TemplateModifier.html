@@ -16,6 +16,7 @@
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
     </head>
 
     <body id="class" data-name="class:s9e_TextFormatter_Configurator_Helpers_TemplateModifier" data-root-path="../../../../">
@@ -66,30 +67,29 @@
             </ol>
         </div>
                 <div id="page-content">
-                
     <div class="page-header">
-        <h1>
-            TemplateModifier
-                
-        </h1>
+        <h1>TemplateModifier    
+            </h1>
     </div>
 
+    
     <p>    abstract     class
     <strong>TemplateModifier</strong>
 </p>
 
         
     
+        
 
-    
-    
-            <h2>Constants</h2>
-
-            <table class="table table-condensed">
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
                     <tr>
-                <td>XMLNS_XSL</td>
+                <td>
+                                                                                                                        XMLNS_XSL
+                                    </td>
                 <td class="last">
-                    <p><em>XSL namespace</em></p>
+                    <p><em><p>XSL namespace</p></em></p>
                     <p></p>
                 </td>
             </tr>
@@ -104,40 +104,40 @@
                 <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_replaceTokens">replaceTokens</a>(string $template, string $regexp, callable $fn)
         
-                                            <p>Replace parts of a template that match given regexp</p>                </div>
+                                            <p><p>Replace parts of a template that match given regexp</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>
+                    static&nbsp;<abbr title="s9e\TextFormatter\Configurator\Helpers\DOMNode">DOMNode</abbr>
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_createReplacementNode">createReplacementNode</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $dom, array $replacement)
         
-                                            <p>Create a node that implements given replacement strategy</p>                </div>
+                                            <p><p>Create a node that implements given replacement strategy</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_replaceTokensInAttribute">replaceTokensInAttribute</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMAttr">DOMAttr</a> $attribute, string $regexp, callable $fn)
         
-                                            <p>Replace parts of an attribute that match given regexp</p>                </div>
+                                            <p><p>Replace parts of an attribute that match given regexp</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
-                <div class="col-md-8 type">
+                <div class="col-md-8">
                     <a href="#method_replaceTokensInText">replaceTokensInText</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a> $node, string $regexp, callable $fn)
         
-                                            <p>Replace parts of a text node that match given regexp</p>                </div>
+                                            <p><p>Replace parts of a text node that match given regexp</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -153,44 +153,49 @@
     <strong>replaceTokens</strong>(string $template, string $regexp, callable $fn)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Replace parts of a template that match given regexp</p>                    <p>Treats attribute values as plain text. Replacements within XPath expression is unsupported.
+        <div class="method-description">
+                            <p><p>Replace parts of a template that match given regexp</p></p>                <p><p>Treats attribute values as plain text. Replacements within XPath expression is unsupported.
 The callback must return an array with two elements. The first must be either of 'expression',
 'literal' or 'passthrough', and the second element depends on the first.</p>
-
 <ul>
-<li><p>'expression' indicates that the replacement must be treated as an XPath expression such as
-'@foo', which must be passed as the second element.</p></li>
-<li><p>'literal' indicates a literal (plain text) replacement, passed as its second element.</p></li>
-<li><p>'passthrough' indicates that the replacement should the tag's content. It works differently
+<li>
+<p>'expression' indicates that the replacement must be treated as an XPath expression such as
+'@foo', which must be passed as the second element.</p>
+</li>
+<li>
+<p>'literal' indicates a literal (plain text) replacement, passed as its second element.</p>
+</li>
+<li>
+<p>'passthrough' indicates that the replacement should the tag's content. It works differently
 whether it is inside an attribute's value or a text node. Within an attribute's value, the
 replacement will be the text content of the tag. Within a text node, the replacement
 becomes an <xsl:apply-templates/> node. A second optional argument can be passed to be used
-as its @select node-set.</p></li>
-</ul>
-</p>                            </div>
-                <div class="tags">
+as its @select node-set.</p>
+</li>
+</ul></p>        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$template</td>
-                <td>Original template</td>
+                <td><p>Original template</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$regexp</td>
-                <td>Regexp for matching parts that need replacement</td>
+                <td><p>Regexp for matching parts that need replacement</p></td>
             </tr>
                     <tr>
                 <td>callable</td>
                 <td>$fn</td>
-                <td>Callback used to get the replacement</td>
+                <td><p>Callback used to get the replacement</p></td>
             </tr>
             </table>
 
@@ -200,10 +205,11 @@ as its @select node-set.</p></li>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
+            <td><p>Processed template</p></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -213,17 +219,18 @@ as its @select node-set.</p></li>
                     <div class="method-item">
                     <h3 id="method_createReplacementNode">
         <div class="location">at line 68</div>
-        <code>        static    protected        <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>
+        <code>        static    protected        <abbr title="s9e\TextFormatter\Configurator\Helpers\DOMNode">DOMNode</abbr>
     <strong>createReplacementNode</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a> $dom, array $replacement)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Create a node that implements given replacement strategy</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Create a node that implements given replacement strategy</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -244,11 +251,12 @@ as its @select node-set.</p></li>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a></td>
+            <td><abbr title="s9e\TextFormatter\Configurator\Helpers\DOMNode">DOMNode</abbr></td>
             <td></td>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -262,30 +270,31 @@ as its @select node-set.</p></li>
     <strong>replaceTokensInAttribute</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMAttr">DOMAttr</a> $attribute, string $regexp, callable $fn)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Replace parts of an attribute that match given regexp</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Replace parts of an attribute that match given regexp</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMAttr">DOMAttr</a></td>
                 <td>$attribute</td>
-                <td>Attribute</td>
+                <td><p>Attribute</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$regexp</td>
-                <td>Regexp for matching parts that need replacement</td>
+                <td><p>Regexp for matching parts that need replacement</p></td>
             </tr>
                     <tr>
                 <td>callable</td>
                 <td>$fn</td>
-                <td>Callback used to get the replacement</td>
+                <td><p>Callback used to get the replacement</p></td>
             </tr>
             </table>
 
@@ -299,6 +308,7 @@ as its @select node-set.</p></li>
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -312,30 +322,31 @@ as its @select node-set.</p></li>
     <strong>replaceTokensInText</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a> $node, string $regexp, callable $fn)
         </code>
     </h3>
-    <div class="details">
-            
+    <div class="details">    
     
+            
 
-                    <div class="method-description">
-                                    <p>Replace parts of a text node that match given regexp</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p><p>Replace parts of a text node that match given regexp</p></p>                        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a></td>
                 <td>$node</td>
-                <td>Text node</td>
+                <td><p>Text node</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$regexp</td>
-                <td>Regexp for matching parts that need replacement</td>
+                <td><p>Regexp for matching parts that need replacement</p></td>
             </tr>
                     <tr>
                 <td>callable</td>
                 <td>$fn</td>
-                <td>Callback used to get the replacement</td>
+                <td><p>Callback used to get the replacement</p></td>
             </tr>
             </table>
 
@@ -351,6 +362,7 @@ as its @select node-set.</p></li>
 
             
             
+            
                     </div>
     </div>
 
@@ -358,7 +370,7 @@ as its @select node-set.</p></li>
             </div>
 
     
-            </div><div id="footer">
+</div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>
