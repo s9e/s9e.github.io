@@ -63,6 +63,11 @@
 	script.type = 'text/javascript';
 	script.src  = '//gist.github.com/' + location.hash.substr(1) + '.json?callback=cb';
 
+	script.onerror = function ()
+	{
+		document.body.innerHTML = 'Not Found';
+	};
+
 	document.body.appendChild(script);
 })(document);
 </script>
