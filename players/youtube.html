@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Proxy player for YouTube</title>
+	<style>
+		#original, #proxy
+		{
+			display:    inline-block;
+			margin:     auto;
+			text-align: center;
+			width:      45%;
+		}
+	</style>
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="youtube.css">
+</head>
+<body>
+	<div id="players">
+		<div id="original">
+			<span data-s9e-mediaembed="youtube">
+				<span>
+					<span data-s9e-mediaembed-iframe='["allowfullscreen","","scrolling","no","allow","autoplay","src","https:\/\/www.youtube.com\/embed\/YbJOTdZBX1g"]'
+					></span>
+				</span>
+			</span>
+		</div>
+		<div id="proxy">
+			<span data-s9e-mediaembed="youtube">
+				<span>
+					<span
+						data-s9e-mediaembed-c2l="youtube"
+						data-s9e-mediaembed-c2l-background="url(https://i.ytimg.com/vi/YbJOTdZBX1g/hqdefault.jpg) 50% 50% / cover"
+						data-s9e-mediaembed-c2l-oembed-title="YouTube Rewind 2018: Everyone Controls Rewind | #YouTubeRewind"
+						data-s9e-mediaembed-iframe='["allowfullscreen","","scrolling","no","allow","autoplay","src","https:\/\/www.youtube.com\/embed\/YbJOTdZBX1g?autoplay=1"]'
+					></span>
+				</span>
+			</span>
+		</div>
+	</div>
+	<script src="common.js"></script>
+</body>
+</html>

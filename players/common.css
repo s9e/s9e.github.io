@@ -1,0 +1,28 @@
+[data-s9e-mediaembed]
+{
+	display:        inline-block;
+	max-width:      100%;
+	vertical-align: top;
+	width:          640px;
+}
+iframe[data-s9e-mediaembed],
+span[data-s9e-mediaembed] > span > iframe
+{
+	border: 0;
+}
+span[data-s9e-mediaembed] > span
+{
+	display:        block;
+	padding-bottom: 56.25%;
+	position:       relative;
+}
+span[data-s9e-mediaembed] > span > iframe,
+span[data-s9e-mediaembed] > span > span,
+[data-s9e-mediaembed-iframe],
+[data-s9e-mediaembed-c2l]::after
+{
+	height:   100%;
+	left:     0;
+	position: absolute;
+	width:    100%;
+}
