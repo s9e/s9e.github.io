@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Proxy player for Vimeo</title>
+	<link rel="stylesheet" href="demo.css">
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="vimeo.css">
+</head>
+<body>
+	<div id="players">
+		<div id="original">
+			<span data-s9e-mediaembed="vimeo">
+				<span>
+					<span data-s9e-mediaembed-iframe='["allowfullscreen","","scrolling","no","allow","autoplay","src","\/\/player.vimeo.com\/video\/67207222"]'
+					></span>
+				</span>
+			</span>
+		</div>
+		<div id="proxy">
+			<span data-s9e-mediaembed="vimeo">
+				<span>
+					<span
+						data-s9e-mediaembed-c2l="vimeo"
+						data-s9e-mediaembed-c2l-poster="https:\/\/i.vimeocdn.com\/video\/439000905-44afb3effaabfab13d59fd8c8a2b611a66f11a9f1b13c408b8edda0d5d87f660-d_295x166"
+						data-s9e-mediaembed-c2l-title="A Short Story About Hands"
+						data-s9e-mediaembed-iframe='["allowfullscreen","","scrolling","no","allow","autoplay","src","\/\/player.vimeo.com\/video\/67207222?autoplay=1"]'
+					></span>
+				</span>
+			</span>
+		</div>
+	</div>
+	<script src="common.js"></script>
+</body>
+</html>
