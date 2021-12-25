@@ -14,7 +14,7 @@
 
 	let nodes   = document.querySelectorAll('span[' + dataPrefix + '-iframe]'),
 		i       = 0,
-		dummies = [],
+		proxies = [],
 		top     = 0,
 		bottom  = window.innerHeight,
 		timeout = 0,
@@ -24,7 +24,7 @@
 		activeMiniplayerSpan = null;
 	while (i < nodes.length)
 	{
-		dummies.push(nodes[i++]);
+		proxies.push(nodes[i++]);
 	}
 
 	setTimeout(init, REFRESH_DELAY);
@@ -86,10 +86,10 @@
 		timeout = setTimeout(refresh, REFRESH_DELAY);
 	}
 
-	function loadIframe(dummy)
+	function loadIframe(proxy)
 	{
 		let iframe = document.createElement('iframe'),
-			values = JSON.parse(dummy.getAttribute(dataPrefix + '-iframe')),
+			values = JSON.parse(proxy.getAttribute(dataPrefix + '-iframe')),
 			i      = -1;
 		while (++i < values.length)
 		{
@@ -109,9 +109,9 @@
 			iframe.onload();
 		}
 */
-		let parentNode = dummy.parentNode;
+		let parentNode = proxy.parentNode;
 		prepareMiniplayer(iframe, parentNode);
-		parentNode.replaceChild(iframe, dummy);
+		parentNode.replaceChild(iframe, proxy);
 	}
 
 	function onResizableIframeLoad(e)
@@ -220,29 +220,29 @@
 		}
 
 		let newDummies = [];
-		dummies.forEach(
-			function (dummy)
+		proxies.forEach(
+			function (proxy)
 			{
-				if (isInRange(dummy))
+				if (isInRange(proxy))
 				{
-					if (dummy.hasAttribute(dataPrefix + '-c2l'))
+					if (proxy.hasAttribute(dataPrefix + '-c2l'))
 					{
-						prepareClickToLoad(dummy);
+						prepareClickToLoad(proxy);
 					}
 					else
 					{
-						loadIframe(dummy);
+						loadIframe(proxy);
 					}
 				}
 				else
 				{
-					newDummies.push(dummy);
+					newDummies.push(proxy);
 				}
 			}
 		);
-		dummies = newDummies;
+		proxies = newDummies;
 
-		if (!dummies.length)
+		if (!proxies.length)
 		{
 			prepareEvents(window.removeEventListener);
 		}
@@ -294,19 +294,19 @@
 		}
 	}
 
-	function prepareClickToLoad(dummy)
+	function prepareClickToLoad(proxy)
 	{
-		if (dummy.hasAttribute(dataPrefix + '-c2l-background'))
+		if (proxy.hasAttribute(dataPrefix + '-c2l-poster'))
 		{
-			// Set the background on the dummy's wrapper if applicable
-			let node = (dummy.hasAttribute(dataPrefix)) ? dummy : dummy.parentNode.parentNode;
-			node.style.background = dummy.getAttribute(dataPrefix + '-c2l-background');
+			// Set the background on the proxy's wrapper if applicable
+			let node = (proxy.hasAttribute(dataPrefix)) ? proxy : proxy.parentNode.parentNode;
+			node.style.background = 'url(' + proxy.getAttribute(dataPrefix + '-c2l-poster') + ') center / cover';
 		}
-		dummy.onclick = function (e)
+		proxy.onclick = function (e)
 		{
 			// Don't let the click be handled as a miniplayer-related click
 			e.stopPropagation();
-			loadIframe(dummy);
+			loadIframe(proxy);
 		};
 	}
 

@@ -2,10 +2,10 @@
 {
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 72%, rgba(0, 0, 0, .04) 79%, rgba(0, 0, 0, .1) 83%, rgba(0, 0, 0, .25) 88%, rgba(0, 0, 0, .67) 100%)
 }
-[data-s9e-mediaembed-c2l="youtube"][data-s9e-mediaembed-c2l-oembed-title]::before
+[data-s9e-mediaembed-c2l="youtube"][data-s9e-mediaembed-c2l-title]::before
 {
 	color:         #eee;
-	content:       attr(data-s9e-mediaembed-c2l-oembed-title);
+	content:       attr(data-s9e-mediaembed-c2l-title);
 	font-family:   Arial, sans-serif;
 	font-size:     18px;
 	left:          25px;
