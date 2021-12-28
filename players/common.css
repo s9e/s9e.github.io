@@ -26,3 +26,18 @@ span[data-s9e-mediaembed] > span > span,
 	position: absolute;
 	width:    100%;
 }
+[data-s9e-mediaembed-c2l]
+{
+	cursor: pointer;
+}
+[data-s9e-mediaembed-c2l]::after
+{
+	content: "";
+}
+[data-s9e-mediaembed-c2l-title]::before
+{
+	color:       #fff;
+	content:     attr(data-s9e-mediaembed-c2l-title);
+	font-family: sans-serif;
+	position:    absolute;
+}
