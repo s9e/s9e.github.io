@@ -1,0 +1,17 @@
+[data-s9e-mediaembed-c2l="streamable"]::after
+{
+	border:             solid 40px transparent;
+	border-left-color:  rgba(255, 255, 255, .7);
+	border-left-width:  65px;
+	border-right-width: 0;
+	filter:             drop-shadow(0 0 10px rgba(0, 0, 0, .5));
+	height:             0;
+	left:               calc(50% - 30px);
+	top:                calc(50% - 40px);
+	transition:         border-left-color .5s;
+	width:              0;
+}
+[data-s9e-mediaembed-c2l="streamable"]:hover::after
+{
+	border-left-color: #fff;
+}
