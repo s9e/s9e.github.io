@@ -1,0 +1,22 @@
+[data-s9e-mediaembed-c2l="twitch"]
+{
+	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .1), rgba(0, 0, 0, .5))
+}
+[data-s9e-mediaembed-c2l="twitch"][data-s9e-mediaembed-c2l-title]::before
+{
+	font-family: Arial, sans-serif;
+	font-weight: 600;
+}
+[data-s9e-mediaembed-c2l="twitch"]::after
+{
+	background:    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 110'%3E%3Cpath d='m10 10 0 90 72 -45z' fill='%23fff' stroke='%23fff' stroke-linejoin='round' stroke-width='8'/%3E%3C/svg%3E") no-repeat center / 82px;
+	border-radius: 6px;
+	height:        120px;
+	left:          calc(50% - 60px);
+	top:           calc(50% - 60px);
+	width:         120px;
+}
+[data-s9e-mediaembed-c2l="twitch"]:hover::after
+{
+	background-color: rgba(255, 255, 255, .2);
+}
