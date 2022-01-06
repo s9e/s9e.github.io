@@ -36,13 +36,11 @@ span[data-s9e-mediaembed] > span > span,
 }
 [data-s9e-mediaembed-c2l-title]::before
 {
-	background:    rgba(0, 0, 0, .2);
 	border-radius: .1em;
 	color:         #fff;
 	content:       attr(data-s9e-mediaembed-c2l-title);
 	font-family:   sans-serif;
 	left:          1em;
-	padding:       .1em .3em;
 	position:      absolute;
 	top:           1em;
 }

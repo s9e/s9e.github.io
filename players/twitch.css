@@ -2,7 +2,7 @@
 {
 	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .1), rgba(0, 0, 0, .5))
 }
-[data-s9e-mediaembed-c2l="twitch"][data-s9e-mediaembed-c2l-title]::before
+[data-s9e-mediaembed-c2l="twitch"]::before
 {
 	font-family: Arial, sans-serif;
 	font-weight: 600;

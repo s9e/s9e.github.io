@@ -2,12 +2,12 @@
 {
 	background-color: rgba(0, 0, 0, .6);
 }
-[data-s9e-mediaembed-c2l="dailymotion"][data-s9e-mediaembed-c2l-title]::before
+[data-s9e-mediaembed-c2l="dailymotion"]::before
 {
-	bottom:      46%;
 	font-size:   24px;
 	font-weight: 600;
 	left:        140px;
+	top:         calc(50% - .5em);
 }
 [data-s9e-mediaembed-c2l="dailymotion"]::after
 {

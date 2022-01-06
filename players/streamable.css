@@ -15,3 +15,9 @@
 {
 	border-left-color: #fff;
 }
+[data-s9e-mediaembed-c2l="streamable"]::before
+{
+	background:    rgba(0, 0, 0, .2);
+	border-radius: .1em;
+	padding:       .1em .3em;
+}

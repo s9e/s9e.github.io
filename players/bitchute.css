@@ -11,3 +11,9 @@
 	top:           calc(50% - 24px);
 	width:         48px;
 }
+[data-s9e-mediaembed-c2l="bitchute"]::before
+{
+	background:    rgba(0, 0, 0, .2);
+	border-radius: .1em;
+	padding:       .1em .3em;
+}

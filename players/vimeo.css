@@ -1,11 +1,10 @@
-[data-s9e-mediaembed-c2l="vimeo"][data-s9e-mediaembed-c2l-title]::before
+[data-s9e-mediaembed-c2l="vimeo"]::before
 {
 	background:    rgba(30, 30, 30, .9);
 	color:         #00adef;
 	font-family:   Arial, sans-serif;
 	font-size:     20px;
 	font-weight:   700;
-	/* TODO: small screens */
 	left:          70px;
 	padding:       .1em .2em;
 	text-align:    left;
