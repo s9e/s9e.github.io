@@ -10,25 +10,37 @@
         <link rel="stylesheet" type="text/css" href="css/doctum.css">
         <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
         <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
         <script async defer src="js/bootstrap.min.js"></script>
-        <script src="js/typeahead.min.js"></script>
-        <script src="doctum.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     </head>
 
-    <body id="doc-index" data-name="" data-root-path="">
+    <body id="doc-index" data-name="" data-root-path="" data-search-index-url="doctum-search.json">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="search.html">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
             <span class="icon icon-search"></span>
             <input name="search"
+                   id="doctum-search-auto-complete"
                    class="typeahead form-control"
                    type="search"
-                   placeholder="Search">
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
         </form>
     </div>
 
@@ -1065,11 +1077,11 @@ original source</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/RendererGen
                     <dd><p>Create a stream context for given request</p></dd>        </dl><h2 id="letterD">D</h2>
         <dl id="indexD"><dt>$<a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html#property_dynamic">
 <abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr>#dynamic</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/Forum/Renderer.html#property_dynamic">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/Forum/Renderer.html#property_dynamic">
 <abbr title="s9e\TextFormatter\Bundles\Forum\Renderer">Renderer</abbr>#dynamic</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Forum/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Forum\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_dynamic">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_dynamic">
 <abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr>#dynamic</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt><a href="s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_delete">
+                    <dd>{@inheritdoc}</dd><dt><a href="s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_delete">
 <abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr>::delete</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></em></dt>
                     <dd><p>Delete an item from this collection</p></dd><dt><a href="s9e/TextFormatter/Configurator/Collections/NormalizedList.html#method_delete">
 <abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr>::delete</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Collections/NormalizedList.html"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedList">NormalizedList</abbr></a></em></dt>
@@ -1214,11 +1226,11 @@ javascript: links</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateCh
                     <dd><p>Decompress given page if applicable</p></dd>        </dl><h2 id="letterE">E</h2>
         <dl id="indexE"><dt>$<a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html#property_enableQuickRenderer">
 <abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr>#enableQuickRenderer</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/Forum/Renderer.html#property_enableQuickRenderer">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/Forum/Renderer.html#property_enableQuickRenderer">
 <abbr title="s9e\TextFormatter\Bundles\Forum\Renderer">Renderer</abbr>#enableQuickRenderer</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Forum/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Forum\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_enableQuickRenderer">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_enableQuickRenderer">
 <abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr>#enableQuickRenderer</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator.html#property_Emoji">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator.html#property_Emoji">
 <abbr title="s9e\TextFormatter\Configurator">Configurator</abbr>#Emoji</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a></em></dt>
                     <dd><p>Emoji plugin's configurator</p></dd><dt>$<a href="s9e/TextFormatter/Configurator.html#property_Emoticons">
 <abbr title="s9e\TextFormatter\Configurator">Configurator</abbr>#Emoticons</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a></em></dt>
@@ -2467,7 +2479,7 @@ given rendering configuration</p></dd><dt><a href="s9e/TextFormatter/Configurato
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/Litedown/Parser/Passes/InlineSpoiler.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\InlineSpoiler">InlineSpoiler</abbr></a> &mdash; <em>Class in namespace <a href="s9e/TextFormatter/Plugins/Litedown/Parser/Passes.html">s9e\TextFormatter\Plugins\Litedown\Parser\Passes</a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/Collections/CachedDefinitionCollection.html#property_items">
 <abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\Collections\CachedDefinitionCollection">CachedDefinitionCollection</abbr>#items</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/Collections/CachedDefinitionCollection.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\Collections\CachedDefinitionCollection">CachedDefinitionCollection</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt><a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators/Iframe.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateGenerators\Iframe">Iframe</abbr></a> &mdash; <em>Class in namespace <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators.html">s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateGenerators</a></em></dt>
+                    <dd>{@inheritdoc}</dd><dt><a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators/Iframe.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateGenerators\Iframe">Iframe</abbr></a> &mdash; <em>Class in namespace <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators.html">s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateGenerators</a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators/Iframe.html#property_iframeAttributes">
 <abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateGenerators\Iframe">Iframe</abbr>#iframeAttributes</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators/Iframe.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateGenerators\Iframe">Iframe</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/MediaEmbed/Parser.html#method_interpolateVars">
@@ -2962,7 +2974,7 @@ is identical</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateNormali
                     <dd></dd>        </dl><h2 id="letterO">O</h2>
         <dl id="indexO"><dt>$<a href="s9e/TextFormatter/Configurator/Collections/AttributeCollection.html#property_onDuplicateAction">
 <abbr title="s9e\TextFormatter\Configurator\Collections\AttributeCollection">AttributeCollection</abbr>#onDuplicateAction</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/Collections/AttributeCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\AttributeCollection">AttributeCollection</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#property_onDuplicateAction">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#property_onDuplicateAction">
 <abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr>#onDuplicateAction</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html#method_onDuplicate">
 <abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr>::onDuplicate</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Collections/NormalizedCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\NormalizedCollection">NormalizedCollection</abbr></a></em></dt>
@@ -2987,7 +2999,7 @@ chain</p></dd><dt><a href="s9e/TextFormatter/Configurator/Collections/Ruleset.ht
 <abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr>::offsetUnset</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></em></dt>
                     <dd><p>Clear a subset of the rules</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/Collections/TagCollection.html#property_onDuplicateAction">
 <abbr title="s9e\TextFormatter\Configurator\Collections\TagCollection">TagCollection</abbr>#onDuplicateAction</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/Collections/TagCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\TagCollection">TagCollection</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt><a href="s9e/TextFormatter/Configurator/Helpers/ConfigHelper.html#method_optimizeArray">
+                    <dd>{@inheritdoc}</dd><dt><a href="s9e/TextFormatter/Configurator/Helpers/ConfigHelper.html#method_optimizeArray">
 <abbr title="s9e\TextFormatter\Configurator\Helpers\ConfigHelper">ConfigHelper</abbr>::optimizeArray</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Helpers/ConfigHelper.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\ConfigHelper">ConfigHelper</abbr></a></em></dt>
                     <dd><p>Optimize the size of a deep array by deduplicating identical structures</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html#property_optimizer">
 <abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Normalizer">Normalizer</abbr>#optimizer</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Normalizer">Normalizer</abbr></a></em></dt>
@@ -3150,7 +3162,7 @@ in their xsl:otherwise part</p></dd><dt><a href="s9e/TextFormatter/Configurator/
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr>::onDuplicate</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr></a></em></dt>
                     <dd><p>is called with a key that already exists</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCodeCollection.html#property_onDuplicateAction">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCodeCollection">BBCodeCollection</abbr>#onDuplicateAction</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCodeCollection.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCodeCollection">BBCodeCollection</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt><a href="s9e/TextFormatter/Plugins/Censor/Configurator.html#method_offsetExists">
+                    <dd>{@inheritdoc}</dd><dt><a href="s9e/TextFormatter/Plugins/Censor/Configurator.html#method_offsetExists">
 <abbr title="s9e\TextFormatter\Plugins\Censor\Configurator">Configurator</abbr>::offsetExists</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Censor/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Censor\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/Censor/Configurator.html#method_offsetGet">
 <abbr title="s9e\TextFormatter\Plugins\Censor\Configurator">Configurator</abbr>::offsetGet</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Censor/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Censor\Configurator">Configurator</abbr></a></em></dt>
@@ -3162,7 +3174,7 @@ in their xsl:otherwise part</p></dd><dt><a href="s9e/TextFormatter/Configurator/
 <abbr title="s9e\TextFormatter\Plugins\Censor\Configurator">Configurator</abbr>::onDuplicate</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Censor/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Censor\Configurator">Configurator</abbr></a></em></dt>
                     <dd><p>is called with a key that already exists</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/Emoticons/Configurator.html#property_onDuplicateAction">
 <abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator">Configurator</abbr>#onDuplicateAction</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Emoticons/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt><a href="s9e/TextFormatter/Plugins/Emoticons/Configurator.html#method_offsetExists">
+                    <dd>{@inheritdoc}</dd><dt><a href="s9e/TextFormatter/Plugins/Emoticons/Configurator.html#method_offsetExists">
 <abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator">Configurator</abbr>::offsetExists</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Emoticons/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/Emoticons/Configurator.html#method_offsetGet">
 <abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator">Configurator</abbr>::offsetGet</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Emoticons/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator">Configurator</abbr></a></em></dt>
@@ -3174,7 +3186,7 @@ in their xsl:otherwise part</p></dd><dt><a href="s9e/TextFormatter/Configurator/
 <abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator">Configurator</abbr>::onDuplicate</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Emoticons/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator">Configurator</abbr></a></em></dt>
                     <dd><p>is called with a key that already exists</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/Emoticons/Configurator/EmoticonCollection.html#property_onDuplicateAction">
 <abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator\EmoticonCollection">EmoticonCollection</abbr>#onDuplicateAction</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Emoticons/Configurator/EmoticonCollection.html"><abbr title="s9e\TextFormatter\Plugins\Emoticons\Configurator\EmoticonCollection">EmoticonCollection</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/Keywords/Configurator.html#property_onlyFirst">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/Keywords/Configurator.html#property_onlyFirst">
 <abbr title="s9e\TextFormatter\Plugins\Keywords\Configurator">Configurator</abbr>#onlyFirst</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Keywords/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Keywords\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/Keywords/Configurator.html#method_offsetExists">
 <abbr title="s9e\TextFormatter\Plugins\Keywords\Configurator">Configurator</abbr>::offsetExists</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Keywords/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Keywords\Configurator">Configurator</abbr></a></em></dt>
@@ -3192,7 +3204,7 @@ in their xsl:otherwise part</p></dd><dt><a href="s9e/TextFormatter/Configurator/
 <abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\Emphasis">Emphasis</abbr>::openSpans</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Litedown/Parser/Passes/Emphasis.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\Emphasis">Emphasis</abbr></a></em></dt>
                     <dd><p>Open EM and STRONG spans whose content starts at given position</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/Collections/SiteDefinitionCollection.html#property_onDuplicateAction">
 <abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\Collections\SiteDefinitionCollection">SiteDefinitionCollection</abbr>#onDuplicateAction</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/Collections/SiteDefinitionCollection.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\Collections\SiteDefinitionCollection">SiteDefinitionCollection</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt><a href="s9e/TextFormatter/Plugins/PipeTables/Parser.html#method_overwriteBlockquoteCallback">
+                    <dd>{@inheritdoc}</dd><dt><a href="s9e/TextFormatter/Plugins/PipeTables/Parser.html#method_overwriteBlockquoteCallback">
 <abbr title="s9e\TextFormatter\Plugins\PipeTables\Parser">Parser</abbr>::overwriteBlockquoteCallback</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/PipeTables/Parser.html"><abbr title="s9e\TextFormatter\Plugins\PipeTables\Parser">Parser</abbr></a></em></dt>
                     <dd><p>Overwrite right angle brackets in given match</p></dd><dt><a href="s9e/TextFormatter/Plugins/PipeTables/Parser.html#method_overwriteEscapes">
 <abbr title="s9e\TextFormatter\Plugins\PipeTables\Parser">Parser</abbr>::overwriteEscapes</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/PipeTables/Parser.html"><abbr title="s9e\TextFormatter\Plugins\PipeTables\Parser">Parser</abbr></a></em></dt>
@@ -3656,15 +3668,15 @@ and a constant part</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Pr
                     <dd><p>Execute a POST request and return the response's body</p></dd>        </dl><h2 id="letterQ">Q</h2>
         <dl id="indexQ"><dt>$<a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html#property_quickRegexp">
 <abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr>#quickRegexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html#property_quickRenderingTest">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html#property_quickRenderingTest">
 <abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr>#quickRenderingTest</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/Forum/Renderer.html#property_quickRegexp">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/Forum/Renderer.html#property_quickRegexp">
 <abbr title="s9e\TextFormatter\Bundles\Forum\Renderer">Renderer</abbr>#quickRegexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Forum/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Forum\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_quickRegexp">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_quickRegexp">
 <abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr>#quickRegexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_quickRenderingTest">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_quickRenderingTest">
 <abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr>#quickRenderingTest</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt><a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_query">
+                    <dd>{@inheritdoc}</dd><dt><a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html#method_query">
 <abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr>::query</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/IRProcessor.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\IRProcessor">IRProcessor</abbr></a></em></dt>
                     <dd><p>Run an XPath query and return its result</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/ClosureCompilerService.html#method_query">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifiers\ClosureCompilerService">ClosureCompilerService</abbr>::query</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/ClosureCompilerService.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifiers\ClosureCompilerService">ClosureCompilerService</abbr></a></em></dt>
@@ -3673,87 +3685,87 @@ and a constant part</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Pr
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowNodeByXPath">DisallowNodeByXPath</abbr>#query</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowNodeByXPath.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowNodeByXPath">DisallowNodeByXPath</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractChooseOptimization.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractChooseOptimization">AbstractChooseOptimization</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractChooseOptimization.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractChooseOptimization">AbstractChooseOptimization</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractConstantFolding.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractConstantFolding.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractConstantFolding">AbstractConstantFolding</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractConstantFolding.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractConstantFolding">AbstractConstantFolding</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/ConvertCurlyExpressionsInText.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\ConvertCurlyExpressionsInText">ConvertCurlyExpressionsInText</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/ConvertCurlyExpressionsInText.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\ConvertCurlyExpressionsInText">ConvertCurlyExpressionsInText</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/DeoptimizeIf.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/DeoptimizeIf.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\DeoptimizeIf">DeoptimizeIf</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/DeoptimizeIf.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\DeoptimizeIf">DeoptimizeIf</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/EnforceHTMLOmittedEndTags.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/EnforceHTMLOmittedEndTags.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\EnforceHTMLOmittedEndTags">EnforceHTMLOmittedEndTags</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/EnforceHTMLOmittedEndTags.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\EnforceHTMLOmittedEndTags">EnforceHTMLOmittedEndTags</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/FixUnescapedCurlyBracesInHtmlAttributes.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/FixUnescapedCurlyBracesInHtmlAttributes.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\FixUnescapedCurlyBracesInHtmlAttributes">FixUnescapedCurlyBracesInHtmlAttributes</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/FixUnescapedCurlyBracesInHtmlAttributes.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\FixUnescapedCurlyBracesInHtmlAttributes">FixUnescapedCurlyBracesInHtmlAttributes</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineAttributes.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineAttributes.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineAttributes">InlineAttributes</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineAttributes.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineAttributes">InlineAttributes</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineCDATA.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineCDATA.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineCDATA">InlineCDATA</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineCDATA.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineCDATA">InlineCDATA</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineElements.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineElements.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineElements">InlineElements</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineElements.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineElements">InlineElements</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineInferredValues.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineInferredValues.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineInferredValues">InlineInferredValues</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineInferredValues.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineInferredValues">InlineInferredValues</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineTextElements.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineTextElements.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineTextElements">InlineTextElements</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineTextElements.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineTextElements">InlineTextElements</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineXPathLiterals.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineXPathLiterals.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineXPathLiterals">InlineXPathLiterals</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/InlineXPathLiterals.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\InlineXPathLiterals">InlineXPathLiterals</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MergeConsecutiveCopyOf.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MergeConsecutiveCopyOf.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\MergeConsecutiveCopyOf">MergeConsecutiveCopyOf</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MergeConsecutiveCopyOf.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\MergeConsecutiveCopyOf">MergeConsecutiveCopyOf</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MergeIdenticalConditionalBranches.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MergeIdenticalConditionalBranches.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\MergeIdenticalConditionalBranches">MergeIdenticalConditionalBranches</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MergeIdenticalConditionalBranches.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\MergeIdenticalConditionalBranches">MergeIdenticalConditionalBranches</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MinifyInlineCSS.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MinifyInlineCSS.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\MinifyInlineCSS">MinifyInlineCSS</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MinifyInlineCSS.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\MinifyInlineCSS">MinifyInlineCSS</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MinifyXPathExpressions.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MinifyXPathExpressions.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\MinifyXPathExpressions">MinifyXPathExpressions</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/MinifyXPathExpressions.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\MinifyXPathExpressions">MinifyXPathExpressions</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/NormalizeAttributeNames.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/NormalizeAttributeNames.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\NormalizeAttributeNames">NormalizeAttributeNames</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/NormalizeAttributeNames.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\NormalizeAttributeNames">NormalizeAttributeNames</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/NormalizeElementNames.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/NormalizeElementNames.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\NormalizeElementNames">NormalizeElementNames</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/NormalizeElementNames.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\NormalizeElementNames">NormalizeElementNames</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeConditionalAttributes.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeConditionalAttributes.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\OptimizeConditionalAttributes">OptimizeConditionalAttributes</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeConditionalAttributes.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\OptimizeConditionalAttributes">OptimizeConditionalAttributes</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeConditionalValueOf.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeConditionalValueOf.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\OptimizeConditionalValueOf">OptimizeConditionalValueOf</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeConditionalValueOf.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\OptimizeConditionalValueOf">OptimizeConditionalValueOf</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeNestedConditionals.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeNestedConditionals.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\OptimizeNestedConditionals">OptimizeNestedConditionals</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/OptimizeNestedConditionals.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\OptimizeNestedConditionals">OptimizeNestedConditionals</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/PreserveSingleSpaces.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/PreserveSingleSpaces.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\PreserveSingleSpaces">PreserveSingleSpaces</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/PreserveSingleSpaces.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\PreserveSingleSpaces">PreserveSingleSpaces</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveComments.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveComments.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\RemoveComments">RemoveComments</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveComments.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\RemoveComments">RemoveComments</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveInterElementWhitespace.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveInterElementWhitespace.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\RemoveInterElementWhitespace">RemoveInterElementWhitespace</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveInterElementWhitespace.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\RemoveInterElementWhitespace">RemoveInterElementWhitespace</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveLivePreviewAttributes.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveLivePreviewAttributes.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\RemoveLivePreviewAttributes">RemoveLivePreviewAttributes</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RemoveLivePreviewAttributes.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\RemoveLivePreviewAttributes">RemoveLivePreviewAttributes</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RenameLivePreviewEvent.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RenameLivePreviewEvent.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\RenameLivePreviewEvent">RenameLivePreviewEvent</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/RenameLivePreviewEvent.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\RenameLivePreviewEvent">RenameLivePreviewEvent</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/SortAttributesByName.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/SortAttributesByName.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\SortAttributesByName">SortAttributesByName</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/SortAttributesByName.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\SortAttributesByName">SortAttributesByName</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/TransposeComments.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/TransposeComments.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\TransposeComments">TransposeComments</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/TransposeComments.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\TransposeComments">TransposeComments</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/UninlineAttributes.html#property_queries">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/UninlineAttributes.html#property_queries">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\UninlineAttributes">UninlineAttributes</abbr>#queries</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/UninlineAttributes.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\UninlineAttributes">UninlineAttributes</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/Autoemail/Configurator.html#property_quickMatch">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/Autoemail/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\Autoemail\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Autoemail/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Autoemail\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/Autoimage/Configurator.html#property_quickMatch">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/Autoimage/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\Autoimage\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Autoimage/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Autoimage\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/Autovideo/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\Autovideo\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Autovideo/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Autovideo\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_quickMatch">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/ConfiguratorBase.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/ConfiguratorBase.html"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/Escaper/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\Escaper\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Escaper/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Escaper\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/HTMLComments/Configurator.html#property_quickMatch">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/HTMLComments/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\HTMLComments\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/HTMLComments/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\HTMLComments\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/HTMLElements/Configurator.html#property_quickMatch">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/HTMLElements/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\HTMLElements\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/HTMLElements/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\HTMLElements\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/HTMLEntities/Configurator.html#property_quickMatch">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/HTMLEntities/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\HTMLEntities\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/HTMLEntities/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\HTMLEntities\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator.html#property_quickMatch">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/PipeTables/Configurator.html#property_quickMatch">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/PipeTables/Configurator.html#property_quickMatch">
 <abbr title="s9e\TextFormatter\Plugins\PipeTables\Configurator">Configurator</abbr>#quickMatch</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/PipeTables/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\PipeTables\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Renderers/PHP.html#property_quickRegexp">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Renderers/PHP.html#property_quickRegexp">
 <abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr>#quickRegexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Renderers/PHP.html"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Renderers/PHP.html#property_quickRenderingTest">
 <abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr>#quickRenderingTest</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Renderers/PHP.html"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></em></dt>
@@ -3957,13 +3969,13 @@ and a constant part</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Pr
 <abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr>::removeAttribute</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></em></dt>
                     <dd><p>Remove given attribute</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/Autoemail/Configurator.html#property_regexp">
 <abbr title="s9e\TextFormatter\Plugins\Autoemail\Configurator">Configurator</abbr>#regexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Autoemail/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Autoemail\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/Autoimage/Configurator.html#property_regexp">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/Autoimage/Configurator.html#property_regexp">
 <abbr title="s9e\TextFormatter\Plugins\Autoimage\Configurator">Configurator</abbr>#regexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Autoimage/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Autoimage\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/Autovideo/Configurator.html#property_regexp">
 <abbr title="s9e\TextFormatter\Plugins\Autovideo\Configurator">Configurator</abbr>#regexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Autovideo/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Autovideo\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html#property_regexp">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr>#regexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html#property_repositories">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html#property_repositories">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr>#repositories</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html#method_rewind">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr>::rewind</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator">Configurator</abbr></a></em></dt>
@@ -3999,7 +4011,7 @@ and a constant part</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Pr
 <abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\Emphasis">Emphasis</abbr>#remaining</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Litedown/Parser/Passes/Emphasis.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\Emphasis">Emphasis</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator.html#property_regexp">
 <abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator">Configurator</abbr>#regexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Plugins/Preg/Configurator.html#property_references">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Plugins/Preg/Configurator.html#property_references">
 <abbr title="s9e\TextFormatter\Plugins\Preg\Configurator">Configurator</abbr>#references</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Preg/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Preg\Configurator">Configurator</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Plugins/Preg/Configurator.html#property_referencesRegexp">
 <abbr title="s9e\TextFormatter\Plugins\Preg\Configurator">Configurator</abbr>#referencesRegexp</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Plugins/Preg/Configurator.html"><abbr title="s9e\TextFormatter\Plugins\Preg\Configurator">Configurator</abbr></a></em></dt>
@@ -4047,11 +4059,11 @@ and a constant part</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Pr
                     <dd><p>Execute an HTTP request</p></dd>        </dl><h2 id="letterS">S</h2>
         <dl id="indexS"><dt>$<a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html#property_static">
 <abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr>#static</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Fatdown/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Fatdown\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/Forum/Renderer.html#property_static">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/Forum/Renderer.html#property_static">
 <abbr title="s9e\TextFormatter\Bundles\Forum\Renderer">Renderer</abbr>#static</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/Forum/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\Forum\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_static">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html#property_static">
 <abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr>#static</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Bundles/MediaPack/Renderer.html"><abbr title="s9e\TextFormatter\Bundles\MediaPack\Renderer">Renderer</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt><a href="s9e/TextFormatter/Configurator.html#method_saveBundle">
+                    <dd>{@inheritdoc}</dd><dt><a href="s9e/TextFormatter/Configurator.html#method_saveBundle">
 <abbr title="s9e\TextFormatter\Configurator">Configurator</abbr>::saveBundle</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a></em></dt>
                     <dd><p>Create and save a bundle based on this configuration</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/BundleGenerator.html#property_serializer">
 <abbr title="s9e\TextFormatter\Configurator\BundleGenerator">BundleGenerator</abbr>#serializer</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/BundleGenerator.html"><abbr title="s9e\TextFormatter\Configurator\BundleGenerator">BundleGenerator</abbr></a></em></dt>
@@ -4232,7 +4244,7 @@ and a constant part</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Pr
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr>#supportedOperators</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/AbstractXSLSupportCheck.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractXSLSupportCheck">AbstractXSLSupportCheck</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowFlashFullScreen.html#property_settingName">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowFlashFullScreen">DisallowFlashFullScreen</abbr>#settingName</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowFlashFullScreen.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowFlashFullScreen">DisallowFlashFullScreen</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowFlashFullScreen.html#property_settings">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowFlashFullScreen.html#property_settings">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowFlashFullScreen">DisallowFlashFullScreen</abbr>#settings</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowFlashFullScreen.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowFlashFullScreen">DisallowFlashFullScreen</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowUncompilableXSL.html#property_supportedElements">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowUncompilableXSL">DisallowUncompilableXSL</abbr>#supportedElements</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowUncompilableXSL.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowUncompilableXSL">DisallowUncompilableXSL</abbr></a></em></dt>
@@ -4246,11 +4258,11 @@ and a constant part</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Pr
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowUnsupportedXSL">DisallowUnsupportedXSL</abbr>#supportedFunctions</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowUnsupportedXSL.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowUnsupportedXSL">DisallowUnsupportedXSL</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashNetworking.html#property_settingName">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\RestrictFlashNetworking">RestrictFlashNetworking</abbr>#settingName</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashNetworking.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\RestrictFlashNetworking">RestrictFlashNetworking</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashNetworking.html#property_settings">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashNetworking.html#property_settings">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\RestrictFlashNetworking">RestrictFlashNetworking</abbr>#settings</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashNetworking.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\RestrictFlashNetworking">RestrictFlashNetworking</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashScriptAccess.html#property_settingName">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\RestrictFlashScriptAccess">RestrictFlashScriptAccess</abbr>#settingName</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashScriptAccess.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\RestrictFlashScriptAccess">RestrictFlashScriptAccess</abbr></a></em></dt>
-                    <dd><p>{@inheritdoc}</p></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashScriptAccess.html#property_settings">
+                    <dd>{@inheritdoc}</dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashScriptAccess.html#property_settings">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\RestrictFlashScriptAccess">RestrictFlashScriptAccess</abbr>#settings</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/RestrictFlashScriptAccess.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\RestrictFlashScriptAccess">RestrictFlashScriptAccess</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="s9e/TextFormatter/Configurator/TemplateNormalizations/FoldConstantXPathExpressions.html#property_supportedFunctions">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\FoldConstantXPathExpressions">FoldConstantXPathExpressions</abbr>#supportedFunctions</a> &mdash; <em>Property in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/FoldConstantXPathExpressions.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\FoldConstantXPathExpressions">FoldConstantXPathExpressions</abbr></a></em></dt>
@@ -4694,7 +4706,7 @@ when every other renderer is unavailable</p></dd><dt><a href="s9e/TextFormatter/
                     <dd></dd>        </dl><h2 id="letter_">_</h2>
         <dl id="index_"><dt><a href="s9e/TextFormatter/Configurator.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator">Configurator</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator.html#method___get">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator.html#method___get">
 <abbr title="s9e\TextFormatter\Configurator">Configurator</abbr>::__get</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a></em></dt>
                     <dd><p>Magic __get automatically loads plugins, returns registered vars</p></dd><dt><a href="s9e/TextFormatter/Configurator.html#method___isset">
 <abbr title="s9e\TextFormatter\Configurator">Configurator</abbr>::__isset</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a></em></dt>
@@ -4704,151 +4716,151 @@ when every other renderer is unavailable</p></dd><dt><a href="s9e/TextFormatter/
 <abbr title="s9e\TextFormatter\Configurator">Configurator</abbr>::__unset</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator.html"><abbr title="s9e\TextFormatter\Configurator">Configurator</abbr></a></em></dt>
                     <dd><p>Magic __set removes plugins from the plugins collection, unregisters vars</p></dd><dt><a href="s9e/TextFormatter/Configurator/BundleGenerator.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\BundleGenerator">BundleGenerator</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/BundleGenerator.html"><abbr title="s9e\TextFormatter\Configurator\BundleGenerator">BundleGenerator</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Collections/PluginCollection.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Collections/PluginCollection.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Collections\PluginCollection">PluginCollection</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Collections/PluginCollection.html"><abbr title="s9e\TextFormatter\Configurator\Collections\PluginCollection">PluginCollection</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Collections/Ruleset.html#method___call">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Collections/Ruleset.html#method___call">
 <abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr>::__call</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Collections/Ruleset.html"><abbr title="s9e\TextFormatter\Configurator\Collections\Ruleset">Ruleset</abbr></a></em></dt>
                     <dd><p>Add a rule to this set</p></dd><dt><a href="s9e/TextFormatter/Configurator/Exceptions/UnsafeTemplateException.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Exceptions\UnsafeTemplateException">UnsafeTemplateException</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Exceptions/UnsafeTemplateException.html"><abbr title="s9e\TextFormatter\Configurator\Exceptions\UnsafeTemplateException">UnsafeTemplateException</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Helpers/TemplateInspector.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateInspector">TemplateInspector</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Normalizer">Normalizer</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/Normalizer.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Normalizer">Normalizer</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/Parser.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Parser">Parser</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Helpers/TemplateParser/Parser.html"><abbr title="s9e\TextFormatter\Configurator\Helpers\TemplateParser\Parser">Parser</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Attribute.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/Attribute.html"><abbr title="s9e\TextFormatter\Configurator\Items\Attribute">Attribute</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilter">AttributeFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilter">AttributeFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/AlnumFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/AlnumFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\AlnumFilter">AlnumFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/AlnumFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\AlnumFilter">AlnumFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/ChoiceFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/ChoiceFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\ChoiceFilter">ChoiceFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/ChoiceFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\ChoiceFilter">ChoiceFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/ColorFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/ColorFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\ColorFilter">ColorFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/ColorFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\ColorFilter">ColorFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/EmailFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/EmailFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\EmailFilter">EmailFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/EmailFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\EmailFilter">EmailFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FalseFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FalseFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\FalseFilter">FalseFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FalseFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\FalseFilter">FalseFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FloatFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FloatFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\FloatFilter">FloatFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FloatFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\FloatFilter">FloatFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FontfamilyFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FontfamilyFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\FontfamilyFilter">FontfamilyFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/FontfamilyFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\FontfamilyFilter">FontfamilyFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/HashmapFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/HashmapFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\HashmapFilter">HashmapFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/HashmapFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\HashmapFilter">HashmapFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IdentifierFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IdentifierFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\IdentifierFilter">IdentifierFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IdentifierFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\IdentifierFilter">IdentifierFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IntFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IntFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\IntFilter">IntFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IntFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\IntFilter">IntFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IpFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IpFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\IpFilter">IpFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IpFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\IpFilter">IpFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IpportFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IpportFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\IpportFilter">IpportFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/IpportFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\IpportFilter">IpportFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/Ipv4Filter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/Ipv4Filter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\Ipv4Filter">Ipv4Filter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/Ipv4Filter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\Ipv4Filter">Ipv4Filter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/Ipv6Filter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/Ipv6Filter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\Ipv6Filter">Ipv6Filter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/Ipv6Filter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\Ipv6Filter">Ipv6Filter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/MapFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/MapFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\MapFilter">MapFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/MapFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\MapFilter">MapFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/NumberFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/NumberFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\NumberFilter">NumberFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/NumberFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\NumberFilter">NumberFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/RangeFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/RangeFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RangeFilter">RangeFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/RangeFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RangeFilter">RangeFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/RegexpFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\RegexpFilter">RegexpFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/SimpletextFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/SimpletextFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\SimpletextFilter">SimpletextFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/SimpletextFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\SimpletextFilter">SimpletextFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/TimestampFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/TimestampFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\TimestampFilter">TimestampFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/TimestampFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\TimestampFilter">TimestampFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/UintFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/UintFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\UintFilter">UintFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/UintFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\UintFilter">UintFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/UrlFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/UrlFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\UrlFilter">UrlFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/AttributeFilters/UrlFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilters\UrlFilter">UrlFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/ProgrammableCallback.html"><abbr title="s9e\TextFormatter\Configurator\Items\ProgrammableCallback">ProgrammableCallback</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Regexp.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/Regexp.html"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Regexp.html#method___toString">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/Regexp.html#method___toString">
 <abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr>::__toString</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/Regexp.html"><abbr title="s9e\TextFormatter\Configurator\Items\Regexp">Regexp</abbr></a></em></dt>
                     <dd><p>Return this regexp as a string</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Tag.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/Tag.html"><abbr title="s9e\TextFormatter\Configurator\Items\Tag">Tag</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/TagFilter.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/TagFilter.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\TagFilter">TagFilter</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/TagFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\TagFilter">TagFilter</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Template.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/Template.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Template.html#method___call">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Items/Template.html#method___call">
 <abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr>::__call</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a></em></dt>
                     <dd><p>Handle calls to undefined methods</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/Template.html#method___toString">
 <abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr>::__toString</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/Template.html"><abbr title="s9e\TextFormatter\Configurator\Items\Template">Template</abbr></a></em></dt>
                     <dd><p>Return this template's content</p></dd><dt><a href="s9e/TextFormatter/Configurator/Items/TemplateDocument.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Items\TemplateDocument">TemplateDocument</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Items/TemplateDocument.html"><abbr title="s9e\TextFormatter\Configurator\Items\TemplateDocument">TemplateDocument</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript">JavaScript</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript">JavaScript</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/CallbackGenerator.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/CallbackGenerator.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\CallbackGenerator">CallbackGenerator</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/CallbackGenerator.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\CallbackGenerator">CallbackGenerator</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Code.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Code.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Code.html#method___toString">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Code.html#method___toString">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr>::__toString</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/Code.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Code">Code</abbr></a></em></dt>
                     <dd><p>Return this source code</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/ConfigOptimizer.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\ConfigOptimizer">ConfigOptimizer</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/ConfigOptimizer.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\ConfigOptimizer">ConfigOptimizer</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/ConfigValue.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/ConfigValue.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\ConfigValue">ConfigValue</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/ConfigValue.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\ConfigValue">ConfigValue</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Encoder.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Encoder.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/Encoder.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Encoder">Encoder</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/ClosureCompilerApplication.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/ClosureCompilerApplication.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifiers\ClosureCompilerApplication">ClosureCompilerApplication</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/ClosureCompilerApplication.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifiers\ClosureCompilerApplication">ClosureCompilerApplication</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/ClosureCompilerService.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/ClosureCompilerService.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifiers\ClosureCompilerService">ClosureCompilerService</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/ClosureCompilerService.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifiers\ClosureCompilerService">ClosureCompilerService</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/FirstAvailable.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/FirstAvailable.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifiers\FirstAvailable">FirstAvailable</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/Minifiers/FirstAvailable.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\Minifiers\FirstAvailable">FirstAvailable</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/OnlineMinifier.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/JavaScript/OnlineMinifier.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\JavaScript\OnlineMinifier">OnlineMinifier</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/JavaScript/OnlineMinifier.html"><abbr title="s9e\TextFormatter\Configurator\JavaScript\OnlineMinifier">OnlineMinifier</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RecursiveParser/AbstractRecursiveMatcher.html"><abbr title="s9e\TextFormatter\Configurator\RecursiveParser\AbstractRecursiveMatcher">AbstractRecursiveMatcher</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP">PHP</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP">PHP</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/Optimizer.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/Optimizer.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\Optimizer">Optimizer</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/Optimizer.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\Optimizer">Optimizer</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/Serializer.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/Serializer.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\Serializer">Serializer</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/Serializer.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\Serializer">Serializer</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/SwitchStatement.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/SwitchStatement.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\SwitchStatement">SwitchStatement</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/SwitchStatement.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\SwitchStatement">SwitchStatement</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor">XPathConvertor</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RendererGenerators/PHP/XPathConvertor.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\PHP\XPathConvertor">XPathConvertor</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/XSLT.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/RendererGenerators/XSLT.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RendererGenerators\XSLT">XSLT</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RendererGenerators/XSLT.html"><abbr title="s9e\TextFormatter\Configurator\RendererGenerators\XSLT">XSLT</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Rendering.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Rendering.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\Rendering">Rendering</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Rendering.html"><abbr title="s9e\TextFormatter\Configurator\Rendering">Rendering</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/RulesGenerator.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/RulesGenerator.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RulesGenerator">RulesGenerator</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RulesGenerator.html"><abbr title="s9e\TextFormatter\Configurator\RulesGenerator">RulesGenerator</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/RulesGenerators/EnforceContentModels.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/RulesGenerators/EnforceContentModels.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RulesGenerators\EnforceContentModels">EnforceContentModels</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RulesGenerators/EnforceContentModels.html"><abbr title="s9e\TextFormatter\Configurator\RulesGenerators\EnforceContentModels">EnforceContentModels</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/RulesGenerators/ManageParagraphs.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/RulesGenerators/ManageParagraphs.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\RulesGenerators\ManageParagraphs">ManageParagraphs</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/RulesGenerators/ManageParagraphs.html"><abbr title="s9e\TextFormatter\Configurator\RulesGenerators\ManageParagraphs">ManageParagraphs</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecker.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecker.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecker">TemplateChecker</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateChecker.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecker">TemplateChecker</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/AbstractFlashRestriction.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/AbstractFlashRestriction.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractFlashRestriction">AbstractFlashRestriction</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/AbstractFlashRestriction.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\AbstractFlashRestriction">AbstractFlashRestriction</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowElement.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowElement.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowElement">DisallowElement</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowElement.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowElement">DisallowElement</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowElementNS.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowElementNS.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowElementNS">DisallowElementNS</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowElementNS.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowElementNS">DisallowElementNS</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowFlashFullScreen.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowFlashFullScreen.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowFlashFullScreen">DisallowFlashFullScreen</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowFlashFullScreen.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowFlashFullScreen">DisallowFlashFullScreen</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowNodeByXPath.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowNodeByXPath.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowNodeByXPath">DisallowNodeByXPath</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowNodeByXPath.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowNodeByXPath">DisallowNodeByXPath</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowXPathFunction.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowXPathFunction.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowXPathFunction">DisallowXPathFunction</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateChecks/DisallowXPathFunction.html"><abbr title="s9e\TextFormatter\Configurator\TemplateChecks\DisallowXPathFunction">DisallowXPathFunction</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AddAttributeValueToElements.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AddAttributeValueToElements.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AddAttributeValueToElements">AddAttributeValueToElements</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/AddAttributeValueToElements.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AddAttributeValueToElements">AddAttributeValueToElements</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateNormalizations/Custom.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\Custom">Custom</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/Custom.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\Custom">Custom</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateNormalizations/SetRelNoreferrerOnTargetedLinks.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/TemplateNormalizations/SetRelNoreferrerOnTargetedLinks.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\SetRelNoreferrerOnTargetedLinks">SetRelNoreferrerOnTargetedLinks</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizations/SetRelNoreferrerOnTargetedLinks.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\SetRelNoreferrerOnTargetedLinks">SetRelNoreferrerOnTargetedLinks</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Configurator/TemplateNormalizer.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizer">TemplateNormalizer</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/TemplateNormalizer.html"><abbr title="s9e\TextFormatter\Configurator\TemplateNormalizer">TemplateNormalizer</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Configurator/Traits/CollectionProxy.html#method___call">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Configurator/Traits/CollectionProxy.html#method___call">
 <abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr>::__call</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Traits/CollectionProxy.html"><abbr title="s9e\TextFormatter\Configurator\Traits\CollectionProxy">CollectionProxy</abbr></a></em></dt>
                     <dd><p>Forward all unknown method calls to $this-&gt;collection</p></dd><dt><a href="s9e/TextFormatter/Configurator/Traits/Configurable.html#method___get">
 <abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr>::__get</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Traits/Configurable.html"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></em></dt>
@@ -4860,25 +4872,25 @@ when every other renderer is unavailable</p></dd><dt><a href="s9e/TextFormatter/
 <abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr>::__unset</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/Traits/Configurable.html"><abbr title="s9e\TextFormatter\Configurator\Traits\Configurable">Configurable</abbr></a></em></dt>
                     <dd><p>Unset a property, if the class supports it</p></dd><dt><a href="s9e/TextFormatter/Configurator/UrlConfig.html#method___construct">
 <abbr title="s9e\TextFormatter\Configurator\UrlConfig">UrlConfig</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Configurator/UrlConfig.html"><abbr title="s9e\TextFormatter\Configurator\UrlConfig">UrlConfig</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Parser.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Parser.html#method___construct">
 <abbr title="s9e\TextFormatter\Parser">Parser</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Parser.html#method___sleep">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Parser.html#method___sleep">
 <abbr title="s9e\TextFormatter\Parser">Parser</abbr>::__sleep</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></em></dt>
-                    <dd><p>Serializer</p></dd><dt><a href="s9e/TextFormatter/Parser.html#method___wakeup">
+                    <dd>Serializer</dd><dt><a href="s9e/TextFormatter/Parser.html#method___wakeup">
 <abbr title="s9e\TextFormatter\Parser">Parser</abbr>::__wakeup</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Parser.html"><abbr title="s9e\TextFormatter\Parser">Parser</abbr></a></em></dt>
-                    <dd><p>Unserializer</p></dd><dt><a href="s9e/TextFormatter/Parser/Tag.html#method___construct">
+                    <dd>Unserializer</dd><dt><a href="s9e/TextFormatter/Parser/Tag.html#method___construct">
 <abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCode.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCode">BBCode</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCodeMonkey.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCodeMonkey">BBCodeMonkey</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/BBCodeMonkey.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\BBCodeMonkey">BBCodeMonkey</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/Repository.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/Repository.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\Repository">Repository</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/Repository.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\Repository">Repository</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/RepositoryCollection.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/RepositoryCollection.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\RepositoryCollection">RepositoryCollection</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/BBCodes/Configurator/RepositoryCollection.html"><abbr title="s9e\TextFormatter\Plugins\BBCodes\Configurator\RepositoryCollection">RepositoryCollection</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Plugins/Censor/Helper.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Plugins/Censor/Helper.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\Censor\Helper">Helper</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Censor/Helper.html"><abbr title="s9e\TextFormatter\Plugins\Censor\Helper">Helper</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Plugins/ConfiguratorBase.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/ConfiguratorBase.html"><abbr title="s9e\TextFormatter\Plugins\ConfiguratorBase">ConfiguratorBase</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Litedown/Parser/ParsedText.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\ParsedText">ParsedText</abbr></a></em></dt>
@@ -4888,25 +4900,25 @@ when every other renderer is unavailable</p></dd><dt><a href="s9e/TextFormatter/
 <abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/Litedown/Parser/Passes/AbstractPass.html"><abbr title="s9e\TextFormatter\Plugins\Litedown\Parser\Passes\AbstractPass">AbstractPass</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/Collections/XmlFileDefinitionCollection.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\Collections\XmlFileDefinitionCollection">XmlFileDefinitionCollection</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/Collections/XmlFileDefinitionCollection.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\Collections\XmlFileDefinitionCollection">XmlFileDefinitionCollection</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateBuilder.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateBuilder.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateBuilder">TemplateBuilder</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateBuilder.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateBuilder">TemplateBuilder</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators/Choose.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators/Choose.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateGenerators\Choose">Choose</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/MediaEmbed/Configurator/TemplateGenerators/Choose.html"><abbr title="s9e\TextFormatter\Plugins\MediaEmbed\Configurator\TemplateGenerators\Choose">Choose</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Plugins/ParserBase.html#method___construct">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Plugins/ParserBase.html#method___construct">
 <abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Plugins/ParserBase.html"><abbr title="s9e\TextFormatter\Plugins\ParserBase">ParserBase</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Renderers/PHP.html#method___sleep">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Renderers/PHP.html#method___sleep">
 <abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr>::__sleep</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Renderers/PHP.html"><abbr title="s9e\TextFormatter\Renderers\PHP">PHP</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Renderers/XSLT.html#method___construct">
 <abbr title="s9e\TextFormatter\Renderers\XSLT">XSLT</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Renderers/XSLT.html"><abbr title="s9e\TextFormatter\Renderers\XSLT">XSLT</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd><dt><a href="s9e/TextFormatter/Renderers/XSLT.html#method___sleep">
+                    <dd>Constructor</dd><dt><a href="s9e/TextFormatter/Renderers/XSLT.html#method___sleep">
 <abbr title="s9e\TextFormatter\Renderers\XSLT">XSLT</abbr>::__sleep</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Renderers/XSLT.html"><abbr title="s9e\TextFormatter\Renderers\XSLT">XSLT</abbr></a></em></dt>
-                    <dd><p>Serializer</p></dd><dt><a href="s9e/TextFormatter/Renderers/XSLT.html#method___wakeup">
+                    <dd>Serializer</dd><dt><a href="s9e/TextFormatter/Renderers/XSLT.html#method___wakeup">
 <abbr title="s9e\TextFormatter\Renderers\XSLT">XSLT</abbr>::__wakeup</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Renderers/XSLT.html"><abbr title="s9e\TextFormatter\Renderers\XSLT">XSLT</abbr></a></em></dt>
                     <dd><p>Unserialize helper</p></dd><dt><a href="s9e/TextFormatter/Utils/Http/Clients/Cached.html#method___construct">
 <abbr title="s9e\TextFormatter\Utils\Http\Clients\Cached">Cached</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Utils/Http/Clients/Cached.html"><abbr title="s9e\TextFormatter\Utils\Http\Clients\Cached">Cached</abbr></a></em></dt>
                     <dd></dd><dt><a href="s9e/TextFormatter/Utils/Http/Clients/Native.html#method___construct">
 <abbr title="s9e\TextFormatter\Utils\Http\Clients\Native">Native</abbr>::__construct</a>() &mdash; <em>Method in class <a href="s9e/TextFormatter/Utils/Http/Clients/Native.html"><abbr title="s9e\TextFormatter\Utils\Http\Clients\Native">Native</abbr></a></em></dt>
-                    <dd><p>Constructor</p></dd>        </dl></div><div id="footer">
+                    <dd>Constructor</dd>        </dl></div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>
     </body>

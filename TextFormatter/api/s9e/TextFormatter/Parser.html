@@ -10,25 +10,37 @@
         <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
         <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
         <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
         <script async defer src="../../js/bootstrap.min.js"></script>
-        <script src="../../js/typeahead.min.js"></script>
-        <script src="../../doctum.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     </head>
 
-    <body id="class" data-name="class:s9e_TextFormatter_Parser" data-root-path="../../">
+    <body id="class" data-name="class:s9e_TextFormatter_Parser" data-root-path="../../" data-search-index-url="../../doctum-search.json">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../search.html">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
             <span class="icon icon-search"></span>
             <input name="search"
+                   id="doctum-search-auto-complete"
                    class="typeahead form-control"
                    type="search"
-                   placeholder="Search">
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
         </form>
     </div>
 
@@ -454,7 +466,7 @@
                 <div class="col-md-8">
                     <a href="#method___construct">__construct</a>(array $config)
         
-                                            <p><p>Constructor</p></p>                </div>
+                                            <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -464,7 +476,7 @@
                 <div class="col-md-8">
                     <a href="#method___sleep">__sleep</a>()
         
-                                            <p><p>Serializer</p></p>                </div>
+                                            <p>Serializer</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -474,7 +486,7 @@
                 <div class="col-md-8">
                     <a href="#method___wakeup">__wakeup</a>()
         
-                                            <p><p>Unserializer</p></p>                </div>
+                                            <p>Unserializer</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1055,7 +1067,7 @@
             
 
         <div class="method-description">
-                            <p><p>Constructor</p></p>                        
+                            <p>Constructor</p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1088,7 +1100,7 @@
             
 
         <div class="method-description">
-                            <p><p>Serializer</p></p>                <p><p>Returns the properties that need to persist through serialization.</p>
+                            <p>Serializer</p>                <p><p>Returns the properties that need to persist through serialization.</p>
 <p>NOTE: using __sleep() is preferable to implementing Serializable because it leaves the choice
 of the serializer to the user (e.g. igbinary)</p></p>        
         </div>
@@ -1122,7 +1134,7 @@ of the serializer to the user (e.g. igbinary)</p></p>
             
 
         <div class="method-description">
-                            <p><p>Unserializer</p></p>                        
+                            <p>Unserializer</p>                        
         </div>
         <div class="tags">
             
@@ -2230,7 +2242,7 @@ existing plugin</p></p>
                     <tr>
                 <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td><p>Tag</p></td>
+                <td>Tag</td>
             </tr>
             </table>
 
@@ -2272,7 +2284,7 @@ existing plugin</p></p>
                     <tr>
                 <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td><p>Tag</p></td>
+                <td>Tag</td>
             </tr>
             </table>
 
@@ -2314,7 +2326,7 @@ existing plugin</p></p>
                     <tr>
                 <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td><p>Tag</p></td>
+                <td>Tag</td>
             </tr>
             </table>
 
@@ -2361,7 +2373,7 @@ loop from running indefinitely</p></p>
                     <tr>
                 <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td><p>Tag</p></td>
+                <td>Tag</td>
             </tr>
             </table>
 
@@ -2403,7 +2415,7 @@ loop from running indefinitely</p></p>
                     <tr>
                 <td><a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a></td>
                 <td>$tag</td>
-                <td><p>Tag</p></td>
+                <td>Tag</td>
             </tr>
             </table>
 
