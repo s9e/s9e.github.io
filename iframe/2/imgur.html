@@ -27,6 +27,11 @@
 
 			body.firstChild.style.height = height + 'px';
 		}
+		else
+		{
+			// Ignore messages that we don't recognize
+			return;
+		}
 
 		if (height && port)
 		{

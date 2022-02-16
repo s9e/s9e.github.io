@@ -19,6 +19,11 @@
 		{
 			port = e.ports[0];
 		}
+		else
+		{
+			// Ignore messages that we don't recognize
+			return;
+		}
 		e.stopImmediatePropagation();
 
 		if (height && port)
