@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <title>Content from Twitter</title>
+<link rel="preconnect" crossorigin="" href="//cdn.syndication.twimg.com">
 <link rel="preconnect" crossorigin="" href="//syndication.twitter.com">
-<!--link rel="preconnect" crossorigin="" href="//cdn.syndication.twimg.com"-->
 <style>a,body,iframe{border:0;height:100vh;margin:0;width:100%}</style>
 <body>
 <script>
@@ -10,7 +10,24 @@
 	let height,
 		id = hash.replace(/\D/g, ''),
 		port,
+		storage = {},
+		storageKey = 'tweet-' + id,
 		theme = /d/.test(hash) ? 'dark' : 'light';
+
+	try
+	{
+		storage = window.localStorage;
+		height  = +storage[storageKey];
+	}
+	catch (e)
+	{
+	}
+
+	setTimeout(function()
+	{
+		body.innerHTML = '<iframe allowfullscreen="" src="//platform.twitter.com/embed/Tweet.html?dnt=true&embedId=twitter-widget-0&frame=false&hideCard=false&hideThread=false&id=' + id + '&lang=' + navigator.language.substr(0, 2) + '&theme=' + theme + '&widgetsVersion=82e1070%3A1619632193066&width=550px" scrolling=no onload="nextSibling.style.display=\'none\'"></iframe><a href="//twitter.com/user/status/' + id + '" target="_blank" style="background:url(//pbs.twimg.com/favicon.ico) 97.5% 10px / 32px no-repeat;display:block;line-height:100vh;position:absolute;text-align:center;top:0">Loading tweet...</a>';
+	}, 0);
+
 	onmessage = function(e)
 	{
 		e.stopImmediatePropagation();
@@ -22,6 +39,13 @@
 			if (method === 'resize')
 			{
 				height = data.params[0].height;
+				try
+				{
+					storage[storageKey] = height;
+				}
+				catch (e)
+				{
+				}
 			}
 			else if (method === 'no_results')
 			{
@@ -45,7 +69,5 @@
 			port.postMessage(height);
 		}
 	};
-
-	body.innerHTML = '<iframe allowfullscreen="" src="//platform.twitter.com/embed/Tweet.html?dnt=true&embedId=twitter-widget-0&frame=false&hideCard=false&hideThread=false&id=' + id + '&lang=' + navigator.language.substr(0, 2) + '&theme=' + theme + '&widgetsVersion=82e1070%3A1619632193066&width=550px" scrolling=no onload="nextSibling.style.display=\'none\'"></iframe><a href="//twitter.com/user/status/' + id + '" target="_blank" style="background:url(//cdn.syndication.twimg.com/favicon.ico) 97% 10px / 29px no-repeat;display:block;line-height:100vh;position:absolute;text-align:center;top:0">Loading tweet...</a>';
 })(document.body, location.hash);
 </script>
