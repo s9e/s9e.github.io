@@ -25,6 +25,7 @@ function minify($m)
 				'header'  => "Connection: close\r\n"
 				           . "Content-length: " . strlen($content) . "\r\n"
 				           . "Content-type: application/x-www-form-urlencoded",
+				'timeout' => 20,
 				'content' => $content
 			]
 		])
