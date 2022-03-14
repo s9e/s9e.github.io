@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <title>Content from Reddit</title>
-<link rel="preconnect" crossorigin="" href="//www.redditstatic.com">
 <body style="margin:0">
 <script>
 (function (hash)
 {
 	let m, regexp = /#((?:depth|show\w+|theme)=\w+)/g,
-		html = '<iframe scrolling="no" src="//www.redditmedia.com/r/' + hash.replace(/#.*/, '').replace(/[^\w/]/g, '') + '?embed=true&depth=1';
+		height,
+		port,
+		id = hash.replace(/#.*/, '').replace(/[^\w/]/g, ''),
+		storage = {},
+		storageKey = 'reddit-' + id,
+		html = '<iframe scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1';
 
 	while (m = regexp.exec(hash))
 	{
 		html += '&' + m[1];
 	}
-	html += '" style="border:0;height:100vh;width:100%"></iframe>';
+	html += '" style="background:url(//www.redditstatic.com/circled-snoo-1x.png) top 16px right 16px / 32px no-repeat;border:0;height:100vh;width:100%"></iframe>';
 
-	document.body.innerHTML = html;
+	setTimeout(function ()
+	{
+		document.body.innerHTML = html;
+	}, 0);
 
-	let height, port;
+	try
+	{
+		storage = window.localStorage;
+		height  = +storage[storageKey];
+	}
+	catch (e)
+	{
+	}
+
 	onmessage = function (e)
 	{
 		let m = /resize.embed","data":(\d+)/.exec(e.data);
 		if (m)
 		{
-			height = m[1];
+			height = +m[1];
+			try
+			{
+				storage[storageKey] = height;
+			}
+			catch (e)
+			{
+			}
 		}
 		else if (e.data === 's9e:init')
 		{
