@@ -6,7 +6,7 @@
 {
 	onload = function ()
 	{
-		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;margin:0 0 12px;width:calc(100% - 2px)" src="//www.instagram.com/p/' + location.hash.replace(/[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + '"></iframe>';
+		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;height:calc(100vh - 2px);width:calc(100% - 2px)" src="//www.instagram.com/p/' + location.hash.replace(/[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + '"></iframe>';
 	};
 
 	let height, port;
@@ -20,8 +20,7 @@
 		}
 		else if (m = /MEASURE.*height\":(\d+)/.exec(e.data))
 		{
-			height = +m[1];
-			body.firstChild.style.height = height + 'px';
+			height = +m[1] + 2;
 		}
 		else
 		{
@@ -31,7 +30,7 @@
 
 		if (height && port)
 		{
-			port.postMessage(height + 14);
+			port.postMessage(height);
 		}
 	};
 })(document.body);
