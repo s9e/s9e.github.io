@@ -4,7 +4,10 @@
 <script>
 (function (body)
 {
-	body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;margin:0 0 12px;width:calc(100% - 2px)" src="//www.instagram.com/p/' + location.hash.replace(/[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + '"></iframe>';
+	onload = function ()
+	{
+		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;margin:0 0 12px;width:calc(100% - 2px)" src="//www.instagram.com/p/' + location.hash.replace(/[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + '"></iframe>';
+	};
 
 	let height, port;
 	onmessage = function (e)
