@@ -5,6 +5,11 @@
 <script>
 (function ()
 {
+	onload = function ()
+	{
+		document.body.innerHTML = '<iframe scrolling="no" src="//t.me/' + location.hash.replace(/[^\w\/]/g, '') + '?embed=1" style="border:0;height:100vh;width:100%"></iframe>';
+	};
+
 	let height, port;
 	onmessage = function (e)
 	{
@@ -16,7 +21,6 @@
 		else if (e.data === 's9e:init')
 		{
 			port = e.ports[0];
-			document.body.innerHTML = '<iframe scrolling="no" src="//t.me/' + location.hash.replace(/[^\w\/]/g, '') + '?embed=1" style="border:0;height:100vh;width:100%"></iframe>';
 		}
 		else
 		{
