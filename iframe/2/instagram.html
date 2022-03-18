@@ -2,25 +2,25 @@
 <title>Content from Instagram</title>
 <body style="margin:0">
 <script>
-(function (body)
+(function ()
 {
 	onload = function ()
 	{
-		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;height:calc(100vh - 2px);width:calc(100% - 2px)" src="//www.instagram.com/p/' + location.hash.replace(/[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + '"></iframe>';
+		document.body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="//www.instagram.com/p/' + location.hash.replace(/[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + '"></iframe>';
 	};
 
 	let height, port;
 	onmessage = function (e)
 	{
-		let m;
-		if (e.data === 's9e:init')
+		const m = /MEASURE.*height\":(\d+)/.exec(e.data);
+		if (m)
+		{
+			height = +m[1] + 2;
+		}
+		else if (e.data === 's9e:init')
 		{
 			port = e.ports[0];
 			e.stopImmediatePropagation();
-		}
-		else if (m = /MEASURE.*height\":(\d+)/.exec(e.data))
-		{
-			height = +m[1] + 2;
 		}
 		else
 		{
@@ -33,5 +33,5 @@
 			port.postMessage(height);
 		}
 	};
-})(document.body);
+})();
 </script>
