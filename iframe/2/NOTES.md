@@ -10,6 +10,11 @@ The page starts polling 48 ms after the first message is received. The height is
 The height is polled ~10 times in the first second, ~10 times in the next 2 seconds, ~10 more times in the next 3 seconds. Polling stops if no change is detected in ~40 seconds.
 
 
+### Timing
+
+Third party scripts are loaded with the `async` attribute and subframes are created in an `onload` event. This allows the page's `onload` event to fire immediately and establish contact with the parent iframe, without having to wait for all of the third party resources to load. This prevents pathologically slow servers from blocking the rest of the execution.
+
+
 ### Geometry
 
 The iframe uses getBoundingClientRect() on the root element to get its dimensions.
