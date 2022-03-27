@@ -8,8 +8,6 @@
 		height,
 		port,
 		id = hash.replace(/#.*/, '').replace(/[^\w/]/g, ''),
-		storage = {},
-		storageKey = 'reddit-' + id,
 		html = '<iframe scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1';
 
 	while (m = regexp.exec(hash))
@@ -23,28 +21,12 @@
 		document.body.innerHTML = html;
 	};
 
-	try
-	{
-		storage = window.localStorage;
-		height  = +storage[storageKey];
-	}
-	catch (e)
-	{
-	}
-
 	onmessage = function (e)
 	{
 		let m = /resize.embed","data":(\d+)/.exec(e.data);
 		if (m)
 		{
 			height = +m[1];
-			try
-			{
-				storage[storageKey] = height;
-			}
-			catch (e)
-			{
-			}
 		}
 		else if (e.data === 's9e:init')
 		{
