@@ -30,6 +30,12 @@ span[data-s9e-mediaembed] > span > span,
 {
 	cursor: pointer;
 }
+[data-s9e-mediaembed-c2l=""]::after,
+[data-s9e-mediaembed-c2l=""]::before
+{
+	/* Hide the proxy's decorations until it's being loaded */
+	display: none;
+}
 [data-s9e-mediaembed-c2l]::after
 {
 	content: "";

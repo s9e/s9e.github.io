@@ -360,11 +360,11 @@
 	*/
 	function prepareClickToLoad(proxy)
 	{
+		const wrapper = proxy.parentNode.parentNode;
+		proxy.setAttribute(dataPrefix + '-c2l', wrapper.getAttribute(dataPrefix));
 		if (proxy.hasAttribute(dataPrefix + '-c2l-poster'))
 		{
-			// Set the background on the proxy's wrapper if applicable
-			let node = (proxy.hasAttribute(dataPrefix)) ? proxy : proxy.parentNode.parentNode;
-			node.style.background = 'url(' + proxy.getAttribute(dataPrefix + '-c2l-poster') + ') center / cover';
+			wrapper.style.background = 'url(' + proxy.getAttribute(dataPrefix + '-c2l-poster') + ') center / cover';
 		}
 		proxy.onclick = function (e)
 		{
