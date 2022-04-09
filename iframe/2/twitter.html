@@ -10,39 +10,7 @@
 	let height,
 		id = hash.replace(/\D/g, ''),
 		port,
-		storage = {},
-		storageKey = 'tweet-' + id,
 		theme = /d/.test(hash) ? 'dark' : 'light';
-
-	try
-	{
-		storage = window.localStorage;
-		height  = +storage[storageKey];
-	}
-	catch (e)
-	{
-	}
-
-	function postHeight()
-	{
-		if (height && port)
-		{
-			port.postMessage(height);
-		}
-	}
-
-	function setHeight(newHeight)
-	{
-		height = newHeight;
-		try
-		{
-			storage[storageKey] = height;
-		}
-		catch (e)
-		{
-		}
-		postHeight();
-	}
 
 	// Set the page's content in an onload event so that it (and the parent's iframe's onload event)
 	// can be handled immediately, without waiting for the inner iframe to fully load
@@ -62,19 +30,23 @@
 			      a      = body.lastChild;
 			if (method === 'resize')
 			{
-				setHeight(data.params[0].height);
+				height = data.params[0].height;
 				a.style.display = 'none';
 			}
 			else if (method === 'no_results')
 			{
 				a.innerHTML = 'This tweet is unavailable.';
-				setHeight(50);
+				height = 50;
 			}
 		}
 		else if (e.data === 's9e:init' && !port)
 		{
 			port = e.ports[0];
-			postHeight();
+		}
+
+		if (height && port)
+		{
+			port.postMessage(height);
 		}
 	};
 })(document.body, location.hash);
