@@ -2,11 +2,11 @@
 <title>Content from Instagram</title>
 <body style="margin:0">
 <script>
-(function ()
+(function (hash)
 {
 	onload = function ()
 	{
-		document.body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="//www.instagram.com/p/' + location.hash.replace(/[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + '"></iframe>';
+		document.body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="//www.instagram.com/p/' + hash.replace(/#.*|[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + (/#theme=dark/.test(hash) ? '&theme=dark' : '') + '"></iframe>';
 	};
 
 	let height, port;
@@ -33,5 +33,5 @@
 			port.postMessage(height);
 		}
 	};
-})();
+})(location.hash.substring(1));
 </script>
