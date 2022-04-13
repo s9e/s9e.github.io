@@ -69,7 +69,7 @@ function minifyDir($dir)
 			function ($m)
 			{
 				// https://www.w3.org/TR/html/syntax.html#attribute-value-unquoted-state
-				return preg_replace("(=\"\"|(=)\"((?:\\\$\\{(?:'[^'\\s]++'|[^'}])*+\\}|[^\$\"'])*+)\")", '$1$2', $m[0]);
+				return preg_replace('(=""|(=)"((?:\\$\\{(?:\'[^\'\\s]++\'|[^\'}])*+\\}|[^$"\'])*+)")', '$1$2', $m[0]);
 			},
 			$html
 		);
