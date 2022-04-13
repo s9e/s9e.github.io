@@ -2,9 +2,9 @@
 <title>Content from Gist</title>
 <body style="margin:0">
 <script>
-(function (document)
+((document) =>
 {
-	onmessage = function (e)
+	onmessage = (e) =>
 	{
 		if (e.data !== 's9e:init')
 		{
@@ -49,9 +49,9 @@
 	};
 
 	/** @param {{div,stylesheet}} o */
-	cb = function (o)
+	window['cb'] = (o) =>
 	{
-		var link  = document.createElement('link');
+		let link  = document.createElement('link');
 		link.rel  = 'stylesheet';
 		link.href = o['stylesheet'];
 
@@ -59,11 +59,11 @@
 		document.body.innerHTML = o['div'].replace(/<a\b/g, '<a target=_top');
 	};
 
-	var script  = document.createElement('script');
+	let script  = document.createElement('script');
 	script.type = 'text/javascript';
 	script.src  = '//gist.github.com/' + location.hash.substr(1) + '.json?callback=cb';
 
-	script.onerror = function ()
+	script.onerror = () =>
 	{
 		document.body.innerHTML = 'Not Found';
 	};

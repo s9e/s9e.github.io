@@ -26,7 +26,7 @@ function minify($m)
 				'header'  => "Connection: close\r\n"
 				           . "Content-length: " . strlen($content) . "\r\n"
 				           . "Content-type: application/x-www-form-urlencoded",
-				'timeout' => 20,
+				'timeout' => 30,
 				'content' => $content
 			]
 		])
@@ -69,7 +69,7 @@ function minifyDir($dir)
 			function ($m)
 			{
 				// https://www.w3.org/TR/html/syntax.html#attribute-value-unquoted-state
-				return preg_replace('(=""|(=)"((?:\\$\\{(?:\'[^\'\\s]++\'|[^\'}])*+\\}|[^$"\'])*+)")', '$1$2', $m[0]);
+				return preg_replace('(=""|(=)"((?:\\$\\{(?:\'[^\'\\s]++\'|[^\'}])*+\\}|[^$"\'\\s])*+)")', '$1$2', $m[0]);
 			},
 			$html
 		);

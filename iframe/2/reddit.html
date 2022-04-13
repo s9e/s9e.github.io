@@ -2,26 +2,27 @@
 <title>Content from Reddit</title>
 <body style="margin:0">
 <script>
-(function (hash)
+((hash) =>
 {
-	let m, regexp = /#((?:depth|show\w+|theme)=\w+)/g,
-		height,
-		port,
-		id = hash.replace(/#.*/, '').replace(/[^\w/]/g, ''),
-		html = '<iframe scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1';
+	let height, port;
 
-	while (m = regexp.exec(hash))
+	onload = () =>
 	{
-		html += '&' + m[1];
-	}
-	html += '" style="background:url(//www.redditstatic.com/circled-snoo-1x.png) top 16px right 16px / 32px no-repeat;border:0;height:100vh;width:100%"></iframe>';
+		let regexp = /#((?:depth|show\w+|theme)=\w+)/g,
+			id     = hash.replace(/#.*/, '').replace(/[^\w/]/g, ''),
+			html   = '<iframe scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1',
+			m;
 
-	onload = function ()
-	{
+		while (m = regexp.exec(hash))
+		{
+			html += '&' + m[1];
+		}
+		html += '" style="background:url(//www.redditstatic.com/circled-snoo-1x.png) top 16px right 16px / 32px no-repeat;border:0;height:100vh;width:100%"></iframe>';
+
 		document.body.innerHTML = html;
 	};
 
-	onmessage = function (e)
+	onmessage = (e) =>
 	{
 		let m = /resize.embed","data":(\d+)/.exec(e.data);
 		if (m)
