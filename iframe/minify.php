@@ -6,11 +6,11 @@ if (php_sapi_name() !== 'cli')
 	exit;
 }
 
-function minify($m)
+function minify($code)
 {
 	$params = [
 		'compilation_level' => 'SIMPLE_OPTIMIZATIONS',
-		'js_code'           => $m[2],
+		'js_code'           => $code,
 		'output_format'     => 'json',
 		'output_info'       => 'compiled_code',
 		'language_out'      => 'ECMASCRIPT_2015'
@@ -39,7 +39,7 @@ function minify($m)
 	$code = str_replace("\n", '', trim($response->compiledCode, ';'));
 	$code = preg_replace("(^'use strict';)", '', $code);
 
-	return $m[1] . $code . $m[3];
+	return $code;
 }
 
 function minifyDir($dir)
@@ -69,7 +69,7 @@ function minifyDir($dir)
 			function ($m)
 			{
 				// https://www.w3.org/TR/html/syntax.html#attribute-value-unquoted-state
-				return preg_replace('(=""|(=)"((?:\\$\\{(?:\'[^\'\\s]++\'|[^\'}])*+\\}|[^$"\'\\s])*+)")', '$1$2', $m[0]);
+				return preg_replace('(=""|(=)"((?:\\$\\{(?:\'[^\'\\s]++\'|[^"\'}])*+\\}|[^$"\'\\s])*+)")', '$1$2', $m[0]);
 			},
 			$html
 		);
@@ -77,7 +77,14 @@ function minifyDir($dir)
 		$html = preg_replace('/>\\n\\s*</', '><', $html);
 		try
 		{
-			$html = preg_replace_callback('#(<script>)(.+?)(</script>)#s', 'minify', $html);
+			$html = preg_replace_callback(
+				'#(<script>)(.+?)(</script>)#s',
+				function ($m)
+				{
+					return $m[1] . minify($m[2]) . $m[3];
+				},
+				$html
+			);
 		}
 		catch (RuntimeException $e)
 		{
