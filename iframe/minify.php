@@ -12,7 +12,8 @@ function minify($m)
 		'compilation_level' => 'SIMPLE_OPTIMIZATIONS',
 		'js_code'           => $m[2],
 		'output_format'     => 'json',
-		'output_info'       => 'compiled_code'
+		'output_info'       => 'compiled_code',
+		'language_out'      => 'ECMASCRIPT_2016'
 	];
 
 	$content  = http_build_query($params) . '&output_info=errors';
@@ -35,7 +36,10 @@ function minify($m)
 		throw new RuntimeException;
 	}
 
-	return $m[1] . str_replace("\n", '', trim($response->compiledCode, ';')) . $m[3];
+	$code = str_replace("\n", '', trim($response->compiledCode, ';'));
+	$code = preg_replace("(^'use strict';)", '', $code);
+
+	return $m[1] . $code . $m[3];
 }
 
 function minifyDir($dir)
@@ -65,7 +69,7 @@ function minifyDir($dir)
 			function ($m)
 			{
 				// https://www.w3.org/TR/html/syntax.html#attribute-value-unquoted-state
-				return preg_replace('(=""|(=)"((?:\' \\+ (?:[^\']|\'[^\'\s]*+\')+? \\+ \'|[^\\s<=>"\'`])*)")', '$1$2', $m[0]);
+				return preg_replace('(=""|(=)"((?:\\$\\{(?:[^\']|\'[^\'\s]*+\')+?\\}|\' \\+ (?:[^\']|\'[^\'\s]*+\')+? \\+ \'|[^\\s<=>"\'`])*)")', '$1$2', $m[0]);
 			},
 			$html
 		);

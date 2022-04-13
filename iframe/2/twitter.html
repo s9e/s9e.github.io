@@ -5,16 +5,16 @@
 <style>a,body,iframe{border:0;height:100vh;margin:0;width:100%}a,img{position:absolute}img{right:14px;top:10px}</style>
 <body>
 <script>
-(function (body, hash)
+((body, hash) =>
 {
-	let height,
-		id = hash.replace(/\D/g, ''),
-		isDark = /d/.test(hash),
-		port;
+	const id     = hash.replace(/\D/g, ''),
+	      isDark = /d/.test(hash);
+
+	let height, port;
 
 	// Set the page's content in an onload event so that it (and the parent's iframe's onload event)
 	// can be handled immediately, without waiting for the inner iframe to fully load
-	onload = function ()
+	onload = () =>
 	{
 		// NOTE: the link's opaque background blocks the view of the tweet while it's loading, but
 		//       the "resize" event is fired so early in the process (before the tweet has finished
@@ -22,7 +22,7 @@
 		body.innerHTML = '<iframe allowfullscreen="" src="//platform.twitter.com/embed/Tweet.html?dnt=true&embedId=x&frame=false&hideCard=false&hideThread=false&id=' + id + '&lang=' + navigator.language.substr(0, 2) + '&theme=' + (isDark ? 'dark' : 'light') + '&widgetsVersion=940dd9ee54270%3A1649359550911&width=550px" scrolling=no></iframe><a href="//twitter.com/user/status/' + id + '" target="_blank" style="align-items:center;background:#' + (isDark ? '000' : 'fff') + ';border:solid 1px #' + (isDark ? '222;color:#999;filter:brightness(1.5) grayscale(1)' : 'cdd') + ';border-radius:12px;box-sizing:border-box;display:flex;justify-content:center;padding:1em;top:0"><img src="//pbs.twimg.com/favicon.ico" width="30" onerror="nextSibling.innerHTML=\'Cannot connect to Twitter. Disable any adblocker and tracking prevention then try again.\'"><span>Loading tweet...</span></a>';
 	};
 
-	onmessage = function (e)
+	onmessage = (e) =>
 	{
 		e.stopImmediatePropagation();
 
