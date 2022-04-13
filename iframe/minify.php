@@ -13,7 +13,7 @@ function minify($m)
 		'js_code'           => $m[2],
 		'output_format'     => 'json',
 		'output_info'       => 'compiled_code',
-		'language_out'      => 'ECMASCRIPT_2016'
+		'language_out'      => 'ECMASCRIPT_2015'
 	];
 
 	$content  = http_build_query($params) . '&output_info=errors';
