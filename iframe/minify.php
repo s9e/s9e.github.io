@@ -53,49 +53,55 @@ function minifyDir($dir)
 			continue;
 		}
 
-		$target = substr($source, 0, -4) . 'min.html';
-		if (@filemtime($target) === filemtime($source))
+		minifyFile($source, true);
+	}
+}
+
+function minifyFile(string $source, $checkTime): void
+{
+	$target = substr($source, 0, -4) . 'min.html';
+	if ($checkTime && @filemtime($target) === filemtime($source))
+	{
+		return;
+	}
+
+	$html = file_get_contents($source);
+	echo $source, "\n";
+
+	// Remove comments
+	$html = preg_replace('(<!--.*?-->)s', '', $html);
+
+	// Remove quotes around attribute values
+	$html = preg_replace_callback(
+		'(<[^>]+)',
+		function ($m)
 		{
-//			continue;
-		}
+			return unquoteAttributes($m[0]);
+		},
+		$html
+	);
 
-		$html = file_get_contents($source);
-		echo $source, "\n";
-
-		// Remove comments
-		$html = preg_replace('(<!--.*?-->)s', '', $html);
-
-		// Remove quotes around attribute values
+	$html = preg_replace('/>\\n\\s*</', '><', $html);
+	try
+	{
 		$html = preg_replace_callback(
-			'(<[^>]+)',
+			'#(<script>)(.+?)(</script>)#s',
 			function ($m)
 			{
-				return unquoteAttributes($m[0]);
+				return $m[1] . minify($m[2]) . $m[3];
 			},
 			$html
 		);
-
-		$html = preg_replace('/>\\n\\s*</', '><', $html);
-		try
-		{
-			$html = preg_replace_callback(
-				'#(<script>)(.+?)(</script>)#s',
-				function ($m)
-				{
-					return $m[1] . minify($m[2]) . $m[3];
-				},
-				$html
-			);
-		}
-		catch (RuntimeException $e)
-		{
-			echo "FAILED\n";
-			continue;
-		}
-
-		file_put_contents($target, $html);
-		touch($target, filemtime($source));
 	}
+	catch (RuntimeException $e)
+	{
+		echo "FAILED\n";
+
+		return;
+	}
+
+	file_put_contents($target, $html);
+	touch($target, filemtime($source));
 }
 
 function unquoteAttributes(string $html): string
@@ -157,5 +163,12 @@ function mustBeQuoted(string $attrValue): bool
 	return false;
 }
 
-//minifyDir(__DIR__);
+if (isset($_SERVER['argv'][1]))
+{
+	foreach (array_slice($_SERVER['argv'], 1) as $filepath)
+	{
+		minifyFile($filepath, false);
+	}
+}
+minifyDir(__DIR__);
 minifyDir(__DIR__ . '/2');
