@@ -156,7 +156,7 @@ function mustBeQuoted(string $attrValue): bool
 	return false;
 }
 
-$paths = array_slice($_SERVER['argv'], 1) ?: [__DIR__, __DIR__ . '/2'];
+$paths = array_slice($_SERVER['argv'], 1) ?: [__DIR__ . '/2'];
 foreach ($paths as $path)
 {
 	if (is_dir($path))
