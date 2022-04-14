@@ -8,6 +8,8 @@ if (php_sapi_name() !== 'cli')
 
 function minify($code)
 {
+	return $code;
+
 	$params = [
 		'compilation_level' => 'SIMPLE_OPTIMIZATIONS',
 		'js_code'           => $code,
@@ -54,7 +56,7 @@ function minifyDir($dir)
 		$target = substr($source, 0, -4) . 'min.html';
 		if (@filemtime($target) === filemtime($source))
 		{
-			continue;
+//			continue;
 		}
 
 		$html = file_get_contents($source);
@@ -68,8 +70,7 @@ function minifyDir($dir)
 			'(<[^>]+)',
 			function ($m)
 			{
-				// https://www.w3.org/TR/html/syntax.html#attribute-value-unquoted-state
-				return preg_replace('(=""|(=)"((?:\\$\\{(?:\'[^\'\\s]++\'|[^"\'}])*+\\}|[^$"\'\\s])*+)")', '$1$2', $m[0]);
+				return unquoteAttributes($m[0]);
 			},
 			$html
 		);
@@ -95,6 +96,60 @@ function minifyDir($dir)
 		file_put_contents($target, $html);
 		touch($target, filemtime($source));
 	}
+}
+
+function unquoteAttributes(string $html): string
+{
+	return preg_replace_callback(
+		'(="([^"]*+)"',
+		function ($m)
+		{
+			if ($m[1] === '')
+			{
+				// Empty attribute syntax
+				return '';
+			}
+
+			return (mustBeQuoted($m[1])) ? $m[0] : $m[1];
+		},
+		$html
+	);
+}
+
+function mustBeQuoted(string $attrValue): bool
+{
+	// https://html.spec.whatwg.org/multipage/syntax.html#unquoted
+	if (preg_match('(^[^\\s"\'=<>`]*+$)D', $attrValue))
+	{
+		return false;
+	}
+
+	preg_match_all('(\\$\\{[^\\}]++\\}|[^$]++)', $attrValue, $matches);
+	foreach ($matches[0] as $match)
+	{
+		if ($match[0] === '$')
+		{
+			if (str_contains($match, '"'))
+			{
+				return true;
+			}
+
+			preg_match_all("('([^']*+)')", $match, $m);
+			foreach ($m[1] as $str)
+			{
+				if (mustBeQuoted($str))
+				{
+					return true;
+				}
+			}
+		}
+		elseif (mustBeQuoted($match))
+		{
+			return true;
+		}
+	}
+
+	return false;
 }
 
 minifyDir(__DIR__);
