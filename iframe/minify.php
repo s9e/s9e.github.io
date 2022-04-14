@@ -81,7 +81,7 @@ function minifyFile(string $source, $checkTime): void
 		$html
 	);
 
-	$html = preg_replace('/>\\n\\s*</', '><', $html);
+	$html = preg_replace('(>\\n\\s*<)', '><', $html);
 	try
 	{
 		$html = preg_replace_callback(
