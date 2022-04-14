@@ -8,8 +8,6 @@ if (php_sapi_name() !== 'cli')
 
 function minify($code)
 {
-	return $code;
-
 	$params = [
 		'compilation_level' => 'SIMPLE_OPTIMIZATIONS',
 		'js_code'           => $code,
