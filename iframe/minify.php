@@ -101,7 +101,7 @@ function minifyDir($dir)
 function unquoteAttributes(string $html): string
 {
 	return preg_replace_callback(
-		'(="([^"]*+)"',
+		'(="([^"]*+)")',
 		function ($m)
 		{
 			if ($m[1] === '')
@@ -116,10 +116,15 @@ function unquoteAttributes(string $html): string
 	);
 }
 
-function mustBeQuoted(string $attrValue): bool
+function isValidUnquoted(string $attrValue): bool
 {
 	// https://html.spec.whatwg.org/multipage/syntax.html#unquoted
-	if (preg_match('(^[^\\s"\'=<>`]*+$)D', $attrValue))
+	return (bool) !preg_match('([\\s"\'=<>`])', $attrValue);
+
+}
+function mustBeQuoted(string $attrValue): bool
+{
+	if (isValidUnquoted($attrValue))
 	{
 		return false;
 	}
@@ -137,13 +142,13 @@ function mustBeQuoted(string $attrValue): bool
 			preg_match_all("('([^']*+)')", $match, $m);
 			foreach ($m[1] as $str)
 			{
-				if (mustBeQuoted($str))
+				if (!isValidUnquoted($str))
 				{
 					return true;
 				}
 			}
 		}
-		elseif (mustBeQuoted($match))
+		elseif (!isValidUnquoted($match))
 		{
 			return true;
 		}
@@ -152,5 +157,5 @@ function mustBeQuoted(string $attrValue): bool
 	return false;
 }
 
-minifyDir(__DIR__);
+//minifyDir(__DIR__);
 minifyDir(__DIR__ . '/2');
