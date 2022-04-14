@@ -167,8 +167,11 @@ if (isset($_SERVER['argv'][1]))
 {
 	foreach (array_slice($_SERVER['argv'], 1) as $filepath)
 	{
-		minifyFile($filepath, false);
+		minifyFile(__DIR__ . '/' . $filepath, false);
 	}
 }
-minifyDir(__DIR__);
-minifyDir(__DIR__ . '/2');
+else
+{
+	minifyDir(__DIR__);
+	minifyDir(__DIR__ . '/2');
+}
