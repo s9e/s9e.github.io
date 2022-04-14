@@ -1,4 +1,4 @@
-<!DOCTYPE html><title>Content from Reddit</title><body style="margin:0"><script>
+<!DOCTYPE html><title>Content from Reddit</title><body style=margin:0><script>
 ((hash) =>
 {
 	let height, port;
@@ -7,7 +7,7 @@
 	{
 		let regexp = /#((?:depth|show\w+|theme)=\w+)/g,
 			id     = hash.replace(/#.*/, '').replace(/[^\w/]/g, ''),
-			html   = '<iframe scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1',
+			html   = '<iframe scrolling=no src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1',
 			m;
 
 		while (m = regexp.exec(hash))
