@@ -11,6 +11,7 @@ onload = () =>
 {
 	((body, hash) =>
 	{
+		// This needs to be able to handle '#123dark' as well as '#123#theme=dark'
 		const id     = hash.replace(/\D/g, ''),
 			  isDark = /d/.test(hash);
 
