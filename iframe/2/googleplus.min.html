@@ -1,1 +1,47 @@
-<!DOCTYPE html><title>Content from Google+</title><body style=margin:0><div class=g-post></div><script>document.body.firstChild.setAttribute("data-href","//plus.google.com/"+location.hash.replace(/\D/g,""));onmessage=function(c){function f(){a===(a=Math.ceil(document.documentElement.getBoundingClientRect().height))||90>a?b+=12:g.postMessage(a);1E3>b&&d()}function d(){clearTimeout(e);e=setTimeout(f,b)}if("s9e:init"===c.data){c.stopImmediatePropagation();var b=48,a=0,g=c.ports[0],e=0;onclick=onresize=function(){b=48;d()};d()}}</script><script src=//apis.google.com/js/platform.js></script>
+<!DOCTYPE html><title>Content from Google+</title><body style="margin:0"><div class="g-post"></div><script>
+document.body.firstChild.setAttribute('data-href', '//plus.google.com/' + location.hash.replace(/\D/g, ''));
+
+onmessage = function (e)
+{
+	if (e.data !== 's9e:init')
+	{
+		return;
+	}
+	e.stopImmediatePropagation();
+
+	let delay     = 48,
+		height    = 0,
+		port      = e.ports[0],
+		timeoutId = 0;
+	function getHeight()
+	{
+		return Math.ceil(document.documentElement.getBoundingClientRect().height);
+	}
+	function checkHeight()
+	{
+		if (height === (height = getHeight()) || height < 90)
+		{
+			delay += 12;
+		}
+		else
+		{
+			port.postMessage(height);
+		}
+		if (delay < 1000)
+		{
+			schedule();
+		}
+	}
+	function schedule()
+	{
+		clearTimeout(timeoutId);
+		timeoutId = setTimeout(checkHeight, delay);
+	}
+	onclick = onresize = function ()
+	{
+		delay = 48;
+		schedule();
+	};
+	schedule();
+};
+</script><script src="//apis.google.com/js/platform.js"></script>

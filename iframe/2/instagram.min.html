@@ -1,1 +1,34 @@
-<!DOCTYPE html><title>Content from Instagram</title><body style=margin:0><script>(function(d){onload=function(){document.body.innerHTML='<iframe allowfullscreen scrolling=no style=background:#fff;border:solid 1px #dbdbdb;border-radius:3px;box-sizing:border-box;height:100vh;width:100% src="//www.instagram.com/p/'+d.replace(/#.*|[^-\w]/g,"")+"/embed/captioned/?cr=1&wp="+innerWidth+(/#theme=dark/.test(d)?"&theme=dark":"")+'"></iframe>'};let b,c;onmessage=function(a){const e=/MEASURE.*height":(\d+)/.exec(a.data);if(e)b=+e[1]+2;else if("s9e:init"===a.data)c=a.ports[0],a.stopImmediatePropagation();else return;b&&c&&c.postMessage(b)}})(location.hash.substring(1))</script>
+<!DOCTYPE html><title>Content from Instagram</title><body style="margin:0"><script>
+(function (hash)
+{
+	onload = function ()
+	{
+		document.body.innerHTML = '<iframe allowfullscreen scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="//www.instagram.com/p/' + hash.replace(/#.*|[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + (/#theme=dark/.test(hash) ? '&theme=dark' : '') + '"></iframe>';
+	};
+
+	let height, port;
+	onmessage = function (e)
+	{
+		const m = /MEASURE.*height\":(\d+)/.exec(e.data);
+		if (m)
+		{
+			height = +m[1] + 2;
+		}
+		else if (e.data === 's9e:init')
+		{
+			port = e.ports[0];
+			e.stopImmediatePropagation();
+		}
+		else
+		{
+			// Ignore messages that we don't recognize
+			return;
+		}
+
+		if (height && port)
+		{
+			port.postMessage(height);
+		}
+	};
+})(location.hash.substring(1));
+</script>

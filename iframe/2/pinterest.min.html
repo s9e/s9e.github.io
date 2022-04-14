@@ -1,1 +1,60 @@
-<!DOCTYPE html><title>Content from Pinterest</title><body style=margin:0><div><a data-pin-board-width=900 data-pin-width=medium data-pin-scale-height=360></a></div><script>(function(b,d,c,a){/^\d+$/.test(c)?(d+="pin/",a+="Pin"):a+="Board";b.href=d+c;b.setAttribute("data-pin-do",a)})(document.body.firstChild.firstChild,"https://www.pinterest.com/",location.hash.substr(1),"embed");onmessage=function(b){function d(){e===(e=Math.ceil(document.documentElement.getBoundingClientRect().height))||90>e?a+=12:g.postMessage(e);1E3>a&&c()}function c(){clearTimeout(f);f=setTimeout(d,a)}if("s9e:init"===b.data){b.stopImmediatePropagation();var a=48,e=0,g=b.ports[0],f=0;onclick=onresize=function(){a=48;c()};c()}}</script><script src=//assets.pinterest.com/js/pinit.js></script>
+<!DOCTYPE html><title>Content from Pinterest</title><body style="margin:0"><div><a data-pin-board-width="900" data-pin-width="medium" data-pin-scale-height="360"></a></div><script>
+(function(a, url, id, type)
+{
+	if (/^\d+$/.test(id))
+	{
+		url  += 'pin/';
+		type += 'Pin';
+	}
+	else
+	{
+		type += 'Board';
+	}
+	a.href = url + id;
+	a.setAttribute('data-pin-do', type);
+})(document.body.firstChild.firstChild, 'https://www.pinterest.com/', location.hash.substr(1), 'embed');
+
+onmessage = function (e)
+{
+	if (e.data !== 's9e:init')
+	{
+		return;
+	}
+	e.stopImmediatePropagation();
+
+	let delay     = 48,
+		height    = 0,
+		port      = e.ports[0],
+		timeoutId = 0;
+	function getHeight()
+	{
+		return Math.ceil(document.documentElement.getBoundingClientRect().height);
+	}
+	function checkHeight()
+	{
+		if (height === (height = getHeight()) || height < 90)
+		{
+			delay += 12;
+		}
+		else
+		{
+			port.postMessage(height);
+		}
+		if (delay < 1000)
+		{
+			schedule();
+		}
+	}
+	function schedule()
+	{
+		clearTimeout(timeoutId);
+		timeoutId = setTimeout(checkHeight, delay);
+	}
+	onclick = onresize = function ()
+	{
+		delay = 48;
+		schedule();
+	};
+	schedule();
+};
+</script><script src="//assets.pinterest.com/js/pinit.js"></script>
