@@ -138,7 +138,12 @@ function mustBeQuoted(string $attrValue): bool
 	preg_match_all('((?|\\$\\{[^\\}]++\\}|\'\\s*\\+(.*?)\\+\'|[^$]++))', $attrValue, $matches);
 	foreach ($matches[0] as $i => $match)
 	{
-		if (isset($matches[1][$i]))
+		if (isValidUnquoted($match))
+		{
+			return false;
+		}
+
+		if ($matches[1][$i] !== '')
 		{
 			preg_match_all("('([^']*+)')", $matches[1][$i], $m);
 			foreach ($m[1] as $str)
