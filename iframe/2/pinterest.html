@@ -2,7 +2,7 @@
 <title>Content from Pinterest</title>
 <body style="margin:0"><div><a data-pin-board-width="900" data-pin-width="medium" data-pin-scale-height="360"></a></div>
 <script>
-(function(a, url, id, type)
+((a, url, id, type) =>
 {
 	if (/^\d+$/.test(id))
 	{
@@ -15,9 +15,9 @@
 	}
 	a.href = url + id;
 	a.setAttribute('data-pin-do', type);
-})(document.body.firstChild.firstChild, 'https://www.pinterest.com/', location.hash.substr(1), 'embed');
+})(document.body.firstChild.firstChild, 'https://www.pinterest.com/', location.hash.substring(1), 'embed');
 
-onmessage = function (e)
+onmessage = (e) =>
 {
 	if (e.data !== 's9e:init')
 	{
@@ -53,7 +53,7 @@ onmessage = function (e)
 		clearTimeout(timeoutId);
 		timeoutId = setTimeout(checkHeight, delay);
 	}
-	onclick = onresize = function ()
+	onclick = onresize = () =>
 	{
 		delay = 48;
 		schedule();
