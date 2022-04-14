@@ -110,7 +110,7 @@ function unquoteAttributes(string $html): string
 				return '';
 			}
 
-			return (mustBeQuoted($m[1])) ? $m[0] : $m[1];
+			return (mustBeQuoted($m[1])) ? $m[0] : '=' . $m[1];
 		},
 		$html
 	);
