@@ -135,17 +135,12 @@ function mustBeQuoted(string $attrValue): bool
 		return false;
 	}
 
-	preg_match_all('(\\$\\{[^\\}]++\\}|[^$]++)', $attrValue, $matches);
-	foreach ($matches[0] as $match)
+	preg_match_all('((?|\\$\\{[^\\}]++\\}|\'\\s*\\+(.*?)\\+\'|[^$]++))', $attrValue, $matches);
+	foreach ($matches[0] as $i => $match)
 	{
-		if ($match[0] === '$')
+		if (isset($matches[1][$i]))
 		{
-			if (str_contains($match, '"'))
-			{
-				return true;
-			}
-
-			preg_match_all("('([^']*+)')", $match, $m);
+			preg_match_all("('([^']*+)')", $matches[1][$i], $m);
 			foreach ($m[1] as $str)
 			{
 				if (!isValidUnquoted($str))
@@ -163,15 +158,15 @@ function mustBeQuoted(string $attrValue): bool
 	return false;
 }
 
-if (isset($_SERVER['argv'][1]))
+$paths = array_slice($_SERVER['argv'], 1) ?: [__DIR__, __DIR__ . '/2'];
+foreach ($paths as $path)
 {
-	foreach (array_slice($_SERVER['argv'], 1) as $filepath)
+	if (is_dir($path))
 	{
-		minifyFile(__DIR__ . '/' . $filepath, false);
+		minifyDir($path);
 	}
-}
-else
-{
-	minifyDir(__DIR__);
-	minifyDir(__DIR__ . '/2');
+	else
+	{
+		minifyFile($path, false);
+	}
 }
