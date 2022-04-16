@@ -3,22 +3,22 @@
 <link rel="preconnect" crossorigin="" href="//p.twitchcdn.net">
 <link rel="preconnect" crossorigin="" href="//static.twitchcdn.net">
 <script>
-onmessage = function (e)
+onmessage = (e) =>
 {
 	if (e.source !== parent)
 	{
 		return;
 	}
 
-	var regexp = /(\w+)=([-\w]+)/g,
-		m,
-		vars = {'autoplay': 'false'};
+	let m,
+		regexp = /(\w+)=([-\w]+)/g,
+		url    = 'https://',
+		vars   = {'autoplay': 'false'};
 	while (m = regexp.exec(location.hash))
 	{
 		vars[m[1]] = m[2];
 	}
 
-	var url = 'https://';
 	if (vars['clip_id'])
 	{
 		url += 'clips.twitch.tv/embed?clip=' + vars['clip_id'];

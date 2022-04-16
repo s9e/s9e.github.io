@@ -4,7 +4,7 @@
 <script>
 document.body.firstChild.setAttribute('data-href', '//plus.google.com/' + location.hash.replace(/\D/g, ''));
 
-onmessage = function (e)
+onmessage = (e) =>
 {
 	if (e.data !== 's9e:init')
 	{
@@ -40,7 +40,7 @@ onmessage = function (e)
 		clearTimeout(timeoutId);
 		timeoutId = setTimeout(checkHeight, delay);
 	}
-	onclick = onresize = function ()
+	onclick = onresize = () =>
 	{
 		delay = 48;
 		schedule();

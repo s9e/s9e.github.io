@@ -40,7 +40,7 @@
 			clearTimeout(timeoutId);
 			timeoutId = setTimeout(checkHeight, delay);
 		}
-		onclick = onresize = function ()
+		onclick = onresize = () =>
 		{
 			delay = 48;
 			schedule();
@@ -61,7 +61,7 @@
 
 	let script  = document.createElement('script');
 	script.type = 'text/javascript';
-	script.src  = '//gist.github.com/' + location.hash.substr(1) + '.json?callback=cb';
+	script.src  = '//gist.github.com/' + location.hash.substring(1) + '.json?callback=cb';
 
 	script.onerror = () =>
 	{
