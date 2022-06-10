@@ -354,7 +354,7 @@ passed as second parameter. Otherwise, an empty array is passed</p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_trimUrl">
-        <div class="location">at line 71</div>
+        <div class="location">at line 72</div>
         <code>            protected        string
     <strong>trimUrl</strong>(string $url)
         </code>
@@ -369,6 +369,7 @@ Exceptions:</p>
 <ul>
 <li>dashes and underscores, (base64 IDs could end with one)</li>
 <li>equal signs, (because of &quot;foo?bar=&quot;)</li>
+<li>plus signs, (used by some file share services to force download)</li>
 <li>trailing slashes,</li>
 <li>closing parentheses. (they are balanced separately)</li>
 </ul></p>        
