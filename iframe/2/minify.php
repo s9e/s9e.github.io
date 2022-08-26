@@ -23,7 +23,7 @@ function minify(string $js)
 
 	passthru("$exec --js $temp --js_output_file $out");
 
-	$js = str_replace("\n", '', trim(file_get_contents($out)));
+	$js = trim(str_replace("\n", '', file_get_contents($out)), ';');
 
 	unlink($temp);
 	unlink($out);
