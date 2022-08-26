@@ -10,7 +10,8 @@
 
 	onload = () =>
 	{
-		document.body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#' + (isDark ? '000': 'fff') + ';border:solid 1px #' + (isDark ? '363636' : 'dbdbdb') + ';border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="//www.instagram.com/p/' + hash.replace(/#.*|[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + (isDark ? '&theme=dark' : '') + '"></iframe>';
+		// NOTE: Instagram expects the hash to be a JSON object with an "os" element
+		document.body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#' + (isDark ? '000': 'fff') + ';border:solid 1px #' + (isDark ? '363636' : 'dbdbdb') + ';border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src=\'//www.instagram.com/p/' + hash.replace(/#.*|[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + (isDark ? '&theme=dark' : '') + '#{"os":1}\'></iframe>';
 	};
 
 	let height, port;
