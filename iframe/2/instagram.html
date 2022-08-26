@@ -2,19 +2,19 @@
 <title>Content from Instagram</title>
 <body style="margin:0">
 <script>
-(function (hash)
+((hash) =>
 {
 	// Instagram's dark theme does not seem to be actually usable as of 2022-05-04
 	//const isDark = /#theme=dark/.test(hash);
 	const isDark = false;
 
-	onload = function ()
+	onload = () =>
 	{
 		document.body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="background:#' + (isDark ? '000': 'fff') + ';border:solid 1px #' + (isDark ? '363636' : 'dbdbdb') + ';border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="//www.instagram.com/p/' + hash.replace(/#.*|[^-\w]/g, '') + '/embed/captioned/?cr=1&wp=' + innerWidth + (isDark ? '&theme=dark' : '') + '"></iframe>';
 	};
 
 	let height, port;
-	onmessage = function (e)
+	onmessage = (e) =>
 	{
 		const m = /MEASURE.*height\":(\d+)/.exec(e.data);
 		if (m)
