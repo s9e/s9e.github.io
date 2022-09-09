@@ -3,7 +3,7 @@
 <link rel="preconnect" crossorigin="" href="//www.facebook.com">
 <body style="margin:0">
 <script>
-((document, hash) =>
+((document, hash, window) =>
 {
 	const body   = document.body,
 	      script = document.createElement('script'),
@@ -11,7 +11,7 @@
 	      path   = (type === 'post') ? 'user/' : 'v/',
 	      lang   = (window.navigator || {}).language || 'enUS';
 
-	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, '') + ' class=fb-' + type + ((innerWidth === 640) ? ' data-width=640' : '') + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
+	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, '') + ' class=fb-' + type + ((window.innerWidth === 640) ? ' data-width=640' : '') + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
 
 	script.src     = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v8.0';
 	body.appendChild(script);
@@ -59,5 +59,5 @@
 		};
 		schedule();
 	};
-})(document, location.hash);
+})(document, location.hash, window);
 </script>
