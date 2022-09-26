@@ -7,9 +7,9 @@
 	onload = () =>
 	{
 		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:0;height:100vh;margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
-	}
+	};
 
-	let height, port, width;
+	let height, port;
 	onmessage = (e) =>
 	{
 		let m;
