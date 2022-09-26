@@ -11,7 +11,7 @@
 		// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
 		// Replace non-word characters to avoid HTML injections
 		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:solid 1px #ddd;border-radius:2px;box-sizing:border-box;height:398px;width:100%" src="//imgur.com' + location.hash.replace(/g(a)llery\/|%2F|\W/g, '$1/') + '/embed?pub=true"></iframe>';
-	}
+	};
 
 	let height, port, width;
 	onmessage = (e) =>
