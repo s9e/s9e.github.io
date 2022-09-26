@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<title>Content from TikTok</title>
+<body style="margin:0">
+<script>
+((body) =>
+{
+	onload = () =>
+	{
+		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:0;height:100vh;margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
+	}
+
+	let height, port, width;
+	onmessage = (e) =>
+	{
+		let m;
+		if (e.data === 's9e:init')
+		{
+			port = e.ports[0];
+			e.stopImmediatePropagation();
+		}
+		else if (m = /height":(\d+)/.exec(e.data))
+		{
+			height = m[1];
+
+			body.firstChild.style.height = height + 'px';
+		}
+		else
+		{
+			// Ignore messages that we don't recognize
+			return;
+		}
+
+		if (height && port)
+		{
+			port.postMessage(height);
+		}
+	};
+})(document.body);
+</script>
