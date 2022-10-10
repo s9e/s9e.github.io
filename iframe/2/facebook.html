@@ -3,7 +3,7 @@
 <link rel="preconnect" crossorigin="" href="//www.facebook.com">
 <body style="margin:0">
 <!-- Sometimes Facebook tries to resize to 1000px then 552px if it fails -->
-<style>iframe{width:100% !important}</style>
+<style>iframe{width:100vw !important}</style>
 <script>
 ((document, hash, window) =>
 {
@@ -23,7 +23,7 @@
 	      path = (type === 'post') ? 'user/' : 'v/',
 	      lang = (window.navigator || {}).language || 'enUS';
 
-	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + id + ' class=fb-' + type + ((window.innerWidth === 640) ? ' data-width=640' : '') + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
+	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + id + ' class=fb-' + type + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
 
 	let height, port;
 	window.addEventListener(
