@@ -5,24 +5,35 @@
 <script>
 ((document, hash, window) =>
 {
+	// This should handle the very old #123 form, the modern #p123 form and the yet-unused
+	// #pfbidXXX version
+	const [type, id] = ((m) =>
+	{
+		if (m)
+		{
+			return [/p/.test(hash) ? 'post' : 'video', m[1]];
+		}
+
+		return ['post', hash.replace(/\W/g, '')];
+	})(/^#[pv](\d+)$/.exec(hash));
+
 	const body   = document.body,
 	      script = document.createElement('script'),
-	      type   = (/^#v/.test(hash)) ? 'video' : 'post',
 	      path   = (type === 'post') ? 'user/' : 'v/',
 	      lang   = (window.navigator || {}).language || 'enUS';
 
-	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, '') + ' class=fb-' + type + ((window.innerWidth === 640) ? ' data-width=640' : '') + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
+	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + id + ' class=fb-' + type + ((window.innerWidth === 640) ? ' data-width=640' : '') + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
 
-	script.src     = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v15.0';
-	body.appendChild(script);
+	script.src = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v15.0';
 
-	onmessage = (e) =>
+	window.onload = () => body.appendChild(script);
+
+	window.onmessage = (e) =>
 	{
 		if (e.data !== 's9e:init')
 		{
 			return;
 		}
-		e.stopImmediatePropagation();
 
 		let delay     = 48,
 			height    = 0,
@@ -32,27 +43,29 @@
 		{
 			return Math.ceil(document.documentElement.getBoundingClientRect().height);
 		}
-		function checkHeight()
-		{
-			if (height === (height = getHeight()) || height < 90)
-			{
-				delay += 12;
-			}
-			else
-			{
-				port.postMessage(height);
-			}
-			if (delay < 1000)
-			{
-				schedule();
-			}
-		}
 		function schedule()
 		{
 			clearTimeout(timeoutId);
-			timeoutId = setTimeout(checkHeight, delay);
+			timeoutId = setTimeout(
+				() =>
+				{
+					if (height === (height = getHeight()) || height < 90)
+					{
+						delay += 12;
+					}
+					else
+					{
+						port.postMessage(height);
+					}
+					if (delay < 1000)
+					{
+						schedule();
+					}
+				},
+				delay
+			);
 		}
-		onclick = onresize = () =>
+		window.onclick = window.onresize = () =>
 		{
 			delay = 48;
 			schedule();
