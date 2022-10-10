@@ -23,53 +23,34 @@
 
 	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + id + ' class=fb-' + type + ((window.innerWidth === 640) ? ' data-width=640' : '') + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
 
-	window.onmessage = (e) =>
-	{
-		if (e.data !== 's9e:init')
+	let height, port;
+	window.addEventListener(
+		'message',
+		(e) =>
 		{
-			return;
-		}
+			let m;
+			if (m = /type=resize.*height=(\d+)/.exec(e.data))
+			{
+				height = +m[1];
+			}
+			else if (e.data === 's9e:init' && !port)
+			{
+				port = e.ports[0];
+			}
 
+			if (port && height)
+			{
+				port.postMessage(height);
+			}
+		},
+		{ 'capture': true }
+	);
+
+	window.onload = () =>
+	{
 		const script = document.createElement('script');
 		script.src = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v15.0';
 		body.appendChild(script);
-
-		let delay     = 48,
-			height    = 0,
-			port      = e.ports[0],
-			timeoutId = 0;
-		function getHeight()
-		{
-			return Math.ceil(document.documentElement.getBoundingClientRect().height);
-		}
-		function schedule()
-		{
-			clearTimeout(timeoutId);
-			timeoutId = setTimeout(
-				() =>
-				{
-					if (height === (height = getHeight()) || height < 90)
-					{
-						delay += 12;
-					}
-					else
-					{
-						port.postMessage(height);
-					}
-					if (delay < 1000)
-					{
-						schedule();
-					}
-				},
-				delay
-			);
-		}
-		window.onclick = window.onresize = () =>
-		{
-			delay = 48;
-			schedule();
-		};
-		schedule();
 	};
 })(document, location.hash, window);
 </script>
