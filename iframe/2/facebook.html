@@ -13,7 +13,7 @@
 
 	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + hash.replace(/\D/g, '') + ' class=fb-' + type + ((window.innerWidth === 640) ? ' data-width=640' : '') + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
 
-	script.src     = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v8.0';
+	script.src     = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v15.0';
 	body.appendChild(script);
 
 	onmessage = (e) =>
