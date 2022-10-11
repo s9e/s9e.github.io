@@ -2,7 +2,7 @@
 <title>Content from Facebook</title>
 <link rel="preconnect" crossorigin="" href="//www.facebook.com">
 <!-- Sometimes Facebook tries to resize to 1000px then 552px if it fails -->
-<style>iframe{width:100vw !important}</style>
+<style>iframe{width:100vw !important}.fb-login:not(.fbc-has-badge){display:none}</style>
 <body style="margin:0">
 <script>
 ((document, hash, window) =>
@@ -22,7 +22,7 @@
 	      path = (type === 'post') ? 'user/' : 'v/',
 	      lang = (window.navigator || {}).language || 'enUS';
 
-	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + id + ' class=fb-' + type + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
+	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + id + ' class=fb-' + type + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div><p><span class=fb-login>Allow this page in Facebook Container &nbsp; &nbsp; </span>';
 
 	let height, port;
 	window.addEventListener(
@@ -37,6 +37,11 @@
 			else if (e.data === 's9e:init' && !port)
 			{
 				port = e.ports[0];
+			}
+			else if (e.data === 'allowTriggered')
+			{
+				// Facebook Container's Allow button was pressed
+				window.location.reload();
 			}
 
 			if (port && height)
