@@ -1,0 +1,23 @@
+[data-s9e-mediaembed-c2l="rumble"]
+{
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0) 11%);
+}
+[data-s9e-mediaembed-c2l="rumble"]::after
+{
+	background:    #303030 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 13'%3E%3Cpath stroke-linejoin='round' stroke-width='1' stroke='%23fff' fill='%23fff' d='m1 1 9 5.5-9 5.5z'/%3E%3C/svg%3E") no-repeat center / 24px;
+	border-radius: 8px;
+	height:        56px;
+	left:          calc(50% - 35px);
+	top:           calc(50% - 35px);
+	width:         69px;
+}
+[data-s9e-mediaembed-c2l="rumble"]:hover::after
+{
+	background-color: #699C39;
+}
+[data-s9e-mediaembed-c2l="rumble"]::before
+{
+	font-size: 18px;
+	left:      9px;
+	top:       9px;
+}
