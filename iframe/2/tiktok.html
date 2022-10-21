@@ -2,13 +2,10 @@
 <title>Content from TikTok</title>
 <body style="margin:0">
 <script>
-((body) =>
+onload = () =>
 {
-	onload = () =>
-	{
-		// TikTok has a solid white background that bleeds outside of the rounded content inside
-		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:0;border-radius:8px;height:100vh;margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
-	};
+	// TikTok has a solid white background that bleeds outside of the rounded content inside
+	document.body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:0;border-radius:8px;height:100vh;margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
 
 	let height, port;
 	onmessage = (e) =>
@@ -22,8 +19,6 @@
 		else if (m = /height":(\d+)/.exec(e.data))
 		{
 			height = m[1];
-
-			body.firstChild.style.height = height + 'px';
 		}
 		else
 		{
@@ -36,5 +31,5 @@
 			port.postMessage(height);
 		}
 	};
-})(document.body);
+};
 </script>
