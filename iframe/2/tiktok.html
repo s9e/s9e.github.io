@@ -2,8 +2,14 @@
 <title>Content from TikTok</title>
 <body style="margin:0">
 <script>
-onload = () =>
+((body) =>
 {
+	onload = () =>
+	{
+		// TikTok has a solid white background that bleeds outside of the rounded content inside
+		body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:0;border-radius:8px;height:99vh;margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
+	};
+
 	let height, port;
 	onmessage = (e) =>
 	{
@@ -13,7 +19,12 @@ onload = () =>
 			port = e.ports[0];
 			e.stopImmediatePropagation();
 		}
-		else if (m = /height":(\d+)/.exec(e.data))
+		else if (/ready/.test(e.data))
+		{
+			// TikTok does not send its dimensions if we don't resize it
+			body.firstChild.style.height = '100vh';
+		}
+		else if (m = /height":(\d+)/.exec(e.data) && height !== m[1])
 		{
 			height = m[1];
 		}
@@ -28,8 +39,5 @@ onload = () =>
 			port.postMessage(height);
 		}
 	};
-
-	// TikTok has a solid white background that bleeds outside of the rounded content inside
-	document.body.innerHTML = '<iframe allowfullscreen="" scrolling="no" style="border:0;border-radius:8px;height:100vh;margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
-};
+})(document.body);
 </script>
