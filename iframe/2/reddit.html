@@ -8,7 +8,7 @@
 		height,
 		port,
 		id = hash.replace(/#.*/, '').replace(/[^\w/]/g, ''),
-		html = '<iframe allowfullscreen scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1';
+		html = '<iframe allowfullscreen loading="eager" scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1';
 
 	while (m = regexp.exec(hash))
 	{
