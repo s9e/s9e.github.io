@@ -24,7 +24,7 @@
 			// TikTok does not send its dimensions if we don't resize it
 			body.firstChild.style.height = '100vh';
 		}
-		else if (m = /height":(\d+)/.exec(e.data) && height !== m[1])
+		else if ((m = /height":(\d+)/.exec(e.data)) && height !== m[1])
 		{
 			height = m[1];
 		}
