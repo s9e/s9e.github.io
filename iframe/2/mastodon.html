@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<title>Content from Mastodon</title>
+<body style="margin:0">
+<script>
+((window, body) =>
+{
+	window.onload = () =>
+	{
+		body.innerHTML='<iframe scrolling="no" src="//mastodon.social/@' + location.hash.replace(/[^\w/]/g, '') + '/embed" style="border:0;height:100vh;width:100%"></iframe>';
+
+		const iframe = body.querySelector('iframe');
+		iframe.onload = () =>
+		{
+			iframe.contentWindow.postMessage(
+				{
+					'id':   0,
+					'type': 'setHeight'
+				},
+				'*'
+			);
+		};
+
+		let height, port;
+		window.onmessage = (e) =>
+		{
+			e.stopImmediatePropagation();
+			if (e.data === 's9e:init')
+			{
+				port = e.ports[0];
+			}
+			else if (e.source === iframe.contentWindow)
+			{
+				height = +e.data.height;
+			}
+
+			if (height && port)
+			{
+				port.postMessage(height);
+			}
+		};
+	};
+})(window, document.body);
+</script>
