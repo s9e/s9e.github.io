@@ -21,7 +21,7 @@ function minify(string $js)
 
 	file_put_contents($temp, $js);
 
-	passthru("$exec --js $temp --js_output_file $out");
+	passthru("$exec -O ADVANCED -W VERBOSE --externs externs.js --jscomp_error '*' --js $temp --js_output_file $out");
 	if (!file_exists($out))
 	{
 		die("Error processing $out\n");

@@ -27,8 +27,10 @@
 	let height, port;
 	window.addEventListener(
 		'message',
-		(e) =>
+		(event) =>
 		{
+			const e = /** @type {!MessageEvent} */ (event);
+
 			let m;
 			if (m = /type=resize.*height=(\d+)/.exec(e.data))
 			{
@@ -49,7 +51,7 @@
 
 	window.onload = () =>
 	{
-		const script = document.createElement('script');
+		const script = /** @type {!HTMLScriptElement} */ (document.createElement('script'));
 		script.src = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v14.0';
 		body.appendChild(script);
 	};
