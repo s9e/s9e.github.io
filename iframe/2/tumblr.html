@@ -4,7 +4,7 @@
 <script>
 document.body.firstChild.setAttribute('data-href', 'https://embed.tumblr.com/embed/post/' + location.hash.substring(1));
 
-onmessage = (e) =>
+window.onmessage = (e) =>
 {
 	if (e.data !== 's9e:init')
 	{
@@ -40,7 +40,7 @@ onmessage = (e) =>
 		clearTimeout(timeoutId);
 		timeoutId = setTimeout(checkHeight, delay);
 	}
-	onclick = onresize = () =>
+	window.onclick = window.onresize = () =>
 	{
 		delay = 48;
 		schedule();

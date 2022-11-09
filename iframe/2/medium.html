@@ -7,7 +7,7 @@
 	body.innerHTML = '<iframe scrolling="no" src="https://api.medium.com/embed?type=story&amp;path=%2F%40%2F' + location.hash.replace(/\W/g, '') + '" style="border:1px solid;border-color:#eee #ddd #bbb;border-radius:5px;box-shadow:rgba(0,0,0,.15) 0 1px 3px;height:311px;width:calc(100% - 2px)"></iframe>';
 
 	let height, port;
-	onmessage = (e) =>
+	window.onmessage = (e) =>
 	{
 		let m;
 		if (e.data === 's9e:init')

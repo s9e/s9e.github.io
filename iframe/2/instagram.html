@@ -2,22 +2,22 @@
 <title>Content from Instagram</title>
 <body style="margin:0">
 <script>
-((hash) =>
+((hash, window) =>
 {
 	// Instagram's dark theme does not seem to be actually usable as of 2022-05-04
 	//const isDark = /#theme=dark/.test(hash);
 	const isDark = false;
 
-	onload = () =>
+	window.onload = () =>
 	{
 		const url = '//www.instagram.com/p/' + hash.replace(/#.*|[^-\w]/g, '');
 
 		// NOTE: Instagram expects the hash to be a JSON object with an "os" element
-		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="background:#' + (isDark ? '000': 'fff') + ';border:solid 1px #' + (isDark ? '363636' : 'dbdbdb') + ';border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src=\'' + url + '/embed/captioned/?cr=1&wp=' + innerWidth + (isDark ? '&theme=dark' : '') + '#{"os":1}\' onload="nextSibling.remove()"></iframe><a target="_blank" style="display:block;line-height:100vh;position:absolute;text-align:center;top:0;width:100%" href=' + url + '>Loading Instagram...</a>';
+		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="background:#' + (isDark ? '000': 'fff') + ';border:solid 1px #' + (isDark ? '363636' : 'dbdbdb') + ';border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src=\'' + url + '/embed/captioned/?cr=1&wp=' + window.innerWidth + (isDark ? '&theme=dark' : '') + '#{"os":1}\' onload="nextSibling.remove()"></iframe><a target="_blank" style="display:block;line-height:100vh;position:absolute;text-align:center;top:0;width:100%" href=' + url + '>Loading Instagram...</a>';
 	};
 
 	let height, port;
-	onmessage = (e) =>
+	window.onmessage = (e) =>
 	{
 		const m = /MEASURE.*height\":(\d+)/.exec(e.data);
 		if (m)
@@ -40,5 +40,5 @@
 			port.postMessage(height);
 		}
 	};
-})(location.hash.substring(1));
+})(location.hash.substring(1), window);
 </script>

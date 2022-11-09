@@ -22,6 +22,10 @@ function minify(string $js)
 	file_put_contents($temp, $js);
 
 	passthru("$exec --js $temp --js_output_file $out");
+	if (!file_exists($out))
+	{
+		die("Error processing $out\n");
+	}
 
 	$js = trim(str_replace("\n", '', file_get_contents($out)), ';');
 

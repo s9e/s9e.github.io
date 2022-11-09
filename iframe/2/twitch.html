@@ -4,9 +4,9 @@
 <link rel="preconnect" crossorigin="" href="//p.twitchcdn.net">
 <link rel="preconnect" crossorigin="" href="//static.twitchcdn.net">
 <script>
-onmessage = (e) =>
+window.onmessage = (e) =>
 {
-	if (e.source !== parent)
+	if (e.source !== window.parent)
 	{
 		return;
 	}

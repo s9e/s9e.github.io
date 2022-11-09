@@ -17,7 +17,7 @@
 	a.setAttribute('data-pin-do', type);
 })(document.body.firstChild.firstChild, 'https://www.pinterest.com/', location.hash.substring(1), 'embed');
 
-onmessage = (e) =>
+window.onmessage = (e) =>
 {
 	if (e.data !== 's9e:init')
 	{
@@ -53,7 +53,7 @@ onmessage = (e) =>
 		clearTimeout(timeoutId);
 		timeoutId = setTimeout(checkHeight, delay);
 	}
-	onclick = onresize = () =>
+	window.onclick = window.onresize = () =>
 	{
 		delay = 48;
 		schedule();

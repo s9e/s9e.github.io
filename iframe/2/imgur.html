@@ -4,9 +4,9 @@
 <link rel="preconnect" crossorigin="" href="//s.imgur.com">
 <body style="margin:0">
 <script>
-((body) =>
+((body, window) =>
 {
-	onload = () =>
+	window.onload = () =>
 	{
 		// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
 		// Replace non-word characters to avoid HTML injections
@@ -14,7 +14,7 @@
 	};
 
 	let height, port, width;
-	onmessage = (e) =>
+	window.onmessage = (e) =>
 	{
 		let m;
 		if (e.data === 's9e:init')
@@ -41,5 +41,5 @@
 			port.postMessage(height + ' ' + width);
 		}
 	};
-})(document.body);
+})(document.body, window);
 </script>

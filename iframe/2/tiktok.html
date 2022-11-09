@@ -2,16 +2,16 @@
 <title>Content from TikTok</title>
 <body style="margin:0">
 <script>
-((body) =>
+((body, window) =>
 {
-	onload = () =>
+	window.onload = () =>
 	{
 		// TikTok has a solid white background that bleeds outside of the rounded content inside
 		body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;border-radius:8px;height:calc(100vh - 1px);margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
 	};
 
 	let height, port;
-	onmessage = (e) =>
+	window.onmessage = (e) =>
 	{
 		let m;
 		if (e.data === 's9e:init')
@@ -39,5 +39,5 @@
 			port.postMessage(height);
 		}
 	};
-})(document.body);
+})(document.body, window);
 </script>

@@ -2,12 +2,12 @@
 <title>Content from Sporcle</title>
 <body style="margin:0">
 <script>
-((body) =>
+((body, window) =>
 {
-	body.innerHTML = '<iframe scrolling="no" src="//www.sporcle.com/framed/?v=8&pm&fid=5cd9d6ae9c70c&gid=' + location.hash.replace(/\W/g, '') + '&width=' + innerWidth + '" style="border:0;width:100%"></iframe>';
+	body.innerHTML = '<iframe scrolling="no" src="//www.sporcle.com/framed/?v=8&pm&fid=5cd9d6ae9c70c&gid=' + location.hash.replace(/\W/g, '') + '&width=' + window.innerWidth + '" style="border:0;width:100%"></iframe>';
 
 	let height, port;
-	onmessage = (e) =>
+	window.onmessage = (e) =>
 	{
 		let m;
 		if (e.data === 's9e:init')
@@ -32,5 +32,5 @@
 			port.postMessage(height);
 		}
 	};
-})(document.body);
+})(document.body, window);
 </script>

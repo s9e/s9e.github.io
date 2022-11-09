@@ -2,9 +2,9 @@
 <title>Content from Gist</title>
 <body style="margin:0">
 <script>
-((document) =>
+((document, window) =>
 {
-	onmessage = (e) =>
+	window.onmessage = (e) =>
 	{
 		if (e.data !== 's9e:init')
 		{
@@ -40,7 +40,7 @@
 			clearTimeout(timeoutId);
 			timeoutId = setTimeout(checkHeight, delay);
 		}
-		onclick = onresize = () =>
+		window.onclick = window.onresize = () =>
 		{
 			delay = 48;
 			schedule();
@@ -49,7 +49,7 @@
 	};
 
 	/** @param {{div,stylesheet}} o */
-	cb = (o) =>
+	window['cb'] = (o) =>
 	{
 		var link  = document.createElement('link');
 		link.rel  = 'stylesheet';
@@ -69,5 +69,5 @@
 	};
 
 	document.body.appendChild(script);
-})(document);
+})(document, window);
 </script>
