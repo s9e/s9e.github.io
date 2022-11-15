@@ -6,6 +6,8 @@
 {
 	body.innerHTML = '<iframe scrolling="no" src="//www.sporcle.com/framed/?v=8&pm&fid=5cd9d6ae9c70c&gid=' + location.hash.replace(/\W/g, '') + '&width=' + window.innerWidth + '" style="border:0;width:100%"></iframe>';
 
+	const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
+
 	let height, port;
 	window.onmessage = (e) =>
 	{
@@ -19,7 +21,7 @@
 		{
 			height = +m[1] + 36;
 
-			body.firstChild.style.height = height + 'px';
+			iframe.style.height = height + 'px';
 		}
 		else
 		{
