@@ -29,17 +29,17 @@
 		const data = e.data['twttr.embed'];
 		if (data)
 		{
-			const method = data.method.substring(14),
+			const method = data['method'].substring(14),
 			      // Some extensions such as LastPass add invisible elements to the page
 			      a      = body.querySelector('a');
 			if (method === 'resize')
 			{
-				height = data.params[0].height;
+				height = data['params'][0]['height'];
 				a.style.display = 'none';
 			}
 			else if (method === 'no_results')
 			{
-				a.lastChild.innerHTML = 'This tweet is unavailable.';
+				a.lastElementChild.innerHTML = 'This tweet is unavailable.';
 				height = 50;
 			}
 		}
