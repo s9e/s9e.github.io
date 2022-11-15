@@ -15,9 +15,9 @@
 	}
 	a.href = url + id;
 	a.setAttribute('data-pin-do', type);
-})(document.body.firstChild.firstChild, 'https://www.pinterest.com/', location.hash.substring(1), 'embed');
+})(/** @type {!HTMLAnchorElement} */ (document.querySelector('a')), 'https://www.pinterest.com/', location.hash.substring(1), 'embed');
 
-window.onmessage = (e) =>
+window.onmessage = /** @param {!MessageEvent} e */ (e) =>
 {
 	if (e.data !== 's9e:init')
 	{

@@ -1,4 +1,4 @@
 /**
 * @type {?function(!MessageEvent<string>): void}
 */
-Window.prototype.onmessage = function(e) {};
+Window.prototype.onmessage = function (e) {};
