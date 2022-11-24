@@ -2,7 +2,7 @@
 <title>Content from Tumblr</title>
 <body style="margin:0"><div class="tumblr-post"></div>
 <script>
-document.body.firstElementChild.setAttribute('data-href', 'https://embed.tumblr.com/embed/post/' + location.hash.substring(1));
+document.querySelector('div').setAttribute('data-href', 'https://embed.tumblr.com/embed/post/' + location.hash.substring(1));
 
 window.onmessage = /** @param {!MessageEvent} e */ (e) =>
 {
