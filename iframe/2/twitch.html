@@ -4,7 +4,7 @@
 <link rel="preconnect" crossorigin="" href="//p.twitchcdn.net">
 <link rel="preconnect" crossorigin="" href="//static.twitchcdn.net">
 <script>
-window.onmessage = (e) =>
+window.onmessage = /** @param {!MessageEvent} e */ (e) =>
 {
 	if (e.source !== window.parent)
 	{

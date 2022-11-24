@@ -19,7 +19,8 @@
 		{
 			height = +m[1] + 36;
 
-			body.firstChild.style.height = height + 'px';
+			const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
+			iframe.style.height = height + 'px';
 		}
 		else
 		{

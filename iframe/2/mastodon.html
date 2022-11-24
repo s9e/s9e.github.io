@@ -8,7 +8,7 @@
 	{
 		body.innerHTML='<iframe scrolling="no" src="//mastodon.social/@' + location.hash.replace(/[^\w/]/g, '') + '/embed" style="border:0;height:100vh;width:100%"></iframe>';
 
-		const iframe = body.querySelector('iframe');
+		const iframe = /** @type {!HTMLIFrameElement} */ (body.querySelector('iframe'));
 		iframe.onload = () =>
 		{
 			iframe.contentWindow.postMessage(

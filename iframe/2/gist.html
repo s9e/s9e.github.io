@@ -51,7 +51,7 @@
 	/** @param {{div,stylesheet}} o */
 	window['cb'] = (o) =>
 	{
-		var link  = document.createElement('link');
+		const link  = /** @type {!HTMLLinkElement} */ (document.createElement('link'));
 		link.rel  = 'stylesheet';
 		link.href = o['stylesheet'];
 
@@ -59,9 +59,9 @@
 		document.body.innerHTML = o['div'].replace(/<a\b/g, '<a target=_top');
 	};
 
-	const script  = document.createElement('script');
-	script.type = 'text/javascript';
-	script.src  = '//gist.github.com/' + location.hash.substring(1) + '.json?callback=cb';
+	const script = /** @type {!HTMLScriptElement} */ (document.createElement('script'));
+	script.type  = 'text/javascript';
+	script.src   = '//gist.github.com/' + location.hash.substring(1) + '.json?callback=cb';
 
 	script.onerror = () =>
 	{

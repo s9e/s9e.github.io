@@ -2,9 +2,9 @@
 <title>Content from Google+</title>
 <body style="margin:0"><div class="g-post"></div>
 <script>
-document.body.firstChild.setAttribute('data-href', '//plus.google.com/' + location.hash.replace(/\D/g, ''));
+document.body.firstElementChild.setAttribute('data-href', '//plus.google.com/' + location.hash.replace(/\D/g, ''));
 
-window.onmessage = (e) =>
+window.onmessage = (/** @type {!MessageEvent} */ e) =>
 {
 	if (e.data !== 's9e:init')
 	{

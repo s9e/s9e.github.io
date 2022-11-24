@@ -26,7 +26,8 @@
 		else if (/ready/.test(e.data))
 		{
 			// TikTok does not send its dimensions if we don't resize it
-			body.firstChild.style.height = '100vh';
+			const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
+			iframe.style.height = '100vh';
 		}
 		else
 		{
