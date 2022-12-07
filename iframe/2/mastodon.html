@@ -4,6 +4,9 @@
 <script>
 ((document, hash) =>
 {
+	// Setting this to true will allow third party toots in the form "user@host/id"
+	const allowHost = false;
+
 	const iframe = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
 	iframe.scrolling = 'no';
 	iframe.onload = () =>
@@ -22,7 +25,7 @@
 		port,
 		regexp = /@([-.\w]+)/,
 		m      = regexp.exec(hash);
-	if (m)
+	if (allowHost && m)
 	{
 		// Extract the host part of the hash
 		host = m[1];
