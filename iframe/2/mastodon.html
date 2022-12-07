@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <title>Content from Mastodon</title>
-<body style="margin:0">
+<style>body{margin:0}iframe{border:0;height:100vh;width:100%}</style>
 <script>
-((window, body) =>
+((document, hash) =>
 {
-	window.onload = () =>
+	// Setting this to true will allow third party toots in the form "user@host/id"
+	const allowHost = false;
+
+	const iframe = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
+	iframe.scrolling = 'no';
+	iframe.onload = () =>
 	{
-		body.innerHTML='<iframe scrolling="no" src="//mastodon.social/@' + location.hash.replace(/[^\w/]/g, '') + '/embed" style="border:0;height:100vh;width:100%"></iframe>';
-
-		const iframe = /** @type {!HTMLIFrameElement} */ (body.querySelector('iframe'));
-		iframe.onload = () =>
-		{
-			iframe.contentWindow.postMessage(
-				{
-					'id':   0,
-					'type': 'setHeight'
-				},
-				'*'
-			);
-		};
-
-		let height, port;
-		window.onmessage = (e) =>
-		{
-			e.stopImmediatePropagation();
-			if (e.data === 's9e:init')
+		iframe.contentWindow.postMessage(
 			{
-				port = e.ports[0];
-			}
-			else if (e.source === iframe.contentWindow)
-			{
-				height = +e.data.height;
-			}
-
-			if (height && port)
-			{
-				port.postMessage(height);
-			}
-		};
+				'id':   0,
+				'type': 'setHeight'
+			},
+			'*'
+		);
 	};
-})(window, document.body);
+
+	let height,
+		host   = 'mastodon.social',
+		port,
+		regexp = /@([-.\w]+)/,
+		m      = regexp.exec(hash);
+	if (allowHost && m)
+	{
+		// Extract the host part of the hash
+		host = m[1];
+		hash = hash.replace(regexp, '');
+	}
+	window.onmessage = (e) =>
+	{
+		e.stopImmediatePropagation();
+		if (e.data === 's9e:init' && !port)
+		{
+			port = e.ports[0];
+
+			// Display the iframe only after the parent has given the go-ahead.
+			// Visiting the page on GitHub directly will only display a blank page
+			iframe.src = '//' + host + '/@' + hash.replace(/[^\w/]/g, '') + '/embed';
+			document.body.appendChild(iframe);
+		}
+		else if (e.source === iframe.contentWindow)
+		{
+			height = +e.data.height;
+		}
+
+		if (height && port)
+		{
+			port.postMessage(height);
+		}
+	};
+})(document, location.hash);
 </script>
