@@ -14,9 +14,6 @@
 
 		// NOTE: Instagram expects the hash to be a JSON object with an "os" element
 		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="background:#' + (isDark ? '000': 'fff') + ';border:solid 1px #' + (isDark ? '363636' : 'dbdbdb') + ';border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="' + url + '/embed/captioned/?cr=1&wp=' + window.innerWidth + (isDark ? '&theme=dark' : '') + '#%7B%22os%22%3A1%7D"></iframe><a target="_blank" style="display:block;line-height:100vh;position:absolute;text-align:center;top:0;width:100%" href=' + url + '>Loading Instagram...</a>';
-
-		const iframe  = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
-		iframe.onload = () => iframe.nextElementSibling.remove();
 	};
 
 	let height, port;
@@ -26,6 +23,12 @@
 		if (m)
 		{
 			height = +m[1] + 2;
+
+			const a = /** @type {!HTMLAnchorElement} */ (document.querySelector('a'));
+			if (a)
+			{
+				a.remove();
+			}
 		}
 		else if (e.data === 's9e:init')
 		{
