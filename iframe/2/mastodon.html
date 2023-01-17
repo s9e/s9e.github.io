@@ -23,6 +23,7 @@
 			},
 			'*'
 		);
+		schedule();
 	}
 	function schedule()
 	{
@@ -59,12 +60,12 @@
 		}
 		else if (e.source === iframe.contentWindow)
 		{
-			lastHeight = height;
 			height     = +e.data.height;
 		}
 
 		if (height !== lastHeight)
 		{
+			lastHeight = height;
 			port.postMessage(height);
 		}
 	};
