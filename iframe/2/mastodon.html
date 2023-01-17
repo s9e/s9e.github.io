@@ -11,10 +11,9 @@
 	iframe.scrolling = 'no';
 	iframe.onload = () =>
 	{
-		pollHeight();
-		setTimeout(pollHeight, 2000);
+		delay = 0;
+		schedule();
 	};
-
 	function pollHeight()
 	{
 		iframe.contentWindow.postMessage(
@@ -25,12 +24,21 @@
 			'*'
 		);
 	}
+	function schedule()
+	{
+		clearTimeout(timeoutId);
+		timeoutId = setTimeout(pollHeight, delay);
+		delay += 500;
+	}
 
-	let height,
-		host   = 'mastodon.social',
+	let delay      = 500,
+		height,
+		host       = 'mastodon.social',
+		lastHeight,
 		port,
-		regexp = /@([-.\w]+)/,
-		m      = regexp.exec(hash);
+		regexp     = /@([-.\w]+)/,
+		m          = regexp.exec(hash),
+		timeoutId  = 0;
 	if (allowHost && m)
 	{
 		// Extract the host part of the hash
@@ -51,13 +59,16 @@
 		}
 		else if (e.source === iframe.contentWindow)
 		{
-			height = +e.data.height;
+			lastHeight = height;
+			height     = +e.data.height;
 		}
 
-		if (height && port)
+		if (height !== lastHeight)
 		{
 			port.postMessage(height);
 		}
 	};
+
+	schedule();
 })(document, location.hash);
 </script>
