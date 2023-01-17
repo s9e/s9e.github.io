@@ -11,6 +11,12 @@
 	iframe.scrolling = 'no';
 	iframe.onload = () =>
 	{
+		pollHeight();
+		setTimeout(pollHeight, 2000);
+	};
+
+	function pollHeight()
+	{
 		iframe.contentWindow.postMessage(
 			{
 				'id':   0,
@@ -18,7 +24,7 @@
 			},
 			'*'
 		);
-	};
+	}
 
 	let height,
 		host   = 'mastodon.social',
