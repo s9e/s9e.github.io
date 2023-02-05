@@ -1,51 +1,34 @@
 <!DOCTYPE html>
 <title>Content from Tumblr</title>
-<body style="margin:0"><div class="tumblr-post"></div>
+<body style="margin:0">
 <script>
-document.querySelector('div').setAttribute('data-href', 'https://embed.tumblr.com/embed/post/' + location.hash.substring(1));
-
-window.onmessage = /** @param {!MessageEvent} e */ (e) =>
+((body, window) =>
 {
-	if (e.data !== 's9e:init')
+	let height, port;
+	window.onmessage = (e) =>
 	{
-		return;
-	}
-	e.stopImmediatePropagation();
-
-	let delay     = 48,
-		height    = 0,
-		port      = e.ports[0],
-		timeoutId = 0;
-	function getHeight()
-	{
-		return Math.ceil(document.documentElement.getBoundingClientRect().height);
-	}
-	function checkHeight()
-	{
-		if (height === (height = getHeight()) || height < 90)
+		let m;
+		if (e.data === 's9e:init' && !port)
 		{
-			delay += 12;
+			port = e.ports[0];
+			e.stopImmediatePropagation();
+
+			body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;height:100vh;width:100%" src="//embed.tumblr.com/embed/post/t:' + location.hash.replace(/[^\\w/]/g, '') + '/v2"></iframe>';
+		}
+		else if (m = /"method":"tumblr-post:sizeChange","args":\[(\d+)/.exec(e.data))
+		{
+			height = m[1];
 		}
 		else
 		{
+			// Ignore messages that we don't recognize
+			return;
+		}
+
+		if (height && port)
+		{
 			port.postMessage(height);
 		}
-		if (delay < 1000)
-		{
-			schedule();
-		}
-	}
-	function schedule()
-	{
-		clearTimeout(timeoutId);
-		timeoutId = setTimeout(checkHeight, delay);
-	}
-	window.onclick = window.onresize = () =>
-	{
-		delay = 48;
-		schedule();
 	};
-	schedule();
-};
+})(document.body, window);
 </script>
-<script async src="//assets.tumblr.com/post.js"></script>
