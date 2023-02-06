@@ -13,7 +13,7 @@
 			port = e.ports[0];
 			e.stopImmediatePropagation();
 
-			body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;height:100vh;width:100%" src="//embed.tumblr.com/embed/post/t:' + location.hash.replace(/[^\w/]/g, '') + '/v2"></iframe>';
+			body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;height:100vh;width:100%" src="//embed.tumblr.com/embed/post/t:' + location.hash.replace(/[^-/\w]/g, '') + '/v2"></iframe>';
 		}
 		else if (m = /"method":"tumblr-post:sizeChange","args":\[(\d+)/.exec(e.data))
 		{
