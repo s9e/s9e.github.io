@@ -2,38 +2,34 @@
 <title>Content from Instagram</title>
 <body style="margin:0">
 <script>
-((hash, window) =>
+((window) =>
 {
-	// Instagram's dark theme does not seem to be actually usable as of 2022-05-04
-	//const isDark = /#theme=dark/.test(hash);
-	const isDark = false;
-
 	window.onload = () =>
 	{
-		const url = '//www.instagram.com/p/' + hash.replace(/#.*|[^-\w]/g, '');
+		const url = '//www.instagram.com/p/' + location.hash.substring(1).replace(/#.*|[^-\w]/g, '');
 
 		// NOTE: Instagram expects the hash to be a JSON object with an "os" element
-		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="background:#' + (isDark ? '000': 'fff') + ';border:solid 1px #' + (isDark ? '363636' : 'dbdbdb') + ';border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="' + url + '/embed/captioned/?cr=1&wp=' + window.innerWidth + (isDark ? '&theme=dark' : '') + '#%7B%22os%22%3A1%7D"></iframe><a target="_blank" style="display:block;line-height:100vh;position:absolute;text-align:center;top:0;width:100%" href=' + url + '>Loading Instagram...</a>';
+		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="background:#fff;border:solid 1px #dbdbdb;border-radius:3px;box-sizing:border-box;height:100vh;width:100%" src="' + url + '/embed/captioned/?cr=1&wp=' + window.innerWidth + '#%7B%22os%22%3A1%7D"></iframe><a target="_blank" style="display:block;line-height:100vh;position:absolute;text-align:center;top:0;width:100%" href=' + url + '>Loading Instagram...</a>';
 	};
 
 	let height, port;
 	window.onmessage = (e) =>
 	{
-		const m = /height\":(\d+)/.exec(e.data);
-		if (m)
+		let m;
+		if (e.data === 's9e:init')
+		{
+			port = e.ports[0];
+			e.stopImmediatePropagation();
+		}
+		else if (m = /height\":(\d+)/.exec(e.data))
 		{
 			height = +m[1] + 2;
 
-			const a = /** @type {!HTMLAnchorElement} */ (document.querySelector('a'));
+			const a = /** @type {?HTMLAnchorElement} */ (document.querySelector('a'));
 			if (a)
 			{
 				a.remove();
 			}
-		}
-		else if (e.data === 's9e:init')
-		{
-			port = e.ports[0];
-			e.stopImmediatePropagation();
 		}
 		else
 		{
@@ -46,5 +42,5 @@
 			port.postMessage(height);
 		}
 	};
-})(location.hash.substring(1), window);
+})(window);
 </script>
