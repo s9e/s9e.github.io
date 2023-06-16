@@ -19,7 +19,7 @@
 	let height, port;
 	window.onmessage = (e) =>
 	{
-		const m = /MEASURE.*height\":(\d+)/.exec(e.data);
+		const m = /height\":(\d+)/.exec(e.data);
 		if (m)
 		{
 			height = +m[1] + 2;
