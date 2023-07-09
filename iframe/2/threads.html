@@ -38,7 +38,8 @@
 			return;
 		}
 
-		if (height && port)
+		// Threads always messages that the iframe should be 186 px tall first
+		if (height > 186 && port)
 		{
 			port.postMessage(height);
 		}
