@@ -14,14 +14,13 @@
 	let height, port;
 	window.onmessage = (e) =>
 	{
-		let m;
-		if (e.data === 's9e:init' && e.source === window.parent && !port)
+		if (e.data === 's9e:init' && !port)
 		{
 			port = e.ports[0];
 		}
-		else if (m = /^\d+$/.exec(e.data) && e.source === document.querySelector('iframe'))
+		else if (/^\d+$/.test(e.data))
 		{
-			height = +m[0];
+			height = +e.data;
 
 			const a = /** @type {?HTMLAnchorElement} */ (document.querySelector('a'));
 			if (a)
