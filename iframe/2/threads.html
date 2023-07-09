@@ -2,7 +2,7 @@
 <title>Content from Threads</title>
 <body style="margin:0">
 <script>
-((window) =>
+((document, window) =>
 {
 	window.onload = () =>
 	{
@@ -43,5 +43,5 @@
 			port.postMessage(height);
 		}
 	};
-})(window);
+})(document, window);
 </script>
