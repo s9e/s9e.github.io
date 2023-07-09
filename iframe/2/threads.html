@@ -15,14 +15,13 @@
 	window.onmessage = (e) =>
 	{
 		let m;
-		if (e.data === 's9e:init')
+		if (e.data === 's9e:init' && e.source === window.parent && !port)
 		{
 			port = e.ports[0];
-			e.stopImmediatePropagation();
 		}
-		else if (m = /height\":(\d+)/.exec(e.data))
+		else if (m = /^\d+$/.exec(e.data) && e.source === document.querySelector('iframe'))
 		{
-			height = +m[1] + 2;
+			height = +m[0];
 
 			const a = /** @type {?HTMLAnchorElement} */ (document.querySelector('a'));
 			if (a)
