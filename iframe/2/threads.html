@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>Content from Threads</title>
+<body style="margin:0">
+<script>
+((window) =>
+{
+	window.onload = () =>
+	{
+		const url = '//www.threads.net/t/' + location.hash.replace(/\W/g, '');
+
+		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="background:#fff;border:0;border-radius:12px;height:100vh;width:100%" src="' + url + '/embed/"></iframe><a target="_blank" style="display:block;line-height:100vh;position:absolute;text-align:center;top:0;width:100%" href=' + url + '>Loading Threads...</a>';
+	};
+
+	let height, port;
+	window.onmessage = (e) =>
+	{
+		let m;
+		if (e.data === 's9e:init')
+		{
+			port = e.ports[0];
+			e.stopImmediatePropagation();
+		}
+		else if (m = /height\":(\d+)/.exec(e.data))
+		{
+			height = +m[1] + 2;
+
+			const a = /** @type {?HTMLAnchorElement} */ (document.querySelector('a'));
+			if (a)
+			{
+				a.remove();
+			}
+		}
+		else
+		{
+			// Ignore messages that we don't recognize
+			return;
+		}
+
+		if (height && port)
+		{
+			port.postMessage(height);
+		}
+	};
+})(window);
+</script>
