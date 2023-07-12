@@ -27,22 +27,31 @@
 		if (e.data === 's9e:init' && !port)
 		{
 			port = e.ports[0];
+			updateParent();
 		}
 		else if (/^\d+$/.test(e.data))
 		{
 			height = +e.data;
-		}
-		else
-		{
-			// Ignore messages that we don't recognize
-			return;
-		}
 
-		// NOTE: Threads always messages that the iframe should be 186 px tall first
+			// NOTE: Threads always messages that the iframe should be 186 px tall first so
+			//       we delay it for a little bit to leave it time to get the correct height
+			if (height === 186)
+			{
+				setTimeout(updateParent, 3000);
+			}
+			else
+			{
+				updateParent();
+			}
+		}
+	};
+
+	function updateParent()
+	{
 		if (height && port)
 		{
 			port.postMessage(height);
 		}
-	};
+	}
 })(document, window);
 </script>
