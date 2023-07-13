@@ -7,7 +7,7 @@
 	window.onload = () =>
 	{
 		// TikTok has a solid white background that bleeds outside of the rounded content inside
-		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;border-radius:8px;height:calc(100vh - 10px);margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
+		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;border-radius:8px;height:0;margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
 	};
 
 	let height, port;
