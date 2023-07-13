@@ -25,9 +25,11 @@
 		}
 		else if (/ready/.test(e.data))
 		{
+			setTimeout(()=>{
 			// TikTok does not send its dimensions if we don't resize it
 			const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
 			iframe.style.height = '100vh';
+			},1000);
 		}
 		else
 		{
