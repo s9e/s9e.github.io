@@ -28,7 +28,7 @@
 			setTimeout(
 				() =>
 				{
-					// TikTok does not send its dimensions if we don't resize it
+					// TikTok does not send its dimensions if we don't resize it, but not too early
 					const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
 					iframe.style.height = '100vh';
 				},
