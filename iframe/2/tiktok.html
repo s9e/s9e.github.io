@@ -7,7 +7,7 @@
 	window.onload = () =>
 	{
 		// TikTok has a solid white background that bleeds outside of the rounded content inside
-		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;border-radius:8px;height:50vh;margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
+		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;border-radius:8px;height:calc(100vh - 1px);margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + location.hash.replace(/\D/g, '') + '"></iframe>';
 	};
 
 	let height, port;
@@ -25,11 +25,15 @@
 		}
 		else if (/ready/.test(e.data))
 		{
-			setTimeout(()=>{
-			// TikTok does not send its dimensions if we don't resize it
-			const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
-			iframe.style.height = '100vh';
-			},1000);
+			setTimeout(
+				() =>
+				{
+					// TikTok does not send its dimensions if we don't resize it
+					const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
+					iframe.style.height = '100vh';
+				},
+				500
+			);
 		}
 		else
 		{
