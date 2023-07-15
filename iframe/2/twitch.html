@@ -11,15 +11,15 @@ window.onmessage = /** @param {!MessageEvent} e */ (e) =>
 		return;
 	}
 
-	let regexp = /(\w+)=([-\w]+)/g,
-		m,
-		vars = {'autoplay': 'false'};
+	let m,
+		regexp = /(\w+)=([-\w]+)/g,
+		url    = 'https://',
+		vars   = {'autoplay': 'false'};
 	while (m = regexp.exec(location.hash))
 	{
 		vars[m[1]] = m[2];
 	}
 
-	let url = 'https://';
 	if (vars['clip_id'])
 	{
 		url += 'clips.twitch.tv/embed?clip=' + vars['clip_id'];
