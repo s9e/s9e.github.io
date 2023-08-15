@@ -2,7 +2,7 @@
 <title>Content from Twitter</title>
 <link rel="preconnect" crossorigin="" href="//cdn.syndication.twimg.com">
 <link rel="preconnect" crossorigin="" href="//syndication.twitter.com">
-<style>a,body,iframe{border:0;height:100vh;margin:0;width:100%}a,img{position:absolute}img{right:14px;top:10px}</style>
+<style>a,body,iframe{border:0;height:100vh;margin:0;width:100%}a,img{position:absolute}img{right:14px;top:11px}</style>
 <body>
 <script>
 ((body, hash, window) =>
@@ -19,7 +19,7 @@
 		// NOTE: the link's opaque background blocks the view of the tweet while it's loading, but
 		//       the "resize" event is fired so early in the process (before the tweet has finished
 		//       loading) that we don't really miss anything
-		body.innerHTML = '<iframe allowfullscreen="" loading="eager" src="//platform.twitter.com/embed/Tweet.html?dnt=true&embedId=x&frame=false&hideCard=false&hideThread=false&id=' + id + '&lang=' + navigator.language.substring(0, 2) + '&theme=' + (isDark ? 'dark' : 'light') + '&widgetsVersion=940dd9ee54270%3A1649359550911&width=550px" scrolling=no></iframe><a href="//twitter.com/user/status/' + id + '" target="_blank" style="align-items:center;background:#' + (isDark ? '15202b' : 'fff') + ';border:solid 1px #' + (isDark ? '222;color:#fff' : 'cdd') + ';border-radius:12px;box-sizing:border-box;display:flex;justify-content:center;padding:1em;top:0"><img alt="&#120143;" src="//abs.twimg.com/favicons/twitter.3.ico" ' + (isDark ? '' : 'style="filter:invert(1)" ') + 'width="30" height="30" onerror="nextSibling.innerHTML=\'Cannot connect to Twitter. Disable any adblocker and tracking prevention then try again.\'"><span>Loading tweet...</span></a>';
+		body.innerHTML = '<iframe allowfullscreen="" loading="eager" src="//platform.twitter.com/embed/Tweet.html?dnt=true&embedId=x&frame=false&hideCard=false&hideThread=false&id=' + id + '&lang=' + navigator.language.substring(0, 2) + '&theme=' + (isDark ? 'dark' : 'light') + '&widgetsVersion=940dd9ee54270%3A1649359550911&width=550px" scrolling=no></iframe><a href="//twitter.com/user/status/' + id + '" target="_blank" style="align-items:center;background:#' + (isDark ? '15202b' : 'fff') + ';border:solid 1px #' + (isDark ? '222;color:#fff' : 'cdd') + ';border-radius:12px;box-sizing:border-box;display:flex;justify-content:center;padding:1em;top:0"><img alt="&#120143;" src="//abs.twimg.com/favicons/twitter.3.ico" ' + (isDark ? '' : 'style="filter:invert(1)" ') + 'width="27" height="27" onerror="nextSibling.innerHTML=\'Cannot connect to Twitter. Disable any adblocker and tracking prevention then try again.\'"><span>Loading tweet...</span></a>';
 	};
 
 	window.onmessage = (e) =>
