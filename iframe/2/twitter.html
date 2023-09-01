@@ -27,20 +27,21 @@
 		e.stopImmediatePropagation();
 
 		const data = e.data['twttr.embed'];
-		if (data)
+		if (data && data['method'] === 'twttr.private.resize')
 		{
-			const method = data['method'].substring(14),
-			      // Some extensions such as LastPass add invisible elements to the page
-			      a      = body.querySelector('a');
-			if (method === 'resize')
+			// Some extensions such as LastPass add invisible elements to the page
+			const a = body.querySelector('a');
+
+			height = data['params'][0]['height'];
+			if (height === 86)
 			{
-				height = data['params'][0]['height'];
-				a.style.display = 'none';
-			}
-			else if (method === 'no_results')
-			{
+				// Twitter doesn't emit a "no_results" response anymore, it shows a hardcoded
+				// message that is 86 pixels tall
 				a.lastElementChild.innerHTML = 'This tweet is unavailable.';
-				height = 50;
+			}
+			else
+			{
+				a.style.display = 'none';
 			}
 		}
 		else if (e.data === 's9e:init' && !port)
