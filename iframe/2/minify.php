@@ -39,7 +39,7 @@ function minifyDir($dir)
 {
 	foreach (glob($dir . '/*.html') as $source)
 	{
-		if (strpos(basename($source), '.min.') !== false)
+		if (str_ends_with($source, '.min.html'))
 		{
 			continue;
 		}
