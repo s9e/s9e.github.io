@@ -16,7 +16,7 @@
 		}
 
 		return ['post', hash.replace(/\W/g, '')];
-	})(/^#[pv](\d+)$/.exec(hash));
+	})(/^#[prv](\d+)$/.exec(hash));
 
 	const body = document.body,
 	      path = (type === 'post') ? 'user/' : 'v/',
