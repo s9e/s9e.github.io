@@ -7,7 +7,6 @@
 <script>
 ((document, hash, window) =>
 {
-	// This should handle all three: #123, #p123, and #pfbidXXX
 	const [type, path, id] = ((m) =>
 	{
 		// #username/123:123
@@ -29,7 +28,7 @@
 
 		// #pfbidXXX
 		return ['post', 'Bob/', hash.replace(/\W/g, '')];
-	})(/^#(\w+\/)([\d:]+)$/.exec(hash));
+	})(/^#([.\w]+\/)([:\d]+)$/.exec(hash));
 
 	const body = document.body,
 	      lang = (window.navigator || {}).language || 'enUS';
