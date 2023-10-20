@@ -9,7 +9,7 @@
 {
 	const [type, path, id] = ((m) =>
 	{
-		// #username/123:123
+		// #username/123
 		if (m)
 		{
 			m[0] = 'post';
@@ -28,7 +28,7 @@
 
 		// #pfbidXXX
 		return ['post', 'Bob/', hash.replace(/\W/g, '')];
-	})(/^#([.\w]+\/)([:\d]+)$/.exec(hash));
+	})(/^#([.\w]+\/)(\d+)$/.exec(hash));
 
 	const body = document.body,
 	      lang = (window.navigator || {}).language || 'enUS';
