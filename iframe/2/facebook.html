@@ -7,37 +7,41 @@
 <script>
 ((document, hash, window) =>
 {
-	const [type, path, id] = ((m) =>
+	let body = document.body,
+		lang = (window.navigator || {}).language || 'enUS',
+		// Facebook insists on having a username for posts. This one is "Bob"
+		path = 'Bob/',
+		type = 'post',
+		height,
+		id,
+		m,
+		port;
+
+	if (m = /^#([.\w]+\/)(\w+)$/.exec(hash))
 	{
 		// #username/123
 		// #username/pfbidXXX
-		if (m)
-		{
-			m[0] = 'post';
-
-			return m;
-		}
-
+		path = m[1];
+		id   = m[2];
+	}
+	else if (m = /^#([prv])(\d+)$/.exec(hash))
+	{
 		// #p123, #r123, or #v123
-		if (m = /^#[prv](\d+)$/.exec(hash))
+		id = m[2];
+		if (m[1] !== 'p')
 		{
-			// Facebook insists on having a username for posts. This one is "Bob"
-			return /p/.test(hash)
-			     ? ['post',  'Bob/', m[1]]
-			     : ['video', 'v/',   m[1]];
+			type = 'video';
+			path = 'v/';
 		}
-
-		// #pfbidXXX
-		// #123
-		return ['post', 'Bob/', hash.replace(/\W/g, '')];
-	})(/^#([.\w]+\/)(\w+)$/.exec(hash));
-
-	const body = document.body,
-	      lang = (window.navigator || {}).language || 'enUS';
+	}
+	else
+	{
+		// #123 or #pfbidXXX
+		id = hash.replace(/\W/g, '');
+	}
 
 	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + id + ' class=fb-' + type + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
 
-	let height, port;
 	window.addEventListener(
 		'message',
 		(event) =>
