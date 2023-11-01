@@ -28,6 +28,7 @@ function minify(string $js)
 	}
 
 	$js = trim(str_replace("\n", '', file_get_contents($out)), ';');
+	$js = preg_replace('(\\blet [^;]++\\K;var )', ',', $js);
 
 	unlink($temp);
 	unlink($out);
