@@ -5,42 +5,58 @@
 <style>iframe{width:100vw !important}</style>
 <body style="margin:0">
 <script>
-((document, hash, window) =>
+((document, data, window) =>
 {
-	let body = document.body,
-		lang = (window.navigator || {}).language || 'enUS',
-		// Facebook insists on having a username for posts. This one is "Bob"
-		path = 'Bob/',
-		type = 'post',
+	let body   = document.body,
 		height,
-		id,
-		m,
-		port;
+		// Default for #123 or #pfbidXXX
+		id     = data.replace(/\W/g, ''),
+		lang   = (window.navigator || {}).language || 'enUS',
+		port,
+		type   = '',
+		url    = '//www.facebook.com/',
+		user;
 
-	if (m = /^#([.\w]+\/)(\w+)$/.exec(hash))
+	const regexps = [
+		// username/posts/123
+		// username/posts/pfbidXXX
+		// username/reel/123
+		// username/videos/123
+		/^([.\w]+)\/([prv])\w*\/(\w+)$/,
+
+		// Temporary, only used in s9e Media Pack 20231020
+		// username/123
+		// username/pfbidXXX
+		/^([.\w]+)\/()(\w+)$/,
+
+		// p123
+		// r123
+		// v123
+		/^()([prv])(\d+)$/
+	];
+	for (const regexp of regexps)
 	{
-		// #username/123
-		// #username/pfbidXXX
-		path = m[1];
-		id   = m[2];
-	}
-	else if (m = /^#([prv])(\d+)$/.exec(hash))
-	{
-		// #p123, #r123, or #v123
-		id = m[2];
-		if (m[1] !== 'p')
+		const m = regexp.exec(data);
+		if (m)
 		{
-			type = 'video';
-			path = 'v/';
+			[data, user, type, id] = m;
+			break;
 		}
+	}
+
+	if (/[rv]/.test(type))
+	{
+		url += 'watch?v=';
+		type = 'video';
 	}
 	else
 	{
-		// #123 or #pfbidXXX
-		id = hash.replace(/\W/g, '');
+		url += (user || 'Bob') + '/posts/';
+		type = 'post';
 	}
+	url += id;
 
-	body.innerHTML = '<div data-href=//www.facebook.com/' + path + type + 's/' + id + ' class=fb-' + type + '>Cannot load Facebook SDK. Disable any adblocker or tracking protection and try again.</div>';
+	body.innerHTML = '<div data-href=' + url + ' class=fb-' + type + '>Loading Facebook SDK. You will need to disable any adblocker, privacy extension, or built-in tracking protection.</div>';
 
 	window.addEventListener(
 		'message',
@@ -57,6 +73,10 @@
 			{
 				port = e.ports[0];
 			}
+			else
+			{
+				return;
+			}
 
 			if (port && height)
 			{
@@ -72,5 +92,5 @@
 		script.src = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v14.0';
 		body.appendChild(script);
 	};
-})(document, location.hash, window);
+})(document, location.hash.substring(1), window);
 </script>
