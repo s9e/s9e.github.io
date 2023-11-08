@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <title>Content from Facebook</title>
 <link rel="preconnect" crossorigin="" href="//www.facebook.com">
-<!-- Sometimes Facebook tries to resize to 1000px then 552px if it fails -->
-<style>iframe{width:100vw !important}</style>
+<!--
+	Sometimes Facebook tries to resize to 1000px then 552px if it fails.
+	Posts background is transparent, so we force add an opaque white background so it doesn't look
+	terrible on dark themes. The radius is set on the Facebook's div[role="feed"]>div>div
+-->
+<style>iframe{background:#fff;border-radius:3px;width:100vw !important}</style>
 <body style="margin:0">
 <script>
 ((document, data, window) =>
