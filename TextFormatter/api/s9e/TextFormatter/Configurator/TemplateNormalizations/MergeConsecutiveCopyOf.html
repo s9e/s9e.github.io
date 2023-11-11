@@ -113,7 +113,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_ownerDocument">
-                                        protected                                        <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\DOMDocument">DOMDocument</abbr>
+                                        protected                                        <abbr title="s9e\SweetDOM\Document">Document</abbr>
                                                                                 
                                     </td>
                 <td>$ownerDocument</td>
@@ -123,22 +123,12 @@
             </tr>
                     <tr>
                 <td class="type" id="property_queries">
-                                        protected                                        
+                                        protected                                        array
                                                                                 
                                     </td>
                 <td>$queries</td>
                 <td class="last">{@inheritdoc}</td>
                 <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_xpath">
-                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/DOMXPath">DOMXPath</a>
-                                                                                
-                                    </td>
-                <td>$xpath</td>
-                <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#property_xpath">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></td>
             </tr>
             </table>
 
@@ -151,7 +141,7 @@
                     void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_normalize">normalize</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template)
+                    <a href="#method_normalize">normalize</a>(<abbr title="s9e\SweetDOM\Element">Element</abbr> $template)
         
                                             <p><p>Apply this normalization rule to given template</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalize">
@@ -159,40 +149,18 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a>
+                    <abbr title="s9e\SweetDOM\Element|s9e\SweetDOM\Text">Text</abbr>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_createElement">createElement</a>(string $nodeName, string $textContent = &#039;&#039;)
-        
-                                            <p><p>Create an element in current template</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createElement">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_createText">createText</a>(string $content)
+                    <a href="#method_createPolymorphicText">createPolymorphicText</a>(string $textContent)
         
                                             <p><p>Create an xsl:text element or a text node in current template</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createText">
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createPolymorphicText">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a>
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_createTextNode">createTextNode</a>(string $content)
-        
-                                            <p><p>Create a text node in current template</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createTextNode">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>[]
+                    array
                 </div>
                 <div class="col-md-8">
                     <a href="#method_getNodes">getNodes</a>()
@@ -228,9 +196,10 @@
                     void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_normalizeAttribute">normalizeAttribute</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMAttr">DOMAttr</a> $attribute)
+                    <a href="#method_normalizeAttribute">normalizeAttribute</a>(<abbr title="s9e\SweetDOM\Attr">Attr</abbr> $attribute)
         
-                                            <p><p>Normalize given attribute</p></p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeAttribute">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
             </div>
@@ -239,9 +208,34 @@
                     void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_normalizeElement">normalizeElement</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element)
+                    <a href="#method_normalizeCdataSection">normalizeCdataSection</a>(<abbr title="s9e\SweetDOM\CdataSection">CdataSection</abbr> $comment)
         
-                                            <p><p>Normalize given element</p></p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeCdataSection">
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_normalizeComment">normalizeComment</a>(<abbr title="s9e\SweetDOM\Comment">Comment</abbr> $comment)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeComment">
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_normalizeElement">normalizeElement</a>(<abbr title="s9e\SweetDOM\Element">Element</abbr> $element)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -251,7 +245,8 @@
                 <div class="col-md-8">
                     <a href="#method_normalizeNode">normalizeNode</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node)
         
-                                            <p><p>Normalize given node</p></p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeNode">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
             </div>
@@ -260,9 +255,10 @@
                     void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_normalizeText">normalizeText</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a> $node)
+                    <a href="#method_normalizeText">normalizeText</a>(<abbr title="s9e\SweetDOM\Text">Text</abbr> $node)
         
-                                            <p><p>Normalize given text node</p></p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeText">
 <abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
             </div>
@@ -279,21 +275,10 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>[]
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_xpath">xpath</a>(string $query, <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node = null)
-        
-                                            <p><p>Evaluate given XPath expression</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_xpath">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_nextSiblingIsCopyOf">nextSiblingIsCopyOf</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element)
+                    <a href="#method_nextSiblingIsCopyOf">nextSiblingIsCopyOf</a>(<abbr title="s9e\SweetDOM\Element">Element</abbr> $element)
         
                                             <p><p>Test whether the next sibling to given element is an xsl:copy-of element</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -307,9 +292,9 @@
                     <div class="method-item">
                     <h3 id="method_normalize">
         <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalize">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 45</div>
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 40</div>
         <code>                    void
-    <strong>normalize</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $template)
+    <strong>normalize</strong>(<abbr title="s9e\SweetDOM\Element">Element</abbr> $template)
         </code>
     </h3>
     <div class="details">    
@@ -324,7 +309,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
+                <td><abbr title="s9e\SweetDOM\Element">Element</abbr></td>
                 <td>$template</td>
                 <td><p><xsl:template/> node</p></td>
             </tr>
@@ -348,59 +333,11 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_createElement">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createElement">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 68</div>
-        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a>
-    <strong>createElement</strong>(string $nodeName, string $textContent = &#039;&#039;)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Create an element in current template</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$nodeName</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$textContent</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_createText">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createText">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 96</div>
-        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>
-    <strong>createText</strong>(string $content)
+                    <h3 id="method_createPolymorphicText">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createPolymorphicText">
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 57</div>
+        <code>            protected        <abbr title="s9e\SweetDOM\Element|s9e\SweetDOM\Text">Text</abbr>
+    <strong>createPolymorphicText</strong>(string $textContent)
         </code>
     </h3>
     <div class="details">    
@@ -416,7 +353,7 @@
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
-                <td>$content</td>
+                <td>$textContent</td>
                 <td></td>
             </tr>
             </table>
@@ -426,50 +363,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_createTextNode">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_createTextNode">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 109</div>
-        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a>
-    <strong>createTextNode</strong>(string $content)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Create a text node in current template</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$content</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a></td>
+            <td><abbr title="s9e\SweetDOM\Element|s9e\SweetDOM\Text">Text</abbr></td>
             <td></td>
         </tr>
     </table>
@@ -484,8 +378,8 @@
                     <div class="method-item">
                     <h3 id="method_getNodes">
         <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_getNodes">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 119</div>
-        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>[]
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 69</div>
+        <code>            protected        array
     <strong>getNodes</strong>()
         </code>
     </h3>
@@ -502,7 +396,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>[]</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -517,7 +411,7 @@
                     <div class="method-item">
                     <h3 id="method_isXsl">
         <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_isXsl">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 133</div>
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 83</div>
         <code>            protected        bool
     <strong>isXsl</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node, string $localName = null)
         </code>
@@ -565,7 +459,7 @@
                     <div class="method-item">
                     <h3 id="method_lowercase">
         <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_lowercase">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 144</div>
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 94</div>
         <code>            protected        string
     <strong>lowercase</strong>(string $str)
         </code>
@@ -608,9 +502,9 @@
                     <div class="method-item">
                     <h3 id="method_normalizeAttribute">
         <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeAttribute">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 155</div>
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 99</div>
         <code>            protected        void
-    <strong>normalizeAttribute</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMAttr">DOMAttr</a> $attribute)
+    <strong>normalizeAttribute</strong>(<abbr title="s9e\SweetDOM\Attr">Attr</abbr> $attribute)
         </code>
     </h3>
     <div class="details">    
@@ -618,15 +512,104 @@
             
 
         <div class="method-description">
-                            <p><p>Normalize given attribute</p></p>                        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMAttr">DOMAttr</a></td>
+                <td><abbr title="s9e\SweetDOM\Attr">Attr</abbr></td>
                 <td>$attribute</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeCdataSection">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeCdataSection">
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 103</div>
+        <code>            protected        void
+    <strong>normalizeCdataSection</strong>(<abbr title="s9e\SweetDOM\CdataSection">CdataSection</abbr> $comment)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="s9e\SweetDOM\CdataSection">CdataSection</abbr></td>
+                <td>$comment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeComment">
+        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeComment">
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 107</div>
+        <code>            protected        void
+    <strong>normalizeComment</strong>(<abbr title="s9e\SweetDOM\Comment">Comment</abbr> $comment)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="s9e\SweetDOM\Comment">Comment</abbr></td>
+                <td>$comment</td>
                 <td></td>
             </tr>
             </table>
@@ -652,7 +635,7 @@
                     <h3 id="method_normalizeElement">
         <div class="location">at line 22</div>
         <code>            protected        void
-    <strong>normalizeElement</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element)
+    <strong>normalizeElement</strong>(<abbr title="s9e\SweetDOM\Element">Element</abbr> $element)
         </code>
     </h3>
     <div class="details">    
@@ -660,14 +643,15 @@
             
 
         <div class="method-description">
-                            <p><p>Normalize given element</p></p>                        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
+                <td><abbr title="s9e\SweetDOM\Element">Element</abbr></td>
                 <td>$element</td>
                 <td></td>
             </tr>
@@ -693,7 +677,7 @@
                     <div class="method-item">
                     <h3 id="method_normalizeNode">
         <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeNode">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 175</div>
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 115</div>
         <code>            protected        void
     <strong>normalizeNode</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node)
         </code>
@@ -703,7 +687,8 @@
             
 
         <div class="method-description">
-                            <p><p>Normalize given node</p></p>                        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -736,9 +721,9 @@
                     <div class="method-item">
                     <h3 id="method_normalizeText">
         <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_normalizeText">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 194</div>
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 139</div>
         <code>            protected        void
-    <strong>normalizeText</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a> $node)
+    <strong>normalizeText</strong>(<abbr title="s9e\SweetDOM\Text">Text</abbr> $node)
         </code>
     </h3>
     <div class="details">    
@@ -746,14 +731,15 @@
             
 
         <div class="method-description">
-                            <p><p>Normalize given text node</p></p>                        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMText">DOMText</a></td>
+                <td><abbr title="s9e\SweetDOM\Text">Text</abbr></td>
                 <td>$node</td>
                 <td></td>
             </tr>
@@ -779,7 +765,7 @@
                     <div class="method-item">
                     <h3 id="method_reset">
         <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_reset">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 203</div>
+<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 146</div>
         <code>            protected        void
     <strong>reset</strong>()
         </code>
@@ -810,58 +796,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_xpath">
-        <div class="location">in <a href="../../../../s9e/TextFormatter/Configurator/TemplateNormalizations/AbstractNormalization.html#method_xpath">
-<abbr title="s9e\TextFormatter\Configurator\TemplateNormalizations\AbstractNormalization">AbstractNormalization</abbr></a> at line 218</div>
-        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>[]
-    <strong>xpath</strong>(string $query, <a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a> $node = null)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Evaluate given XPath expression</p></p>                <p><p>For convenience, $XSL is replaced with the XSL namespace URI as a string</p></p>        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$query</td>
-                <td><p>XPath query</p></td>
-            </tr>
-                    <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a></td>
-                <td>$node</td>
-                <td><p>Context node</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMNode">DOMNode</a>[]</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_nextSiblingIsCopyOf">
         <div class="location">at line 37</div>
         <code>            protected        bool
-    <strong>nextSiblingIsCopyOf</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a> $element)
+    <strong>nextSiblingIsCopyOf</strong>(<abbr title="s9e\SweetDOM\Element">Element</abbr> $element)
         </code>
     </h3>
     <div class="details">    
@@ -876,7 +814,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMElement">DOMElement</a></td>
+                <td><abbr title="s9e\SweetDOM\Element">Element</abbr></td>
                 <td>$element</td>
                 <td><p>Context node</p></td>
             </tr>
