@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<title>Content from XenForo</title>
+<style>body{margin:0}iframe{border:0;height:100vh;width:100%}</style>
+<script>
+((document) =>
+{
+	const iframe = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
+	iframe.scrolling = 'no';
+	iframe.onload = () => iframe.contentWindow.postMessage(
+		{
+			'id':   0,
+			'type': 'getHeight'
+		},
+		'*'
+	);
+
+	let height, port;
+	window.onmessage = (e) =>
+	{
+		e.stopImmediatePropagation();
+		if (e.data === 's9e:init' && !port)
+		{
+			port = e.ports[0];
+
+			const m = /#(https:\/\/[-./\w]+)#([-\w]+)/.exec(location.hash);
+			if (m)
+			{
+				iframe.src = m[1] + '/embed.php?content=' + m[2];
+				document.body.appendChild(iframe);
+			}
+		}
+		else if (e.source === iframe.contentWindow)
+		{
+			height = +e.data.height;
+		}
+
+		if (port && height)
+		{
+			port.postMessage(height);
+		}
+	};
+})(document);
+</script>
