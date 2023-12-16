@@ -27,21 +27,28 @@
 		e.stopImmediatePropagation();
 
 		const data = e.data['twttr.embed'];
-		if (data && data['method'] === 'twttr.private.resize')
+		if (data)
 		{
 			// Some extensions such as LastPass add invisible elements to the page
-			const a = body.querySelector('a');
-
-			height = data['params'][0]['height'];
-			if (height === 86)
+			const a = body.querySelector('a'),
+			      method = data['method'].substring(14);
+			if (method === 'resize')
 			{
-				// Twitter doesn't emit a "no_results" response anymore, it shows a hardcoded
-				// message that is 86 pixels tall
-				a.lastElementChild.innerHTML = 'This tweet is unavailable.';
+				height = data['params'][0]['height'];
+				if (height === 86)
+				{
+					// Twitter doesn't emit a "no_results" response anymore, it shows a hardcoded
+					// message that is 86 pixels tall
+					a.lastElementChild.innerHTML = 'This tweet is unavailable.';
+				}
+				else
+				{
+					a.style.display = 'none';
+				}
 			}
-			else
+			else if (method === 'no_results')
 			{
-				a.style.display = 'none';
+				a.lastElementChild.innerHTML = 'This tweet is unavailable.';
 			}
 		}
 		else if (e.data === 's9e:init' && !port)
