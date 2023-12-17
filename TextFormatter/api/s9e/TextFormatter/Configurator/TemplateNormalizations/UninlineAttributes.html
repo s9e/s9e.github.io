@@ -280,32 +280,12 @@ with
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="s9e\SweetDOM\Element">Element</abbr>
+                    array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_uninlineAttribute">uninlineAttribute</a>(<abbr title="s9e\SweetDOM\Attr">Attr</abbr> $attribute)
-        
-                                            <p><p>Remove an attribute from its parent element and return its content as an xsl:attribute</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <abbr title="s9e\SweetDOM\Element">Element</abbr>
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_uninlineDynamicAttribute">uninlineDynamicAttribute</a>(<abbr title="s9e\SweetDOM\Attr">Attr</abbr> $attribute)
+                    <a href="#method_getAttributeChildren">getAttributeChildren</a>(string $attrValue)
         
                                             <p><p>Uninline an AVT-style attribute</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <abbr title="s9e\SweetDOM\Element">Element</abbr>
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_uninlineStaticAttribute">uninlineStaticAttribute</a>(<abbr title="s9e\SweetDOM\Attr">Attr</abbr> $attribute)
-        
-                                            <p><p>Uninline an attribute with a static value</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -821,52 +801,10 @@ with
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_uninlineAttribute">
-        <div class="location">at line 50</div>
-        <code>            protected        <abbr title="s9e\SweetDOM\Element">Element</abbr>
-    <strong>uninlineAttribute</strong>(<abbr title="s9e\SweetDOM\Attr">Attr</abbr> $attribute)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Remove an attribute from its parent element and return its content as an xsl:attribute</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><abbr title="s9e\SweetDOM\Attr">Attr</abbr></td>
-                <td>$attribute</td>
-                <td><p>Attribute node</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="s9e\SweetDOM\Element">Element</abbr></td>
-            <td><p>xsl:attribute element</p></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_uninlineDynamicAttribute">
-        <div class="location">at line 68</div>
-        <code>            protected        <abbr title="s9e\SweetDOM\Element">Element</abbr>
-    <strong>uninlineDynamicAttribute</strong>(<abbr title="s9e\SweetDOM\Attr">Attr</abbr> $attribute)
+                    <h3 id="method_getAttributeChildren">
+        <div class="location">at line 61</div>
+        <code>            protected        array
+    <strong>getAttributeChildren</strong>(string $attrValue)
         </code>
     </h3>
     <div class="details">    
@@ -881,9 +819,9 @@ with
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="s9e\SweetDOM\Attr">Attr</abbr></td>
-                <td>$attribute</td>
-                <td><p>Attribute node</p></td>
+                <td>string</td>
+                <td>$attrValue</td>
+                <td></td>
             </tr>
             </table>
 
@@ -892,49 +830,7 @@ with
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="s9e\SweetDOM\Element">Element</abbr></td>
-            <td><p>xsl:attribute element</p></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_uninlineStaticAttribute">
-        <div class="location">at line 96</div>
-        <code>            protected        <abbr title="s9e\SweetDOM\Element">Element</abbr>
-    <strong>uninlineStaticAttribute</strong>(<abbr title="s9e\SweetDOM\Attr">Attr</abbr> $attribute)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Uninline an attribute with a static value</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><abbr title="s9e\SweetDOM\Attr">Attr</abbr></td>
-                <td>$attribute</td>
-                <td><p>Attribute node</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="s9e\SweetDOM\Element">Element</abbr></td>
+            <td>array</td>
             <td><p>xsl:attribute element</p></td>
         </tr>
     </table>
