@@ -4,9 +4,9 @@
 <script>
 ((document) =>
 {
-	const iframe = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
+	const iframe     = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
 	iframe.scrolling = 'no';
-	iframe.onload = () => iframe.contentWindow.postMessage(
+	iframe.onload    = () => iframe.contentWindow.postMessage(
 		{
 			'id':   0,
 			'type': 'getHeight'
@@ -22,7 +22,7 @@
 		{
 			port = e.ports[0];
 
-			const m = /#(https:\/\/[-./\w]+)#([-\w]+)/.exec(location.hash);
+			const m = /^#(https:\/\/[-.\/\w]+?)\/?#([-\w]+)$/.exec(location.hash);
 			if (m)
 			{
 				iframe.src = m[1] + '/embed.php?content=' + m[2];
