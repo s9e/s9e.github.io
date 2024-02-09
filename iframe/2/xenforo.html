@@ -22,10 +22,10 @@
 		{
 			port = e.ports[0];
 
-			const m = /^#(https:\/\/[-.\/\w]+?)\/?#([-\w]+)$/.exec(location.hash);
+			const m = /^#(https:\/\/[-.\/\w]+?)threads\/(\d+)(?:\/(post-\d+))?$/.exec(location.hash);
 			if (m)
 			{
-				iframe.src = m[1] + '/embed.php?content=' + m[2];
+				iframe.src = m[1] + '/embed.php?content=' + (m[3] || ('thread-' + m[2]));
 				document.body.appendChild(iframe);
 			}
 		}
