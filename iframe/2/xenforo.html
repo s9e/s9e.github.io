@@ -4,6 +4,14 @@
 <script>
 ((document) =>
 {
+	const contentTypes = [
+		['post',         /^#(https:\/\/[-.\/\w]+?\/)threads\/\d+\/post-(\d+)/   ],
+		['profile_post', /^#(https:\/\/[-.\/\w]+?\/)profile-posts\/(\d+)/       ],
+		['resource',     /^#(https:\/\/[-.\/\w]+?\/)resources\/(\d+)/           ],
+		['thread',       /^#(https:\/\/[-.\/\w]+?\/)threads\/(?:[-\w]+\.)?(\d+)/],
+		['xfmg_album',   /^#(https:\/\/[-.\/\w]+?\/)media\/albums\/(\d+)/       ]
+	];
+
 	const iframe     = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
 	iframe.scrolling = 'no';
 	iframe.onload    = () => iframe.contentWindow.postMessage(
@@ -13,14 +21,6 @@
 		},
 		'*'
 	);
-
-	const contentTypes = [
-		['post',         /^#(https:\/\/[-.\/\w]+?\/)threads\/\d+\/post-(\d+)/   ],
-		['profile_post', /^#(https:\/\/[-.\/\w]+?\/)profile-posts\/(\d+)/       ],
-		['resource',     /^#(https:\/\/[-.\/\w]+?\/)resources\/(\d+)/           ],
-		['thread',       /^#(https:\/\/[-.\/\w]+?\/)threads\/(?:[-\w]+\.)?(\d+)/],
-		['xfmg_album',   /^#(https:\/\/[-.\/\w]+?\/)media\/albums\/(\d+)/       ]
-	];
 
 	let port;
 	window.onmessage = (e) =>
