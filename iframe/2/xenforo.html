@@ -14,7 +14,15 @@
 		'*'
 	);
 
-	let height, port;
+	const contentTypes = [
+		['post',         /^#(https:\/\/[-.\/\w]+?\/)threads\/\d+\/post-(\d+)/   ],
+		['profile_post', /^#(https:\/\/[-.\/\w]+?\/)profile-posts\/(\d+)/       ],
+		['resource',     /^#(https:\/\/[-.\/\w]+?\/)resources\/(\d+)/           ],
+		['thread',       /^#(https:\/\/[-.\/\w]+?\/)threads\/(?:[-\w]+\.)?(\d+)/],
+		['xfmg_album',   /^#(https:\/\/[-.\/\w]+?\/)media\/albums\/(\d+)/       ]
+	];
+
+	let port;
 	window.onmessage = (e) =>
 	{
 		e.stopImmediatePropagation();
@@ -22,21 +30,21 @@
 		{
 			port = e.ports[0];
 
-			const m = /^#(https:\/\/[-.\/\w]+?)threads\/(\d+)(?:\/(post-\d+))?$/.exec(location.hash);
-			if (m)
+			for (const [type, regexp] of contentTypes)
 			{
-				iframe.src = m[1] + '/embed.php?content=' + (m[3] || ('thread-' + m[2]));
-				document.body.appendChild(iframe);
+				const m = regexp.exec(location.hash);
+				if (m)
+				{
+					iframe.src = m[1] + 'embed.php?content=' + type + '-' + m[2];
+					document.body.appendChild(iframe);
+
+					return;
+				}
 			}
 		}
-		else if (e.source === iframe.contentWindow)
+		else if (e.source === iframe.contentWindow && e.data.height)
 		{
-			height = +e.data.height;
-		}
-
-		if (port && height)
-		{
-			port.postMessage(height);
+			port.postMessage(+e.data.height);
 		}
 	};
 })(document);
