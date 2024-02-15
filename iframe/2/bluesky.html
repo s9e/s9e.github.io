@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<title>Content from Bluesky</title>
+<style>body{margin:0}iframe{border:0;height:100vh;width:100%}</style>
+<body>
+<script>
+((document) =>
+{
+	const iframe     = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
+	iframe.scrolling = 'no';
+	iframe.onload    = () => iframe.contentWindow.postMessage(
+		'[iFrameSizer]::false',
+		'*'
+	);
+
+	let port;
+	window.onmessage = (e) =>
+	{
+		e.stopImmediatePropagation();
+		if (e.data === 's9e:init' && !port)
+		{
+			port = e.ports[0];
+
+			const m     = /#([.:\w]+\/\w+)(?:#theme=(dark))?/.exec(location.hash),
+				  id    = m[1],
+				  theme = m[2] || 'auto';
+
+			iframe.src = `//bluesky.lol/s/${id}#${theme}`;
+			document.body.append(iframe);
+		}
+		else if (e.source === iframe.contentWindow)
+		{
+			const m = /(\d+):\d+:(?:init|reset\w*)$/.exec(e.data);
+			if (m)
+			{
+				port.postMessage(+m[1]);
+			}
+		}
+	};
+})(document);
+</script>
