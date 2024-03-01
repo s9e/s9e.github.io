@@ -13,6 +13,7 @@
 	let port;
 	window.onmessage = (e) =>
 	{
+		console.dir(e);
 		e.stopImmediatePropagation();
 
 		if (e.data === 's9e:init' && !port)
