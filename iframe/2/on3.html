@@ -2,11 +2,12 @@
 <title>Content from On3</title>
 <body style="margin:0">
 <script>
-((document, window) =>
+((body, window) =>
 {
 	window.onload = () =>
 	{
-		document.body.innerHTML = `<iframe loading="eager" onload="contentWindow.postMessage('','*')" scrolling="no" src="//embed.on3.com/db/${location.hash.replace(/[^-\w]/g, '')}/industry-comparison/" style="border:0;height:100vh;width:100%"></iframe>`;
+		body.innerHTML = `<iframe loading="eager" scrolling="no" src="//embed.on3.com/db/${location.hash.replace(/[^-\w]/g, '')}/industry-comparison/" style="border:0;height:100vh;width:100%"></iframe>`;
+		body.querySelector('iframe').onload = (e) => { e.target.contentWindow.postMessage('', '*'); };
 	};
 
 	let port;
@@ -28,5 +29,5 @@
 			}
 		}
 	};
-})(document, window);
+})(document.body, window);
 </script>
