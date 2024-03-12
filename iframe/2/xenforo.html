@@ -13,6 +13,7 @@
 	];
 
 	const iframe     = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
+	iframe.allow     = 'allow-scripts allow-top-navigation-by-user-activation';
 	iframe.scrolling = 'no';
 	iframe.onload    = () => iframe.contentWindow.postMessage(
 		{
