@@ -5,11 +5,12 @@
 ((document) =>
 {
 	const contentTypes = [
-		['post',         /^#(https:\/\/[-.\/\w]+?\/)threads\/\d+\/post-(\d+)/   ],
-		['profile_post', /^#(https:\/\/[-.\/\w]+?\/)profile-posts\/(\d+)/       ],
-		['resource',     /^#(https:\/\/[-.\/\w]+?\/)resources\/(\d+)/           ],
-		['thread',       /^#(https:\/\/[-.\/\w]+?\/)threads\/(?:[-\w]+\.)?(\d+)/],
-		['xfmg_album',   /^#(https:\/\/[-.\/\w]+?\/)media\/albums\/(\d+)/       ]
+		['post-',         /^#(https:\/\/[-.\/\w]+?\/)threads\/\d+\/post-(\d+)/    ],
+		['profile_post-', /^#(https:\/\/[-.\/\w]+?\/)profile-posts\/(\d+)/        ],
+		['resource-',     /^#(https:\/\/[-.\/\w]+?\/)resources\/(\d+)/            ],
+		['thread-',       /^#(https:\/\/[-.\/\w]+?\/)threads\/(?:[-\w]+\.)?(\d+)/ ],
+		['xfmg_album-',   /^#(https:\/\/[-.\/\w]+?\/)media\/albums\/(\d+)/        ],
+		['',              /^#(https:\/\/[-.\/\w]+?\/)embed\.php\?content=([-\w]+)/]
 	];
 
 	const iframe     = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
@@ -31,12 +32,12 @@
 		{
 			port = e.ports[0];
 
-			for (const [type, regexp] of contentTypes)
+			for (const [prefix, regexp] of contentTypes)
 			{
 				const m = regexp.exec(location.hash);
 				if (m)
 				{
-					iframe.src = m[1] + 'embed.php?content=' + type + '-' + m[2];
+					iframe.src = m[1] + 'embed.php?content=' + prefix + m[2];
 					document.body.appendChild(iframe);
 
 					return;
