@@ -402,7 +402,7 @@
                     static&nbsp;<a href="../../../../s9e/TextFormatter/Configurator/Items/AttributeFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilter">AttributeFilter</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_getDefaultFilter">getDefaultFilter</a>(string $filterName)
+                    <a href="#method_getDefaultFilter">getDefaultFilter</a>(string $filterName, array|null $constructorArgs = [])
         
                                             <p><p>Get an instance of the default filter for given name</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -1383,7 +1383,7 @@
                     <h3 id="method_getDefaultFilter">
         <div class="location">at line 52</div>
         <code>        static            <a href="../../../../s9e/TextFormatter/Configurator/Items/AttributeFilter.html"><abbr title="s9e\TextFormatter\Configurator\Items\AttributeFilter">AttributeFilter</abbr></a>
-    <strong>getDefaultFilter</strong>(string $filterName)
+    <strong>getDefaultFilter</strong>(string $filterName, array|null $constructorArgs = [])
         </code>
     </h3>
     <div class="details">    
@@ -1401,6 +1401,11 @@
                 <td>string</td>
                 <td>$filterName</td>
                 <td><p>Filter name, e.g. &quot;int&quot; or &quot;color&quot;</p></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$constructorArgs</td>
+                <td></td>
             </tr>
             </table>
 
