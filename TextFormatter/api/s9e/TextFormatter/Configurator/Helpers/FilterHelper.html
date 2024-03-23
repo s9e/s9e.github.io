@@ -144,16 +144,6 @@
                                             <p><p>Parse a filter definition</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;array
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_parseToCallback">parseToCallback</a>(string $filterString)
-        
-                                            <p><p>Parse a filter definition in a format that can be directly passed to call_user_func_array()</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
             </div>
 
 
@@ -272,49 +262,6 @@
             <td>array</td>
             <td><p>Associative array with a &quot;filter&quot; element and optionally a
 &quot;params&quot; array</p></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_parseToCallback">
-        <div class="location">at line 78</div>
-        <code>        static            array
-    <strong>parseToCallback</strong>(string $filterString)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Parse a filter definition in a format that can be directly passed to call_user_func_array()</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$filterString</td>
-                <td><p>Filter definition such as &quot;#number&quot; or &quot;strtolower($attrValue)&quot;</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td><p>Associative array with two elements: 'callback' (callable)
-and 'args' array</p></td>
         </tr>
     </table>
 
