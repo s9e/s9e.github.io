@@ -3,7 +3,7 @@
 <link rel="preconnect" crossorigin="" href="//cdn.syndication.twimg.com">
 <link rel="preconnect" crossorigin="" href="//syndication.twitter.com">
 <style>a,body,iframe{border:0;height:100vh;margin:0;width:100%}a,img{position:absolute}img{color:#fff;right:14px;top:11px}</style>
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
 <body>
 <script>
 ((body, hash, window) =>
@@ -12,13 +12,6 @@
 		id = hash.replace(/\D/g, ''),
 		isDark = /d/.test(hash),
 		port;
-
-	if (isDark)
-	{
-		// Required to avoid having a solid white background
-		// https://drafts.csswg.org/css-color-adjust-1/#color-scheme-prop
-		/** @type {!HTMLMetaElement} */ (document.querySelector('meta')).content = 'dark';
-	}
 
 	// Set the page's content in an onload event so that it (and the parent's iframe's onload event)
 	// can be handled immediately, without waiting for the inner iframe to fully load
