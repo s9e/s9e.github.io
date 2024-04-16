@@ -3,7 +3,6 @@
 <link rel="preconnect" crossorigin="" href="//cdn.syndication.twimg.com">
 <link rel="preconnect" crossorigin="" href="//syndication.twitter.com">
 <style>a,body,iframe{border:0;height:100vh;margin:0;width:100%}a,img{position:absolute}img{color:#fff;right:14px;top:11px}</style>
-<meta name="color-scheme" content="light dark">
 <body>
 <script>
 ((body, hash, window) =>
@@ -36,16 +35,7 @@
 			if (method === 'resize')
 			{
 				height = data['params'][0]['height'];
-				if (height === 86)
-				{
-					// Twitter doesn't emit a "no_results" response anymore, it shows a hardcoded
-					// message that is 86 pixels tall
-					a.lastElementChild.innerHTML = 'This tweet is unavailable.';
-				}
-				else
-				{
-					a.style.display = 'none';
-				}
+				a?.remove();
 			}
 			else if (method === 'no_results')
 			{
