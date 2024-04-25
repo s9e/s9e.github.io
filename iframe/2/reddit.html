@@ -8,7 +8,7 @@
 		height,
 		port,
 		id = hash.replace(/#.*/, '').replace(/[^\w/]/g, ''),
-		html = '<b style="color:#ff' + (hash.includes('#theme=dark') ? 'f' : '4500') + ';font-family:sans-serif;font-size:27px;position:absolute;right:16px;top:22px">reddit</b><iframe allowfullscreen loading="eager" scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1';
+		html = '<b style="color:#ff' + (hash.includes('#theme=dark') ? 'f' : '4500') + ';font-family:sans-serif;font-size:27px;position:absolute;right:16px;top:22px;z-index:-1">reddit</b><iframe allowfullscreen loading="eager" scrolling="no" src="//www.redditmedia.com/r/' + id + '?embed=true&depth=1';
 
 	while (m = regexp.exec(hash))
 	{
