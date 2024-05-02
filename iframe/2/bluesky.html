@@ -10,8 +10,6 @@
 			port;
 		window.onmessage = (e) =>
 		{
-			console.dir(e);
-
 			e.stopImmediatePropagation();
 			if (e.data === 's9e:init' && !port)
 			{
@@ -25,13 +23,9 @@
 					document.body.append(iframe);
 				}
 			}
-			else if (e.source === iframe.contentWindow)
+			else if (e.source === iframe.contentWindow && +e.data.height)
 			{
-				const m = /"height":(\d+)/.exec(e.data);
-				if (m)
-				{
-					port.postMessage(+m[1]);
-				}
+				port.postMessage(+e.data.height);
 			}
 		};
 	};
