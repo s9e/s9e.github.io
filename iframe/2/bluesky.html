@@ -15,11 +15,11 @@
 			{
 				port = e.ports[0];
 
-				const m = /^#at:\/\/[\w.:]+\/[\w.:]+\/[\w.:]+$/.exec(window.location.hash);
+				const m = /^#(at:\/\/[\w.:]+\/[\w.:]+\/[\w.:]+)$/.exec(window.location.hash);
 				if (m)
 				{
 					iframe.scrolling = 'no';
-					iframe.src       = '//embed.bsky.app/embed/' + m[0];
+					iframe.src       = '//embed.bsky.app/embed/' + m[1];
 					document.body.append(iframe);
 				}
 			}
