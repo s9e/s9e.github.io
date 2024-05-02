@@ -15,7 +15,7 @@
 			{
 				port = e.ports[0];
 
-				const m = /^#at:\/\/[\w.:]+\/[\w.:]+\/[\w.:]+$/.exec(window.location);
+				const m = /^#at:\/\/[\w.:]+\/[\w.:]+\/[\w.:]+$/.exec(window.location.hash);
 				if (m)
 				{
 					iframe.scrolling = 'no';
