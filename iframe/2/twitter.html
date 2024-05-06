@@ -5,11 +5,15 @@
 <style>a,body,iframe{border:0;height:100vh;margin:0;width:100%}a,img{position:absolute}img{color:#fff;right:14px;top:11px}</style>
 <body>
 <script>
+// Possible hashes
+// #123
+// #123dark
+// #123#theme=dark
 ((body, hash, window) =>
 {
 	let height,
-		id = hash.replace(/\D/g, ''),
-		isDark = /d/.test(hash),
+		id     = hash.replace(/\D/g, ''),
+		isDark = /d/.test(hash) || (/auto/.test(hash) && window.matchMedia('(prefers-color-scheme:dark)').matches),
 		port;
 
 	// Set the page's content in an onload event so that it (and the parent's iframe's onload event)
