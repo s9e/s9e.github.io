@@ -4,16 +4,20 @@
 }
 [data-s9e-mediaembed-c2l="bitchute"]::after
 {
-	background:    #ef4136 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6'%3E%3Cpath d='m2 1 3 2-3 2z' stroke-linejoin='round' stroke-width='.5' stroke='%23fff' fill='%23fff'/%3E%3C/svg%3E") no-repeat center / 24px;
+	background:    #ef4136 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6'%3E%3Cpath d='m2 1 3 2-3 2z' stroke-linejoin='round' stroke-width='.5' stroke='%23fff' fill='%23fff'/%3E%3C/svg%3E") no-repeat center / 60px;
 	border-radius: 100%;
-	height:        48px;
-	left:          calc(50% - 24px);
-	top:           calc(50% - 24px);
-	width:         48px;
+	height:        100px;
+	left:          calc(50% - 50px);
+	top:           calc(50% - 50px);
+	width:         100px;
+}
+[data-s9e-mediaembed-c2l="bitchute"]:hover::after
+{
+	background-color: #ef4136cc;
 }
 [data-s9e-mediaembed-c2l="bitchute"]::before
 {
-	background:    rgba(0, 0, 0, .2);
+	background:    #00000030;
 	border-radius: .1em;
 	padding:       .1em .3em;
 }
