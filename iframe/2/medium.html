@@ -4,7 +4,10 @@
 <script>
 ((body) =>
 {
-	body.innerHTML = '<iframe scrolling="no" src="https://api.medium.com/embed?type=story&amp;path=%2F%40%2F' + location.hash.replace(/\W/g, '') + '" style="border:1px solid;border-color:#eee #ddd #bbb;border-radius:5px;box-shadow:rgba(0,0,0,.15) 0 1px 3px;height:calc(100vh - 5px);width:calc(100% - 2px)"></iframe>';
+	window.onload = () =>
+	{
+		body.innerHTML = '<iframe scrolling="no" src="https://api.medium.com/embed?type=story&amp;path=%2F%40%2F' + location.hash.replace(/\W/g, '') + '" style="border:1px solid;border-color:#eee #ddd #bbb;border-radius:5px;box-shadow:rgba(0,0,0,.15) 0 1px 3px;height:calc(100vh - 5px);width:calc(100% - 2px)"></iframe>';
+	};
 
 	let height, port;
 	window.onmessage = (e) =>
@@ -14,7 +17,7 @@
 		{
 			port = e.ports[0];
 		}
-		else if (m = /^m::\d+::(\d+)/.exec(e.data))
+		else if (m = /^m::\d+::(\d+)$/.exec(e.data))
 		{
 			height = +m[1];
 		}
