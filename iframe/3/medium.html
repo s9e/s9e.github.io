@@ -16,7 +16,7 @@
 		let iframe       = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
 		iframe.loading   = 'eager';
 		iframe.scrolling = 'no';
-		iframe.src       = 'https://api.medium.com/embed?type=story&amp;path=%2F%40%2F' + window.location.hash.replace(/\W/g, '');
+		iframe.src       = 'https://api.medium.com/embed?type=story&path=%2F%40%2F' + window.location.hash.replace(/\W/g, '');
 
 		port = e.ports[0];
 		port.postMessage({ 'action': 'forward', 'source': iframe.contentWindow });
