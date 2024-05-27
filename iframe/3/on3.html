@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<title>Content from On3</title>
+<style>iframe{border:0;height:100vh;width:100%}</style>
+<body style="margin:0">
+<script>
+((document) =>
+{
+	let port;
+	window.onmessage = (e) =>
+	{
+		if (e.data !== 's9e:init' || port)
+		{
+			return;
+		}
+
+		let iframe       = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
+		iframe.loading   = 'eager';
+		iframe.onload    = (e) => { iframe.contentWindow.postMessage('', '*'); };
+		iframe.scrolling = 'no';
+		iframe.src       = '//embed.on3.com/db/' + location.hash.replace(/[^-\w]/g, '') + '/industry-comparison/';
+
+		port = e.ports[0];
+		port.postMessage({ 'action': 'redirect', 'source': iframe.contentWindow });
+		port.onmessage = (e) =>
+		{
+			if (e.data instanceof MessageEvent)
+			{
+				let height = +e.data.data.height;
+				if (height)
+				{
+					port.postMessage({ 'action': 'resize', 'height': height });
+				}
+			}
+		};
+
+		document.body.append(iframe);
+	};
+})(document);
+</script>
