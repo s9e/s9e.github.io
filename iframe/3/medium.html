@@ -22,11 +22,14 @@
 		port.postMessage({ 'method': 'forward' });
 		port.onmessage = (e) =>
 		{
-			let m = /^m::\d+::(\d+)$/.exec(e.data);
-			if (m)
+			if (e.data['method'] === 'message')
 			{
-				// Add 5 px for border + shadow
-				port.postMessage({ 'method': 'resize', 'height': +m[1] + 5 });
+				let m = /^m::\d+::(\d+)$/.exec(e.data);
+				if (m)
+				{
+					// Add 5 px for border + shadow
+					port.postMessage({ 'method': 'resize', 'height': +m[1] + 5 });
+				}
 			}
 		};
 
