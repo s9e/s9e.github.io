@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<title>Content from Twitter</title>
+<style>a,body,iframe{border:0;height:100vh;margin:0;width:100%}a,img{position:absolute}img{color:#fff;right:14px;top:11px}</style>
+<body>
+<script>
+// Possible hashes
+// #123
+// #123#theme=dark
+((body, hash, window) =>
+{
+	let height,
+		id     = hash.replace(/\D/g, ''),
+		isDark = /d/.test(hash) || (/auto/.test(hash) && window.matchMedia('(prefers-color-scheme:dark)').matches),
+		port;
+
+	// Set the page's content in an onload event so that it (and the parent's iframe's onload event)
+	// can be handled immediately, without waiting for the inner iframe to fully load
+	window.onload = () =>
+	{
+		// NOTE: the link's opaque background blocks the view of the tweet while it's loading, but
+		//       the "resize" event is fired so early in the process (before the tweet has finished
+		//       loading) that we don't really miss anything
+		body.innerHTML = '<iframe allowfullscreen="" loading="eager" src="//platform.twitter.com/embed/Tweet.html?dnt=true&embedId=x&frame=false&hideCard=false&hideThread=false&id=' + id + '&lang=' + navigator.language.substring(0, 2) + '&theme=' + (isDark ? 'dark' : 'light') + '&widgetsVersion=940dd9ee54270%3A1649359550911&width=550px" scrolling=no></iframe><a href="//twitter.com/user/status/' + id + '" target="_blank" style="align-items:center;background:#' + (isDark ? '15202b' : 'fff') + ';border:solid 1px #' + (isDark ? '456;color:#fff' : 'cdd') + ';border-radius:12px;box-sizing:border-box;display:flex;justify-content:center;padding:1em;top:0"><img alt="&#120143;" src="//abs.twimg.com/favicons/twitter.3.ico"' + (isDark ? '' : ' style="filter:invert(1)"') + ' width="27" height="27" onerror="nextSibling.innerHTML=\'Cannot connect to Twitter. Disable any adblocker and tracking prevention then try again.\'"><span>Loading tweet...</span></a>';
+	};
+
+	window.onmessage = (e) =>
+	{
+		const data = e.data['twttr.embed'];
+		if (data)
+		{
+			// Some extensions such as LastPass add invisible elements to the page
+			const a = body.querySelector('a'),
+			      method = data['method'].substring(14);
+			if (method === 'resize')
+			{
+				height = +data['params'][0]['height'];
+				a?.remove();
+			}
+			else if (method === 'no_results')
+			{
+				a.lastElementChild.innerHTML = 'This tweet is unavailable.';
+			}
+		}
+		else if (e.data === 's9e:init:3' && !port)
+		{
+			port = e.ports[0];
+		}
+		else
+		{
+			return;
+		}
+
+		if (height && port)
+		{
+			port.postMessage({ 'method': 'resize', 'height': height });
+		}
+	};
+})(document.body, location.hash, window);
+</script>
