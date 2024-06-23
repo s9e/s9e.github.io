@@ -3,7 +3,7 @@
 <style>iframe{border:0;height:100vh;width:100%}</style>
 <body style="margin:0">
 <script>
-((document) =>
+((document, window) =>
 {
 	let port;
 	window.onmessage = (e) =>
@@ -17,23 +17,20 @@
 		iframe.loading   = 'eager';
 		iframe.onload    = (e) => { iframe.contentWindow.postMessage('', '*'); };
 		iframe.scrolling = 'no';
-		iframe.src       = '//embed.on3.com/db/' + location.hash.replace(/[^-\w]/g, '') + '/industry-comparison/';
+		iframe.src       = '//embed.on3.com/db/' + window.location.hash.replace(/[^-\w]/g, '') + '/industry-comparison/';
 
 		port = e.ports[0];
-		port.postMessage({ 'action': 'forward', 'source': iframe.contentWindow });
+		port.postMessage({ 'action': 'forward' });
 		port.onmessage = (e) =>
 		{
-			if (e.data instanceof MessageEvent)
+			let height = +e.data.height;
+			if (height)
 			{
-				let height = +e.data.data.height;
-				if (height)
-				{
-					port.postMessage({ 'action': 'resize', 'height': height });
-				}
+				port.postMessage({ 'action': 'resize', 'height': 20 + height });
 			}
 		};
 
 		document.body.append(iframe);
 	};
-})(document);
+})(document, window);
 </script>

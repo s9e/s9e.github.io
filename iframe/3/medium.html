@@ -19,17 +19,14 @@
 		iframe.src       = 'https://api.medium.com/embed?type=story&path=%2F%40%2F' + window.location.hash.replace(/\W/g, '');
 
 		port = e.ports[0];
-		port.postMessage({ 'action': 'forward', 'source': iframe.contentWindow });
+		port.postMessage({ 'method': 'forward' });
 		port.onmessage = (e) =>
 		{
-			if (e.data instanceof MessageEvent)
+			let m = /^m::\d+::(\d+)$/.exec(e.data);
+			if (m)
 			{
-				let m = /^m::\d+::(\d+)$/.exec(e.data.data);
-				if (m)
-				{
-					// Add 5 px for border + shadow
-					port.postMessage({ 'action': 'resize', 'height': +m[1] + 5 });
-				}
+				// Add 5 px for border + shadow
+				port.postMessage({ 'method': 'resize', 'height': +m[1] + 5 });
 			}
 		};
 
