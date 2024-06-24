@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<title>Content from Facebook</title>
+<link rel="preconnect" crossorigin="" href="//www.facebook.com">
+<!--
+	Sometimes Facebook tries to resize to 1000px then 552px if it fails.
+	Posts background is transparent, so we force add an opaque white background so it doesn't look
+	terrible on dark themes. The radius is set on Facebook's div[role="feed"]>div>div
+-->
+<style>iframe{background:#fff;border-radius:3px;width:100vw !important}</style>
+<body style="margin:0">
+<script>
+((document, hash, window) =>
+{
+	let body   = document.body,
+		height,
+		// Default for #123 or #pfbidXXX
+		id     = hash.replace(/\W/g, ''),
+		lang   = (window.navigator || {}).language || 'enUS',
+		port,
+		type   = '',
+		url    = '//www.facebook.com/',
+		user,
+		width;
+
+	const regexps = [
+		// username/posts/123
+		// username/posts/pfbidXXX
+		// username/reel/123
+		// username/videos/123
+		/^#([.\w]+)\/([prv])\w*\/(\w+)$/,
+
+		// p123
+		// r123
+		// v123
+		/^#()([prv])(\d+)$/
+	];
+	for (const regexp of regexps)
+	{
+		const m = regexp.exec(hash);
+		if (m)
+		{
+			[hash, user, type, id] = m;
+			break;
+		}
+	}
+
+	if (/[rv]/.test(type))
+	{
+		url += 'watch?v=';
+		type = 'video';
+	}
+	else
+	{
+		url += (user || 'Bob') + '/posts/';
+		type = 'post';
+	}
+	url += id;
+
+	body.innerHTML = '<div data-href=' + url + ' class=fb-' + type + '>Loading Facebook SDK. You will need to disable any adblocker, privacy extension, or built-in tracking protection.</div>';
+
+	window.addEventListener(
+		'message',
+		(event) =>
+		{
+			const e = /** @type {!MessageEvent} */ (event);
+
+			let m;
+			if (m = /type=resize.*height=(\d+)/.exec(e.data))
+			{
+				height = +m[1];
+			}
+			else if (e.data === 's9e:init:3' && !port)
+			{
+				port = e.ports[0];
+			}
+			else
+			{
+				return;
+			}
+
+			if (port && height)
+			{
+				const message = { 'method': 'resize', 'height': height };
+				if (width)
+				{
+					message['width'] = width;
+				}
+				port.postMessage(message);
+			}
+		},
+		{ 'capture': true }
+	);
+
+	window.onload = () =>
+	{
+		const script = /** @type {!HTMLScriptElement} */ (document.createElement('script'));
+		script.src = '//connect.facebook.net/' + lang.substring(0, 2) + '_' + lang.toUpperCase().substring(lang.length - 2) + '/sdk.js#xfbml=1&version=v14.0';
+		body.appendChild(script);
+	};
+})(document, location.hash, window);
+</script>
