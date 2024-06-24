@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<title>Content from Threads</title>
+<body style="margin:0">
+<script>
+((document, window) =>
+{
+	window.onload = () =>
+	{
+		const url = '//www.threads.net/t/' + location.hash.replace(/[^-\w]/g, '');
+
+		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="background:#fff;border:0;border-radius:12px;height:100vh;width:100%" src="' + url + '/embed/"></iframe><a target="_blank" style="display:block;line-height:100vh;position:absolute;text-align:center;top:0;width:100%" href=' + url + '>Loading Threads...</a>';
+
+		const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
+		iframe.onload = () =>
+		{
+			const a = /** @type {?HTMLAnchorElement} */ (document.querySelector('a'));
+			if (a)
+			{
+				a.remove();
+			}
+		};
+	};
+
+	let height, port;
+	window.onmessage = (e) =>
+	{
+		if (e.data === 's9e:init:3' && !port)
+		{
+			port = e.ports[0];
+			updateParent();
+		}
+		else if (/^\d+$/.test(e.data))
+		{
+			height = +e.data;
+
+			// NOTE: Threads always messages that the iframe should be 186 px tall first so
+			//       we delay it for a little bit to leave it time to get the correct height
+			if (height === 186)
+			{
+				setTimeout(updateParent, 3000);
+			}
+			else
+			{
+				updateParent();
+			}
+		}
+	};
+
+	function updateParent()
+	{
+		if (height && port && height !== window.innerHeight)
+		{
+			port.postMessage({ 'method': 'resize', 'height': height });
+		}
+	}
+})(document, window);
+</script>
