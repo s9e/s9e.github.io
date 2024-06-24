@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <title>Content from On3</title>
-<style>iframe{border:0;height:100vh;width:100%}</style>
-<body style="margin:0">
+<style>body{margin:0}iframe{border:0;height:100vh;width:100%}</style>
 <script>
 ((document, window) =>
 {
 	let port;
 	window.onmessage = (e) =>
 	{
-		if (e.data !== 's9e:init' || port)
+		if (e.data !== 's9e:init:3' || port)
 		{
 			return;
 		}
@@ -20,13 +19,13 @@
 		iframe.src       = '//embed.on3.com/db/' + window.location.hash.replace(/[^-\w]/g, '') + '/industry-comparison/';
 
 		port = e.ports[0];
-		port.postMessage({ 'action': 'forward' });
+		port.postMessage({ 'method': 'forward' });
 		port.onmessage = (e) =>
 		{
 			let height = +e.data.height;
 			if (height)
 			{
-				port.postMessage({ 'action': 'resize', 'height': 20 + height });
+				port.postMessage({ 'method': 'resize', 'height': 20 + height });
 			}
 		};
 
