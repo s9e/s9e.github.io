@@ -68,6 +68,7 @@
 			if (m = /type=resize.*height=(\d+)/.exec(e.data))
 			{
 				height = +m[1];
+				width  = +(/width=(\d+)/.exec(e.data)[1]) || 0;
 			}
 			else if (e.data === 's9e:init:3' && !port)
 			{
