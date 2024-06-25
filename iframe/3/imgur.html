@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<title>Content from Imgur</title>
+<body style="margin:0">
+<script>
+((body, window) =>
+{
+	window.onload = () =>
+	{
+		// Replace %2F with / to handle [media=imgur]gallery/xyz[/media] in XF 1.x
+		// Replace non-word characters to avoid HTML injections
+		body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:solid 1px #ddd;border-radius:2px;box-sizing:border-box;height:100vh;width:100%" src="//imgur.com' + window.location.hash.replace(/g(a)llery\/|%2F|\W/g, '$1/') + '/embed?pub=true"></iframe>';
+	};
+
+	let height, port, width;
+	window.onmessage = (e) =>
+	{
+		let m;
+		if (e.data === 's9e:init:3')
+		{
+			port = e.ports[0];
+		}
+		// NOTE: Imgur sometimes reports 0 width
+		else if (m = /height":(\d+),"width":(?!0)(\d+)/.exec(e.data))
+		{
+			height = +m[1];
+			width  = +m[2];
+		}
+		else
+		{
+			// Ignore messages that we don't recognize
+			return;
+		}
+
+		if (height && port)
+		{
+			port.postMessage({ 'method': 'resize', 'height': height, 'width': width });
+		}
+	};
+})(document.body, window);
+</script>
