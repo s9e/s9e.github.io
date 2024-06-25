@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<title>Content from Gist</title>
+<body style="margin:0">
+<script>
+((document, window) =>
+{
+	window.onmessage = (e) =>
+	{
+		if (e.data !== 's9e:init:3')
+		{
+			return;
+		}
+
+		let delay     = 48,
+			height    = 0,
+			port      = e.ports[0],
+			timeoutId = 0;
+		function getHeight()
+		{
+			return Math.ceil(document.documentElement.getBoundingClientRect().height);
+		}
+		function checkHeight()
+		{
+			if (height === (height = getHeight()) || height < 90)
+			{
+				delay += 12;
+			}
+			else
+			{
+				port.postMessage({ 'method': 'resize', 'height': height });
+			}
+			if (delay < 1000)
+			{
+				schedule();
+			}
+		}
+		function schedule()
+		{
+			clearTimeout(timeoutId);
+			timeoutId = setTimeout(checkHeight, delay);
+		}
+		window.onclick = window.onresize = () =>
+		{
+			delay = 48;
+			schedule();
+		};
+		schedule();
+	};
+
+	/** @param {{div,stylesheet}} o */
+	window['cb'] = (o) =>
+	{
+		const link  = /** @type {!HTMLLinkElement} */ (document.createElement('link'));
+		link.rel  = 'stylesheet';
+		link.href = o['stylesheet'];
+
+		document.head.append(link);
+		document.body.innerHTML = o['div'].replace(/<a\b/g, '<a target=_top');
+	};
+
+	const script = /** @type {!HTMLScriptElement} */ (document.createElement('script'));
+	script.type  = 'text/javascript';
+	script.src   = '//gist.github.com/' + window.location.hash.substring(1) + '.json?callback=cb';
+
+	script.onerror = () =>
+	{
+		document.body.innerHTML = 'Not Found';
+	};
+
+	document.body.append(script);
+})(document, window);
+</script>
