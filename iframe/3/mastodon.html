@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<title>Content from Mastodon</title>
+<style>body{margin:0}iframe{border:0;height:100vh;width:100%}</style>
+<script>
+((document, hash) =>
+{
+	const iframe = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe'));
+	iframe.scrolling = 'no';
+	iframe.onload = () =>
+	{
+		pollHeight();
+	};
+	function pollHeight()
+	{
+		iframe.contentWindow.postMessage(
+			{
+				'type': 'setHeight',
+				'id':   1
+			},
+			'*'
+		);
+		schedule();
+	}
+	function schedule()
+	{
+		setTimeout(pollHeight, delay);
+		delay += 100;
+	}
+
+	let delay      = 0,
+		height,
+		host       = 'mastodon.social',
+		lastHeight,
+		port,
+		regexp     = /@([-.\w]+)/,
+		m          = regexp.exec(hash);
+	if (m)
+	{
+		// Extract the host part of the hash
+		host = m[1];
+		hash = hash.replace(regexp, '');
+	}
+	window.onmessage = (e) =>
+	{
+		if (e.data === 's9e:init:3' && !port)
+		{
+			port = e.ports[0];
+
+			// Display the iframe only after the parent has given the go-ahead.
+			// Visiting the page on GitHub directly will only display a blank page
+			iframe.src = '//' + host + '/@' + hash.replace(/[^\w/]/g, '') + '/embed';
+			document.body.appendChild(iframe);
+		}
+		else if (e.source === iframe.contentWindow)
+		{
+			height = +e.data.height;
+		}
+
+		if (height !== lastHeight)
+		{
+			port.postMessage({ 'method': 'resize', 'height': height });
+
+			delay      = 500;
+			lastHeight = height;
+		}
+	};
+})(document, location.hash);
+</script>
