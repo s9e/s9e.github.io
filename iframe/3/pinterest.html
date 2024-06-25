@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<title>Content from Pinterest</title>
+<body style="margin:0"><div><a data-pin-board-width="900" data-pin-width="medium" data-pin-scale-height="360"></a></div>
+<script>
+((window) =>
+{
+	((a, url, id, type) =>
+	{
+		if (/^\d+$/.test(id))
+		{
+			url  += 'pin/';
+			type += 'Pin';
+		}
+		else
+		{
+			type += 'Board';
+		}
+		a.href = url + id;
+		a.setAttribute('data-pin-do', type);
+	})(/** @type {!HTMLAnchorElement} */ (document.querySelector('a')), 'https://www.pinterest.com/', window.location.hash.substring(1), 'embed');
+
+	window.onmessage = (e) =>
+	{
+		if (e.data !== 's9e:init:3')
+		{
+			return;
+		}
+
+		let delay     = 48,
+			height    = 0,
+			port      = e.ports[0],
+			timeoutId = 0;
+		function getHeight()
+		{
+			return Math.ceil(document.documentElement.getBoundingClientRect().height);
+		}
+		function checkHeight()
+		{
+			if (height === (height = getHeight()) || height < 90)
+			{
+				delay += 12;
+			}
+			else
+			{
+				port.postMessage({ 'method': 'resize', 'height': height });
+			}
+			if (delay < 1000)
+			{
+				schedule();
+			}
+		}
+		function schedule()
+		{
+			clearTimeout(timeoutId);
+			timeoutId = setTimeout(checkHeight, delay);
+		}
+		window.onclick = window.onresize = () =>
+		{
+			delay = 48;
+			schedule();
+		};
+		schedule();
+	};
+})(window);
+</script>
+<script src="//assets.pinterest.com/js/pinit.js"></script>

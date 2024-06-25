@@ -88,4 +88,5 @@ function minifyDir($dir)
 	}
 }
 
+chdir(__DIR__);
 minifyDir(__DIR__);
