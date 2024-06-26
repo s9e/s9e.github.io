@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<title>Content from Tumblr</title>
+<body style="margin:0">
+<script>
+((body, window) =>
+{
+	let height, port;
+	window.onmessage = (e) =>
+	{
+		let m;
+		if (e.data === 's9e:init:3' && !port)
+		{
+			port = e.ports[0];
+
+			body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;height:100vh;width:100%" src="//embed.tumblr.com/embed/post/t:' + window.location.hash.replace(/[^-/\w]/g, '') + '/v2"></iframe>';
+		}
+		else if (m = /"method":"tumblr-post:sizeChange","args":\[(\d+)/.exec(e.data))
+		{
+			height = m[1];
+		}
+		else
+		{
+			// Ignore messages that we don't recognize
+			return;
+		}
+
+		if (height && port)
+		{
+			port.postMessage({ 'method': 'resize', 'height': height });
+		}
+	};
+})(document.body, window);
+</script>
