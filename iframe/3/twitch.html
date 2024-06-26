@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<title>Redirect to Twitch</title>
+<meta name="referrer" content="no-referrer">
+<script>
+window.onmessage = /** @param {!MessageEvent} e */ (e) =>
+{
+	if (e.source !== window.parent)
+	{
+		return;
+	}
+
+	let m,
+		regexp = /(\w+)=([-\w]+)/g,
+		url    = 'https://',
+		vars   = {'autoplay': 'false'};
+	while (m = regexp.exec(window.location.hash))
+	{
+		vars[m[1]] = m[2];
+	}
+
+	if (vars['clip_id'])
+	{
+		url += 'clips.twitch.tv/embed?clip=' + vars['clip_id'];
+	}
+	else
+	{
+		url += 'player.twitch.tv/?' + (vars['video_id'] ? 'video=v' + vars['video_id'] : 'channel=' + vars['channel']);
+		if (vars['t'])
+		{
+			url += '&time=' + vars['t'];
+		}
+	}
+	url += '&autoplay=' + vars['autoplay'] + '&parent=' + e.origin.replace(/.*\/|:.*/g, '');
+
+	window.location.replace(url);
+};
+</script>
