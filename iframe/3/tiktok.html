@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<title>Content from TikTok</title>
+<body style="margin:0">
+<script>
+((document, window) =>
+{
+	window.onload = () =>
+	{
+		// TikTok has a solid white background that bleeds outside of the rounded content inside
+		document.body.innerHTML = '<iframe allowfullscreen="" loading="eager" scrolling="no" style="border:0;border-radius:8px;height:calc(100vh - 1px);margin:0;width:100%" src="//www.tiktok.com/embed/v2/' + window.location.hash.replace(/\D/g, '') + '"></iframe>';
+	};
+
+	let height, port;
+	window.onmessage = (e) =>
+	{
+		let m;
+		if (e.data === 's9e:init:3')
+		{
+			port = e.ports[0];
+		}
+		else if (m = /height":(\d+)/.exec(e.data))
+		{
+			height = +m[1];
+		}
+		else if (/ready/.test(e.data))
+		{
+			setTimeout(
+				() =>
+				{
+					// TikTok does not send its dimensions if we don't resize it, but not too early
+					const iframe = /** @type {!HTMLIFrameElement} */ (document.querySelector('iframe'));
+					iframe.style.height = '100vh';
+				},
+				250
+			);
+		}
+		else
+		{
+			// Ignore messages that we don't recognize
+			return;
+		}
+
+		if (height && port && height !== window.innerHeight)
+		{
+			port.postMessage({ 'method': 'resize', 'height': height });
+		}
+	};
+})(document, window);
+</script>
