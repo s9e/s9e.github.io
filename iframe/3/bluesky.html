@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<title>Content from Bluesky</title>
+<style>body{margin:0}iframe{border:0;height:100vh;width:100%}</style>
+<script>
+((document, window) =>
+{
+	window.onload = () =>
+	{
+		let iframe = /** @type {!HTMLIFrameElement} */ (document.createElement('iframe')),
+			port;
+		window.onmessage = (e) =>
+		{
+			if (e.data === 's9e:init:3' && !port)
+			{
+				port = e.ports[0];
+
+				const m = /^#at:\/(\/[\w.:]+\/[\w.:]+\/[\w.:]+)(?:#([.\w]+))?$/.exec(window.location.hash);
+				if (m)
+				{
+					iframe.loading   = 'eager';
+					iframe.scrolling = 'no';
+					iframe.src       = '//' + (m[2] || 'embed.bsky.app') + '/embed' + m[1] + '?id=0';
+
+					document.body.append(iframe);
+				}
+			}
+			else if (e.source === iframe.contentWindow && +e.data.height)
+			{
+				port.postMessage({ 'method': 'resize', 'height': +e.data.height });
+			}
+		};
+	};
+})(document, window);
+</script>
