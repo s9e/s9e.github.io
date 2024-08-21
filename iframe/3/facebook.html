@@ -54,9 +54,8 @@
 		url += (user || 'Bob') + '/posts/';
 		type = 'post';
 	}
-	url += id;
 
-	body.innerHTML = '<div data-href=' + url + ' class=fb-' + type + ' data-width=' + window.innerWidth + '>Loading Facebook SDK. You will need to disable any adblocker, privacy extension, or built-in tracking protection.</div>';
+	body.innerHTML = '<div data-href=' + url + id + ' class=fb-' + type + ' data-width=' + window.innerWidth + '>Loading Facebook SDK. You will need to disable any adblocker, privacy extension, or built-in tracking protection.</div>';
 
 	window.addEventListener(
 		'message',
