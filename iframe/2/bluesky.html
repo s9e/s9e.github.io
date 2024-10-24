@@ -14,12 +14,13 @@
 			{
 				port = e.ports[0];
 
-				const m = /^#at:\/(\/[\w.:]+\/[\w.:]+\/[\w.:]+)$/.exec(window.location.hash);
+				const m = /^#at:\/(\/[\w.:]+\/[\w.:]+\/[\w.:]+)(?:#([.\w]+))?$/.exec(window.location.hash);
 				if (m)
 				{
 					iframe.loading   = 'eager';
 					iframe.scrolling = 'no';
-					iframe.src       = '//embed.bsky.app/embed' + m[1] + '?id=0';
+					iframe.src       = '//' + (m[2] || 'embed.bsky.app') + '/embed' + m[1] + '?id=0';
+
 					document.body.append(iframe);
 				}
 			}
