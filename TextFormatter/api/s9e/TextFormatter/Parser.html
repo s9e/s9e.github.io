@@ -474,9 +474,10 @@
                     array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___sleep">__sleep</a>()
+                    <a href="#method___serialize">__serialize</a>()
         
-                                            <p>Serializer</p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -484,9 +485,10 @@
                     void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___wakeup">__wakeup</a>()
+                    <a href="#method___unserialize">__unserialize</a>(array $data)
         
-                                            <p>Unserializer</p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1089,10 +1091,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method___sleep">
-        <div class="location">at line 190</div>
+                    <h3 id="method___serialize">
+        <div class="location">at line 179</div>
         <code>                    array
-    <strong>__sleep</strong>()
+    <strong>__serialize</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -1100,9 +1102,8 @@
             
 
         <div class="method-description">
-                            <p>Serializer</p>                <p><p>Returns the properties that need to persist through serialization.</p>
-<p>NOTE: using __sleep() is preferable to implementing Serializable because it leaves the choice
-of the serializer to the user (e.g. igbinary)</p></p>        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
             
@@ -1123,10 +1124,10 @@ of the serializer to the user (e.g. igbinary)</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method___wakeup">
-        <div class="location">at line 200</div>
+                    <h3 id="method___unserialize">
+        <div class="location">at line 189</div>
         <code>                    void
-    <strong>__wakeup</strong>()
+    <strong>__unserialize</strong>(array $data)
         </code>
     </h3>
     <div class="details">    
@@ -1134,9 +1135,20 @@ of the serializer to the user (e.g. igbinary)</p></p>
             
 
         <div class="method-description">
-                            <p>Unserializer</p>                        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
@@ -1156,7 +1168,7 @@ of the serializer to the user (e.g. igbinary)</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_reset">
-        <div class="location">at line 211</div>
+        <div class="location">at line 204</div>
         <code>            protected        void
     <strong>reset</strong>(string $text)
         </code>
@@ -1198,7 +1210,7 @@ of the serializer to the user (e.g. igbinary)</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagOption">
-        <div class="location">at line 261</div>
+        <div class="location">at line 254</div>
         <code>            protected        void
     <strong>setTagOption</strong>(string $tagName, string $optionName, mixed $optionValue)
         </code>
@@ -1251,7 +1263,7 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
             </div>
                     <div class="method-item">
                     <h3 id="method_disableTag">
-        <div class="location">at line 285</div>
+        <div class="location">at line 278</div>
         <code>                    void
     <strong>disableTag</strong>(string $tagName)
         </code>
@@ -1293,7 +1305,7 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
             </div>
                     <div class="method-item">
                     <h3 id="method_enableTag">
-        <div class="location">at line 296</div>
+        <div class="location">at line 289</div>
         <code>                    void
     <strong>enableTag</strong>(string $tagName)
         </code>
@@ -1335,7 +1347,7 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
             </div>
                     <div class="method-item">
                     <h3 id="method_getLogger">
-        <div class="location">at line 309</div>
+        <div class="location">at line 302</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Logger.html"><abbr title="s9e\TextFormatter\Parser\Logger">Logger</abbr></a>
     <strong>getLogger</strong>()
         </code>
@@ -1367,7 +1379,7 @@ potential side-effects. References contained <em>inside</em> the tag's config ar
             </div>
                     <div class="method-item">
                     <h3 id="method_getText">
-        <div class="location">at line 326</div>
+        <div class="location">at line 319</div>
         <code>                    string
     <strong>getText</strong>()
         </code>
@@ -1414,7 +1426,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_parse">
-        <div class="location">at line 337</div>
+        <div class="location">at line 330</div>
         <code>                    string
     <strong>parse</strong>(string $text)
         </code>
@@ -1456,7 +1468,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTagLimit">
-        <div class="location">at line 374</div>
+        <div class="location">at line 367</div>
         <code>                    void
     <strong>setTagLimit</strong>(string $tagName, int $tagLimit)
         </code>
@@ -1503,7 +1515,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setNestingLimit">
-        <div class="location">at line 388</div>
+        <div class="location">at line 381</div>
         <code>                    void
     <strong>setNestingLimit</strong>(string $tagName, int $nestingLimit)
         </code>
@@ -1550,7 +1562,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_finalizeOutput">
-        <div class="location">at line 402</div>
+        <div class="location">at line 395</div>
         <code>            protected        void
     <strong>finalizeOutput</strong>()
         </code>
@@ -1582,7 +1594,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputTag">
-        <div class="location">at line 445</div>
+        <div class="location">at line 438</div>
         <code>            protected        void
     <strong>outputTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1624,7 +1636,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputText">
-        <div class="location">at line 559</div>
+        <div class="location">at line 552</div>
         <code>            protected        void
     <strong>outputText</strong>(int $catchupPos, int $maxLines, bool $closeParagraph)
         </code>
@@ -1676,7 +1688,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputBrTag">
-        <div class="location">at line 717</div>
+        <div class="location">at line 710</div>
         <code>            protected        void
     <strong>outputBrTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1718,7 +1730,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputIgnoreTag">
-        <div class="location">at line 729</div>
+        <div class="location">at line 722</div>
         <code>            protected        void
     <strong>outputIgnoreTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1760,7 +1772,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputParagraphStart">
-        <div class="location">at line 752</div>
+        <div class="location">at line 745</div>
         <code>            protected        void
     <strong>outputParagraphStart</strong>(int $maxPos)
         </code>
@@ -1802,7 +1814,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputParagraphEnd">
-        <div class="location">at line 777</div>
+        <div class="location">at line 770</div>
         <code>            protected        void
     <strong>outputParagraphEnd</strong>()
         </code>
@@ -1834,7 +1846,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputVerbatim">
-        <div class="location">at line 795</div>
+        <div class="location">at line 788</div>
         <code>            protected        void
     <strong>outputVerbatim</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -1876,7 +1888,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_outputWhitespace">
-        <div class="location">at line 809</div>
+        <div class="location">at line 802</div>
         <code>            protected        void
     <strong>outputWhitespace</strong>(int $maxPos)
         </code>
@@ -1918,7 +1930,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_disablePlugin">
-        <div class="location">at line 833</div>
+        <div class="location">at line 826</div>
         <code>                    void
     <strong>disablePlugin</strong>(string $pluginName)
         </code>
@@ -1960,7 +1972,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_enablePlugin">
-        <div class="location">at line 853</div>
+        <div class="location">at line 846</div>
         <code>                    void
     <strong>enablePlugin</strong>(string $pluginName)
         </code>
@@ -2002,7 +2014,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_executePluginParser">
-        <div class="location">at line 867</div>
+        <div class="location">at line 860</div>
         <code>            protected        void
     <strong>executePluginParser</strong>(string $pluginName)
         </code>
@@ -2044,7 +2056,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_executePluginParsers">
-        <div class="location">at line 894</div>
+        <div class="location">at line 887</div>
         <code>            protected        void
     <strong>executePluginParsers</strong>()
         </code>
@@ -2076,7 +2088,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getMatches">
-        <div class="location">at line 912</div>
+        <div class="location">at line 905</div>
         <code>            protected        array
     <strong>getMatches</strong>(string $regexp, int $limit)
         </code>
@@ -2123,7 +2135,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPluginParser">
-        <div class="location">at line 929</div>
+        <div class="location">at line 922</div>
         <code>            protected        callable
     <strong>getPluginParser</strong>(string $pluginName)
         </code>
@@ -2165,7 +2177,7 @@ normalized text</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_registerParser">
-        <div class="location">at line 958</div>
+        <div class="location">at line 951</div>
         <code>                    void
     <strong>registerParser</strong>(string $pluginName, callable $parser, string $regexp = null, int $limit = PHP_INT_MAX)
         </code>
@@ -2223,7 +2235,7 @@ existing plugin</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_closeAncestor">
-        <div class="location">at line 987</div>
+        <div class="location">at line 980</div>
         <code>            protected        bool
     <strong>closeAncestor</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2265,7 +2277,7 @@ existing plugin</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_closeParent">
-        <div class="location">at line 1028</div>
+        <div class="location">at line 1021</div>
         <code>            protected        bool
     <strong>closeParent</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2307,7 +2319,7 @@ existing plugin</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_createChild">
-        <div class="location">at line 1064</div>
+        <div class="location">at line 1057</div>
         <code>            protected        void
     <strong>createChild</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2349,7 +2361,7 @@ existing plugin</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_fosterParent">
-        <div class="location">at line 1091</div>
+        <div class="location">at line 1084</div>
         <code>            protected        bool
     <strong>fosterParent</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2396,7 +2408,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_requireAncestor">
-        <div class="location">at line 1134</div>
+        <div class="location">at line 1127</div>
         <code>            protected        bool
     <strong>requireAncestor</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2438,7 +2450,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addFosterTag">
-        <div class="location">at line 1171</div>
+        <div class="location">at line 1164</div>
         <code>            protected        void
     <strong>addFosterTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $fosterTag)
         </code>
@@ -2485,7 +2497,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addMagicEndTag">
-        <div class="location">at line 1188</div>
+        <div class="location">at line 1181</div>
         <code>            protected        <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addMagicEndTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $startTag, int $tagPos, int $prio = 0)
         </code>
@@ -2537,7 +2549,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getMagicEndPos">
-        <div class="location">at line 1211</div>
+        <div class="location">at line 1204</div>
         <code>            protected        int
     <strong>getMagicEndPos</strong>(int $tagPos)
         </code>
@@ -2579,7 +2591,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getMagicStartCoords">
-        <div class="location">at line 1229</div>
+        <div class="location">at line 1222</div>
         <code>            protected        int[]
     <strong>getMagicStartCoords</strong>(int $tagPos)
         </code>
@@ -2621,7 +2633,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isFollowedByClosingTag">
-        <div class="location">at line 1262</div>
+        <div class="location">at line 1255</div>
         <code>            protected        bool
     <strong>isFollowedByClosingTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2663,7 +2675,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_processTags">
-        <div class="location">at line 1272</div>
+        <div class="location">at line 1265</div>
         <code>            protected        void
     <strong>processTags</strong>()
         </code>
@@ -2695,7 +2707,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_processCurrentTag">
-        <div class="location">at line 1317</div>
+        <div class="location">at line 1310</div>
         <code>            protected        void
     <strong>processCurrentTag</strong>()
         </code>
@@ -2727,7 +2739,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_processStartTag">
-        <div class="location">at line 1410</div>
+        <div class="location">at line 1403</div>
         <code>            protected        void
     <strong>processStartTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2769,7 +2781,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_processEndTag">
-        <div class="location">at line 1530</div>
+        <div class="location">at line 1523</div>
         <code>            protected        void
     <strong>processEndTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2811,7 +2823,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_popContext">
-        <div class="location">at line 1694</div>
+        <div class="location">at line 1687</div>
         <code>            protected        void
     <strong>popContext</strong>()
         </code>
@@ -2843,7 +2855,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_pushContext">
-        <div class="location">at line 1709</div>
+        <div class="location">at line 1702</div>
         <code>            protected        void
     <strong>pushContext</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -2885,7 +2897,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_tagIsAllowed">
-        <div class="location">at line 1761</div>
+        <div class="location">at line 1754</div>
         <code>            protected        bool
     <strong>tagIsAllowed</strong>(string $tagName)
         </code>
@@ -2927,7 +2939,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addStartTag">
-        <div class="location">at line 1781</div>
+        <div class="location">at line 1774</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addStartTag</strong>(string $name, int $pos, int $len, int $prio = 0)
         </code>
@@ -2984,7 +2996,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addEndTag">
-        <div class="location">at line 1795</div>
+        <div class="location">at line 1788</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addEndTag</strong>(string $name, int $pos, int $len, int $prio = 0)
         </code>
@@ -3041,7 +3053,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addSelfClosingTag">
-        <div class="location">at line 1809</div>
+        <div class="location">at line 1802</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addSelfClosingTag</strong>(string $name, int $pos, int $len, int $prio = 0)
         </code>
@@ -3098,7 +3110,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addBrTag">
-        <div class="location">at line 1821</div>
+        <div class="location">at line 1814</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addBrTag</strong>(int $pos, int $prio = 0)
         </code>
@@ -3145,7 +3157,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addIgnoreTag">
-        <div class="location">at line 1834</div>
+        <div class="location">at line 1827</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addIgnoreTag</strong>(int $pos, int $len, int $prio = 0)
         </code>
@@ -3197,7 +3209,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addParagraphBreak">
-        <div class="location">at line 1848</div>
+        <div class="location">at line 1841</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addParagraphBreak</strong>(int $pos, int $prio = 0)
         </code>
@@ -3244,7 +3256,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addCopyTag">
-        <div class="location">at line 1862</div>
+        <div class="location">at line 1855</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addCopyTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, int $pos, int $len, int $prio = null)
         </code>
@@ -3301,7 +3313,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addTag">
-        <div class="location">at line 1884</div>
+        <div class="location">at line 1877</div>
         <code>            protected        <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addTag</strong>(int $type, string $name, int $pos, int $len, int $prio)
         </code>
@@ -3363,7 +3375,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isInvalidTextSpan">
-        <div class="location">at line 1928</div>
+        <div class="location">at line 1921</div>
         <code>            protected        bool
     <strong>isInvalidTextSpan</strong>(int $pos, int $len)
         </code>
@@ -3410,7 +3422,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_insertTag">
-        <div class="location">at line 1939</div>
+        <div class="location">at line 1932</div>
         <code>            protected        void
     <strong>insertTag</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag)
         </code>
@@ -3452,7 +3464,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addTagPair">
-        <div class="location">at line 1970</div>
+        <div class="location">at line 1963</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addTagPair</strong>(string $name, int $startPos, int $startLen, int $endPos, int $endLen, int $prio = 0)
         </code>
@@ -3519,7 +3531,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addVerbatim">
-        <div class="location">at line 1988</div>
+        <div class="location">at line 1981</div>
         <code>                    <a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a>
     <strong>addVerbatim</strong>(int $pos, int $len, int $prio = 0)
         </code>
@@ -3571,7 +3583,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_sortTags">
-        <div class="location">at line 1998</div>
+        <div class="location">at line 1991</div>
         <code>            protected        void
     <strong>sortTags</strong>()
         </code>
@@ -3603,7 +3615,7 @@ loop from running indefinitely</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSortKey">
-        <div class="location">at line 2025</div>
+        <div class="location">at line 2018</div>
         <code>            protected        string
     <strong>getSortKey</strong>(<a href="../../s9e/TextFormatter/Parser/Tag.html"><abbr title="s9e\TextFormatter\Parser\Tag">Tag</abbr></a> $tag, int $tagIndex = 0)
         </code>
