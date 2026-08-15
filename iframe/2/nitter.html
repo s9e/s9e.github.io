@@ -27,7 +27,7 @@
 
 			// Display the iframe only after the parent has given the go-ahead.
 			// Visiting the page on GitHub directly will only display a blank page
-			iframe.src = '//' + host + '/user/' + id + '/embed?theme=' + theme;
+			iframe.src = '//' + host + '/user/status/' + id + '/embed?theme=' + theme;
 			document.body.append(iframe);
 		}
 		else if (e.source === iframe.contentWindow && Array.isArray(e.data) && e.data[0] === 'resizeIframe')
